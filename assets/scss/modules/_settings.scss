@@ -1,0 +1,88 @@
+// ----
+// Screen sizes
+// ----
+
+$screen-sm: 		400px;
+$screen-md: 		600px;
+$screen-lg: 		800px;
+
+$slicer-breakpoints: 0 $screen-sm $screen-md $screen-lg;
+
+
+
+// ----
+// Colors
+// ----
+
+// Basic color names
+$black:	 			#111;
+$white: 			#fff;
+
+$grey: 				#aaa;
+
+// Snow
+$sn-navy: 			#043f7e;
+$sn-white: 			#f9f9f9;
+$sn-orange: 		#f8992f;
+$sn-black: 			#1f1d1a;
+
+
+
+// ----
+// Typography 
+// ----
+
+// Rem Units
+// http://gregrickaby.com/using-the-golden-ratio-and-rems/
+
+$contain: 			100%;
+// $base:  			1.3rem;
+$base:  			1.3rem;
+$line-height-base: 	1.3;
+$sml:  				$base*0.8;
+
+$h1:  				$base*2.8;
+$h2:  				$base*2.4;
+$h3:  				$base*1.6;
+$h4:  				$base*1.2;
+$h5:  				$base;
+$h6:  				$sml;
+
+
+
+// ----
+// Semantic Vars
+// ----
+
+
+// Colors
+$light-accent: 		darken($sn-white, 15%);	
+$med-accent: 		$sn-orange;
+$dark-accent: 		$sn-navy;
+
+$dark-text: 		$sn-black;
+$light-text: 		$sn-white;
+
+$link-color:		$dark-accent;
+$link-hover: 		darken($link-color, 20%);
+
+// Components
+$body-bkgd: 		$white;
+$body-text: 		$dark-text;
+
+$header-bkgd: 		$dark-accent;
+$header-text: 		$light-text;
+
+// Typography
+$sans-serif: 		'Helvetica';
+$sans-serif-bold: 	'Verdana';
+$serif:             'Georgia';
+
+$heading-font: 		$sans-serif;
+$body-font: 		$sans-serif;
+$button-font: 		$sans-serif;
+$lead-font: 		$sans-serif;
+
+// Utilities
+$accent-border: 	1px solid $med-accent;
+

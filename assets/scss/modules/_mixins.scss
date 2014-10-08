@@ -1,0 +1,41 @@
+
+%form-base {
+	border-radius: $sml/3;
+	padding: $sml $base;
+	font-size: $h5;
+}
+
+@mixin button( $button-color, $text-color: $white ) {
+	background: $button-color;
+	border: darken($button-color, 10%) $sml/5 solid;
+
+	font-family: $button-font;
+	color: $text-color;
+	
+	@extend %form-base;
+	margin-top: $h5;
+	display: inline-block;
+
+	&:hover,
+	&:focus {
+		background: darken( $button-color, 20% );
+		color: $text-color;
+	}
+
+	&:active {
+		background: darken( $button-color, 10% );
+		border-color: darken( $button-color, 13% );
+		color: $text-color;
+		-webkit-box-shadow: inset 0 2px 5px -3px rgba( 0, 0, 0, 0.5 );
+	 	box-shadow: inset 0 2px 5px -3px rgba( 0, 0, 0, 0.5 );
+	}
+
+	&[disabled],
+	&:disabled,
+	&.button-primary-disabled {
+		color: hsl( hue( $button-color ), 10%, 80% ) !important;
+		background: darken( $button-color, 8% ) !important;
+		border-color: darken( $button-color, 15% ) !important;
+		text-shadow: none !important;
+	}
+}

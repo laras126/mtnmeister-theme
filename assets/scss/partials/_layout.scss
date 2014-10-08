@@ -1,0 +1,18 @@
+// Grids and layout stuff
+
+.container {
+	max-width: $screen-lg;
+	margin: 0 auto;
+	@include container-fixed();
+}
+
+.archive__block {
+	@include make-row();
+
+	&__img {
+		@include make-xs-column(4);
+	}
+	&__content {
+		@include make-xs-column(8);
+	}
+}

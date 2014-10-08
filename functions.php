@@ -1,5 +1,9 @@
 <?php
 
+	/**
+	 * Initialize Timber
+	 */
+
 	if (!class_exists('Timber')){
 		add_action( 'admin_notices', function(){
 			echo '<div class="error"><p>Timber not activated. Make sure you activate the plugin in <a href="' . admin_url('plugins.php#timber') . '">' . admin_url('plugins.php') . '</a></p></div>';
@@ -7,7 +11,7 @@
 		return;
 	}
 
-	class StarterSite extends TimberSite {
+	class MtnMeisterTheme extends TimberSite {
 
 		function __construct(){
 			add_theme_support('post-formats');
@@ -46,9 +50,18 @@
 
 	}
 
-	new StarterSite();
+	new MtnMeisterTheme();
 
-	function myfoo($text){
-    	$text .= ' bar!';
-    	return $text;
-	}
+	/**
+	 *
+	 * Custom MTNmeister functions
+	 *
+	 * Functions are separated into files located in lib/, and included below
+	 *
+	 */
+
+	require_once('lib/custom-types.php');
+	require_once('lib/scripts-styles.php');
+
+
+?>

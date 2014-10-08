@@ -5,12 +5,12 @@
     </head>
 {% endblock %}
     <body class="{{body_class}}" data-template="base.twig">
-        <header class="header" >
+        <header class="header" role="banner">
             {% block header %}
-            <div class="wrapper">
+            <div class="container">
 
-                <h1 class="hdr-logo" role="banner">
-                    <a class="hdr-logo-link" href="/" title="Timber" rel="home">{{site.name}}</a>
+                <h1 class="header-logo">
+                    <a class="header-logo-link" href="/" title="{{site.name}}" rel="home">{{site.name}}</a>
                 </h1>
                 <nav id="access" class="main-navigation" role="navigation">
                     <ul>
@@ -26,8 +26,7 @@
             {% endblock %}
         </header>
 
-
-        <section id="content" role="main" class="content-wrapper">
+        <main id="content" role="main" class="container">
             {% if title %}<h1>{{title}}</h1>{% endif %}
             <div class="wrapper {{sidebar_class}}">
                 {% block content %}
@@ -39,11 +38,13 @@
                     {{sidebar}}
                 </aside>
             {% endif %}
-        </section>
+        </main>
 
         {% block footer %}
             <footer id="footer">
-                {% include 'footer.twig' %}
+                <div class="container">
+                    {% include 'footer.twig' %}                
+                </div>
             </footer>
             {{ function('wp_footer') }}
         {% endblock %}

@@ -10,8 +10,8 @@
 function mtn_meister_post_type() {
 
 	$labels = array(
-		'name'                => _x( 'Meisters', 'Post Type General Name', 'mtnmeister' ),
-		'singular_name'       => _x( 'Meister', 'Post Type Singular Name', 'mtnmeister' ),
+		'name'                => __( 'Meisters', 'Post Type General Name', 'mtnmeister' ),
+		'singular_name'       => __( 'Meister', 'Post Type Singular Name', 'mtnmeister' ),
 		'menu_name'           => __( 'Meisters', 'mtnmeister' ),
 		'parent_item_colon'   => __( 'Parent Meister:', 'mtnmeister' ),
 		'all_items'           => __( 'All Meisters', 'mtnmeister' ),
@@ -25,7 +25,7 @@ function mtn_meister_post_type() {
 		'not_found_in_trash'  => __( 'Not found in Trash', 'mtnmeister' ),
 	);
 	$rewrite = array(
-		'slug'                => 'meister',
+		'slug'                => 'meisters',
 		'with_front'          => true,
 		'pages'               => true,
 		'feeds'               => true,

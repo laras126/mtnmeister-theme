@@ -1,0 +1,18 @@
+{% extends "base.twig" %}
+
+{% block content %}
+	front page template hi
+	<h1>{{post.get_field('tagline')}}</h1>
+
+	
+{# 	
+	{% for post in meisters %}
+		{% include ['tease-meister.twig', 'tease.twig'] %}
+	{% endfor %}
+
+	{% for post in deals %}
+		{% include ['tease-deal.twig', 'tease.twig'] %}
+	{% endfor %}
+ #}
+
+{% endblock %}

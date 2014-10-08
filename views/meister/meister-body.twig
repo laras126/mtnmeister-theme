@@ -4,10 +4,22 @@
 
 <p>{{post.get_field('meister_bio')}}</p>
 
+<h3>Industries</h3>
+<ul>
+    {% for industry in mtn_industries %}
+        <li><a href="{{industry.link}}">{{industry.name}}</a></li>
+    {% endfor %}
+</ul>
+
+<h3>Tagged</h3>
+<ul>
+    {% for tag in mtn_tags %}
+        <li><a href="{{tag.link}}">{{tag.name}}</a></li>
+    {% endfor %}
+</ul>
 
 <section class="article-body-block">
 	<h3>Best Quotes</h3>
-    
     {% for item in post.get_field('quotes') %}
         <div class="item">
             <p>{{item.quote_text}}</p>
@@ -24,6 +36,8 @@
 		    <img src="{{TimberImage(item.gear_photo).src}}" alt="{{item.title}}">
 		    <h6>{{item.time_in_episode}}</h6>
 		    <p>{{item.gear_description}}</p>
+
+		    <p><strong>It's a deal!:</strong> {{item.gear_to_deal}}</p>
 		    <a href="{{item.gear_link}}" title="{{item.title}}">On the Web</a>
 		</div>
 	{% endfor %}

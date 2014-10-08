@@ -1,10 +1,9 @@
 {% extends "base.twig" %}
 
 {% block content %}
-	<h1>Meisters Page</h1>
-	
+	deal template, hi
 	{% for post in posts %}
-		{% include ['tease-meister.twig', 'tease.twig'] %}
+		{% include ['tease-deal.twig', 'tease.twig'] %}
 	{% endfor %}
 
 {% endblock %}

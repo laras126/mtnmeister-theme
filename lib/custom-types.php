@@ -183,13 +183,13 @@ function mtn_deal_post_type() {
 		'not_found_in_trash'  => __( 'Not found in Trash', 'mtnmeister' ),
 	);
 	$rewrite = array(
-		'slug'                => 'deal',
+		'slug'                => 'deals',
 		'with_front'          => true,
 		'pages'               => true,
 		'feeds'               => true,
 	);
 	$args = array(
-		'label'               => __( 'meister_deal', 'mtnmeister' ),
+		'label'               => __( 'deal', 'mtnmeister' ),
 		'description'         => __( 'Meister Deal', 'mtnmeister' ),
 		'labels'              => $labels,
 		'supports'            => array( 'title' ),
@@ -208,7 +208,7 @@ function mtn_deal_post_type() {
 		'capability_type'     => 'page',
 		'rewrite' 			  => $rewrite
 	);
-	register_post_type( 'meister_deal', $args );
+	register_post_type( 'deal', $args );
 
 }
 
@@ -223,22 +223,16 @@ add_action( 'init', 'mtn_deal_post_type', 0 );
  */
 
 // Meister title placeholder
-function mtn_meister_title_text ( $title ) {
+function mtn_custom_type_title_text ( $title ) {
 	if ( get_post_type() == 'meister' ) {
-	        $title = __( 'Meister name' );
+		$title = __( 'Meister Name' );
+	} else if ( get_post_type() == 'deal' ) {
+        $title = __( 'Deal Title' );
 	}
 	return $title;
-        } // End title_text_input()
-add_filter( 'enter_title_here', 'meister_title_text' );
+} // End title_text_input()
 
-// Deal title placeholder
-function mtn_deal_title_text ( $title ) {
-	if ( get_post_type() == 'Deal' ) {
-	        $title = __( 'Deal title' );
-	}
-	return $title;
-        } // End title_text_input()
-add_filter( 'enter_title_here', 'mtn_deal_title_text' );
+add_filter( 'enter_title_here', 'mtn_custom_type_title_text' );
 
 
 ?>

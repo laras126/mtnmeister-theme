@@ -2,11 +2,7 @@
 
 {% block content %}
 
-	{% for post in meisters %}
-		{% include ['tease-'~post.post_type~'.twig', 'tease.twig'] %}
-	{% endfor %}
-
-	{% for post in deals %}
+	{% for post in posts %}
 		{% include ['tease-'~post.post_type~'.twig', 'tease.twig'] %}
 	{% endfor %}
 

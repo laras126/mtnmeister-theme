@@ -23,6 +23,19 @@ var Roots = {
   common: {
     init: function() {
       // JavaScript to be fired on all pages
+
+      
+        $('body').addClass('js');
+        var $menu = $('#menu'),
+          $menulink = $('.menu-link');
+        
+      $menulink.click(function() {
+        $menulink.toggleClass('active');
+        $menu.toggleClass('active');
+        return false;
+      });
+
+
     }
   },
   // Home page

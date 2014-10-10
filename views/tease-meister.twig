@@ -1,8 +1,12 @@
 {% extends "tease.twig" %}
 {% block content %}
-	<h4><a href="{{post.link}}">{{post.title}}</a></h4>
-	<p>{{post.episode_num}}</p>
-	<p>{{post.episode_tag}}</p>
+	<header class="tease-header">
+		<h3><a href="{{post.link}}">{{post.title}}</a></h3>
+		<p>{{post.episode_num}}</p>
+		<p>{{post.episode_tag}}</p>
+	</header>
+
 	{{post.episode_soundcloud}}
+	
 	<a href="{{post.link}}" title="{{post.title}}" class="btn">Read more &rarr;</a>
 {% endblock %}

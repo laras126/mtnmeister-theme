@@ -36,9 +36,21 @@
 		    <img src="{{TimberImage(item.gear_photo).src}}" alt="{{item.title}}">
 		    <h6>{{item.time_in_episode}}</h6>
 		    <p>{{item.gear_description}}</p>
+			
+			{% set deals = TimberPost(item.gear_to_deal) %}
 
-		    <p><strong>It's a deal!:</strong> {{item.gear_to_deal}}</p>
+			{% if deals %}
+				<h3>Meister deal!</h3>
+
+				{% for deal in deals %}
+					<p>Related deal: {{deal.title}}</p>
+				{% endfor %}
+	
+			{% endif %}
+
+				    
 		    <a href="{{item.gear_link}}" title="{{item.title}}">On the Web</a>
+
 		</div>
 	{% endfor %}
 </section>

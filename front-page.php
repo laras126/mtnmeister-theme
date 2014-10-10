@@ -24,6 +24,11 @@
 	$context = Timber::get_context();
 	$context['meisters'] = Timber::get_posts($meister_args);
 	$context['deals'] = Timber::get_posts($deal_args);
+
+	// Grab some taxonomies
+	$context['mtn_tags'] = Timber::get_terms('meister_tag');
+	$context['mtn_industries'] = Timber::get_terms('meister_industry');
+
 	$context['sidebar'] = Timber::get_sidebar('sidebar.php');
 	
 	$post = new TimberPost();

@@ -1,8 +1,11 @@
-<iframe width="100%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/{{post.get_field('track_id')}}&amp;color=ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false"></iframe>
 
-<img src="{{TimberImage(post.get_field('meister_pic')).src}}" alt="{{post.title}}">
+{{post.episode_soundcloud}}
 
-<p>{{post.get_field('meister_bio')}}</p>
+{# <img src="{{TimberImage(post.meister_pic).src}}" alt="{{post.title}}"> #}
+
+{#
+Keeping out the image for now
+ <p>{{post.meister_bio}}</p> #}
 
 <h3>Industries</h3>
 <ul>
@@ -22,8 +25,8 @@
 	<h3>Best Quotes</h3>
     {% for item in post.get_field('quotes') %}
         <div class="item">
-            <p>{{item.quote_text}}</p>
-            <p>{{item.time_in_episode}}</p>
+            <blockquote>{{item.quote_text}}</blockquote>
+            <p>Time in episode: {{item.time_in_episode}}</p>
         </div>
     {% endfor %}
 </section>

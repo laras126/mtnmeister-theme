@@ -5,22 +5,17 @@
 	<div class="content-wrapper">
 		<article class="post-type-{{post.post_type}}" id="post-{{post.ID}}">
 			<section class="article-content">
-				<header class="article-header">
-					<p class="episode-info">
-						#{{post.get_field('episode_num')}}: {{post.get_field('episode_tag')}}
-					</p>
-					
-					<h1 class="article-h1">{{post.title}}</h1>
+				<header class="article-header text-center">
+					{% include 'meister/meister-head.twig' %}
 				</header>
 				<div class="article-body">
 					{% include 'meister/meister-body.twig' %}
-					{{post.content}}
 				</div>
 			</section>
 
 			<section class="comments">
 				<div class="respond">
-					<h3 class="h2">Comments</h3>
+					<h3>Comments</h3>
 					{{ comment_form }}
 				</div>
 				<div class="responses">
@@ -28,7 +23,6 @@
 						{% include "comment.twig" with {comment:cmt} %}
 					{% endfor %}
 				</div>
-
 			</section>
 
 		</article>

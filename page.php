@@ -21,7 +21,16 @@
  * @since    Timber 0.1
  */
 
+// Get the meister and deal post types for custom page templates
+
+$meister_args = array( 'post_type' => 'meister');
+$deal_args = array( 'post_type' => 'deal');
+
 $context = Timber::get_context();
 $post = new TimberPost();
+
+$context['meisters'] = Timber::get_posts($meister_args);
+$context['deals'] = Timber::get_posts($deal_args);
+
 $context['post'] = $post;
 Timber::render(array('page-' . $post->post_name . '.twig', 'page.twig'), $context);

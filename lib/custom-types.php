@@ -25,7 +25,7 @@ function mtn_meister_post_type() {
 		'not_found_in_trash'  => __( 'Not found in Trash', 'mtnmeister' ),
 	);
 	$rewrite = array(
-		'slug'                => 'meisters',
+		'slug'                => 'meister',
 		'with_front'          => true,
 		'pages'               => true,
 		'feeds'               => true,
@@ -42,9 +42,10 @@ function mtn_meister_post_type() {
 		'show_in_menu'        => true,
 		'show_in_nav_menus'   => true,
 		'show_in_admin_bar'   => true,
+		'menu_icon'           => 'dashicons-admin-users',
 		'menu_position'       => 5,
 		'can_export'          => true,
-		'has_archive'         => true,
+		'has_archive'         => false,
 		'exclude_from_search' => false,
 		'publicly_queryable'  => true,
 		'rewrite'             => $rewrite,
@@ -183,7 +184,7 @@ function mtn_deal_post_type() {
 		'not_found_in_trash'  => __( 'Not found in Trash', 'mtnmeister' ),
 	);
 	$rewrite = array(
-		'slug'                => 'deals',
+		'slug'                => 'deal',
 		'with_front'          => true,
 		'pages'               => true,
 		'feeds'               => true,
@@ -202,7 +203,7 @@ function mtn_deal_post_type() {
 		'menu_position'       => 5,
 		'menu_icon'           => 'dashicons-tag',
 		'can_export'          => true,
-		'has_archive'         => true,
+		'has_archive'         => false,
 		'exclude_from_search' => false,
 		'publicly_queryable'  => true,
 		'capability_type'     => 'page',

@@ -21,11 +21,6 @@ $context['mtn_tags'] = Timber::get_terms('meister_tag');
 $context['mtn_industries'] = Timber::get_terms('meister_industry');
 
 
-// Deal context
-
-
-
-
 if (post_password_required($post->ID)){
 	Timber::render('single-password.twig', $context);
 } else {

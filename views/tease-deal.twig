@@ -1,7 +1,14 @@
 {% extends "tease.twig" %}
 
 {% block content %}
-	<h4><a href="{{post.link}}">{{post.title}}</a></h4>
-	<p>{{post.get_field('episode_num')}}</p>
-	<p>{{post.get_field('episode_tag')}}</p>
+	<article class="tease">
+		<header class="tease-header">
+			<h3><a href="{{post.link}}">{{post.title}}</a></h3>
+			<p>{{post.deal_cta}}</p>
+		</header>
+		<p>{{post.deal_desc}}</p>
+		<img src="{{TimberImage(post.deal_pic).src}}" alt="{{post.title}}">
+		<p>Brought to you by: {{post.deal_vendor}}</p>
+	</article>
+	
 {% endblock %}

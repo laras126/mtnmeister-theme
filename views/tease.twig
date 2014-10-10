@@ -6,5 +6,6 @@
 		{% if post.get_thumbnail %}
 			<img src="{{post.thumbnail.src}}" />
 		{% endif %}
+		{% include 'partials/edit-link.twig' %}
 	{% endblock %}
 </article>

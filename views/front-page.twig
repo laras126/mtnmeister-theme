@@ -3,7 +3,22 @@
 {% block content %}
 	front page template hi
 	<h1>{{post.get_field('tagline')}}</h1>
+	
+	<h2>Find a meister</h2>
 
+	<h3>Industries</h3>
+	<ul>
+	    {% for industry in mtn_industries %}
+	        <li><a href="{{industry.link}}">{{industry.name}}</a></li>
+	    {% endfor %}
+	</ul>
+
+	<h3>Tagged</h3>
+	<ul>
+	    {% for tag in mtn_tags %}
+	        <li><a href="{{tag.link}}">{{tag.name}}</a></li>
+	    {% endfor %}
+	</ul>
 	
 {# 	
 	{% for post in meisters %}

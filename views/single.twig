@@ -16,7 +16,7 @@
 				</div>
 			</section>
 
-			<section class="comments">
+			{# <section class="comments">
 				<div class="respond">
 					<h3 class="h2">Comments</h3>
 					{{ comment_form }}
@@ -26,8 +26,8 @@
 						{% include "comment.twig" with {comment:cmt} %}
 					{% endfor %}
 				</div>
-			</section>
-
+			</section> #}
+			{% include 'partials/edit-link.twig' %}
 		</article>
 	</div> <!-- /content-wrapper -->
 

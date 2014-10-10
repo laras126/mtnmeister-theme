@@ -17,8 +17,10 @@ $slicer-breakpoints: 0 $screen-sm $screen-md $screen-lg;
 // Basic color names
 $black:	 			#111;
 $white: 			#fff;
-
 $grey: 				#aaa;
+
+$green: 			#68C499;
+$red: 				#9F4440;
 
 // Snow
 $sn-navy: 			#043f7e;
@@ -56,22 +58,27 @@ $h6:  				$sml;
 
 
 // Colors
-$light-accent: 		darken($sn-white, 15%);	
-$med-accent: 		$sn-orange;
-$dark-accent: 		$sn-navy;
+$accent-light: 		darken($sn-white, 15%);	
+$accent-med: 		$sn-orange;
+$accent-dark: 		$sn-navy;
 
-$dark-text: 		$sn-black;
-$light-text: 		$sn-white;
+$text-dark: 		$sn-black;
+$text-light: 		$sn-white;
 
-$link-color:		$dark-accent;
+$link-color:		$accent-dark;
 $link-hover: 		darken($link-color, 20%);
+
+$alert-danger:		$red;
+$alert-warning:		$sn-orange;
+$alert-success:		$green;
+$alert-info: 		lighten($sn-navy, 20%);
 
 // Components
 $body-bkgd: 		$white;
-$body-text: 		$dark-text;
+$body-text: 		$text-dark;
 
-$header-bkgd: 		$dark-accent;
-$header-text: 		$light-text;
+$header-bkgd: 		$accent-dark;
+$header-text: 		$text-light;
 
 // Typography
 $sans-serif: 		'Helvetica';
@@ -84,5 +91,5 @@ $button-font: 		$sans-serif;
 $lead-font: 		$sans-serif;
 
 // Utilities
-$accent-border: 	1px solid $med-accent;
+$accent-border: 	1px solid $accent-med;
 

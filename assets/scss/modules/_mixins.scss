@@ -10,7 +10,11 @@
 	border: darken($button-color, 10%) $sml/5 solid;
 
 	font-family: $button-font;
-	color: $text-color;
+
+	// TODO: BAD BAD
+	// Remove important
+	// Or is this better than a new style to override the <a> color?
+	color: $text-color !important;
 	
 	@extend %form-base;
 	margin-top: $h5;
@@ -39,3 +43,4 @@
 		text-shadow: none !important;
 	}
 }
+

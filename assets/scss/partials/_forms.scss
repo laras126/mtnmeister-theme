@@ -52,7 +52,7 @@ input[type="url"],
 input[type="search"],
 input[type="tel"] {
 	// background: $white;
-	color: $dark-text;
+	color: $text-dark;
 	border: $accent-border;
 	font-family: $body-font;
 	font-weight: 100;
@@ -60,7 +60,7 @@ input[type="tel"] {
 	@extend %form-base;
 
 	&:focus {
-		border-color: $med-accent;
+		border-color: $accent-med;
 		background-color: $white;
 	}
 }
@@ -85,14 +85,9 @@ input[type="checkbox"] {
 
 input[type="submit"],
 button {
-	@include button($med-accent);
-	cursor: pointer;
-	-webkit-appearance: none;
-
-	&.btn-alt {
-		@include button($dark-accent);
-	}
+	@extend .btn;
 }
+
 
 select,
 input[type="file"] {
@@ -107,4 +102,3 @@ input[type="checkbox"]:focus {
 	outline: 5px auto -webkit-focus-ring-color;
 	outline-offset: -2px;
 }
-

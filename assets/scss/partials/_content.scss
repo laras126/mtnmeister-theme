@@ -11,6 +11,11 @@
 // Posts
 // ---
 
+.edit-link,
+.edit-link:visited {
+	color: $alert-warning;
+	font-weight: bold;
+}
 
 // ---
 // Pages

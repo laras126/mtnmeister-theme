@@ -15,13 +15,19 @@ $context['post'] = $post;
 $context['wp_title'] .= ' - ' . $post->title();
 $context['comment_form'] = TimberHelper::get_comment_form();
 
+// Meister context
+
 $context['mtn_tags'] = Timber::get_terms('meister_tag');
 $context['mtn_industries'] = Timber::get_terms('meister_industry');
+
+
+// Deal context
+
+
+
 
 if (post_password_required($post->ID)){
 	Timber::render('single-password.twig', $context);
 } else {
 	Timber::render(array('single-' . $post->ID . '.twig', 'single-' . $post->post_type . '.twig', 'single.twig'), $context);
 }
-
-

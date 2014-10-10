@@ -12,15 +12,16 @@
                 <h1 class="header-logo">
                     <a class="header-logo-link" href="/" title="{{site.name}}" rel="home">{{site.name}}</a>
                 </h1>
-                <nav id="access" class="main-navigation" role="navigation">
+                <a href="#menu" class="menu-link">Menu</a>
+                <nav id="menu" class="main-navigation" role="navigation">
                     <ul>
-                    {% for item in menu.items %}
+                    {% for item in main_nav.items %}
                         <li id="menu-item-{{item.ID}}" class="menu-item menu-item-type-{{item.type}} menu-item-object-{{item.object}} menu-item-{{item.ID}}">
                             <a href="{{item.link}}">{{item.title}}</a>
                         </li>
                     {% endfor %}
                     </ul>
-                </nav><!-- #access -->
+                </nav><!-- #menu -->
 
             </div>
             {% endblock %}
@@ -43,7 +44,7 @@
         {% block footer %}
             <footer id="footer">
                 <div class="container">
-                    {% include 'footer.twig' %}                
+                    {% include 'footer.twig' %}         
                 </div>
             </footer>
             {{ function('wp_footer') }}

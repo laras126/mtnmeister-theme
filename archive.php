@@ -18,7 +18,7 @@
 
 		$data = Timber::get_context();
 
-		$data['title'] = 'Archive';
+		$data['title'] = 'Viewing';
 		if (is_day()){
 			$data['title'] = 'Archive: '.get_the_date( 'D M Y' );
 		} else if (is_month()){

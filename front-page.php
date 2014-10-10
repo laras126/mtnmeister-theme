@@ -24,6 +24,7 @@
 	$context = Timber::get_context();
 	$context['meisters'] = Timber::get_posts($meister_args);
 	$context['deals'] = Timber::get_posts($deal_args);
+	$context['sidebar'] = Timber::get_sidebar('sidebar.php');
 	
 	$post = new TimberPost();
 	$context['post'] = $post;

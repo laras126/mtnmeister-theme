@@ -1,0 +1,5 @@
+.btn {
+	@include button($accent-med);
+	cursor: pointer;
+	-webkit-appearance: none;
+}

@@ -6,6 +6,13 @@
 // Header
 // ---
 
+.header-logo {
+	@extend %h3;
+}
+
+.header {
+	@extend %rotate;
+}
 
 // ---
 // Posts
@@ -15,6 +22,10 @@
 .edit-link:visited {
 	color: $alert-warning;
 	font-weight: bold;
+}
+
+.article-title {
+	// text-align: center;
 }
 
 // ---
@@ -30,3 +41,7 @@
 // ---
 // Footer
 // ---
+
+.footer {
+	@extend %rotate;
+}

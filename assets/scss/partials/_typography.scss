@@ -1,6 +1,20 @@
+html {
+	font-size: $contain;
+	
+	@include bp(small) {
+		font-size: $contain-sm;
+	}
+
+	@include bp(med) {
+		font-size: $contain-md;
+	}
+	@include bp(large) {
+		font-size: $contain-lg;
+	}
+}
+
 body {
 	font-family: $body-font;
-	font-size: $contain;
 	font-weight: 100;
 }
 
@@ -88,12 +102,7 @@ strong {
 }
 
 .special {
-	&--number {
-		font-size: $h3;
-		color: $accent-med;
-		font-weight: 100;
-
-	}
+	color: $accent-med;
 }
 
 blockquote {

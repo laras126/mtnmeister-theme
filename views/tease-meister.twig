@@ -1,8 +1,8 @@
 {% extends "tease.twig" %}
 {% block content %}
 	<header class="tease-header">
-		<h3><a href="{{post.link}}">{{post.title}}</a></h3>
-		<p>{{post.episode_num}}</p>
+		<h2><a href="{{post.link}}"><span class="special">{{post.episode_num}}</span> {{post.title}}</a></h2>
+
 		<p>{{post.episode_tag}}</p>
 	</header>
 

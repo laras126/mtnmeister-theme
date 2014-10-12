@@ -7,6 +7,21 @@
 	text-decoration: none;	
 }
 
+%rotate {
+    background-color: $rotate-bkgd;
+    color: $rotate-text;
+
+    // TODO: Maybe add to holding?
+    // Need a more elegant way to remove link styles
+    
+    a, 
+    a:visited, 
+    a:hover {
+      color: $rotate-text;
+    } 
+}
+
+
 @mixin clearfix() {
   &:before,
   &:after {

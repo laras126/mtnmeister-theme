@@ -1,14 +1,13 @@
 {% extends "tease.twig" %}
 
 {% block content %}
-	<article class="tease">
-		<header class="tease-header">
-			<h3><a href="{{post.link}}">{{post.title}}</a></h3>
-			<p>{{post.deal_cta}}</p>
-		</header>
+	<header class="tease-header">
+		<h2><a href="{{post.link}}">{{post.title}}</a></h2>
+		<p>{{post.deal_cta}}</p>
+	</header>
+	<div class="tease-body">
 		<p>{{post.deal_desc}}</p>
 		<img src="{{TimberImage(post.deal_pic).src}}" alt="{{post.title}}">
 		<p>Brought to you by: {{post.deal_vendor}}</p>
-	</article>
-	
+	</div>
 {% endblock %}

@@ -20,6 +20,8 @@ $context['comment_form'] = TimberHelper::get_comment_form();
 $context['mtn_tags'] = Timber::get_terms('meister_tag');
 $context['mtn_industries'] = Timber::get_terms('meister_industry');
 
+// Sidebar
+$context['global_sidebar'] = Timber::get_widgets('global_sidebar');
 
 if (post_password_required($post->ID)){
 	Timber::render('single-password.twig', $context);

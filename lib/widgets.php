@@ -1,5 +1,9 @@
 <?php 
 
+/**
+ * Home page widgets
+ */
+
 function mtn_home_widgets() {
 
 	$args = array(
@@ -15,7 +19,10 @@ function mtn_home_widgets() {
 add_action( 'widgets_init', 'mtn_home_widgets' );
 
 
-// Register Footer widget area
+/**
+ * Footer widgets
+ */
+
 function mtn_footer_widgets() {
 
 	$args = array(
@@ -30,5 +37,25 @@ function mtn_footer_widgets() {
 
 // Hook into the 'widgets_init' action
 add_action( 'widgets_init', 'mtn_footer_widgets' );
+
+
+/**
+ * Global Sidebar
+ */
+
+function mtn_global_sidebar() {
+
+	$args = array(
+		'id'            => 'global_sidebar',
+		'name'          => __( 'Global Sidebar', 'mtnmeister' ),
+		'description'   => __( 'The sidebar appearing everywhere.', 'mtnmeister' ),
+		'class'         => 'widgets-sidebar',
+	);
+	register_sidebar( $args );
+
+}
+
+add_action( 'widgets_init', 'mtn_global_sidebar' );
+
 
 ?>

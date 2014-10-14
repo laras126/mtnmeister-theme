@@ -2,12 +2,18 @@
 // Maybe structure it like this? Up to you!
 
 
+.container {
+	// @extend %rotate;
+}
+
 // ---
 // Header
 // ---
 
-.header-logo {
-	@extend %h3;
+.header-logo svg {
+	// margin-top: $sml;
+	position: relative;
+	top: $sml;
 }
 
 .header {
@@ -17,6 +23,10 @@
 // ---
 // Posts
 // ---
+
+.tease {
+	border-top: $sml/3 $accent-med solid;
+}
 
 .edit-link,
 .edit-link:visited {

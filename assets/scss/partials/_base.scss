@@ -4,6 +4,11 @@
 	box-sizing: border-box;
 }
 
+body {
+	background-color: $body-bkgd;
+	color: $body-text;
+}
+
 img {
 	max-width: 100%;
 }

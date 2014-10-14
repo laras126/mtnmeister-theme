@@ -380,10 +380,10 @@ input[type="tel"] {
 @media (min-width: 35em) {
   .container {
     max-width: 750px; } }
-@media (min-width: 45em) {
+@media (min-width: 40em) {
   .container {
     max-width: 970px; } }
-@media (min-width: 60em) {
+@media (min-width: 50em) {
   .container {
     max-width: 1170px; } }
 .container-fluid {
@@ -1103,6 +1103,10 @@ button {
   -webkit-box-sizing: border-box;
           box-sizing: border-box; }
 
+body {
+  background-color: #fff;
+  color: #1f1d1a; }
+
 img {
   max-width: 100%; }
 
@@ -1111,10 +1115,10 @@ html {
   @media (min-width: 35em) {
     html {
       font-size: 100%; } }
-  @media (min-width: 45em) {
+  @media (min-width: 40em) {
     html {
       font-size: 120%; } }
-  @media (min-width: 60em) {
+  @media (min-width: 50em) {
     html {
       font-size: 130%; } }
 
@@ -1144,7 +1148,7 @@ h2 {
   font-size: 2.88rem;
   margin-top: 1.44rem; }
 
-h3, .header-logo {
+h3 {
   font-size: 1.92rem;
   margin-top: 1.44rem; }
 
@@ -1275,7 +1279,7 @@ input[type="checkbox"]:focus {
   outline-offset: -2px; }
 
 .container {
-  max-width: 60em;
+  max-width: 50em;
   margin: 0 auto;
   margin-right: auto;
   margin-left: auto;
@@ -1325,17 +1329,17 @@ nav[role=navigation].active {
 
 nav[role=navigation] ul {
   margin: 0;
-  padding: 0; }
+  padding: 0.96rem 0 0 0; }
 
 nav[role=navigation] li a {
   display: block;
   padding: 0.96rem;
   font-family: "Proxima Nova";
-  font-size: 1.2rem;
+  font-size: 1.92rem;
   font-weight: bold;
-  text-align: center; }
+  text-align: left; }
 
-@media screen and (min-width: 45em) {
+@media screen and (min-width: 40em) {
   a.menu-link {
     display: none; }
 
@@ -1385,6 +1389,13 @@ nav[role=navigation] li a {
        -o-transform: rotate(-45deg);
           transform: rotate(-45deg);
   margin: -16px 0 0 0; }
+
+.header-logo svg {
+  position: relative;
+  top: 0.96rem; }
+
+.tease {
+  border-top: 0.32rem #f8992f solid; }
 
 .edit-link,
 .edit-link:visited {

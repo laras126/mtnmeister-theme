@@ -19,6 +19,7 @@
 	}
 	$context = Timber::get_context();
 	$context['posts'] = Timber::get_posts();
+	$context['sidebar_class']: 'has-sidebar';
 	$templates = array('index.twig');
 	if (is_home()){
 		array_unshift($templates, 'home.twig');

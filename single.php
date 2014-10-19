@@ -21,7 +21,9 @@ $context['categories'] = Timber::get_terms('category');
 $context['tags'] = Timber::get_terms('post_tag');
 
 // Sidebar
+$context['sidebar_class'] = 'has-sidebar';
 $context['sidebar'] = Timber::get_sidebar('sidebar.php');
+
 
 if (post_password_required($post->ID)){
 	Timber::render('single-password.twig', $context);

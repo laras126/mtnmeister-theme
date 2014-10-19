@@ -34,6 +34,8 @@ $context['deals'] = Timber::get_posts($deal_args);
 
 $context['post'] = $post;
 
+// Sidebar
 $context['sidebar'] = Timber::get_sidebar('sidebar.php');
+$context['sidebar_class'] = 'has-sidebar';
 
 Timber::render(array('page-' . $post->post_name . '.twig', 'page.twig'), $context);

@@ -6,6 +6,14 @@
 	@include container-fixed();
 }
 
+.has-sidebar {
+	@include make-md-column(8);
+}
+
+.sidebar {
+	@include make-md-column(4);
+}
+
 .archive__block {
 	@include make-row();
 
@@ -16,3 +24,4 @@
 		@include make-xs-column(8);
 	}
 }
+

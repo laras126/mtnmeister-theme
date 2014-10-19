@@ -2,15 +2,40 @@
 
 {% block content %}
 
-	<article class="post-type-{{post.post_type}}" id="post-{{post.ID}}">
-		<section class="article-content">
+	<article class="type-{{post.post_type}}" id="post-{{post.ID}}">
+		<section class="article-main">
+			
 			<header class="article-header text-center">
-				{% include 'meister/meister-head.twig' %}
+				<p class="article-tagline no-margin"><span class="special">#{{post.episode_num}}</span> {{post.episode_tag}}</p>
+				<h1 class="article-title no-margin">{{post.title}}</h1>
 			</header>
+			
 			<div class="article-body">
 				{% include 'meister/meister-body.twig' %}
 			</div>
-		</section>
+
+			<footer class="article-footer">
+
+				<nav class="nav-prevnext">
+			
+					{% if post.prev %}
+						<div class="prev">
+							<a href="{{post.prev.link}}" class="link-postnav" title="{{post.prev.title}}">&larr; <span class="special">#{{post.prev.episode_num}}</span> {{post.prev.title}}</a>
+							<p>{{post.prev.episode_tag}}</p>
+						</div>
+					{% endif %}
+
+					{% if post.next %}
+						<div class="next">
+							<a href="{{post.next.link}}" class="link-postnav" title="{{post.next.title}}">#{{post.next.episode_num}}</span> {{post.next.title}} &rarr;</a>
+							<p class="article-tagline no-margin"><span class="special">{{post.next.episode_tag}}</p>
+						</div>
+					{% endif %}
+
+				</nav> <!-- /nav-prevnext -->
+
+			</footer>
+		</section> <!-- /article-main -->
 
 {# 			<section class="comments">
 			<div class="respond">

@@ -1,56 +1,68 @@
 
 // Toggle nav, courtesy Brad Frost
 // http://codepen.io/bradfrost/pen/sHvaz
+// I simplified some though
 
-nav[role=navigation] {
-	clear: both;
+.menu-main {
 	transition: all 0.3s ease-out;
 }
 
-.js nav[role=navigation] {
+.js .menu-main {
 	overflow: hidden;
 	max-height: 0;
 }
 
-nav[role=navigation].active {
-	max-height: 25em;
+.menu-main {
+	
+	&.active {
+		max-height: 25em;
+	}
 }
 
-nav[role=navigation] ul {
+.menu-items {
 	margin: 0;
 	padding: $sml 0 0 0;
 }
 
-nav[role=navigation] li a {
-	display: block;
-	padding: $sml;
-	font-family: $nav-font;
-	@extend %h3;
-	margin-top: 0;
+.menu-item {
+	list-style-type: none;
+	// text-align: center;
+
+	a {
+		display: block;
+		padding: $sml;
+		font-family: $nav-font;
+		font-weight: 700;
+		@extend %h3;
+		margin-top: 0;
+	}
 }
 
 @media screen and (min-width: $screen-md) {
-	a.menu-link {
+	.menu-link {
 	   display: none;
 	}
 
-	.js nav[role=navigation] {
+	.js .menu-main {
 		max-height: none;
 	}
 
-	nav[role=navigation] ul {
+	.menu-items {
 		margin: 0 0 0 -0.25em;
 		border: 0;
+		text-align: right;
 	}
 	
-	nav[role=navigation] li {
+	.menu-item {
 		display: inline-block;
 		margin: 0 0.25em;
 		text-align: right;
 	}
 
-	nav[role=navigation] li a {
+	.menu-item a {
 		border: 0;
+		font-size: $h4;
+		text-transform: uppercase;
 	}
 }
 
@@ -62,8 +74,12 @@ nav[role=navigation] li a {
 
 .menu-link {
 	padding: $h4;
-	float: right;
 }
+
+	.menu-link a {
+		float: right;
+	}
+
 	.menu-link span {
   		transition: all 0.25s ease-in-out;
     	width: 40px;

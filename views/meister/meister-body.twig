@@ -1,6 +1,6 @@
-<p class="tagline">{{post.get_field('episode_tag')}}</p>
 
-{{post.episode_soundcloud}}
+
+<iframe width="100%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/172079987&amp;color=ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false"></iframe>
 
 {# <img src="{{TimberImage(post.meister_pic).src}}" alt="{{post.title}}"> #}
 
@@ -34,14 +34,18 @@ Keeping out the image for now
 
 <section class="article-body-block">
 	<h3>Gear Recommendations</h3>
+
 	{% for item in post.get_field('gear_recommendations') %}
+	
 		<div class="item">
 		    <h4>{{item.gear_title}}</h4>
 		    <img src="{{TimberImage(item.gear_photo).src}}" alt="{{item.title}}">
 		    <h6>{{item.time_in_episode}}</h6>
 		    <p>{{item.gear_description}}</p>
 			
-		    <a href="{{item.gear_link}}" title="{{item.title}}" class="link-more">On the Web</a>
+		    <p>
+		    	<a href="{{item.gear_link}}" title="{{item.title}}" class="link-more">On the Web</a>
+		    </p>
 
 			{% set deals = TimberPost(item.gear_to_deal) %}
 
@@ -52,7 +56,10 @@ Keeping out the image for now
 				{% endfor %}
 	
 			{% endif %}
+
 		</div>
+	
 	{% endfor %}
+
 </section>
 

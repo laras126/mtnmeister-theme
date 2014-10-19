@@ -15,14 +15,20 @@ $context['post'] = $post;
 $context['wp_title'] .= ' - ' . $post->title();
 $context['comment_form'] = TimberHelper::get_comment_form();
 
+
 // Meister context
 
 $context['categories'] = Timber::get_terms('category');
 $context['tags'] = Timber::get_terms('post_tag');
 
-// Sidebar
-$context['sidebar_class'] = 'has-sidebar';
-$context['sidebar'] = Timber::get_sidebar('sidebar.php');
+
+// Sidebar for all singles except Meisters 
+// (pretty much just Deals)
+
+if(!is_singular('meister')) {
+	$context['sidebar_class'] = 'has-sidebar';
+	$context['sidebar'] = Timber::get_sidebar('sidebar.php');	
+}
 
 
 if (post_password_required($post->ID)){

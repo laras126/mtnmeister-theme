@@ -2,10 +2,6 @@
 // Maybe structure it like this? Up to you!
 
 
-.container {
-	// @extend %rotate;
-}
-
 // ---
 // Header
 // ---
@@ -18,8 +14,8 @@
 
 .header {
 	@extend %rotate;
+	margin-bottom: $h3;
 }
-
 
 
 // ---
@@ -51,9 +47,20 @@
 
 
 // ---
-// Pages
+// Articles
 // ---
 
+.article-header {
+	margin-bottom: $h3;	
+}
+
+	.article-title {
+	}
+
+	.article-tagline {
+		@extend %h3;
+		font-family: $heading-font;
+	}
 
 // ---
 // Media

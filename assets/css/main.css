@@ -361,10 +361,10 @@ th {
 @media (min-width: 35em) {
   .container {
     max-width: 750px; } }
-@media (min-width: 40em) {
+@media (min-width: 48em) {
   .container {
     max-width: 970px; } }
-@media (min-width: 50em) {
+@media (min-width: 57em) {
   .container {
     max-width: 1170px; } }
 .container-fluid {
@@ -1104,10 +1104,10 @@ html {
   @media (min-width: 35em) {
     html {
       font-size: 100%; } }
-  @media (min-width: 40em) {
+  @media (min-width: 48em) {
     html {
       font-size: 120%; } }
-  @media (min-width: 50em) {
+  @media (min-width: 57em) {
     html {
       font-size: 130%; } }
 
@@ -1130,12 +1130,12 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: 0; }
 
 h1 {
-  font-size: 3.36rem; }
+  font-size: 4.08rem; }
 
 h2, .tagline {
   font-size: 2.88rem; }
 
-h3, nav[role=navigation] li a {
+h3, .menu-item a, .article-tagline {
   font-size: 1.92rem; }
 
 h4, .lead {
@@ -1293,24 +1293,59 @@ input[type="checkbox"]:focus {
   list-style-type: none; }
 
 .container {
-  max-width: 50em;
+  max-width: 57em;
   margin: 0 auto;
   margin-right: auto;
   margin-left: auto;
-  padding-left: 15px;
-  padding-right: 15px; }
+  padding-left: 0.96rem;
+  padding-right: 0.96rem; }
   .container:before, .container:after {
     content: " ";
     display: table; }
   .container:after {
     clear: both; }
 
+.brand {
+  position: relative;
+  min-height: 1px;
+  padding-left: 0.96rem;
+  padding-right: 0.96rem; }
+  @media (min-width: 48em) {
+    .brand {
+      float: left;
+      width: 33.33333%; } }
+
+.logo,
+.menu-link {
+  position: relative;
+  float: left;
+  width: 50%;
+  min-height: 1px;
+  padding-left: 0.96rem;
+  padding-right: 0.96rem; }
+
+.menu-main {
+  position: relative;
+  float: left;
+  width: 100%;
+  min-height: 1px;
+  padding-left: 0.96rem;
+  padding-right: 0.96rem;
+  position: relative;
+  min-height: 1px;
+  padding-left: 0.96rem;
+  padding-right: 0.96rem; }
+  @media (min-width: 48em) {
+    .menu-main {
+      float: left;
+      width: 66.66667%; } }
+
 .has-sidebar {
   position: relative;
   min-height: 1px;
-  padding-left: 15px;
-  padding-right: 15px; }
-  @media (min-width: 40em) {
+  padding-left: 0.96rem;
+  padding-right: 0.96rem; }
+  @media (min-width: 48em) {
     .has-sidebar {
       float: left;
       width: 66.66667%; } }
@@ -1318,16 +1353,16 @@ input[type="checkbox"]:focus {
 .sidebar {
   position: relative;
   min-height: 1px;
-  padding-left: 15px;
-  padding-right: 15px; }
-  @media (min-width: 40em) {
+  padding-left: 0.96rem;
+  padding-right: 0.96rem; }
+  @media (min-width: 48em) {
     .sidebar {
       float: left;
       width: 33.33333%; } }
 
 .archive__block {
-  margin-left: -15px;
-  margin-right: -15px; }
+  margin-left: -0.96rem;
+  margin-right: -0.96rem; }
   .archive__block:before, .archive__block:after {
     content: " ";
     display: table; }
@@ -1338,59 +1373,66 @@ input[type="checkbox"]:focus {
     float: left;
     width: 33.33333%;
     min-height: 1px;
-    padding-left: 15px;
-    padding-right: 15px; }
+    padding-left: 0.96rem;
+    padding-right: 0.96rem; }
   .archive__block__content {
     position: relative;
     float: left;
     width: 66.66667%;
     min-height: 1px;
-    padding-left: 15px;
-    padding-right: 15px; }
+    padding-left: 0.96rem;
+    padding-right: 0.96rem; }
 
-nav[role=navigation] {
-  clear: both;
+.menu-main {
   -webkit-transition: all 0.3s ease-out;
        -o-transition: all 0.3s ease-out;
           transition: all 0.3s ease-out; }
 
-.js nav[role=navigation] {
+.js .menu-main {
   overflow: hidden;
   max-height: 0; }
 
-nav[role=navigation].active {
+.menu-main.active {
   max-height: 25em; }
 
-nav[role=navigation] ul {
+.menu-items {
   margin: 0;
   padding: 0.96rem 0 0 0; }
 
-nav[role=navigation] li a {
-  display: block;
-  padding: 0.96rem;
-  font-family: "Texta";
-  margin-top: 0; }
+.menu-item {
+  list-style-type: none; }
+  .menu-item a {
+    display: block;
+    padding: 0.96rem;
+    font-family: "Texta";
+    font-weight: 700;
+    margin-top: 0; }
 
-@media screen and (min-width: 40em) {
-  a.menu-link {
+@media screen and (min-width: 48em) {
+  .menu-link {
     display: none; }
 
-  .js nav[role=navigation] {
+  .js .menu-main {
     max-height: none; }
 
-  nav[role=navigation] ul {
+  .menu-items {
     margin: 0 0 0 -0.25em;
-    border: 0; }
+    border: 0;
+    text-align: right; }
 
-  nav[role=navigation] li {
+  .menu-item {
     display: inline-block;
     margin: 0 0.25em;
     text-align: right; }
 
-  nav[role=navigation] li a {
-    border: 0; } }
+  .menu-item a {
+    border: 0;
+    font-size: 1.44rem;
+    text-transform: uppercase; } }
 .menu-link {
-  padding: 1.44rem;
+  padding: 1.44rem; }
+
+.menu-link a {
   float: right; }
 
 .menu-link span {
@@ -1427,6 +1469,9 @@ nav[role=navigation] li a {
   position: relative;
   top: 0.96rem; }
 
+.header {
+  margin-bottom: 1.92rem; }
+
 .tagline {
   font-family: "Texta"; }
 
@@ -1442,5 +1487,14 @@ nav[role=navigation] li a {
 
 .link-more {
   text-align: right; }
+
+.article-header {
+  margin-bottom: 1.92rem; }
+
+.article-tagline {
+  font-family: "Texta"; }
+
+.no-margin {
+  margin: 0; }
 
 /*# sourceMappingURL=main.css.map */

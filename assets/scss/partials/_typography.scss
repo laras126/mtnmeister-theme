@@ -1,6 +1,8 @@
 html {
 	font-size: $contain;
 	
+	// Adjust font-size at breakpoints
+
 	@include bp(small) {
 		font-size: $contain-sm;
 	}
@@ -8,6 +10,7 @@ html {
 	@include bp(med) {
 		font-size: $contain-md;
 	}
+
 	@include bp(large) {
 		font-size: $contain-lg;
 	}
@@ -15,7 +18,7 @@ html {
 
 body {
 	font-family: $body-font;
-	font-weight: 100;
+	font-weight: 300;
 }
 
 a, a:visited {
@@ -37,41 +40,50 @@ a, a:visited {
 }
 
 h1, h2, h3, h4, h5, h6 {
-	line-height: $line-height-base;
+	line-height: $line-height-heading;
 	font-family: $heading-font;
-	font-weight: 700;
+	font-weight: 900;
 	margin-bottom: 0;
 }
 
-// Inlcuding some placeholder extends for utility use.
+//
+// %h1-%h6 placeholders for font-size utility use.
+//
 
-h1, %h1 {
-	font-size: $h1;
+%h1 { font-size: $h1; }
+%h2 { font-size: $h2; }
+%h3 { font-size: $h3; }
+%h4 { font-size: $h4; }
+%h5 { font-size: $h5; }
+%h6 { font-size: $sml; }
+
+h1 {
+	@extend %h1;
 	margin-top: $h3;
 }
 
-h2, %h2 {
-	font-size: $h2;
+h2 {
+	@extend %h2;
 	margin-top: $h4;
 }
 
-h3, %h3 {
-	font-size: $h3;
+h3 {
+	@extend %h3;
 	margin-top: $h4;
 }
 
-h4, %h4 {
-	font-size: $h4;
+h4 { 
+	@extend %h4;
 	margin-top: $base;
 }
 
-h5, %h5 {
-	font-size: $h5;
+h5 {
+	@extend %h5;
 	margin-top: $base;
 }
 
-h6, %h6 {
-	font-size: $sml;
+h6 {	
+	@extend %h6;
 	margin-top: $base;
 }
 
@@ -84,21 +96,14 @@ small {
 	font-size: $sml;
 }
 
-strong {
-	font-weight: normal;
-	font-family: $sans-serif-bold;
-}
 
-// Utility
+//
+// Semantic classes for non-heading elements
+//
 
 .lead {
 	font-family: $lead-font;
 	@extend %h4;
-}
-
-.section-desc {
-	font-size: $sml;
-	margin-top: 0;
 }
 
 .special {

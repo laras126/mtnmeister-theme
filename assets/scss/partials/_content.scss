@@ -20,9 +20,16 @@
 	@extend %rotate;
 }
 
+
+
 // ---
 // Posts
 // ---
+
+.tagline {
+	font-family: $heading-font;
+	@extend %h2;
+}
 
 .tease {
 	border-top: $sml/3 $accent-med solid;
@@ -30,13 +37,18 @@
 
 .edit-link,
 .edit-link:visited {
-	color: $alert-warning;
+	color: $alert-danger;
 	font-weight: bold;
+	display: block;
+	margin: $h4 0;
 }
 
-.article-title {
-	// text-align: center;
+
+.link-more {
+	text-align: right;
+	@extend .btn;
 }
+
 
 // ---
 // Pages

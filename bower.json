@@ -23,5 +23,8 @@
   "description": "Custom theme based on Roots.io",
   "moduleType": [
     "node"
-  ]
+  ],
+  "devDependencies": {
+    "modernizr": "~2.8.3"
+  }
 }

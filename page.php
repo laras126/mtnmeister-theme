@@ -33,4 +33,7 @@ $context['meisters'] = Timber::get_posts($meister_args);
 $context['deals'] = Timber::get_posts($deal_args);
 
 $context['post'] = $post;
+
+$context['sidebar'] = Timber::get_sidebar('sidebar.php');
+
 Timber::render(array('page-' . $post->post_name . '.twig', 'page.twig'), $context);

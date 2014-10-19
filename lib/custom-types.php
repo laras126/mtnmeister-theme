@@ -35,7 +35,7 @@ function mtn_meister_post_type() {
 		'description'         => __( 'The object for Meisters and Episodes', 'mtnmeister' ),
 		'labels'              => $labels,
 		'supports'            => array( 'title', ),
-		'taxonomies'          => array( 'meister_type', 'meister_tag' ),
+		'taxonomies'          => array( 'category', 'post_tag' ),
 		'hierarchical'        => false,
 		'public'              => true,
 		'show_ui'             => true,
@@ -100,12 +100,12 @@ function mtn_meister_industry_taxonomy() {
 		'show_tagcloud'              => true,
 		'rewrite'                    => $rewrite,
 	);
-	register_taxonomy( 'meister_industry', array( 'meister' ), $args );
+	// register_taxonomy( 'meister_industry', array( 'meister' ), $args );
 
 }
 
 // Hook into the 'init' action
-add_action( 'init', 'mtn_meister_industry_taxonomy', 0 );
+// add_action( 'init', 'mtn_meister_industry_taxonomy', 0 );
 
 
 
@@ -151,12 +151,12 @@ function mtn_meister_tag_taxonomy() {
 		'show_tagcloud'              => true,
 		'rewrite'                    => $rewrite,
 	);
-	register_taxonomy( 'meister_tag', array( 'meister' ), $args );
+	// register_taxonomy( 'meister_tag', array( 'meister' ), $args );
 
 }
 
 // Hook into the 'init' action
-add_action( 'init', 'mtn_meister_tag_taxonomy', 0 );
+// add_action( 'init', 'mtn_meister_tag_taxonomy', 0 );
 
 
 /**

@@ -26,7 +26,7 @@ function mtn_styles_scripts() {
     $assets = array(
       'css'       => '/assets/css/main.css',
       'js'        => '/assets/js/scripts.js',
-      // 'modernizr' => '/assets/vendor/modernizr/modernizr.js',
+      'modernizr' => '/assets/vendor/modernizr.custom.js',
       'jquery'    => '//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.js'
     );
   } else {
@@ -35,7 +35,7 @@ function mtn_styles_scripts() {
     $assets     = array(
       'css'       => '/assets/css/main.min.css?' . $assets['assets/css/main.min.css']['hash'],
       'js'        => '/assets/js/scripts.min.js?' . $assets['assets/js/scripts.min.js']['hash'],
-      // 'modernizr' => '/assets/js/vendor/modernizr.min.js',
+      'modernizr' => '/assets/js/vendor/modernizr.custom.min.js',
       'jquery'    => '//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js',
     );
   }
@@ -43,6 +43,7 @@ function mtn_styles_scripts() {
   wp_enqueue_style('mtn_styles_scripts', get_template_directory_uri() . $assets['css'], false, null);
   wp_enqueue_style( 'mtn_styles_scripts', get_stylesheet_uri(), array( 'dashicons' ), '1.0' );
   
+
   /**
    * jQuery is loaded using the same method from HTML5 Boilerplate:
    * Grab Google CDN's latest jQuery with a protocol relative URL; fallback to local if offline
@@ -58,7 +59,7 @@ function mtn_styles_scripts() {
     wp_enqueue_script('comment-reply');
   }
 
-  // wp_enqueue_script('modernizr', get_template_directory_uri() . $assets['modernizr'], array(), null, false);
+  wp_enqueue_script('modernizr', get_template_directory_uri() . $assets['modernizr'], array(), null, false);
   wp_enqueue_script('jquery');
   wp_enqueue_script('mtn_js', get_template_directory_uri() . $assets['js'], array(), null, true);
 }

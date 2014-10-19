@@ -43,7 +43,10 @@ $contain-sm: 		100%;
 $contain: 			90%;
 
 $base:  			1.2rem;
-$line-height-base: 	1.5;
+
+$line-height-base: 		1.5;
+$line-height-heading: 	1;
+
 $sml:  				$base*0.8;
 
 $h1:  				$base*2.8;
@@ -87,11 +90,11 @@ $rotate-link: 		$text-light;
 
 
 // Typography
-$sans-serif: 		'Proxima Nova';
+$sans-serif: 		'Texta';
 $sans-serif-bold: 	'Montserrat';
 $serif:             'Chaparral Pro';
 
-$heading-font: 		$sans-serif-bold;
+$heading-font: 		$sans-serif;
 $body-font: 		$serif;
 $nav-font: 			$sans-serif;
 $button-font: 		$sans-serif;

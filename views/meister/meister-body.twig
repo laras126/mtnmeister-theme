@@ -1,3 +1,4 @@
+<p class="tagline">{{post.get_field('episode_tag')}}</p>
 
 {{post.episode_soundcloud}}
 
@@ -7,16 +8,16 @@
 Keeping out the image for now
  <p>{{post.meister_bio}}</p> #}
 
-<h3>Industries</h3>
+
 <ul>
-    {% for industry in mtn_industries %}
-        <li><a href="{{industry.link}}">{{industry.name}}</a></li>
+    {% for cat in post.categories %}
+        <li><a href="{{cat.link}}">{{cat.name}}</a></li>
     {% endfor %}
 </ul>
 
 <h3>Tagged</h3>
 <ul>
-    {% for tag in mtn_tags %}
+    {% for tag in post.tags %}
         <li><a href="{{tag.link}}">{{tag.name}}</a></li>
     {% endfor %}
 </ul>
@@ -40,20 +41,17 @@ Keeping out the image for now
 		    <h6>{{item.time_in_episode}}</h6>
 		    <p>{{item.gear_description}}</p>
 			
+		    <a href="{{item.gear_link}}" title="{{item.title}}" class="link-more">On the Web</a>
+
 			{% set deals = TimberPost(item.gear_to_deal) %}
 
 			{% if deals %}
-				<h3>Meister deal!</h3>
 
 				{% for deal in deals %}
-					<p>Related deal: {{deal.title}}</p>
+					<p>Meister deal!: {{deal.title}}</p>
 				{% endfor %}
 	
 			{% endif %}
-
-				    
-		    <a href="{{item.gear_link}}" title="{{item.title}}">On the Web</a>
-
 		</div>
 	{% endfor %}
 </section>

@@ -4,10 +4,6 @@
 
 nav[role=navigation] {
 	clear: both;
-	-webkit-transition: all 0.3s ease-out;  
-	-moz-transition: all 0.3s ease-out;
-	-ms-transition: all 0.3s ease-out;
-	-o-transition: all 0.3s ease-out;
 	transition: all 0.3s ease-out;
 }
 
@@ -29,9 +25,8 @@ nav[role=navigation] li a {
 	display: block;
 	padding: $sml;
 	font-family: $nav-font;
-	font-size: $h3;
-	font-weight: bold;
-	text-align: left;
+	@extend %h3;
+	margin-top: 0;
 }
 
 @media screen and (min-width: $screen-md) {
@@ -51,6 +46,7 @@ nav[role=navigation] li a {
 	nav[role=navigation] li {
 		display: inline-block;
 		margin: 0 0.25em;
+		text-align: right;
 	}
 
 	nav[role=navigation] li a {

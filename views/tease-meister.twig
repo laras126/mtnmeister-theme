@@ -3,11 +3,9 @@
 {% block content %}
 	<header class="tease-header">
 		<h2><a href="{{post.link}}"><span class="special">{{post.episode_num}}</span> {{post.title}}</a></h2>
-		<p>{{post.episode_tag}}</p>
+		<p class="tagline">{{post.episode_tag}}</p>
 	</header>
 	<div class="tease-body">
 		{{post.episode_soundcloud}}
-		
-		<a href="{{post.link}}" title="{{post.title}}" class="btn">Read more &rarr;</a>	
 	</div>
 {% endblock %}

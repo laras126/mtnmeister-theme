@@ -1,7 +1,7 @@
 <div class="container">
     <div class="row">
         
-        <div class="col-xs-12 col-sm-2">
+        <div class="col-xs-12 col-sm-4">
             <div class="col-xs-6">
                 <a class="header-logo" href="/" title="{{site.name}}" rel="home">
                 <!-- Generator: Adobe Illustrator 18.0.0, SVG Export Plug-In  -->
@@ -27,14 +27,14 @@
                   <span></span>
                   <span></span>
                 </a>    
-            </div>
+            </div> <!-- .menu-link -->
 
         </div>
-        <div class="col-xs-12 col-sm-10 text-right">
-            <nav id="menu" class="nav-main" role="navigation">
+        <div class="col-xs-12 col-sm-8">
+            <nav id="menu" class="menu-main" role="navigation">
                 <ul>
                 {% for item in main_nav.items %}
-                    <li id="menu-item-{{item.ID}}" class="menu-item menu-item-type-{{item.type}} menu-item-object-{{item.object}} menu-item-{{item.ID}}">
+                    <li class="menu-item menu-item-type-{{item.type}} menu-item-object-{{item.object}}">
                         <a href="{{item.link}}">{{item.title}}</a>
                     </li>
                 {% endfor %}

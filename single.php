@@ -17,11 +17,11 @@ $context['comment_form'] = TimberHelper::get_comment_form();
 
 // Meister context
 
-$context['mtn_tags'] = Timber::get_terms('meister_tag');
-$context['mtn_industries'] = Timber::get_terms('meister_industry');
+$context['categories'] = Timber::get_terms('category');
+$context['tags'] = Timber::get_terms('post_tag');
 
 // Sidebar
-$context['global_sidebar'] = Timber::get_widgets('global_sidebar');
+$context['sidebar'] = Timber::get_sidebar('sidebar.php');
 
 if (post_password_required($post->ID)){
 	Timber::render('single-password.twig', $context);

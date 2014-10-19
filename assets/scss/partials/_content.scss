@@ -23,8 +23,7 @@
 // ---
 
 .tagline {
-	font-family: $heading-font;
-	@extend %h2;
+	@extend %h4;
 }
 
 .tease {

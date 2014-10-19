@@ -51,13 +51,11 @@ input[type="email"],
 input[type="url"],
 input[type="search"],
 input[type="tel"] {
-	// background: $white;
-	color: $text-dark;
-	border: $accent-border;
-	font-family: $body-font;
-	font-weight: 100;
 	
 	@extend %form-base;
+	width: 100%;
+	
+	border: $accent-border;
 
 	&:focus {
 		border-color: $accent-med;

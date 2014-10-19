@@ -2,7 +2,6 @@
 
 @mixin button( $button-color, $text-color: $white ) {
 	background: $button-color;
-	font-family: $button-font;
 	font-weight: 700;
 
 	// TODO: BAD BAD

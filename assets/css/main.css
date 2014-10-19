@@ -358,7 +358,7 @@ th {
   margin-right: auto;
   margin-left: auto; }
 
-@media (min-width: 35em) {
+@media (min-width: 30em) {
   .container {
     max-width: 750px; } }
 @media (min-width: 48em) {
@@ -1050,7 +1050,8 @@ input[type="email"],
 input[type="url"],
 input[type="search"],
 input[type="tel"] {
-  padding: 0.48rem 0.96rem; }
+  padding: 0.96rem 1.2rem;
+  font-family: Texta-Book, Helvetica, sans-serif; }
 
 .header, .footer {
   background-color: #043f7e;
@@ -1074,7 +1075,6 @@ input[type="tel"] {
 .btn, input[type="submit"],
 button, .link-more {
   background: #f8992f;
-  font-family: "Texta";
   font-weight: 700;
   color: #fff !important;
   cursor: pointer;
@@ -1101,19 +1101,20 @@ img {
 
 html {
   font-size: 90%; }
-  @media (min-width: 35em) {
+  @media (min-width: 30em) {
     html {
       font-size: 100%; } }
   @media (min-width: 48em) {
     html {
-      font-size: 120%; } }
+      font-size: 110%; } }
   @media (min-width: 57em) {
     html {
-      font-size: 130%; } }
+      font-size: 120%; } }
 
 body {
-  font-family: "Chaparral Pro";
-  font-weight: 300; }
+  font-style: normal;
+  font-weight: normal;
+  font-family: Texta-Book, Helvetica, sans-serif; }
 
 a, a:visited {
   color: #043f7e;
@@ -1125,21 +1126,17 @@ a, a:visited {
 
 h1, h2, h3, h4, h5, h6 {
   line-height: 1;
-  font-family: "Texta";
-  font-weight: 900;
+  font-family: Texta-Heavy, Helvetica, sans-serif;
   margin-bottom: 0; }
 
 h1 {
   font-size: 4.08rem; }
 
-h2, .tagline {
+h2 {
   font-size: 2.88rem; }
 
 h3, .menu-item a, .article-tagline {
   font-size: 1.92rem; }
-
-h4, .lead {
-  font-size: 1.44rem; }
 
 .btn, input[type="submit"],
 button, .link-more, textarea,
@@ -1155,7 +1152,10 @@ input[type="number"],
 input[type="email"],
 input[type="url"],
 input[type="search"],
-input[type="tel"], h5 {
+input[type="tel"], h4, .lead, .tagline {
+  font-size: 1.44rem; }
+
+h5 {
   font-size: 1.2rem; }
 
 h6 {
@@ -1187,7 +1187,7 @@ small {
   font-size: 0.96rem; }
 
 .lead {
-  font-family: "Texta"; }
+  font-family: Texta-Book, Helvetica, sans-serif; }
 
 .special {
   color: #f8992f; }
@@ -1211,7 +1211,7 @@ label {
   margin-bottom: 0.48rem;
   text-transform: uppercase;
   letter-spacing: 1px;
-  font-family: "Montserrat";
+  font-family: Texta-Heavy, Helvetica, sans-serif;
   font-weight: 400; }
 
 input[type="search"] {
@@ -1243,10 +1243,8 @@ input[type="email"],
 input[type="url"],
 input[type="search"],
 input[type="tel"] {
-  color: #1f1d1a;
-  border: 1px solid #f8992f;
-  font-family: "Chaparral Pro";
-  font-weight: 100; }
+  width: 100%;
+  border: 1px solid #f8992f; }
   textarea:focus,
   input[type="text"]:focus,
   input[type="password"]:focus,
@@ -1404,7 +1402,7 @@ input[type="checkbox"]:focus {
   .menu-item a {
     display: block;
     padding: 0.96rem;
-    font-family: "Texta";
+    font-family: Texta-Book, Helvetica, sans-serif;
     font-weight: 700;
     margin-top: 0; }
 
@@ -1472,9 +1470,6 @@ input[type="checkbox"]:focus {
 .header {
   margin-bottom: 1.92rem; }
 
-.tagline {
-  font-family: "Texta"; }
-
 .tease {
   border-top: 0.32rem #f8992f solid; }
 
@@ -1492,7 +1487,7 @@ input[type="checkbox"]:focus {
   margin-bottom: 1.92rem; }
 
 .article-tagline {
-  font-family: "Texta"; }
+  font-family: Texta-Heavy, Helvetica, sans-serif; }
 
 .no-margin {
   margin: 0; }

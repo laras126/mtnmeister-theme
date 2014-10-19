@@ -17,8 +17,9 @@ html {
 }
 
 body {
+	font-style: normal;
+	font-weight: normal;
 	font-family: $body-font;
-	font-weight: 300;
 }
 
 a, a:visited {
@@ -42,7 +43,6 @@ a, a:visited {
 h1, h2, h3, h4, h5, h6 {
 	line-height: $line-height-heading;
 	font-family: $heading-font;
-	font-weight: 900;
 	margin-bottom: 0;
 }
 
@@ -95,6 +95,7 @@ p {
 small {
 	font-size: $sml;
 }
+
 
 
 //

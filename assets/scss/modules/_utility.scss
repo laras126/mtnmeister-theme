@@ -10,8 +10,9 @@
 
 // Used for consistent form sizing
 %form-base {
-  padding: $sml/2 $sml;
-  @extend %h5;
+  padding: $sml $base;
+  @extend %h4;
+  font-family: $form-font;
 }
 
 %rotate {

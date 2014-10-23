@@ -9,26 +9,133 @@
 .header-logo svg {
 	// margin-top: $sml;
 	position: relative;
-	top: $sml;
+	// top: $sml;
+}
+
+.banner {
+	// @extend %rotate;
+	@include bp(med) {
+		position: fixed;
+		width: 100%;
+		z-index: 5;		
+	}
 }
 
 .header {
-	@extend %rotate;
-	margin-bottom: $h3;
+	// margin-bottom: $h3;
+	// @extend %rotate;
+}
+
+.top-bar {
+	
 }
 
 
 // ---
-// Posts
+// Posts and Pages
 // ---
 
-.tagline {
+
+// Page typography
+
+h4 {
+	@extend %upperspace;
+}
+
+.tag {
 	@extend %h4;
+	@extend %upperspace;
+	color: $accent-med;
 }
+
+
+// Episode number with surrounding line border
+
+.number {
+	@extend %upperspace;
+	border-bottom: $accent-border; 
+	position:relative; 
+	
+	span { 
+		position: relative; 
+		top: $sml; 
+		padding: 0 $sml;
+		background-color: $body-bkgd;
+	}
+}
+
+.number-wrap{
+	display:block; 
+    margin: 0;
+}
+
+
+
+
+// Tease styles
 
 .tease {
-	border-top: $sml/3 $accent-med solid;
+	// border-top: $sml/3 $accent-med solid;
 }
+
+.tease-header {
+	text-align: center;
+}
+
+.tease-title {
+	// position: relative;
+	// top: $sml;
+	padding: $h4 0 0;
+
+	a {
+		
+	}
+}
+
+.tease-body {
+
+}
+
+
+
+// Articles
+
+.article-header,
+.tease-header {
+	margin-bottom: $h3;	
+}
+
+.article-header {
+	@include bp(small) {
+		background-image: url('../img/ice.jpg');
+			background-size: 100% auto;
+			background-repeat: no-repeat; 
+			background-attachment: fixed;
+		
+		padding-top: 20%;
+		// text-align: center;
+	}
+
+	&-wrap {
+		@include make-md-column(8);
+
+		@include bp(small) {
+			position: relative;
+			top: $h2;
+			padding: 0 $h3;
+			border: $accent-border; 
+			border-bottom: 0;
+			background-color: $body-bkgd;
+		}
+		
+	}
+}
+
+	
+
+
+
+// Links
 
 .edit-link,
 .edit-link:visited {
@@ -44,26 +151,17 @@
 	@extend .btn;
 }
 
-
-// ---
-// Articles
-// ---
-
-.article-header {
-	margin-bottom: $h3;	
+.link-postnav {
+	text-transform: uppercase;
+	font-size: $sml;
 }
 
-	.article-title {
-	}
 
-	.article-tagline {
-		@extend %h3;
-		font-family: $heading-font;
-	}
 
 // ---
 // Media
 // ---
+
 
 
 // ---

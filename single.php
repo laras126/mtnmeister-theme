@@ -25,10 +25,10 @@ $context['tags'] = Timber::get_terms('post_tag');
 // Sidebar for all singles except Meisters 
 // (pretty much just Deals)
 
-if(!is_singular('meister')) {
-	$context['sidebar_class'] = 'has-sidebar';
-	$context['sidebar'] = Timber::get_sidebar('sidebar.php');	
-}
+// if(!is_singular('meister')) {
+// 	$context['sidebar_class'] = 'has-sidebar';
+// 	$context['sidebar'] = Timber::get_sidebar('sidebar.php');	
+// }
 
 
 if (post_password_required($post->ID)){

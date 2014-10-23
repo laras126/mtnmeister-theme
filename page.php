@@ -64,8 +64,8 @@ $context['pagination'] = Timber::get_pagination();
 $context['post'] = $post;
 
 // Sidebar
-$context['sidebar'] = Timber::get_sidebar('sidebar.php');
-$context['sidebar_class'] = 'has-sidebar';
+// $context['sidebar'] = Timber::get_sidebar('sidebar.php');
+// $context['sidebar_class'] = 'has-sidebar';
 
 
 /* make sure you've got query_posts in your .php file */
@@ -73,3 +73,4 @@ $context['posts'] = Timber::get_posts();
 $context['pagination'] = Timber::get_pagination();
 
 Timber::render(array('page-' . $post->post_name . '.twig', 'page.twig'), $context);
+

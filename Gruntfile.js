@@ -7,7 +7,7 @@ module.exports = function(grunt) {
 
   var jsFileList = [
     'assets/js/plugins/*js',
-    'assets/js/*.js'
+    'assets/js/_*.js'
   ];
 
   grunt.initConfig({
@@ -52,7 +52,7 @@ module.exports = function(grunt) {
     uglify: {
       dist: {
         files: {
-          'assets/js/scripts.min.js': [jsFileList]
+          'assets/js/scripts.min.js': 'assets/js/scripts.js'
         }
       }
     },

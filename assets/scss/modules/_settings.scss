@@ -3,8 +3,8 @@
 // ----
 
 $screen-sm: 		30em;
-$screen-md: 		48em;
-$screen-lg: 		57em;
+$screen-md: 		45em;
+$screen-lg: 		50em;
 
 $slicer-breakpoints: 0 $screen-sm $screen-md $screen-lg;
 
@@ -84,17 +84,17 @@ $alert-info: 		lighten($sn-navy, 20%);
 $body-bkgd: 		$white;
 $body-text: 		$text-dark;
 
-$rotate-bkgd: 		$accent-dark;
-$rotate-text: 		$text-light;
+$rotate-bkgd: 		$accent-light;
+$rotate-text: 		$text-dark;
 $rotate-link: 		$text-light;
 
 
 // Typography
-$sans-serif: 		Texta-Book, Helvetica, sans-serif;
-$sans-serif-bold: 	Texta-Heavy, Helvetica, sans-serif;
-$serif:             Chaparral Pro, Gerogia, serif;
+$sans-serif: 		'proxima-nova', Helvetica, sans-serif;
+$sans-serif-bold: 	'Montserrat';
+$serif:             'Chaparral Pro', Gerogia, serif;
 
-$heading-font: 		$sans-serif-bold;
+$heading-font: 		$sans-serif;
 $body-font: 		$sans-serif;
 $nav-font: 			$sans-serif;
 $form-font: 		$sans-serif;
@@ -102,5 +102,5 @@ $lead-font: 		$sans-serif;
 
 
 // Utilities
-$accent-border: 	1px solid $accent-med;
+$accent-border: 	1px solid $accent-light;
 

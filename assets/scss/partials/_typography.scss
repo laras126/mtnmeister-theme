@@ -97,6 +97,15 @@ small {
 }
 
 
+blockquote {
+	@extend %h3;
+	font-style: italic;
+	padding-left: $h2;
+	margin-left: 0;
+	background-image: url(../img/svgs/quotes-left.svg);
+	background-repeat: no-repeat;
+}
+
 
 //
 // Semantic classes for non-heading elements
@@ -109,14 +118,4 @@ small {
 
 .special {
 	color: $accent-med;
-}
-
-blockquote {
-	font-size: $h4;
-	font-style: italic;
-}
-
-.best-quote {
-	font-size: $h3;
-	margin-top: 0;
 }

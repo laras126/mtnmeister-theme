@@ -25,15 +25,29 @@ var Roots = {
     init: function() {
       // JavaScript to be fired on all pages
 
+      // Detect JS
       $('body').addClass('js');
-        var $menu = $('#menu'),
-            $menulink = $('.menu-link');
+      
+      var $menu = $('#menu'),
+          $menulink = $('.menu-link');
         
       $menulink.click(function() {
         $menulink.toggleClass('active');
         $menu.toggleClass('active');
         return false;
       });
+
+      // Fix the nav when scrolling
+      // var $scroll_class = "menu-scrolled";
+      //     $header_ht = $('.header').height();
+
+      // $(window).scroll(function() {
+      //   if( $(this).scrollTop() > $header_ht ) {
+      //     $menu.addClass($scroll_class);
+      //   } else {
+      //     $menu.removeClass($scroll_class);
+      //   }
+      // });
 
     }
   },

@@ -2,8 +2,11 @@
 
 {% block content %}
 	<header class="tease-header">
-		<h2><a href="{{post.link}}"><span class="special">{{post.episode_num}}</span> {{post.title}}</a></h2>
-		<p class="tagline">{{post.episode_tag}}</p>
+		<span class="number-wrap">
+			<div class="number"><span># {{post.episode_num}}</span></div>
+		</span>
+		<h2 class="tease-title"><a href="{{post.link}}">{{post.title}}</a></h2>
+		<p class="tag tag-tease">{{post.episode_tag}}</em></p>
 	</header>
 	<div class="tease-body">
 		{{post.episode_soundcloud}}

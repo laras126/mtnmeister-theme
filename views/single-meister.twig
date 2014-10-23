@@ -1,13 +1,31 @@
 {% extends "base.twig" %}
 
 {% block content %}
+	<nav class="nav-prevnext">
+
+		{% if post.prev %}
+			<div class="prev">
+				<a href="{{post.prev.link}}" class="link-postnav" title="{{post.prev.title}}">&larr; <span class="special">#{{post.prev.episode_num}}</span> {{post.prev.title}}</a>
+			</div>
+		{% endif %}
+
+		{% if post.next %}
+			<div class="next">
+				<a href="{{post.next.link}}" class="link-postnav" title="{{post.next.title}}"><span class="special">#{{post.next.episode_num}}</span> {{post.next.title}} &rarr;</a>
+			</div>
+		{% endif %}
+
+	</nav> <!-- /nav-prevnext -->
 
 	<article class="type-{{post.post_type}}" id="post-{{post.ID}}">
 		<section class="article-main">
 			
 			<header class="article-header text-center">
-				<p class="article-tagline no-margin"><span class="special">#{{post.episode_num}}</span> {{post.episode_tag}}</p>
-				<h1 class="article-title no-margin">{{post.title}}</h1>
+				<span class="number-wrap">
+					<div class="number"><span># {{post.episode_num}}</span></div>
+				</span>
+				<p class="tag">{{post.episode_tag}}</p>
+				<h1 class="article-title">{{post.title}}</h1>
 			</header>
 			
 			<div class="article-body">
@@ -21,14 +39,12 @@
 					{% if post.prev %}
 						<div class="prev">
 							<a href="{{post.prev.link}}" class="link-postnav" title="{{post.prev.title}}">&larr; <span class="special">#{{post.prev.episode_num}}</span> {{post.prev.title}}</a>
-							<p>{{post.prev.episode_tag}}</p>
 						</div>
 					{% endif %}
 
 					{% if post.next %}
 						<div class="next">
-							<a href="{{post.next.link}}" class="link-postnav" title="{{post.next.title}}">#{{post.next.episode_num}}</span> {{post.next.title}} &rarr;</a>
-							<p class="article-tagline no-margin"><span class="special">{{post.next.episode_tag}}</p>
+							<a href="{{post.next.link}}" class="link-postnav" title="{{post.next.title}}"><span class="special">#{{post.next.episode_num}}</span> {{post.next.title}} &rarr;</a>
 						</div>
 					{% endif %}
 

@@ -1039,6 +1039,34 @@ th {
   .loop-container:after, .nav-prevnext:after {
     clear: both; }
 
+.tease-deal, .tease-meister {
+  position: relative;
+  min-height: 1px;
+  padding-left: 1.7rem;
+  padding-right: 1.7rem; }
+  @media (min-width: 35em) {
+    .tease-deal, .tease-meister {
+      float: left;
+      width: 50%; } }
+  @media (min-width: 35em) {
+    .tease-deal:nth-child(2n+1), .tease-meister:nth-child(2n+1) {
+      clear: left; } }
+
+.tease-deal {
+  position: relative;
+  min-height: 1px;
+  padding-left: 0.8rem;
+  padding-right: 0.8rem; }
+  @media (min-width: 50em) {
+    .tease-deal {
+      float: left;
+      width: 33.33333%; } }
+  @media (min-width: 50em) {
+    .tease-deal:nth-child(2n+1) {
+      clear: none; }
+    .tease-deal:nth-child(3n+1) {
+      clear: left; } }
+
 .btn, input[type="submit"],
 button {
   text-decoration: none;
@@ -1152,7 +1180,7 @@ h1 {
 h2 {
   font-size: 2.4rem; }
 
-h3, blockquote, .tease-title {
+h3, blockquote {
   font-size: 1.6rem; }
 
 h4, .lead, .tagline-page {
@@ -1491,6 +1519,7 @@ input[type="checkbox"]:focus {
   color: #fff;
   letter-spacing: 3px;
   text-transform: uppercase;
+  display: inline-block;
   position: relative;
   top: 1rem;
   z-index: 10; }
@@ -1501,17 +1530,23 @@ input[type="checkbox"]:focus {
 
 .page-header {
   height: 100%;
+  position: relative;
   border-bottom: 5px solid #f8992f;
-  background-image: url("../img/jonk-600x400.jpg");
   -webkit-background-size: cover;
           background-size: cover;
   padding-top: 35%; }
   @media (min-width: 62em) {
     .page-header {
-      background-image: url("../img/jonk-1400.jpg");
       background-position: center 0;
       background-repeat: no-repeat;
       background-attachment: fixed; } }
+
+.page-header-caption {
+  text-align: right;
+  color: #fff;
+  position: absolute;
+  right: 1.6rem;
+  bottom: 0; }
 
 .page-body:before, .page-body:after {
   content: " ";
@@ -1544,38 +1579,16 @@ input[type="checkbox"]:focus {
 .tease {
   margin-bottom: 3.4rem; }
 
-.tease-deal {
+.tease-featured {
   position: relative;
-  min-height: 1px;
-  padding-left: 0.8rem;
-  padding-right: 0.8rem; }
-  @media (min-width: 50em) {
-    .tease-deal {
-      float: left;
-      width: 33.33333%; } }
-
-.tease-meister {
-  position: relative;
+  float: left;
+  width: 100%;
   min-height: 1px;
   padding-left: 1.7rem;
   padding-right: 1.7rem; }
-  @media (min-width: 35em) {
-    .tease-meister {
-      float: left;
-      width: 50%; } }
-  .tease-meister:nth-child(2n+1) {
-    clear: left; }
-
-.tease-footer {
-  padding: 0.4rem 0.8rem; }
 
 .tease-title {
   padding: 0; }
-
-.tease-footer {
-  background-color: #f8992f;
-  color: #fff;
-  border: 2px solid #043f7e; }
 
 .tease-meta {
   font-size: 0.8rem;
@@ -1583,6 +1596,8 @@ input[type="checkbox"]:focus {
 
 .tease-body iframe {
   height: 120px; }
+  .featured .tease-body iframe {
+    height: 420px; }
   @media (min-width: 50em) {
     .tease-body iframe {
       height: 160px; } }

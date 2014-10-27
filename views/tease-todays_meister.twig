@@ -1,0 +1,35 @@
+{# NOTE: 
+- It would be better to not have today's meister an array, but fine for now. 
+- Also to make this extend tease.twig
+#}
+
+<article class="tease tease-{{todays_meister|first.post_type}} tease-featured" id="tease-{{todays_meister|first.ID}}">
+
+	<header class="tease-header">
+		<span class="number-wrap">
+			<div class="number"><span># {{todays_meister|first.episode_num}}</span></div>
+		</span>
+		<h2 class="tease-title"><a href="{{todays_meister|first.link}}">{{todays_meister|first.title}}</a></h2>
+		<p class="tagline tagline-tease">{{todays_meister|first.episode_tag}}</em></p>
+	</header>
+
+	<div class="tease-body row">
+		<div class="col-sm-6">
+		{# {{todays_meister|first.episode_soundcloud}} #}
+			<iframe width="100%" height="450" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/173460301&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true"></iframe>
+		</div>
+
+		<div class="col-sm-6">
+			<ul class="list-meta">
+			    {% for cat in todays_meister|first.categories %}
+			        <li><a href="{{cat.link}}">{{cat.name}}</a></li>
+			    {% endfor %}
+			</ul>
+
+			<p class="lead">{{todays_meister|first.meister_bio|truncate(80)}}</p>	
+			<a class="link-more" href="{{todays_meister|first.link}}" title="{{todays_meister|first.title}}">Read more &rarr;</a>		
+		</div>
+		
+	</div>
+
+</article>

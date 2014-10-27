@@ -6,14 +6,14 @@
 		<span class="number-wrap">
 			<div class="number"><span># {{post.episode_num}}</span></div>
 		</span>
-		<h2 class="tease-title"><a href="{{post.link}}">{{post.title}}</a></h2>
+		<h3 class="tease-title"><a href="{{post.link}}">{{post.title}}</a></h3>
 		<p class="tagline tagline-tease">{{post.episode_tag}}</em></p>
 	</header>
 
 	<div class="tease-body">
 		{{post.episode_soundcloud}}
 		{% include 'partials/cat-list.twig' %}
-		<p>{{post.meister_bio| truncate(30)}}</p>
+		<p>{{post.meister_bio|truncate(30)}}</p>
 		<a class="link-more" href="{{post.link}}" title="{{post.title}}">Read more &rarr;</a>	
 	</div>
 

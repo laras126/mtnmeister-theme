@@ -21,28 +21,45 @@
  * @since    Timber 0.1
  */
 
-$length = 20;
-$text = get_field('meister_bio');
-// $words = explode(' ', $text);
-// array_splice($words, $length);
-// $text = implode(' ', $words);
-// echo $text;
- 
+
 // Custom type Args and Pagination
-global $paged;
+// global $paged;
 
-if (!isset($paged) || !$paged){
-    $paged = 1;
-}
+// if (!isset($paged) || !$paged){
+//     $paged = 1;
+// }
 
 
-// Get the meister and deal post types for custom page templates
+// Get a random header image
+$rows = get_field('header_images' ); // get all the rows
+$rand_row = $rows[ array_rand( $rows ) ]; // get a random row
+// $rand_row_image = $rand_row['desktop_image' ]; // get the sub field value 
+
+// Note
+// $first_row_image = 123 (image ID)
+
+// $image = wp_get_attachment_image_src( $rand_row_image, 'full' );
+
+// ---
+// Custom Post Type Args
+// ---
+
+// Exclude the most recent post
 $meister_args = array( 
 				'post_type' => 'meister', 
 				'posts_per_page' => 10,
-				'paged' => $paged
+				'paged' => $paged,
+				'offset' => 1
 			);
 
+// Get the most recent post for "Today's episode"
+$todays_meister_args = array( 
+				'post_type' => 'meister', 
+				'posts_per_page' => 1,
+				'showposts' => 1
+			);
+
+// Get deals
 $deal_args = array( 
 				'post_type' => 'deal',
 				'posts_per_page' => 10,
@@ -50,19 +67,28 @@ $deal_args = array(
     		);
 
 
+// Which loop?
 if( is_page('Meisters') ) {
 	query_posts($meister_args);
 } elseif( is_page('Deals') ) {
 	query_posts($deal_args);
 }
 
+
+// ---
 // Start the context 
+// ---
 
 $context = Timber::get_context();
 $post = new TimberPost();
 
+// Get a random header image
+$context['header_image'] = $rand_row;
+
 // Get Meister and Deal posts
 $context['meisters'] = Timber::get_posts($meister_args);
+$context['todays_meister'] = Timber::get_posts($todays_meister_args);
+
 $context['deals'] = Timber::get_posts($deal_args);
 
 $context['pagination'] = Timber::get_pagination();

@@ -57,7 +57,7 @@ h4 {
 	color: $text-light;
 	letter-spacing: 3px;
 	text-transform: uppercase;
-	// display: inline-block;
+	display: inline-block;
 	position: relative;
 
 	top: $h5;
@@ -80,12 +80,13 @@ h4 {
 .page-header {
 	height: 100%;
 	// margin-top: $h1;
+	position: relative;
 	border-bottom: 5px solid $accent-med;
 	// color: $text-light;
 	// text-shadow: 1px 1px 0 $text-dark,
 	// 			 2px 2px 0 rgba($text-dark, 0.6);
 	// ;
-	background-image: url('../img/jonk-600x400.jpg');
+	// background-image: url('../img/jonk-600x400.jpg');
 	background-size: cover;
 	padding-top: 35%;
 
@@ -93,7 +94,7 @@ h4 {
 		// position: relative;
 		// top: $h1;
 
-		background-image: url('../img/jonk-1400.jpg');
+		// background-image: url('../img/jonk-1400.jpg');
 			background-position: center 0;
 			background-repeat: no-repeat; 
 			background-attachment: fixed;
@@ -102,6 +103,14 @@ h4 {
 		// text-align: center;
 	}
 
+}
+
+.page-header-caption {
+	text-align: right;
+	color: $text-light;
+	position: absolute;
+	right: $h3;
+	bottom: 0;
 }
 
 .page-body {
@@ -166,38 +175,28 @@ h4 {
 }
 
 .tease-deal {
-	@include make-md-column(4);
+	@extend %row_of_three;
 }
 
 .tease-meister {
-	@include make-sm-column(6, $h1);
-	&:nth-child(2n+1){
-		clear:left
-	}
+	@extend %row_of_two;
 }
 
-.tease-footer {
-	// text-align: center;
-	padding: $sml/2 $sml;
+.tease-featured {
+	@include make-xs-column(12, $h1);
 }
 
 .tease-title {
 	// position: relative;
 	// top: $sml;
 	padding: 0;
-	@extend %h3;
+	// @extend %h3;
 	// @extend %upperspace;
 
 
 	a {
 		
 	}
-}
-
-.tease-footer {
-	background-color: $accent-med;
-	color: $text-light;
-	border: 2px solid $accent-dark;
 }
 
 .tease-meta {
@@ -208,6 +207,11 @@ h4 {
 .tease-body {
 	iframe {
 		height: 120px;
+
+		.featured & {
+			height: 420px;			
+		}
+
 		@include bp(med) {
 			height: 160px;
 		}
@@ -217,10 +221,15 @@ h4 {
 
 // Call to action block
 
-.block-cta {
+.cta-page {
 
 }
 	
+.cta-tease {
+	// background-color: $accent-med;
+	// color: $text-light;
+	// border: 2px solid $accent-dark;
+}
 
 
 // Lists

@@ -2,14 +2,16 @@
 
 {% block content %}
 	<header class="tease-header">
-		<p class="tease-meta">{{post.deal_desc}}</p>
-		<h2 class="tease-title">{{post.title}}</h2>
+		<hr>
+		<h3 class="tease-title">{{post.title}}</h3>
+		<p class="tagline tagline-tease">{{post.deal_desc}}</p>
 	</header>
 	<div class="tease-body">
 		<img src="{{TimberImage(post.deal_pic).src}}" alt="{{post.title}}">
 		<p>Brought to you by: {{post.deal_vendor}}</p>
 	</div>
-	<footer class="tease-footer">
+	<footer class="cta-tease">
+		<h4>You need to:</h4>
 		<p>{{post.deal_cta}}</p>	
 	</footer> 
 {% endblock %}

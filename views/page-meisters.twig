@@ -1,7 +1,15 @@
 {% extends "page-archive.twig" %}
 
+
 {% block loop %}
-	{% for post in meisters %}
-		{% include ['tease-meister.twig', 'tease.twig'] %}
-	{% endfor %}
+	<section class="featured clearfix">
+		{% include ['tease-todays_meister.twig', 'tease.twig'] %}
+	</section>
+	
+	<section class="loop">
+		{% for post in meisters %}
+			{% include ['tease-meister.twig', 'tease.twig'] %}
+		{% endfor %}	
+	</section>
+	
 {% endblock %}

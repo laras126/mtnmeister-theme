@@ -3,9 +3,39 @@
 // Extends and Utility Classes
 // ----
 
+
+
+// -- Layout
+
 %row {
   @include make-row();
 }
+
+%row_of_two {
+  @include make-sm-column(6, $h1);
+  @include bp(small) {
+    &:nth-child(2n+1){
+      clear:left;
+    }  
+  }
+}
+
+%row_of_three {
+  @extend %row_of_two;
+  @include make-md-column(4);
+  @include bp(med) {
+    &:nth-child(2n+1){
+      clear:none;
+    }  
+    &:nth-child(3n+1){
+      clear:left
+    }  
+  }  
+}
+
+
+
+// -- Forms
 
 %btn {
 	text-decoration: none;	
@@ -18,6 +48,10 @@
   @extend %h5;
   font-family: $form-font;
 }
+
+
+
+// -- Color Scheming
 
 %rotate {
     background-color: $rotate-bkgd;
@@ -34,11 +68,17 @@
 }
 
 
+
+// -- Typography
+
 %upperspace {
   text-transform: uppercase;
   letter-spacing: 1px; 
 }
 
+
+
+// -- Utility classes
 
 .text-center {
   text-align: center;

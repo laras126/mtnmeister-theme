@@ -1,0 +1,5 @@
+<ul class="list-meta">
+    {% for cat in post.categories %}
+        <li><a href="{{cat.link}}">{{cat.name}}</a></li>
+    {% endfor %}
+</ul>

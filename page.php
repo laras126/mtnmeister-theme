@@ -21,8 +21,13 @@
  * @since    Timber 0.1
  */
 
-
-
+$length = 20;
+$text = get_field('meister_bio');
+// $words = explode(' ', $text);
+// array_splice($words, $length);
+// $text = implode(' ', $words);
+// echo $text;
+ 
 // Custom type Args and Pagination
 global $paged;
 
@@ -63,9 +68,11 @@ $context['deals'] = Timber::get_posts($deal_args);
 $context['pagination'] = Timber::get_pagination();
 $context['post'] = $post;
 
+// $context['excerpt'] = $text;
+
 // Sidebar
-// $context['sidebar'] = Timber::get_sidebar('sidebar.php');
-// $context['sidebar_class'] = 'has-sidebar';
+$context['sidebar'] = Timber::get_sidebar('sidebar.php');
+$context['sidebar_class'] = 'has-sidebar';
 
 
 /* make sure you've got query_posts in your .php file */

@@ -2,30 +2,28 @@
 
 {% block content %}
 
-	<div class="content-wrapper">
-		<article class="post-type-{{post.post_type}}" id="post-{{post.ID}}">
-			<section class="article-content">
-				<h1 class="article-h1">{{post.title}}</h1>
-				<div class="article-body">
-					{{post.content}}
-				</div>
-			</section>
+	<article class="post-type-{{post.post_type}}" id="post-{{post.ID}}">
+		<section class="article-content">
+			<h1 class="article-title">{{post.title}}</h1>
+			<div class="article-body">
+				{{post.content}}
+			</div>
+		</section>
 
-			{# <section class="comments">
-				<div class="respond">
-					<h3 class="h2">Comments</h3>
-					{{ comment_form }}
-				</div>
-				<div class="responses">
-					{% for cmt in post.get_comments() %}
-						{% include "comment.twig" with {comment:cmt} %}
-					{% endfor %}
-				</div>
-			</section> #}
+		{# <section class="comments">
+			<div class="respond">
+				<h3 class="h2">Comments</h3>
+				{{ comment_form }}
+			</div>
+			<div class="responses">
+				{% for cmt in post.get_comments() %}
+					{% include "comment.twig" with {comment:cmt} %}
+				{% endfor %}
+			</div>
+		</section> #}
 
-			{% include 'partials/edit-link.twig' %}
-		</article>
-	</div> <!-- /content-wrapper -->
+		{% include 'partials/edit-link.twig' %}
+	</article>
 
 {% endblock %}
 

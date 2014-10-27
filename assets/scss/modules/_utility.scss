@@ -3,6 +3,10 @@
 // Extends and Utility Classes
 // ----
 
+%row {
+  @include make-row();
+}
+
 %btn {
 	text-decoration: none;	
   border: 0;
@@ -11,7 +15,7 @@
 // Used for consistent form sizing
 %form-base {
   padding: $sml $base;
-  @extend %h4;
+  @extend %h5;
   font-family: $form-font;
 }
 
@@ -26,7 +30,7 @@
     a:visited, 
     a:hover {
       color: $rotate-text;
-    } 
+    }
 }
 
 

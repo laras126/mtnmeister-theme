@@ -1,22 +1,21 @@
-{% extends "base.twig" %}
+{% extends "page.twig" %}
 
 {% block content %}
 
-	<article class="post-type-{{post.post_type}}" id="post-{{post.ID}}">
-		<header class="article-header clearfix">
-            <div class="container">
-                <div class="article-header-wrap">
-                    <h1 class="article-title">{{post.title}}</h1>    
-                    <p class="lead">{{post.tagline}}</p>
-                </div>    
-            </div>
-		</header>
-        <div class="container">
-            <p>{{post.introduction}}</p>    
+	{# <article class="post-type-{{post.post_type}}" id="post-{{post.ID}}"> #}
+
+    {% include 'partials/page-header.twig' %}
+
+    <div class="page-body container">
+        <p class="tagline tagline-page">{{post.tagline}}</p>
+        <div class="loop-container">
             {% block loop %}{% endblock %}
             {% include 'partials/acf-block-loop.twig' %}    
         </div>
-	</article>
+        
+    </div>
+
+	{# </article> #}
 
 {# 	{% if pagination.prev %}
         <a href="{{pagination.prev.link}}" class="prev {{pagination.prev.link|length ? '' : 'invisible'}}">Prev</a>

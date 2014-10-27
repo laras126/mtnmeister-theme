@@ -4,7 +4,7 @@
         {% include 'partials/block-image-caption.twig' %}
 	{% elseif content.acf_fc_layout == 'text_block' %}
         {% include 'partials/block-text.twig' %}
-    {% elseif content.acf_fc_layout == 'text_image_left_block' %}
+    {% elseif content.acf_fc_layout == 'text_image_block' %}
 		{% include 'partials/block-text-image.twig' %}
     {% elseif content.acf_fc_layout == 'blank' %}
      	{{content.wysiwyg}}

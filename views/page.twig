@@ -1,26 +1,17 @@
 {% extends "base.twig" %}
 
 {% block content %}
-	<article class="post-type-{{post.post_type}}" id="post-{{post.ID}}">
-		<section class="article-content">
 
-			<header class="article-header">
-			 	<div class="container">
-					<h1 class="article-title">{{post.title}}</h1>
-					<h3>{{post.tagline}}</h3>
-					<p>{{post.introduction}}</p>
-				</div>
-			</header>
-			
-			<div class="article-body">
-			 	<div class="container">
-					{% include 'partials/acf-block-loop.twig' %}
-				</div>
-			</div>
-			
-		</section>
-		{% include 'partials/edit-link.twig' %}
-	</article>
+    {% include 'partials/page-header.twig' %}
+	     
+	<div class="page-body {{sidebar_class}}">
+	 	<div class="container">
+	 		<p class="lead">{{post.introduction}}</p>
+			{% include 'partials/acf-block-loop.twig' %}
+		</div>
+	</div>
 
+	{% include 'partials/edit-link.twig' %}
+	
 {% endblock %}
 

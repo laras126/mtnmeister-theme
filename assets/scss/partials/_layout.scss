@@ -15,7 +15,7 @@
 
 .brand {
 	// @include make-xs-column(6);
-	@include make-md-column(3);
+	@include make-lg-column(4);
 }
 
 .logo,
@@ -27,7 +27,7 @@
 .menu-main {
 	// Full row on small screens (and hidden until expanded)
 	@include make-xs-column(12);
-	@include make-md-column(9);
+	@include make-lg-column(8);
 }
 
 
@@ -41,11 +41,16 @@
 	@include make-md-column(4);
 }
 
+.loop-container {
+	@extend %row;
+}
+
+
 
 // Navigation
 
 .nav-prevnext {
-	@include make-row();
+	@extend %row;
 }
 
 .link-postnav {

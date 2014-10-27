@@ -2,9 +2,9 @@
 // Screen sizes
 // ----
 
-$screen-sm: 		30em;
-$screen-md: 		45em;
-$screen-lg: 		50em;
+$screen-sm: 		35em;
+$screen-md: 		50em;
+$screen-lg: 		62em;
 
 $slicer-breakpoints: 0 $screen-sm $screen-md $screen-lg;
 
@@ -18,6 +18,7 @@ $slicer-breakpoints: 0 $screen-sm $screen-md $screen-lg;
 $black:	 			#111;
 $white: 			#fff;
 $grey: 				#aaa;
+$med-grey: 			#999;
 
 $green: 			#68C499;
 $red: 				#9F4440;
@@ -40,10 +41,11 @@ $sn-black: 			#1f1d1a;
 $contain-lg: 		120%;
 $contain-md: 		110%;
 $contain-sm: 		100%;
-$contain: 			90%;
+$contain: 			95%;
 
-$base:  			1.2rem;
+$base:  			1rem;
 
+$line-height-sml: 		1.5;
 $line-height-base: 		1.3;
 $line-height-heading: 	1;
 
@@ -69,7 +71,8 @@ $accent-med: 		$sn-orange;
 $accent-dark: 		$sn-navy;
 
 $text-dark: 		$sn-black;
-$text-light: 		$sn-white;
+$text-light: 		$white;
+$text-meta: 		$med-grey;
 
 $link-color:		$accent-dark;
 $link-hover: 		darken($link-color, 20%);
@@ -84,8 +87,8 @@ $alert-info: 		lighten($sn-navy, 20%);
 $body-bkgd: 		$white;
 $body-text: 		$text-dark;
 
-$rotate-bkgd: 		$accent-light;
-$rotate-text: 		$text-dark;
+$rotate-bkgd: 		$accent-dark;
+$rotate-text: 		$text-light;
 $rotate-link: 		$text-light;
 
 

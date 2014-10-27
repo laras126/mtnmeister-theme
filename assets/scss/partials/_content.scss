@@ -88,16 +88,20 @@ h4 {
 	// ;
 	// background-image: url('../img/jonk-600x400.jpg');
 	background-size: cover;
-	padding-top: 35%;
+	padding-top: 200px;
+
+	@include bp(med) {
+		padding-top: 400px;
+	}
 
 	@include bp(large) {
 		// position: relative;
 		// top: $h1;
-
+		padding-top: 600px;
 		// background-image: url('../img/jonk-1400.jpg');
-			background-position: center 0;
+			// background-position: center center;
 			background-repeat: no-repeat; 
-			background-attachment: fixed;
+			// background-attachment: fixed;
 		
 		// padding-bottom: 10%;
 		// text-align: center;

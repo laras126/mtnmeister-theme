@@ -1534,12 +1534,14 @@ input[type="checkbox"]:focus {
   border-bottom: 5px solid #f8992f;
   -webkit-background-size: cover;
           background-size: cover;
-  padding-top: 35%; }
+  padding-top: 200px; }
+  @media (min-width: 50em) {
+    .page-header {
+      padding-top: 400px; } }
   @media (min-width: 62em) {
     .page-header {
-      background-position: center 0;
-      background-repeat: no-repeat;
-      background-attachment: fixed; } }
+      padding-top: 600px;
+      background-repeat: no-repeat; } }
 
 .page-header-caption {
   text-align: right;

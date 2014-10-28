@@ -12,7 +12,7 @@
 }
 
 %row_of_two {
-  @include make-sm-column(6, $h1);
+  @include make-sm-column(6, 0);
   @include bp(small) {
     &:nth-child(2n+1){
       clear:left;
@@ -22,7 +22,7 @@
 
 %row_of_three {
   @extend %row_of_two;
-  @include make-md-column(4);
+  @include make-md-column(4, 0);
   @include bp(med) {
     &:nth-child(2n+1){
       clear:none;
@@ -54,17 +54,11 @@
 // -- Color Scheming
 
 %rotate {
-    background-color: $rotate-bkgd;
-    color: $rotate-text;
+    @include rotate;
+}
 
-    // TODO: Maybe add to holding?
-    // Need a more elegant way to remove link styles
-    
-    a, 
-    a:visited, 
-    a:hover {
-      color: $rotate-text;
-    }
+%rotate-bars {
+  @include rotate($text: $text-light, $bkgd: rgba($accent-dark, 0.5));
 }
 
 

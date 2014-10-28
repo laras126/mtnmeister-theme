@@ -1,4 +1,19 @@
 
+// Rotating color blocks
+@mixin rotate($text: $rotate-text, $bkgd: $rotate-bkgd) {
+    background-color: $bkgd;
+    color: $text;
+
+    // TODO: Maybe add to holding?
+    // Need a more elegant way to remove link styles
+    
+    a, 
+    a:visited, 
+    a:hover {
+      color: darken($text, 8%);
+    }
+}
+
 
 @mixin button( $button-color, $text-color: $white ) {
 	background: $button-color;
@@ -60,3 +75,15 @@ $MQs: true;
 		}
 	}
 }
+
+
+
+
+// ----
+// Gradient
+// ----
+
+// @mixin linear-gradient($from, $to) {
+//   background-color: $to; // Fallback
+//   background-image: linear-gradient(bottom, $from, $to);
+// }

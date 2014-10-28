@@ -33,12 +33,8 @@
 // Get a random header image
 $rows = get_field('header_images' ); // get all the rows
 $rand_row = $rows[ array_rand( $rows ) ]; // get a random row
-// $rand_row_image = $rand_row['desktop_image' ]; // get the sub field value 
 
-// Note
-// $first_row_image = 123 (image ID)
 
-// $image = wp_get_attachment_image_src( $rand_row_image, 'full' );
 
 // ---
 // Custom Post Type Args

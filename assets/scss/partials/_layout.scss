@@ -3,7 +3,7 @@
 .container {
 	max-width: $screen-lg;
 	margin: 0 auto;
-	@include container-fixed();
+	@include container-fixed($h1);
 }
 
 
@@ -34,7 +34,7 @@
 // Content
 
 .has-sidebar {
-	@include make-md-column(8);
+	@include make-md-column(6, 0);
 }
 
 .sidebar {
@@ -42,7 +42,7 @@
 }
 
 .loop-container {
-	@extend %row;
+	// @extend %row;
 }
 
 

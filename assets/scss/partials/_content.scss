@@ -2,9 +2,6 @@
 // Content related stuff here.
 // Maybe structure it like this? Up to you!
 
-#content {
-	// background: #043F7E;
-}
 
 // ---
 // Header
@@ -17,18 +14,26 @@
 }
 
 .banner {
-	@extend %rotate;
+	// @extend %rotate-bars;
+	a {
+		color: $text-light;
+
+	}
+	
+    background-image: linear-gradient(top, rgba($accent-dark, 0.7), transparent);
+ 	// @include linear-gradient(top, rgba($accent-dark, 0.7), transparent);
 	@include bp(large) {
 		position: fixed;
 		width: 100%;
 		z-index: 5;	
 
 	}
+	border-top: $accent-border-large;
 }
 
 .header {
 	// margin-bottom: $h3;
-	// @extend %rotate;
+	
 	@include clearfix();
 	@include bp(large) {
 		// height: $h1;
@@ -64,8 +69,8 @@ h4 {
 	z-index: 10;
 
 	@include bp(small) {
-		font-size: $h1*1.5;
-		top: $h5*1.25;
+		font-size: $h1*2;
+		top: $h3;
 	}
 	// background-color: rgba($accent-dark, 0.7);
 	// padding: $h5 $h3;
@@ -73,54 +78,47 @@ h4 {
 
 
 .page-header {
-	// text-align: center;
-	// margin-bottom: $h3;	
-}
-
-.page-header {
-	height: 100%;
-	// margin-top: $h1;
-	position: relative;
-	border-bottom: 5px solid $accent-med;
-	// color: $text-light;
-	// text-shadow: 1px 1px 0 $text-dark,
-	// 			 2px 2px 0 rgba($text-dark, 0.6);
-	// ;
-	// background-image: url('../img/jonk-600x400.jpg');
 	background-size: cover;
+	border-bottom: $accent-border-large;
+	height: 100%;
+	position: relative;
 	padding-top: 200px;
+	background-color: $accent-dark;
 
 	@include bp(med) {
 		padding-top: 400px;
 	}
 
 	@include bp(large) {
-		// position: relative;
-		// top: $h1;
-		padding-top: 600px;
-		// background-image: url('../img/jonk-1400.jpg');
-			// background-position: center center;
-			background-repeat: no-repeat; 
-			// background-attachment: fixed;
-		
-		// padding-bottom: 10%;
-		// text-align: center;
+		padding-top: 500px;
+		background-repeat: no-repeat;
 	}
 
 }
 
 .page-header-caption {
 	text-align: right;
-	color: $text-light;
 	position: absolute;
+	color: $text-light;
 	right: $h3;
 	bottom: 0;
+
+	a {
+		color: $accent-med;
+	}
+}
+
+.page-info {
+	// @extend %rotate-bars;
+	// @include linear-gradient(rgba($accent-dark, 0), rgba($accent-dark, 0.7));
+	// @include linear-gradient(rgba($accent-dark, 0.7), transparent);
+	background-image: linear-gradient(bottom, rgba($accent-dark, 0.7), transparent);
 }
 
 .page-body {
 	@include clearfix();
 	@include bp(sml) {
-		padding: 0 $h1;
+		// padding: 0 $h1;
 	}
 }
 
@@ -187,7 +185,7 @@ h4 {
 }
 
 .tease-featured {
-	@include make-xs-column(12, $h1);
+	@include make-xs-column(12);
 }
 
 .tease-title {

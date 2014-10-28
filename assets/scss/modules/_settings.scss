@@ -40,7 +40,7 @@ $sn-black: 			#1f1d1a;
 
 $contain-lg: 		120%;
 $contain-md: 		110%;
-$contain-sm: 		100%;
+$contain-sm: 		110%;
 $contain: 			95%;
 
 $base:  			1rem;
@@ -106,4 +106,4 @@ $lead-font: 		$sans-serif;
 
 // Utilities
 $accent-border: 	1px solid $accent-light;
-
+$accent-border-large: 5px solid $accent-med;

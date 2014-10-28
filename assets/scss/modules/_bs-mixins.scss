@@ -1,7 +1,16 @@
+
+// ---
+// Cusomized Bootstrap Scaffolding Mixins
+// ---
+
+
+// ---
 //
-// Note: 
-// Primary breakpoint values defined in _settings.scss
+// Changes made by Lara:
+// - Added "@if $gutter != 0" conditional to prevent overriding gutter padding
+// - Changed pixel values to values defined in _settings.scss
 //
+// ---
 
 
 //== Media queries breakpoints
@@ -48,8 +57,11 @@ $grid-float-breakpoint-max: ($grid-float-breakpoint - 1) !default;
 @mixin container-fixed($gutter: $grid-gutter-width) {
   margin-right: auto;
   margin-left: auto;
-  padding-left:  ($gutter / 2);
-  padding-right: ($gutter / 2);
+  @if $gutter != false {
+    padding-left:  ($gutter / 2);
+    padding-right: ($gutter / 2);
+  }
+  
   @include clearfix();
 }
 
@@ -75,7 +87,7 @@ $grid-float-breakpoint-max: ($grid-float-breakpoint - 1) !default;
 @mixin make-xs-column-push($columns) {
   left: percentage(($columns / $grid-columns));
 }
-@mixin make-xs-column-pullpull($columns) {
+@mixin make-xs-column-pull($columns) {
   right: percentage(($columns / $grid-columns));
 }
 
@@ -83,9 +95,11 @@ $grid-float-breakpoint-max: ($grid-float-breakpoint - 1) !default;
 @mixin make-sm-column($columns, $gutter: $grid-gutter-width) {
   position: relative;
   min-height: 1px;
-  padding-left:  ($gutter / 2);
-  padding-right: ($gutter / 2);
-
+  @if $gutter != false {
+    padding-left:  ($gutter / 2);
+    padding-right: ($gutter / 2);  
+  }
+  
   @media (min-width: $screen-sm-min) {
     float: left;
     width: percentage(($columns / $grid-columns));
@@ -98,7 +112,7 @@ $grid-float-breakpoint-max: ($grid-float-breakpoint - 1) !default;
 }
 @mixin make-sm-column-push($columns) {
   @media (min-width: $screen-sm-min) {
-    left: percentage(($columns / $grid-columns));
+    margin-left: (-percentage(($columns / $grid-columns)));
   }
 }
 @mixin make-sm-column-pull($columns) {
@@ -111,8 +125,10 @@ $grid-float-breakpoint-max: ($grid-float-breakpoint - 1) !default;
 @mixin make-md-column($columns, $gutter: $grid-gutter-width) {
   position: relative;
   min-height: 1px;
-  padding-left:  ($gutter / 2);
-  padding-right: ($gutter / 2);
+  @if $gutter != false {
+    padding-left:  ($gutter / 2);
+    padding-right: ($gutter / 2);
+  }
 
   @media (min-width: $screen-md-min) {
     float: left;
@@ -139,8 +155,10 @@ $grid-float-breakpoint-max: ($grid-float-breakpoint - 1) !default;
 @mixin make-lg-column($columns, $gutter: $grid-gutter-width) {
   position: relative;
   min-height: 1px;
-  padding-left:  ($gutter / 2);
-  padding-right: ($gutter / 2);
+  @if $gutter != false {
+    padding-left:  ($gutter / 2);
+    padding-right: ($gutter / 2);
+  }
 
   @media (min-width: $screen-lg-min) {
     float: left;

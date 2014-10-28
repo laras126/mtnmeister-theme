@@ -116,6 +116,7 @@ blockquote {
 .lead {
 	font-family: $lead-font;
 	@extend %h4;
+	margin-top: 0;
 }
 
 .special {

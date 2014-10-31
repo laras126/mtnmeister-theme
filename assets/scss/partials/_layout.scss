@@ -1,9 +1,18 @@
 // Grids and layout stuff
 
-.container {
-	max-width: $screen-lg;
+%container {
 	margin: 0 auto;
 	@include container-fixed($h1);
+}
+
+.container {
+	@extend %container;
+	max-width: $screen-lg;
+}
+
+.container-squish {
+	@extend %container;
+	max-width: $screen-md;
 }
 
 
@@ -45,7 +54,21 @@
 	// @extend %row;
 }
 
+// ---
+// Singles
+// ---
 
+// Gear recs
+.item-desc,
+.item-img {
+	@include make-sm-column(6, false);
+}
+
+.item-img img {
+	padding-left: $h3;
+	display: block;
+	margin: 0 auto;
+}
 
 // Navigation
 

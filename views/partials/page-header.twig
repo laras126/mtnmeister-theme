@@ -1,11 +1,11 @@
-<header class="page-header" style="background-image: url({{TimberImage(header_image.desktop_image).src}});">
+<header class="page-header" style="background: url({{TimberImage(header_image.desktop_image).src}}) no-repeat center center;">
 
 	<div class="page-info">
 		<div class="container">
 
 	        <h1 class="page-title no-margin">{{post.title}}</h1>
     		{% set meister = TimberPost(header_image.related_meister) %}
-	        <p class="caption page-header-caption">{{header_image.caption}} {% if meister %} Courtesy <a class="special" href="{{meister[0].link}}">#{{meister[0].episode_num}} {{meister[0].title}}</a>. {% endif %}</p>
+	        <p class="caption page-header-caption">{{header_image.caption}} {% if meister %} <br><a class="special" href="{{meister[0].link}}">#{{meister[0].episode_num}} {{meister[0].title}}</a> {% endif %}</p>
 	    
 	    </div>
 	</div>

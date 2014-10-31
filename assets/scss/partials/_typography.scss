@@ -100,10 +100,15 @@ small {
 
 
 blockquote {
-	@extend %h3;
+	@extend %h4;
+	@include bp(med) {
+		font-size: $h3;
+	}
+
 	font-style: italic;
 	padding-left: $h2;
 	margin-left: 0;
+	margin-right: 0;
 	background-image: url(../img/svgs/quotes-left.svg);
 	background-repeat: no-repeat;
 }

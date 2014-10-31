@@ -12,7 +12,7 @@
 }
 
 %row_of_two {
-  @include make-sm-column(6, 0);
+  @include make-sm-column(6);
   @include bp(small) {
     &:nth-child(2n+1){
       clear:left;
@@ -22,7 +22,7 @@
 
 %row_of_three {
   @extend %row_of_two;
-  @include make-md-column(4, 0);
+  @include make-md-column(4);
   @include bp(med) {
     &:nth-child(2n+1){
       clear:none;
@@ -40,6 +40,8 @@
 %btn {
 	text-decoration: none;	
   border: 0;
+  @extend %upperspace;
+  margin: $sml 0;
 }
 
 // Used for consistent form sizing
@@ -70,7 +72,12 @@
   letter-spacing: 1px; 
 }
 
-
+%meta,
+.meta {
+  color: $text-meta;
+  @extend %upperspace;
+  font-size: $sml;
+}
 
 // -- Utility classes
 

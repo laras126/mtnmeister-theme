@@ -7,48 +7,41 @@
 Keeping out the image for now
  <p>{{post.meister_bio}}</p> #}
 
-<div class="container">
-	<section class="article-body-block">
-		{{post.episode_soundcloud}}
-		<p>{{post.meister_bio}}</p>
-		
-		{% include 'partials/cat-list.twig' %}
 
-		<h3>Tagged</h3>
-		<ul>
-		    {% for tag in post.tags %}
-		        <li><a href="{{tag.link}}">{{tag.name}}</a></li>
-		    {% endfor %}
-		</ul>
+	<section class="article-body-block clearfix container-squish">
+
+		<div class="col-sm-6">
+			<p>{{post.meister_bio}}</p>
+			{% include 'partials/cat-list.twig' %}
+		</div>
+
+		<div class="col-sm-6">
+			<br>
+			<img src="{{TimberImage(post.meister_pic).src}}" alt="{{post.title}}">
+		</div>
 
 	</section>
-	
-	<section class="article-body-block">
-		<h3>Best Quotes</h3>
+
+
+	<div class="article-body-block container">
 	    {% for item in post.get_field('quotes') %}
-	        <div class="item">
-	            <blockquote>{{item.quote_text}}</blockquote>
-	            <p>Time in episode: {{item.time_in_episode}}</p>
-	        </div>
+            <blockquote class="featured-quote">{{item.quote_text}}</blockquote>
+            <p class="text-right meta">Time in episode: {{item.time_in_episode}}</p>
 	    {% endfor %}
-	</section>
+	</div>
 
-	<section class="article-body-block">
+	<section class="article-body-block container-squish clearfix">
 		<h3>Gear Recommendations</h3>
-
+		<p>If you could recommend one piece of gear...</p>
 		{% for item in post.get_field('gear_recommendations') %}
-		
-			<div class="item">
-			    <h4>{{item.gear_title}}</h4>
-			    <img src="{{TimberImage(item.gear_photo).src}}" alt="{{item.title}}">
-			    <h6>{{item.time_in_episode}}</h6>
+		<div class="item">
+			<div class="item-desc">
+			    <h4><a href="{{item.gear_link}}" title="{{item.title}}">{{item.gear_title}}</a></h4>
 			    <p>{{item.gear_description}}</p>
-				
-			    <p>
-			    	<a href="{{item.gear_link}}" title="{{item.title}}" class="link-more">On the Web</a>
-			    </p>
-
-				{% set deals = TimberPost(item.gear_to_deal) %}
+				<p class="meta">Time in episode: {{item.time_in_episode}}</p>
+				<br>
+				<a href="{{item.gear_link}}" class="btn" title="{{item.title}}">On the web</a>
+			    {% set deals = TimberPost(item.gear_to_deal) %}
 
 				{% if deals %}
 
@@ -58,10 +51,11 @@ Keeping out the image for now
 		
 				{% endif %}
 
-			</div>
+			 </div>
+			 <div class="item-img">
+			 	<img src="{{TimberImage(item.gear_photo).src}}" alt="{{item.title}}">
+			 </div>
+		</div>
 		
 		{% endfor %}
-
 	</section>
-
-</div>

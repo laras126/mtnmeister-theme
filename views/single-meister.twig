@@ -36,7 +36,7 @@
 		</header>
 		
 		<div class="container episode-embed">
-			{{post.episode_soundcloud}}
+			{{post.episode_soundcloud_small}}
 		</div>
 
 		<div class="article-body">
@@ -48,7 +48,7 @@
 			<p>Read more...</p>
 			<ul>
 				{% for item in post.get_field('additional_resources') %}
-					<li><a href="{{item.resource_link}}">{{item.resource_title}}</a> - {{resource_time_in_episode}}</li>
+					<li><a href="{{item.resource_link}}">{{item.resource_title}}</a>{% if item.resource_time_in_episode %} - {{item.resource_time_in_episode}}</li>{% endif %}
 				{% endfor %}
 			</ul>
 		</footer>

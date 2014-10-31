@@ -14,5 +14,5 @@ img {
 }
 
 .main {
-	@include clearfix;
+	@extend .clearfix;
 }

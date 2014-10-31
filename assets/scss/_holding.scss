@@ -19,3 +19,12 @@
 .btn-wrap {
 	margin: $sml 0;
 }
+
+
+.page-header {
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	// TODO: Why?
+	background-size: cover !important;  
+}

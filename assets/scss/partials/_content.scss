@@ -48,7 +48,7 @@
 .header {
 	// margin-bottom: $h3;
 	
-	@include clearfix();
+	@extend .clearfix;
 	@include bp(large) {
 		// height: $h1;
 	}
@@ -79,7 +79,7 @@ h4 {
 	display: inline-block;
 	position: relative;
 
-	top: $h5;
+	top: $h5*1.2;
 	z-index: 10;
 
 	@include bp(small) {
@@ -96,10 +96,6 @@ h4 {
 
 
 .page-header {
-	  -webkit-background-size: cover;
-	  -moz-background-size: cover;
-	  -o-background-size: cover;
-	  background-size: cover !important; 
 	border-bottom: $accent-border-large;
 	height: 100%;
 	position: relative;
@@ -142,7 +138,7 @@ h4 {
 }
 
 .page-body {
-	@include clearfix();
+	@extend .clearfix;
 	@include bp(sml) {
 		// padding: 0 $h1;
 	}
@@ -239,7 +235,7 @@ h4 {
 
 		// TODO: should be smaller for mobile
 		.featured & {
-			height: 300px;			
+			height: 300px;	
 			@include bp(med) {			
 				height: 420px;			
 			}

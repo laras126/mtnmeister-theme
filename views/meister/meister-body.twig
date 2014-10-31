@@ -36,11 +36,10 @@ Keeping out the image for now
 		{% for item in post.get_field('gear_recommendations') %}
 		<div class="item">
 			<div class="item-desc">
-			    <h4><a href="{{item.gear_link}}" title="{{item.title}}">{{item.gear_title}}</a></h4>
+			    <h4><a href="{{item.gear_link}}" title="{{item.title}}">{{item.gear_title}}</a> <span class="meta">[Link]</span></h4>
 			    <p>{{item.gear_description}}</p>
 				<p class="meta">Time in episode: {{item.time_in_episode}}</p>
-				<br>
-				<a href="{{item.gear_link}}" class="btn" title="{{item.title}}">On the web</a>
+
 			    {% set deals = TimberPost(item.gear_to_deal) %}
 
 				{% if deals %}

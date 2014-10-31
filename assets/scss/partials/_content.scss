@@ -281,8 +281,10 @@ h4 {
 }
 
 
-.episode-embed {
-	margin: $h3 0;
+.episode-embed,
+.article-footer {
+	margin-top: $h3;
+	margin-bottom: $h3;
 }
 // Call to action block
 

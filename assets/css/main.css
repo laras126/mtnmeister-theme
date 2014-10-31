@@ -1070,8 +1070,7 @@ th {
 .btn, input[type="submit"],
 button {
   text-decoration: none;
-  border: 0;
-  margin: 0.8rem 0; }
+  border: 0; }
 
 .btn, input[type="submit"],
 button, textarea,
@@ -1699,8 +1698,10 @@ input[type="checkbox"]:focus {
   padding-bottom: 2rem;
   background-position: 0 2rem; }
 
-.episode-embed {
-  margin: 2rem 0; }
+.episode-embed,
+.article-footer {
+  margin-top: 2rem;
+  margin-bottom: 2rem; }
 
 .list-cats, .list-tags {
   padding: 0; }

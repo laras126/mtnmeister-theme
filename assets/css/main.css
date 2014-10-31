@@ -1646,9 +1646,7 @@ input[type="checkbox"]:focus {
   position: relative;
   float: left;
   width: 100%;
-  min-height: 1px;
-  padding-left: false/2;
-  padding-right: false/2; }
+  min-height: 1px; }
 
 .tease-title {
   padding: 0; }

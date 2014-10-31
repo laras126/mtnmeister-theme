@@ -78,8 +78,10 @@ $grid-float-breakpoint-max: ($grid-float-breakpoint - 1) !default;
   float: left;
   width: percentage(($columns / $grid-columns));
   min-height: 1px;
-  padding-left:  ($gutter / 2);
-  padding-right: ($gutter / 2);
+  @if $gutter != false {
+    padding-left:  ($gutter / 2);
+    padding-right: ($gutter / 2);
+  }
 }
 @mixin make-xs-column-offset($columns) {
   margin-left: percentage(($columns / $grid-columns));

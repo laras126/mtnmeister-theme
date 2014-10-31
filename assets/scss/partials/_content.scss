@@ -208,7 +208,7 @@ h4 {
 }
 
 .tease-featured {
-	@include make-xs-column(12);
+	@include make-xs-column(12, false);
 }
 
 .tease-title {

@@ -237,8 +237,12 @@ h4 {
 	iframe {
 		height: 120px;
 
+		// TODO: should be smaller for mobile
 		.featured & {
-			height: 420px;			
+			height: 300px;			
+			@include bp(med) {			
+				height: 420px;			
+			}
 		}
 
 		@include bp(med) {

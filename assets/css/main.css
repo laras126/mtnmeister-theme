@@ -1671,7 +1671,10 @@ input[type="checkbox"]:focus {
 .tease-body iframe, .article-body-block iframe {
   height: 120px; }
   .featured .tease-body iframe, .featured .article-body-block iframe {
-    height: 420px; }
+    height: 300px; }
+    @media (min-width: 50em) {
+      .featured .tease-body iframe, .featured .article-body-block iframe {
+        height: 420px; } }
   @media (min-width: 50em) {
     .tease-body iframe, .article-body-block iframe {
       height: 160px; } }

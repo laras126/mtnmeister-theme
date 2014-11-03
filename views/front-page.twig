@@ -1,20 +1,36 @@
 {% extends "page.twig" %}
 
 {% block content %}
+	{# {% for img in header_images|slice(0,5) %}
+		<img style="width: 33%; float: left;" src="{{TimberImage(img.mobile_image).src}}" alt="">
+	{% endfor %} #}
 
 	<div class="container">
-		<header class="page-header home-header">
-			<h1 class="page-title"><span class="special">MTN</span>meister</h1>	
-			<h1>PODCAST</h1>	
-		</header>
+		<h1><span class="special">MTN</span>MEISTER</h1>
 
-		<h2>MTNmeister is a bi-weekly, 30 minute podcast interviewing outdoors professionals.</h2>
+		<h2>{{post.tagline}}</h2>
+		<div class="col-sm-4">
+			<img src="http://www.mtnmeister.com/wp-content/uploads/2014/04/iTunes_New.v5.png" alt="">	
+		</div>
+		<div class="col-sm-4">
+			<img src="http://www.mtnmeister.com/wp-content/uploads/2014/04/soundcloud.png" alt="">
+		</div>
+		<div class="col-sm-4">
+			<img src="http://www.mtnmeister.com/wp-content/uploads/2014/05/Stitcher-Radio-Logo-2.png" alt="">
+		</div>
 		
-		{% include ['tease-todays_meister.twig', 'tease.twig'] %}
+	</div>
+			
+	<div class="container" style="background-color: #fff">
+		{% include ['tease-todays_meister.twig', 'tease.twig'] %}	
+	</div>
+		
+	<div class="container">
 
-	{% for post in deals %}
-		{% include ['tease-deal.twig', 'tease.twig'] %}
-	{% endfor %}
- 	
+	
+		{% for post in deals|slice(0,1) %}
+			{% include ['tease-deal.twig', 'tease.twig'] %}
+		{% endfor %}
+	 	
  	</div>
 {% endblock %}

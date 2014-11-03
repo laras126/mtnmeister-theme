@@ -2,7 +2,7 @@
 
 %container {
 	margin: 0 auto;
-	@include container-fixed($h1);
+	@include container-fixed();
 }
 
 .container {
@@ -60,6 +60,11 @@
 // ---
 
 // Gear recs
+.item {
+	@extend .clearfix;
+	margin-bottom: $h2;
+}
+
 .item-desc,
 .item-img {
 	@include make-sm-column(6, false);

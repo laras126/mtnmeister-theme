@@ -13,6 +13,8 @@ Keeping out the image for now
 		<div class="col-sm-6">
 			<p>{{post.meister_bio}}</p>
 			{% include 'partials/cat-list.twig' %}
+			
+			<p>SHARE BUTTONS HERE</p>
 		</div>
 
 		<div class="col-sm-6">
@@ -32,9 +34,9 @@ Keeping out the image for now
 	    {% endfor %}
 	</div>
 
-	<section class="article-body-block container-squish clearfix">
+	<section class="article-body-block container-squish">
 		<h3>Gear Recommendations</h3>
-		<p>If you could recommend one piece of gear...</p>
+		<p class="lead">If you could recommend one piece of gear...</p>
 		{% for item in post.get_field('gear_recommendations') %}
 		<div class="item">
 			<div class="item-desc">
@@ -56,7 +58,7 @@ Keeping out the image for now
 
 			 </div>
 			 <div class="item-img">
-			 	<img src="{{TimberImage(item.gear_photo).src}}" alt="{{item.title}}">
+			 	<a href="{{item.gear_link}}" title="{{item.title}}"><img src="{{TimberImage(item.gear_photo).src}}" alt="{{item.title}}"></a>
 			 </div>
 		</div>
 		

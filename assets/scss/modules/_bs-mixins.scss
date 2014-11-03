@@ -9,7 +9,7 @@
 // Changes made by Lara:
 // - Added "@if $gutter != 0" conditional to prevent overriding gutter padding
 // - Changed pixel values to values defined in _settings.scss
-//
+// - Moved all styles into MQ
 // ---
 
 
@@ -95,14 +95,13 @@ $grid-float-breakpoint-max: ($grid-float-breakpoint - 1) !default;
 
 // Generate the small columns
 @mixin make-sm-column($columns, $gutter: $grid-gutter-width) {
-  position: relative;
-  min-height: 1px;
-  @if $gutter != false {
-    padding-left:  ($gutter / 2);
-    padding-right: ($gutter / 2);  
-  }
-  
   @media (min-width: $screen-sm-min) {
+    position: relative;
+    min-height: 1px;
+    @if $gutter != false {
+      padding-left:  ($gutter / 2);
+      padding-right: ($gutter / 2);  
+    }
     float: left;
     width: percentage(($columns / $grid-columns));
   }
@@ -125,14 +124,13 @@ $grid-float-breakpoint-max: ($grid-float-breakpoint - 1) !default;
 
 // Generate the medium columns
 @mixin make-md-column($columns, $gutter: $grid-gutter-width) {
-  position: relative;
-  min-height: 1px;
-  @if $gutter != false {
-    padding-left:  ($gutter / 2);
-    padding-right: ($gutter / 2);
-  }
-
   @media (min-width: $screen-md-min) {
+    position: relative;
+    min-height: 1px;
+    @if $gutter != false {
+      padding-left:  ($gutter / 2);
+      padding-right: ($gutter / 2);
+    }
     float: left;
     width: percentage(($columns / $grid-columns));
   }
@@ -155,14 +153,13 @@ $grid-float-breakpoint-max: ($grid-float-breakpoint - 1) !default;
 
 // Generate the large columns
 @mixin make-lg-column($columns, $gutter: $grid-gutter-width) {
-  position: relative;
-  min-height: 1px;
-  @if $gutter != false {
-    padding-left:  ($gutter / 2);
-    padding-right: ($gutter / 2);
-  }
-
   @media (min-width: $screen-lg-min) {
+    position: relative;
+    min-height: 1px;
+    @if $gutter != false {
+      padding-left:  ($gutter / 2);
+      padding-right: ($gutter / 2);
+    }
     float: left;
     width: percentage(($columns / $grid-columns));
   }

@@ -28,3 +28,18 @@
 	// TODO: Why?
 	background-size: cover !important;  
 }
+
+.featured-img,
+.featured-desc {
+	@include make-md-column(6, false);
+}
+
+.featured-img {
+	padding-right: 1rem;
+}
+
+.featured-desc {
+	@include bp(med) {
+		padding-left: $base;
+	}
+}

@@ -1,10 +1,10 @@
-<article class="tease tease-{{post.post_type}}" id="tease-{{post.ID}}">
+<article class="tease tease-{{post.post_type}}">
 	{% block content %}
 		<h4 class="tease-title"><a href="{{post.link}}">{{post.title}}</a></h4>
 		{% if post.get_thumbnail %}
 			<img src="{{post.thumbnail.src}}" />
 		{% endif %}
 	{% endblock %}
-	
+	<div class="addthis_responsive_sharing"></div>
 	{% include 'partials/edit-link.twig' %}
 </article>

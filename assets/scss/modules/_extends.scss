@@ -11,8 +11,16 @@
   @include make-row();
 }
 
+%full_width {
+  @include bp(med) {
+    @include make-xs-column(12);  
+  }
+}
+
 %row_of_two {
+
   @include make-sm-column(6);
+  
   @include bp(small) {
     &:nth-child(2n+1){
       clear:left;
@@ -87,6 +95,7 @@
   color: $text-meta;
   @extend %upperspace;
   font-size: $sml;
+  font-weight: 400;
 }
 
 // -- Utility classes

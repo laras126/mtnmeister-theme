@@ -27,22 +27,29 @@
 	a {
 		color: $text-light;
 	}
-	
+	transition: all 0.5s ease;
  	background-color: $accent-dark;
 
 	@include bp(large) {
 
-		.page & {
+		// .page & {
 			background-color: $accent-dark;
 			background: linear-gradient(rgba($accent-dark, 0.5), rgba($accent-dark, 0));
-		}
+		// }
 		
-		position: fixed;
+		position: absolute;
 		width: 100%;
 		z-index: 5;	
 	}
 
 	border-top: $accent-border-large;
+}
+
+// When scrolled past header image
+
+.scrolled {
+	background: $accent-dark;
+	transition: all 0.5s ease;
 }
 
 .header {
@@ -78,17 +85,19 @@ h4 {
 	text-transform: uppercase;
 	display: inline-block;
 	position: relative;
-
-	top: $h5*1.2;
+	@extend %full_width;
+	
+	top: $h5;
 	z-index: 10;
 
 	@include bp(small) {
 		font-size: $h1*1.5;
-		top: $h3;
+		top: $h4;
 	}
 
 	@include bp(med) {
 		font-size: $h1*2;
+		top: $h4*1.4;
 	}
 	// background-color: rgba($accent-dark, 0.7);
 	// padding: $h5 $h3;
@@ -115,35 +124,31 @@ h4 {
 
 .page-header-caption {
 	text-align: right;
+	
 	position: absolute;
-	color: $text-light;
+	z-index: 10;
 	right: $h3;
 	top: 0;
 
-	@include bp(small) {
+	@include bp(med) {
 		top: auto;
 		bottom: 0;
 	}
 
+	// TODO: Could this be incorporated into a mixin somehow?
+	color: $text-light;
 	a {
 		color: $accent-med;
 	}
 }
 
 .page-info {
-	// @extend %rotate-bars;
-	// @include linear-gradient(rgba($accent-dark, 0), rgba($accent-dark, 0.7));
-	// @include linear-gradient(rgba($accent-dark, 0.7), transparent);
 	background-image: linear-gradient(rgba($accent-dark, 0), rgba($accent-dark, 0.5));
 }
 
 .page-body {
-	@extend .clearfix;
-	@include bp(sml) {
-		// padding: 0 $h1;
-	}
+	@extend .container;
 }
-
 
 .tagline {
 	@extend %upperspace;
@@ -151,6 +156,7 @@ h4 {
 
 .tagline-page {
 	@extend %h4;
+	@extend %full_width;
 	color: $accent-dark;
 	margin-top: $h2;
 	margin-bottom: $h2;
@@ -208,7 +214,7 @@ h4 {
 }
 
 .tease-featured {
-	@include make-xs-column(12, false);
+	@extend %full_width;
 }
 
 .tease-title {
@@ -234,7 +240,7 @@ h4 {
 		height: 120px;
 
 		// TODO: should be smaller for mobile
-		.featured & {
+		.tease-featured & {
 			height: 300px;	
 			@include bp(med) {			
 				height: 420px;			
@@ -348,6 +354,13 @@ h4 {
 	a {
 		color: $accent-light;
 	}
+}
+
+
+.nav-prevnext {
+	border-top: $accent-border;
+	border-bottom: $accent-border;
+	padding: $h4;
 }
 
 .link-postnav {

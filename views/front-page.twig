@@ -1,32 +1,20 @@
-{% extends "base.twig" %}
+{% extends "page.twig" %}
 
 {% block content %}
-{# 
-	<h1>{{post.get_field('tagline')}}</h1>
-	
-	<h2>Find a meister</h2>
 
-	<h3>Industries</h3>
-	<ul>
-	    {% for industry in mtn_industries %}
-	        <li><a href="{{industry.link}}">{{industry.name}}</a></li>
-	    {% endfor %}
-	</ul>
+	<div class="container">
+		<header class="page-header home-header">
+			<h1 class="page-title"><span class="special">MTN</span>meister</h1>	
+			<h1>PODCAST</h1>	
+		</header>
 
-	<h3>Tagged</h3>
-	<ul>
-	    {% for tag in mtn_tags %}
-	        <li><a href="{{tag.link}}">{{tag.name}}</a></li>
-	    {% endfor %}
-	</ul>
-	
-{# 	 #}
-	{% for post in meisters %}
-		{% include ['tease-meister.twig', 'tease.twig'] %}
-	{% endfor %}
+		<h2>MTNmeister is a bi-weekly, 30 minute podcast interviewing outdoors professionals.</h2>
+		
+		{% include ['tease-todays_meister.twig', 'tease.twig'] %}
 
 	{% for post in deals %}
 		{% include ['tease-deal.twig', 'tease.twig'] %}
 	{% endfor %}
- #}
+ 	
+ 	</div>
 {% endblock %}

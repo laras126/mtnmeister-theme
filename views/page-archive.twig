@@ -6,13 +6,10 @@
 
     {% include 'partials/page-header.twig' %}
 
-    <div class="page-body container">
+    <div class="page-body">
         <p class="tagline tagline-page">{{post.tagline}}</p>
-        <div class="loop-container">
-            {% block loop %}{% endblock %}
-            {% include 'partials/acf-block-loop.twig' %}    
-        </div>
-        
+        {% block loop %}{% endblock %}
+        {% include 'partials/acf-block-loop.twig' %}
     </div>
 
 	{# </article> #}

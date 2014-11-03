@@ -24,7 +24,7 @@ var Roots = {
   common: {
     init: function() {
       // JavaScript to be fired on all pages
-
+      
       // Detect JS
       $('body').addClass('js');
       
@@ -38,16 +38,19 @@ var Roots = {
       });
 
       // Fix the nav when scrolling
-      // var $scroll_class = "menu-scrolled";
-      //     $header_ht = $('.header').height();
-
-      // $(window).scroll(function() {
-      //   if( $(this).scrollTop() > $header_ht ) {
-      //     $menu.addClass($scroll_class);
-      //   } else {
-      //     $menu.removeClass($scroll_class);
-      //   }
-      // });
+      var $scroll_class = "scrolled",
+          $header_ht = $('.page-header').outerHeight(),
+          $banner = $('.banner'),
+          $banner_ht = $('.banner').outerHeight(),
+          $total_ht = $header_ht - $banner_ht*2;
+      
+      $(window).scroll(function() {
+        if( $(this).scrollTop() > $total_ht ) {
+          $banner.addClass($scroll_class);
+        } else {
+          $banner.removeClass($scroll_class);
+        }
+      });
 
     }
   },

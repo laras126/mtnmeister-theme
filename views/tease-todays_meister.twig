@@ -3,32 +3,33 @@
 - Also to make this extend tease.twig
 #}
 
-<article class="tease tease-featured" id="tease-{{todays_meister|first.ID}}">
+{% set m = todays_meister|first %}
 
+<article class="tease tease-featured">
+	
 	<header class="tease-header">
 		<span class="number-wrap">
-			<div class="number"><span># {{todays_meister|first.episode_num}}</span></div>
+			<div class="number"><span># {{m.episode_num}}</span><span class="meta" style="font-weight: 400">{{m.date}}</div>
 		</span>
-		<h2 class="tease-title"><a href="{{todays_meister|first.link}}">{{todays_meister|first.title}}</a></h2>
-		<p class="tagline tagline-tease">{{todays_meister|first.episode_tag}}</p>
+		<h2 class="tease-title"><a href="{{m.link}}">{{m.title}}</a></h2>
+		<p class="tagline tagline-tease">{{m.episode_tag}}</p>
 	</header>
 
 	<div class="tease-body">
-		<div class="col-sm-6">
-			{{todays_meister|first.episode_soundcloud_large}}
+		<div class="featured-img">
+			{{m.episode_soundcloud_large}}
 		</div>
 
-		<div class="col-sm-6">
+		<div class="featured-desc">
 			<ul class="list-meta list-cats">
-			    {% for cat in todays_meister|first.categories %}
+			    {% for cat in m.categories %}
 			        <li><a href="{{cat.link}}">{{cat.name}}</a></li>
 			    {% endfor %}
 			</ul>
 
-			<p class="lead">{{todays_meister|first.meister_bio|truncate(80)}}</p>	
-			<a class="link-more" href="{{todays_meister|first.link}}" title="{{todays_meister|first.title}}">Read more &rarr;</a>		
+			<p class="">{{m.meister_bio|truncate(80)}}</p>	
+			<a class="link-more" href="{{m.link}}" title="{{m.title}}">Read more &rarr;</a>		
 		</div>
-		
 	</div>
 
 </article>

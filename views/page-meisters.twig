@@ -2,9 +2,8 @@
 
 
 {% block loop %}
-	<section class="featured">
-		{% include ['tease-todays_meister.twig', 'tease.twig'] %}
-	</section>
+
+	{% include ['tease-todays_meister.twig', 'tease.twig'] %}
 	
 	<section class="loop">
 		{% for post in meisters %}

@@ -3,13 +3,15 @@
 {% block content %}
 
     {% include 'partials/page-header.twig' %}
-
-	<div class="container">
 		
 		<div class="page-body">
-			<p class="tagline tagline-page">{{post.tagline}}</p>
-	 		<p class="lead">{{post.introduction}}</p>
-			{% include 'partials/acf-block-loop.twig' %}
+			<div class="container">
+				
+				<p class="tagline tagline-page">{{post.tagline}}</p>
+		 		<p class="lead">{{post.introduction}}</p>
+				{% include 'partials/acf-block-loop.twig' %}	
+
+			</div>
 		</div>
 		
 		{%  if sidebar %}

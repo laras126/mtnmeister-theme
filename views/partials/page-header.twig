@@ -1,10 +1,12 @@
 {% set meister = TimberPost(header_image.related_meister) %}
 
 <header class="page-header">
+	{% include 'partials/spinner.twig' %}
 	<picture>
 		<source srcset="{{TimberImage(header_image.desktop_image).src}}" media="(min-width: 56em)">
 		<img class="page-header-image" srcset="{{TimberImage(header_image.mobile_image).src}}" alt="{{header_image.caption}} {% if meister %} - #{{meister[0].episode_num}} {{meister[0].title}} {% endif %}">
 	</picture>
+	
 	<div class="page-info">
 		<div class="container">
 	        <h1 class="page-title no-margin">{{post.title}}</h1>

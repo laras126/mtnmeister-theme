@@ -25,6 +25,7 @@
     "node"
   ],
   "devDependencies": {
-    "modernizr": "~2.8.3"
+    "modernizr": "~2.8.3",
+    "imagesloaded": "~3.1.8"
   }
 }

@@ -1,92 +1,54 @@
-/* ========================================================================
- * DOM-based Routing
- * Based on http://goo.gl/EUTi53 by Paul Irish
- * From the Roots Starter Theme - http://roots.io
- *
- * Only fires on body classes that match. If a body class contains a dash,
- * replace the dash with an underscore when adding it to the object below.
- *
- * .noConflict()
- * The routing is enclosed within an anonymous function so that you can 
- * always reference jQuery with $, even when in .noConflict() mode.
- *
- * Google CDN, Latest jQuery
- * To use the default WordPress version of jQuery, go to lib/config.php and
- * remove or comment out: add_theme_support('jquery-cdn');
- * ======================================================================== */
+$(document).ready(function() {
 
-(function($) {
+	// ----
+	// Toggle menu
+	// ----
 
-// Use this variable to set up the common and page specific functions. If you 
-// rename this variable, you will also need to rename the namespace below.
-var Roots = {
-  // All pages
-  common: {
-    init: function() {
-      // JavaScript to be fired on all pages
-      
-      // Detect JS
-      $('body').addClass('js');
-      
-      var $menu = $('#menu'),
-          $menulink = $('.menu-link');
-        
-      $menulink.click(function() {
-        $menulink.toggleClass('active');
-        $menu.toggleClass('active');
-        return false;
-      });
+	// TODO: add this with modernizer, causes a blip
+	$('body').addClass('js'); // Detect JS
+	  
+	var $menu = $('#menu'),
+		$menulink = $('.menu-link');
+		
+	$menulink.click(function() {
+		$menulink.toggleClass('active');
+		$menu.toggleClass('active');
+		return false;
+	});
 
-      // Fix the nav when scrolling
-      var $scroll_class = "scrolled",
-          $header_ht = $('.page-header').outerHeight(),
-          $banner = $('.banner'),
-          $banner_ht = $('.banner').outerHeight(),
-          $total_ht = $header_ht - $banner_ht*2;
-      
-      $(window).scroll(function() {
-        if( $(this).scrollTop() > $total_ht ) {
-          $banner.addClass($scroll_class);
-        } else {
-          $banner.removeClass($scroll_class);
-        }
-      });
+	
 
-    }
-  },
-  // Home page
-  home: {
-    init: function() {
-      // JavaScript to be fired on the home page
-    }
-  },
-  // About us page, note the change from about-us to about_us.
-  about_us: {
-    init: function() {
-      // JavaScript to be fired on the about us page
-    }
-  }
-};
+	// ----
+	// Fix the nav when scrolling
+	// ----
 
-// The routing fires all common scripts, followed by the page specific scripts.
-// Add additional events for more control over timing e.g. a finalize event
-var UTIL = {
-  fire: function(func, funcname, args) {
-    var namespace = Roots;
-    funcname = (funcname === undefined) ? 'init' : funcname;
-    if (func !== '' && namespace[func] && typeof namespace[func][funcname] === 'function') {
-      namespace[func][funcname](args);
-    }
-  },
-  loadEvents: function() {
-    UTIL.fire('common');
+	  var $scroll_class = "scrolled",
+		  $header_ht = $('.page-header-image').outerHeight(),
+		  $banner = $('.banner'),
+		  $banner_ht = $('.banner').outerHeight(),
+		  $total_ht = $header_ht - $banner_ht*2;
+	  
+	$(window).scroll(function() {
+		if( $(this).scrollTop() > $total_ht ) {
+		  $banner.addClass($scroll_class);
+		} else if($(this).scrollTop() < $total_ht ) {
+		  $banner.removeClass($scroll_class);
+		  console.log('asdasd');
+		}
+	});
 
-    $.each(document.body.className.replace(/-/g, '_').split(/\s+/),function(i,classnm) {
-      UTIL.fire(classnm);
-    });
-  }
-};
 
-$(document).ready(UTIL.loadEvents);
 
-})(jQuery); // Fully reference jQuery after this point.
+	// ----
+	// Header image spinner
+	// ----
+	var $container = $('.page-header');
+	var $image = $('.page-header-image');
+
+	$container.imagesLoaded( function() {
+		$image.fadeIn(300);
+		$('.spinner').hide();
+		console.log('loaded');
+	});
+
+});

@@ -23,23 +23,25 @@
 }
 
 .banner {
-	// @extend %rotate-bars;
+	
 	a {
 		color: $text-light;
 	}
+
 	transition: all 0.5s ease;
  	background-color: $accent-dark;
-
+	position: fixed;
+	width: 100%;
+	z-index: 5;	
+	
 	@include bp(large) {
 
 		// .page & {
-			background-color: $accent-dark;
 			background: linear-gradient(rgba($accent-dark, 0.5), rgba($accent-dark, 0));
 		// }
 		
-		position: absolute;
-		width: 100%;
-		z-index: 5;	
+		// position: absolute;
+		
 	}
 
 	border-top: $accent-border-large;
@@ -60,7 +62,6 @@
 		// height: $h1;
 	}
 	
-
 }
 
 .top-bar {
@@ -88,7 +89,6 @@ h4 {
 	@extend %full_width;
 	
 	top: $h5;
-	z-index: 10;
 
 	@include bp(small) {
 		font-size: $h1*1.5;
@@ -103,28 +103,33 @@ h4 {
 	// padding: $h5 $h3;
 }
 
-
 .page-header {
-	border-bottom: $accent-border-large;
 	height: auto;
 	position: relative;
-	// padding-top: 200px;
+	// height: 30vh;
+	// @include bp(small) {
+	// 	height: 30vh;
+	// }
+	// @include bp(med) {
+	// 	height: 30vh;
+	// }
+	// @include bp(med) {
+	// 	max-height: 80vh;
+	// }
+	max-height: 80vh;
+	
+	overflow: hidden;
 	background-color: $accent-dark;
 	position: relative;
-	
-	// @include bp(med) {
-	// 	padding-top: 400px;
-	// }
-
-	// @include bp(large) {
-	// 	padding-top: 600px;
-	// 	background-repeat: no-repeat;
-	// }
-
 }
 
-.page-header-image img {
+.page-header-image {
 	width: 100%;
+	display: none;
+
+	.js & {
+	
+	}
 }
 
 .page-header-caption {
@@ -158,7 +163,7 @@ h4 {
 }
 
 .page-body {
-	@extend .container;
+	border-top: $accent-border-large;
 }
 
 

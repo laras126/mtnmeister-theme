@@ -1,5 +1,19 @@
 <?php 
 
+
+// Add async to scripts for faster loading
+
+function mtn_add_async_forscript($url) {
+    if (strpos($url, '#asyncload')===false)
+        return $url;
+    else if (is_admin())
+        return str_replace('#asyncload', '', $url);
+    else
+        return str_replace('#asyncload', '', $url)."' async='async"; 
+}
+add_filter('clean_url', 'mtn_add_async_forscript', 11, 1);
+
+
 /**
  * Scripts and stylesheets 
  * Code courtesy of Roots (http://roots.io), namespace adjusted for theme
@@ -10,12 +24,13 @@
  * Enqueue scripts in the following order:
  * 1. jquery-1.11.1.min.js via Google CDN
  * 2. /theme/assets/js/vendor/modernizr.min.js
- * 3. /theme/assets/js/scripts.js (in footer)
+ * 3. /theme/assets/js/scripts.js
  *
  * Google Analytics is loaded after enqueued scripts if:
  * - An ID has been defined in config.php
  * - You're not logged in as an administrator
  */
+
 
 function mtn_styles_scripts() {
   /**
@@ -25,20 +40,18 @@ function mtn_styles_scripts() {
   if (WP_ENV === 'development') {
     $assets = array(
       'css'       => '/assets/css/main.css',
-      'js'        => '/assets/js/scripts.js',
-      'modernizr' => '/assets/js/vendor/modernizr.custom.js',
-      // 'myfonts' => '/assets/js/vendor/myfonts-kit.min.js',
-      'jquery'    => '//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.js'
+      'js'        => '/assets/js/scripts.js#asyncload',
+      // 'modernizr' => '/assets/js/vendor/modernizr.custom.js#asyncload',
+      'jquery'    => '//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.js#asyncload'
     );
   } else {
     $get_assets = file_get_contents(get_template_directory() . '/assets/manifest.json');
     $assets     = json_decode($get_assets, true);
     $assets     = array(
       'css'       => '/assets/css/main.min.css?' . $assets['assets/css/main.min.css']['hash'],
-      'js'        => '/assets/js/scripts.min.js?' . $assets['assets/js/scripts.min.js']['hash'],
-      // 'myfonts' => '/assets/js/vendor/myfonts-kit.min.js',
-      'modernizr' => '/assets/js/vendor/modernizr.custom.min.js',
-      'jquery'    => '//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js',
+      'js'        => '/assets/js/scripts.min.js?' . $assets['assets/js/scripts.min.js#asyncload']['hash'],
+      // 'modernizr' => '/assets/js/vendor/modernizr.custom.min.js#asyncload',
+      'jquery'    => '//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js#asyncload',
     );
   }
 
@@ -51,7 +64,7 @@ function mtn_styles_scripts() {
    * Grab Google CDN's latest jQuery with a protocol relative URL; fallback to local if offline
    * It's kept in the header instead of footer to avoid conflicts with plugins.
    */
-  if (!is_admin() && current_theme_supports('jquery-cdn')) {
+  if (!is_admin() ) {
     wp_deregister_script('jquery');
     wp_register_script('jquery', $assets['jquery'], array(), null, false);
     add_filter('script_loader_src', 'mtn_jquery_local_fallback', 10, 2);
@@ -61,9 +74,9 @@ function mtn_styles_scripts() {
     wp_enqueue_script('comment-reply');
   }
 
-  wp_enqueue_script('modernizr', get_template_directory_uri() . $assets['modernizr'], array(), null, false);
+  // wp_enqueue_script('modernizr', get_template_directory_uri() . $assets['modernizr'], array(), null, false);
   //wp_enqueue_script('myfonts', get_template_directory_uri() . $assets['myfonts'], array(), null, false);
-  wp_enqueue_script('jquery');
+  wp_enqueue_script('jquery', true);
   wp_enqueue_script('mtn_js', get_template_directory_uri() . $assets['js'], array(), null, true);
 }
 add_action('wp_enqueue_scripts', 'mtn_styles_scripts', 100);
@@ -75,7 +88,7 @@ function mtn_jquery_local_fallback($src, $handle = null) {
   static $add_jquery_fallback = false;
 
   if ($add_jquery_fallback) {
-    echo '<script>window.jQuery || document.write(\'<script src="' . get_template_directory_uri() . '/assets/vendor/jquery/dist/jquery.min.js?1.11.1"><\/script>\')</script>' . "\n";
+    echo '<script>window.jQuery || document.write(\'<script async="async" src="' . get_template_directory_uri() . '/assets/vendor/jquery/dist/jquery.min.js?1.11.1"><\/script>\')</script>' . "\n";
     $add_jquery_fallback = false;
   }
 
@@ -85,7 +98,7 @@ function mtn_jquery_local_fallback($src, $handle = null) {
 
   return $src;
 }
-add_action('wp_head', 'mtn_jquery_local_fallback');
+add_action('wp_footer', 'mtn_jquery_local_fallback');
 
 
 

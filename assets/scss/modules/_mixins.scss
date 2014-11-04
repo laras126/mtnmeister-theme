@@ -52,6 +52,7 @@ $MQs: true;
 		$bp-sm: "(min-width: #{$screen-sm})";
 		$bp-md: "(min-width: #{$screen-md})";
 		$bp-lg: "(min-width: #{$screen-lg})";
+		$bp-xl: "(min-width: #{$screen-xl})";
 
 		@if $point == small {
 			@media #{$bp-sm} { @content; }
@@ -61,6 +62,9 @@ $MQs: true;
 		}
 		@else if $point == large {
 			@media #{$bp-lg} { @content; }
+		}
+		@else if $point == xl {
+			@media #{$bp-xl} { @content; }
 		}
 	}
 }

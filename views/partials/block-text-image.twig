@@ -1,4 +1,10 @@
 
-{# {% if content.image_location is %} #}
-<img src="{{TimberImage(content.image).src}}" />
-<p>{{content.text}}</p>
+<div class="clearfix">
+	<h3 class="block-title">Your Host</h3>
+	<div class="col-sm-4">
+		<img src="{{TimberImage(content.image).src}}" />	
+	</div>
+	<div class="col-sm-8">
+		<p>{{content.text}}</p>	
+	</div>	
+</div>

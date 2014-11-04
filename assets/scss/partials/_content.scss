@@ -15,11 +15,8 @@
 	background-repeat: no-repeat;
 }
 
-.header-logo {
-	// margin-top: $sml;
-	position: relative;
-	// top: $sml;
-	height: 50px;
+.logo {
+	margin-top: $sml;
 }
 
 .banner {
@@ -32,7 +29,7 @@
  	background-color: $accent-dark;
 	position: fixed;
 	width: 100%;
-	z-index: 5;	
+	z-index: 99;	
 	
 	@include bp(large) {
 
@@ -64,9 +61,7 @@
 	
 }
 
-.top-bar {
-	
-}
+
 
 
 // ---
@@ -110,9 +105,9 @@ h4 {
 	// @include bp(small) {
 	// 	height: 30vh;
 	// }
-	// @include bp(med) {
-	// 	height: 30vh;
-	// }
+	@include bp(med) {
+		margin-top: 0;
+	}
 	// @include bp(med) {
 	// 	max-height: 80vh;
 	// }
@@ -125,7 +120,6 @@ h4 {
 
 .page-header-image {
 	width: 100%;
-	display: none;
 
 	.js & {
 	
@@ -137,14 +131,15 @@ h4 {
 	position: absolute;
 	z-index: 10;
 	right: 0;
-	bottom: 0;
+	// bottom: auto;
+	top: 0;
 	background-color: rgba($text-dark, 0.3);
 	padding: $sml;
 	font-size: $sml;
 
 	@include bp(med) {
-		// top: auto;
-		bottom: 0;
+		top: auto;
+		bottom: 0;	
 	}
 
 	// TODO: Could this be incorporated into a mixin somehow?
@@ -387,6 +382,33 @@ h4 {
 	font-size: $sml;
 	font-weight: 700;
 }
+
+
+
+// Blocks
+
+.block-text {
+	@include make-md-column(6);
+	
+	// @extend %full_width;
+  	
+  	p:first-child {
+  		margin-top: 0;
+  	}
+}
+
+.block-image {
+	@include make-md-column(6);
+	@extend %center-block;
+	svg {
+		display: none;
+		@include bp(med) {
+			display: block;
+		}
+	}
+}
+
+
 
 
 // ---

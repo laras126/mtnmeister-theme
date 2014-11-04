@@ -23,3 +23,7 @@ img {
 .main {
 	@extend .clearfix;
 }
+
+.block-title {
+	@extend %upperspace;
+}

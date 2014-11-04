@@ -1,10 +1,12 @@
-<h3>{{content.section_heading}}</h3>
-{{content.section_text}}
 
+<div class="clearfix">
+	
+	<section class="block-text">
+		{% if content.section_heading %}<h4>{{content.section_heading}}</h4>{% endif %}
+		{{content.section_text}}
+	</section>
+	<div class="col-sm-6">
+		{% include 'partials/person.twig' %}
+	</div>
 
-
-
-
-
-
-
+</div>

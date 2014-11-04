@@ -98,6 +98,9 @@
   font-weight: 400;
 }
 
+
+
+
 // -- Utility classes
 
 .text-center {
@@ -110,4 +113,17 @@
 
 .text-right {
   text-align: right;
+}
+
+%center-block {
+  display: block;
+  margin: 0 auto;
+}
+
+
+.show-at-sm {
+  display: none;
+  @include bp(small) {
+    display: block;
+  }
 }

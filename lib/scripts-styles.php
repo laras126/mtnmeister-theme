@@ -1,5 +1,12 @@
 <?php 
 
+if (!is_admin()) add_action("wp_enqueue_scripts", "my_jquery_enqueue", 11);
+  function my_jquery_enqueue() {
+     wp_deregister_script('jquery');
+     wp_register_script('jquery', "http" . ($_SERVER['SERVER_PORT'] == 443 ? "s" : "") . "://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.js", false, null);
+     wp_enqueue_script('jquery');
+  }
+
 
 // Add async to scripts for faster loading
 
@@ -11,7 +18,7 @@ function mtn_add_async_forscript($url) {
     else
         return str_replace('#asyncload', '', $url)."' async='async"; 
 }
-add_filter('clean_url', 'mtn_add_async_forscript', 11, 1);
+// add_filter('clean_url', 'mtn_add_async_forscript', 11, 1);
 
 
 /**
@@ -40,18 +47,18 @@ function mtn_styles_scripts() {
   if (WP_ENV === 'development') {
     $assets = array(
       'css'       => '/assets/css/main.css',
-      'js'        => '/assets/js/scripts.js#asyncload',
+      'js'        => '/assets/js/scripts.js',
       // 'modernizr' => '/assets/js/vendor/modernizr.custom.js#asyncload',
-      'jquery'    => '//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.js#asyncload'
+      // 'jquery'    => '//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.js#asyncload'
     );
   } else {
     $get_assets = file_get_contents(get_template_directory() . '/assets/manifest.json');
     $assets     = json_decode($get_assets, true);
     $assets     = array(
       'css'       => '/assets/css/main.min.css?' . $assets['assets/css/main.min.css']['hash'],
-      'js'        => '/assets/js/scripts.min.js?' . $assets['assets/js/scripts.min.js#asyncload']['hash'],
+      'js'        => '/assets/js/scripts.min.js?' . $assets['assets/js/scripts.min.js']['hash'],
       // 'modernizr' => '/assets/js/vendor/modernizr.custom.min.js#asyncload',
-      'jquery'    => '//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js#asyncload',
+      // 'jquery'    => '//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js#asyncload',
     );
   }
 
@@ -64,11 +71,6 @@ function mtn_styles_scripts() {
    * Grab Google CDN's latest jQuery with a protocol relative URL; fallback to local if offline
    * It's kept in the header instead of footer to avoid conflicts with plugins.
    */
-  if (!is_admin() ) {
-    wp_deregister_script('jquery');
-    wp_register_script('jquery', $assets['jquery'], array(), null, false);
-    add_filter('script_loader_src', 'mtn_jquery_local_fallback', 10, 2);
-  }
 
   if (is_single() && comments_open() && get_option('thread_comments')) {
     wp_enqueue_script('comment-reply');
@@ -76,7 +78,7 @@ function mtn_styles_scripts() {
 
   // wp_enqueue_script('modernizr', get_template_directory_uri() . $assets['modernizr'], array(), null, false);
   //wp_enqueue_script('myfonts', get_template_directory_uri() . $assets['myfonts'], array(), null, false);
-  wp_enqueue_script('jquery', true);
+  // wp_enqueue_script('jquery', true);
   wp_enqueue_script('mtn_js', get_template_directory_uri() . $assets['js'], array(), null, true);
 }
 add_action('wp_enqueue_scripts', 'mtn_styles_scripts', 100);
@@ -84,21 +86,21 @@ add_action('wp_enqueue_scripts', 'mtn_styles_scripts', 100);
 
 
 // http://wordpress.stackexchange.com/a/12450
-function mtn_jquery_local_fallback($src, $handle = null) {
-  static $add_jquery_fallback = false;
+// function mtn_jquery_local_fallback($src, $handle = null) {
+//   static $add_jquery_fallback = false;
 
-  if ($add_jquery_fallback) {
-    echo '<script>window.jQuery || document.write(\'<script async="async" src="' . get_template_directory_uri() . '/assets/vendor/jquery/dist/jquery.min.js?1.11.1"><\/script>\')</script>' . "\n";
-    $add_jquery_fallback = false;
-  }
+//   if ($add_jquery_fallback) {
+//     echo '<script>window.jQuery || document.write(\'<script async="async" src="' . get_template_directory_uri() . '/assets/vendor/jquery/dist/jquery.min.js?1.11.1"><\/script>\')</script>' . "\n";
+//     $add_jquery_fallback = false;
+//   }
 
-  if ($handle === 'jquery') {
-    $add_jquery_fallback = true;
-  }
+//   if ($handle === 'jquery') {
+//     $add_jquery_fallback = true;
+//   }
 
-  return $src;
-}
-add_action('wp_footer', 'mtn_jquery_local_fallback');
+//   return $src;
+// }
+// add_action('wp_footer', 'mtn_jquery_local_fallback');
 
 
 

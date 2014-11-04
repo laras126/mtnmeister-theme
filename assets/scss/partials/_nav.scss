@@ -10,7 +10,8 @@
 	
 }
 
-.js .menu-main {
+//.js 
+.menu-main {
 	overflow: hidden;
 	max-height: 0;
 	transition: all 0.25s ease-in-out;
@@ -29,6 +30,7 @@
 	padding: $sml 0 0 0;
 	text-align: right;
 	// @extend %rotate;
+	text-align: center;
 
 }
 
@@ -53,7 +55,7 @@
 	   display: none;
 	}
 
-	.js .menu-main {
+	.menu-main {
 		max-height: none;
 	}
 
@@ -87,7 +89,7 @@
 // ----
 
 .menu-link {
-	padding: $h4;
+	padding: $sml;
 }
 
 	.menu-link a {
@@ -96,11 +98,11 @@
 
 	.menu-link span {
   		transition: all 0.15s ease-in-out;
-    	width: 40px;
-    	height: 4px;
+    	width: 30px;
+    	height: 3px;
     	display: block;
     	background: $rotate-text;
-    	margin: 0 0 8px 0;
+    	margin: 0 0 5px 0;
   	}
     
     .menu-link span:last-child {
@@ -109,7 +111,7 @@
     
     .menu-link.active span:nth-of-type(1) {
 		transform: rotate(45deg);
-		margin: 14px 0 0 0;
+		margin: 10px 0 0 0;
     }
 
     .menu-link.active span:nth-of-type(2) {
@@ -118,6 +120,6 @@
 
     .menu-link.active span:nth-of-type(3) {
       	transform: rotate(-45deg);
-      	margin: -16px 0 0 0;
+      	margin: -11px 0 0 0;
     }
 

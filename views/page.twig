@@ -8,17 +8,30 @@
 			<div class="container">
 				
 				<p class="tagline tagline-page">{{post.tagline}}</p>
-		 		<p class="lead">{{post.introduction}}</p>
-				{% include 'partials/acf-block-loop.twig' %}	
 
+				{# <div class="col-sm-8"> #}
+				<p class="lead">{{post.introduction}}</p>
+					
+				{% include 'partials/acf-block-loop.twig' %}
+
+				{# <div class="container">
+					<h3>Podcast How-To</h3>
+					<div class="col-sm-4">
+						<h4>Install</h4>
+					</div>	
+				</div>
+				 #}
+				{# </div> #}
+			
 			</div>
-		</div>
-		
-		{%  if sidebar %}
-			<aside class="sidebar">
-				{# {{sidebar}} #}
-			</aside>
-		{% endif %}
+
+			{%  if sidebar %}
+				<aside class="sidebar col-sm-4">
+					
+					{{sidebar}}
+				</aside>
+			{% endif %}	
+		 		
 		
 	</div>
 

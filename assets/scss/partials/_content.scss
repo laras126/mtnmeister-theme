@@ -106,49 +106,63 @@ h4 {
 
 .page-header {
 	border-bottom: $accent-border-large;
-	height: 100%;
+	height: auto;
 	position: relative;
-	padding-top: 200px;
+	// padding-top: 200px;
 	background-color: $accent-dark;
+	position: relative;
 	
-	@include bp(med) {
-		padding-top: 400px;
-	}
+	// @include bp(med) {
+	// 	padding-top: 400px;
+	// }
 
-	@include bp(large) {
-		padding-top: 500px;
-		background-repeat: no-repeat;
-	}
+	// @include bp(large) {
+	// 	padding-top: 600px;
+	// 	background-repeat: no-repeat;
+	// }
 
+}
+
+.page-header-image {
+	width: 100%;
 }
 
 .page-header-caption {
 	text-align: right;
-	
 	position: absolute;
 	z-index: 10;
-	right: $h3;
-	top: 0;
+	right: 0;
+	bottom: 0;
+	background-color: rgba($text-dark, 0.3);
+	padding: $sml;
+	font-size: $sml;
 
 	@include bp(med) {
-		top: auto;
+		// top: auto;
 		bottom: 0;
 	}
 
 	// TODO: Could this be incorporated into a mixin somehow?
 	color: $text-light;
+
 	a {
-		color: $accent-med;
+		color: lighten($accent-med, 8%);
 	}
 }
 
 .page-info {
 	background-image: linear-gradient(rgba($accent-dark, 0), rgba($accent-dark, 0.5));
+	position: absolute;
+	width: 100%;
+	bottom: 0;
 }
 
 .page-body {
 	@extend .container;
 }
+
+
+// Taglines
 
 .tagline {
 	@extend %upperspace;

@@ -1639,37 +1639,38 @@ input[type="checkbox"]:focus {
 
 .page-header {
   border-bottom: 5px solid #f8992f;
-  height: 100%;
+  height: auto;
   position: relative;
-  padding-top: 200px;
-  background-color: #043f7e; }
-  @media (min-width: 50em) {
-    .page-header {
-      padding-top: 400px; } }
-  @media (min-width: 62em) {
-    .page-header {
-      padding-top: 500px;
-      background-repeat: no-repeat; } }
+  background-color: #043f7e;
+  position: relative; }
+
+.page-header-image {
+  width: 100%; }
 
 .page-header-caption {
   text-align: right;
   position: absolute;
   z-index: 10;
-  right: 2rem;
-  top: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(31, 29, 26, 0.3);
+  padding: 0.8rem;
+  font-size: 0.8rem;
   color: #fff; }
   @media (min-width: 50em) {
     .page-header-caption {
-      top: auto;
       bottom: 0; } }
   .page-header-caption a {
-    color: #f8992f; }
+    color: #f9ac56; }
 
 .page-info {
   background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(4, 63, 126, 0)), to(rgba(4, 63, 126, 0.5)));
   background-image: -webkit-linear-gradient(rgba(4, 63, 126, 0), rgba(4, 63, 126, 0.5));
   background-image: -o-linear-gradient(rgba(4, 63, 126, 0), rgba(4, 63, 126, 0.5));
-  background-image: linear-gradient(rgba(4, 63, 126, 0), rgba(4, 63, 126, 0.5)); }
+  background-image: linear-gradient(rgba(4, 63, 126, 0), rgba(4, 63, 126, 0.5));
+  position: absolute;
+  width: 100%;
+  bottom: 0; }
 
 .tagline-page {
   color: #043f7e;

@@ -35,7 +35,7 @@
 
 .menu-main {
 	// Full row on small screens (and hidden until expanded)
-	@include make-xs-column(12);
+	@include make-xs-column(12, false);
 	@include make-lg-column(8);
 }
 

@@ -1,0 +1,12 @@
+
+.widgets {
+	list-style-type: none;
+	margin: $h3 0 0 0;
+	padding: 0;
+}
+
+.widget {
+	padding: $h4;
+	background-color: lighten($text-meta, 35%);
+	margin-bottom: $h4;
+}

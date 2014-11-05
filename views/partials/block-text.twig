@@ -6,7 +6,7 @@
 		{{content.section_text}}
 	</section>
 	<div class="col-sm-6">
-		{% include 'partials/person.twig' %}
+		{% if content.section_image %}<img src="{{TimberImage(content.meister_pic).src}}" alt="{{content.title}}">{% endif %}
 	</div>
 
 </div>

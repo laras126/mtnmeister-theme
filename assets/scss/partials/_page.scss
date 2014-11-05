@@ -1,0 +1,95 @@
+
+// ---
+// Posts and Pages
+// ---
+
+
+// Page typography
+
+h4 {
+	@extend %upperspace;
+}
+
+.page-title {
+	color: $text-light;
+	@extend %upperspace;
+	position: relative;
+	@extend %full_width;
+	
+	top: $h5;
+
+	@include bp(small) {
+		font-size: $h1*1.5;
+		top: $h4;
+	}
+
+	@include bp(med) {
+		font-size: $h1*2;
+		top: $h4*1.4;
+	}
+	// background-color: rgba($accent-dark, 0.7);
+	// padding: $h5 $h3;
+}
+
+.page-header {
+	margin-top: $h2;
+	
+	@include bp(med) {
+		max-height: 69vh;
+	}
+	@include bp(large) {
+		margin-top: 0;
+		max-height: 80vh;
+	}
+	
+	overflow: hidden;
+	background-color: $accent-dark;
+	position: relative;
+}
+
+
+.page-header-image {
+	width: 100%;
+
+	.js & {
+	
+	}
+}
+
+.page-header-caption {
+	text-align: right;
+	position: absolute;
+	z-index: 10;
+	right: 0;
+	// bottom: auto;
+	top: 0;
+	background-color: rgba($text-dark, 0.3);
+	padding: $sml;
+	font-size: $sml;
+
+	@include bp(med) {
+		top: auto;
+		bottom: 0;	
+	}
+
+	// TODO: Could this be incorporated into a mixin somehow?
+	color: $text-light;
+
+	a {
+		color: lighten($accent-med, 8%);
+	}
+}
+
+.page-info {
+	background-image: linear-gradient(rgba($accent-dark, 0), rgba($accent-dark, 0.5));
+	position: absolute;
+	width: 100%;
+	bottom: 0;
+	z-index: 10000;
+}
+
+.page-body {
+	border-top: $accent-border-large;
+}
+
+

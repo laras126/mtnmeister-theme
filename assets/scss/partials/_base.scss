@@ -18,6 +18,7 @@ body {
 
 img {
 	max-width: 100%;
+	height: auto;
 }
 
 .main {
@@ -26,4 +27,107 @@ img {
 
 .block-title {
 	@extend %upperspace;
+}
+
+
+// ----
+// Components
+// ----
+
+// These are used throughout the site in various locations
+
+
+// Taglines
+
+.tagline {
+	@extend %upperspace;
+}
+
+.tagline-page {
+	@extend %h4;
+	@extend %full_width;
+	color: $accent-dark;
+	margin-top: $h2;
+	margin-bottom: $h2;
+	font-weight: 700;
+}
+
+.tagline-tease {
+	color: $accent-med;
+}
+
+	
+
+// Episode number with surrounding line border
+
+.number {
+	@extend %upperspace;
+	border-bottom: $accent-border; 
+	position:relative; 
+	
+	span { 
+		position: relative; 
+		top: $sml/1.5; 
+		padding: 0 $sml 0 0;
+		background-color: $body-bkgd;
+	}
+}
+
+
+.number-wrap{
+	display:block; 
+    margin: 0;
+}
+
+
+
+// Lists
+
+%list-meta {
+	padding: 0;
+	li {
+		display: inline-block;
+		list-style-type: none;
+		font-size: $sml;
+		padding: $sml/4 $sml/2;
+		margin-right: $sml;
+	}
+}
+
+.list-cats {
+	@extend %list-meta;
+	li {
+		@extend %rotate;
+		border-radius: 4px;	
+		@extend %upperspace;	
+	}
+}
+
+.list-tags {
+	@extend %list-meta;
+	font-style: italic;
+}
+
+
+
+// Links
+
+.edit-link,
+.edit-link:visited {
+	color: $alert-danger;
+	font-weight: bold;
+	display: block;
+	margin: $h4 0;
+}
+
+.link-more {
+	display: inline-block;
+	// @extend .btn;
+	float: right;
+	@extend %upperspace;
+	font-weight: 700;
+
+	a {
+		color: $accent-light;
+	}
 }

@@ -1,0 +1,60 @@
+
+// Tease styles
+
+
+.tease {
+	// border-top: $sml/3 $accent-med solid;
+	// @include make-lg-column(4, 0);
+	// border: 10px solid $accent-dark;
+	// background-color: $body-bkgd;
+	// padding: $sml/2 $sml;
+	margin-bottom: $h1;
+}
+
+.tease-deal {
+	@extend %row_of_three;
+}
+
+.tease-meister {
+	@extend %row_of_two;
+}
+
+.tease-featured {
+	@extend %full_width;
+}
+
+.tease-title {
+	// position: relative;
+	// top: $sml;
+	padding: 0;
+	// @extend %h3;
+	// @extend %upperspace;
+
+
+	a {
+		
+	}
+}
+
+.tease-meta {
+	font-size: $sml;
+	color: $text-meta;
+}
+
+.tease-body, .article-body-block {
+	iframe {
+		height: 120px;
+
+		// TODO: should be smaller for mobile
+		.tease-featured & {
+			height: 300px;	
+			@include bp(med) {			
+				height: 420px;			
+			}
+		}
+
+		@include bp(med) {
+			height: 160px;
+		}
+	}
+}

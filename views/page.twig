@@ -4,8 +4,8 @@
 
     {% include 'partials/page-header.twig' %}
 		
-		<div class="page-body">
-			<div class="container">
+		<div class="page-body container">
+			<div class="col-sm-8">
 				
 				<p class="tagline tagline-page">{{post.tagline}}</p>
 
@@ -27,7 +27,6 @@
 
 			{%  if sidebar %}
 				<aside class="sidebar col-sm-4">
-					
 					{{sidebar}}
 				</aside>
 			{% endif %}	

@@ -1,0 +1,42 @@
+
+// Singles
+
+.article-header {	
+	margin-top: $h2;
+	text-align: center;
+	
+	@include bp(large) {
+		margin-top: $h1*1.5;
+	}
+
+	.number span {
+		padding-left: $sml;
+	}
+}
+
+.article-title {
+	@extend %h2;
+	text-shadow: 1px 1px 0 rgba($text-meta,0.6),
+	1px 3px 0 rgba($text-meta,0.3);
+
+	@include bp(med) {
+		font-size: $h1;
+	}
+}
+
+.featured-quote {
+	border-top: $accent-border;
+	border-bottom: $accent-border;
+	padding-top: $h3;
+	padding-bottom: $h3;
+	background-position: 0 $h3;
+}
+
+
+.episode-embed,
+.article-footer {
+	margin-top: $h3;
+	margin-bottom: $h3;
+}
+
+

@@ -3,3 +3,7 @@
 	cursor: pointer;
 	-webkit-appearance: none;
 }
+
+.btn-alt {
+	@include button($accent-light, $text-dark);
+}

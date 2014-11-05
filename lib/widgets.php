@@ -8,9 +8,13 @@ function mtn_home_widgets() {
 
 	$args = array(
 		'id'            => 'home_widgets',
-		'name'          => __( 'Footer Widgets', 'mtnmeister' ),
-		'description'   => __( 'Widgets on the hompage, hey!', 'mtnmeister' ),
+		'name'          => __( 'Homepage Widgets', 'mtnmeister' ),
+		'description'   => __( 'Widgets on the hompage for dynamic content.', 'mtnmeister' ),
 		'class'         => 'widgets-home',
+		'before_widget' => '<li class="widget">',
+		'after_widget'  => '</li>',
+		'before_title'  => '<h4 class="widget-title">',
+		'after_title'   => '</h4>'
 	);
 	register_sidebar( $args );
 
@@ -28,8 +32,12 @@ function mtn_footer_widgets() {
 	$args = array(
 		'id'            => 'footer_widgets',
 		'name'          => __( 'Footer Widgets', 'mtnmeister' ),
-		'description'   => __( 'Widgets in the footer, hey!', 'mtnmeister' ),
+		'description'   => __( 'Widgets in the footer. No more than 4.', 'mtnmeister' ),
 		'class'         => 'widgets-footer',
+		'before_widget' => '<li class="widget">',
+		'after_widget'  => '</li>',
+		'before_title'  => '<h4 class="widget-title">',
+		'after_title'   => '</h4>'
 	);
 	register_sidebar( $args );
 
@@ -48,8 +56,12 @@ function mtn_global_sidebar() {
 	$args = array(
 		'id'            => 'global_sidebar',
 		'name'          => __( 'Global Sidebar', 'mtnmeister' ),
-		'description'   => __( 'The sidebar appearing everywhere.', 'mtnmeister' ),
+		'description'   => __( 'The sidebar appearing througout the site. Good spot for ads and anything promotional', 'mtnmeister' ),
 		'class'         => 'widgets-sidebar',
+		'before_widget' => '<li class="widget">',
+		'after_widget'  => '</li>',
+		'before_title'  => '<h4 class="widget-title">',
+		'after_title'   => '</h4>'
 	);
 	register_sidebar( $args );
 

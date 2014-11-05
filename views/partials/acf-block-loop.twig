@@ -7,9 +7,9 @@
     {% elseif content.acf_fc_layout == 'text_image_block' %}
 		{% include 'partials/block-text-image.twig' %}
     {% elseif content.acf_fc_layout == 'blank' %}
-     	{{content.wysiwyg}}
-     {% elseif content.acf_fc_layout == 'call_to_action' %} 
-     	{% include 'partials/block-cta.twig' %}
+        {{content.wysiwyg}}
+    {% elseif content.acf_fc_layout == 'call_to_action' %} 
+        {% include 'partials/block-cta.twig' %}
     {% endif %}
 
 {% endfor %}

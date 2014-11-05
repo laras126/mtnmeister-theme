@@ -1,4 +1,6 @@
 
+{{footer_widgets}}
+
 <nav class="nav-footer">
  {#    <ul>
     {% for item in footer_nav.items %}
@@ -11,7 +13,7 @@
 
 </nav><!-- #menu -->
 
-<div class="col-sm-3">
+{# <div class="col-sm-3">
     {% include 'partials/mailchimp.twig' %}
 </div>
 <div class="col-sm-3">
@@ -86,11 +88,11 @@
 	</div>
 
 </div>
-<div class="col-sm-3">
-	
+#}
+<div class="col-sm-6">
+	<p class="meta">&copy; {{site.title}} {{"now"|date('Y')}}</p>
 </div>
-<div class="col-sm-3">
-	
+<div class="col-sm-6 text-right">
+	<p class="meta">Proudly powered by WordPress and Timber. <br>See the source on Github.</p>	
 </div>
-
-<p>Copyright {{"now"|date('Y')}}</p>
+ 

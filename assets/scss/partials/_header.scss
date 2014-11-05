@@ -1,0 +1,114 @@
+
+// ---
+// Header
+// ---
+
+.mtns {
+	position: relative;
+	height: 110px;
+	top: 20px;
+	background-image: url('../img/svgs/mtns.svg');
+	background-repeat: no-repeat;
+}
+
+.header-logo {
+	// margin-top: $sml;
+	position: relative;
+	// top: $sml;
+	height: 50px;
+}
+
+.banner {
+	
+	a {
+		color: $text-light;
+	}
+
+	transition: all 0.5s ease;
+ 	background-color: $accent-dark;
+	position: fixed;
+	width: 100%;
+	z-index: 5;	
+	
+	@include bp(large) {
+
+		// .page & {
+			background: linear-gradient(rgba($accent-dark, 0.5), rgba($accent-dark, 0));
+		// }
+		
+		// position: absolute;
+		
+	}
+
+	border-top: $accent-border-large;
+}
+
+// When scrolled past header image
+
+.scrolled {
+	background: $accent-dark;
+	transition: all 0.5s ease;
+}
+
+.header {
+	// margin-bottom: $h3;
+	
+	@extend .clearfix;
+	@include bp(large) {
+		// height: $h1;
+	}
+	
+}
+
+
+
+
+// Call to action block
+
+.cta-page {
+
+}
+	
+.cta-tease {
+	// background-color: $accent-med;
+	// color: $text-light;
+	// border: 2px solid $accent-dark;
+}
+
+
+
+
+
+
+// Blocks
+
+.block-text {
+	@include make-md-column(6);
+}
+
+.block-image {
+	@include make-md-column(6);
+	@extend %center-block;
+	svg {
+		display: none;
+		@include bp(med) {
+			display: block;
+		}
+	}
+}
+
+
+
+// ---
+// Media
+// ---
+
+
+
+// ---
+// Footer
+// ---
+
+.footer {
+	@extend %rotate;
+}

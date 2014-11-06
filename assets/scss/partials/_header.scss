@@ -26,9 +26,10 @@
 
 	transition: all 0.5s ease;
  	background-color: $accent-dark;
+ 	
 	position: fixed;
 	width: 100%;
-	z-index: 5;	
+	z-index: 100;	
 	
 	@include bp(large) {
 
@@ -61,54 +62,3 @@
 }
 
 
-
-
-// Call to action block
-
-.cta-page {
-
-}
-	
-.cta-tease {
-	// background-color: $accent-med;
-	// color: $text-light;
-	// border: 2px solid $accent-dark;
-}
-
-
-
-
-
-
-// Blocks
-
-.block-text {
-	@include make-md-column(6);
-}
-
-.block-image {
-	@include make-md-column(6);
-	@extend %center-block;
-	svg {
-		display: none;
-		@include bp(med) {
-			display: block;
-		}
-	}
-}
-
-
-
-// ---
-// Media
-// ---
-
-
-
-// ---
-// Footer
-// ---
-
-.footer {
-	@extend %rotate;
-}

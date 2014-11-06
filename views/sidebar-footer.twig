@@ -1,0 +1,24 @@
+
+<ul class="widgets widgets-footer">
+	<li class="col-sm-3">
+		<h4>Get in Touch</h4>
+	</li>
+	<li class="col-sm-3">
+		<h4>Are you a Meister?</h4>
+	</li>
+	<li class="col-sm-3">
+		<h4>Subscribe</h4>
+    	{% include 'partials/mailchimp.twig' %}
+	</li>
+	<li class="col-sm-3">
+		<nav role="navigation" class="nav nav-footer">
+		    <ul>
+		    {% for item in footer_nav.items %}
+		        <li class="menu-item">
+		            <a href="{{item.link}}">{{item.title}}</a>
+		        </li>
+		    {% endfor %}
+		    </ul>
+		</nav><!-- #menu -->
+	</li>
+</ul>

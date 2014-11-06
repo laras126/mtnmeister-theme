@@ -45,7 +45,7 @@ img {
 
 .tagline-page {
 	@extend %h4;
-	@extend %full_width;
+	// @extend %full_width;
 	color: $accent-dark;
 	margin-top: $h2;
 	margin-bottom: $h2;
@@ -83,25 +83,33 @@ img {
 
 // Lists
 
+%list-meta-item {
+	display: inline-block;
+	list-style-type: none;
+	font-size: $sml;
+	padding: $sml/4 $sml/2;
+	margin: $sml/2 $sml/2 0 0;
+}
+
+
 %list-meta {
 	padding: 0;
+
 	li {
-		display: inline-block;
-		list-style-type: none;
-		font-size: $sml;
-		padding: $sml/4 $sml/2;
-		margin-right: $sml;
+		@extend %list-meta-item;	
 	}
 }
 
 .list-cats {
 	@extend %list-meta;
-	li {
-		@extend %rotate;
-		border-radius: 4px;	
-		@extend %upperspace;	
-	}
 }
+
+	.cat-item {		
+		@extend %list-meta-item;
+		@extend .btn-alt;
+		border-radius: 4px;	
+		@extend %upperspace;
+	}
 
 .list-tags {
 	@extend %list-meta;
@@ -130,4 +138,56 @@ img {
 	a {
 		color: $accent-light;
 	}
+}
+
+
+
+// Call to action block
+
+.cta-page {
+
+}
+	
+.cta-tease {
+	// background-color: $accent-med;
+	// color: $text-light;
+	// border: 2px solid $accent-dark;
+}
+
+
+
+
+
+
+// Blocks
+
+.block-text {
+	@include make-md-column(6, false);
+}
+
+.block-image {
+	@include make-md-column(6);
+	@extend %center-block;
+	svg {
+		display: none;
+		@include bp(med) {
+			display: block;
+		}
+	}
+}
+
+
+
+// ---
+// Media
+// ---
+
+
+
+// ---
+// Footer
+// ---
+
+.footer {
+	@extend %rotate;
 }

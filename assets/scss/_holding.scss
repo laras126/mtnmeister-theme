@@ -2,6 +2,11 @@
 	margin: 0;
 }
 
+.pad-sml {
+	padding-left: $sml;
+	padding-right: $sml;
+}
+
 .current-menu-item:before {
 	content: '';
 	position: absolute;

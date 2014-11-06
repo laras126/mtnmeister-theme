@@ -3,50 +3,54 @@
 // http://codepen.io/bradfrost/pen/sHvaz
 // I simplified some though
 
-.menu-main {
-	transition: height 0.3s ease-out;
-	position: relative;
-	z-index: 9;
-	
-}
 
-//.js 
 .menu-main {
 	overflow: hidden;
 	max-height: 0;
-	transition: all 0.25s ease-in-out;
+	
+	transition: height 0.3s ease-out;
+	
+	@include make-xs-column(12, false);
+	@include make-lg-column(8);
 
 	&.active {
 		max-height: 25em;
 	}
 }
 
-.menu-main {
-	
-}
-
 .menu-items {
 	margin: 0;
-	padding: $sml 0 0 0;
-	text-align: right;
-	// @extend %rotate;
+	padding: 0;
 	text-align: center;
-
 }
 
 // .current-menu-item styles in _holding 
 
 .menu-item {
 	list-style-type: none;
-	// text-align: center;
+	
+
+	text-align: center;
 
 	a {
-		display: inline-block;
-		padding: $sml;
+		display: block;
+		padding: $sml 0;
 		font-family: $nav-font;
 		font-weight: 700;
 		@extend %upperspace;
 		margin-top: 0;
+	}
+}
+
+.menu-item-cta {
+	@extend .no-margin;
+
+	.cta { @extend .btn; }
+	.cta-alt { @extend .btn-alt; }
+
+	a {
+		font-size: $sml !important;
+		padding: $sml/2 $sml !important;
 	}
 }
 
@@ -57,19 +61,22 @@
 
 	.menu-main {
 		max-height: none;
+		transition: background 0.25s ease-in-out;
+
+		.menu-item, 
+		.menu-item a {
+			display: inline-block;
+		}
 	}
 
 	.menu-items {
 		border: 0;
-		margin: 0 0 0 -0.25em;
-		padding: 0;
 		text-align: right;
 	}
 	
 	.menu-item {
-		display: inline-block;
-		margin: 0 0.25em;
-		text-align: right;
+		margin: 0 $sml;
+		text-align: left;
 	}
 
 	.menu-item a {

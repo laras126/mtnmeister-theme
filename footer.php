@@ -9,7 +9,7 @@ if (!isset($timberContext)) {
 }
 $timberContext['content'] = ob_get_contents();
 
-$timberContext['sidebar'] = Timber::get_sidebar('sidebar.php');
+$timberContext['footer_widgets'] = Timber::get_widgets('footer_widgets');
 
 ob_end_clean();
 $templates = array('page-plugin.twig');

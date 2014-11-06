@@ -3,12 +3,12 @@
   "querystring": true,
   "assets/css/main.min.css": {
     "path": "assets/css/main.min.css",
-    "hash": "8a818c6a998b4285a07eda64902e348b",
+    "hash": "6b3ec49f003f1b2d90d511c02a94a7d7",
     "handle": "mtn_css"
   },
   "assets/js/scripts.min.js": {
     "path": "assets/js/scripts.min.js",
-    "hash": "ee877690b3861682a40e45f110a6e1e4",
+    "hash": "45c292b62e742b09837810e61ed2a94e",
     "handle": "mtn_js"
   }
 }

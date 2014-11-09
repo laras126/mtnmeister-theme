@@ -87,22 +87,6 @@ module.exports = function(grunt) {
     //     parseFiles: true
     //   }
     // },
-    version: {
-      default: {
-        options: {
-          format: true,
-          length: 32,
-          manifest: 'assets/manifest.json',
-          querystring: {
-            style: 'mtn_css',
-            script: 'mtn_js'
-          }
-        },
-        files: {
-          'lib/scripts-styles.php': 'assets/{css,js}/{main,scripts}.min.{css,js}'
-        }
-      }
-    },
     watch: {
       sass: {
         files: [
@@ -149,7 +133,6 @@ module.exports = function(grunt) {
     'sass:build',
     'autoprefixer:build',
     'uglify',
-    //'modernizr',
-    'version'
+    //'modernizr'
   ]);
 };

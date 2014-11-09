@@ -1,87 +1,29 @@
 <?php 
 
-if (!is_admin()) add_action("wp_enqueue_scripts", "my_jquery_enqueue", 11);
-  function my_jquery_enqueue() {
-     wp_deregister_script('jquery');
-     wp_register_script('jquery', "http" . ($_SERVER['SERVER_PORT'] == 443 ? "s" : "") . "://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.js", false, null);
-     wp_enqueue_script('jquery');
-  }
 
-
-// Add async to scripts for faster loading
-
-function mtn_add_async_forscript($url) {
-    if (strpos($url, '#asyncload')===false)
-        return $url;
-    else if (is_admin())
-        return str_replace('#asyncload', '', $url);
-    else
-        return str_replace('#asyncload', '', $url)."' async='async"; 
-}
-// add_filter('clean_url', 'mtn_add_async_forscript', 11, 1);
-
-
-/**
- * Scripts and stylesheets 
- * Code courtesy of Roots (http://roots.io), namespace adjusted for theme
- *
- * Enqueue stylesheets in the following order:
- * 1. /theme/assets/css/main.css
- *
- * Enqueue scripts in the following order:
- * 1. jquery-1.11.1.min.js via Google CDN
- * 2. /theme/assets/js/vendor/modernizr.min.js
- * 3. /theme/assets/js/scripts.js
- *
- * Google Analytics is loaded after enqueued scripts if:
- * - An ID has been defined in config.php
- * - You're not logged in as an administrator
- */
-
-
+// Enqueue scripts
 function mtn_styles_scripts() {
-  /**
-   * The build task in Grunt renames production assets with a hash
-   * Read the asset names from assets-manifest.json
-   */
-  if (WP_ENV === 'development') {
-    $assets = array(
-      'css'       => '/assets/css/main.css',
-      'js'        => '/assets/js/scripts.js',
-      // 'modernizr' => '/assets/js/vendor/modernizr.custom.js#asyncload',
-      // 'jquery'    => '//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.js#asyncload'
-    );
-  } else {
-    $get_assets = file_get_contents(get_template_directory() . '/assets/manifest.json');
-    $assets     = json_decode($get_assets, true);
-    $assets     = array(
-      'css'       => '/assets/css/main.min.css?' . $assets['assets/css/main.min.css']['hash'],
-      'js'        => '/assets/js/scripts.min.js?' . $assets['assets/js/scripts.min.js']['hash'],
-      // 'modernizr' => '/assets/js/vendor/modernizr.custom.min.js#asyncload',
-      // 'jquery'    => '//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js#asyncload',
-    );
+
+  // Add CSS
+  wp_enqueue_style( 'main-css', get_template_directory_uri() . '/assets/css/main.min.css' );
+
+  // Use jQuery from CDN
+  if (!is_admin()) {
+    wp_deregister_script('jquery');
+    wp_register_script('jquery', '//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js', array(), null, true);
+    wp_enqueue_script('jquery');
   }
 
-  wp_enqueue_style('mtn_styles_scripts', get_template_directory_uri() . $assets['css'], false, null);
-  wp_enqueue_style( 'mtn_styles_scripts', get_stylesheet_uri(), array( 'dashicons' ), '1.0' );
-  
-
-  /**
-   * jQuery is loaded using the same method from HTML5 Boilerplate:
-   * Grab Google CDN's latest jQuery with a protocol relative URL; fallback to local if offline
-   * It's kept in the header instead of footer to avoid conflicts with plugins.
-   */
+  // Add MTNmeister JS
+  wp_enqueue_script( 'js', get_template_directory_uri() . '/assets/js/scripts.js', array('jquery'), true );
 
   if (is_single() && comments_open() && get_option('thread_comments')) {
     wp_enqueue_script('comment-reply');
   }
 
-  // wp_enqueue_script('modernizr', get_template_directory_uri() . $assets['modernizr'], array(), null, false);
-  //wp_enqueue_script('myfonts', get_template_directory_uri() . $assets['myfonts'], array(), null, false);
-  // wp_enqueue_script('jquery', true);
-  wp_enqueue_script('mtn_js', get_template_directory_uri() . $assets['js'], array(), null, true);
 }
-add_action('wp_enqueue_scripts', 'mtn_styles_scripts', 100);
+
+add_action( 'wp_enqueue_scripts', 'mtn_styles_scripts' );
 
 
 

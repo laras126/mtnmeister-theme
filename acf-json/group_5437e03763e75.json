@@ -1,0 +1,326 @@
+{
+    "key": "group_5437e03763e75",
+    "title": "Pages",
+    "fields": [
+        {
+            "key": "field_544e96afcf90e",
+            "label": "Header Images",
+            "name": "header_images",
+            "prefix": "",
+            "type": "repeater",
+            "instructions": "These images will be randomly selected to display in the header of the page. They should indicate the page content - for example, images for the \"Meisters\" page should have people in them.",
+            "required": 0,
+            "conditional_logic": 0,
+            "min": "",
+            "max": "",
+            "layout": "row",
+            "button_label": "Add Row",
+            "sub_fields": [
+                {
+                    "key": "field_544e972acf90f",
+                    "label": "Desktop Image",
+                    "name": "desktop_image",
+                    "prefix": "",
+                    "type": "image",
+                    "instructions": "This image will display on larger screens, and should be 1200x800, ideally with the content focus on the right.",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "column_width": "",
+                    "return_format": "url",
+                    "preview_size": "thumbnail",
+                    "library": "all"
+                },
+                {
+                    "key": "field_544e975acf910",
+                    "label": "Mobile Image",
+                    "name": "mobile_image",
+                    "prefix": "",
+                    "type": "image",
+                    "instructions": "This image will display on smaller screens, and should be 600x400.",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "column_width": "",
+                    "return_format": "url",
+                    "preview_size": "thumbnail",
+                    "library": "all"
+                },
+                {
+                    "key": "field_544e97e501fe1",
+                    "label": "Caption",
+                    "name": "caption",
+                    "prefix": "",
+                    "type": "text",
+                    "instructions": "Any caption or image credit.",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "column_width": "",
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": "",
+                    "readonly": 0,
+                    "disabled": 0
+                },
+                {
+                    "key": "field_544e981201fe2",
+                    "label": "Related Meister",
+                    "name": "related_meister",
+                    "prefix": "",
+                    "type": "relationship",
+                    "instructions": "If a Meister is pictured, select them here. This will generate a link to their profile page.",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "column_width": "",
+                    "post_type": [
+                        "meister"
+                    ],
+                    "taxonomy": "",
+                    "filters": [
+                        "search"
+                    ],
+                    "elements": "",
+                    "max": 1,
+                    "return_format": "object"
+                }
+            ]
+        },
+        {
+            "key": "field_5437e03d4aa17",
+            "label": "Tagline",
+            "name": "tagline",
+            "prefix": "",
+            "type": "text",
+            "instructions": "A few words or short sentence describing the page content. Short, sweet, and snappy.",
+            "required": 1,
+            "conditional_logic": 0,
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": 130,
+            "readonly": 0,
+            "disabled": 0
+        },
+        {
+            "key": "field_5437e7f54aa19",
+            "label": "Introduction",
+            "name": "introduction",
+            "prefix": "",
+            "type": "textarea",
+            "instructions": "A few sentences introducing the page content. This will not display if left empty.",
+            "required": 0,
+            "conditional_logic": 0,
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": "",
+            "new_lines": "wpautop",
+            "readonly": 0,
+            "disabled": 0
+        },
+        {
+            "key": "field_5437f1ee2fedd",
+            "label": "Content Blocks",
+            "name": "content_blocks",
+            "prefix": "",
+            "type": "flexible_content",
+            "instructions": "Note: if this is the \"Meisters\" or \"Deals\" page, this content will show below the Deal\/Meister posts.",
+            "required": 0,
+            "conditional_logic": 0,
+            "button_label": "Add Content",
+            "min": "",
+            "max": "",
+            "layouts": [
+                {
+                    "key": "5443e2961805c",
+                    "name": "text_block",
+                    "label": "Text",
+                    "display": "row",
+                    "sub_fields": [
+                        {
+                            "key": "field_54593fc3d8b9f",
+                            "label": "Text",
+                            "name": "section_text",
+                            "prefix": "",
+                            "type": "textarea",
+                            "instructions": "Plain paragraph text. No headlines. This will display in two columns at desktop view.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "column_width": "",
+                            "default_value": "",
+                            "placeholder": "",
+                            "maxlength": "",
+                            "rows": "",
+                            "new_lines": "wpautop",
+                            "readonly": 0,
+                            "disabled": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                {
+                    "key": "5437f2c02fedf",
+                    "name": "text_image_block",
+                    "label": "Text and Image Block",
+                    "display": "row",
+                    "sub_fields": [
+                        {
+                            "key": "field_5437f2d22fee0",
+                            "label": "Image",
+                            "name": "image",
+                            "prefix": "",
+                            "type": "image",
+                            "instructions": "This image will display to the left of the text.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "column_width": "",
+                            "return_format": "url",
+                            "preview_size": "thumbnail",
+                            "library": "all"
+                        },
+                        {
+                            "key": "field_5437f3102fee1",
+                            "label": "Text",
+                            "name": "text",
+                            "prefix": "",
+                            "type": "textarea",
+                            "instructions": "This will be descriptive text to the right of the image.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "default_value": "",
+                            "new_lines": "",
+                            "maxlength": "",
+                            "placeholder": "",
+                            "readonly": 0,
+                            "disabled": 0,
+                            "rows": ""
+                        },
+                        {
+                            "key": "field_5443e7631d17b",
+                            "label": "Image Location",
+                            "name": "image_location",
+                            "prefix": "",
+                            "type": "radio",
+                            "instructions": "Should the image be shown on the right or left?",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "column_width": "",
+                            "choices": {
+                                "Right": "Right",
+                                "Left": "Left"
+                            },
+                            "other_choice": 0,
+                            "save_other_choice": 0,
+                            "default_value": "",
+                            "layout": "horizontal"
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                {
+                    "key": "5437f1f4676b0",
+                    "name": "large_image_block",
+                    "label": "Large Image Block",
+                    "display": "row",
+                    "sub_fields": [
+                        {
+                            "key": "field_5437f2452fede",
+                            "label": "Image",
+                            "name": "image",
+                            "prefix": "",
+                            "type": "image",
+                            "instructions": "Recommended dimensions are 1040x600. Images should not be more than 1040px wide.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "column_width": "",
+                            "return_format": "url",
+                            "preview_size": "thumbnail",
+                            "library": "all"
+                        },
+                        {
+                            "key": "field_5443e8468e7fb",
+                            "label": "Caption",
+                            "name": "caption",
+                            "prefix": "",
+                            "type": "text",
+                            "instructions": "This will be a small line under the image. You can leave it blank.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "column_width": "",
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": "",
+                            "readonly": 0,
+                            "disabled": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                {
+                    "key": "5437f4bfd8415",
+                    "name": "blank",
+                    "label": "Blank",
+                    "display": "row",
+                    "sub_fields": [
+                        {
+                            "key": "field_5437f4ccd8416",
+                            "label": "Blank",
+                            "name": "wysiwyg",
+                            "prefix": "",
+                            "type": "wysiwyg",
+                            "instructions": "You can add whatever content you like here, but keep it simple - this is mainly a spot for shortcodes.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "column_width": "",
+                            "default_value": "",
+                            "tabs": "all",
+                            "toolbar": "full",
+                            "media_upload": 1
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                }
+            ]
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "page"
+            },
+            {
+                "param": "page",
+                "operator": "!=",
+                "value": "213"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "acf_after_title",
+    "style": "seamless",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": [
+        "the_content",
+        "excerpt",
+        "custom_fields",
+        "discussion",
+        "comments",
+        "revisions",
+        "author",
+        "format",
+        "featured_image",
+        "categories",
+        "tags",
+        "send-trackbacks"
+    ]
+}

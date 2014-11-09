@@ -1153,11 +1153,12 @@ input[type="tel"] {
     color: #ebebeb; }
 
 .btn, input[type="submit"],
-button, .menu-item-cta .cta, .btn-alt, .cat-item, .menu-item-cta .cta-alt,
-.meta, .block-title, .tagline, .number, .link-more, .menu-item a, .link-postnav, h4, .page-title {
+button, .menu-item-cta .cta, .btn-alt, .cat-item, .menu-item-cta .cta-alt, .ginput_complex label,
+.meta, .block-title, .tagline, .number, .link-more, label, .menu-item a, .link-postnav, h4, .page-title {
   text-transform: uppercase;
   letter-spacing: 1px; }
 
+.ginput_complex label,
 .meta {
   color: #999;
   font-size: 0.8rem;
@@ -1540,10 +1541,7 @@ label, select {
 label {
   margin-top: 1.3rem;
   margin-bottom: 0.4rem;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  font-family: "Montserrat";
-  font-weight: 400; }
+  font-weight: 700; }
 
 input[type="search"] {
   -webkit-box-sizing: content-box;
@@ -1618,8 +1616,36 @@ input[type="checkbox"]:focus {
   padding: 0;
   margin: 0; }
 
+@media (min-width: 50em) {
+  .mtn-field-name {
+    position: relative;
+    min-height: 1px;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    float: left;
+    width: 50%; } }
+@media (min-width: 35em) {
+  .mtn-field-name .ginput_left,
+  .mtn-field-name .ginput_right {
+    position: relative;
+    min-height: 1px;
+    float: left;
+    width: 50%; } }
+
+@media (min-width: 50em) {
+  .mtn-field-email {
+    position: relative;
+    min-height: 1px;
+    float: left;
+    width: 50%; } }
+
 .gfield {
   list-style-type: none; }
+
+.ginput_complex label {
+  margin-top: 0.4rem;
+  margin-bottom: 0.8rem;
+  font-weight: 400; }
 
 .container, .container-squish {
   margin: 0 auto;

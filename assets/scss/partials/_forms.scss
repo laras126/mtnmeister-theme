@@ -14,10 +14,8 @@ label, select {
 label {
 	margin-top: $h4;
 	margin-bottom: $sml/2;
-	text-transform: uppercase;
-	letter-spacing: 1px;
-	font-family: $sans-serif-bold;
-	font-weight: 400;
+	@extend %upperspace;
+	font-weight: 700;
 }
 
 input[type="search"] {
@@ -109,6 +107,25 @@ input[type="checkbox"]:focus {
 	margin: 0;	
 }
 
+.mtn-field-name {
+	@include make-md-column(6);
+	.ginput_left,
+	.ginput_right {
+		@include make-sm-column(6, false);
+	}
+}
+
+.mtn-field-email {
+	@include make-md-column(6, false);
+}
+
 .gfield {
 	list-style-type: none;
+}
+
+.ginput_complex label {
+	@extend %meta;
+	margin-top: $sml/2;
+	margin-bottom: $sml;
+	font-weight: 400;
 }

@@ -1,5 +1,7 @@
 $(document).ready(function() {
 
+	console.log('Check it: http://github.com/laras126/mtnmeister-theme');
+
 	// ----
 	// Toggle menu
 	// ----
@@ -48,7 +50,6 @@ $(document).ready(function() {
 	$container.imagesLoaded( function() {
 		$image.fadeIn(300);
 		$('.spinner').hide();
-		console.log('loaded');
 	});
 
 });

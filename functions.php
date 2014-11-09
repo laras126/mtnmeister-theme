@@ -64,6 +64,7 @@
 	require_once('lib/scripts-styles.php');
 	require_once('lib/menus.php');
 	require_once('lib/widgets.php'); 
+	require_once('lib/utils.php'); 
 
 
 ?>

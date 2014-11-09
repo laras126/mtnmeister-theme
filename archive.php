@@ -14,6 +14,7 @@
  * @since 		Timber 0.2
  */
 
+
 		$templates = array('archive.twig', 'index.twig');
 
 		$data = Timber::get_context();
@@ -35,6 +36,11 @@
 			array_unshift($templates, 'archive-'.get_post_type().'.twig');
 		}
 
-		$data['posts'] = Timber::get_posts();
+
+		$meister_args = array( 
+				'post_type' => 'meister',
+			);
+
+		$data['posts'] = Timber::get_posts($meister_args);
 
 		Timber::render($templates, $data);

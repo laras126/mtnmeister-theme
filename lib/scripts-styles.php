@@ -5,7 +5,7 @@
 function mtn_styles_scripts() {
 
   // Add CSS
-  wp_enqueue_style( 'main-css', get_template_directory_uri() . '/assets/css/main.min.css' );
+  wp_enqueue_style( 'main-css', get_template_directory_uri() . '/assets/css/main.css' );
 
   // Use jQuery from CDN
   if (!is_admin()) {

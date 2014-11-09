@@ -63,14 +63,6 @@ $deal_args = array(
     		);
 
 
-// Which loop?
-if( is_page('Meisters') ) {
-	query_posts($meister_args);
-} elseif( is_page('Deals') ) {
-	query_posts($deal_args);
-}
-
-
 // ---
 // Start the context 
 // ---
@@ -80,22 +72,20 @@ $post = new TimberPost();
 
 // Get a random header image
 $context['header_image'] = $rand_row;
-
-// Get Meister and Deal posts
-$context['meisters'] = Timber::get_posts($meister_args);
-$context['todays_meister'] = Timber::get_posts($todays_meister_args);
-
-$context['deals'] = Timber::get_posts($deal_args);
-
-$context['pagination'] = Timber::get_pagination();
 $context['post'] = $post;
 
-// $context['excerpt'] = $text;
+// Get custom type content
+if( is_page('Meisters') ) {
+	// Get Meister and Deal posts
+	$context['meisters'] = Timber::get_posts($meister_args);
+	$context['todays_meister'] = Timber::get_posts($todays_meister_args);
+} elseif( is_page('Deals') ) {
+	$context['deals'] = Timber::get_posts($deal_args);
+}
 
 // Sidebar
 $context['sidebar'] = Timber::get_sidebar('sidebar.php');
 $context['sidebar_class'] = 'has-sidebar';
-
 
 /* make sure you've got query_posts in your .php file */
 $context['posts'] = Timber::get_posts();

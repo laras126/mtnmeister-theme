@@ -1,0 +1,21 @@
+{% extends 'page-archive.twig' %}
+
+{% block content %}
+
+<div class="page-body">
+    <div class="container">
+
+    	<header class="article-header">
+	    	<p class="tagline tagline-tease">Category:</p>
+	       	<h1 class="article-title">{{title}}</h1>	
+    	</header>
+    	
+        {% for post in posts %}
+        	{% include 'tease-meister.twig' %}
+        {% endfor %}
+    
+    </div>
+</div>
+
+
+{% endblock %}

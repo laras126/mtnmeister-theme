@@ -1996,11 +1996,10 @@ input[type="checkbox"]:focus {
 .current-menu-item:before {
   content: '';
   position: absolute;
-  margin-left: -9%;
   width: 0;
   height: 0;
-  border-left: 10px solid transparent;
-  border-right: 10px solid transparent;
+  border-left: 41px solid transparent;
+  border-right: 41px solid transparent;
   border-top: 10px solid #f8992f; }
 
 .btn-wrap {

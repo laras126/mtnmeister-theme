@@ -30,7 +30,7 @@
             "name": "meister_pic",
             "prefix": "",
             "type": "image",
-            "instructions": "",
+            "instructions": "Dimensions: 500x500",
             "required": 1,
             "conditional_logic": 0,
             "wrapper": {
@@ -38,9 +38,9 @@
                 "class": "",
                 "id": ""
             },
+            "return_format": "array",
             "preview_size": "thumbnail",
-            "library": "all",
-            "return_format": "array"
+            "library": "all"
         }
     ],
     "location": [

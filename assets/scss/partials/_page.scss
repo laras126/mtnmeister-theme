@@ -33,13 +33,19 @@ h4 {
 
 .page-header {
 	margin-top: $h2;
-	
-	@include bp(med) {
-		max-height: 69vh;
+	height: 35vh;	
+
+	@include bp(small) {
+		height: 60vh;	
 	}
+
+	@include bp(med) {
+		height: 70vh;	
+	}
+
 	@include bp(large) {
 		margin-top: 0;
-		max-height: 80vh;
+		height: 90vh;
 	}
 	
 	overflow: hidden;
@@ -50,6 +56,8 @@ h4 {
 
 .page-header-image {
 	width: 100%;
+	position: absolute;
+	bottom: 0;
 }
 
 .page-header-caption {

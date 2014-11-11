@@ -1884,19 +1884,25 @@ input[type="checkbox"]:focus {
 
 .page-header {
   margin-top: 2.4rem;
+  height: 35vh;
   overflow: hidden;
   background-color: #043f7e;
   position: relative; }
+  @media (min-width: 35em) {
+    .page-header {
+      height: 60vh; } }
   @media (min-width: 50em) {
     .page-header {
-      max-height: 69vh; } }
+      height: 70vh; } }
   @media (min-width: 62em) {
     .page-header {
       margin-top: 0;
-      max-height: 80vh; } }
+      height: 90vh; } }
 
 .page-header-image {
-  width: 100%; }
+  width: 100%;
+  position: absolute;
+  bottom: 0; }
 
 .page-header-caption {
   text-align: right;

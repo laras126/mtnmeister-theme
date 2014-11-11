@@ -26,12 +26,11 @@ Keeping out the image for now
 
 
 	<div class="article-body-block container">
-	    {% for item in post.get_field('quotes') %}
-            <blockquote class="featured-quote">{{item.quote_text}}</blockquote>
-            {% if item.time_in_episode %}
-            	<p class="text-right meta">Time in episode: {{item.time_in_episode}}</p>
-	    	{% endif %}
-	    {% endfor %}
+        <blockquote class="featured-quote">{{post.quote_text}}</blockquote>
+        {% if post.quote_time_in_episode %}
+        	<p class="text-right meta">Time in episode: {{post.quote_time_in_episode}}</p>
+    	{% endif %}
+    	<button class="button"><a href="{{post.quote_tweet_link}}" target="blank" title="Click to Tweet">Click to Tweet</a></button>
 	</div>
 
 	<section class="article-body-block container-squish">

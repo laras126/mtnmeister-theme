@@ -11,6 +11,11 @@
             "instructions": "These images will be randomly selected to display in the header of the page. They should indicate the page content - for example, images for the \"Meisters\" page should have people in them.",
             "required": 0,
             "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
             "min": "",
             "max": "",
             "layout": "row",
@@ -25,7 +30,11 @@
                     "instructions": "This image will display on larger screens, and should be 1200x600, ideally with the content focus on the right.",
                     "required": 0,
                     "conditional_logic": 0,
-                    "column_width": "",
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
                     "return_format": "url",
                     "preview_size": "thumbnail",
                     "library": "all"
@@ -39,7 +48,11 @@
                     "instructions": "This image will display on smaller screens, and should be 600x400.",
                     "required": 0,
                     "conditional_logic": 0,
-                    "column_width": "",
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
                     "return_format": "url",
                     "preview_size": "thumbnail",
                     "library": "all"
@@ -53,7 +66,11 @@
                     "instructions": "Any caption or image credit.",
                     "required": 0,
                     "conditional_logic": 0,
-                    "column_width": "",
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
                     "default_value": "",
                     "placeholder": "",
                     "prepend": "",
@@ -71,7 +88,11 @@
                     "instructions": "If a Meister is pictured, select them here. This will generate a link to their profile page.",
                     "required": 0,
                     "conditional_logic": 0,
-                    "column_width": "",
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
                     "post_type": [
                         "meister"
                     ],
@@ -94,6 +115,11 @@
             "instructions": "A few words or short sentence describing the page content. Short, sweet, and snappy.",
             "required": 1,
             "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
             "default_value": "",
             "placeholder": "",
             "prepend": "",
@@ -111,6 +137,11 @@
             "instructions": "A few sentences introducing the page content. This will not display if left empty.",
             "required": 0,
             "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
             "default_value": "",
             "placeholder": "",
             "maxlength": "",
@@ -128,6 +159,11 @@
             "instructions": "Note: if this is the \"Meisters\" or \"Deals\" page, this content will show below the Deal\/Meister posts.",
             "required": 0,
             "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
             "button_label": "Add Content",
             "min": "",
             "max": "",
@@ -147,7 +183,11 @@
                             "instructions": "Plain paragraph text. No headlines. This will display in two columns at desktop view.",
                             "required": 0,
                             "conditional_logic": 0,
-                            "column_width": "",
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
                             "default_value": "",
                             "placeholder": "",
                             "maxlength": "",
@@ -175,7 +215,11 @@
                             "instructions": "This image will display to the left of the text.",
                             "required": 0,
                             "conditional_logic": 0,
-                            "column_width": "",
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
                             "return_format": "url",
                             "preview_size": "thumbnail",
                             "library": "all"
@@ -189,6 +233,11 @@
                             "instructions": "This will be descriptive text to the right of the image.",
                             "required": 0,
                             "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
                             "default_value": "",
                             "new_lines": "",
                             "maxlength": "",
@@ -206,7 +255,11 @@
                             "instructions": "Should the image be shown on the right or left?",
                             "required": 0,
                             "conditional_logic": 0,
-                            "column_width": "",
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
                             "choices": {
                                 "Right": "Right",
                                 "Left": "Left"
@@ -235,7 +288,11 @@
                             "instructions": "Recommended dimensions are 1040x600. Images should not be more than 1040px wide.",
                             "required": 0,
                             "conditional_logic": 0,
-                            "column_width": "",
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
                             "return_format": "url",
                             "preview_size": "thumbnail",
                             "library": "all"
@@ -249,7 +306,11 @@
                             "instructions": "This will be a small line under the image. You can leave it blank.",
                             "required": 0,
                             "conditional_logic": 0,
-                            "column_width": "",
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
                             "default_value": "",
                             "placeholder": "",
                             "prepend": "",
@@ -277,7 +338,11 @@
                             "instructions": "You can add whatever content you like here, but keep it simple - this is mainly a spot for shortcodes.",
                             "required": 0,
                             "conditional_logic": 0,
-                            "column_width": "",
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
                             "default_value": "",
                             "tabs": "all",
                             "toolbar": "full",

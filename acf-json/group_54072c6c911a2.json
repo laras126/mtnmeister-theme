@@ -2,7 +2,46 @@
     "key": "group_54072c6c911a2",
     "title": "Meister Info",
     "fields": [
-
+        {
+            "key": "field_54072c6c93613",
+            "label": "Meister Bio",
+            "name": "meister_bio",
+            "prefix": "",
+            "type": "textarea",
+            "instructions": "A paragraph bio of the Meister.",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": "",
+            "new_lines": "br",
+            "readonly": 0,
+            "disabled": 0
+        },
+        {
+            "key": "field_54072c6c93628",
+            "label": "Meister Pic",
+            "name": "meister_pic",
+            "prefix": "",
+            "type": "image",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "preview_size": "thumbnail",
+            "library": "all",
+            "return_format": "array"
+        }
     ],
     "location": [
         [

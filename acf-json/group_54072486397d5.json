@@ -33,7 +33,7 @@
             "prefix": "",
             "type": "text",
             "instructions": "The tagline appearing after the Meister name e.g. \"The slightest margin\".",
-            "required": 0,
+            "required": 1,
             "conditional_logic": 0,
             "wrapper": {
                 "width": "",

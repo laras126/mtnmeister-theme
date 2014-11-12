@@ -5,10 +5,10 @@
 
 	{% include ['tease-todays_meister.twig', 'tease.twig'] %}
 	
-	<section class="loop">
+	<div class="loop">
 		{% for post in meisters %}
 			{% include ['tease-meister.twig', 'tease.twig'] %}
 		{% endfor %}	
-	</section>
+	</div>
 	
 {% endblock %}

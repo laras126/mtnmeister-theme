@@ -3,9 +3,9 @@
     "title": "Episode Content",
     "fields": [
         {
-            "key": "field_5407283aaa52b",
-            "label": "Gear Recommendations",
-            "name": "gear_recommendations",
+            "key": "field_5463e9a11f90d",
+            "label": "Connected Gear",
+            "name": "connected_gear",
             "prefix": "",
             "type": "repeater",
             "instructions": "",
@@ -18,96 +18,38 @@
             },
             "min": "",
             "max": "",
-            "layout": "row",
+            "layout": "table",
             "button_label": "Add Row",
             "sub_fields": [
                 {
-                    "key": "field_5407284eaa52c",
-                    "label": "Title",
-                    "name": "gear_title",
+                    "key": "field_5463ea261f90f",
+                    "label": "Gear Item",
+                    "name": "gear_item",
                     "prefix": "",
-                    "type": "text",
-                    "instructions": "",
-                    "required": 1,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": 100,
-                        "class": "",
-                        "id": ""
-                    },
-                    "default_value": "",
-                    "placeholder": "",
-                    "prepend": "",
-                    "append": "",
-                    "maxlength": "",
-                    "readonly": 0,
-                    "disabled": 0
-                },
-                {
-                    "key": "field_540728abaa52e",
-                    "label": "Photo",
-                    "name": "gear_photo",
-                    "prefix": "",
-                    "type": "image",
-                    "instructions": "500x500",
-                    "required": 1,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "return_format": "url",
-                    "preview_size": "thumbnail",
-                    "library": "all"
-                },
-                {
-                    "key": "field_540728c4aa52f",
-                    "label": "Description",
-                    "name": "gear_description",
-                    "prefix": "",
-                    "type": "textarea",
-                    "instructions": "Description of the gear. Max 470 characters.",
+                    "type": "relationship",
+                    "instructions": "Conned the Meister to recommended gear.",
                     "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
-                        "width": "",
+                        "width": 80,
                         "class": "",
                         "id": ""
                     },
-                    "default_value": "",
-                    "placeholder": "",
-                    "maxlength": 470,
-                    "rows": "",
-                    "new_lines": "wpautop",
-                    "readonly": 0,
-                    "disabled": 0
+                    "post_type": [
+                        "gear"
+                    ],
+                    "taxonomy": "",
+                    "filters": [
+                        "search",
+                        "post_type"
+                    ],
+                    "elements": "",
+                    "max": "",
+                    "return_format": "object"
                 },
                 {
-                    "key": "field_54072903aa530",
-                    "label": "Link",
-                    "name": "gear_link",
-                    "prefix": "",
-                    "type": "text",
-                    "instructions": "",
-                    "required": 1,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "default_value": "",
-                    "placeholder": "",
-                    "prepend": "",
-                    "append": "",
-                    "maxlength": "",
-                    "readonly": 0,
-                    "disabled": 0
-                },
-                {
-                    "key": "field_5453f99b854fd",
-                    "label": "Time in Episode",
+                    "key": "field_5463eaf97661e",
+                    "label": "Time",
                     "name": "time_in_episode",
                     "prefix": "",
                     "type": "text",
@@ -115,7 +57,7 @@
                     "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
-                        "width": "",
+                        "width": 20,
                         "class": "",
                         "id": ""
                     },
@@ -126,18 +68,39 @@
                     "maxlength": "",
                     "readonly": 0,
                     "disabled": 0
-                },
+                }
+            ]
+        },
+        {
+            "key": "field_5463ebdd64760",
+            "label": "Connected Deal",
+            "name": "connected_deal",
+            "prefix": "",
+            "type": "repeater",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "min": "",
+            "max": "",
+            "layout": "table",
+            "button_label": "Add Row",
+            "sub_fields": [
                 {
-                    "key": "field_54072918aa531",
-                    "label": "Connect to Deal",
-                    "name": "gear_to_deal",
+                    "key": "field_5463ebdd64761",
+                    "label": "Deal",
+                    "name": "deal",
                     "prefix": "",
                     "type": "relationship",
-                    "instructions": "Is this recommendation related to a Deal?",
+                    "instructions": "Conned the Meister to a deal.",
                     "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
-                        "width": "",
+                        "width": 80,
                         "class": "",
                         "id": ""
                     },
@@ -146,11 +109,34 @@
                     ],
                     "taxonomy": "",
                     "filters": [
-                        "search"
+                        "search",
+                        "post_type"
                     ],
                     "elements": "",
                     "max": "",
                     "return_format": "object"
+                },
+                {
+                    "key": "field_5463ebdd64762",
+                    "label": "Time",
+                    "name": "time_in_episode",
+                    "prefix": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": 20,
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": "",
+                    "readonly": 0,
+                    "disabled": 0
                 }
             ]
         },

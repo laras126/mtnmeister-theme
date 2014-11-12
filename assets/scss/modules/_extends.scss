@@ -52,6 +52,14 @@
   }
 }
 
+%unstyle-list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  li {
+    display: inline-block;
+  }
+}
 
 
 // -- Forms
@@ -80,6 +88,7 @@
 %rotate-bars {
   @include rotate($text: $text-light, $bkgd: rgba($accent-dark, 0.5));
 }
+
 
 
 

@@ -1121,6 +1121,13 @@ th {
 .featured:after, .item:after, .header:after {
   clear: both; }
 
+.share-links {
+  margin: 0;
+  padding: 0;
+  list-style-type: none; }
+  .share-links li {
+    display: inline-block; }
+
 .btn, input[type="submit"],
 button, .menu-item-cta .cta, .btn-alt, .cat-item, .menu-item-cta .cta-alt {
   text-decoration: none;
@@ -2052,5 +2059,18 @@ input[type="checkbox"]:focus {
 
 .page-content .tagline-page {
   padding: 0; }
+
+.share-links {
+  position: relative;
+  float: left;
+  width: 100%;
+  min-height: 1px; }
+  .share-links li {
+    position: relative;
+    float: left;
+    width: 33.33333%;
+    min-height: 1px;
+    padding-left: 1rem;
+    padding-right: 1rem; }
 
 /*# sourceMappingURL=main.css.map */

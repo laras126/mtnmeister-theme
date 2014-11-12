@@ -67,7 +67,7 @@
                     "name": "gear_description",
                     "prefix": "",
                     "type": "textarea",
-                    "instructions": "Description of the deal. Max 470 characters.",
+                    "instructions": "Description of the gear. Max 470 characters.",
                     "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {

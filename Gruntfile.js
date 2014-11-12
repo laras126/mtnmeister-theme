@@ -31,14 +31,6 @@ module.exports = function(grunt) {
         // Source maps are available, but require Sass 3.3.0 to be installed
         // https://github.com/gruntjs/grunt-contrib-sass#sourcemap
         sourcemap: true
-      },
-      build: {
-        style: 'compressed',
-        src: 'assets/scss/main.scss',
-        dest: 'assets/css/main.min.css',
-        // Source maps are available, but require Sass 3.3.0 to be installed
-        // https://github.com/gruntjs/grunt-contrib-sass#sourcemap
-        sourcemap: true
       }
     },
     concat: {
@@ -68,9 +60,6 @@ module.exports = function(grunt) {
           }
         },
         src: 'assets/css/main.css'
-      },
-      build: {
-        src: 'assets/css/main.min.css'
       }
     },
     // modernizr: {
@@ -127,12 +116,5 @@ module.exports = function(grunt) {
     'sass:dev',
     'autoprefixer:dev',
     'concat'
-  ]);
-  grunt.registerTask('build', [
-    'jshint',
-    'sass:build',
-    'autoprefixer:build',
-    'uglify',
-    //'modernizr'
   ]);
 };

@@ -87,12 +87,11 @@ if( is_page('Meisters') ) {
 $context['sidebar'] = Timber::get_sidebar('sidebar.php');
 $context['sidebar_class'] = 'has-sidebar';
 
-/* make sure you've got query_posts in your .php file */
 if( !is_page('Meisters') && !is_page('Deals') ) {
-	$context['posts'] = Timber::get_posts();
+	// $context['posts'] = Timber::get_posts();
 }
 
-$context['pagination'] = Timber::get_pagination();
+// $context['pagination'] = Timber::get_pagination();
 
 Timber::render(array('page-' . $post->post_name . '.twig', 'page.twig'), $context);
 

@@ -14,6 +14,7 @@ h4 {
 	color: $text-light;
 	@extend %upperspace;
 	position: relative;
+	z-index: 9999;
 	@extend %full_width;
 	
 	top: $h5;
@@ -35,7 +36,11 @@ h4 {
 	margin-top: $h2;
 	height: 35vh;	
 
-	@include bp(small) {
+	@media(min-width: 34em) {
+		height: 50vh;	
+	}
+	
+	@media(min-width: 44em) {
 		height: 60vh;	
 	}
 
@@ -45,7 +50,7 @@ h4 {
 
 	@include bp(large) {
 		margin-top: 0;
-		height: 90vh;
+		height: 80vh;
 	}
 	
 	overflow: hidden;
@@ -63,9 +68,9 @@ h4 {
 .page-header-caption {
 	text-align: right;
 	position: absolute;
-	z-index: 10;
+	z-index: 99;
 	right: 0;
-	// bottom: auto;
+	bottom: auto;
 	top: 0;
 	background-color: rgba($text-dark, 0.3);
 	padding: $sml;
@@ -89,11 +94,12 @@ h4 {
 	position: absolute;
 	width: 100%;
 	bottom: 0;
-	z-index: 99;
+	z-index: 10;
+	border-bottom: $accent-border-large;
 }
 
 .page-body {
-	border-top: $accent-border-large;
+	
 }
 
 

@@ -1,3 +1,4 @@
+
 // -----
 // Form styles
 // -----
@@ -100,7 +101,9 @@ input[type="checkbox"]:focus {
 }
 
 
+// ----
 // Gravity forms
+// ----
 
 .gform_fields {
 	padding: 0;
@@ -109,6 +112,11 @@ input[type="checkbox"]:focus {
 
 .mtn-field-name {
 	@include make-md-column(6);
+	
+	&:first-child {
+		padding-left: 0;
+	}
+
 	.ginput_left,
 	.ginput_right {
 		@include make-sm-column(6, false);
@@ -123,9 +131,19 @@ input[type="checkbox"]:focus {
 	list-style-type: none;
 }
 
+.mtn-field-message, 
+.gform_footer {
+	@include make-xs-column(12, false);
+}
+
+.gform_footer {
+	margin-top: $h3;
+}
+
 .ginput_complex label {
 	@extend %meta;
 	margin-top: $sml/2;
 	margin-bottom: $sml;
 	font-weight: 400;
 }
+

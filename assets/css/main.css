@@ -1082,9 +1082,7 @@ th {
     position: relative;
     float: left;
     width: 100%;
-    min-height: 1px;
-    padding-left: 1rem;
-    padding-right: 1rem; } }
+    min-height: 1px; } }
 
 @media (min-width: 35em) {
   .tease-deal, .tease-meister {
@@ -1624,6 +1622,8 @@ input[type="checkbox"]:focus {
     padding-right: 1rem;
     float: left;
     width: 50%; } }
+.mtn-field-name:first-child {
+  padding-left: 0; }
 @media (min-width: 35em) {
   .mtn-field-name .ginput_left,
   .mtn-field-name .ginput_right {
@@ -1641,6 +1641,16 @@ input[type="checkbox"]:focus {
 
 .gfield {
   list-style-type: none; }
+
+.mtn-field-message,
+.gform_footer {
+  position: relative;
+  float: left;
+  width: 100%;
+  min-height: 1px; }
+
+.gform_footer {
+  margin-top: 2rem; }
 
 .ginput_complex label {
   margin-top: 0.4rem;
@@ -1872,6 +1882,7 @@ input[type="checkbox"]:focus {
 .page-title {
   color: #fff;
   position: relative;
+  z-index: 9999;
   top: 1rem; }
   @media (min-width: 35em) {
     .page-title {
@@ -1888,7 +1899,10 @@ input[type="checkbox"]:focus {
   overflow: hidden;
   background-color: #043f7e;
   position: relative; }
-  @media (min-width: 35em) {
+  @media (min-width: 34em) {
+    .page-header {
+      height: 50vh; } }
+  @media (min-width: 44em) {
     .page-header {
       height: 60vh; } }
   @media (min-width: 50em) {
@@ -1897,7 +1911,7 @@ input[type="checkbox"]:focus {
   @media (min-width: 62em) {
     .page-header {
       margin-top: 0;
-      height: 90vh; } }
+      height: 80vh; } }
 
 .page-header-image {
   width: 100%;
@@ -1907,8 +1921,9 @@ input[type="checkbox"]:focus {
 .page-header-caption {
   text-align: right;
   position: absolute;
-  z-index: 10;
+  z-index: 99;
   right: 0;
+  bottom: auto;
   top: 0;
   background-color: rgba(31, 29, 26, 0.3);
   padding: 0.8rem;
@@ -1929,10 +1944,8 @@ input[type="checkbox"]:focus {
   position: absolute;
   width: 100%;
   bottom: 0;
-  z-index: 99; }
-
-.page-body {
-  border-top: 5px solid #f8992f; }
+  z-index: 10;
+  border-bottom: 5px solid #f8992f; }
 
 .article-header {
   margin-top: 2.4rem;

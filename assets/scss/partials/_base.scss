@@ -43,15 +43,6 @@ img {
 	@extend %upperspace;
 }
 
-.tagline-page {
-	@extend %h4;
-	// @extend %full_width;
-	color: $accent-dark;
-	margin-top: $h2;
-	margin-bottom: $h2;
-	font-weight: 700;
-}
-
 .tagline-tease {
 	color: $accent-med;
 }
@@ -159,7 +150,7 @@ img {
 // Blocks
 
 .block-text {
-	@include make-md-column(6, false);
+	// @include make-md-column(6, false);
 }
 
 .block-image {

@@ -23,29 +23,11 @@
             "sub_fields": [
                 {
                     "key": "field_544e972acf90f",
-                    "label": "Desktop Image (1200x600)",
-                    "name": "desktop_image",
+                    "label": "Image (1200x800)",
+                    "name": "image",
                     "prefix": "",
                     "type": "image",
                     "instructions": "This image will display on larger screens, and should be 1200x600, ideally with the content focus on the right.",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "return_format": "url",
-                    "preview_size": "thumbnail",
-                    "library": "all"
-                },
-                {
-                    "key": "field_544e975acf910",
-                    "label": "Mobile Image (600x400)",
-                    "name": "mobile_image",
-                    "prefix": "",
-                    "type": "image",
-                    "instructions": "This image will display on smaller screens, and should be 600x400.",
                     "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {

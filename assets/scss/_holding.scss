@@ -45,3 +45,9 @@
 		padding-left: $base;
 	}
 }
+
+.tagline-page {
+	.page-content & {
+		padding: 0;
+	}
+}

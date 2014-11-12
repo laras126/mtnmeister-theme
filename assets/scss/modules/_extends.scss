@@ -13,7 +13,7 @@
 
 %full_width {
   @include bp(med) {
-    @include make-xs-column(12, false);  
+    @include make-xs-column(12);  
   }
 }
 

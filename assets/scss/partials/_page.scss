@@ -34,7 +34,11 @@ h4 {
 
 .page-header {
 	margin-top: $h2;
-	height: 35vh;	
+	height: 30vh;	
+
+	@media(min-width: 25em) {
+		height: 37vh;	
+	}
 
 	@media(min-width: 34em) {
 		height: 50vh;	
@@ -98,8 +102,16 @@ h4 {
 	border-bottom: $accent-border-large;
 }
 
-.page-body {
-	
+.tagline-page {
+	@extend %h4;
+	@extend %full_width;
+	color: $accent-dark;
+	margin-top: $h2;
+	margin-bottom: $h2;
+	font-weight: 700;
 }
 
 
+.page-content {
+	@include make-sm-column(8);
+}

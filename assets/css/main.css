@@ -1078,11 +1078,13 @@ th {
   margin-right: -1rem; }
 
 @media (min-width: 50em) {
-  .page-title, .tease-featured {
+  .page-title, .tagline-page, .tease-featured {
     position: relative;
     float: left;
     width: 100%;
-    min-height: 1px; } }
+    min-height: 1px;
+    padding-left: 1rem;
+    padding-right: 1rem; } }
 
 @media (min-width: 35em) {
   .tease-deal, .tease-meister {
@@ -1350,12 +1352,6 @@ img {
   max-width: 100%;
   height: auto; }
 
-.tagline-page {
-  color: #043f7e;
-  margin-top: 2.4rem;
-  margin-bottom: 2.4rem;
-  font-weight: 700; }
-
 .tagline-tease {
   color: #f8992f; }
 
@@ -1401,13 +1397,6 @@ img {
   font-weight: 700; }
   .link-more a {
     color: lightgray; }
-
-@media (min-width: 50em) {
-  .block-text {
-    position: relative;
-    min-height: 1px;
-    float: left;
-    width: 50%; } }
 
 @media (min-width: 50em) {
   .block-image {
@@ -1464,7 +1453,7 @@ h2, .article-title {
 h3 {
   font-size: 2rem; }
 
-.tagline-page, h4, blockquote, .lead {
+h4, blockquote, .lead, .tagline-page {
   font-size: 1.3rem; }
 
 .btn, input[type="submit"],
@@ -1895,10 +1884,13 @@ input[type="checkbox"]:focus {
 
 .page-header {
   margin-top: 2.4rem;
-  height: 35vh;
+  height: 30vh;
   overflow: hidden;
   background-color: #043f7e;
   position: relative; }
+  @media (min-width: 25em) {
+    .page-header {
+      height: 37vh; } }
   @media (min-width: 34em) {
     .page-header {
       height: 50vh; } }
@@ -1946,6 +1938,21 @@ input[type="checkbox"]:focus {
   bottom: 0;
   z-index: 10;
   border-bottom: 5px solid #f8992f; }
+
+.tagline-page {
+  color: #043f7e;
+  margin-top: 2.4rem;
+  margin-bottom: 2.4rem;
+  font-weight: 700; }
+
+@media (min-width: 35em) {
+  .page-content {
+    position: relative;
+    min-height: 1px;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    float: left;
+    width: 66.66667%; } }
 
 .article-header {
   margin-top: 2.4rem;
@@ -2042,5 +2049,8 @@ input[type="checkbox"]:focus {
 @media (min-width: 50em) {
   .featured-desc {
     padding-left: 1rem; } }
+
+.page-content .tagline-page {
+  padding: 0; }
 
 /*# sourceMappingURL=main.css.map */

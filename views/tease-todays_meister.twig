@@ -21,9 +21,9 @@
 		</div>
 
 		<div class="featured-desc">
-			<ul class="list-meta list-cats">
+			<ul class="list-cats">
 			    {% for cat in m.categories %}
-			        <li><a href="{{cat.link}}">{{cat.name}}</a></li>
+			        <li class="cat-item"><a href="{{cat.link}}">{{cat.name}}</a></li>
 			    {% endfor %}
 			</ul>
 

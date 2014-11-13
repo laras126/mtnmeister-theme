@@ -34,11 +34,10 @@
 	.btn-tweet {
 		position: absolute;
 		right: 0;
-		top: -$h4;
+		top: -$h5;
 		
 		@include bp(med) {
-			top: auto;
-			bottom: 0;
+			// bottom: 0;
 		}
 	}
 }

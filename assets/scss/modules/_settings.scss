@@ -76,7 +76,8 @@ $text-light: 		$white;
 $text-meta: 		$med-grey;
 
 $link-color:		$accent-dark;
-$link-hover: 		darken($link-color, 20%);
+$link-hover: 		$accent-med;
+$link-active: 		darken($link-hover, 20%);
 
 $alert-danger:		$red;
 $alert-warning:		$sn-orange;

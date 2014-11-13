@@ -75,16 +75,3 @@
 	margin: 0 auto;
 }
 
-// Navigation
-
-.nav-prevnext {
-	@extend %row;
-}
-
-.link-postnav {
-	@include make-xs-column(6);
-}
-
-.next {
-	text-align: right;
-}

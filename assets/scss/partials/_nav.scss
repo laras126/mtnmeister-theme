@@ -156,8 +156,10 @@
 // ----
 
 .nav-prevnext {
+	@extend %row;
 	border-top: $accent-border;
 	border-bottom: $accent-border;
+	margin-top: $h3;
 	padding: $h4;
 }
 
@@ -166,3 +168,12 @@
 	font-size: $sml;
 	font-weight: 700;
 }
+
+.link-postnav {
+	@include make-sm-column(6);
+}
+
+
+	.next {
+		text-align: right;
+	}

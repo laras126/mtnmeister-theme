@@ -2,22 +2,6 @@
 
 {% block content %}
 
-{# 	<nav class="nav-prevnext container-squish">
-
-		{% if post.prev %}
-			<div class="prev">
-				<a href="{{post.prev.link}}" class="link-postnav" title="{{post.prev.title}}">&larr; <span class="special">#{{post.prev.episode_num}}</span> {{post.prev.title}}</a>
-			</div>
-		{% endif %}
-
-		{% if post.next %}
-			<div class="next">
-				<a href="{{post.next.link}}" class="link-postnav" title="{{post.next.title}}"><span class="special">#{{post.next.episode_num}}</span> {{post.next.title}} &rarr;</a>
-			</div>
-		{% endif %}
-
-	</nav> <!-- /nav-prevnext -->
- #}
 	<article class="type-{{post.post_type}}" id="post-{{post.ID}}">
 	
 		<header class="article-header">
@@ -47,10 +31,10 @@
 
 		<footer class="article-footer container-squish">
 			<h3>Additional Resources</h3>
-			<p>Read more...</p>
+			<br>
 			<ul class="list list-table">
 				{% for item in post.get_field('additional_resources') %}
-					<li><a href="{{item.resource_link}}">{{item.resource_title}}</a>{% if item.resource_time_in_episode %} - {{item.resource_time_in_episode}}</li>{% endif %}
+					<li><a href="{{item.resource_link}}">{{item.resource_title}}</a><span class="meta">{% if item.resource_time_in_episode %} - {{item.resource_time_in_episode}}</span></li>{% endif %}
 				{% endfor %}
 			</ul>
 		</footer>

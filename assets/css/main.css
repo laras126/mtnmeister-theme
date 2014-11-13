@@ -1192,6 +1192,9 @@ button, .menu-item-cta .cta, .btn-alt, .cat-item, .menu-item-cta .cta-alt, .btn-
 button, .menu-item-cta .cta {
   background: #f8992f;
   font-weight: 700;
+  -webkit-transition: background 0.25s;
+       -o-transition: background 0.25s;
+          transition: background 0.25s;
   color: #fff !important;
   cursor: pointer;
   -webkit-appearance: none; }
@@ -1207,6 +1210,9 @@ button, .menu-item-cta .cta {
 .btn-alt, .cat-item, .menu-item-cta .cta-alt {
   background: lightgray;
   font-weight: 700;
+  -webkit-transition: background 0.25s;
+       -o-transition: background 0.25s;
+          transition: background 0.25s;
   color: #1f1d1a !important; }
   .btn-alt:hover, .cat-item:hover, .menu-item-cta .cta-alt:hover, .btn-alt:focus, .cat-item:focus, .menu-item-cta .cta-alt:focus {
     background: #a0a0a0;
@@ -1217,6 +1223,9 @@ button, .menu-item-cta .cta {
 .btn-tweet {
   background: #55ACEE;
   font-weight: 700;
+  -webkit-transition: background 0.25s;
+       -o-transition: background 0.25s;
+          transition: background 0.25s;
   color: #fff !important;
   padding: 0.26667rem 0.6rem;
   font-size: 0.8rem; }
@@ -1415,6 +1424,19 @@ img {
 .list-tags {
   font-style: italic;
   margin-bottom: 0; }
+
+.list-table li a {
+  -webkit-transition: padding-left 0.25s;
+       -o-transition: padding-left 0.25s;
+          transition: padding-left 0.25s; }
+.list-table li a:before {
+  content: url("../img/svgs/arrow-right.svg");
+  padding-right: 0.4rem;
+  width: 0.8rem;
+  position: relative;
+  top: 3px; }
+.list-table li a:hover {
+  padding-left: 0.4rem; }
 
 .edit-link,
 .edit-link:visited {

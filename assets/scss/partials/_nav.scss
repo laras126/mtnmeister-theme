@@ -85,16 +85,8 @@
 			color: $text-light;	
 		}
 		
-
 		&:before {
-			content: '';
-			position: absolute;
-			width: 0; 
-			height: 0; 
-			border-left: 41px solid transparent;
-			border-right: 41px solid transparent;
-			
-			border-top: 10px solid $accent-med;
+			@include menu-marker();
 		}
 	}
 

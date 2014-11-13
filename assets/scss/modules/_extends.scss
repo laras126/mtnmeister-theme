@@ -13,7 +13,7 @@
 
 %full_width {
   @include bp(med) {
-    @include make-xs-column(12);  
+	@include make-xs-column(12);  
   }
 }
 
@@ -22,9 +22,9 @@
   @include make-sm-column(6);
   
   @include bp(small) {
-    &:nth-child(2n+1){
-      clear:left;
-    }  
+	&:nth-child(2n+1){
+	  clear:left;
+	}  
   }
 }
 
@@ -32,23 +32,23 @@
   @extend %row_of_two;
   @include make-md-column(4);
   @include bp(med) {
-    &:nth-child(2n+1){
-      clear:none;
-    }  
-    &:nth-child(3n+1){
-      clear:left
-    }  
+	&:nth-child(2n+1){
+	  clear:none;
+	}  
+	&:nth-child(3n+1){
+	  clear:left
+	}  
   }  
 }
 
 .clearfix {
   &:before,
   &:after {
-    content: " "; // 1
-    display: table; // 2
+	content: " "; // 1
+	display: table; // 2
   }
   &:after {
-    clear: both;
+	clear: both;
   }
 }
 
@@ -62,7 +62,7 @@
 // -- Forms
 
 %btn {
-	text-decoration: none;	
+	text-decoration: none;  
   border: 0;
   @extend %upperspace;
 }
@@ -79,7 +79,7 @@
 // -- Color Scheming
 
 %rotate {
-    @include rotate;
+	@include rotate;
 }
 
 %rotate-bars {
@@ -110,26 +110,27 @@
 // -- Utility classes
 
 .text-center {
-  text-align: center;
+	text-align: center;
 }
 
 .text-left {
-  text-align: left;
+	text-align: left;
 }
 
 .text-right {
-  text-align: right;
+	text-align: right;
 }
 
 %center-block {
-  display: block;
-  margin: 0 auto;
+	display: block;
+	margin: 0 auto;
 }
 
 
 .show-at-sm {
-  display: none;
-  @include bp(small) {
-    display: block;
-  }
+	display: none;
+	
+	@include bp(small) {
+		display: block;
+  	}
 }

@@ -93,6 +93,10 @@ img {
 
 .list-cats {
 	@extend %list-meta;
+
+	a {
+		
+	}
 }
 
 	.cat-item {		
@@ -110,6 +114,23 @@ img {
 
 .list-table {
 	@extend %unstyle-list;
+
+	li a {
+		transition: padding-left 0.25s;
+	}
+	
+	li a:before {
+		content: url('../img/svgs/arrow-right.svg');
+		padding-right: $sml/2;
+    	width: $sml;
+    	position: relative;
+    	top: 3px;
+	}
+
+	li a:hover {	
+    	padding-left: $sml/2;
+	}
+	
 }
 
 

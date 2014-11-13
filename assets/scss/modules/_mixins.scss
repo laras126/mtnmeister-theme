@@ -18,7 +18,8 @@
 @mixin button( $button-color, $text-color: $white, $size: med ) {
 	background: $button-color;
 	font-weight: 700;
-
+	transition: background 0.25s;
+	
 	// TODO: BAD BAD
 	// Remove important
 	// Or is this better than a new style to override the <a> color?
@@ -30,7 +31,7 @@
 	} @else {
 		@extend %form-base;	
 	}
-
+	
 	@extend %btn;
 
 	&:hover,
@@ -76,6 +77,24 @@ $MQs: true;
 }
 
 
+
+// ----
+// Misc Elements
+// ----
+
+// Main Menu Marker
+
+@mixin menu-marker($color: $accent-med) {
+	content: '';
+	position: absolute;
+	
+	width: 0; 
+	height: 0; 
+
+	border-left: 41px solid transparent;
+	border-right: 41px solid transparent;
+	border-top: 10px solid $color;
+}
 
 
 // ----

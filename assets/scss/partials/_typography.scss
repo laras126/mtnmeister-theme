@@ -101,6 +101,7 @@ small {
 
 blockquote {
 	@extend %h4;
+	
 	@include bp(med) {
 		font-size: $h3;
 	}

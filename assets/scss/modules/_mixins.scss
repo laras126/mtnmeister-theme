@@ -25,7 +25,7 @@
 	color: $text-color !important;
 	
 	@if $size == sml {
-		padding: $sml $sml $sml*.75 $sml;
+		padding: $sml/3 $sml*.75;
 		font-size: $sml;
 	} @else {
 		@extend %form-base;	

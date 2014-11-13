@@ -26,7 +26,7 @@
             "name": "gear_description",
             "prefix": "",
             "type": "textarea",
-            "instructions": "Description of the gear. Max 470 characters.",
+            "instructions": "Description of the gear. Max 550 characters.",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -36,7 +36,7 @@
             },
             "default_value": "",
             "placeholder": "",
-            "maxlength": 470,
+            "maxlength": 577,
             "rows": "",
             "new_lines": "wpautop",
             "readonly": 0,

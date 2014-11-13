@@ -15,7 +15,7 @@
 }
 
 
-@mixin button( $button-color, $text-color: $white ) {
+@mixin button( $button-color, $text-color: $white, $size: med ) {
 	background: $button-color;
 	font-weight: 700;
 
@@ -24,7 +24,13 @@
 	// Or is this better than a new style to override the <a> color?
 	color: $text-color !important;
 	
-	@extend %form-base;
+	@if $size == sml {
+		padding: $sml $sml $sml*.75 $sml;
+		font-size: $sml;
+	} @else {
+		@extend %form-base;	
+	}
+
 	@extend %btn;
 
 	&:hover,

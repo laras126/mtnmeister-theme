@@ -62,20 +62,16 @@ module.exports = function(grunt) {
         src: 'assets/css/main.css'
       }
     },
-    // modernizr: {
-    //   build: {
-    //     devFile: 'assets/vendor/modernizr/modernizr.js',
-    //     outputFile: 'assets/js/vendor/modernizr.min.js',
-    //     files: {
-    //       'src': [
-    //         ['assets/js/scripts.min.js'],
-    //         ['assets/css/main.min.css']
-    //       ]
-    //     },
-    //     uglify: true,
-    //     parseFiles: true
-    //   }
-    // },
+    svgstore: {
+      options: {
+        prefix : 'shape-', // This will prefix each <g> ID
+      },
+      default: {
+        files: {
+          'views/partials/svg-defs.svg': ['assets/img/svgs/*.svg'],
+        }
+      }
+    },
     watch: {
       sass: {
         files: [
@@ -112,6 +108,7 @@ module.exports = function(grunt) {
     'dev'
   ]);
   grunt.registerTask('dev', [
+    'svgstore',
     'jshint',
     'sass:dev',
     'autoprefixer:dev',

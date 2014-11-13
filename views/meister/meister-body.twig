@@ -27,16 +27,21 @@ Keeping out the image for now
 
 
 	<div class="article-body-block container">
-        <blockquote class="featured-quote">{{post.quote_text}}</blockquote>
+		<div class="quote-container">
+			<blockquote class="quote-featured">{{post.quote_text}}</blockquote>
+			<div class="tweet-container">
+				<a href="{{post.quote_tweet_link}}" target="blank" class="btn-tweet btn-icon" title="Click to Tweet"><svg class="shape shape-twitter"><use xlink:href="#shape-twitter"/></svg> Tweet</a>
+			</div>
+		</div>
         {% if post.quote_time_in_episode %}
         	<p class="text-right meta">Time in episode: {{post.quote_time_in_episode}}</p>
     	{% endif %}
-    	<button class="button"><a href="{{post.quote_tweet_link}}" target="blank" title="Click to Tweet">Click to Tweet</a></button>
 	</div>
 
 	<section class="article-body-block container-squish">
 		<h3>Gear Recommendations</h3>
 		<p class="lead">If you could recommend one piece of gear...</p>
+
 		{% for item in post.get_field('gear_recommendations') %}
 		<div class="item">
 			<div class="item-desc">
@@ -61,6 +66,6 @@ Keeping out the image for now
 			 	<a href="{{item.gear_link}}" title="{{item.title}}"><img src="{{TimberImage(item.gear_photo).src}}" alt="{{item.title}}"></a>
 			 </div>
 		</div>
-		
 		{% endfor %}
+
 	</section>

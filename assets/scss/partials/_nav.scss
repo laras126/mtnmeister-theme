@@ -24,7 +24,9 @@
 	text-align: center;
 }
 
-// .current-menu-item styles in _holding 
+.current-menu-item a {
+	color: $accent-med;
+}
 
 .menu-item {
 	list-style-type: none;
@@ -75,6 +77,25 @@
 	.menu-item {
 		margin: 0 $sml;
 		text-align: left;
+	}
+
+	.current-menu-item {
+
+		a {
+			color: $text-light;	
+		}
+		
+
+		&:before {
+			content: '';
+			position: absolute;
+			width: 0; 
+			height: 0; 
+			border-left: 41px solid transparent;
+			border-right: 41px solid transparent;
+			
+			border-top: 10px solid $accent-med;
+		}
 	}
 
 	.menu-item a {

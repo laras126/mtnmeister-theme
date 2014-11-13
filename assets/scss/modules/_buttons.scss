@@ -7,3 +7,14 @@
 .btn-alt {
 	@include button($accent-light, $text-dark);
 }
+
+.btn-icon {
+	.shape {
+		height: $h5;	
+		width: $h4;
+	}
+}
+
+.btn-tweet {
+	@include button($twitter, $text-light, sml);
+}

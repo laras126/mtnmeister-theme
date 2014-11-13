@@ -33,9 +33,9 @@
 	
 	@include bp(large) {
 
-		// .page & {
+		.page & {
 			background: linear-gradient(rgba($accent-dark, 0.5), rgba($accent-dark, 0));
-		// }
+		}
 		
 		// position: absolute;
 		
@@ -44,12 +44,6 @@
 	border-top: $accent-border-large;
 }
 
-// When scrolled past header image
-
-.scrolled {
-	background: $accent-dark;
-	transition: all 0.5s ease;
-}
 
 .header {
 	// margin-bottom: $h3;

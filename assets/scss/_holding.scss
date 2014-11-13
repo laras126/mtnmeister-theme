@@ -1,3 +1,8 @@
+// I feel like there's a better way to handle this..
+.svgsprites {
+	display: none;
+}
+
 .no-margin {
 	margin: 0;
 }
@@ -7,28 +12,8 @@
 	padding-right: $sml;
 }
 
-.current-menu-item:before {
-	content: '';
-	position: absolute;
-	width: 0; 
-	height: 0; 
-	border-left: 41px solid transparent;
-	border-right: 41px solid transparent;
-	
-	border-top: 10px solid $accent-med;
-}
-
 .btn-wrap {
 	margin: $sml 0;
-}
-
-
-.page-header {
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
-	-o-background-size: cover;
-	// TODO: Why?
-	background-size: cover !important;  
 }
 
 .featured-img,
@@ -57,5 +42,19 @@
 	@extend %unstyle-list;
 	li {
 		@include make-xs-column(4);
+	}
+}
+
+// When scrolled past header image
+.scrolled {
+	background: $accent-dark !important;
+	transition: all 0.5s ease;
+}
+
+// This is verbose
+.btn-twitter {
+	.shape {
+		position: relative;
+		top: 3px;
 	}
 }

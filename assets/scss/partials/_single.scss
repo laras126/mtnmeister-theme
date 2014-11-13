@@ -24,19 +24,34 @@
 	}
 }
 
-.featured-quote {
+.quote-container {
 	border-top: $accent-border;
 	border-bottom: $accent-border;
-	padding-top: $h3;
-	padding-bottom: $h3;
+	margin-top: $h3;
+	margin-bottom: $h3;
 	background-position: 0 $h3;
+}
+
+.tweet-container {
+	position: relative;
+
+	.btn-tweet {
+		position: absolute;
+		right: 0;
+		top: -$h4;
+		
+		@include bp(med) {
+			top: auto;
+			bottom: 0;
+		}
+	}
 }
 
 
 .episode-embed,
 .article-footer {
 	margin-top: $h3;
-	margin-bottom: $h3;
+	margin-bottom: $base;
 }
 
 

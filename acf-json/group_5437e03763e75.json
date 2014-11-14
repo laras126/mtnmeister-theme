@@ -23,11 +23,11 @@
             "sub_fields": [
                 {
                     "key": "field_544e972acf90f",
-                    "label": "Desktop Image (1200x800)",
-                    "name": "desktop_image",
+                    "label": "Header Image (1200x800)",
+                    "name": "image",
                     "prefix": "",
                     "type": "image",
-                    "instructions": "This image will display on larger screens, and should be 1200x800, ideally with the content focus on the center\/right.",
+                    "instructions": "This image should be 1200x800, ideally with the content focus on the center\/right.",
                     "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {

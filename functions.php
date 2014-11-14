@@ -33,6 +33,14 @@
 		}
 
 		function add_to_context($context){
+
+			// Get a random header image
+			if( is_page() ) {
+				$rows = get_field('header_images' );
+				$rand_row = $rows[ array_rand( $rows ) ];
+				$context['header_image'] = $rand_row;	
+			}
+			
 			$context['stuff'] = 'I am a value set in your functions.php file';
 			$context['notes'] = 'These values are available everytime you call Timber::get_context();';
 			$context['main_nav'] = new TimberMenu('main_nav');

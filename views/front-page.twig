@@ -5,7 +5,7 @@
 		<img style="width: 33%; float: left;" src="{{TimberImage(img.mobile_image).src}}" alt="">
 	{% endfor %} #}
 	{% include 'partials/page-header.twig' %}
-	
+
 	<div class="container">
 		<h1><span class="special">MTN</span>MEISTER</h1>
 
@@ -36,7 +36,7 @@
 			{{m.episode_soundcloud_small}}
 		</div>
 		<div class="tease-home"></div>
-		{% for post in deals|slice(0,1) %}
+		{% for deal in post.featured_deal %}
 			{% include ['tease-deal.twig', 'tease.twig'] %}
 		{% endfor %}
  	</section>

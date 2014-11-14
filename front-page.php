@@ -44,21 +44,6 @@ $todays_meister_args = array(
 				'showposts' => 1
 			);
 
-// // Get the most recent deal
-// $deal_args = array( 
-// 				'post_type' => 'deal',
-// 				'posts_per_page' => 10,
-// 				'posts_per_page' => 1,
-// 				'showposts' => 1
-//     		);
-
-
-// Which loop?
-if( is_page('Meisters') ) {
-	query_posts($meister_args);
-} elseif( is_page('Deals') ) {
-	query_posts($deal_args);
-}
 
 
 // ---

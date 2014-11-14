@@ -16,12 +16,12 @@
                 "class": "",
                 "id": ""
             },
-            "post_type": "",
+            "post_type": [
+                "deal"
+            ],
             "taxonomy": "",
             "filters": [
-                "search",
-                "post_type",
-                "taxonomy"
+                "search"
             ],
             "elements": "",
             "max": "",
@@ -61,18 +61,16 @@
     ],
     "menu_order": 0,
     "position": "acf_after_title",
-    "style": "default",
+    "style": "seamless",
     "label_placement": "top",
     "instruction_placement": "label",
     "hide_on_screen": [
-        "permalink",
         "the_content",
         "excerpt",
         "custom_fields",
         "discussion",
         "comments",
         "revisions",
-        "slug",
         "author",
         "format",
         "page_attributes",

@@ -30,12 +30,6 @@
 // }
 
 
-// Get a random header image
-$rows = get_field('header_images' ); // get all the rows
-$rand_row = $rows[ array_rand( $rows ) ]; // get a random row
-
-
-
 // ---
 // Custom Post Type Args
 // ---
@@ -70,8 +64,6 @@ $deal_args = array(
 $context = Timber::get_context();
 $post = new TimberPost();
 
-// Get a random header image
-$context['header_image'] = $rand_row;
 $context['post'] = $post;
 
 // Get custom type content

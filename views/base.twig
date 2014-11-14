@@ -24,9 +24,7 @@
 
         {% block footer %}
             <footer class="footer" role="contentinfo">
-                <div class="container">
-                    {% include 'footer.twig' %}         
-                </div>
+                {% include 'footer.twig' %}         
             </footer>
             {{ function('wp_footer') }}
         {% endblock %}

@@ -17,6 +17,10 @@
   }
 }
 
+%half {
+	@include make-sm-column(6); 
+}
+
 %row_of_two {
 
   @include make-sm-column(6);

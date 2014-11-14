@@ -1,11 +1,21 @@
 
-{% include "sidebar-footer.twig" %}
+{# {% include "sidebar-footer.twig" %} #}
 
-<div class="clearfix">
-	<div class="col-sm-4">
-		<p class="meta">&copy; {{site.title}} {{"now"|date('Y')}}</p>
+	{# <h4>Subscribe</h4> #}
+
+
+
+<div class="creds">
+	<div class="container">
+		<div class="social">
+			<svg class="shape shape-facebook"><use xlink:href="#shape-facebook" /></svg>
+			<svg class="shape shape-twitter"><use xlink:href="#shape-twitter" /></svg>
+			<svg class="shape shape-instagram"><use xlink:href="#shape-instagram" /></svg>
+		</div>
 	</div>
-	<div class="col-sm-8 text-right">
+	
+	<div class="container">
 		<p class="meta">Powered by WordPress and <a href="http://upstatement.com/timber" target="blank">Timber</a>.</p>	
-	</div>	
+		<p class="meta copyright">&copy; {{site.title}} {{"now"|date('Y')}}</p>
+	</div>
 </div>

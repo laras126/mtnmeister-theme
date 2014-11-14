@@ -6,6 +6,18 @@
 
 .shape-twitter {
 	fill: $text-light;
+
+	.footer & {
+		fill: $twitter;
+	}
+}
+
+.shape-facebook {
+	fill: $facebook;
+}
+
+.shape-instagram {
+	fill: $instagram;
 }
 
 .shape-icon {

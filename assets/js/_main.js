@@ -1,6 +1,9 @@
 $(document).ready(function() {
 
+
 	console.log('Check it: http://github.com/laras126/mtnmeister-theme');
+
+
 
 	// ----
 	// Toggle menu
@@ -17,6 +20,7 @@ $(document).ready(function() {
 		$menu.toggleClass('active');
 		return false;
 	});
+
 
 	
 
@@ -43,6 +47,7 @@ $(document).ready(function() {
 	// ----
 	// Header image spinner
 	// ----
+
 	var $container = $('.page-header');
 	var $image = $('.page-header-image');
 	$image.hide();
@@ -51,5 +56,11 @@ $(document).ready(function() {
 		$image.fadeIn(300);
 		$('.spinner').hide();
 	});
+
+
+	
+	// That's all, folks!
+	// I'll get back to my Rolling Rock now.
+
 
 });

@@ -5,7 +5,7 @@
 }
 
 .btn-alt {
-	@include button($accent-light, $text-dark);
+	@include button(lighten($accent-light, 10%), $text-dark, sml);
 }
 
 .btn-tweet {

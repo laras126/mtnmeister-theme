@@ -110,6 +110,12 @@ h4 {
 }
 
 
-.page-content {
-	@include make-sm-column(8);
+.has-sidebar {
+	@extend %full_width;
+	@include make-lg-column(8);
+}
+
+.sidebar {
+	@extend %full_width;
+	@include make-lg-column(4);	
 }

@@ -16,11 +16,22 @@
 }
 
 .tease-meister {
-	@extend %row_of_two;
+	// @extend %row_of_two;
 }
 
 .tease-featured {
 	@extend %full_width;
+}
+
+.tease-home {
+	@include make-sm-column(6);
+	// @include make-md-column(4);
+	iframe {
+		// height: 150px;
+		@include bp(med) {
+			// height: 300px;	
+		}
+	}
 }
 
 .tease-title {

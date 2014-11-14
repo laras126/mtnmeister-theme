@@ -87,9 +87,6 @@ if( is_page('Meisters') ) {
 $context['sidebar'] = Timber::get_sidebar('sidebar.php');
 $context['sidebar_class'] = 'has-sidebar';
 
-if( !is_page('Meisters') && !is_page('Deals') ) {
-	// $context['posts'] = Timber::get_posts();
-}
 
 // $context['pagination'] = Timber::get_pagination();
 

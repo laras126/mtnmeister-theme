@@ -8,7 +8,7 @@
 	overflow: hidden;
 	max-height: 0;
 	
-	transition: height 0.3s ease-out;
+	transition: all 0.2s ease-in-out;
 	
 	@include make-xs-column(12, false);
 	@include make-lg-column(8);
@@ -115,7 +115,7 @@
 	}
 
 	.menu-link span {
-  		transition: all 0.15s ease-in-out;
+  		transition: all 0.05s ease-in-out;
     	width: 30px;
     	height: 3px;
     	display: block;
@@ -162,10 +162,18 @@
 }
 
 .link-postnav {
-	@include make-sm-column(6);
+	@include make-xs-column(6);
 }
 
+.prev,
+.next {
+	// text-align: center;
+		word-break: break-all;
+	a {
 
-	.next {
-		text-align: right;
 	}
+}
+
+.next {
+	text-align: right;
+}

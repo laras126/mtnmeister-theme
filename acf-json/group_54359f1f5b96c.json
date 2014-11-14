@@ -7,8 +7,8 @@
             "label": "Featured Deal",
             "name": "featured_deal",
             "prefix": "",
-            "type": "post_object",
-            "instructions": "The deal to show up on the front page. By default the most recent deal will appear.",
+            "type": "relationship",
+            "instructions": "The deal to show up on the front page.",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -16,37 +16,16 @@
                 "class": "",
                 "id": ""
             },
-            "post_type": [
-                "deal"
-            ],
+            "post_type": "",
             "taxonomy": "",
-            "allow_null": 0,
-            "multiple": 0,
-            "return_format": "object",
-            "ui": 1
-        },
-        {
-            "key": "field_5435b92751e97",
-            "label": "Featured Meister",
-            "name": "featured_meister",
-            "prefix": "",
-            "type": "post_object",
-            "instructions": "Feature a Meister! By default the most recent episode will appear.",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "post_type": [
-                "meister"
+            "filters": [
+                "search",
+                "post_type",
+                "taxonomy"
             ],
-            "taxonomy": "",
-            "allow_null": 0,
-            "multiple": 0,
-            "return_format": "object",
-            "ui": 1
+            "elements": "",
+            "max": "",
+            "return_format": "object"
         },
         {
             "key": "field_5457d23400d4a",

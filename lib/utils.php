@@ -15,7 +15,7 @@ function mtn_custom_type_title_text ( $title ) {
 	} else if ( get_post_type() == 'deal' ) {
         $title = __( 'Deal Title' );
 	} else if ( get_post_type() == 'gear' ) {
-        $title = __( 'Gear Name' );
+        $title = __( 'Gear Model' );
 	}
 	return $title;
 } // End title_text_input()

@@ -23,11 +23,11 @@
             "sub_fields": [
                 {
                     "key": "field_544e972acf90f",
-                    "label": "Image (1200x800)",
-                    "name": "image",
+                    "label": "Desktop Image (1200x800)",
+                    "name": "desktop_image",
                     "prefix": "",
                     "type": "image",
-                    "instructions": "This image will display on larger screens, and should be 1200x600, ideally with the content focus on the right.",
+                    "instructions": "This image will display on larger screens, and should be 1200x800, ideally with the content focus on the center\/right.",
                     "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
@@ -38,28 +38,6 @@
                     "return_format": "url",
                     "preview_size": "thumbnail",
                     "library": "all"
-                },
-                {
-                    "key": "field_544e97e501fe1",
-                    "label": "Caption",
-                    "name": "caption",
-                    "prefix": "",
-                    "type": "text",
-                    "instructions": "Any caption or image credit.",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "default_value": "",
-                    "placeholder": "",
-                    "prepend": "",
-                    "append": "",
-                    "maxlength": "",
-                    "readonly": 0,
-                    "disabled": 0
                 },
                 {
                     "key": "field_544e981201fe2",
@@ -347,7 +325,7 @@
             {
                 "param": "page",
                 "operator": "!=",
-                "value": "213"
+                "value": "9"
             }
         ]
     ],

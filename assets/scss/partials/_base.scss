@@ -175,6 +175,10 @@ img {
 	@extend %list-meta;
 	font-style: italic;
 	margin-bottom: 0;
+
+	li {
+		padding-right: $sml;
+	}
 }
 
 

@@ -4,7 +4,8 @@
 	{# {% for img in header_images|slice(0,5) %}
 		<img style="width: 33%; float: left;" src="{{TimberImage(img.mobile_image).src}}" alt="">
 	{% endfor %} #}
-
+	{% include 'partials/page-header.twig' %}
+	
 	<div class="container">
 		<h1><span class="special">MTN</span>MEISTER</h1>
 
@@ -21,15 +22,22 @@
 		
 	</div>
 			
-	<div class="container" style="background-color: #fff">
-		{% include ['tease-todays_meister.twig', 'tease.twig'] %}	
-	</div>
-		
-	<div class="container">
-
+	<section class="home-teases container">
+		<div class="tease-home">
+			{# {% include ['tease-todays_meister.twig', 'tease.twig'] %} #}
+			{% set m = todays_meister|first %}
+			<header class="tease-header">
+				<span class="number-wrap">
+					<div class="number"><span># {{m.episode_num}}</span><span class="meta" style="font-weight: 400">{{m.date}}</div>
+				</span>
+				<h3 class="tagline tagline-page"><a href="{{m.link}}">{{m.episode_tag}}</a></h3>
+				<p class="tagline tagline-tease">{{m.title}}</p>
+			</header>
+			{{m.episode_soundcloud_small}}
+		</div>
+		<div class="tease-home"></div>
 		{% for post in deals|slice(0,1) %}
 			{% include ['tease-deal.twig', 'tease.twig'] %}
 		{% endfor %}
-	 	
- 	</div>
+ 	</section>
 {% endblock %}

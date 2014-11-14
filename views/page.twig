@@ -5,18 +5,19 @@
     {% include 'partials/page-header.twig' %}
 		
 		<div class="page-body container">
-			<div class="page-content">
-				
-				<p class="tagline tagline-page">{{post.tagline}}</p>
 
-				<p class="lead">{{post.introduction}}</p>
-				
+			<p class="tagline tagline-page">{{post.tagline}}</p>
+			<p class="lead">{{post.introduction}}</p>
+
+			{% block today %}{% endblock %}
+
+			<div class="page-content {{sidebar_class}}">		
+				{% block loop %}{% endblock %}
 				{% include 'partials/acf-block-loop.twig' %}
-
 			</div>
 
 			{%  if sidebar %}
-				<aside class="sidebar col-sm-4">
+				<aside class="sidebar">
 					{{sidebar}}
 				</aside>
 			{% endif %}	

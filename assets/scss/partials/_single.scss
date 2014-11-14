@@ -12,8 +12,8 @@
 
 .article-title {
 	@extend %h2;
-	text-shadow: 1px 1px 0 rgba($text-meta,0.6),
-	1px 3px 0 rgba($text-meta,0.3);
+	// text-shadow: 1px 1px 0 rgba($text-meta,0.6),
+	// 1px 3px 0 rgba($text-meta,0.3);
 
 	@include bp(med) {
 		font-size: $h1;

@@ -7,7 +7,16 @@
 
 .container {
 	@extend %container;
-	max-width: $screen-lg;
+	max-width: $screen-sm;
+	
+	@include bp(med) {
+		max-width: $screen-md;
+	}
+
+	@include bp(large) {
+		max-width: $screen-lg;
+	}
+	
 }
 
 .container-squish {
@@ -29,7 +38,11 @@
 
 .logo,
 .menu-link {
-	@include make-xs-column(6);
+	@include make-xs-column(6, false);
+}
+
+.logo {
+
 }
 
 
@@ -38,20 +51,9 @@
 
 }
 
-
-// Content
-
-.has-sidebar {
-	@include make-md-column(6, 0);
-}
-
-.sidebar {
-	@include make-md-column(4);
-}
-
 .loop,
 .featured {
-	@extend .clearfix;
+	// @extend .clearfix;
 }
 
 // ---

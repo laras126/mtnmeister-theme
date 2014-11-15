@@ -1,14 +1,5 @@
 
-{# <iframe width="100%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/172079987&amp;color=ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false"></iframe> #}
-
-{# <img src="{{TimberImage(post.meister_pic).src}}" alt="{{post.title}}"> #}
-
-{#
-Keeping out the image for now
- <p>{{post.meister_bio}}</p> #}
-
-
-	<section class="article-body-block clearfix container-squish">
+	<div class="article-body-block container-squish">
 
 		<div class="col-sm-6">
 			<p>{{post.meister_bio}}</p>
@@ -18,11 +9,20 @@ Keeping out the image for now
 		</div>
 
 		<div class="col-sm-6">
-			<br>
-			<img src="{{TimberImage(post.meister_pic).src}}" alt="{{post.title}}">
+
+			{% if post.thumbnail %}
+				<img src="{{post.thumbnail.src}}" alt="{{post.title}}">
+			{% elseif post.meister_pic %}
+				<img src="{{TimberImage(post.meister_pic).src}}" alt="{{post.title}}">
+			{% else %}
+				{# TODO: this isn't working for some reason.... #}
+				{% set default = site.theme.uri ~ '/assets/img/util/default-meister.png' %}
+				<img src="{{default}}" alt="{{post.title}}">
+			{% endif %}
+
 		</div>
 		
-	</section>
+	</div>
 
 
 	<div class="article-body-block container">

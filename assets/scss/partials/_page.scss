@@ -32,27 +32,38 @@ h4 {
 
 .page-header {
 	margin-top: $h2;
+	height: 300px;
 	height: 30vh;	
 
 	@media(min-width: 25em) {
-		height: 37vh;	
+		height: 300px;
+		height: 37vh;
 	}
 
 	@media(min-width: 34em) {
+		height: 350px;
 		height: 50vh;	
 	}
 	
 	@media(min-width: 44em) {
+		height: 500px;
 		height: 60vh;	
 	}
 
 	@include bp(med) {
+		height: 600px;
 		height: 70vh;	
 	}
 
 	@include bp(large) {
 		margin-top: 0;
+		height: 650px;
 		height: 80vh;
+	}
+
+	@media(min-width: 66em) {
+		height: 85vh;
+		height: 700px;
 	}
 	
 	overflow: hidden;

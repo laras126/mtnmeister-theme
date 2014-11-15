@@ -1,8 +1,12 @@
 
 .widgets {
 	list-style-type: none;
-	margin: $h3 0 0 0;
+	margin: 0;
 	padding: 0;
+
+	@include bp(med) {
+		 padding-left: $h3;
+	}
 
 	ul {
 		@extend %list-meta;		

@@ -7,23 +7,19 @@
 			<div class="number"><span># {{post.episode_num}}</span><span class="meta">{{post.date}}</span></div>
 		</span>
 		<h4 class="tagline page-tagline"><a href="{{post.link}}">{{post.episode_tag}}</a></h4>
-		<p class="tagline tagline-tease">{{post.title}}</p>
+		<div class="row">
+			<div class="col-sm-8">
+				<p class="tagline tagline-tease">{{post.title}}</p>
+			</div>
+			<div class="col-sm-4">
+				<a class="link-more" href="{{post.link}}" title="{{post.title}}">Read more &rarr;</a>	
+			</div>
+		</div>
 	</header>
 
 	<div class="tease-body">
 		{{post.episode_soundcloud_small}}
-		<div class="row">
-			<div class="col-sm-8">
-				{% include 'partials/cat-list.twig' %}	
-			</div>
-			<div class="col-sm-4">
-				<br>
-				<a class="link-more" href="{{post.link}}" title="{{post.title}}">Read more</a>		
-			</div>	
-		</div>
-		
-		
-		
+		{% include 'partials/cat-list.twig' %}
 	</div>
 
 {% endblock %}

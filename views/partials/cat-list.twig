@@ -1,5 +1,8 @@
-<ul class="list-cats">
+<ul class="list-cats meta">
+	{% if post.categories %}
+		<span>Tagged:</span>
+	{% endif %}
     {% for cat in post.categories %}
-        <li class="cat-item"><a href="{{cat.link}}">{{cat.name}}</a></li>
+        <li class=""><a href="{{cat.link}}">{{cat.name}}</a></li>
     {% endfor %}
 </ul>

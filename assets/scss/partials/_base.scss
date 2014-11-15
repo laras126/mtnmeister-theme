@@ -148,6 +148,7 @@ img {
 
 %list-meta {
 	padding: 0;
+	margin: 0;
 
 	li {
 		@extend %list-meta-item;	
@@ -218,11 +219,10 @@ img {
 }
 
 .link-more {
-	display: inline-block;
-	// @extend .btn;
 	float: right;
-	@extend %upperspace;
-	font-weight: 700;
+	margin-top: $base;
+	@extend .btn-alt;
+	
 
 	a {
 		color: $accent-light;

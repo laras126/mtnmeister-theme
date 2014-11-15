@@ -1121,7 +1121,7 @@ th {
   list-style-type: none; }
 
 .btn, input[type="submit"],
-button, .menu-item-cta .cta, .btn-alt, .cat-item a, .menu-item-cta .cta-alt, .btn-tweet {
+button, .menu-item-cta .cta, .btn-alt, .cat-item a, .link-more, .menu-item-cta .cta-alt, .btn-alt-dark, .btn-tweet {
   text-decoration: none;
   border: 0; }
 
@@ -1144,8 +1144,8 @@ input[type="tel"] {
   font-family: "proxima-nova", Helvetica, sans-serif; }
 
 .btn, input[type="submit"],
-button, .menu-item-cta .cta, .btn-alt, .cat-item a, .menu-item-cta .cta-alt, .btn-tweet, .ginput_complex label,
-.meta, .block-title, .tagline, .number, .link-more, label, .menu-item a, .link-postnav, h4, .page-title {
+button, .menu-item-cta .cta, .btn-alt, .cat-item a, .link-more, .menu-item-cta .cta-alt, .btn-alt-dark, .btn-tweet, .ginput_complex label,
+.meta, .block-title, .tagline, .number, label, .menu-item a, .link-postnav, h4, .page-title {
   text-transform: uppercase;
   letter-spacing: 1px; }
 
@@ -1193,7 +1193,7 @@ button, .menu-item-cta .cta {
   button:active, .menu-item-cta .cta:active {
     background: #583003; }
 
-.btn-alt, .cat-item a, .menu-item-cta .cta-alt {
+.btn-alt, .cat-item a, .link-more, .menu-item-cta .cta-alt {
   background: #ececec;
   font-weight: 700;
   -webkit-transition: background 0.25s;
@@ -1202,11 +1202,26 @@ button, .menu-item-cta .cta {
   color: #1f1d1a !important;
   padding: 0.26667rem 0.6rem;
   font-size: 0.8rem; }
-  .btn-alt:hover, .cat-item a:hover, .menu-item-cta .cta-alt:hover, .btn-alt:focus, .cat-item a:focus, .menu-item-cta .cta-alt:focus {
+  .btn-alt:hover, .cat-item a:hover, .link-more:hover, .menu-item-cta .cta-alt:hover, .btn-alt:focus, .cat-item a:focus, .link-more:focus, .menu-item-cta .cta-alt:focus {
     background: #b9b9b9;
     color: #1f1d1a; }
-  .btn-alt:active, .cat-item a:active, .menu-item-cta .cta-alt:active {
+  .btn-alt:active, .cat-item a:active, .link-more:active, .menu-item-cta .cta-alt:active {
     background: #868686; }
+
+.btn-alt-dark {
+  background: #043f7e;
+  font-weight: 700;
+  -webkit-transition: background 0.25s;
+       -o-transition: background 0.25s;
+          transition: background 0.25s;
+  color: #fff !important;
+  padding: 0.26667rem 0.6rem;
+  font-size: 0.8rem; }
+  .btn-alt-dark:hover, .btn-alt-dark:focus {
+    background: #010e1b;
+    color: #fff; }
+  .btn-alt-dark:active {
+    background: black; }
 
 .btn-tweet {
   background: #55ACEE;
@@ -1416,7 +1431,8 @@ img {
   padding: 0.2rem 0 0.4rem; }
 
 .list-cats, .list-tags, .widgets ul {
-  padding: 0; }
+  padding: 0;
+  margin: 0; }
 
 .cat-item {
   margin: 0; }
@@ -1450,9 +1466,8 @@ img {
   margin: 1.3rem 0; }
 
 .link-more {
-  display: inline-block;
   float: right;
-  font-weight: 700; }
+  margin-top: 1rem; }
   .link-more a {
     color: lightgray; }
 
@@ -1980,26 +1995,36 @@ input[type="checkbox"]:focus {
 
 .page-header {
   margin-top: 2.4rem;
+  height: 300px;
   height: 30vh;
   overflow: hidden;
   background-color: #043f7e;
   position: relative; }
   @media (min-width: 25em) {
     .page-header {
+      height: 300px;
       height: 37vh; } }
   @media (min-width: 34em) {
     .page-header {
+      height: 350px;
       height: 50vh; } }
   @media (min-width: 44em) {
     .page-header {
+      height: 500px;
       height: 60vh; } }
   @media (min-width: 50em) {
     .page-header {
+      height: 600px;
       height: 70vh; } }
   @media (min-width: 62em) {
     .page-header {
       margin-top: 0;
+      height: 650px;
       height: 80vh; } }
+  @media (min-width: 66em) {
+    .page-header {
+      height: 85vh;
+      height: 700px; } }
 
 .page-header-image {
   width: 100%;
@@ -2089,7 +2114,7 @@ input[type="checkbox"]:focus {
   margin-bottom: 1rem; }
 
 .tease {
-  margin-bottom: 3.4rem; }
+  margin-bottom: 2.4rem; }
 
 @media (min-width: 35em) {
   .tease-home {
@@ -2120,8 +2145,11 @@ input[type="checkbox"]:focus {
 
 .widgets {
   list-style-type: none;
-  margin: 2rem 0 0 0;
+  margin: 0;
   padding: 0; }
+  @media (min-width: 50em) {
+    .widgets {
+      padding-left: 2rem; } }
 
 .widget {
   padding: 1.3rem;

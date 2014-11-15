@@ -1075,7 +1075,7 @@ th {
   margin-right: -1rem; }
 
 @media (min-width: 50em) {
-  .page-title, .has-sidebar, .sidebar, .tease-featured {
+  .page-title, .tagline-page, .has-sidebar, .sidebar, .tease-featured {
     position: relative;
     float: left;
     width: 100%;
@@ -2144,7 +2144,7 @@ input[type="checkbox"]:focus {
   list-style-type: none;
   margin: 0;
   padding: 0; }
-  @media (min-width: 50em) {
+  @media (min-width: 62em) {
     .widgets {
       padding-left: 2rem; } }
 
@@ -2152,6 +2152,30 @@ input[type="checkbox"]:focus {
   padding: 1.3rem;
   background-color: #f2f2f2;
   margin-bottom: 1.3rem; }
+  @media (min-width: 35em) {
+    .widget {
+      position: relative;
+      min-height: 1px;
+      padding-left: 1rem;
+      padding-right: 1rem;
+      float: left;
+      width: 50%; } }
+  @media (min-width: 50em) {
+    .widget {
+      position: relative;
+      min-height: 1px;
+      padding-left: 1rem;
+      padding-right: 1rem;
+      float: left;
+      width: 33.33333%; } }
+  @media (min-width: 62em) {
+    .widget {
+      position: relative;
+      min-height: 1px;
+      padding-left: 1rem;
+      padding-right: 1rem;
+      float: left;
+      width: 100%; } }
 
 .svgsprites {
   display: none; }

@@ -4,7 +4,7 @@
 	margin: 0;
 	padding: 0;
 
-	@include bp(med) {
+	@include bp(large) {
 		 padding-left: $h3;
 	}
 
@@ -17,4 +17,7 @@
 	padding: $h4;
 	background-color: lighten($text-meta, 35%);
 	margin-bottom: $h4;
+	@include make-sm-column(6);
+	@include make-md-column(4);
+	@include make-lg-column(12);
 }

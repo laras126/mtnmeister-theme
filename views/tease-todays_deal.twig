@@ -1,0 +1,33 @@
+{# NOTE: 
+- It would be better to not have today's meister an array, but fine for now. 
+- Also to make this extend tease.twig
+#}
+
+{% set d = todays_deal|first %}
+
+<article class="tease tease-featured row">
+<div class="row">
+	<div class="col-sm-8">
+		<h4 class="tagline">{{d.title}}</h4>
+		<p class="tagline">By: <span class="special">{{d.deal_vendor}}</span></p>
+	
+		<p>{{d.deal_desc}}</p>
+		<p>{{d.deal_cta}}</p>	
+		<p class="meta">Expires: {{d.expiration_date|date("m/d/Y")}}</p>
+	</div>	
+	
+	<div class="col-sm-4">
+		{# This is conditional is because we weren't using featured images initially, and are now #}
+		{% if d.thumbnail %}
+			<img src="{{d.thumbnail.src}}" alt="{{d.title}}">
+		{% elseif d.deal_pic %}
+			<img src="{{TimberImage(d.deal_pic).src}}" alt="{{d.title}}">
+		{% else %}
+			{# TODO: this isn't working for some reason.... #}
+			{% set default = site.theme.uri ~ '/assets/img/util/default-meister.png' %}
+			<img src="{{default}}" alt="{{d.title}}">
+		{% endif %}
+		<a class="btn-cta" href="{{d.link}}" title="{{m.title}}">Claim it</a>		
+	</div></div>
+
+</article> <!-- /.tease -->

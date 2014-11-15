@@ -44,4 +44,27 @@ function mtn_remove_wp_nodes() {
 }
 add_action( 'admin_bar_menu', 'mtn_remove_wp_nodes', 999 );
 
+
+// Add a 'Very Simple' toolbar style for the WYSIWYG editor in ACF
+// http://www.advancedcustomfields.com/resources/customize-the-wysiwyg-toolbars/
+function mtn_acf_wysiwyg_toolbar( $toolbars ) {
+
+	$toolbars['Text Based'] = array();
+
+	// Only one row of buttons
+	$toolbars['Text Based'][1] = array('formatselect' , 'bold' , 'link' , 'italic' , 'unlink' );
+
+	return $toolbars;
+}
+add_filter( 'acf/fields/wysiwyg/toolbars' , 'mtn_acf_wysiwyg_toolbar'  );
+
+
+// Customize the editor style, from Roots.io 
+// https://github.com/roots/roots-sass/blob/master/assets/css/editor-style.css
+function mtn_editor_styles() {
+	add_editor_style( 'assets/css/editor-style.css' );
+}
+add_action( 'after_setup_theme', 'mtn_editor_styles' );
+
+
 ?>

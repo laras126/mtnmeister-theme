@@ -15,3 +15,9 @@
 .btn-tweet {
 	@include button($twitter, $text-light, sml);
 }
+
+.btn-cta {
+	@extend .btn;
+	display: block;
+	text-align: center;
+}

@@ -49,11 +49,20 @@ $todays_meister_args = array(
 				'showposts' => 1
 			);
 
+// Today's Deal args
+$todays_deal_args = array( 
+				'post_type' => 'deal', 
+				'posts_per_page' => 1,
+				'showposts' => 1
+			);
+
+
 // Get deals
 $deal_args = array( 
 				'post_type' => 'deal',
 				'posts_per_page' => 10,
-    			'paged' => $paged
+    			'paged' => $paged,
+    			'offset' => 1
     		);
 
 
@@ -66,18 +75,28 @@ $post = new TimberPost();
 
 $context['post'] = $post;
 
+
 // Get custom type content
 if( is_page('Meisters') ) {
+
 	// Get Meister and Deal posts
 	$context['meisters'] = Timber::get_posts($meister_args);
 	$context['todays_meister'] = Timber::get_posts($todays_meister_args);
+
 } elseif( is_page('Deals') ) {
+	$context['todays_deal'] = Timber::get_posts($todays_deal_args);
 	$context['deals'] = Timber::get_posts($deal_args);
 }
 
-// Sidebar
-$context['sidebar'] = Timber::get_sidebar('sidebar.php');
-$context['sidebar_class'] = 'has-sidebar';
+
+
+// Sidebar, not on deals page
+// if( !is_page('Deals') ) {
+	$context['sidebar'] = Timber::get_sidebar('sidebar.php');
+	$context['sidebar_class'] = 'has-sidebar';	
+// }
+
+
 
 
 // $context['pagination'] = Timber::get_pagination();

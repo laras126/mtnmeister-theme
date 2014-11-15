@@ -1,7 +1,59 @@
 {% extends "page.twig" %}
 
 {% block today %}
-	{% include ['tease-todays_meister.twig', 'tease.twig'] %}
+	{# {% include ['tease-todays_meister.twig', 'tease.twig'] %} #}
+
+	{# NOTE: 
+- It would be better to not have today's meister an array, but fine for now. 
+- Also to make this extend tease.twig
+#}
+
+{% set m = todays_meister|first %}
+{% set d = featured_deal %}
+
+<div class="row">
+<div class="col-sm-6">
+	{{d.title}}
+</div>
+
+<article class="col-sm-6">
+	
+	<header class="tease-header">
+		<span class="number-wrap">
+			<div class="number"><span># {{m.episode_num}}</span><span class="meta" style="font-weight: 400">{{m.date}}</div>
+		</span>
+		<h4 class="tagline"><a href="{{m.link}}">{{m.episode_tag}}</a></h4>
+		<div class="row">
+		<div class="col-sm-8">
+			<p class="tagline tagline-tease">{{m.title}}</p>
+		</div>
+		<div class="col-sm-4">
+			<a class="link-more" href="{{m.link}}" title="{{m.title}}">Read more &rarr;</a>	
+		</div>
+			
+		</div>
+		
+	</header>
+
+	<div class="">
+		{{m.episode_soundcloud_large}}
+	
+	
+		<div class="col-xs-12">
+			<p class="meta">Share</p>
+			<ul class="share-links">
+				<li>Facebook</li>
+				<li>Twitter</li>
+				<li>Google</li>
+			</ul>
+		</div>
+		
+	</div>
+
+</article> <!-- /.tease -->	
+</div>
+
+
 {% endblock %}
 
 {% block loop %}

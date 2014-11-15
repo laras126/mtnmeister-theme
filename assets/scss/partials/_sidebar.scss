@@ -1,11 +1,11 @@
 
 .widgets {
 	list-style-type: none;
-	margin: 0;
+	margin: 0 auto;
 	padding: 0;
 
 	@include bp(large) {
-		 padding-left: $h3;
+		 padding-left: $base;
 	}
 
 	ul {
@@ -22,18 +22,20 @@
 	p {
 		text-align: center;
 		
-		@include bp(med) {
-			font-size: $sml;
+		// @include bp(med) {
+			@extend %meta;
+			font-weight: 700;
 			// text-align: left;	
-		}
+		// }
 		
 		padding: $sml;
 		background-color: $body-bkgd;
 		@extend %row;
 	}
 	
+	// max-width: $screen-sm/2;
 
-	@include make-sm-column(6, false);
-	@include make-md-column(4, false);
+	// @include make-sm-column(6, false);
+	@include make-md-column(6, false);
 	@include make-lg-column(12, false);
 }

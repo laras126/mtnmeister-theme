@@ -12,8 +12,13 @@
 }
 
 .tease-deal {
-	@extend %row_of_three;
+	@extend %row_of_two;
 }
+
+
+	.cta-tease {
+		// @extend .btn;
+	}
 
 .tease-meister {
 	// @extend %row_of_two;

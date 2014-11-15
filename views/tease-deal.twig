@@ -1,17 +1,33 @@
 {% extends "tease.twig" %}
 
 {% block content %}
-	<header class="tease-header">
-		<hr>
-		<h3 class="tease-title">{{post.title}}</h3>
-		<p class="tagline tagline-tease">{{post.deal_desc}}</p>
-	</header>
-	<div class="tease-body">
-		<img src="{{TimberImage(post.deal_pic).src}}" alt="{{post.title}}">
-		<p>Brought to you by: {{post.deal_vendor}}</p>
-	</div>
-	<footer class="cta-tease">
-		<h4>You need to:</h4>
-		<p>{{post.deal_cta}}</p>	
-	</footer> 
+	{# <div class="col-sm-8"> #}
+		<h3 class="tagline">{{post.title}}</h3>
+		<p class="tagline">Brought to you by: <span class="special">{{post.deal_vendor}}</span></p>	
+	
+	<div class="row">
+		<div class="col-sm-4">
+			{# This is conditional is because we weren't using featured images initially, and are now #}
+			{% if post.thumbnail %}
+				<img src="{{post.thumbnail.src}}" alt="{{post.title}}">
+			{% elseif post.deal_pic %}
+				<img src="{{TimberImage(post.deal_pic).src}}" alt="{{post.title}}">
+			{% else %}
+				{# TODO: this isn't working for some reason.... #}
+				{% set default = site.theme.uri ~ '/assets/img/util/default-meister.png' %}
+				<img src="{{default}}" alt="{{post.title}}">
+			{% endif %}
+			
+		</div>
+		<header class="col-sm-8">
+		
+			<p>{{post.deal_desc}}</p>
+			<footer class="cta-tease">
+				<h4>You need to:</h4>
+				<p>{{post.deal_cta}}</p>	
+				<p>Expires: {{post.expiration_date|date("m/d/Y")}}</p>
+			</footer> 
+		</header>	
+	{# </div> #}
+	
 {% endblock %}

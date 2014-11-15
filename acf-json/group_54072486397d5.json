@@ -118,7 +118,6 @@
         "slug",
         "author",
         "format",
-        "featured_image",
         "send-trackbacks"
     ]
 }

@@ -8,7 +8,7 @@
             "name": "meister_bio",
             "prefix": "",
             "type": "textarea",
-            "instructions": "A paragraph bio of the Meister. Limited to 550 characters.",
+            "instructions": "A paragraph bio of the Meister.",
             "required": 1,
             "conditional_logic": 0,
             "wrapper": {
@@ -18,7 +18,7 @@
             },
             "default_value": "",
             "placeholder": "",
-            "maxlength": 550,
+            "maxlength": "",
             "rows": "",
             "new_lines": "br",
             "readonly": 0,
@@ -30,7 +30,7 @@
             "name": "meister_pic",
             "prefix": "",
             "type": "image",
-            "instructions": "500x500. Should something personable, less of an action shot.",
+            "instructions": "",
             "required": 1,
             "conditional_logic": 0,
             "wrapper": {
@@ -38,9 +38,9 @@
                 "class": "",
                 "id": ""
             },
-            "return_format": "array",
             "preview_size": "thumbnail",
-            "library": "all"
+            "library": "all",
+            "return_format": "array"
         }
     ],
     "location": [
@@ -68,7 +68,6 @@
         "slug",
         "author",
         "format",
-        "featured_image",
         "categories",
         "tags",
         "send-trackbacks"

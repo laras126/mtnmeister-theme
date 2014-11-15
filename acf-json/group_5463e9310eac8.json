@@ -3,6 +3,28 @@
     "title": "Gear",
     "fields": [
         {
+            "key": "field_546690d43dfc5",
+            "label": "Brand Name",
+            "name": "brand_name",
+            "prefix": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": "",
+            "readonly": 0,
+            "disabled": 0
+        },
+        {
             "key": "field_540728abaa52e",
             "label": "Photo",
             "name": "gear_photo",
@@ -109,7 +131,6 @@
         "author",
         "format",
         "page_attributes",
-        "featured_image",
         "send-trackbacks"
     ]
 }

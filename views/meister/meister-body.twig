@@ -67,18 +67,20 @@
 					{% endif %}
 				</div>
 			{% endfor %}
-
 		    
 		{% endfor %}
 
-		{% set deals = TimberPost(item.connected_deals) %}
+	</section>
 
-		{% if deals %}
-
-			{% for deal in deals %}
-				<p>Meister deal!: {{deal.title}}</p>
-			{% endfor %}
-
+	<section class="container-squish">
+		
+		{% if post.connected_deal %}
+			<h3>Deals, deals, deals!</h3>
+			{# {% for deal in post.get_field('connected_deal') %} #}
+				<p>(The deal info will be here)</p>
+				<h4>{{deal.title}}</h4>
+				<p>{{deal.deal_desc}}</p>
+			{# {% endfor %} #}
 		{% endif %}
 
 	</section>

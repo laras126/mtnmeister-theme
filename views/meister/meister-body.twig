@@ -56,7 +56,9 @@
 					    <p>{{gear.gear_description}}</p>
 					 </div>
 					 <div class="item-img">
-					 	<a href="{{gear.gear_link}}" title="{{gear.post_title}}"><img src="{{TimberImage(gear.gear_photo).src}}" alt="{{gear.post_title}}"></a>
+					 	<a href="{{gear.gear_link}}" title="{{gear.post_title}}">
+					 		<img src="{% if gear.thumbnail %}{{gear.thumbnail.src}}{% elseif gear.gear_photo %}{{TimberImage(gear.gear_photo).src}}{% endif %}" alt="{{gear.post_title}}">
+					 	</a>
 					 </div> 
 					{% if gear.time_in_episode %}
 

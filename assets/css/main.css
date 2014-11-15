@@ -387,18 +387,18 @@ th {
   width: 32px;
   height: 32px; }
 
-.container {
+.container, .container-squish {
   margin-right: auto;
   margin-left: auto; }
 
 @media (min-width: 35em) {
-  .container {
+  .container, .container-squish {
     max-width: 750px; } }
 @media (min-width: 50em) {
-  .container {
+  .container, .container-squish {
     max-width: 970px; } }
 @media (min-width: 62em) {
-  .container {
+  .container, .container-squish {
     max-width: 1170px; } }
 .container-fluid {
   margin-right: auto;
@@ -1050,7 +1050,9 @@ th {
 .item:after,
 .header:after,
 .container:before,
+.container-squish:before,
 .container:after,
+.container-squish:after,
 .container-fluid:before,
 .container-fluid:after,
 .row:before,
@@ -1060,6 +1062,7 @@ th {
 
 .clearfix:after, .nav-prevnext:after, .main:after, .creds-wrap:after, .container:after, .container-squish:after, .item:after, .header:after,
 .container:after,
+.container-squish:after,
 .container-fluid:after,
 .row:after {
   clear: both; }
@@ -1762,17 +1765,18 @@ input[type="checkbox"]:focus {
   padding-left: 1rem;
   padding-right: 1rem; }
 
-.container {
+.container, .container-squish {
   max-width: 35em; }
   @media (min-width: 50em) {
-    .container {
+    .container, .container-squish {
       max-width: 50em; } }
   @media (min-width: 62em) {
-    .container {
+    .container, .container-squish {
       max-width: 62em; } }
 
-.container-squish {
-  max-width: 50em; }
+@media (min-width: 62em) {
+  .container-squish {
+    max-width: 50em; } }
 
 @media (min-width: 62em) {
   .brand {

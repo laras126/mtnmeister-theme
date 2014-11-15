@@ -20,8 +20,11 @@
 }
 
 .container-squish {
-	@extend %container;
-	max-width: $screen-md;
+	@extend .container;
+	// max-width: $screen-md;
+	@include bp(large) {
+		max-width: $screen-md;
+	}
 }
 
 

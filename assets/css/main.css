@@ -1075,7 +1075,7 @@ th {
   margin-right: -1rem; }
 
 @media (min-width: 50em) {
-  .page-title, .tagline-page, .has-sidebar, .sidebar, .tease-featured {
+  .page-title, .has-sidebar, .sidebar, .tease-featured {
     position: relative;
     float: left;
     width: 100%;

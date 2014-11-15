@@ -102,7 +102,6 @@ h4 {
 
 .tagline-page {
 	@extend %h4;
-	@extend %full_width;
 	color: $accent-dark;
 	margin-top: $h2;
 	margin-bottom: $h2;

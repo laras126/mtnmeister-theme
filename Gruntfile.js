@@ -42,13 +42,6 @@ module.exports = function(grunt) {
         dest: 'assets/js/scripts.js',
       },
     },
-    uglify: {
-      dist: {
-        files: {
-          'assets/js/scripts.min.js': 'assets/js/scripts.js'
-        }
-      }
-    },
     autoprefixer: {
       options: {
         browsers: ['last 2 versions', 'ie 8', 'ie 9', 'android 2.3', 'android 4', 'opera 12']

@@ -18,6 +18,6 @@
 	background-color: lighten($text-meta, 35%);
 	margin-bottom: $h4;
 	@include make-sm-column(6);
-	@include make-md-column(4);
-	@include make-lg-column(12);
+	@include make-md-column(4, false);
+	@include make-lg-column(12, false);
 }

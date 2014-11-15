@@ -2176,16 +2176,12 @@ input[type="checkbox"]:focus {
     .widget {
       position: relative;
       min-height: 1px;
-      padding-left: 1rem;
-      padding-right: 1rem;
       float: left;
       width: 33.33333%; } }
   @media (min-width: 62em) {
     .widget {
       position: relative;
       min-height: 1px;
-      padding-left: 1rem;
-      padding-right: 1rem;
       float: left;
       width: 100%; } }
 

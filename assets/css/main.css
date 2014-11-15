@@ -2147,7 +2147,9 @@ input[type="checkbox"]:focus {
 .widgets {
   list-style-type: none;
   margin: 0 auto;
-  padding: 0; }
+  padding: 0;
+  max-width: 28em;
+  margin: 0 auto; }
   @media (min-width: 62em) {
     .widgets {
       padding-left: 1rem; } }
@@ -2159,21 +2161,8 @@ input[type="checkbox"]:focus {
   border: 1px solid lightgray; }
   .widget p {
     text-align: center;
-    font-weight: 700;
     padding: 0.8rem;
     background-color: #fff; }
-  @media (min-width: 50em) {
-    .widget {
-      position: relative;
-      min-height: 1px;
-      float: left;
-      width: 50%; } }
-  @media (min-width: 62em) {
-    .widget {
-      position: relative;
-      min-height: 1px;
-      float: left;
-      width: 100%; } }
 
 .svgsprites {
   display: none; }

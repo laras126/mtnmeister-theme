@@ -11,6 +11,9 @@
 	ul {
 		@extend %list-meta;		
 	}
+
+	max-width: $screen-xs;
+	margin: 0 auto;
 }
 
 .widget {
@@ -24,7 +27,7 @@
 		
 		// @include bp(med) {
 			@extend %meta;
-			font-weight: 700;
+			// font-weight: 700;
 			// text-align: left;	
 		// }
 		
@@ -36,6 +39,5 @@
 	// max-width: $screen-sm/2;
 
 	// @include make-sm-column(6, false);
-	@include make-md-column(6, false);
-	@include make-lg-column(12, false);
+
 }

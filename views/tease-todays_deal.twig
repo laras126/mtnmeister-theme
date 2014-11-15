@@ -6,9 +6,8 @@
 {% set d = todays_deal|first %}
 
 <article class="tease tease-featured row">
-<div class="row">
 	<div class="col-sm-8">
-		<h4 class="tagline">{{d.title}}</h4>
+		<h4 class="tagline"><a href="{{d.deal_link}}" target="blank" title="{{d.title}}">{{d.title}}</a></h4>
 		<p class="tagline">By: <span class="special">{{d.deal_vendor}}</span></p>
 	
 		<p>{{d.deal_desc}}</p>
@@ -18,6 +17,7 @@
 	
 	<div class="col-sm-4">
 		{# This is conditional is because we weren't using featured images initially, and are now #}
+		<a href="{{d.deal_link}}" target="blank" title="{{m.title}}">
 		{% if d.thumbnail %}
 			<img src="{{d.thumbnail.src}}" alt="{{d.title}}">
 		{% elseif d.deal_pic %}
@@ -27,7 +27,8 @@
 			{% set default = site.theme.uri ~ '/assets/img/util/default-meister.png' %}
 			<img src="{{default}}" alt="{{d.title}}">
 		{% endif %}
-		<a class="btn-cta" href="{{d.link}}" title="{{m.title}}">Claim it</a>		
-	</div></div>
+		</a>
+		<a class="btn-cta" href="{{d.deal_link}}" target="blank" title="{{m.title}}">Claim it</a>		
+	</div>
 
 </article> <!-- /.tease -->

@@ -11,7 +11,7 @@ function mtn_styles_scripts() {
   if (!is_admin()) {
     wp_deregister_script('jquery');
     wp_register_script('jquery', '//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js', array(), null, true);
-    wp_enqueue_script('jquery');
+    wp_enqueue_script('jquery', true);
   }
 
   // Add MTNmeister JS

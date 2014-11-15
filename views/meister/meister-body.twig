@@ -61,7 +61,8 @@
 					 		<img src="{% if gear.thumbnail %}{{gear.thumbnail.src}}{% elseif gear.gear_photo %}{{TimberImage(gear.gear_photo).src}}{% else %}{{default}}{% endif %}" alt="{{gear.post_title}}">
 					 	</a>
 					 	{{gear.thumbnail}}
-					 </div> 
+					 </div>
+
 					{% if gear.time_in_episode %}
 
 					{% endif %}

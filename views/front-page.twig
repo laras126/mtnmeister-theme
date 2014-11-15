@@ -1,43 +1,9 @@
 {% extends "page.twig" %}
 
-{% block content %}
-	{# {% for img in header_images|slice(0,5) %}
-		<img style="width: 33%; float: left;" src="{{TimberImage(img.mobile_image).src}}" alt="">
-	{% endfor %} #}
-	{% include 'partials/page-header.twig' %}
+{% block today %}
+	{% include ['tease-todays_meister.twig', 'tease.twig'] %}
+{% endblock %}
 
-	<div class="container">
-		<h1><span class="special">MTN</span>MEISTER</h1>
-
-		<h2>{{post.tagline}}</h2>
-		<div class="col-sm-4">
-			<img src="http://www.mtnmeister.com/wp-content/uploads/2014/04/iTunes_New.v5.png" alt="">	
-		</div>
-		<div class="col-sm-4">
-			<img src="http://www.mtnmeister.com/wp-content/uploads/2014/04/soundcloud.png" alt="">
-		</div>
-		<div class="col-sm-4">
-			<img src="http://www.mtnmeister.com/wp-content/uploads/2014/05/Stitcher-Radio-Logo-2.png" alt="">
-		</div>
-		
-	</div>
-			
-	<section class="home-teases container">
-		<div class="tease-home">
-			{# {% include ['tease-todays_meister.twig', 'tease.twig'] %} #}
-			{% set m = todays_meister|first %}
-			<header class="tease-header">
-				<span class="number-wrap">
-					<div class="number"><span># {{m.episode_num}}</span><span class="meta" style="font-weight: 400">{{m.date}}</div>
-				</span>
-				<h3 class="tagline tagline-page"><a href="{{m.link}}">{{m.episode_tag}}</a></h3>
-				<p class="tagline tagline-tease">{{m.title}}</p>
-			</header>
-			{{m.episode_soundcloud_small}}
-		</div>
-		<div class="tease-home"></div>
-		{% for deal in post.featured_deal %}
-			{% include ['tease-deal.twig', 'tease.twig'] %}
-		{% endfor %}
- 	</section>
+{% block loop %}
+hi loop
 {% endblock %}

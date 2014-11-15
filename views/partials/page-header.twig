@@ -13,6 +13,8 @@
 	    </div>
 	</div>
 
-	<p class="caption page-header-caption">{{meister[0].episode_tag}} {% if meister %} <br><a class="special" href="{{meister[0].link}}">#{{meister[0].episode_num}} {{meister[0].title}}</a> {% endif %}</p>
+	{% if meister[0] %}
+		<p class="caption page-header-caption">{{meister[0].episode_tag}} {% if meister %} <br><a class="special" href="{{meister[0].link}}">#{{meister[0].episode_num}} {{meister[0].title}}</a> {% endif %}</p>
+	{% endif %}
 
 </header>

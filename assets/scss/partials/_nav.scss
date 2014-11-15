@@ -44,6 +44,14 @@
 
 .menu-item-cta {
 	@extend .no-margin;
+	// @exte
+	padding-bottom: $sml;
+
+	// Bad max width
+	@media(max-width: $screen-md) {
+		@include make-xs-column(6, false);	
+	}
+	
 
 	.cta { @extend .btn; }
 	.cta-alt { @extend .btn-alt; }

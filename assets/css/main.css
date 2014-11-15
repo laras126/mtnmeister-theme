@@ -1408,9 +1408,6 @@ img {
   max-width: 100%;
   height: auto; }
 
-.tagline-tease {
-  color: #f8992f; }
-
 .number {
   border-bottom: 1px solid lightgray;
   position: relative; }
@@ -2128,9 +2125,9 @@ input[type="checkbox"]:focus {
 .tease-title {
   padding: 0; }
 
-.tease-meta {
-  font-size: 0.8rem;
-  color: #999; }
+.tagline-tease {
+  color: #f8992f;
+  margin: 0.8rem 0; }
 
 .tease-body iframe, .article-body-block iframe {
   height: 120px; }

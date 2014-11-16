@@ -7,15 +7,15 @@
 
 .container {
 	@extend %container;
-	max-width: $screen-sm;
+	// max-width: $screen-sm;
 	
-	@include bp(med) {
-		max-width: $screen-md;
-	}
-
-	@include bp(large) {
+	// @include bp(med) {
+		// max-width: $screen-md;
+	// }
+// 
+	// @include bp(large) {
 		max-width: $screen-lg;
-	}
+	// }
 	
 }
 
@@ -75,7 +75,10 @@
 }
 
 .item-img img {
-	padding-left: $h3;
+	@include bp(small) {
+		padding-left: $h3;	
+	}
+	
 	display: block;
 	margin: 0 auto;
 }

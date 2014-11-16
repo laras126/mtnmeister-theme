@@ -572,7 +572,7 @@ th {
 .col-xs-offset-0 {
   margin-left: 0%; }
 
-@media (min-width: 768px) {
+@media (min-width: 50em) {
   .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12 {
     float: left; }
 
@@ -728,7 +728,7 @@ th {
 
   .col-sm-offset-0 {
     margin-left: 0%; } }
-@media (min-width: 992px) {
+@media (min-width: 62em) {
   .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12 {
     float: left; }
 
@@ -1513,6 +1513,12 @@ img {
   display: block;
   margin: 0 auto; }
 
+.scrolled {
+  background: #043f7e !important;
+  -webkit-transition: all 0.5s ease;
+       -o-transition: all 0.5s ease;
+          transition: all 0.5s ease; }
+
 .number {
   border-bottom: 1px solid lightgray;
   position: relative; }
@@ -1759,13 +1765,7 @@ input[type="checkbox"]:focus {
   padding-right: 1rem; }
 
 .container, .container-squish {
-  max-width: 35em; }
-  @media (min-width: 50em) {
-    .container, .container-squish {
-      max-width: 50em; } }
-  @media (min-width: 62em) {
-    .container, .container-squish {
-      max-width: 62em; } }
+  max-width: 62em; }
 
 @media (min-width: 62em) {
   .container-squish {
@@ -1799,9 +1799,11 @@ input[type="checkbox"]:focus {
     width: 50%; } }
 
 .item-img img {
-  padding-left: 2rem;
   display: block;
   margin: 0 auto; }
+  @media (min-width: 35em) {
+    .item-img img {
+      padding-left: 2rem; } }
 
 .mtns {
   position: relative;
@@ -1835,9 +1837,6 @@ input[type="checkbox"]:focus {
 .menu-main {
   overflow: hidden;
   max-height: 0;
-  -webkit-transition: all 0.2s ease-in-out;
-       -o-transition: all 0.2s ease-in-out;
-          transition: all 0.2s ease-in-out;
   position: relative;
   float: left;
   width: 100%;
@@ -1997,14 +1996,14 @@ input[type="checkbox"]:focus {
 .page-header {
   margin-top: 2.4rem;
   height: 350px;
-  height: 32vh;
+  height: 35vh;
   overflow: hidden;
   background-color: #043f7e;
   position: relative; }
   @media (min-width: 25em) {
     .page-header {
       height: 350px;
-      height: 37vh; } }
+      height: 38vh; } }
   @media (min-width: 34em) {
     .page-header {
       height: 350px;
@@ -2133,15 +2132,19 @@ input[type="checkbox"]:focus {
   color: #f8992f;
   margin: 0.8rem 0; }
 
-.tease-body iframe, .article-body-block iframe {
+.tease-body iframe,
+.article-section iframe {
   height: 120px; }
-  .tease-featured .tease-body iframe, .tease-featured .article-body-block iframe {
+  .tease-featured .tease-body iframe, .tease-featured
+  .article-section iframe {
     height: 300px; }
     @media (min-width: 50em) {
-      .tease-featured .tease-body iframe, .tease-featured .article-body-block iframe {
+      .tease-featured .tease-body iframe, .tease-featured
+      .article-section iframe {
         height: 420px; } }
   @media (min-width: 50em) {
-    .tease-body iframe, .article-body-block iframe {
+    .tease-body iframe,
+    .article-section iframe {
       height: 160px; } }
 
 .widgets {
@@ -2156,13 +2159,15 @@ input[type="checkbox"]:focus {
 
 .widget {
   padding: 1rem 1rem 0;
-  background-color: #f2f2f2;
-  margin-bottom: 1.3rem;
-  border: 1px solid lightgray; }
+  margin-bottom: 1.3rem; }
   .widget p {
     text-align: center;
     padding: 0.8rem;
     background-color: #fff; }
+  @media (min-width: 62em) {
+    .widget {
+      border: 1px solid lightgray;
+      background-color: #f2f2f2; } }
 
 .svgsprites {
   display: none; }
@@ -2188,9 +2193,46 @@ input[type="checkbox"]:focus {
 .featured-img {
   padding-right: 1rem; }
 
+.featured-img img,
+.item-img img {
+  max-width: 300px; }
+  @media (min-width: 35em) {
+    .featured-img img,
+    .item-img img {
+      max-width: 100%; } }
+
 @media (min-width: 50em) {
   .featured-desc {
     padding-left: 1rem; } }
+
+@media (min-width: 35em) {
+  .tease-featured-deal .featured-desc {
+    position: relative;
+    min-height: 1px;
+    float: left;
+    width: 50%; } }
+@media (min-width: 50em) {
+  .tease-featured-deal .featured-desc {
+    position: relative;
+    min-height: 1px;
+    float: left;
+    width: 66.66667%; } }
+@media (min-width: 35em) {
+  .tease-featured-deal .featured-desc {
+    padding-left: 0;
+    padding-right: 1rem; } }
+@media (min-width: 35em) {
+  .tease-featured-deal .featured-img {
+    position: relative;
+    min-height: 1px;
+    float: left;
+    width: 50%; } }
+@media (min-width: 50em) {
+  .tease-featured-deal .featured-img {
+    position: relative;
+    min-height: 1px;
+    float: left;
+    width: 33.33333%; } }
 
 .page-content .tagline-page {
   padding: 0; }

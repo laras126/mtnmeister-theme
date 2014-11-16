@@ -16,6 +16,9 @@
 	margin: $sml 0;
 }
 
+
+// Just inefficient
+
 .featured-img,
 .featured-desc {
 	@include make-md-column(6, false);
@@ -25,17 +28,54 @@
 	padding-right: 1rem;
 }
 
+.featured-img,
+.item-img {
+	img {
+		max-width: 300px;
+		// @extend %center-block;
+		
+		@include bp(small) {
+			max-width: 100%;
+		}
+	}
+}
+
 .featured-desc {
 	@include bp(med) {
 		padding-left: $base;
 	}
 }
 
+
+.tease-featured-deal {
+
+	// @extend %row;
+
+	.featured-desc {
+		@include make-sm-column(6, false);
+		@include make-md-column(8, false);
+		
+		@include bp(small) {
+			padding-left: 0;
+			padding-right: 1rem;
+		}
+	}
+
+	.featured-img {
+		@include make-sm-column(6, false);
+		@include make-md-column(4, false);
+	}
+}
+
+// Hacky
+
 .tagline-page {
 	.page-content & {
 		padding: 0;
 	}
 }
+
+
 
 .share-links {
 	@include make-xs-column(12, false);
@@ -50,6 +90,7 @@
 	background: $accent-dark !important;
 	transition: all 0.5s ease;
 }
+
 
 // This is verbose
 .btn-tweet {

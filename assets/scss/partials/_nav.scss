@@ -8,7 +8,7 @@
 	overflow: hidden;
 	max-height: 0;
 	
-	transition: all 0.2s ease-in-out;
+	// transition: all 0.2s ease-in-out;
 	
 	@include make-xs-column(12, false);
 	@include make-lg-column(8);

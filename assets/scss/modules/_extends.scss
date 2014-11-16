@@ -26,9 +26,9 @@
   @include make-sm-column(6);
   
   @include bp(small) {
-	&:nth-child(2n+1){
-	  clear:left;
-	}  
+  	&:nth-child(2n+1){
+  	  clear:left;
+  	}  
   }
 }
 

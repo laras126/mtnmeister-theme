@@ -1,14 +1,14 @@
 
-	<div class="article-body-block container-squish">
+	<div class="article-section container-squish">
 
-		<div class="col-sm-6">
+		<div class="featured-desc">
 			<p>{{post.meister_bio}}</p>
 			{% include 'partials/cat-list.twig' %}
 				
 			<p>SHARE BUTTONS HERE</p>
 		</div>
 
-		<div class="col-sm-6">
+		<div class="featured-img">
 
 			{% if post.thumbnail %}
 				<img src="{{post.thumbnail.src}}" alt="{{post.title}}">
@@ -25,7 +25,7 @@
 	</div>
 
 
-	<div class="article-body-block container">
+	<div class="article-section container">
 
 		<div class="quote-container">
 			<blockquote class="quote-featured">{{post.quote_text}}</blockquote>
@@ -39,11 +39,10 @@
 
 	</div>
 
-	<section class="article-body-block container-squish">
+	<section class="article-section container-squish">
 
-		<h3>Gear Recommendations</h3>
-		<p class="lead">Every episode we ask the Meister to recommend some gear for the listeners. This time...</p>
-
+		<h3 class="tease-title">Gear Recommendations</h3>
+		
 		{% for item in post.get_field('connected_gear') %}
 
 			{% for gear in item.gear_item %}
@@ -56,7 +55,7 @@
 					    <p>{{gear.gear_description}}</p>
 					 </div>
 					 <div class="item-img">
-					 	<a href="{{gear.gear_link}}" title="{{gear.post_title}}">
+					 	<a href="{{gear.gear_link}}" target="blank" title="{{gear.post_title}}">
 					 		{# TODO: also not working... pulling thumbnail from current post #}
 					 		<img src="{% if gear.thumbnail %}{{gear.thumbnail.src}}{% elseif gear.gear_photo %}{{TimberImage(gear.gear_photo).src}}{% else %}{{default}}{% endif %}" alt="{{gear.post_title}}">
 					 	</a>
@@ -73,7 +72,7 @@
 
 	</section>
 
-	<section class="container-squish">
+	<section class="article-section container-squish">
 		
 		{% if post.connected_deal %}
 			<h3>Deals, deals, deals!</h3>

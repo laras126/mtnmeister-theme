@@ -6,7 +6,9 @@
 
 {% block loop %}
 	{% include 'tease-todays_deal.twig' %}
+	<div class="row">
 	{% for post in deals %}
-		{% include ['tease-deal.twig', 'tease.twig'] %}
+		{% include ['tease-deal.twig', 'tease.twig'] %}	
 	{% endfor %}
+	</div>
 {% endblock %}

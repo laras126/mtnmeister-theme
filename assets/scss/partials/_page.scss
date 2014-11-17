@@ -14,13 +14,19 @@ h4 {
 	color: $text-light;
 	@extend %upperspace;
 	position: relative;
-	z-index: 9999;
+	z-index: 9;
 	@extend %full_width;
 	
 	top: $h5;
 
+	font-size: $h1*0.75;
+
+	@include bp(xs) {
+		font-size: $h1;
+	}
+
 	@include bp(small) {
-		font-size: $h1*1.5;
+		font-size: $h1*1.25;
 		top: $h4;
 	}
 
@@ -30,13 +36,17 @@ h4 {
 	}
 }
 
+	 .page-title {
+
+	}
+
 .page-header {
 	margin-top: $h2;
-	height: 350px;
+	height: 290px;
 	height: 35vh;	
 
 	@media(min-width: 25em) {
-		height: 350px;
+		height: 300px;
 		height: 38vh;
 	}
 
@@ -50,12 +60,12 @@ h4 {
 		height: 60vh;	
 	}
 
-	@include bp(med) {
+	@include bp(med) { // 50em
 		height: 600px;
 		height: 70vh;	
 	}
 
-	@include bp(large) {
+	@include bp(large) { // 62em
 		margin-top: 0;
 		height: 650px;
 		height: 80vh;

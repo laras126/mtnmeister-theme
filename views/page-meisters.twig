@@ -5,9 +5,23 @@
 {% endblock %}
 
 {% block loop %}
-	<div class="loop">
-		{% for post in meisters %}
+	<div class="loop loop-main">
+		{% for post in meisters|slice(1, 4) %}
 			{% include ['tease-meister.twig', 'tease.twig'] %}
+		{% endfor %}	
+	</div>
+	<div class="loop loop-minor">
+
+		{# Actually, it would be nice to have this list categories! Like this:
+
+		Running
+
+		#85 - Running with the bulls
+		#87 - Ultrarunning metaphor
+		#2 - Polar runniny #}
+
+		{% for post in meisters|slice(5) %}
+			{% include ['tease-meister_minor.twig', 'tease.twig'] %}
 		{% endfor %}	
 	</div>
 {% endblock %}

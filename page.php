@@ -37,7 +37,7 @@
 // Exclude the most recent post
 $meister_args = array( 
 				'post_type' => 'meister', 
-				'posts_per_page' => 10,
+				'posts_per_page' => -1,
 				'paged' => $paged,
 				'offset' => 1
 			);
@@ -62,7 +62,8 @@ $deal_args = array(
 				'post_type' => 'deal',
 				'posts_per_page' => 10,
     			'paged' => $paged,
-    			'offset' => 1
+    			'offset' => 1,
+    			'orderby' => 'menu_order'
     		);
 
 

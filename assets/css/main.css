@@ -354,6 +354,34 @@ td,
 th {
   padding: 0; }
 
+.animated {
+  -webkit-animation-duration: 1s;
+  -o-animation-duration: 1s;
+     animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  -o-animation-fill-mode: both;
+     animation-fill-mode: both; }
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+@-o-keyframes fadeIn {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+@keyframes fadeIn {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+.fadeIn {
+  -webkit-animation-name: fadeIn;
+  -o-animation-name: fadeIn;
+     animation-name: fadeIn; }
+
 [class^="icon-"], [class*=" icon-"] {
   display: inline-block;
   color: #000000;
@@ -1097,6 +1125,20 @@ th {
     width: 50%; } }
 @media (min-width: 35em) {
   .tease-deal:nth-child(2n+1) {
+    clear: left; } }
+
+@media (min-width: 50em) {
+  .tease-deal {
+    position: relative;
+    min-height: 1px;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    float: left;
+    width: 33.33333%; } }
+@media (min-width: 50em) {
+  .tease-deal:nth-child(2n+1) {
+    clear: none; }
+  .tease-deal:nth-child(3n+1) {
     clear: left; } }
 
 .clearfix:before, .nav-prevnext:before, .widget p:before, .main:before, .creds-wrap:before, .container:before, .container-squish:before, .item:before, .header:before, .clearfix:after, .nav-prevnext:after, .widget p:after, .main:after, .creds-wrap:after, .container:after, .container-squish:after, .item:after, .header:after {
@@ -1982,11 +2024,15 @@ input[type="checkbox"]:focus {
 .page-title {
   color: #fff;
   position: relative;
-  z-index: 9999;
-  top: 1rem; }
+  z-index: 9;
+  top: 1rem;
+  font-size: 2.55rem; }
+  @media (min-width: 28em) {
+    .page-title {
+      font-size: 3.4rem; } }
   @media (min-width: 35em) {
     .page-title {
-      font-size: 5.1rem;
+      font-size: 4.25rem;
       top: 1.3rem; } }
   @media (min-width: 50em) {
     .page-title {
@@ -1995,14 +2041,14 @@ input[type="checkbox"]:focus {
 
 .page-header {
   margin-top: 2.4rem;
-  height: 350px;
+  height: 290px;
   height: 35vh;
   overflow: hidden;
   background-color: #043f7e;
   position: relative; }
   @media (min-width: 25em) {
     .page-header {
-      height: 350px;
+      height: 300px;
       height: 38vh; } }
   @media (min-width: 34em) {
     .page-header {

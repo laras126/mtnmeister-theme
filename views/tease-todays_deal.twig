@@ -8,17 +8,16 @@
 <article class="tease tease-featured-deal">
 
 	<div class="featured-desc">
-		<h4 class="tagline"><a href="{{d.deal_link}}" target="blank" title="{{d.title}}">{{d.title}}</a><svg class="shape shape-icon shape-meta"><use xlink:href="#shape-new-window"/></svg></h4>
+		<h4><a href="{{d.deal_link}}" target="blank" title="{{d.title}}">{{d.title}}</a><svg class="shape shape-icon shape-meta"><use xlink:href="#shape-new-window"/></svg></h4>
 		<p class="tagline">By: <span class="special">{{d.deal_vendor}}</span></p>
-	
 		<p>{{d.deal_desc}}</p>
 		<p>{{d.deal_cta}}</p>	
 		<p class="meta">Expires: {{d.expiration_date|date("m/d/Y")}}</p>
 	</div>	
 	
 	<div class="featured-img">
-		{# This is conditional is because we weren't using featured images initially, and are now #}
 		<a href="{{d.deal_link}}" target="blank" title="{{m.title}}">
+		{# This conditional is because we weren't using featured images initially, and are now - no need to add them again, at least at first. Well, it's not working. #}
 		{% if d.thumbnail %}
 			<img src="{{d.thumbnail.src}}" alt="{{d.title}}">
 		{% elseif d.deal_pic %}
@@ -29,7 +28,7 @@
 			<img src="{{default}}" alt="{{d.title}}">
 		{% endif %}
 		</a>
-		<a class="btn-cta" href="{{d.deal_link}}" target="blank" title="{{m.title}}">Claim it</a>		
+		<a class="btn-cta" href="{{d.deal_link}}" target="blank" title="{{m.title}}">Claim it</a>	
 	</div>
 
 </article> <!-- /.tease -->

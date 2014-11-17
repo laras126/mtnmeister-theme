@@ -1,10 +1,23 @@
 
 <div class="clearfix">
-	<h3 class="block-title">Your Host</h3>
-	<div class="col-sm-4">
-		<img src="{{TimberImage(content.image).src}}" />	
+	<div class="featured-img">
+		{% if content.image_location == 'left' %}
+			<img src="{{TimberImage(content.image).src}}" />	
+		{% else %}
+			{% if content.heading %}
+				<h4>{{content.heading}}</h4>
+			{% endif %}
+			{{content.text}}
+		{% endif %}
 	</div>
-	<div class="col-sm-8">
-		<p>{{content.text}}</p>	
+	<div class="featured-desc">
+		{% if content.image_location == 'right' %}
+			<img src="{{TimberImage(content.image).src}}" />
+		{% else %}
+			{% if content.heading %}
+				<h4>{{content.heading}}</h4>
+			{% endif %}
+			{{content.text}}
+		{% endif %}
 	</div>	
 </div>

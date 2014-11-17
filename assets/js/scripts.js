@@ -10,6 +10,8 @@
 	console.log('Check it: http://github.com/laras126/mtnmeister-theme');
 
 
+	// $(window).scroll(lazyLoadIframes);
+ //   	lazyLoadIframes();
 
 	// ----
 	// Toggle menu
@@ -72,81 +74,96 @@
 	// Load iframes when visible on page
 	// ----
 
+	var $iframes = $('iframe');
+	var src = $(this).attr('src');
+	var loaded = $(this).attr('data-loaded');
+
+	console.log($iframes);
+
+	$iframes.attr('data-loaded', false);
+
+	// http://stackoverflow.com/a/7154968/609046
+	// Interrupt the HTTP request and save the src
+	// $iframes.attr('data-src', function() {
+	// 	var src = $(this).attr('src');
+	    
+	//     if( !loaded ) {
+	//     	$(this).removeAttr('src');
+	//     	console.log('bye, iframe');
+	//     	return src;
+	//     }
+	// });
+
+	// http://stackoverflow.com/a/10211585/609046
+	function lazyLoadIframes(){
+	   var wt = $(window).scrollTop();    //* top of the window
+	   var wb = wt + $(window).height();  //* bottom of the window
+
+	   $iframes.each( function(index, value){
+	   		
+	      	var ot = $(this).offset().top;  //* top of object (i.e. advertising div)
+	      	var ob = ot + $(this).height(); //* bottom of object
+
+	      	if( !loaded && wt<=ob && wb >= ot ){
+				
+				$(this).attr('data-loaded', true);
+				
+				// Make the HTTP request
+	   			$(this).attr('src', function() {
+			        return $(this).data('src');
+			    });
+
+				$(this).css('border', '3px solid yellow');
+				console.log('iframe!');
+
+				// $(this).unbind('attr');
+				
+	      	}
+	   });
+	}
+
+	// Check if the iframe is visible when scrolling, load if it is.
+	$(window).scroll(function() {
+	    clearTimeout($.data(this, 'scrollTimer'));
+	    $.data(this, 'scrollTimer', setTimeout(function() {
+	        // lazyLoadIframes();
+	    }, 250));
+	});
+
+
 	// http://stackoverflow.com/questions/9144560/jquery-scroll-detect-when-user-stops-scrolling
 	// http://stackoverflow.com/questions/487073/check-if-element-is-visible-after-scrolling
 	// http://stackoverflow.com/questions/7154958/lazy-load-iframe-delay-src-http-call-with-jquery
 	
 	// Check if an element is within the viewport
-	function isScrolledIntoView(elem) {
-    	var docViewTop = $(window).scrollTop();
-    	var docViewBottom = docViewTop + $(window).height();
+	// function isScrolledIntoView(elem) {
+ //    	var docViewTop = $(window).scrollTop();
+ //    	var docViewBottom = docViewTop + $(window).height();
 
-    	var elemTop = $(elem).offset().top;
-    	var elemBottom = elemTop + $(elem).height();
+ //    	var elemTop = $(elem).offset().top;
+ //    	var elemBottom = elemTop + $(elem).height();
 
-    	return ((elemBottom <= docViewBottom) && (elemTop >= docViewTop));
-	}
+ //    	console.log((elemBottom <= docViewBottom) && (elemTop >= docViewTop));
+	// }
 	
 
-	var iframes = $('iframe');
-	var iframeVisible = false;
+	// var iframes = $('iframe');
+	// var iframeVisible = false;
 
-	
-	iframes.each(function() {
+	// isScrolledIntoView(iframes);
 
-		// Interrupt the HTTP request
-	    // var src = $(this).attr('src');
-	    // $(this).data('src', src).attr('src', '');
-	    // console.log('no iframe!');
-		
-		$(window).scroll(function() {
-	    	// console.log($(this).scrollTop());
-	    	// console.log($total_ht);
-	    });
 
-		// $(window).scroll(function() {
-			
-		// 	var iframeOffset = $(this).offset();
-		// 	var iframeHeight = $(this).height();
-
-	 //    	if( (iframeOffset.top + iframeHeight) >= $(window).height() ) {
-	 //    		console.log('hi iframe!');
-		// 		$(this).attr('src', function() {
-	 //    			return $(this).data('src');
-		// 		});
-	 //    	}
-	 //    });
-
-	    // Load the iframe a few px before its visible
-	    
-	});
-	
-	$(window).scroll(function() {
-
-		if( $('.tease-featured').scrollTop() > $total_ht ) {
-			
-		}
-	});
-
-	
-	
-
-	// Check if the iframe is visible when scrolling, load if it is.
 	// $(window).scroll(function() {
-	//     clearTimeout($.data(this, 'scrollTimer'));
-	//     $.data(this, 'scrollTimer', setTimeout(function() {
-	        
-	//         var iframeVisible = isScrolledIntoView(iframes);
-	//         console.log(iframeVisible);
 
-	// 		if( iframeVisible ) {
-	//         	iframes.attr('src', function() {
-	// 	        	return $(this).data('src');
-	// 	    	});
-	// 	    }
-	        
-	//     }, 250));
+	// 	if( $('.tease-featured').scrollTop() > $total_ht ) {
+			
+	// 	}
 	// });
+
+	
+	
+
+
 
 
 	

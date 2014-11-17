@@ -3,7 +3,7 @@
 <header class="page-header animated fadeIn">
 	{% include 'partials/spinner.twig' %}
 	<picture>
-		<source srcset="{{TimberImage(header_image.image).src}}" media="(min-width: 56em)">
+		<source srcset="{{TimberImage(header_image.image).src}}" media="(min-width: 50em)">
 		<img class="page-header-image" srcset="{{TimberImage(header_image.image).src|resize(650)}}" alt="{{header_image.caption}} {% if meister %} - #{{meister[0].episode_num}} {{meister[0].title}} {% endif %}">
 	</picture>
 	

@@ -25,16 +25,20 @@
 }
 
 .featured-img {
-	padding-right: 1rem;
+	padding-left: 1rem;
 }
 
 .featured-img,
 .item-img {
 	img {
-		max-width: 300px;
-		// @extend %center-block;
 		
-		@include bp(small) {
+		max-width: 100%;
+
+		@media(min-width: 18em) {
+			max-width: 250px;
+		}
+		
+		@include bp(med) {
 			max-width: 100%;
 		}
 	}

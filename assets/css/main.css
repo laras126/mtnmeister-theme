@@ -2237,12 +2237,16 @@ input[type="checkbox"]:focus {
     width: 50%; } }
 
 .featured-img {
-  padding-right: 1rem; }
+  padding-left: 1rem; }
 
 .featured-img img,
 .item-img img {
-  max-width: 300px; }
-  @media (min-width: 35em) {
+  max-width: 100%; }
+  @media (min-width: 18em) {
+    .featured-img img,
+    .item-img img {
+      max-width: 250px; } }
+  @media (min-width: 50em) {
     .featured-img img,
     .item-img img {
       max-width: 100%; } }

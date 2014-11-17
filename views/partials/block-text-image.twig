@@ -1,23 +1,19 @@
+{% set loc = content.image_location %}
 
-<div class="clearfix">
+<h4>{{content.heading}}</h4>
+<div class="row">
 	<div class="featured-img">
-		{% if content.image_location == 'left' %}
-			<img src="{{TimberImage(content.image).src}}" />	
+		{% if loc == 'left' %}
+			<img src="{{TimberImage(content.image).src}}" />
 		{% else %}
-			{% if content.heading %}
-				<h4>{{content.heading}}</h4>
-			{% endif %}
 			{{content.text}}
 		{% endif %}
 	</div>
 	<div class="featured-desc">
-		{% if content.image_location == 'right' %}
+		{% if loc == 'right' %}
 			<img src="{{TimberImage(content.image).src}}" />
 		{% else %}
-			{% if content.heading %}
-				<h4>{{content.heading}}</h4>
-			{% endif %}
 			{{content.text}}
 		{% endif %}
-	</div>	
+	</div>
 </div>

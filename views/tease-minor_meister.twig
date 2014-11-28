@@ -2,17 +2,23 @@
 
 {% block content %}
 
-<div class="col-sm-6">
-	
-<header class="tease-header">
 	<span class="number-wrap">
 		<div class="number"><span># {{post.episode_num}}</span><span class="meta">{{post.date}}</span></div>
 	</span>
-	<h5><a href="{{post.link}}">{{post.episode_tag}}</a></h5>
-	<p class="tagline tagline-tease">{{post.title}}</p>
-	<a class="link-more" href="{{post.link}}" title="{{post.title}}">Read more &rarr;</a>
-</header>
+	{# <br> #}
+	<a href="{{post.link}}">
+	<h5 class="tagline">{{post.title}}</h5>
+	<br>
+	<div class="thumb-container">
+		
+			{% if post.get_thumbnail %}
+				<img src="{{post.thumbnail.src}}" />
+			{% endif %}
 
-</div>
-
+			<div class="thumb-caption">
+				<p class="tagline">{{post.episode_tag}}</p>
+			</div>
+		
+	</div>
+	</a>
 {% endblock %}

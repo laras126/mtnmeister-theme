@@ -34,7 +34,7 @@
 	
 
 	// ----
-	// Fix the nav when scrolling
+	// Fade in the nav background when scrolling
 	// ----
 
   	var $scroll_class = "scrolled",
@@ -163,7 +163,16 @@
 	
 	
 
+	// ----
+	// Slide up episode info on Minor Meister hover
+	// ----
 
+	$('.thumb-container').hover( function() {
+		$(this).find('.thumb-caption').stop(true, true).slideDown(300);
+		console.log('poop');
+	}, function() {
+		$(this).find('.thumb-caption').stop(true, true).slideUp(300);
+	});
 
 
 	

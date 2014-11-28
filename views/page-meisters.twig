@@ -10,7 +10,10 @@
 			{% include ['tease-meister.twig', 'tease.twig'] %}
 		{% endfor %}	
 	</div>
-	<div class="loop loop-minor">
+{% endblock %}
+
+{% block loop_minor %}
+	<div class="loop loop-minor clearfix">
 
 		{# Actually, it would be nice to have this list categories! Like this:
 
@@ -21,7 +24,7 @@
 		#2 - Polar runniny #}
 
 		{% for post in meisters|slice(5) %}
-			{% include ['tease-meister_minor.twig', 'tease.twig'] %}
-		{% endfor %}	
+			{% include ['tease-minor_meister.twig', 'tease.twig'] %}
+		{% endfor %}
 	</div>
 {% endblock %}

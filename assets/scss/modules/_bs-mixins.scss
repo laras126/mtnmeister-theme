@@ -72,6 +72,7 @@ $grid-float-breakpoint-max: ($grid-float-breakpoint - 1) !default;
   @extend .clearfix;
 }
 
+
 // Generate the extra small columns
 @mixin make-xs-column($columns, $gutter: $grid-gutter-width) {
   position: relative;
@@ -178,4 +179,41 @@ $grid-float-breakpoint-max: ($grid-float-breakpoint - 1) !default;
   @media (min-width: $screen-lg-min) {
     right: percentage(($columns / $grid-columns));
   }
+}
+
+// ----
+// Generate Utility Classes
+// ----
+
+$placeholder-loop: 13;
+
+@for $i from 1 to $placeholder-loop {
+    .col-xs-#{$i} { @include make-xs-column($i); }
+    .col-xs-push-#{$i} { @include make-xs-column-push($i); }
+    .col-xs-pull-#{$i} { @include make-xs-column-pull($i); }
+    // .col-xs-#{$i}-offset { @include make-xs-column-offset($i); }
+    .col-xs-#{$i}-np { @include make-xs-column($i, false); }
+
+}
+@for $i from 1 to $placeholder-loop {
+    .col-sm-#{$i} { @include make-sm-column($i); }
+    .col-sm-push-#{$i} { @include make-sm-column-push($i); }
+    .col-sm-pull-#{$i} { @include make-sm-column-pull($i); }
+    .col-sm-offset-#{$i} { @include make-sm-column-offset($i); }
+    .col-sm-#{$i}-np { @include make-sm-column($i, false); }
+}
+@for $i from 1 to $placeholder-loop {
+    .col-md-#{$i} { @include make-md-column($i); }
+    .col-md-push-#{$i} { @include make-md-column-push($i); }
+    .col-md-#{$i}-pull { @include make-md-column-pull($i); }
+    .col-md-#{$i}-np { @include make-md-column($i, false); }
+    // .col-md-#{$i}-offset { @include make-md-column-offset($i); }
+}
+@for $i from 1 to $placeholder-loop {
+    .col-lg-#{$i} { @include make-lg-column($i); }
+    .col-lg-push-#{$i} { @include make-lg-column-push($i); }
+    .col-lg-#{$i}-pull { @include make-lg-column-pull($i); }
+    .col-lg-#{$i}-np { @include make-lg-column($i, false); }
+
+    // .col-lg-#{$i}-offset { @include make-lg-column-offset($i); }
 }

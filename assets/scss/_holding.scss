@@ -24,10 +24,6 @@
 	@include make-md-column(6, false);
 }
 
-.featured-img {
-	padding-left: 1rem;
-}
-
 .featured-img,
 .item-img {
 	img {
@@ -53,8 +49,6 @@
 
 .tease-featured-deal {
 
-	// @extend %row;
-
 	.featured-desc {
 		@include make-sm-column(6, false);
 		@include make-md-column(8, false);
@@ -70,6 +64,8 @@
 		@include make-md-column(4, false);
 	}
 }
+
+
 
 // Hacky
 

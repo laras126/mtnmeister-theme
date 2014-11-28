@@ -15,7 +15,6 @@
 	@extend %row_of_three;
 }
 
-
 	.cta-tease {
 		// @extend .btn;
 	}
@@ -73,5 +72,30 @@
 		@include bp(med) {
 			height: 160px;
 		}
+	}
+}
+
+
+// Loops
+
+.loop-minor .tease {
+	@extend %row_of_three;
+}
+
+.thumb-container {
+	position: relative;
+
+}
+
+.thumb-caption {
+	position: absolute;
+	bottom: 0;
+	padding: 0 $base;
+	width: 100%;
+	@include rotate($bkgd: $accent-med);
+	display: none;
+	
+	.tagline {
+		
 	}
 }

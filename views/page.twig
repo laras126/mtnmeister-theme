@@ -22,8 +22,11 @@
 				</aside>
 			{% endif %}	
 		 </div>
-		
-		{% block loop_minor %}{% endblock %}
+		<div class="container">
+			<div class="row">
+				{% block loop_minor %}{% endblock %}		
+			</div>
+		</div>	
 		{# </div> <!-- /.page-body-container --> #}
 
 	{% include 'partials/edit-link.twig' %}

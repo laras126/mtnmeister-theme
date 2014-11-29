@@ -2671,14 +2671,6 @@ input[type="checkbox"]:focus {
 
 .thumb-container {
   position: relative; }
-  .thumb-container img {
-    -webkit-transition: opacity 0.2s ease-in-out;
-         -o-transition: opacity 0.2s ease-in-out;
-            transition: opacity 0.2s ease-in-out; }
-    .thumb-container img:hover {
-      opacity: 0.7; }
-    .thumb-container img:active {
-      opacity: 1; }
 
 .thumb-caption {
   position: absolute;

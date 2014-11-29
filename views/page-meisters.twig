@@ -6,7 +6,7 @@
 
 {% block loop %}
 	<div class="loop loop-main">
-		{% for post in meisters|slice(1, 4) %}
+		{% for post in meisters|slice(1, 1) %}
 			{% include ['tease-meister.twig', 'tease.twig'] %}
 		{% endfor %}	
 	</div>
@@ -23,7 +23,7 @@
 		#87 - Ultrarunning metaphor
 		#2 - Polar runniny #}
 
-		{% for post in meisters|slice(5) %}
+		{% for post in meisters|slice(2) %}
 			{% include ['tease-minor_meister.twig', 'tease.twig'] %}
 		{% endfor %}
 	</div>

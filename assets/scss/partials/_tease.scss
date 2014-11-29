@@ -84,7 +84,15 @@
 
 .thumb-container {
 	position: relative;
-
+	img {
+		transition: opacity 0.2s ease-in-out;
+		&:hover {
+			opacity: 0.7;
+		}
+		&:active {
+			opacity: 1;
+		}
+	}
 }
 
 .thumb-caption {
@@ -94,8 +102,4 @@
 	width: 100%;
 	@include rotate($bkgd: $accent-med);
 	display: none;
-	
-	.tagline {
-		
-	}
 }

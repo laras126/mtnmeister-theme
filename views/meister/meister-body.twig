@@ -9,17 +9,7 @@
 		</div>
 
 		<div class="featured-img">
-
-			{% if post.thumbnail %}
-				<img src="{{post.thumbnail.src}}" alt="{{post.title}}">
-			{% elseif post.meister_pic %}
-				<img src="{{TimberImage(post.meister_pic).src}}" alt="{{post.title}}">
-			{% else %}
-				{# TODO: this isn't working for some reason.... #}
-				{% set default = site.theme.uri ~ '/assets/img/util/default-meister.png' %}
-				<img src="{{default}}" alt="{{post.title}}">
-			{% endif %}
-
+			<img src="{{TimberImage(post.meister_pic).src}}" alt="{{post.title}}">
 		</div>
 		
 	</div>

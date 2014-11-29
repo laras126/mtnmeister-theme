@@ -42,7 +42,7 @@
 
 .featured-desc {
 	@include bp(med) {
-		padding-left: $base;
+		padding-right: $base;
 	}
 }
 

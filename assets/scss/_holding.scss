@@ -19,48 +19,49 @@
 
 // Just inefficient
 
-.featured-img,
-.featured-desc {
+.featured-left,
+.featured-right {
 	@include make-md-column(6, false);
 }
 
-.featured-img,
-.item-img {
-	img {
-		
-		max-width: 100%;
 
-		@media(min-width: 18em) {
-			max-width: 250px;
-		}
-		
+.featured-right {
+	@include bp(med) {
+		padding-left: $base;
+	}
+	img {
+		width: 100%;
+		max-width: 320px;
 		@include bp(med) {
 			max-width: 100%;
+			width: auto;
 		}
-	}
-}
-
-.featured-desc {
-	@include bp(med) {
-		padding-right: $base;
 	}
 }
 
 
 .tease-featured-deal {
 
-	.featured-desc {
-		@include make-sm-column(6, false);
-		@include make-md-column(8, false);
-		
-		@include bp(small) {
-			padding-left: 0;
-			padding-right: 1rem;
+	img {
+		width: 250px;
+		max-width: 100%;
+		@include bp(med) {
+			width: auto;
 		}
 	}
 
-	.featured-img {
-		@include make-sm-column(6, false);
+	.featured-left {
+		@include make-sm-column(6);
+		@include make-md-column(8, false);
+		
+		@include bp(small) {
+			// padding-left: 0;
+			// padding-right: 1rem;
+		}
+	}
+
+	.featured-right {
+		@include make-sm-column(6);
 		@include make-md-column(4, false);
 	}
 }

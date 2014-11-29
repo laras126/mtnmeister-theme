@@ -16,11 +16,11 @@
 	</header>
 
 	<div class="tease-body">
-		<div class="featured-img">
+		<div class="featured-left">
 			{{m.episode_soundcloud_large}}
 		</div>
 
-		<div class="featured-desc">
+		<div class="featured-right">
 			<ul class="list-cats">
 			    {% for cat in m.categories %}
 			        <li class="cat-item"><a href="{{cat.link}}">{{cat.name}}</a></li>
@@ -28,7 +28,7 @@
 			</ul>
 			<p>{{m.meister_bio|truncate(80)}}</p>	
 			<div class="clearfix">
-				<a class="link-more" href="{{m.link}}" title="{{m.title}}">Read more &rarr;</a>		
+				<a class="link-more" href="{{m.link}}" title="{{m.title}}">Read more &rarr;</a>	
 			</div>
 			
 			<div class="col-xs-12">

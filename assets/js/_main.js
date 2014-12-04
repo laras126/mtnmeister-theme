@@ -72,9 +72,9 @@ $(document).ready(function() {
 	var src = $(this).attr('src');
 	var loaded = $(this).attr('data-loaded');
 
-	console.log($iframes);
+	// console.log($iframes);
 
-	$iframes.attr('data-loaded', false);
+	// $iframes.attr('data-loaded', false);
 
 	// http://stackoverflow.com/a/7154968/609046
 	// Interrupt the HTTP request and save the src

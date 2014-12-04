@@ -78,9 +78,9 @@
 	var src = $(this).attr('src');
 	var loaded = $(this).attr('data-loaded');
 
-	console.log($iframes);
+	// console.log($iframes);
 
-	$iframes.attr('data-loaded', false);
+	// $iframes.attr('data-loaded', false);
 
 	// http://stackoverflow.com/a/7154968/609046
 	// Interrupt the HTTP request and save the src
@@ -123,12 +123,12 @@
 	}
 
 	// Check if the iframe is visible when scrolling, load if it is.
-	$(window).scroll(function() {
-	    clearTimeout($.data(this, 'scrollTimer'));
-	    $.data(this, 'scrollTimer', setTimeout(function() {
-	        // lazyLoadIframes();
-	    }, 250));
-	});
+	// $(window).scroll(function() {
+	//     clearTimeout($.data(this, 'scrollTimer'));
+	//     $.data(this, 'scrollTimer', setTimeout(function() {
+	//         // lazyLoadIframes();
+	//     }, 250));
+	// });
 
 
 	// http://stackoverflow.com/questions/9144560/jquery-scroll-detect-when-user-stops-scrolling

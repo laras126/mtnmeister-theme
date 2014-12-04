@@ -81,6 +81,10 @@
 
 // Loops
 
+.loop {
+	@extend %full_width;
+}
+
 .loop-minor .tease {
 	@extend %row_of_three;
 }
@@ -105,4 +109,14 @@
 	width: 100%;
 	@include rotate($bkgd: $accent-med);
 	display: none;
+
+	.tagline {
+		margin-bottom: $sml;
+	}
+
+	.link-more {
+		margin-top: 0;
+		display: block;
+		margin-bottom: $base;
+	}
 }

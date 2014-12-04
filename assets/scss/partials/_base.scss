@@ -82,6 +82,7 @@ img {
 .number-wrap{
 	display: block; 
     margin: 0;
+    @extend .clearfix;
 }
 
 

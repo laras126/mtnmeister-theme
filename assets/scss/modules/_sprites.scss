@@ -6,14 +6,17 @@
 
 .shape-twitter {
 	fill: $text-light;
-
-	.footer & {
+	.footer &, .share-links & {
 		fill: $twitter;
 	}
 }
 
 .shape-facebook {
 	fill: $facebook;
+}
+
+.shape-googleplus {
+	fill: $googleplus;
 }
 
 .shape-instagram {
@@ -27,4 +30,9 @@
 
 .shape-meta {
 	fill: $text-meta;
+}
+
+.shape-share {
+	height: $h4;	
+	width: $h2;
 }

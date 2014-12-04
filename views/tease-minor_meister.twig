@@ -2,23 +2,25 @@
 
 {% block content %}
 
-	<span class="number-wrap">
+	<div class="number-wrap">
 		<div class="number"><span># {{post.episode_num}}</span><span class="meta">{{post.date}}</span></div>
-	</span>
+	</div>
 	{# <br> #}
-	<a href="{{post.link}}">
+	
 	<br>
 	<div class="thumb-container">
-		
-			{% if post.get_thumbnail %}
-				<img src="{{post.thumbnail.src}}" />
-			{% endif %}
+	
+		{% if post.get_thumbnail %}
+			<a href="{{post.link}}">
+				<img src="{{post.thumbnail.src}}" alt="{{post.title}}"/>
+			</a>
+		{% endif %}
 
-			<div class="thumb-caption">
-				<p class="tagline">{{post.episode_tag}}</p>
-			</div>
+		<div class="thumb-caption">
+			<p class="tagline">{{post.episode_tag}}</p>
+			<a href="{{post.link}}" class="link-more">Listen &rarr;</a>
+			<br>
+		</div>
 	</div>
 	<h5 class="tagline">{{post.title}}</h5>
-
-	</a>
 {% endblock %}

@@ -79,10 +79,9 @@
 
 
 .share-links {
-	@include make-xs-column(12, false);
 	@extend %unstyle-list;
 	li {
-		@include make-xs-column(4);
+		display: inline-block;
 	}
 }
 

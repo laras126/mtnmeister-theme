@@ -2613,6 +2613,26 @@ input[type="checkbox"]:focus {
     float: left;
     width: 33.33333%; } }
 
+.image-inline {
+  padding-top: 1rem;
+  padding-bottom: 1rem; }
+  @media (min-width: 30em) {
+    .image-inline {
+      position: relative;
+      min-height: 1px;
+      padding-left: 1rem;
+      padding-right: 1rem;
+      float: left;
+      width: 50%; } }
+
+.image-inline-left {
+  float: left;
+  padding-left: 0; }
+
+.image-inline-right {
+  float: right;
+  padding-right: 0; }
+
 .article-header {
   margin-top: 5.1rem;
   text-align: center; }

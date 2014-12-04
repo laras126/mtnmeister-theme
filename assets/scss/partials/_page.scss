@@ -143,3 +143,23 @@ h4 {
 	@extend %full_width;
 	@include make-lg-column(4);	
 }
+
+
+
+// Text and Image block
+
+.image-inline {
+	@include make-sm-column(6);
+	padding-top: $base;
+	padding-bottom: $base;
+}
+
+	.image-inline-left {
+		float: left;
+		padding-left: 0;
+	}
+
+	.image-inline-right {
+		float: right;
+		padding-right: 0;
+	}

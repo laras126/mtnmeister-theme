@@ -138,6 +138,9 @@ input[type="checkbox"]:focus {
 
 .gform_footer {
 	margin-top: $h3;
+	.gform_button {
+		float: right;
+	}
 }
 
 .ginput_complex label {

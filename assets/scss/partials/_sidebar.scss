@@ -1,4 +1,8 @@
 
+.sidebar {
+	@extend .clearfix;
+}
+
 .widgets {
 	list-style-type: none;
 	margin: $h3 auto 0 auto;
@@ -46,15 +50,20 @@
 	// }
 
 	// max-width: $screen-sm/2;
-	margin-right: $base;
-	&:last-child {
-		margin-right: 0;
+	margin-right: $sml;
+	
+	@include bp(sm) {	
+		&:last-child {
+			margin-right: 0;
+		}
 	}
+
 	@include bp(lg) {
 		margin-right: 0;
 	}
-	@include make-sm-column(6, false);
-	@include make-md-column(4, false);
+
+	@include make-sm-column(5.6, false);
+	@include make-md-column(3.8, false);
 	@include make-lg-column(12, false);
 
 }

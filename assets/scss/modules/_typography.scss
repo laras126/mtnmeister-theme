@@ -1,5 +1,5 @@
 html {
-	font-size: $contain;
+	
 	line-height: $line-height-sml;
 	
 	// Adjust font-size at breakpoints
@@ -16,12 +16,14 @@ html {
 	@include bp(large) {
 		font-size: $contain-lg;
 	}
+	
+	font-family: Arial, sans-serif;
+	font-family: $body-font;
 }
 
 body {
 	font-style: normal;
 	font-weight: normal;
-	font-family: $body-font;
 }
 
 a, a:visited {
@@ -44,7 +46,6 @@ a, a:visited {
 
 h1, h2, h3, h4, h5, h6 {
 	line-height: $line-height-heading;
-	font-family: $heading-font;
 	margin-bottom: 0;
 }
 
@@ -120,7 +121,6 @@ blockquote {
 //
 
 .lead {
-	font-family: $lead-font;
 	@extend %h4;
 	margin-top: 0;
 }

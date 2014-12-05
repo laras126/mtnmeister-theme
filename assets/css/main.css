@@ -1688,8 +1688,9 @@ button, .menu-item-cta .cta, .btn-alt, .cat-item a, .link-more, .menu-item-cta .
       display: block; } }
 
 html {
-  font-size: 100%;
-  line-height: 1.5; }
+  line-height: 1.5;
+  font-family: Arial, sans-serif;
+  font-family: "proxima-nova", Helvetica, sans-serif; }
   @media (min-width: 30em) {
     html {
       font-size: 110%;
@@ -1703,8 +1704,7 @@ html {
 
 body {
   font-style: normal;
-  font-weight: normal;
-  font-family: "proxima-nova", Helvetica, sans-serif; }
+  font-weight: normal; }
 
 a, a:visited {
   color: #043f7e;
@@ -1718,7 +1718,6 @@ a, a:visited {
 
 h1, h2, h3, h4, h5, h6 {
   line-height: 1;
-  font-family: "proxima-nova", Helvetica, sans-serif;
   margin-bottom: 0; }
 
 h1 {
@@ -1790,7 +1789,6 @@ blockquote {
       font-size: 2rem; } }
 
 .lead {
-  font-family: "proxima-nova", Helvetica, sans-serif;
   margin-top: 0; }
 
 .special {
@@ -2395,7 +2393,6 @@ input[type="checkbox"]:focus {
   .menu-item a {
     display: block;
     padding: 0.8rem 0;
-    font-family: "proxima-nova", Helvetica, sans-serif;
     font-weight: 700;
     margin-top: 0; }
 
@@ -2524,14 +2521,15 @@ input[type="checkbox"]:focus {
       top: 2rem; } }
 
 .page-header {
+  overflow: hidden;
+  position: relative;
   width: 100%;
   padding-top: 66.66667%;
+  background-position: center;
   -webkit-background-size: 100% auto;
           background-size: 100% auto;
   background-repeat: no-repeat;
-  overflow: hidden;
-  background-color: #043f7e;
-  position: relative; }
+  background-color: #043f7e; }
   @media (min-width: 1350px) {
     .page-header {
       padding-top: 60%; } }

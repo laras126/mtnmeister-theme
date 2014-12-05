@@ -1,33 +1,33 @@
 {% extends "tease.twig" %}
 
 {% block content %}
-	<div class="row">
-		
+<div class="tease tease-featured tease-featured-deal clearfix">		
 	
-<div class="col-sm-4">
-	<a href="{{d.deal_link}}" target="blank" title="{{d.title}}">
-		{% if d.thumbnail %}
-			<img src="{{d.thumbnail.src}}" alt="{{d.title}}">
-		{% elseif d.deal_pic %}
-			<img src="{{TimberImage(d.deal_pic).src}}" alt="{{d.title}}">
-		{% else %}
-				{# TODO: this isn't working for some reason.... #}
-			{% set default = site.theme.uri ~ '/assets/img/util/default-meister.png' %}
-			<img src="{{default}}" alt="{{d.title}}">
-		{% endif %}
-	</a>
+	<div class="col-xs-12 featured-right">
+		<a href="{{d.deal_link}}" target="blank" title="{{d.title}}">
+			{% if d.thumbnail %}
+				<img src="{{d.thumbnail.src}}" alt="{{d.title}}">
+			{% elseif d.deal_pic %}
+				<img src="{{TimberImage(d.deal_pic).src}}" alt="{{d.title}}">
+			{% else %}
+					{# TODO: this isn't working for some reason.... #}
+				{% set default = site.theme.uri ~ '/assets/img/util/default-meister.png' %}
+				<img src="{{default}}" alt="{{d.title}}">
+			{% endif %}
+		</a>
 
-	<a class="btn-cta" href="{{d.deal_link}}" target="blank" title="{{m.title}}">Claim it</a>
-
+		<a class="btn-cta" href="{{d.deal_link}}" target="blank" title="{{m.title}}">Claim it</a>
 	</div>
-	<div class="col-sm-8">
-	<h4><a href="{{d.deal_link}}" target="blank" title="{{d.title}}">{{d.title}}</a><svg class="shape shape-icon shape-meta"><use xlink:href="#shape-new-window"/></svg></h4>
-	<p class="tagline">By: <span class="special">{{d.deal_vendor}}</span></p>
 	
-	<p>{{d.deal_desc}}</p>
-	<p>{{d.deal_cta}}</p>
+	<div class="col-xs-12 featured-left">
+		<h4><a href="{{d.deal_link}}" target="blank" title="{{d.title}}">{{d.title}}</a><svg class="shape shape-icon shape-meta"><use xlink:href="#shape-new-window"/></svg></h4>
+		<p class="tagline">By: <span class="special">{{d.deal_vendor}}</span></p>
+		
+		<p>{{d.deal_desc}}</p>
+		<p><strong>{{d.deal_cta}}</strong></p>
 
-	{% include "partials/deal-date-logic.twig" %}
- </div>
+		{% include "partials/deal-date-logic.twig" %}
+	 </div>
+
  </div>
 {% endblock %}

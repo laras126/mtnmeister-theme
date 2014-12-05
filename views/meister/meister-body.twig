@@ -64,11 +64,11 @@
 		
 		{% if post.connected_deal %}
 			<h3>Deals, deals, deals!</h3>
-			{# {% for deal in post.get_field('connected_deal') %} #}
+			{% for deal in post.connected_deal %}
 				<p>(The deal info will be here)</p>
 				<h4>{{deal.title}}</h4>
 				<p>{{deal.deal_desc}}</p>
-			{# {% endfor %} #}
+			{% endfor %}
 		{% endif %}
 
 	</section>

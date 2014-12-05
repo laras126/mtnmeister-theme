@@ -43,19 +43,19 @@ h4 {
 
 
 .page-header {
+	overflow: hidden;
+	position: relative;
+
 	width: 100%;
 	padding-top: percentage(2/3);
-	// background-position: center;
-	// background-attachment: fixed;
+
+	background-position: center;
 	background-size: 100% auto;
 	background-repeat: no-repeat;
-	// height: 290px;
-	// height: 35vh;	
+	background-color: $accent-dark;
 
 	@media(min-width: 1350px) {
 		padding-top: 60%;
-		// height: 300px;
-		// height: 38vh;
 	}
 
 	@media(min-width: 1440px) {
@@ -65,35 +65,6 @@ h4 {
 	@media(min-width: 1840px) {
 		padding-top: 45%;
 	}
-	// @media(min-width: 34em) {
-	// 	height: 350px;
-	// 	height: 50vh;	
-	// }
-	
-	// @media(min-width: 44em) {
-	// 	height: 500px;
-	// 	height: 60vh;	
-	// }
-
-	// @include bp(med) { // 50em
-	// 	height: 600px;
-	// 	height: 70vh;	
-	// }
-
-	// @include bp(large) { // 62em
-	// 	margin-top: 0;
-	// 	height: 650px;
-	// 	height: 80vh;
-	// }
-
-	// @media(min-width: 66em) {
-	// 	height: 85vh;
-	// 	height: 700px;
-	// }
-	
-	overflow: hidden;
-	background-color: $accent-dark;
-	position: relative;
 }
 
 

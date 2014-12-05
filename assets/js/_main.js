@@ -5,10 +5,7 @@ $(document).ready(function() {
 
 
 	// Plugins
-
 	$('.page-title').fitText(0.7);
-	// $(window).scroll(lazyLoadIframes);
- //   	lazyLoadIframes();
 
 	// ----
 	// Toggle menu
@@ -35,7 +32,7 @@ $(document).ready(function() {
 	// ----
 
   	var $scroll_class = "scrolled",
-		$header_ht = $('.page-header-image').outerHeight(),
+		$header_ht = $('.page-header').outerHeight(),
 		$banner = $('.banner'),
 		$banner_ht = $('.banner').outerHeight(),
 		$total_ht = $header_ht - $banner_ht*5;

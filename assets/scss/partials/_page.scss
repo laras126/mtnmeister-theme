@@ -17,11 +17,12 @@ h4 {
 	z-index: 9;
 	@extend %full_width;
 	
-	top: $h5;
+	top: $sml;
 
 	font-size: $h1*0.75;
 
 	@include bp(xs) {
+		top: $base;
 		font-size: $h1;
 	}
 
@@ -32,49 +33,59 @@ h4 {
 
 	@include bp(med) {
 		font-size: $h1*2;
-		top: $h4*1.4;
+		top: $h4*1.7;
+	}
+
+	@include bp(xl) {
+		top: $h4*1.8;
 	}
 }
 
-	 .page-title {
-
-	}
 
 .page-header {
-	margin-top: $h2;
-	height: 290px;
-	height: 35vh;	
+	width: 100%;
+	padding-top: percentage(2/3);
+	// background-position: center;
+	background-attachment: fixed;
+	background-size: 100% auto;
+	background-repeat: no-repeat;
+	// height: 290px;
+	// height: 35vh;	
 
-	@media(min-width: 25em) {
-		height: 300px;
-		height: 38vh;
+	@media(min-width: 1350px) {
+		padding-top: 60%;
+		// height: 300px;
+		// height: 38vh;
 	}
 
-	@media(min-width: 34em) {
-		height: 350px;
-		height: 50vh;	
+	@media(min-width: 1900px) {
+		padding-top: 45%;
 	}
+	// @media(min-width: 34em) {
+	// 	height: 350px;
+	// 	height: 50vh;	
+	// }
 	
-	@media(min-width: 44em) {
-		height: 500px;
-		height: 60vh;	
-	}
+	// @media(min-width: 44em) {
+	// 	height: 500px;
+	// 	height: 60vh;	
+	// }
 
-	@include bp(med) { // 50em
-		height: 600px;
-		height: 70vh;	
-	}
+	// @include bp(med) { // 50em
+	// 	height: 600px;
+	// 	height: 70vh;	
+	// }
 
-	@include bp(large) { // 62em
-		margin-top: 0;
-		height: 650px;
-		height: 80vh;
-	}
+	// @include bp(large) { // 62em
+	// 	margin-top: 0;
+	// 	height: 650px;
+	// 	height: 80vh;
+	// }
 
-	@media(min-width: 66em) {
-		height: 85vh;
-		height: 700px;
-	}
+	// @media(min-width: 66em) {
+	// 	height: 85vh;
+	// 	height: 700px;
+	// }
 	
 	overflow: hidden;
 	background-color: $accent-dark;
@@ -89,19 +100,21 @@ h4 {
 }
 
 .page-header-caption {
-	text-align: right;
-	position: absolute;
-	z-index: 99;
-	right: 0;
-	bottom: auto;
-	top: 0;
-	background-color: rgba($text-dark, 0.3);
-	padding: $sml;
-	font-size: $sml;
+	display: none;
 
-	@include bp(med) {
+	@include bp(small) {
+		display: block;
+		position: absolute;
+		z-index: 99;
+		right: 0;
 		top: auto;
 		bottom: 0;	
+		
+		padding: $sml;
+		
+		text-align: right;
+		font-size: $sml;
+		background-color: rgba($text-dark, 0.3);
 	}
 
 	// TODO: Could this be incorporated into a mixin somehow?
@@ -118,7 +131,11 @@ h4 {
 	width: 100%;
 	bottom: 0;
 	z-index: 10;
-	border-bottom: $accent-border-large;
+	border-bottom: $accent-med 3px solid;
+
+	@include bp(small) {
+		border-bottom: $accent-border-large;
+	}
 }
 
 .tagline-page {

@@ -55,7 +55,7 @@
 
 	// Plugins
 
-	$('.page-title').fitText(0.75);
+	$('.page-title').fitText(0.7);
 	// $(window).scroll(lazyLoadIframes);
  //   	lazyLoadIframes();
 

@@ -2508,10 +2508,11 @@ input[type="checkbox"]:focus {
   color: #fff;
   position: relative;
   z-index: 9;
-  top: 1rem;
+  top: 0.8rem;
   font-size: 2.55rem; }
   @media (min-width: 20em) {
     .page-title {
+      top: 1rem;
       font-size: 3.4rem; } }
   @media (min-width: 30em) {
     .page-title {
@@ -2520,40 +2521,27 @@ input[type="checkbox"]:focus {
   @media (min-width: 45em) {
     .page-title {
       font-size: 6.8rem;
-      top: 1.82rem; } }
+      top: 2.21rem; } }
+  @media (min-width: 67em) {
+    .page-title {
+      top: 2.34rem; } }
 
 .page-header {
-  margin-top: 2.4rem;
-  height: 290px;
-  height: 35vh;
+  width: 100%;
+  padding-top: 66.66667%;
+  background-attachment: fixed;
+  -webkit-background-size: 100% auto;
+          background-size: 100% auto;
+  background-repeat: no-repeat;
   overflow: hidden;
   background-color: #043f7e;
   position: relative; }
-  @media (min-width: 25em) {
+  @media (min-width: 1350px) {
     .page-header {
-      height: 300px;
-      height: 38vh; } }
-  @media (min-width: 34em) {
+      padding-top: 60%; } }
+  @media (min-width: 1900px) {
     .page-header {
-      height: 350px;
-      height: 50vh; } }
-  @media (min-width: 44em) {
-    .page-header {
-      height: 500px;
-      height: 60vh; } }
-  @media (min-width: 45em) {
-    .page-header {
-      height: 600px;
-      height: 70vh; } }
-  @media (min-width: 62em) {
-    .page-header {
-      margin-top: 0;
-      height: 650px;
-      height: 80vh; } }
-  @media (min-width: 66em) {
-    .page-header {
-      height: 85vh;
-      height: 700px; } }
+      padding-top: 45%; } }
 
 .page-header-image {
   width: 100%;
@@ -2561,20 +2549,20 @@ input[type="checkbox"]:focus {
   bottom: 0; }
 
 .page-header-caption {
-  text-align: right;
-  position: absolute;
-  z-index: 99;
-  right: 0;
-  bottom: auto;
-  top: 0;
-  background-color: rgba(31, 29, 26, 0.3);
-  padding: 0.8rem;
-  font-size: 0.8rem;
+  display: none;
   color: #fff; }
-  @media (min-width: 45em) {
+  @media (min-width: 30em) {
     .page-header-caption {
+      display: block;
+      position: absolute;
+      z-index: 99;
+      right: 0;
       top: auto;
-      bottom: 0; } }
+      bottom: 0;
+      padding: 0.8rem;
+      text-align: right;
+      font-size: 0.8rem;
+      background-color: rgba(31, 29, 26, 0.3); } }
   .page-header-caption a {
     color: #f9ac56; }
 
@@ -2587,7 +2575,10 @@ input[type="checkbox"]:focus {
   width: 100%;
   bottom: 0;
   z-index: 10;
-  border-bottom: 5px solid #f8992f; }
+  border-bottom: #f8992f 3px solid; }
+  @media (min-width: 30em) {
+    .page-info {
+      border-bottom: 5px solid #f8992f; } }
 
 .tagline-page {
   color: #043f7e;

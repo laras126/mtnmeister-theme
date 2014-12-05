@@ -1,8 +1,14 @@
 
 .widgets {
 	list-style-type: none;
-	margin: 0 auto;
+	margin: $h3 auto 0 auto;
+
+	@include bp(large) {
+		margin-top: 0;
+	}
+
 	padding: 0;
+	@extend %row;
 
 	@include bp(large) {
 		 padding-left: $base;
@@ -11,9 +17,6 @@
 	ul {
 		@extend %list-meta;		
 	}
-
-	max-width: $screen-xs;
-	margin: 0 auto;
 }
 
 .widget {
@@ -37,15 +40,21 @@
 	
 	// height: 400px;
 
-	@include bp(large) {
+	// @include bp(large) {
 		border: $accent-border;
 		background-color: lighten($text-meta, 35%);
-	}
+	// }
 
 	// max-width: $screen-sm/2;
-
-	// @include make-sm-column(6, false);
-	// @include make-md-column(4, false);
-	// @include make-lg-column(12, false);
+	margin-right: $base;
+	&:last-child {
+		margin-right: 0;
+	}
+	@include bp(lg) {
+		margin-right: 0;
+	}
+	@include make-sm-column(6, false);
+	@include make-md-column(4, false);
+	@include make-lg-column(12, false);
 
 }

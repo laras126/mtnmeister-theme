@@ -11,9 +11,7 @@
 	<div class="thumb-container">
 	
 		{% if post.get_thumbnail %}
-			<a href="{{post.link}}">
-				<img src="{{post.thumbnail.src}}" alt="{{post.title}}"/>
-			</a>
+			<img src="{{post.thumbnail.src}}" alt="{{post.title}}"/>
 		{% endif %}
 
 		<div class="thumb-caption">

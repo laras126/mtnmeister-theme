@@ -54,7 +54,7 @@
 
 
 	// Plugins
-	$('.page-title').fitText(0.7);
+	$('.page-title').fitText(0.7, {minFontSize: '40px'});
 
 	// ----
 	// Toggle menu

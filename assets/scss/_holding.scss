@@ -39,6 +39,9 @@
 	}
 }
 
+.tease-featured:not(.tease-featured-deal) {
+	@extend %full_width;
+}
 
 .tease-featured-deal {
 
@@ -51,7 +54,7 @@
 	}
 
 	.featured-left {
-		@include make-sm-column(6);
+		@include make-sm-column(6, false);
 		@include make-md-column(8, false);
 		
 		@include bp(small) {
@@ -62,7 +65,7 @@
 
 	.featured-right {
 		@include make-sm-column(6);
-		@include make-md-column(4, false);
+		@include make-md-column(4, 0);
 	}
 }
 

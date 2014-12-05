@@ -23,10 +23,6 @@
 	// @extend %row_of_two;
 }
 
-.tease-featured {
-	@extend %full_width;
-}
-
 .tease-home {
 	@include make-sm-column(6);
 	// @include make-md-column(4);
@@ -91,15 +87,6 @@
 
 .thumb-container {
 	position: relative;
-	img {
-		// transition: opacity 0.2s ease-in-out;
-		&:hover {
-			opacity: 0.7;
-		}
-		&:active {
-			opacity: 1;
-		}
-	}
 }
 
 .thumb-caption {

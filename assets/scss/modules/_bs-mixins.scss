@@ -69,7 +69,7 @@ $grid-float-breakpoint-max: ($grid-float-breakpoint - 1) !default;
 @mixin make-row($gutter: $grid-gutter-width) {
   margin-left:  ($gutter / -2);
   margin-right: ($gutter / -2);
-  @extend .clearfix;
+  @include clearfix;
 }
 
 

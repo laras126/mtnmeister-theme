@@ -52,7 +52,7 @@
 	// max-width: $screen-sm/2;
 	margin-right: $sml;
 	
-	@include bp(sm) {	
+	@include bp(sm) {
 		&:last-child {
 			margin-right: 0;
 		}

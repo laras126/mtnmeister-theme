@@ -62,7 +62,7 @@ $deal_args = array(
 				'post_type' => 'deal',
 				'posts_per_page' => 10,
     			'paged' => $paged,
-    			'offset' => 1,
+    			// 'offset' => 1,
     			'orderby' => 'menu_order'
     		);
 

@@ -1589,7 +1589,7 @@ th {
     padding-left: 1rem;
     padding-right: 1rem; } }
 
-.tease-deal, .loop-minor .tease {
+.loop-minor .tease {
   position: relative;
   float: left;
   width: 100%;
@@ -1597,7 +1597,7 @@ th {
   padding-left: 1rem;
   padding-right: 1rem; }
   @media (min-width: 30em) {
-    .tease-deal, .loop-minor .tease {
+    .loop-minor .tease {
       position: relative;
       min-height: 1px;
       padding-left: 1rem;
@@ -1605,11 +1605,11 @@ th {
       float: left;
       width: 50%; } }
   @media (min-width: 30em) {
-    .tease-deal:nth-child(2n+1), .loop-minor .tease:nth-child(2n+1) {
+    .loop-minor .tease:nth-child(2n+1) {
       clear: left; } }
 
 @media (min-width: 45em) {
-  .tease-deal, .loop-minor .tease {
+  .loop-minor .tease {
     position: relative;
     min-height: 1px;
     padding-left: 1rem;
@@ -1617,9 +1617,9 @@ th {
     float: left;
     width: 33.33333%; } }
 @media (min-width: 45em) {
-  .tease-deal:nth-child(2n+1), .loop-minor .tease:nth-child(2n+1) {
+  .loop-minor .tease:nth-child(2n+1) {
     clear: none; }
-  .tease-deal:nth-child(3n+1), .loop-minor .tease:nth-child(3n+1) {
+  .loop-minor .tease:nth-child(3n+1) {
     clear: left; } }
 
 .clearfix:before, .main:before, .number-wrap:before, .creds-wrap:before, .container:before, .container-squish:before, .item:before, .sidebar:before, .clearfix:after, .main:after, .number-wrap:after, .creds-wrap:after, .container:after, .container-squish:after, .item:after, .sidebar:after {
@@ -2514,10 +2514,6 @@ input[type="checkbox"]:focus {
   z-index: 9;
   top: 0.8rem;
   font-size: 2.55rem; }
-  @media (min-width: 20em) {
-    .page-title {
-      top: 1rem;
-      font-size: 3.4rem; } }
   @media (min-width: 30em) {
     .page-title {
       font-size: 4.25rem;
@@ -2525,10 +2521,7 @@ input[type="checkbox"]:focus {
   @media (min-width: 45em) {
     .page-title {
       font-size: 6.8rem;
-      top: 2.21rem; } }
-  @media (min-width: 67em) {
-    .page-title {
-      top: 2.34rem; } }
+      top: 2rem; } }
 
 .page-header {
   width: 100%;
@@ -2542,7 +2535,10 @@ input[type="checkbox"]:focus {
   @media (min-width: 1350px) {
     .page-header {
       padding-top: 60%; } }
-  @media (min-width: 1900px) {
+  @media (min-width: 1440px) {
+    .page-header {
+      padding-top: 50%; } }
+  @media (min-width: 1840px) {
     .page-header {
       padding-top: 45%; } }
 

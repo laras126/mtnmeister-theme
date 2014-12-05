@@ -3,7 +3,7 @@
 		<a href="http://facebook.com/sharer/sharer.php?u={{post.link}}" class="btn-fb btn-icon"><svg class="shape shape-facebook shape-share"><use xlink:href="#shape-facebook"/></svg></a>
 	</li>
 	<li>
-		<a href="https://twitter.com/intent/tweet?text={{post.episode_tag}} with {{post.title}}&url={{post.link}}&via=mountainmeister" target="blank"><svg class="shape shape-twitter shape-share"><use xlink:href="#shape-twitter"/></svg></a>
+		<a href="https://twitter.com/intent/tweet?text={{post.episode_tag}} with {{post.title}}&url={{post.link|url_encode}}&via=mountainmeister" target="blank"><svg class="shape shape-twitter shape-share"><use xlink:href="#shape-twitter"/></svg></a>
 	</li>
 
 	<li>

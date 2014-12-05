@@ -21,8 +21,8 @@ h4 {
 
 	font-size: $h1*0.75;
 
-	@include bp(xs) {
-		top: $base;
+	@include bp(380px) {
+		// top: $base;
 		font-size: $h1;
 	}
 
@@ -33,11 +33,11 @@ h4 {
 
 	@include bp(med) {
 		font-size: $h1*2;
-		top: $h4*1.7;
+		top: $h3;
 	}
 
 	@include bp(xl) {
-		top: $h4*1.8;
+		// top: $h4*1.8;
 	}
 }
 
@@ -58,7 +58,11 @@ h4 {
 		// height: 38vh;
 	}
 
-	@media(min-width: 1900px) {
+	@media(min-width: 1440px) {
+		padding-top: 50%;
+	}
+
+	@media(min-width: 1840px) {
 		padding-top: 45%;
 	}
 	// @media(min-width: 34em) {

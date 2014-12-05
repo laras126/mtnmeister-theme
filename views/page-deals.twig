@@ -5,10 +5,14 @@
 {% endblock %} #}
 
 {% block loop %}
-	{% include 'tease-todays_deal.twig' %}
+	{# {% for d in deals|slice(1, 1) %} #}
+		{% include 'tease-todays_deal.twig' %}
+	{# {% endfor %} #}
 	<div class="row">
-	{% for post in deals %}
-		{% include ['tease-deal.twig', 'tease.twig'] %}	
-	{% endfor %}
+		{% for d in deals|slice(0) %}
+			{% set post = d %}
+			{% include ['tease-deal.twig', 'tease.twig'] %}
+		{% endfor %}	
 	</div>
+	
 {% endblock %}

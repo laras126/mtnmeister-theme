@@ -7,7 +7,8 @@ module.exports = function(grunt) {
 
   var jsFileList = [
     'assets/js/plugins/*.js',
-    'assets/js/bower_components/imagesloaded/imagesloaded.pkgd.min.js',
+    'bower_components/imagesloaded/imagesloaded.pkgd.min.js',
+    'bower_components/FitText.js/jquery.fittext.js',
     'assets/js/_*.js'
   ];
 

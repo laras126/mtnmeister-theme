@@ -4,6 +4,9 @@ $(document).ready(function() {
 	console.log('Check it: http://github.com/laras126/mtnmeister-theme');
 
 
+	// Plugins
+
+	$('.page-title').fitText(0.75);
 	// $(window).scroll(lazyLoadIframes);
  //   	lazyLoadIframes();
 

@@ -1668,6 +1668,13 @@ button, .menu-item-cta .cta, .btn-alt, .cat-item a, .link-more, .menu-item-cta .
   font-size: 0.8rem;
   font-weight: 400; }
 
+.expired {
+  color: #9F4440;
+  font-style: italic; }
+
+.current {
+  color: #68C499; }
+
 .text-center {
   text-align: center; }
 
@@ -2121,21 +2128,21 @@ img {
     .footer {
       min-height: 360px; } }
 
-.social {
+.share-links {
   margin-top: 2.4rem; }
   @media (min-width: 45em) {
-    .social {
+    .share-links {
       position: relative;
       min-height: 1px;
       padding-left: 1rem;
       padding-right: 1rem;
       float: left;
       width: 50%; } }
-  .social .shape {
+  .share-links .shape {
     display: inline-block;
-    width: 3.4rem;
-    height: 3.4rem;
-    margin-right: 2.4rem; }
+    width: 2rem;
+    height: 2rem;
+    margin-right: 1rem; }
 
 .creds-wrap {
   position: relative; }
@@ -2530,13 +2537,13 @@ input[type="checkbox"]:focus {
           background-size: 100% auto;
   background-repeat: no-repeat;
   background-color: #043f7e; }
-  @media (min-width: 1350px) {
+  @media (min-width: 1040px) {
     .page-header {
-      padding-top: 60%; } }
-  @media (min-width: 1440px) {
+      padding-top: 56%; } }
+  @media (min-width: 1280px) {
     .page-header {
       padding-top: 50%; } }
-  @media (min-width: 1840px) {
+  @media (min-width: 1420px) {
     .page-header {
       padding-top: 45%; } }
 

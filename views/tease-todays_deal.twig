@@ -3,9 +3,17 @@
 - Also to make this extend tease.twig
 #}
 
-{% set d = todays_deal|first %}
+{# {% set d = todays_deal|first %} #}
 
 <article class="tease tease-featured tease-featured-deal clearfix">
+	
+	<header class="tease-header">
+		<div class="number-wrap">
+			<div class="number"><span class="meta">Featured</span></div>
+		</div>
+		{# <h2 class="tease-title"><a href="{{m.link}}">{{m.episode_tag}}</a></h2>
+		<p class="tagline tagline-tease">{{m.title}}</p> #}
+	</header>
 
 	<div class="featured-left">
 		<h4><a href="{{d.deal_link}}" target="blank" title="{{d.title}}">{{d.title}}</a><svg class="shape shape-icon shape-meta"><use xlink:href="#shape-new-window"/></svg></h4>
@@ -28,7 +36,7 @@
 			<img src="{{default}}" alt="{{d.title}}">
 		{% endif %}
 		</a>
-		<a class="btn-cta" href="{{d.deal_link}}" target="blank" title="{{m.title}}">Claim it</a>	
+		<a class="btn-cta" href="{{d.deal_link}}" target="blank" title="{{m.title}}">Grab it</a>	
 	</div>
 
 </article> <!-- /.tease -->

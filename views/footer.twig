@@ -1,21 +1,44 @@
 
-{# {% include "sidebar-footer.twig" %} #}
 
-	{# <h4>Subscribe</h4> #}
+	<div class="creds">
 
+		{# <div class="row"> #}
+		
+		<div class="container">
+			<div class="clearfix">
+			<div class="col-sm-6">
+				{% include 'partials/mailchimp.twig' %}
+			</div>
+		
+			</div>
+			
+			<div class="clearfix">
+		
+			<ul class="share-links col-sm-6">
+				<li>
+					<a href="http://facebook.com/mtnmeister" target="blank">
+						<svg class="shape shape-facebook"><use xlink:href="#shape-facebook" /></svg>
+					</a>	
+				</li>
+				<li>
+					
+				</li>
+				<li></li>
+				<svg class="shape shape-twitter"><use xlink:href="#shape-twitter" /></svg>
+				<svg class="shape shape-instagram"><use xlink:href="#shape-instagram" /></svg>
+			</div>
 
-
-<div class="creds">
-	<div class="container">
-		<div class="social">
-			<svg class="shape shape-facebook"><use xlink:href="#shape-facebook" /></svg>
-			<svg class="shape shape-twitter"><use xlink:href="#shape-twitter" /></svg>
-			<svg class="shape shape-instagram"><use xlink:href="#shape-instagram" /></svg>
-		</div>
-	</div>
+		</div>	
+	{# </div> #}
 	
+	
+
 	<div class="container">
-		<p class="meta">Powered by WordPress and <a href="http://upstatement.com/timber" target="blank">Timber</a>.</p>	
-		<p class="meta copyright">&copy; {{site.title}} {{"now"|date('Y')}}</p>
+		<div class="col-xs-12">
+		<p class="meta">Site by <a href="http://notlaura.com" target="blank">Lara</a>. Powered by WordPress and <a href="http://upstatement.com/timber" target="blank">Timber</a>.</p>	
+		<p class="meta copyright">&copy; {{site.title}} {{"now"|date('Y')}}</p>	
+		</div>	
 	</div>
+
 </div>
+

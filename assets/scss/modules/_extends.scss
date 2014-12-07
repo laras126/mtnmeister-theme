@@ -109,7 +109,14 @@
     font-weight: 400;
 }
 
+.expired {
+    color: $alert-danger;
+    font-style: italic;
+}
 
+.current {
+    color: $alert-success;
+}
 
 
 // -- Utility classes

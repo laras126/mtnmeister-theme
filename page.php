@@ -85,7 +85,7 @@ if( is_page('Meisters') ) {
 	$context['todays_meister'] = Timber::get_posts($todays_meister_args);
 
 } elseif( is_page('Deals') ) {
-	$context['todays_deal'] = Timber::get_posts($todays_deal_args);
+	// $context['todays_deal'] = Timber::get_posts($todays_deal_args);
 	$context['deals'] = Timber::get_posts($deal_args);
 }
 

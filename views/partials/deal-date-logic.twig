@@ -1,7 +1,7 @@
 {% if d.expiration_date %}
 	{% if d.expiration_date|date("U") > "now"|date("U") %}
-		<p class="meta">Expires: {{d.expiration_date|date("m/d/Y")}}</p>
+		<p class="meta current">Until: {{d.expiration_date|date("m/d/Y")}}</p>
 	{% elseif d.expiration_date|date("U") < "now"|date("U") %}
-		<p class="meta">Expired</p>
+		<p class="meta expired"><em>Expired</em></p>
 	{% endif %}
 {% endif %}

@@ -18,8 +18,9 @@
 			{{post.episode_soundcloud_small}}
 			{% if post.tags %}
 				<ul class="list-tags text-center">
+					<li class="meta">Tagged: </li>
 				    {% for tag in post.tags %}
-				        <li><a href="{{tag.link}}">{{tag.name}}</a></li>
+				        <li class="tag">{{tag.name}}</li>
 				    {% endfor %}
 				</ul>
 			{% endif %}

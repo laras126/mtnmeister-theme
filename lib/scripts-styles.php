@@ -1,48 +1,32 @@
 <?php 
 
 
-// Enqueue scripts
-function mtn_styles_scripts() {
-
-  // Add CSS
+// Enqueue styles
+function mtn_styles() {
   wp_enqueue_style( 'main', get_template_directory_uri() . '/assets/css/main.css' );
+}
+add_action( 'wp_enqueue_scripts', 'mtn_styles' );
+
+
+// Enqueue scripts
+function mtn_scripts() {
 
   // Use jQuery from CDN
   if (!is_admin()) {
     wp_deregister_script('jquery');
-    wp_register_script('jquery', '//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js', array(), null, true);
-    wp_enqueue_script('jquery', true);
+    wp_register_script('jquery', '//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js');
+    wp_enqueue_script('jquery', array(), null, true);
   }
 
   // Add MTNmeister JS
-  wp_enqueue_script( 'js', get_template_directory_uri() . '/assets/js/scripts.js', array('jquery'), true );
+  wp_register_script('mtn-js', get_template_directory_uri() . '/assets/js/scripts.min.js');
+  wp_enqueue_script( 'mtn-js', array('jquery'), null, true );
 
   if (is_single() && comments_open() && get_option('thread_comments')) {
     wp_enqueue_script('comment-reply');
   }
-
 }
-
-add_action( 'wp_enqueue_scripts', 'mtn_styles_scripts' );
-
-
-
-// http://wordpress.stackexchange.com/a/12450
-// function mtn_jquery_local_fallback($src, $handle = null) {
-//   static $add_jquery_fallback = false;
-
-//   if ($add_jquery_fallback) {
-//     echo '<script>window.jQuery || document.write(\'<script async="async" src="' . get_template_directory_uri() . '/assets/vendor/jquery/dist/jquery.min.js?1.11.1"><\/script>\')</script>' . "\n";
-//     $add_jquery_fallback = false;
-//   }
-
-//   if ($handle === 'jquery') {
-//     $add_jquery_fallback = true;
-//   }
-
-//   return $src;
-// }
-// add_action('wp_footer', 'mtn_jquery_local_fallback');
+add_action( 'wp_footer', 'mtn_scripts' );
 
 
 

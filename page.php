@@ -34,35 +34,18 @@
 // Custom Post Type Args
 // ---
 
-// Exclude the most recent post
+// Get Meisters
 $meister_args = array( 
 				'post_type' => 'meister', 
 				'posts_per_page' => -1,
-				'paged' => $paged,
-				'offset' => 1
+				'paged' => $paged
 			);
 
-// Get the most recent post for "Today's episode"
-$todays_meister_args = array( 
-				'post_type' => 'meister', 
-				'posts_per_page' => 1,
-				'showposts' => 1
-			);
-
-// Today's Deal args
-$todays_deal_args = array( 
-				'post_type' => 'deal', 
-				'posts_per_page' => 1,
-				'showposts' => 1
-			);
-
-
-// Get deals
+// Get Deals
 $deal_args = array( 
 				'post_type' => 'deal',
 				'posts_per_page' => 10,
     			'paged' => $paged,
-    			// 'offset' => 1,
     			'orderby' => 'menu_order'
     		);
 
@@ -70,6 +53,8 @@ $deal_args = array(
 // ---
 // Start the context 
 // ---
+
+// There is likely a better way to do this that isn't detecting specific pages.
 
 $context = Timber::get_context();
 $post = new TimberPost();
@@ -79,16 +64,11 @@ $context['post'] = $post;
 
 // Get custom type content
 if( is_page('Meisters') ) {
-
-	// Get Meister and Deal posts
 	$context['meisters'] = Timber::get_posts($meister_args);
-	$context['todays_meister'] = Timber::get_posts($todays_meister_args);
 
 } elseif( is_page('Deals') ) {
-	// $context['todays_deal'] = Timber::get_posts($todays_deal_args);
 	$context['deals'] = Timber::get_posts($deal_args);
 }
-
 
 
 // Sidebar, not on deals page

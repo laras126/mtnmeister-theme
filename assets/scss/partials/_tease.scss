@@ -89,11 +89,11 @@
 	bottom: 0;
 	padding: 0 $base;
 	width: 100%;
-	@include rotate($bkgd: $accent-med);
+	@include rotate($bkgd: $accent-dark);
 	display: none;
 
-	.tagline {
-		margin-bottom: $sml;
+	.meta {
+		color: $text-light;
 	}
 
 	.link-more {

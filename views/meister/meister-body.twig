@@ -62,17 +62,17 @@
 
 	<section class="article-section container-squish">
 		
-		{% if post.get_field('connected_deal') %}
+		{% if post.connected_deal %}
 			<h3 class="tease-title">Deals, deals, deals!</h3>
-			{% for d in post.get_field('connected_deal') %}
-
-				{# {% for d in item.deal %} #}
-					{% include ['tease-deal.twig', 'tease.twig'
-					] %}
-				{# {% endfor %} #}
-
+			<div class="row">
+			{% for item in post.get_field('connected_deal') %}
+		
+				{% for d in item.deal %}
+			{# {% for d in post.get_field('connected_deal') %} #}
+				{% include ['tease-deal.twig', 'tease.twig'] %}
 			{% endfor %}
-			{# {% endfor %} #}
+			{% endfor %}
+			</div>
 		{% endif %}
 
 	</section>

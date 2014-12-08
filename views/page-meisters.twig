@@ -1,30 +1,25 @@
 {% extends "page.twig" %}
 
 {% block today %}
-	{% include 'tease-todays_meister.twig' %}
+	{% for m in meisters|slice(0,1) %}
+		{% include 'tease-todays_meister.twig' %}
+	{% endfor %}
 {% endblock %}
 
 {% block loop %}
 	<div class="loop loop-main">
-		{% for post in meisters|slice(1, 1) %}
+		{% for m in meisters|slice(1, 1) %}
 			{% include ['tease-meister.twig', 'tease.twig'] %}
 		{% endfor %}	
 	</div>
 {% endblock %}
 
 {% block loop_minor %}
-	<div class="loop loop-minor clearfix">
-
-		{# Actually, it would be nice to have this list categories! Like this:
-
-		Running
-
-		#85 - Running with the bulls
-		#87 - Ultrarunning metaphor
-		#2 - Polar explorer #}
-
-		{% for post in meisters|slice(2, 10) %}
+	<div class="row">
+	<div class="loop loop-minor">
+		{% for m in meisters|slice(2, 10) %}
 			{% include ['tease-minor_meister.twig', 'tease.twig'] %}
 		{% endfor %}
+	</div>
 	</div>
 {% endblock %}

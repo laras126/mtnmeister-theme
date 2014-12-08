@@ -15,19 +15,18 @@
         </header>
 
         <main id="content" class="main" role="main">
-            
             {% block content %}
-                Sorry, no content
+                Oops! Nothing here.
             {% endblock %}
-
         </main>
 
         {% block footer %}
             <footer class="footer" role="contentinfo">
                 {% include 'footer.twig' %}         
             </footer>
-            <!-- W3TC-include-js-head -->
             {{ function('wp_footer') }}
+            
         {% endblock %}
+        {# {{wp_footer}} #}
     </body>
 </html>

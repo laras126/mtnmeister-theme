@@ -36,15 +36,12 @@
 // Custom Post Type Args
 // ---
 
-
-// Get the most recent post for "Today's episode"
-$todays_meister_args = array( 
+// Exclude the most recent post
+$meister_args = array( 
 				'post_type' => 'meister', 
-				'posts_per_page' => 1,
-				'showposts' => 1
+				'posts_per_page' => 5,
+				'paged' => $paged
 			);
-
-
 
 // ---
 // Start the context 
@@ -54,7 +51,7 @@ $context = Timber::get_context();
 $post = new TimberPost();
 
 // Get Todays Meister
-$context['todays_meister'] = Timber::get_posts($todays_meister_args);
+$context['meisters'] = Timber::get_posts($meister_args);
 
 // Get recent deal
 // $context['deals'] = Timber::get_posts($deal_args);

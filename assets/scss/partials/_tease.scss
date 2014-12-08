@@ -11,8 +11,11 @@
 	margin-bottom: $h2;
 }
 
-.tease-deal {
-	// @extend %row_of_two;
+.tease-deal,
+.tease-featured-deal {
+	margin-bottom: $h3;
+	border-bottom: $accent-border;
+	@extend .clearfix;
 }
 
 .tease-home {

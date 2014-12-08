@@ -41,15 +41,9 @@
 		background-color: $body-bkgd;
 		@extend %row;
 	}
-	
-	// height: 400px;
 
-	// @include bp(large) {
-		border: $accent-border;
-		background-color: lighten($text-meta, 35%);
-	// }
-
-	// max-width: $screen-sm/2;
+	border: $accent-border;
+	background-color: lighten($text-meta, 35%);
 	margin-right: $sml;
 	
 	@include bp(sm) {
@@ -66,4 +60,12 @@
 	@include make-md-column(3.8, false);
 	@include make-lg-column(12, false);
 
+}
+
+.widget-title {
+	@extend .tagline-page;
+	margin: 0;
+	padding: 0;
+	@extend %h5;
+	margin-bottom: $sml;
 }

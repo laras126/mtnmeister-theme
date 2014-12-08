@@ -15,15 +15,16 @@
 		<p class="tagline tagline-tease">{{m.title}}</p> #}
 	</header>
 
-	<div class="featured-left">
+	<div class="col-xs-12-np col-sm-8-np">
 		<h4><a href="{{d.deal_link}}" target="blank" title="{{d.title}}">{{d.title}}</a><svg class="shape shape-icon shape-meta"><use xlink:href="#shape-new-window"/></svg></h4>
 		<p class="tagline">By: <span class="special">{{d.deal_vendor}}</span></p>
 		<p>{{d.deal_desc}}</p>
 		<p><strong>{{d.deal_cta}}</strong></p>	
 		{% include "partials/deal-date-logic.twig" %}
+		{% include "partials/share-btns.twig" %}
 	</div>	
 	
-	<div class="featured-right">
+	<div class="col-xs-12-np col-sm-4">
 		<a href="{{d.deal_link}}" target="blank" title="{{m.title}}">
 		{# This conditional is because we weren't using featured images initially, and are now - no need to add them again, at least at first. Well, it's not working. #}
 		{% if d.thumbnail %}

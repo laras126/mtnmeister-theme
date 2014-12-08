@@ -226,9 +226,13 @@ img {
 }
 
 .share-links {
-	@include make-md-column(6);
-	margin-top: $h2;
 	
+	@extend %unstyle-list;
+	margin-bottom: $base;
+	li {
+		display: inline-block;
+	}
+
 	.shape {
 		display: inline-block;
 		width: $h3;

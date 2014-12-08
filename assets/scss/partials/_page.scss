@@ -128,12 +128,12 @@ h4 {
 
 .has-sidebar {
 	@extend %full_width;
-	@include make-lg-column(8);
+	@include make-lg-column(8.5);
 }
 
 .sidebar {
 	@extend %full_width;
-	@include make-lg-column(4);	
+	@include make-lg-column(3.5);	
 }
 
 

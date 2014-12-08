@@ -4,41 +4,48 @@
 
 		{# <div class="row"> #}
 		
-		<div class="container">
-			<div class="clearfix">
-			<div class="col-sm-6">
-				{% include 'partials/mailchimp.twig' %}
+		<div class="container clearfix">
+			<div class="col-xs-6">
+				{% include 'partials/mailchimp.twig' %}	
 			</div>
 		
-			</div>
-			
-			<div class="clearfix">
-		
+			<div class="col-xs-12">
+				<br>
 			<ul class="share-links col-sm-6">
+				<li>
+					<p class="meta">admin@mtnmeister.com<br>Boston, Massachusetts</p>
+					&nbsp;
+					&nbsp;
+				</li>
 				<li>
 					<a href="http://facebook.com/mtnmeister" target="blank">
 						<svg class="shape shape-facebook"><use xlink:href="#shape-facebook" /></svg>
 					</a>	
 				</li>
 				<li>
-					
+					<a href="http://twitter.com/mountainmeister" target="blank">
+						<svg class="shape shape-twitter"><use xlink:href="#shape-twitter" /></svg>
+					</a>
 				</li>
-				<li></li>
-				<svg class="shape shape-twitter"><use xlink:href="#shape-twitter" /></svg>
-				<svg class="shape shape-instagram"><use xlink:href="#shape-instagram" /></svg>
-			</div>
+				<li>
+					<a href="http://instagram.com/mountainmeister" target="blank">
+						<svg class="shape shape-instagram"><use xlink:href="#shape-instagram" /></svg>
+					</a>
+				</li>
+				{# <li>
+					<a href="mailto:admin@mtnmeister.com" target="blank">
+						<svg class="shape shape-mail"><use xlink:href="#shape-mail" /></svg>
+					</a>
+				</li> #}
+			</ul>
 
-		</div>	
-	{# </div> #}
-	
+		</div>
 	
 
-	<div class="container">
 		<div class="col-xs-12">
-		<p class="meta">Site by <a href="http://notlaura.com" target="blank">Lara</a>. Powered by WordPress and <a href="http://upstatement.com/timber" target="blank">Timber</a>.</p>	
-		<p class="meta copyright">&copy; {{site.title}} {{"now"|date('Y')}}</p>	
+			<p class="meta copyright">&copy; {{site.title}} {{"now"|date('Y')}}</p>	
+			<p class="meta">Site by <a href="http://notlaura.com" target="blank">Lara</a>. Powered by WordPress and <a href="http://upstatement.com/timber" target="blank">Timber</a>.</p>
 		</div>	
-	</div>
 
-</div>
+	</div>
 

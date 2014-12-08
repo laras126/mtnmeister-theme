@@ -1,9 +1,23 @@
 {% extends "tease.twig" %}
 
 {% block content %}
-<div class="tease tease-featured tease-featured-deal clearfix">		
+
+	<div class="col-xs-12 col-sm-8">
+		
+		<h4>
+			<a href="{{d.deal_link}}" target="blank" title="{{d.title}}">{{d.title}}</a>
+			<svg class="shape shape-icon shape-meta"><use xlink:href="#shape-new-window"/></svg>
+		</h4>
+		
+		<p class="tagline">By: <span class="special">{{d.deal_vendor}}</span></p>
+				
+		<p>{{d.deal_desc}}</p>
+		<p><strong>{{d.deal_cta}}</strong></p>
+
+		{% include "partials/share-btns.twig" %}
+	 </div>
 	
-	<div class="col-xs-12 featured-right">
+	<div class="col-xs-12 col-sm-4">
 		<a href="{{d.deal_link}}" target="blank" title="{{d.title}}">
 			{% if d.thumbnail %}
 				<img src="{{d.thumbnail.src}}" alt="{{d.title}}">
@@ -17,17 +31,7 @@
 		</a>
 
 		<a class="btn-cta" href="{{d.deal_link}}" target="blank" title="{{d.title}}">Grab it</a>
+		{% include "partials/deal-date-logic.twig" %}
 	</div>
 	
-	<div class="col-xs-12 featured-left">
-		<h4><a href="{{d.deal_link}}" target="blank" title="{{d.title}}">{{d.title}}</a><svg class="shape shape-icon shape-meta"><use xlink:href="#shape-new-window"/></svg></h4>
-		<p class="tagline">By: <span class="special">{{d.deal_vendor}}</span></p>
-		
-		<p>{{d.deal_desc}}</p>
-		<p><strong>{{d.deal_cta}}</strong></p>
-
-		{% include "partials/deal-date-logic.twig" %}
-	 </div>
-
- </div>
 {% endblock %}

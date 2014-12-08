@@ -6,11 +6,12 @@
     <div class="container">
 
     	<header class="article-header">
-	    	<h1 class="tagline tagline-page"><span class="special">Category:</span> {{title}}</h1>
+	    	<h1 class="tagline tagline-page">{{title}}</h1>
     	</header>
     	
         {% for post in posts %}
-        	{% include 'tease-meister.twig' %}
+        	{# {% include 'tease-minor_meister.twig' %} #}
+        	{{post.title}} <br>
         {% endfor %}
     
     </div>

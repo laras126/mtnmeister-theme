@@ -29,13 +29,14 @@
 				</ul>
 			{% endif %}
 			<p>{{m.meister_bio|truncate(80)}}</p>
-			
-			<div class="col-xs-12-np col-sm-6-np">
-				{% set post = m %}
-				{% include 'partials/share-btns.twig' %}
-			</div>	
-			<div class="col-xs-12-np col-sm-6-np">
-				<a class="link-more no-margin" href="{{m.link}}" title="{{m.title}}">Read more &rarr;</a>	
+			<div class="clearfix">
+				<div class="col-xs-12-np col-sm-6-np">
+					{% set post = m %}
+					{% include 'partials/share-btns.twig' %}
+				</div>	
+				<div class="col-xs-12-np col-sm-6-np">
+					<a class="link-more no-margin" href="{{m.link}}" title="{{m.title}}">Read more &rarr;</a>	
+				</div>
 			</div>
 			
 		</div>	

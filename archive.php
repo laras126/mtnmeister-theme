@@ -27,15 +27,14 @@
 		} else if (is_year()){
 			$data['title'] = 'Archive: '.get_the_date( 'Y' );
 		} else if (is_tag()){
-			$data['title'] = single_tag_title('', false);
+			$data['title'] = '<span class="special">Tagged:</span> '.single_tag_title('', false);
 		} else if (is_category()){
-			$data['title'] = single_cat_title('', false);
+			$data['title'] = '<span class="special">Category:</span> '.single_cat_title('', false);
 			array_unshift($templates, 'archive-'.get_query_var('cat').'.twig');
 		} else if (is_post_type_archive()){
 			$data['title'] = post_type_archive_title('', false);
 			array_unshift($templates, 'archive-'.get_post_type().'.twig');
 		}
-
 
 		$meister_args = array( 
 				'post_type' => 'meister',

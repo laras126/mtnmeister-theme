@@ -104,3 +104,4 @@ if( !is_page('Meisters') ) {
 
 Timber::render(array('page-' . $post->post_name . '.twig', 'page.twig'), $context);
 
+?>

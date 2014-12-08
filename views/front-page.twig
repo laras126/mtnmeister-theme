@@ -8,13 +8,85 @@
 - Also to make this extend tease.twig
 #}
 
-{% set m = todays_meister|first %}
-{% set d = featured_deal %}
+	{% set m = todays_meister|first %}
+	{# {% set d = featured_deal %} #}
 
-{% include 'tease-todays_meister.twig' %}
+	{# {% include 'tease-todays_meister.twig' %} #}
+	<section class="col-md-4">
+		
+			{# <h3>Today's Episode</h3> #}
+	
+		{# <header> #}
+			<div class="number-wrap">
+				<div class="number"><span class="meta">Today's Episode</span></div>
+			</div>
+			<br>
+			{# <h2 class="tease-title"><a href="{{m.link}}">{{m.episode_tag}}</a></h2>
+			<p class="tagline tagline-tease">{{m.title}}</p> #}
+		{# </header> #}
+				
+		{{m.episode_soundcloud_large}}
+	{# 	{% if m.categories %}
+			<ul class="list-cats">
+			    {% for cat in m.categories %}
+			        <li class="cat-item"><a href="{{cat.link}}">{{cat.name}}</a></li>
+			    {% endfor %}
+			</ul>
+		{% endif %}
+		<div class="clearfix">
+			<div class="col-xs-12-np col-sm-6-np">
+				<a class="link-more no-margin" href="{{m.link}}" title="{{m.title}}">Read more &rarr;</a>	
+			</div>
+		</div>
+ #}
+	</section> <!-- /.tease -->
+
+
+
+	<div class="col-md-4">
+		<div class="number-wrap">
+			<div class="number"><span class="meta">Meister Deals</span></div>
+		</div>
+
+		{% for d in post.get_field('featured_deal') %}
+			
+		{# <div class="col-xs-12-np col-sm-8-np"> #}
+		
+			<h4><a href="{{d.deal_link}}" target="blank" title="{{d.post_title}}">{{d.post_title}}</a><svg class="shape shape-icon shape-meta"><use xlink:href="#shape-new-window"/></svg></h4>
+			{# <p class="tagline">By: <span class="special">{{d.deal_vendor}}</span></p> #}
+			{% if d.thumbnail %}
+				<img src="{{d.thumbnail.src}}" alt="{{d.title}}">
+			{% elseif d.deal_pic %}
+				<img src="{{TimberImage(d.deal_pic).src}}" alt="{{d.title}}">
+			{% else %}
+				{# TODO: this isn't working for some reason.... #}
+				{% set default = site.theme.uri ~ '/assets/img/util/default-meister.png' %}
+				<img src="{{default}}" alt="{{d.title}}">
+			{% endif %}
+			</a>
+			<a class="btn-cta" href="{{d.deal_link}}" target="blank" title="{{m.title}}">Grab it</a>
+			<p>{{d.deal_desc}}</p>
+			<p><strong>{{d.deal_cta}}</strong></p>	
+			{% include "partials/deal-date-logic.twig" %}
+			<a href="{{d.deal_link}}" target="blank" title="{{m.title}}">
+			{# This conditional is because we weren't using featured images initially, and are now - no need to add them again, at least at first. Well, it's not working. #}
+			
+		{# </div> #}
+
+		{% endfor %}
+	</div>
+
+	<div class="col-md-4">
+		<div class="number-wrap">
+			<div class="number"><span class="meta">Subscribe on iTunes</span></div>
+		</div>
+		<br>
+		<img src="http://mtn.local/wp-content/uploads/2014/11/itunes_img2.png" alt="">
+		{# <img src="http://www.hypebot.com/.a/6a00d83451b36c69e2017c350696f2970b-800wi" alt=""> #}
+	</div>
 
 {% endblock %}
 
 {% block loop %}
-hi loop
+	
 {% endblock %}

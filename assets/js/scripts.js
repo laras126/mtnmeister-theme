@@ -212,7 +212,6 @@
 
 	$('.thumb-container').hover( function() {
 		$(this).find('.thumb-caption').stop(true, true).slideDown(300);
-		console.log('poop');
 	}, function() {
 		$(this).find('.thumb-caption').stop(true, true).slideUp(300);
 	});

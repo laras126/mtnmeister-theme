@@ -102,6 +102,13 @@ module.exports = function(grunt) {
             tasks: ['sass:dev', 'autoprefixer:dev']
         },
 
+        css: {
+          files: [
+                'assets/css/main.css'
+            ],
+            tasks: ['cssmin:css']  
+        },
+
         js: {
             files: [
                 jsFileList,

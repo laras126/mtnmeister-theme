@@ -12,28 +12,28 @@
 	</header>
 
 	<div class="col-xs-12-np col-sm-8-np">
-		<h4><a href="{{d.deal_link}}" target="blank" title="{{d.title}}">{{d.title}}</a><svg class="shape shape-icon shape-meta"><use xlink:href="#shape-new-window"/></svg></h4>
+		<h4><a href="{{d.deal_link}}" target="blank" title="{{d.post_title}}">{{d.post_title}}</a><svg class="shape shape-icon shape-meta"><use xlink:href="#shape-new-window"/></svg></h4>
 		<p class="tagline">By: <span class="special">{{d.deal_vendor}}</span></p>
 		<p>{{d.deal_desc}}</p>
-		<p><strong>{{d.deal_cta}}</strong></p>	
-		{% include "partials/deal-date-logic.twig" %}
+		<p><strong>{{d.deal_cta}}</strong></p>
 		{% include "partials/share-btns.twig" %}
 	</div>	
 	
 	<div class="col-xs-12-np col-sm-4">
-		<a href="{{d.deal_link}}" target="blank" title="{{m.title}}">
+		<a href="{{d.deal_link}}" target="blank" title="{{d.post_title}}">
 		{# This conditional is because we weren't using featured images initially, and are now - no need to add them again, at least at first. Well, it's not working. #}
 		{% if d.thumbnail %}
-			<img src="{{d.thumbnail.src}}" alt="{{d.title}}">
+			<img src="{{d.thumbnail.src}}" alt="{{d.post_title}}">
 		{% elseif d.deal_pic %}
-			<img src="{{TimberImage(d.deal_pic).src}}" alt="{{d.title}}">
+			<img src="{{TimberImage(d.deal_pic).src}}" alt="{{d.post_title}}">
 		{% else %}
 			{# TODO: this isn't working for some reason.... #}
 			{% set default = site.theme.uri ~ '/assets/img/util/default-meister.png' %}
-			<img src="{{default}}" alt="{{d.title}}">
+			<img src="{{default}}" alt="{{d.post_title}}">
 		{% endif %}
 		</a>
-		<a class="btn-cta" href="{{d.deal_link}}" target="blank" title="{{m.title}}">Grab it</a>	
+		<a class="btn-cta" href="{{d.deal_link}}" target="blank" title="{{d.post_title}}">Grab it</a>	
+		{% include "partials/deal-date-logic.twig" %}
 	</div>
 
 </article> <!-- /.tease -->

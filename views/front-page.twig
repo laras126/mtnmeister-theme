@@ -7,84 +7,85 @@
 - It would be better to not have today's meister an array, but fine for now. 
 - Also to make this extend tease.twig
 #}
-	<div class="clearfix">
-		
-	{# {% include 'tease-todays_meister.twig' %} #}
-	<section class="col-md-4">
-		
-			{# <h3>Today's Episode</h3> #}
 	
-		{# <header> #}
-			<div class="number-wrap">
-				<div class="number"><span class="meta">Today's Episode</span></div>
-			</div>
-			<br>
-			{# <h2 class="tease-title"><a href="{{m.link}}">{{m.episode_tag}}</a></h2>
-			<p class="tagline tagline-tease">{{m.title}}</p> #}
-		{# </header> #}
-		{% for m in meisters|slice(0,1) %}
-			{{m.episode_soundcloud_large}}
-		{% endfor %}
-	{# 	{% if m.categories %}
-			<ul class="list-cats">
-			    {% for cat in m.categories %}
-			        <li class="cat-item"><a href="{{cat.link}}">{{cat.name}}</a></li>
-			    {% endfor %}
-			</ul>
-		{% endif %}
+{% endblock %}
+
+{% block loop %}
+	{# <div class="col-md-12"> #}
+		{# {% include 'tease-todays_meister.twig' %} #}
+		<section>
+			{% for m in meisters|slice(0,1) %}
+				<header class="tease-header">
+					<div class="number-wrap">
+						<div class="number">
+							<span class="meta">Today's Episode</span>
+						</div>
+					</div>
+
+					<h4 class="tagline"><a href="{{m.link}}">{{m.episode_tag}}</a></h4>
+					<div class="row">
+						<div class="col-xs-7">
+							<p class="tagline tagline-tease">{{m.title}}</p>
+						</div>
+						<div class="col-xs-5">
+							<a class="link-more" href="{{site.link}}/meisters" title="Meisters">All Episodes &rarr;</a>	
+						</div>
+					</div>
+				</header>
+				
+				<div class="tease-body">
+					{{m.episode_soundcloud_small}}
+					{% include 'partials/cat-list.twig' %}
+				</div>
+				{# 
+				
+				NOTE: Should be including this and conditionally changing the date, but not...
+
+				{% include 'tease-meister.twig' %} #}
+			{% endfor %}	
+		</section> <!-- /.tease -->
+
 		<div class="clearfix">
-			<div class="col-xs-12-np col-sm-6-np">
-				<a class="link-more no-margin" href="{{m.link}}" title="{{m.title}}">Read more &rarr;</a>	
+			<br>
+			<br>
+			<div class="number-wrap">
+				<div class="number"><span class="meta">Featured Deal</span></div>
 			</div>
+			<a class="link-more" href="{{site.link}}/deals" title="{{m.title}}">All Deals &rarr;</a>
+
+			{% for d in post.get_field('featured_deal') %}
+				<div class="tease-featured-deal">
+				<h4><a href="{{d.deal_link}}" target="blank" title="{{d.post_title}}">{{d.post_title}}</a><svg class="shape shape-icon shape-meta"><use xlink:href="#shape-new-window"/></svg></h4>
+
+				<div class="col-sm-4">
+
+					{% if d.thumbnail %}
+						<img src="{{d.thumbnail.src}}" alt="{{d.post_title}}">
+					{% elseif d.deal_pic %}
+						<img src="{{TimberImage(d.deal_pic).src}}" alt="{{d.post_title}}">
+					{% else %}
+						{# TODO: this isn't working for some reason.... #}
+						{% set default = site.theme.uri ~ '/assets/img/util/default-meister.png' %}
+						<img src="{{default}}" alt="{{d.post_title}}">
+					{% endif %}
+					<p class="tagline">By: <span class="special">{{d.deal_vendor}}</span></p>
+				</div>
+
+				<div class="col-sm-8">
+					<p>{{d.deal_desc}}</p>
+					<p><strong>{{d.deal_cta}}</strong></p>	
+					<a class="btn-cta" href="{{d.deal_link}}" target="blank" title="{{d.post_title}}">Grab it</a>		
+				</div>
+				</div>
+			{% endfor %}
 		</div>
- #}
-	</section> <!-- /.tease -->
 
-
-
-	<div class="col-md-4">
-		<div class="number-wrap">
-			<div class="number"><span class="meta">Meister Deals</span></div>
-		</div>
-
-		{% for d in post.get_field('featured_deal') %}
-			
-			<h4><a href="{{d.deal_link}}" target="blank" title="{{d.post_title}}">{{d.post_title}}</a><svg class="shape shape-icon shape-meta"><use xlink:href="#shape-new-window"/></svg></h4>
-			<a href="{{d.deal_link}}" target="blank" title="{{m.title}}">
-			{% if d.thumbnail %}
-				<img src="{{d.thumbnail.src}}" alt="{{d.title}}">
-			{% elseif d.deal_pic %}
-				<img src="{{TimberImage(d.deal_pic).src}}" alt="{{d.title}}">
-			{% else %}
-				{% set default = site.theme.uri ~ '/assets/img/util/default-meister.png' %}
-				<img src="{{default}}" alt="{{d.title}}">
-			{% endif %}
-			</a>
-			<a class="btn-cta" href="{{d.deal_link}}" target="blank" title="{{m.title}}">Grab it</a>
-			<p>{{d.deal_desc}}</p>
-			<p><strong>{{d.deal_cta}}</strong></p>	
-			{% include "partials/deal-date-logic.twig" %}
-			
-		{% endfor %}
-	</div>
-
-	<div class="col-md-4">
-		<div class="number-wrap">
-			<div class="number"><span class="meta">Subscribe on iTunes</span></div>
-		</div>
-		<br>
-		<img src="http://mtn.local/wp-content/uploads/2014/11/itunes_img2.png" alt="">
-		{# <img src="http://www.hypebot.com/.a/6a00d83451b36c69e2017c350696f2970b-800wi" alt=""> #}
-	</div>
-	</div>
-	
-	
 {% endblock %}
 
 {% block loop_minor %}
 	<div class="front-feed">
 		<div class="front-feed-loop">
-			<h3 class="tagline tagline-page">Recent Episodes</h3>
+			<h3 class="tagline tagline-page">Meet the Meisters</h3>
 			<a class="link-more" href="{{site.link}}/meisters" title="{{m.title}}">See all &rarr;</a>
 		</div>
 	</div>

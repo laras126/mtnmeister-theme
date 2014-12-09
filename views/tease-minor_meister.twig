@@ -7,11 +7,11 @@
 	</div>	
 	<br>
 	<div class="thumb-container">
-	
+		<a href="{{m.link}}">
 		{% if m.get_thumbnail %}
 			<img src="{{m.thumbnail.src}}" alt="{{m.title}}"/>
 		{% endif %}
-
+		</a>
 		<div class="thumb-caption">
 			<p class="meta">{{m.episode_tag}}</p>
 			<a href="{{m.link}}" class="link-more">Listen &rarr;</a>

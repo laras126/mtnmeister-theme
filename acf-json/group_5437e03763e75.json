@@ -1,6 +1,6 @@
 {
     "key": "group_5437e03763e75",
-    "title": "Pages",
+    "title": "Page Header",
     "fields": [
         {
             "key": "field_544e96afcf90e",
@@ -67,13 +67,13 @@
             ]
         },
         {
-            "key": "field_5437e03d4aa17",
+            "key": "field_54862775c6028",
             "label": "Tagline",
             "name": "tagline",
             "prefix": "",
             "type": "text",
-            "instructions": "A few words or short sentence describing the page content. Short, sweet, and snappy.",
-            "required": 1,
+            "instructions": "",
+            "required": 0,
             "conditional_logic": 0,
             "wrapper": {
                 "width": "",
@@ -84,7 +84,7 @@
             "placeholder": "",
             "prepend": "",
             "append": "",
-            "maxlength": 130,
+            "maxlength": "",
             "readonly": 0,
             "disabled": 0
         },

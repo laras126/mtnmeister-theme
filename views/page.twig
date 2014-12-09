@@ -11,7 +11,9 @@
 			{% block today %}{% endblock %}
 
 			<div class="page-content {{sidebar_class}}">		
-				<p class="lead">{{post.introduction}}</p>	
+				{% if post.introduction %}
+					<p class="lead">{{post.introduction}}</p>	
+				{% endif %}
 				{% block loop %}{% endblock %}
 				{% include 'partials/acf-block-loop.twig' %}
 			</div>

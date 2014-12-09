@@ -55,29 +55,47 @@
 
 			{% for d in post.get_field('featured_deal') %}
 				<div class="tease-featured-deal">
-				<h4><a href="{{d.deal_link}}" target="blank" title="{{d.post_title}}">{{d.post_title}}</a><svg class="shape shape-icon shape-meta"><use xlink:href="#shape-new-window"/></svg></h4>
+					<h4><a href="{{d.deal_link}}" target="blank" title="{{d.post_title}}">{{d.post_title}}</a><svg class="shape shape-icon shape-meta"><use xlink:href="#shape-new-window"/></svg></h4>
 
-				<div class="col-sm-4">
+					<div class="col-sm-4">
 
-					{% if d.thumbnail %}
-						<img src="{{d.thumbnail.src}}" alt="{{d.post_title}}">
-					{% elseif d.deal_pic %}
-						<img src="{{TimberImage(d.deal_pic).src}}" alt="{{d.post_title}}">
-					{% else %}
-						{# TODO: this isn't working for some reason.... #}
-						{% set default = site.theme.uri ~ '/assets/img/util/default-meister.png' %}
-						<img src="{{default}}" alt="{{d.post_title}}">
-					{% endif %}
-					<p class="tagline">By: <span class="special">{{d.deal_vendor}}</span></p>
-				</div>
+						{% if d.thumbnail %}
+							<img src="{{d.thumbnail.src}}" alt="{{d.post_title}}">
+						{% elseif d.deal_pic %}
+							<img src="{{TimberImage(d.deal_pic).src}}" alt="{{d.post_title}}">
+						{% else %}
+							{# TODO: this isn't working for some reason.... #}
+							{% set default = site.theme.uri ~ '/assets/img/util/default-meister.png' %}
+							<img src="{{default}}" alt="{{d.post_title}}">
+						{% endif %}
+						<p class="tagline">By: <span class="special">{{d.deal_vendor}}</span></p>
+					</div>
 
-				<div class="col-sm-8">
-					<p>{{d.deal_desc}}</p>
-					<p><strong>{{d.deal_cta}}</strong></p>	
-					<a class="btn-cta" href="{{d.deal_link}}" target="blank" title="{{d.post_title}}">Grab it</a>		
-				</div>
+					<div class="col-sm-8">
+						<p>{{d.deal_desc}}</p>
+						<p><strong>{{d.deal_cta}}</strong></p>	
+						<a class="btn-cta" href="{{d.deal_link}}" target="blank" title="{{d.post_title}}">Grab it</a>		
+					</div>
 				</div>
 			{% endfor %}
+		</div>
+
+		<div class="clearfix">
+			<div class="tease-featured-deal">
+				<div class="col-sm-8">
+					<h4>$100 Credit to I/O Merino</h4>
+					<p>Sign up for our biweekly newsletter and I/O Merino's "Connection Club", and be entered to win a  credit to I/O Merino's online store.</p>
+					{% include 'partials/mailchimp.twig' %}
+				</div>
+				<div class="col-sm-4">
+					<a href="http://eepurl.com/5hA8b"><img src="http://mtnmeister.com/wp-content/uploads/2014/12/iomerino-logo.png" alt=""></a>
+					<!-- begin feeling horrible -->
+					<br>
+					<br>
+					<br>
+					<!-- end feeling horrible -->
+				</div>	
+			</div>
 		</div>
 
 {% endblock %}

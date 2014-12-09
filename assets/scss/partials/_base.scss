@@ -112,10 +112,22 @@ img {
 	.cat-item {
 		@extend %list-meta-item;
 		margin: 0;
-		a {
-			@extend .btn-alt;
-			border-radius: 4px;	
-		}
+		// @extend .btn-alt;
+		@extend %list-meta-item;
+		margin: 0;
+		background: lighten($accent-light, 10%);
+		font-weight: 700;
+		color: $text-dark;
+		@extend %upperspace;
+		// @if $size == sml {
+		padding: $sml/3 $sml*0.75 !important;
+		font-size: $sml;
+		// } @else {
+			// @extend %form-base;	
+		// }
+		
+		// @extend %btn;
+		border-radius: 4px;	
 	}
 
 .list-tags {

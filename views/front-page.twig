@@ -58,7 +58,6 @@
 				<h4><a href="{{d.deal_link}}" target="blank" title="{{d.post_title}}">{{d.post_title}}</a><svg class="shape shape-icon shape-meta"><use xlink:href="#shape-new-window"/></svg></h4>
 
 				<div class="col-sm-4">
-
 					{% if d.thumbnail %}
 						<img src="{{d.thumbnail.src}}" alt="{{d.post_title}}">
 					{% elseif d.deal_pic %}
@@ -78,6 +77,17 @@
 				</div>
 				</div>
 			{% endfor %}
+		</div>
+
+		<div class="clearfix">
+			<div class="col-sm-6">
+				<h4>$100 Credit to I/O Merino</h4>
+				<p>Sign up for our biweekly newsletter and I/O Merino's "Connection Club", and be entered to win a  credit to I/O Merino's online store.</p>
+				{% include 'partials/mailchimp.twig' %}
+			</div>
+			<div class="col-sm-6">
+				<img src="http://mtnmeister.com/wp-content/uploads/2014/12/iomerino-logo.png" alt="">
+			</div>
 		</div>
 
 {% endblock %}

@@ -1629,7 +1629,7 @@ th {
   list-style-type: none; }
 
 .btn, .btn-cta, input[type="submit"],
-button, .menu-item-cta .cta, .btn-alt, .cat-item a, .link-more, .menu-item-cta .cta-alt, .btn-alt-dark, .btn-tweet {
+button, .menu-item-cta .cta, .btn-alt, .link-more, .menu-item-cta .cta-alt, .btn-alt-dark, .btn-tweet {
   text-decoration: none;
   border: 0; }
 
@@ -1652,8 +1652,8 @@ input[type="tel"] {
   font-family: "proxima-nova", Helvetica, sans-serif; }
 
 .btn, .btn-cta, input[type="submit"],
-button, .menu-item-cta .cta, .btn-alt, .cat-item a, .link-more, .menu-item-cta .cta-alt, .btn-alt-dark, .btn-tweet, .ginput_complex label, .widget p,
-.meta, .block-title, .tagline, .number, label, .menu-item a, .link-postnav, h4, .page-title {
+button, .menu-item-cta .cta, .btn-alt, .link-more, .menu-item-cta .cta-alt, .btn-alt-dark, .btn-tweet, .ginput_complex label, .widget p,
+.meta, .block-title, .tagline, .number, .cat-item, label, .menu-item a, .link-postnav, h4, .page-title {
   text-transform: uppercase;
   letter-spacing: 1px; }
 
@@ -1813,17 +1813,17 @@ button, .menu-item-cta .cta {
   button:active, .menu-item-cta .cta:active {
     background: #583003; }
 
-.btn-alt, .cat-item a, .link-more, .menu-item-cta .cta-alt {
+.btn-alt, .link-more, .menu-item-cta .cta-alt {
   background: #ececec;
   font-weight: 700;
   transition: background 0.25s;
   color: #1f1d1a !important;
   padding: 0.26667rem 0.6rem;
   font-size: 0.8rem; }
-  .btn-alt:hover, .cat-item a:hover, .link-more:hover, .menu-item-cta .cta-alt:hover, .btn-alt:focus, .cat-item a:focus, .link-more:focus, .menu-item-cta .cta-alt:focus {
+  .btn-alt:hover, .link-more:hover, .menu-item-cta .cta-alt:hover, .btn-alt:focus, .link-more:focus, .menu-item-cta .cta-alt:focus {
     background: #b9b9b9;
     color: #1f1d1a; }
-  .btn-alt:active, .cat-item a:active, .link-more:active, .menu-item-cta .cta-alt:active {
+  .btn-alt:active, .link-more:active, .menu-item-cta .cta-alt:active {
     background: #868686; }
 
 .btn-alt-dark {
@@ -2034,9 +2034,14 @@ img {
   margin: 0; }
 
 .cat-item {
-  margin: 0; }
-  .cat-item a {
-    border-radius: 4px; }
+  margin: 0;
+  margin: 0;
+  background: #ececec;
+  font-weight: 700;
+  color: #1f1d1a;
+  padding: 0.26667rem 0.6rem !important;
+  font-size: 0.8rem;
+  border-radius: 4px; }
 
 .list-tags {
   margin-bottom: 0; }

@@ -3,7 +3,7 @@
 
 // Enqueue styles
 function mtn_styles() {
-  wp_enqueue_style( 'main', get_template_directory_uri() . '/assets/css/main.css' );
+  wp_enqueue_style( 'main', get_template_directory_uri() . '/assets/css/main.min.css' );
 }
 add_action( 'wp_enqueue_scripts', 'mtn_styles' );
 
@@ -36,6 +36,7 @@ add_action( 'wp_footer', 'mtn_scripts' );
  * Cookie domain is 'auto' configured. See: http://goo.gl/VUCHKM
  */
 
+define('GOOGLE_ANALYTICS_ID', 'UA-50385573-1');
 function mtn_google_analytics() { ?>
 <script>
   <?php if (WP_ENV === 'production') : ?>
@@ -53,9 +54,10 @@ function mtn_google_analytics() { ?>
 </script>
 
 <?php }
-// if (GOOGLE_ANALYTICS_ID && (WP_ENV !== 'production' || !current_user_can('manage_options'))) {
-//   add_action('wp_footer', 'mtn_google_analytics', 20);
-// }
+
+if (GOOGLE_ANALYTICS_ID && (WP_ENV !== 'production' || !current_user_can('manage_options'))) {
+  add_action('wp_footer', 'mtn_google_analytics', 20);
+}
 
 
 ?>

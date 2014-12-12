@@ -85,4 +85,5 @@ function namespace_add_custom_types( $query ) {
 }
 add_filter( 'pre_get_posts', 'namespace_add_custom_types' );
 
+
 ?>

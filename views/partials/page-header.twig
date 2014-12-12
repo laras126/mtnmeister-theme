@@ -1,8 +1,9 @@
 {% set meister = TimberPost(header_image.related_meister) %}
 
 <header class="page-header animated fadeIn">
-	 <img id="headerImageLoader" src="{{TimberImage(header_image.image).src}}" alt="Highlighted meister">
-	<div class="page-info animated fadeIn">
+	<img id="headerImageLoader" src="{{TimberImage(header_image.image).src}}" alt="Highlighted meister">
+	{% include 'partials/spinner.twig' %}
+	<div class="page-info">
 		<div class="container">
 	        <h1 class="page-title no-margin">{{post.title}}</h1>
 	    </div>

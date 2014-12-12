@@ -58,8 +58,9 @@ $(document).ready(function() {
 	
 	$container.imagesLoaded( function() {
 		$('.spinner').hide();
-		$container.css('background-image', 'url(' + imageSrc + ')');
-		console.log('loaded');
+		$container.css({
+			'background-image': 'url(' + imageSrc + ')'
+		});
 	});
 
 

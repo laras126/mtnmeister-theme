@@ -54,6 +54,8 @@ h4 {
 	background-repeat: no-repeat;
 	background-color: $accent-dark;
 
+	transition: background-image 0.5s ease-in;
+
 	@media(min-width: 1040px) {
 		padding-top: 56%;
 	}
@@ -69,13 +71,14 @@ h4 {
 
 #headerImageLoader {
 	display: none;
-
-	.no-js & {
-		display: block;
-		position: absolute;
-		width: 100%;
-		bottom: 0;	
-	}
+	
+	// Sorry, no-js people. This causes too much blinking, and I don't feel like figuring it out!
+	// .no-js & {
+	// 	display: block;
+	// 	position: absolute;
+	// 	width: 100%;
+	// 	bottom: 0;	
+	// }
 }
 
 .page-header-caption {

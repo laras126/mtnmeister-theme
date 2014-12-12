@@ -2315,13 +2315,9 @@ input[type="checkbox"]:focus {
   border-top: 5px solid #f8992f; }
   .banner a {
     color: #fff; }
-  .no-js .banner {
-    position: relative; }
   @media (min-width: 62em) {
     .page .banner {
-      background: linear-gradient(rgba(4, 63, 126, 0.5), rgba(4, 63, 126, 0)); }
-    .no-js .banner {
-      background: #043f7e; } }
+      background: linear-gradient(rgba(4, 63, 126, 0.5), rgba(4, 63, 126, 0)); } }
 
 .scrolled {
   background: #043f7e !important; }
@@ -2486,7 +2482,8 @@ input[type="checkbox"]:focus {
   background-position: center;
   background-size: 100% auto;
   background-repeat: no-repeat;
-  background-color: #043f7e; }
+  background-color: #043f7e;
+  transition: background-image 0.5s ease-in; }
   @media (min-width: 1040px) {
     .page-header {
       padding-top: 56%; } }
@@ -2499,11 +2496,6 @@ input[type="checkbox"]:focus {
 
 #headerImageLoader {
   display: none; }
-  .no-js #headerImageLoader {
-    display: block;
-    position: absolute;
-    width: 100%;
-    bottom: 0; }
 
 .page-header-caption {
   top: 60px;

@@ -1864,6 +1864,8 @@ button, .menu-item-cta .cta {
   top: 30%;
   right: 48%;
   right: calc(50% - 20px); }
+  .no-js .spinner {
+    display: none; }
 
 .container1 > div, .container2 > div, .container3 > div {
   width: 6px;
@@ -2658,6 +2660,9 @@ input[type="checkbox"]:focus {
     .tease-body iframe,
     .article-section iframe {
       height: 160px; } }
+
+.no-js .lazy {
+  display: none; }
 
 .thumb-container {
   position: relative; }

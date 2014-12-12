@@ -9,7 +9,8 @@
 	<div class="thumb-container">
 		<a href="{{m.link}}">
 		{% if m.get_thumbnail %}
-			<img src="{{m.thumbnail.src}}" alt="{{m.title}}"/>
+			<img class="lazy" data-original="{{m.thumbnail.src}}" alt="{{m.title}}"/>
+			<noscript><img src="{{m.thumbnail.src}}" alt="{{m.title}}" height="300" width="300"></noscript>
 		{% endif %}
 		</a>
 		<div class="thumb-caption">

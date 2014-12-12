@@ -2,6 +2,7 @@
 
 <header class="page-header animated fadeIn">
 	<img id="headerImageLoader" src="{{TimberImage(header_image.image).src}}" alt="Highlighted meister">
+	<noscript><img src="{{TimberImage(header_image.image).src}}" alt="Highlighted meister"></noscript>
 	{% include 'partials/spinner.twig' %}
 	<div class="page-info">
 		<div class="container">

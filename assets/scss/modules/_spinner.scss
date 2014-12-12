@@ -1,6 +1,10 @@
 // http://tobiasahlin.com/spinkit/
 
 .spinner {
+  .no-js & {
+    display: none;
+  }
+
   margin: 100px auto;
   width: 20px;
   height: 20px;

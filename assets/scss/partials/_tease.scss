@@ -73,6 +73,11 @@
 	@extend %row_of_three;
 }
 
+// Hide lazy loading thumbnails for no js (they are in <noscript> tags)
+.no-js .lazy {
+    display: none;
+}
+
 .thumb-container {
 	position: relative;
 }

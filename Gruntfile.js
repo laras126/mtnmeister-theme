@@ -9,9 +9,9 @@ module.exports = function(grunt) {
 
     var jsFileList = [
         'assets/js/build/modernizr.custom.build.js',
-        'bower_components/imagesloaded/imagesloaded.pkgd.min.js',
-        // 'bower_components/imagesloaded/imagesloaded.pkgd.min.js',
         'bower_components/FitText.js/jquery.fittext.js',
+        'bower_components/imagesloaded/imagesloaded.pkgd.min.js',
+        'bower_components/jquery.lazyload/jquery.lazyload.min.js',
         'assets/js/_*.js'
     ];
 

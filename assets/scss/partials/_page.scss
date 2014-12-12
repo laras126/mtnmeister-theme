@@ -75,21 +75,34 @@ h4 {
 }
 
 .page-header-caption {
-	display: none;
+	// display: none;
+	top: 60px;
+	bottom: auto;
+	display: block;
+	position: absolute;
+	z-index: 99;
+	right: 0;
+
+	padding: $sml;
+	
+	text-align: right;
+	font-size: $sml;
+	background-color: rgba($text-dark, 0.3);
 
 	@include bp(small) {
-		display: block;
-		position: absolute;
-		z-index: 99;
-		right: 0;
+		
 		top: auto;
-		bottom: 0;	
+		bottom: 80px;
+
+		.home & {
+			top: 60px;
+			bottom: auto;
+		}
 		
-		padding: $sml;
-		
-		text-align: right;
-		font-size: $sml;
-		background-color: rgba($text-dark, 0.3);
+	}
+
+	@include bp(xl) {
+		bottom: 0;
 	}
 
 	// TODO: Could this be incorporated into a mixin somehow?

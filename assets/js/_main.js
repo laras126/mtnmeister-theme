@@ -9,12 +9,11 @@ $(document).ready(function() {
 
 
 
+
 	// ----
 	// Toggle menu
 	// ----
 
-	// TODO: add this with modernizer, causes a blip
-	// $('body').addClass('js'); // Detect JS
 	  
 	var $menu = $('#menu'),
 		$menulink = $('.menu-link');
@@ -53,13 +52,14 @@ $(document).ready(function() {
 	// Header image spinner
 	// ----
 
-	var $container = $('.page-header');
-	var $image = $('.page-header-image');
-	$image.hide();
+	var $container = $('.page-header'),
+		$image = $('#headerImageLoader'),
+		imageSrc = $image.attr('src');
 	
 	$container.imagesLoaded( function() {
-		$image.fadeIn(300);
 		$('.spinner').hide();
+		$container.css('background-image', 'url(' + imageSrc + ')');
+		console.log('loaded');
 	});
 
 

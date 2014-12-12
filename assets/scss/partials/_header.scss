@@ -24,8 +24,12 @@
 
  	background-color: $accent-dark;
 	transition: all 0.5s ease;
-	
 	position: fixed;
+	
+	.no-js & {
+		position: relative;
+	}
+	
 	width: 100%;
 	z-index: 100;	
 	
@@ -33,6 +37,10 @@
 
 		.page & {
 			background: linear-gradient(rgba($accent-dark, 0.5), rgba($accent-dark, 0));
+		}
+
+		.no-js & {
+			background: $accent-dark;
 		}
 		
 		// position: absolute;

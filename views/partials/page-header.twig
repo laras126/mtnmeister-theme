@@ -1,7 +1,7 @@
 {% set meister = TimberPost(header_image.related_meister) %}
 
-<header class="page-header animated fadeIn" style="background-image:url('{{TimberImage(header_image.image).src}}');">
-	 
+<header class="page-header animated fadeIn">
+	 <img id="headerImageLoader" src="{{TimberImage(header_image.image).src}}" alt="Highlighted meister">
 	<div class="page-info animated fadeIn">
 		<div class="container">
 	        <h1 class="page-title no-margin">{{post.title}}</h1>

@@ -19,7 +19,8 @@ function mtn_scripts() {
   }
 
   // Add MTNmeister JS
-  wp_register_script('mtn-js', get_template_directory_uri() . '/assets/js/scripts.min.js');
+  wp_register_script('mtn-js', get_template_directory_uri() . '/assets/js/scripts.js');
+  // wp_register_script('mtn-js', get_template_directory_uri() . '/assets/js/build/scripts.min.js');
   wp_enqueue_script( 'mtn-js', array('jquery'), null, true );
 
   if (is_single() && comments_open() && get_option('thread_comments')) {

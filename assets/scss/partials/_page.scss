@@ -67,11 +67,15 @@ h4 {
 	}
 }
 
+#headerImageLoader {
+	display: none;
 
-.page-header-image {
-	width: 100%;
-	position: absolute;
-	bottom: 0;
+	.no-js & {
+		display: block;
+		position: absolute;
+		width: 100%;
+		bottom: 0;	
+	}
 }
 
 .page-header-caption {

@@ -5,8 +5,14 @@
 
 
 .menu-main {
+
 	overflow: hidden;
 	max-height: 0;
+	
+	.no-js & {
+		overflow: visible;
+		max-height: none;
+	}
 	
 	// transition: all 0.2s ease-in-out;
 	

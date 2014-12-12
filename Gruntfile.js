@@ -1,13 +1,16 @@
 'use strict';
 module.exports = function(grunt) {
+    
     // Load all tasks
     require('load-grunt-tasks')(grunt);
+
     // Show elapsed time
     require('time-grunt')(grunt);
 
     var jsFileList = [
-        'assets/js/plugins/*.js',
+        'assets/js/build/modernizr.custom.build.js',
         'bower_components/imagesloaded/imagesloaded.pkgd.min.js',
+        // 'bower_components/imagesloaded/imagesloaded.pkgd.min.js',
         'bower_components/FitText.js/jquery.fittext.js',
         'assets/js/_*.js'
     ];
@@ -49,7 +52,7 @@ module.exports = function(grunt) {
     uglify: {
         dest: {
             files: {
-                'assets/js/scripts.min.js': ['assets/js/scripts.js']
+                'assets/js/build/scripts.min.js': ['assets/js/scripts.js']
             }
         }
     },
@@ -91,6 +94,67 @@ module.exports = function(grunt) {
             src: 'assets/css/main.css',
             dest: 'assets/css/main.min.css'
         }
+    },
+    
+    modernizr: {
+
+        dist: {
+            // [REQUIRED] Path to the build you're using for development.
+            "devFile" : "assets/js/vendor/modernizr.custom.dev.js",
+
+            // Path to save out the built file.
+            "outputFile" : "assets/js/build/modernizr.custom.build.js",
+
+            // Based on default settings on http://modernizr.com/download/
+            "extra" : {
+                "shiv" : true,
+                "printshiv" : false,
+                "load" : true,
+                "mq" : false,
+                "cssclasses" : true
+            },
+
+            // Based on default settings on http://modernizr.com/download/
+            "extensibility" : {
+                "addtest" : false,
+                "prefixed" : false,
+                "teststyles" : false,
+                "testprops" : false,
+                "testallprops" : false,
+                "hasevents" : false,
+                "prefixes" : false,
+                "domprefixes" : false,
+                "cssclassprefix": ""
+            },
+
+            // By default, source is uglified before saving
+            "uglify" : true,
+
+            // Define any tests you want to implicitly include.
+            "tests" : [],
+
+            // By default, this task will crawl your project for references to Modernizr tests.
+            // Set to false to disable.
+            "parseFiles" : true,
+
+            // When parseFiles = true, this task will crawl all *.js, *.css, *.scss and *.sass files,
+            // except files that are in node_modules/.
+            // You can override this by defining a "files" array below.
+            // "files" : {
+                // "src": []
+            // },
+
+            // This handler will be passed an array of all the test names passed to the Modernizr API, and will run after the API call has returned
+            // "handler": function (tests) {},
+
+            // When parseFiles = true, matchCommunityTests = true will attempt to
+            // match user-contributed tests.
+            "matchCommunityTests" : false,
+
+            // Have custom Modernizr tests? Add paths to their location here.
+            "customTests" : []
+        }
+
     },
 
     watch: {

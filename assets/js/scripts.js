@@ -56,6 +56,8 @@
 	// Plugins
 	$('.page-title').fitText(0.65, {minFontSize: '45px'});
 
+
+
 	// ----
 	// Toggle menu
 	// ----
@@ -66,12 +68,11 @@
 	var $menu = $('#menu'),
 		$menulink = $('.menu-link');
 		
-	$menulink.click(function() {
+	$menulink.click(function(e) {
 		$menulink.toggleClass('active');
 		$menu.toggleClass('active');
-		return false;
+		e.preventDefault();
 	});
-
 
 
 	

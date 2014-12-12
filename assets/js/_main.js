@@ -7,6 +7,8 @@ $(document).ready(function() {
 	// Plugins
 	$('.page-title').fitText(0.65, {minFontSize: '45px'});
 
+
+
 	// ----
 	// Toggle menu
 	// ----
@@ -17,12 +19,11 @@ $(document).ready(function() {
 	var $menu = $('#menu'),
 		$menulink = $('.menu-link');
 		
-	$menulink.click(function() {
+	$menulink.click(function(e) {
 		$menulink.toggleClass('active');
 		$menu.toggleClass('active');
-		return false;
+		e.preventDefault();
 	});
-
 
 
 	

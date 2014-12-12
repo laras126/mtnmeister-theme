@@ -65,7 +65,6 @@ $context['post'] = $post;
 // Get custom type content
 if( is_page('Meisters') ) {
 	$context['meisters'] = Timber::get_posts($meister_args);
-
 } elseif( is_page('Deals') ) {
 	$context['deals'] = Timber::get_posts($deal_args);
 }

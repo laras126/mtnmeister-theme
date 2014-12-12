@@ -1,5 +1,23 @@
-{% extends "page.twig" %}
+{% extends "base.twig" %}
 
 {% block content %}
-	<h1>404</h1>
+	<article class="post-type-{{post.post_type}}" id="post-{{post.ID}}">
+	
+		<header class="article-header"><br>
+			<h1>Well, this is embarrassing.</h1>
+			<p class="tagline tagline-page">Looks like this URL no longer exists.</p>
+		</header>
+		<div class="container-squish">
+			{# <br>
+			<br> #}
+			
+			<a href="{{site.link}}/meister/nick-fairall"><img src="{{site.url}}/wp-content/themes/mtnmeister-theme/assets/img/util/404.gif" class="center-block" alt="404 Error"></a>
+			<br><br>
+			<p class="lead text-center">That's totally our bad, but we all make mistakes. <br>Even Olympic ski jumper and Meister <a href="{{site.link}}/meister/nick-fairall">#33 Nick Fairall</a>.</p>
+
+		</div>
+		
+			
+			
+	</article>
 {% endblock %}

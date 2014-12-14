@@ -2475,16 +2475,21 @@ input[type="checkbox"]:focus {
   color: #fff;
   position: relative;
   z-index: 9;
-  top: 0.8rem;
-  font-size: 2.55rem; }
+  font-size: 2.55rem;
+  font-size: 13vw;
+  top: 0.8rem; }
   @media (min-width: 30em) {
     .page-title {
-      font-size: 4.25rem;
-      top: 1.3rem; } }
+      font-size: 4.76rem;
+      font-size: 15vw;
+      top: 1.625rem; } }
   @media (min-width: 45em) {
     .page-title {
-      font-size: 6.8rem;
-      top: 2rem; } }
+      font-size: 13vw; } }
+  @media (min-width: 72em) {
+    .page-title {
+      font-size: 10vw;
+      top: 2.1rem; } }
 
 .page-header {
   overflow: hidden;
@@ -2523,13 +2528,11 @@ input[type="checkbox"]:focus {
   color: #fff; }
   @media (min-width: 30em) {
     .page-header-caption {
-      top: auto;
-      bottom: 80px; }
-      .home .page-header-caption {
-        top: 60px;
-        bottom: auto; } }
-  @media (min-width: 67em) {
+      top: 60px;
+      bottom: auto; } }
+  @media (min-width: 72em) {
     .page-header-caption {
+      top: auto;
       bottom: 0; } }
   .page-header-caption a {
     color: #f9ac56; }

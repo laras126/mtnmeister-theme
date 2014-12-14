@@ -111,7 +111,8 @@ module.exports = function(grunt) {
                 "printshiv" : false,
                 "load" : true,
                 "mq" : false,
-                "cssclasses" : true
+                "cssclasses" : true,
+                "cssvwunit" : true
             },
 
             // Based on default settings on http://modernizr.com/download/

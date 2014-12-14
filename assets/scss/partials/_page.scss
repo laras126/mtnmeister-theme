@@ -16,28 +16,37 @@ h4 {
 	position: relative;
 	z-index: 9;
 	@extend %full_width;
+
+	font-size: $h1*0.75;	
+	font-size: 13vw;
 	
 	top: $sml;
-
-	font-size: $h1*0.75;
+	
+	// NOTE: Gross. So many magic numbers, but fine for
 
 	@include bp(380px) {
 		// top: $base;
 		font-size: $h1;
+		font-size: 13vw;
 	}
 
 	@include bp(small) {
-		font-size: $h1*1.25;
-		top: $h4;
+		font-size: $h1*1.4;
+		font-size: 15vw;
+
+		top: $h4*1.25;
 	}
 
 	@include bp(med) {
-		font-size: $h1*2;
-		top: $h3;
+		font-size: 13vw;
 	}
 
 	@include bp(xl) {
-		// top: $h4*1.8;
+		// .home & {
+			font-size: 10vw;
+		// }
+
+		top: $h3*1.05;
 	}
 }
 
@@ -98,17 +107,18 @@ h4 {
 
 	@include bp(small) {
 		
-		top: auto;
-		bottom: 80px;
+		// top: auto;
+		// bottom: 80px;
 
-		.home & {
+		// .home & {
 			top: 60px;
 			bottom: auto;
-		}
+		// }
 		
 	}
 
 	@include bp(xl) {
+		top: auto;
 		bottom: 0;
 	}
 

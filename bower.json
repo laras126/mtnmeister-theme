@@ -27,7 +27,6 @@
   "devDependencies": {
     "modernizr": "~2.8.3",
     "imagesloaded": "~3.1.8",
-    "FitText.js": "~1.2.0",
     "jquery.lazyload": "~1.9.3"
   }
 }

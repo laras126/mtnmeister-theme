@@ -5,7 +5,7 @@ $(document).ready(function() {
 
 
 	// Plugins
-	$('.page-title').fitText(0.65, {minFontSize: '45px'});
+
 	$('.lazy').lazyload({
 		effect : 'fadeIn'
 	}); // Am I lazy for using this?

@@ -1559,6 +1559,16 @@ th {
     float: left;
     width: 100%; } }
 
+@media (min-width: 30em) {
+  .row-sm {
+    margin-left: -1rem;
+    margin-right: -1rem; }
+    .row-sm:before, .row-sm:after {
+      content: " ";
+      display: table; }
+    .row-sm:after {
+      clear: both; } }
+
 .nav-prevnext, .widgets, .widget p,
 .row {
   margin-left: -1rem;

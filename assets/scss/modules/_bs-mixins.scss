@@ -217,3 +217,9 @@ $placeholder-loop: 13;
 
     // .col-lg-#{$i}-offset { @include make-lg-column-offset($i); }
 }
+
+.row-sm {
+  @include bp(small) {
+    @include make-row();
+  }
+}

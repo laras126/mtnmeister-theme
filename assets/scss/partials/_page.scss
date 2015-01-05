@@ -47,6 +47,11 @@ h4 {
 	}
 }
 
+	// .page-title-simple {
+	// 	color: $accent-dark;
+	// 	top: 0 !important;
+	// }
+
 .tagline-page {
 	@extend %full_width;
 	@extend %h4;
@@ -67,15 +72,17 @@ h4 {
 	position: relative;
 
 	width: 100%;
-	padding-top: percentage(2/3);
+	
 
 	background-position: center;
 	background-size: 100% auto;
 	background-repeat: no-repeat;
 	background-color: $accent-dark;
 
-	transition: background-image 0.5s ease-in;
-
+	transition: background-image 0.5s ease-in;	
+		
+	padding-top: percentage(2/3);
+	
 	@media(min-width: 1040px) {
 		padding-top: 56%;
 	}
@@ -88,6 +95,10 @@ h4 {
 		padding-top: 45%;
 	}
 }
+
+	.page-header-simple {
+		padding-top: 10%;
+	}
 
 	#headerImageLoader {
 		display: none;

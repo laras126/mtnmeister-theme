@@ -2289,9 +2289,6 @@ input[type="checkbox"]:focus {
   width: 50%;
   min-height: 1px; }
 
-.item {
-  margin-bottom: 1rem; }
-
 @media (min-width: 30em) {
   .item-desc,
   .item-img {
@@ -2501,12 +2498,12 @@ input[type="checkbox"]:focus {
   overflow: hidden;
   position: relative;
   width: 100%;
-  padding-top: 66.66667%;
   background-position: center;
   background-size: 100% auto;
   background-repeat: no-repeat;
   background-color: #043f7e;
-  transition: background-image 0.5s ease-in; }
+  transition: background-image 0.5s ease-in;
+  padding-top: 66.66667%; }
   @media (min-width: 1040px) {
     .page-header {
       padding-top: 56%; } }
@@ -2516,6 +2513,10 @@ input[type="checkbox"]:focus {
   @media (min-width: 1420px) {
     .page-header {
       padding-top: 45%; } }
+
+.page-header-simple {
+  padding-top: 10%;
+  background-color: #fff; }
 
 #headerImageLoader {
   display: none; }

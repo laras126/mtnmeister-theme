@@ -1,13 +1,11 @@
 
+
+
 // Tease styles
 
 
 .tease {
-	// border-top: $sml/3 $accent-med solid;
-	// @include make-lg-column(4, 0);
-	// border: 10px solid $accent-dark;
-	// background-color: $body-bkgd;
-	// padding: $sml/2 $sml;
+	padding-bottom: $base;
 	margin-bottom: $h2;
 }
 
@@ -20,13 +18,6 @@
 
 .tease-home {
 	@include make-sm-column(6);
-	// @include make-md-column(4);
-	iframe {
-		// height: 150px;
-		@include bp(med) {
-			// height: 300px;	
-		}
-	}
 }
 
 .tease-title {
@@ -59,9 +50,7 @@
 	}
 }
 
-.tease-body {
-	// @include make-row();
-}
+
 
 // Loops
 
@@ -99,4 +88,11 @@
 		display: block;
 		margin-bottom: $base;
 	}
+}
+
+
+// Tease typography
+
+.tease-cta {
+	font-weight: 700;
 }

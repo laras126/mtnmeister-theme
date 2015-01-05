@@ -35,9 +35,10 @@
 		function add_to_context($context){
 
 			// Get a random header image
-			if( is_page() ) {
-				$rows = get_field('header_images' );
-				$rand_row = $rows[ array_rand( $rows ) ];
+			$images = get_field('header_images' );
+
+			if( is_page() && $images ) {
+				$rand_row = $images[ array_rand( $images ) ];
 				$context['header_image'] = $rand_row;	
 			}
 			

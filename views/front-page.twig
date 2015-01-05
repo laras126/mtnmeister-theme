@@ -1,24 +1,24 @@
 {% extends "page.twig" %}
 
 {% block today %}
-	{# {% include ['tease-todays_meister.twig', 'tease.twig'] %} #}
+	
 
 	{# NOTE: 
-- It would be better to not have today's meister an array, but fine for now. 
-- Also to make this extend tease.twig
-#}
+		- It would be better to not have today's meister an array, but fine for now. 
+		- Also to make this extend tease.twig
+	#}
 	
 {% endblock %}
 
 {% block loop %}
 	{# <div class="col-md-12"> #}
-		{# {% include 'tease-todays_meister.twig' %} #}
-		<section>
+		
+		<section class="article-section">
 			{% for m in meisters|slice(0,1) %}
 				<header class="tease-header">
 					<div class="number-wrap">
 						<div class="number">
-							<span class="meta">Today's Episode</span>
+							<span class="meta">Recent Episode</span>
 						</div>
 					</div>
 
@@ -28,7 +28,7 @@
 							<p class="tagline tagline-tease">{{m.title}}</p>
 						</div>
 						<div class="col-xs-5">
-							<a class="link-more" href="{{site.link}}/meisters" title="Meisters">All Episodes &rarr;</a>	
+							<a class="link-more" href="{{m.link}}" title="Meisters">Read More &rarr;</a>	
 						</div>
 					</div>
 				</header>
@@ -36,67 +36,42 @@
 				<div class="tease-body">
 					{{m.episode_soundcloud_small}}
 					{% include 'partials/cat-list.twig' %}
+					<p>{{m.meister_bio}}</p>
+					
 				</div>
-				{# 
-				
-				NOTE: Should be including this and conditionally changing the date, but not...
+			{% endfor %}
+		</section> <!-- /.article-section -->
 
-				{% include 'tease-meister.twig' %} #}
-			{% endfor %}	
-		</section> <!-- /.tease -->
+		<section class="article-section">
 
-		<div class="clearfix">
-			<br>
-			<br> <!-- shame, shame -->
+			{% for d in post.get_field('featured_deal') %}
+				{% set share_deal = false %}
+				{% include 'tease-todays_deal.twig' %}
+			{% endfor %}
+
+			<a class="link-more" href="{{site.link}}/deals" title="{{m.title}}">All Deals &rarr;</a>
+
+		</section> <!-- /.article-section -->
+
+		<section class="tease-featured-deal">
+			<header class="col-sm-8-np">
+				<h4>$100 Credit to I/O Merino</h4>
+				<p>Sign up for our biweekly newsletter and I/O Merino's "Connection Club", and be entered to win a  credit to I/O Merino's online store.</p>
+				{% include 'partials/mailchimp.twig' %}
+			</header>
+			<div class="col-sm-4-np">
+				<a href="http://eepurl.com/5hA8b"><img src="http://mtnmeister.com/wp-content/uploads/2014/12/iomerino-logo.png" alt="I/O Merino Logo"></a>
+			</div>	
+		</section>
+
+		<div class="front-feed">
 			<div class="number-wrap">
-				<div class="number"><span class="meta">Featured Deal</span></div>
+				<div class="number">
+					<span class="meta">The Meisters</span>
+				</div>
 			</div>
 			<a class="link-more" href="{{site.link}}/deals" title="{{m.title}}">All Deals &rarr;</a>
 
-			{% for d in post.get_field('featured_deal') %}
-				<div class="tease-featured-deal">
-					<h4><a href="{{d.deal_link}}" target="blank" title="{{d.post_title}}">{{d.post_title}}</a><svg class="shape shape-icon shape-meta"><use xlink:href="#shape-new-window"/></svg></h4>
-
-					<div class="col-sm-4">
-						{% if d.thumbnail %}
-							<img src="{{d.thumbnail.src}}" alt="{{d.post_title}}">
-						{% elseif d.deal_pic %}
-							<img src="{{TimberImage(d.deal_pic).src}}" alt="{{d.post_title}}">
-						{% else %}
-							{# TODO: this isn't working for some reason.... #}
-							{% set default = site.theme.uri ~ '/assets/img/util/default-meister.png' %}
-							<img src="{{default}}" alt="{{d.post_title}}">
-						{% endif %}
-						<p class="tagline">By: <span class="special">{{d.deal_vendor}}</span></p>
-					</div>
-
-					<div class="col-sm-8">
-						<p>{{d.deal_desc}}</p>
-						<p><strong>{{d.deal_cta}}</strong></p>	
-						<a class="btn-cta" href="{{d.deal_link}}" target="blank" title="{{d.post_title}}">Grab it</a>
-					</div>
-				</div>
-			{% endfor %}
-		</div>
-
-		
-			<div class="tease-featured-deal">
-				<div class="col-sm-8-np">
-					<h4>$100 Credit to I/O Merino</h4>
-					<p>Sign up for our biweekly newsletter and I/O Merino's "Connection Club", and be entered to win a  credit to I/O Merino's online store.</p>
-					{% include 'partials/mailchimp.twig' %}
-				</div>
-				<div class="col-sm-4-np">
-					<a href="http://eepurl.com/5hA8b"><img src="http://mtnmeister.com/wp-content/uploads/2014/12/iomerino-logo.png" alt="I/O Merino Logo"></a>
-					<!-- shame, shame -->
-					<br>
-					<br>
-					<br>
-					<!-- shame, shame -->
-				</div>	
-			</div>
-
-		<div class="front-feed">
 			<div class="front-feed-loop">
 				<h3 class="tagline tagline-page">More Episodes&nbsp;</h3>
 				<a class="link-more" href="{{site.link}}/meisters" title="{{m.title}}">See all &rarr;</a>
@@ -110,9 +85,6 @@
 				</article>
 			{% endfor %}	
 		</div>
-
 {% endblock %}
 
-{% block loop_minor %}
-	
-{% endblock %}
+{% block loop_minor %}{% endblock %}

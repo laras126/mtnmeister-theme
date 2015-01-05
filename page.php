@@ -22,13 +22,6 @@
  */
 
 
-// Custom type Args and Pagination
-// global $paged;
-
-// if (!isset($paged) || !$paged){
-//     $paged = 1;
-// }
-
 
 // ---
 // Custom Post Type Args

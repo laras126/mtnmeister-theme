@@ -1583,7 +1583,7 @@ th {
     clear: both; }
 
 @media (min-width: 45em) {
-  .page-title, .tagline-page, .widget-title, .has-sidebar, .sidebar, .loop, .tease-featured:not(.tease-featured-deal) {
+  .page-title, .tagline-page, .widget-title, .loop, .has-sidebar, .sidebar, .tease-featured:not(.tease-featured-deal) {
     position: relative;
     float: left;
     width: 100%;
@@ -2290,7 +2290,7 @@ input[type="checkbox"]:focus {
   min-height: 1px; }
 
 .item {
-  margin-bottom: 2.4rem; }
+  margin-bottom: 1rem; }
 
 @media (min-width: 30em) {
   .item-desc,
@@ -2491,6 +2491,12 @@ input[type="checkbox"]:focus {
       font-size: 10vw;
       top: 2.1rem; } }
 
+.tagline-page, .widget-title {
+  color: #043f7e;
+  margin-top: 2.4rem;
+  margin-bottom: 2.4rem;
+  font-weight: 700; }
+
 .page-header {
   overflow: hidden;
   position: relative;
@@ -2548,29 +2554,9 @@ input[type="checkbox"]:focus {
     .page-info {
       border-bottom: 5px solid #f8992f; } }
 
-.tagline-page, .widget-title {
-  color: #043f7e;
-  margin-top: 2.4rem;
-  margin-bottom: 2.4rem;
-  font-weight: 700; }
-
-@media (min-width: 62em) {
-  .has-sidebar {
-    position: relative;
-    min-height: 1px;
-    padding-left: 1rem;
-    padding-right: 1rem;
-    float: left;
-    width: 70.83333%; } }
-
-@media (min-width: 62em) {
-  .sidebar {
-    position: relative;
-    min-height: 1px;
-    padding-left: 1rem;
-    padding-right: 1rem;
-    float: left;
-    width: 29.16667%; } }
+.article-section,
+.article-section-header {
+  margin-bottom: 2rem; }
 
 .image-inline {
   padding-top: 1rem;
@@ -2591,6 +2577,9 @@ input[type="checkbox"]:focus {
 .image-inline-right {
   float: right;
   padding-right: 0; }
+
+.block-blank {
+  margin-top: 2.4rem; }
 
 .front-feed {
   display: table; }
@@ -2636,6 +2625,7 @@ input[type="checkbox"]:focus {
   margin-bottom: 1rem; }
 
 .tease {
+  padding-bottom: 1rem;
   margin-bottom: 2.4rem; }
 
 .tease-deal,
@@ -2698,6 +2688,27 @@ input[type="checkbox"]:focus {
     margin-top: 0;
     display: block;
     margin-bottom: 1rem; }
+
+.tease-cta {
+  font-weight: 700; }
+
+@media (min-width: 62em) {
+  .has-sidebar {
+    position: relative;
+    min-height: 1px;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    float: left;
+    width: 70.83333%; } }
+
+@media (min-width: 62em) {
+  .sidebar {
+    position: relative;
+    min-height: 1px;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    float: left;
+    width: 29.16667%; } }
 
 .widgets {
   list-style-type: none;

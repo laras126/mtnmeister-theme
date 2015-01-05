@@ -2,6 +2,7 @@
 
 {% block loop %}
 
+	{% set share_deal = true %}
 	{% for d in deals|slice(0,1) %}
 		{% include 'tease-todays_deal.twig' %}
 	{% endfor %}	

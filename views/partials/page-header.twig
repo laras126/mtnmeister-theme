@@ -1,17 +1,35 @@
 {% set meister = TimberPost(header_image.related_meister) %}
+{% set display = post.header_display %}
 
-<header class="page-header animated fadeIn">
-	<img id="headerImageLoader" src="{{TimberImage(header_image.image).src}}" alt="Highlighted meister">
-	<noscript><img src="{{TimberImage(header_image.image).src}}" alt="Highlighted meister"></noscript>
-	{% include 'partials/spinner.twig' %}
-	<div class="page-info">
+{#  
+	This logic is a little weird so that existing pages don't have 
+	to be adjusted (the Header Display field was added later). 
+#}
+
+{% if header_image.image and display != 'text_only' %}
+	
+	<header class="page-header animated fadeIn">	
+		<img id="headerImageLoader" src="{{TimberImage(header_image.image).src}}" alt="Highlighted meister">
+		<noscript><img src="{{TimberImage(header_image.image).src}}" alt="Highlighted meister"></noscript>
+		{% include 'partials/spinner.twig' %}
+		<div class="page-info">
+			<div class="container">
+		        <h1 class="page-title no-margin">{{post.title}}</h1>
+		    </div>
+		</div>
+
+		{% if meister[0] %}
+			<p class="caption page-header-caption">{{meister[0].episode_tag}} {% if meister %} <br><a class="special" href="{{meister[0].link}}">#{{meister[0].episode_num}} {{meister[0].title}}</a> {% endif %}</p>
+		{% endif %}
+
+	</header>
+
+{% elseif display == 'text_only' %}
+
+	<header class="page-header-simple animated fadeIn">
 		<div class="container">
-	        <h1 class="page-title no-margin">{{post.title}}</h1>
-	    </div>
-	</div>
-
-	{% if meister[0] %}
-		<p class="caption page-header-caption">{{meister[0].episode_tag}} {% if meister %} <br><a class="special" href="{{meister[0].link}}">#{{meister[0].episode_num}} {{meister[0].title}}</a> {% endif %}</p>
-	{% endif %}
-
-</header>
+			<h1 class="page-title-simple no-margin">{{post.title}}</h1>	
+		</div>
+	</header>
+	
+{% endif %}

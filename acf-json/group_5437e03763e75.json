@@ -1,7 +1,30 @@
 {
     "key": "group_5437e03763e75",
-    "title": "Page Header",
+    "title": "Pages",
     "fields": [
+        {
+            "key": "field_54a429e0605f3",
+            "label": "Header Display",
+            "name": "header_display",
+            "prefix": "",
+            "type": "radio",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "image": "Image",
+                "text_only": "Text Only"
+            },
+            "other_choice": 0,
+            "save_other_choice": 0,
+            "default_value": "",
+            "layout": "vertical"
+        },
         {
             "key": "field_544e96afcf90e",
             "label": "Header Images",
@@ -10,7 +33,15 @@
             "type": "repeater",
             "instructions": "These images will be randomly selected to display in the header of the page. They should indicate the page content - for example, images for the \"Meisters\" page should have people in them.",
             "required": 0,
-            "conditional_logic": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_54a429e0605f3",
+                        "operator": "==",
+                        "value": "image"
+                    }
+                ]
+            ],
             "wrapper": {
                 "width": "",
                 "class": "",
@@ -67,13 +98,13 @@
             ]
         },
         {
-            "key": "field_54862775c6028",
+            "key": "field_5437e03d4aa17",
             "label": "Tagline",
             "name": "tagline",
             "prefix": "",
             "type": "text",
-            "instructions": "",
-            "required": 0,
+            "instructions": "A few words or short sentence describing the page content. Short, sweet, and snappy.",
+            "required": 1,
             "conditional_logic": 0,
             "wrapper": {
                 "width": "",
@@ -84,7 +115,7 @@
             "placeholder": "",
             "prepend": "",
             "append": "",
-            "maxlength": "",
+            "maxlength": 130,
             "readonly": 0,
             "disabled": 0
         },
@@ -138,5 +169,6 @@
         "categories",
         "tags",
         "send-trackbacks"
-    ]
+    ],
+    "modified": 1420044827
 }

@@ -132,5 +132,7 @@
         "format",
         "page_attributes",
         "send-trackbacks"
-    ]
+    ],
+    "local": "json",
+    "modified": 1420043565
 }

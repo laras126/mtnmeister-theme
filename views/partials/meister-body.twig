@@ -1,0 +1,97 @@
+
+	<div class="article-section container-squish">
+
+		<div class="featured-left">
+			{% include 'partials/cat-list.twig' %}
+			<p>{{post.meister_bio}}</p>
+			{% include 'partials/share-btns.twig' %}
+		</div>
+
+		<div class="featured-right">
+			<img src="{{TimberImage(post.meister_pic).src}}" alt="{{post.title}}">
+		</div>
+			
+	</div>
+
+
+	<div class="article-section container">
+
+		<div class="quote-container">
+			<blockquote class="quote-featured">{{post.quote_text}}</blockquote>
+			<div class="tweet-container">
+				<a href="{{post.quote_tweet_link}}" target="blank" class="btn-tweet btn-icon" title="Click to Tweet"><svg class="shape shape-twitter shape-icon"><use xlink:href="#shape-twitter"/></svg> Tweet</a>
+			</div>
+		</div>
+        {% if post.quote_time_in_episode %}
+        	<p class="text-right meta">Time in episode: {{post.quote_time_in_episode}}</p>
+    	{% endif %}
+
+	</div>
+
+	{% if post.get_field('connected_gear') %}
+		<section class="article-section container-squish">
+
+			<header class="article-section-header">
+				<h3>Gear Recommendations</h3>
+				<p>"If you could have one piece of gear, what would it be?" {{post.title}} says...</p>
+			</header>
+			
+			{% for item in post.get_field('connected_gear') %}
+
+				{% for gear in item.gear_item %}
+					<div class="item">
+						<div class="item-desc">
+						    <h4><a href="{{gear.gear_link}}" title="{{gear.post_title}}" target="blank"><span class="special">{{gear.brand_name}}</span> {{gear.post_title}} <svg class="shape shape-icon shape-meta"><use xlink:href="#shape-new-window"/></svg></a></h4>
+						    {% if item.time_in_episode %}
+								<p class="meta">Time in episode: {{item.time_in_episode}}</p>
+							{% endif %}
+						    <p>{{gear.gear_description}}</p>
+						 </div>
+						 <div class="item-img">
+						 	<a href="{{gear.gear_link}}" target="blank" title="{{gear.post_title}}">
+						 		{# TODO: also not working... pulling thumbnail from current post #}
+						 		<img src="{% if gear.thumbnail %}{{gear.thumbnail.src}}{% elseif gear.gear_photo %}{{TimberImage(gear.gear_photo).src}}{% else %}{{default}}{% endif %}" alt="{{gear.post_title}}">
+						 	</a>
+						 	{{gear.thumbnail}}
+						 </div>
+					</div>
+				{% endfor %}
+			    
+			{% endfor %}
+
+		</section>
+	{% endif %}
+
+	{% if post.connected_deal %}
+		<section class="article-section container-squish">
+
+			<header class="article-section-header">
+				<h3>Deals, Deals, Deals</h3>
+			</header>
+			
+			<div class="row">
+				{% for item in post.get_field('connected_deal') %}
+					{% for d in item.deal %}
+						{% include ['tease-deal.twig', 'tease.twig'] %}
+					{% endfor %}
+				{% endfor %}
+			</div>
+		
+		</section>
+	{% endif %}
+
+	{% if post.additional_resources %}
+		<section class="article-section container-squish">
+			
+			<header class="article-section-header">
+				<h3>Additional Resources</h3>
+				<p>Check out these links to additional episode content.</p>
+			</header>
+
+			<ul class="list list-table">
+				{% for item in post.get_field('additional_resources') %}
+					<li><a href="{{item.resource_link}}" target="blank">{{item.resource_title}}</a><span class="meta">{% if item.resource_time_in_episode %} - {{item.resource_time_in_episode}}</span></li>{% endif %}
+				{% endfor %}
+			</ul>
+		</section>
+	{% endif %}

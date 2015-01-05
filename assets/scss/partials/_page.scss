@@ -22,10 +22,10 @@ h4 {
 	
 	top: $sml;
 	
-	// NOTE: Gross. So many magic numbers, but fine for
+	
+	// NOTE: Gross. So many magic numbers, but better than using Fittext.
 
 	@include bp(380px) {
-		// top: $base;
 		font-size: $h1;
 		font-size: 13vw;
 	}
@@ -42,14 +42,25 @@ h4 {
 	}
 
 	@include bp(xl) {
-		// .home & {
-			font-size: 10vw;
-		// }
-
+		font-size: 10vw;
 		top: $h3*1.05;
 	}
 }
 
+.tagline-page {
+	@extend %full_width;
+	@extend %h4;
+
+	color: $accent-dark;
+	margin-top: $h2;
+	margin-bottom: $h2;
+	font-weight: 700;
+}
+
+
+
+
+// Page Header
 
 .page-header {
 	overflow: hidden;
@@ -78,20 +89,11 @@ h4 {
 	}
 }
 
-#headerImageLoader {
-	display: none;
-	
-	// Sorry, no-js people. This causes too much blinking, and I don't feel like figuring it out!
-	// .no-js & {
-	// 	display: block;
-	// 	position: absolute;
-	// 	width: 100%;
-	// 	bottom: 0;	
-	// }
-}
+	#headerImageLoader {
+		display: none;
+	}
 
 .page-header-caption {
-	// display: none;
 	top: 60px;
 	bottom: auto;
 	display: block;
@@ -106,15 +108,8 @@ h4 {
 	background-color: rgba($text-dark, 0.3);
 
 	@include bp(small) {
-		
-		// top: auto;
-		// bottom: 80px;
-
-		// .home & {
-			top: 60px;
-			bottom: auto;
-		// }
-		
+		top: 60px;
+		bottom: auto;
 	}
 
 	@include bp(xl) {
@@ -143,27 +138,13 @@ h4 {
 	}
 }
 
-.tagline-page {
-	@include bp(med) {
-		@extend %full_width;	
-	}
-	@extend %full_width;
-	@extend %h4;
-	color: $accent-dark;
-	margin-top: $h2;
-	margin-bottom: $h2;
-	font-weight: 700;
-}
 
 
-.has-sidebar {
-	@extend %full_width;
-	@include make-lg-column(8.5);
-}
+// Section styles
 
-.sidebar {
-	@extend %full_width;
-	@include make-lg-column(3.5);	
+.article-section,
+.article-section-header {
+	margin-bottom: $h3;
 }
 
 
@@ -187,6 +168,12 @@ h4 {
 	}
 
 
+
+// Blank Block
+
+.block-blank {
+	margin-top: $h2;
+}
 
 
 

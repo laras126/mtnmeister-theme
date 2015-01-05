@@ -20,10 +20,6 @@
 
 // Header
 
-.header {
-
-}
-
 .brand {
 	// @include make-xs-column(6);
 	@include make-lg-column(4);
@@ -34,20 +30,6 @@
 	@include make-xs-column(6, false);
 }
 
-.logo {
-
-}
-
-
-.menu-main {
-	// Full row on small screens (and hidden until expanded)
-
-}
-
-.loop,
-.featured {
-	// @extend .clearfix;
-}
 
 // ---
 // Singles
@@ -56,7 +38,7 @@
 // Gear recs
 .item {
 	@extend .clearfix;
-	margin-bottom: $h2;
+	// margin-bottom: $base;
 }
 
 .item-desc,

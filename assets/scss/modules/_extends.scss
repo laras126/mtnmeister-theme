@@ -28,7 +28,7 @@
   
     @include bp(small) {
         &:nth-child(2n+1){
-            clear:left;
+            clear: left;
         }  
     }
 }
@@ -38,10 +38,10 @@
     @include make-md-column(4);
     @include bp(med) {
         &:nth-child(2n+1){
-           clear:none;
+           clear: none;
         }  
         &:nth-child(3n+1){
-           clear:left
+           clear: left
         }  
     }  
 }

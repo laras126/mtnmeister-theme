@@ -24,21 +24,12 @@
 				    {% endfor %}
 				</ul>
 			{% endif %}
+			<br>
 		</div>
 
 		<div class="article-body">
-			{% include 'meister/meister-body.twig' %}
+			{% include 'partials/meister-body.twig' %}
 		</div>
-
-		<footer class="article-footer container-squish">
-			<h3>Additional Resources</h3>
-			<br>
-			<ul class="list list-table">
-				{% for item in post.get_field('additional_resources') %}
-					<li><a href="{{item.resource_link}}" target="blank">{{item.resource_title}}</a><span class="meta">{% if item.resource_time_in_episode %} - {{item.resource_time_in_episode}}</span></li>{% endif %}
-				{% endfor %}
-			</ul>
-		</footer>
 
 	</article>
 

@@ -2280,7 +2280,7 @@ input[type="checkbox"]:focus {
     padding-left: 1rem;
     padding-right: 1rem;
     float: left;
-    width: 33.33333%; } }
+    width: 16.66667%; } }
 
 .logo,
 .menu-link {
@@ -2322,8 +2322,6 @@ input[type="checkbox"]:focus {
   width: 100%;
   z-index: 100;
   border-top: 5px solid #f8992f; }
-  .banner a {
-    color: #fff; }
   @media (min-width: 62em) {
     .page .banner {
       background: linear-gradient(rgba(4, 63, 126, 0.5), rgba(4, 63, 126, 0)); } }
@@ -2348,7 +2346,7 @@ input[type="checkbox"]:focus {
       padding-left: 1rem;
       padding-right: 1rem;
       float: left;
-      width: 66.66667%; } }
+      width: 83.33333%; } }
   .menu-main.active {
     max-height: 25em; }
 
@@ -2364,10 +2362,14 @@ input[type="checkbox"]:focus {
   list-style-type: none;
   text-align: center; }
   .menu-item a {
+    color: #fff;
     display: block;
     padding: 0.8rem 0;
     font-weight: 700;
     margin-top: 0; }
+  .menu-item.special a:before {
+    content: 'NEW: ';
+    color: #68C499; }
 
 @media (max-width: 62em) {
   .menu-item-cta {
@@ -2515,8 +2517,7 @@ input[type="checkbox"]:focus {
       padding-top: 45%; } }
 
 .page-header-simple {
-  padding-top: 10%;
-  background-color: #fff; }
+  padding-top: 10%; }
 
 #headerImageLoader {
   display: none; }

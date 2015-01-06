@@ -17,7 +17,7 @@
 	// transition: all 0.2s ease-in-out;
 	
 	@include make-xs-column(12, false);
-	@include make-lg-column(8);
+	@include make-lg-column(10);
 
 	&.active {
 		max-height: 25em;
@@ -39,11 +39,21 @@
 	text-align: center;
 
 	a {
+		color: $text-light;
 		display: block;
 		padding: $sml 0;
 		font-weight: 700;
 		@extend %upperspace;
 		margin-top: 0;
+	}
+
+	&.special a {
+		
+		&:before {
+			content: 'NEW: ';
+			color: $alert-success;
+		}
+		
 	}
 }
 

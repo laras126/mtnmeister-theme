@@ -115,11 +115,6 @@ blockquote {
 	background-repeat: no-repeat;
 }
 
-
-//
-// Semantic classes for non-heading elements
-//
-
 .lead {
 	@extend %h4;
 	margin-top: 0;

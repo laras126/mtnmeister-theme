@@ -21,8 +21,7 @@
 // Header
 
 .brand {
-	// @include make-xs-column(6);
-	@include make-lg-column(4);
+	@include make-lg-column(2);
 }
 
 .logo,

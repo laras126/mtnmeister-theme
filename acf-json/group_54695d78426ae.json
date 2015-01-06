@@ -27,25 +27,6 @@
                     "display": "row",
                     "sub_fields": [
                         {
-                            "key": "field_54593fc3d8b9f",
-                            "label": "Text",
-                            "name": "section_text",
-                            "prefix": "",
-                            "type": "wysiwyg",
-                            "instructions": "Plain paragraph text. No headlines. This will display in two columns at desktop view.",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "default_value": "",
-                            "tabs": "all",
-                            "toolbar": "text_based",
-                            "media_upload": 1
-                        },
-                        {
                             "key": "field_546962b3ad161",
                             "label": "Heading",
                             "name": "heading",
@@ -66,6 +47,25 @@
                             "maxlength": "",
                             "readonly": 0,
                             "disabled": 0
+                        },
+                        {
+                            "key": "field_54593fc3d8b9f",
+                            "label": "Text",
+                            "name": "section_text",
+                            "prefix": "",
+                            "type": "wysiwyg",
+                            "instructions": "Plain paragraph text. No headlines. This will display in two columns at desktop view.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "tabs": "visual",
+                            "toolbar": "text_based",
+                            "media_upload": 0
                         }
                     ],
                     "min": "",
@@ -250,5 +250,5 @@
         "tags",
         "send-trackbacks"
     ],
-    "modified": 1420044561
+    "modified": 1420495268
 }

@@ -9,14 +9,32 @@
 		<div class="number-wrap">
 			<div class="number"><span class="meta">Featured Deal</span></div>
 		</div>
-		<h4><a href="{{d.deal_link}}" target="blank" title="{{d.post_title}}">{{d.post_title}}</a><svg class="shape shape-icon shape-meta"><use xlink:href="#shape-new-window"/></svg></h4>
+		
+		<h4>
+			<a href="{{d.deal_link}}" target="blank" title="{{d.post_title}}">{{d.post_title}}</a>
+			<svg class="shape shape-icon shape-meta"><use xlink:href="#shape-new-window"/></svg>
+		</h4>
+
+		{% if front_page == true %}
+			<div class="row">
+				<div class="col-xs-7">
+					<p class="tagline">By: <span class="special">{{d.deal_vendor}}</span></p>
+				</div>
+				<div class="col-xs-5">
+					<a class="link-more" href="{{site.link}}/deals" title="{{d.title}}">All Deals &rarr;</a>
+				</div>
+			</div>
+		{% endif %}
+
 	</header>
 
 	<div class="col-xs-12-np col-sm-8-np">
-		<p class="tagline">By: <span class="special">{{d.deal_vendor}}</span></p>
+		{% if front_page != true %}
+			<p class="tagline">By: <span class="special">{{d.deal_vendor}}</span></p>
+		{% endif %}
 		<p>{{d.deal_desc}}</p>
 		<p class="tease-cta">{{d.deal_cta}}</p>
-		{% if share_deal == true %}
+		{% if front_page != true %}
 			{% include "partials/share-btns.twig" %}
 		{% endif %}
 	</div>	

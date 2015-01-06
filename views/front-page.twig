@@ -11,8 +11,7 @@
 {% endblock %}
 
 {% block loop %}
-	{# <div class="col-md-12"> #}
-		
+
 		<section class="article-section">
 			{% for m in meisters|slice(0,1) %}
 				<header class="tease-header">
@@ -45,7 +44,7 @@
 		<section class="article-section">
 
 			{% for d in post.get_field('featured_deal') %}
-				{% set share_deal = false %}
+				{% set front_page = true %}
 				{% include 'tease-todays_deal.twig' %}
 			{% endfor %}
 
@@ -64,27 +63,23 @@
 			</div>	
 		</section>
 
-		<div class="front-feed">
-			<div class="number-wrap">
-				<div class="number">
-					<span class="meta">The Meisters</span>
-				</div>
-			</div>
-			<a class="link-more" href="{{site.link}}/deals" title="{{m.title}}">All Deals &rarr;</a>
-
+		<section class="front-feed">
+			
 			<div class="front-feed-loop">
 				<h3 class="tagline tagline-page">More Episodes&nbsp;</h3>
-				<a class="link-more" href="{{site.link}}/meisters" title="{{m.title}}">See all &rarr;</a>
+				<a class="link-more" href="{{site.link}}/meisters" title="{{m.title}}">See&nbsp;all&nbsp;&rarr;</a>
 			</div>
-		</div>
 
-		<div class="row-sm">
-			{% for m in meisters|slice(1,3) %}
-				<article class="col-sm-6 col-md-4">
-				{% include 'tease-minor_meister.twig' %}	
-				</article>
-			{% endfor %}	
-		</div>
+			<div class="clearfix">
+				{% for m in meisters|slice(1,3) %}
+					<article class="col-sm-6 col-md-4">
+					{% include 'tease-minor_meister.twig' %}	
+					</article>
+				{% endfor %}	
+			</div>
+		
+		</section>
+
 {% endblock %}
 
 {% block loop_minor %}{% endblock %}

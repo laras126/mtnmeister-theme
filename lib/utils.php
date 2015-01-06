@@ -28,7 +28,7 @@ add_filter( 'enter_title_here', 'mtn_custom_type_title_text' );
 // Remove unused items from the Dashboard menu
 function mtn_remove_menu_items(){
 	remove_menu_page( 'edit.php' ); // Posts
-	remove_menu_page( 'edit-comments.php' ); // Posts
+	// remove_menu_page( 'edit-comments.php' ); // Posts
 	remove_menu_page( 'users.php' ); // Users
 }
 add_action( 'admin_menu', 'mtn_remove_menu_items' );

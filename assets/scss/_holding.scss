@@ -97,3 +97,11 @@
 		@include make-xs-column(6, false);	
 	}
 }
+
+
+// Page specific overrides
+
+.home .block-blank {
+	margin-top: 0;
+	padding-bottom: $base;
+}

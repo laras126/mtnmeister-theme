@@ -190,25 +190,16 @@ h4 {
 
 // Front page
 
-.front-feed {
-	display: table;
+.front-feed-header {
 	@extend .clearfix;
+
+	.tagline, .link-more {
+		// @extend .no-margin;
+	}
 }
 
 .front-feed-loop {
-	display: table-row;
-
-	.tagline {
-		display: table-cell;
-		vertical-align: middle;
-		@extend .no-margin;
-		line-height: 1.5;
-	}
-
-	.link-more {
-		display: table-cell;
-		float: none;
-		@extend .no-margin;
-		vertical-align: middle;
-	}
+	// @include bp(small) {
+		@include make-row();
+	// }
 }

@@ -1,3 +1,4 @@
+{% set front_page = true %}
 {% extends "page.twig" %}
 
 {% block today %}
@@ -44,42 +45,36 @@
 		<section class="article-section">
 
 			{% for d in post.get_field('featured_deal') %}
-				{% set front_page = true %}
 				{% include 'tease-todays_deal.twig' %}
 			{% endfor %}
 
-			<a class="link-more" href="{{site.link}}/deals" title="{{m.title}}">All Deals &rarr;</a>
-
 		</section> <!-- /.article-section -->
 
-		<section class="tease-featured-deal">
-			<header class="col-sm-8-np">
-				<h4>$100 Credit to I/O Merino</h4>
-				<p>Sign up for our biweekly newsletter and I/O Merino's "Connection Club", and be entered to win a  credit to I/O Merino's online store.</p>
-				{% include 'partials/mailchimp.twig' %}
+		<section class="article-section">
+			{% include 'partials/acf-block-loop.twig' %}
+		</section> <!-- /.article-section -->
+
+		<section class="front-feed article-section">
+			<header class="front-feed-header">
+				<div class="number-wrap">
+					<div class="number">
+						<span class="meta">The Meisters</span>
+					</div>
+				</div>
+				<div class="col-sm-8-np">
+					<h4><a href="{{site.link}}/meisters" title="All Episodes">More Episodes</a></h4>	
+				</div>
+				<div class="col-sm-4-np">
+					<a class="link-more" href="{{site.link}}/meisters" title="All Episodes">See&nbsp;all&nbsp;&rarr;</a>	
+				</div>
 			</header>
-			<div class="col-sm-4-np">
-				<a href="http://eepurl.com/5hA8b"><img src="http://mtnmeister.com/wp-content/uploads/2014/12/iomerino-logo.png" alt="I/O Merino Logo"></a>
-			</div>	
-		</section>
-
-		<section class="front-feed">
-			
-			<div class="front-feed-loop">
-				<h3 class="tagline tagline-page">More Episodes&nbsp;</h3>
-				<a class="link-more" href="{{site.link}}/meisters" title="{{m.title}}">See&nbsp;all&nbsp;&rarr;</a>
+			<div class="front-feed-loop loop-minor">
+				{# <div class="row"> #}
+					{% for m in meisters|slice(1,3) %}
+						{% include 'tease-minor_meister.twig' %}
+					{% endfor %}	
+				{# </div> #}
 			</div>
-
-			<div class="clearfix">
-				{% for m in meisters|slice(1,3) %}
-					<article class="col-sm-6 col-md-4">
-					{% include 'tease-minor_meister.twig' %}	
-					</article>
-				{% endfor %}	
-			</div>
-		
-		</section>
+		</section> <!-- /.article-section -->
 
 {% endblock %}
-
-{% block loop_minor %}{% endblock %}

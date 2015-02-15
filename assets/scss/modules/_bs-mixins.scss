@@ -13,23 +13,6 @@
 // ---
 
 
-//== Media queries breakpoints
-//
-//## Define the breakpoints at which your layout will change, adapting to different screen sizes.
-
-// Small screen / tablet
-$screen-sm-min:              $screen-sm !default;
-
-// Medium screen
-$screen-md-min:              $screen-md !default;
-
-// Large screen / wide desktop
-$screen-lg-min:              $screen-lg !default;
-
-// So media queries don't overlap when required, provide a maximum
-$screen-xs-max:              ($screen-sm-min - 1) !default;
-$screen-sm-max:              ($screen-md-min - 1) !default;
-$screen-md-max:              ($screen-lg-min - 1) !default;
 
 
 //== Grid system
@@ -42,7 +25,7 @@ $grid-columns:              12 !default;
 $grid-gutter-width:         $h3 !default;
 // Navbar collapse
 //** Point at which the navbar becomes uncollapsed.
-$grid-float-breakpoint:     $screen-sm-min !default;
+$grid-float-breakpoint:     $screen-sm !default;
 //** Point at which the navbar begins collapsing.
 $grid-float-breakpoint-max: ($grid-float-breakpoint - 1) !default;
 
@@ -96,7 +79,7 @@ $grid-float-breakpoint-max: ($grid-float-breakpoint - 1) !default;
 
 // Generate the small columns
 @mixin make-sm-column($columns, $gutter: $grid-gutter-width) {
-  @media (min-width: $screen-sm-min) {
+  @media (min-width: $screen-sm) {
     position: relative;
     min-height: 1px;
     @if $gutter != false {
@@ -108,24 +91,24 @@ $grid-float-breakpoint-max: ($grid-float-breakpoint - 1) !default;
   }
 }
 @mixin make-sm-column-offset($columns) {
-  @media (min-width: $screen-sm-min) {
+  @media (min-width: $screen-sm) {
     margin-left: percentage(($columns / $grid-columns));
   }
 }
 @mixin make-sm-column-push($columns) {
-  @media (min-width: $screen-sm-min) {
+  @media (min-width: $screen-sm) {
     margin-left: (-percentage(($columns / $grid-columns)));
   }
 }
 @mixin make-sm-column-pull($columns) {
-  @media (min-width: $screen-sm-min) {
+  @media (min-width: $screen-sm) {
     right: percentage(($columns / $grid-columns));
   }
 }
 
 // Generate the medium columns
 @mixin make-md-column($columns, $gutter: $grid-gutter-width) {
-  @media (min-width: $screen-md-min) {
+  @media (min-width: $screen-md) {
     position: relative;
     min-height: 1px;
     @if $gutter != false {
@@ -137,24 +120,24 @@ $grid-float-breakpoint-max: ($grid-float-breakpoint - 1) !default;
   }
 }
 @mixin make-md-column-offset($columns) {
-  @media (min-width: $screen-md-min) {
+  @media (min-width: $screen-md) {
     margin-left: percentage(($columns / $grid-columns));
   }
 }
 @mixin make-md-column-push($columns) {
-  @media (min-width: $screen-md-min) {
+  @media (min-width: $screen-md) {
     left: percentage(($columns / $grid-columns));
   }
 }
 @mixin make-md-column-pull($columns) {
-  @media (min-width: $screen-md-min) {
+  @media (min-width: $screen-md) {
     right: percentage(($columns / $grid-columns));
   }
 }
 
 // Generate the large columns
 @mixin make-lg-column($columns, $gutter: $grid-gutter-width) {
-  @media (min-width: $screen-lg-min) {
+  @media (min-width: $screen-lg) {
     position: relative;
     min-height: 1px;
     @if $gutter != false {
@@ -166,17 +149,17 @@ $grid-float-breakpoint-max: ($grid-float-breakpoint - 1) !default;
   }
 }
 @mixin make-lg-column-offset($columns) {
-  @media (min-width: $screen-lg-min) {
+  @media (min-width: $screen-lg) {
     margin-left: percentage(($columns / $grid-columns));
   }
 }
 @mixin make-lg-column-push($columns) {
-  @media (min-width: $screen-lg-min) {
+  @media (min-width: $screen-lg) {
     left: percentage(($columns / $grid-columns));
   }
 }
 @mixin make-lg-column-pull($columns) {
-  @media (min-width: $screen-lg-min) {
+  @media (min-width: $screen-lg) {
     right: percentage(($columns / $grid-columns));
   }
 }

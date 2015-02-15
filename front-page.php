@@ -22,16 +22,6 @@
  */
 
 
-// Custom type Args and Pagination
-// global $paged;
-
-// if (!isset($paged) || !$paged){
-//     $paged = 1;
-// }
-
-
-
-
 // ---
 // Custom Post Type Args
 // ---
@@ -52,13 +42,8 @@ $post = new TimberPost();
 
 // Get Todays Meister
 $context['meisters'] = Timber::get_posts($meister_args);
-
-// Get recent deal
-// $context['deals'] = Timber::get_posts($deal_args);
-
 $context['post'] = $post;
 
-// $context['quote'] = $text;
 
 // Sidebar
 $context['sidebar'] = Timber::get_sidebar('sidebar.php');

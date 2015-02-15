@@ -90,7 +90,7 @@
 
 			<ul class="list list-table">
 				{% for item in post.get_field('additional_resources') %}
-					<li><a href="{{item.resource_link}}" target="blank">{{item.resource_title}}</a><span class="meta">{% if item.resource_time_in_episode %} - {{item.resource_time_in_episode}}</span></li>{% endif %}
+					<li><a href="{{item.resource_link}}" target="blank">{{item.resource_title}}</a><span class="meta">{% if item.resource_time_in_episode %} - {{item.resource_time_in_episode}}</span>{% endif %}</li>
 				{% endfor %}
 			</ul>
 		</section>

@@ -16,14 +16,6 @@
 	@include button($twitter, $text-light, sml);
 }
 
-// .btn-fb {
-// 	@include button($facebook, $text-light, sml);
-// }
-
-// .btn-gplus {
-// 	@include button($googleplus, $text-light, sml);
-// }
-
 .btn-cta {
 	@extend .btn;
 	display: block;

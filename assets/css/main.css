@@ -1591,39 +1591,6 @@ th {
     padding-left: 1rem;
     padding-right: 1rem; } }
 
-.loop-minor .tease {
-  position: relative;
-  float: left;
-  width: 100%;
-  min-height: 1px;
-  padding-left: 1rem;
-  padding-right: 1rem; }
-  @media (min-width: 30em) {
-    .loop-minor .tease {
-      position: relative;
-      min-height: 1px;
-      padding-left: 1rem;
-      padding-right: 1rem;
-      float: left;
-      width: 50%; } }
-  @media (min-width: 30em) {
-    .loop-minor .tease:nth-child(2n+1) {
-      clear: left; } }
-
-@media (min-width: 45em) {
-  .loop-minor .tease {
-    position: relative;
-    min-height: 1px;
-    padding-left: 1rem;
-    padding-right: 1rem;
-    float: left;
-    width: 33.33333%; } }
-@media (min-width: 45em) {
-  .loop-minor .tease:nth-child(2n+1) {
-    clear: none; }
-  .loop-minor .tease:nth-child(3n+1) {
-    clear: left; } }
-
 .clearfix:before, .main:before, .number-wrap:before, .creds-wrap:before, .container:before, .container-squish:before, .item:before, .front-feed-header:before, .tease-deal:before,
 .tease-featured-deal:before, .sidebar:before, .clearfix:after, .main:after, .number-wrap:after, .creds-wrap:after, .container:after, .container-squish:after, .item:after, .front-feed-header:after, .tease-deal:after,
 .tease-featured-deal:after, .sidebar:after {
@@ -2660,6 +2627,38 @@ input[type="checkbox"]:focus {
     .tease-body iframe,
     .article-section iframe {
       height: 160px; } }
+
+.loop-minor .tease {
+  position: relative;
+  float: left;
+  width: 100%;
+  min-height: 1px;
+  padding-left: 1rem;
+  padding-right: 1rem; }
+  @media (min-width: 30em) {
+    .loop-minor .tease {
+      position: relative;
+      min-height: 1px;
+      padding-left: 1rem;
+      padding-right: 1rem;
+      float: left;
+      width: 50%; } }
+  @media (min-width: 45em) {
+    .loop-minor .tease {
+      position: relative;
+      min-height: 1px;
+      padding-left: 1rem;
+      padding-right: 1rem;
+      float: left;
+      width: 33.33333%; } }
+  @media (min-width: 30em) {
+    .loop-minor .tease:nth-child(2n+1) {
+      clear: left; } }
+  @media (min-width: 45em) {
+    .loop-minor .tease:nth-child(3n+1) {
+      clear: left; }
+    .loop-minor .tease:nth-child(2n+1) {
+      clear: none; } }
 
 .no-js .lazy {
   display: none; }

@@ -22,29 +22,29 @@
 	@include make-sm-column(6); 
 }
 
-%row_of_two {
-    @include make-xs-column(12);
-    @include make-sm-column(6);
+// %row_of_two {
+//     @include make-xs-column(12);
+//     @include make-sm-column(6);
   
-    @include bp(small) {
-        &:nth-child(2n+1){
-            clear: left;
-        }  
-    }
-}
+//     @include bp(small) {
+//         &:nth-child(2n+1){
+//             clear: left;
+//         }  
+//     }
+// }
 
-%row_of_three {
-    @extend %row_of_two;
-    @include make-md-column(4);
-    @include bp(med) {
-        &:nth-child(2n+1){
-           clear: none;
-        }  
-        &:nth-child(3n+1){
-           clear: left
-        }  
-    }  
-}
+// %row_of_three {
+//     @extend %row_of_two;
+//     @include make-md-column(4);
+//     @include bp(med) {
+//         &:nth-child(2n+1){
+//            clear: none;
+//         }  
+//         &:nth-child(3n+1){
+//            clear: left
+//         }  
+//     }  
+// }
 
 .clearfix {
     &:before,

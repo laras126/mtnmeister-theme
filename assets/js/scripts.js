@@ -64,113 +64,30 @@
 	// Header image spinner
 	// ----
 
-	var $container = $('.page-header'),
-		$image = $('#headerImageLoader'),
-		imageSrc = $image.attr('src');
+	var $hero = $('.page-header');
 	
-	$container.imagesLoaded( function() {
-		$('.spinner').hide();
-		$container.css({
-			'background-image': 'url(' + imageSrc + ')'
+	$hero.each( function() {
+		var $image = $(this).find('#headerImageLoader'),
+			$t = $(this),
+			imageSrc = $image.attr('src');
+	
+		$(this).imagesLoaded( function() {
+
+			$t.fadeTo(200, 0.5, function() {
+			    
+			    // Don't add the background image for large video headers
+				$t.css('background-image', 'url(\'' + imageSrc + '\')');
+
+			}).fadeTo(600, 1);
+
+			$t.find('.spinner').hide();
+			
 		});
 	});
-
+	
 
 
 	
-	// ----
-	// Load iframes when visible on page
-	// ----
-
-	var $iframes = $('iframe');
-	var src = $(this).attr('src');
-	var loaded = $(this).attr('data-loaded');
-
-	// console.log($iframes);
-
-	// $iframes.attr('data-loaded', false);
-
-	// http://stackoverflow.com/a/7154968/609046
-	// Interrupt the HTTP request and save the src
-	// $iframes.attr('data-src', function() {
-	// 	var src = $(this).attr('src');
-	    
-	//     if( !loaded ) {
-	//     	$(this).removeAttr('src');
-	//     	console.log('bye, iframe');
-	//     	return src;
-	//     }
-	// });
-
-	// http://stackoverflow.com/a/10211585/609046
-	function lazyLoadIframes(){
-	   var wt = $(window).scrollTop();    //* top of the window
-	   var wb = wt + $(window).height();  //* bottom of the window
-
-	   $iframes.each( function(index, value){
-	   		
-	      	var ot = $(this).offset().top;  //* top of object (i.e. advertising div)
-	      	var ob = ot + $(this).height(); //* bottom of object
-
-	      	if( !loaded && wt<=ob && wb >= ot ){
-				
-				$(this).attr('data-loaded', true);
-				
-				// Make the HTTP request
-	   			$(this).attr('src', function() {
-			        return $(this).data('src');
-			    });
-
-				$(this).css('border', '3px solid yellow');
-				console.log('iframe!');
-
-				// $(this).unbind('attr');
-				
-	      	}
-	   });
-	}
-
-	// Check if the iframe is visible when scrolling, load if it is.
-	// $(window).scroll(function() {
-	//     clearTimeout($.data(this, 'scrollTimer'));
-	//     $.data(this, 'scrollTimer', setTimeout(function() {
-	//         // lazyLoadIframes();
-	//     }, 250));
-	// });
-
-
-	// http://stackoverflow.com/questions/9144560/jquery-scroll-detect-when-user-stops-scrolling
-	// http://stackoverflow.com/questions/487073/check-if-element-is-visible-after-scrolling
-	// http://stackoverflow.com/questions/7154958/lazy-load-iframe-delay-src-http-call-with-jquery
-	
-	// Check if an element is within the viewport
-	// function isScrolledIntoView(elem) {
- //    	var docViewTop = $(window).scrollTop();
- //    	var docViewBottom = docViewTop + $(window).height();
-
- //    	var elemTop = $(elem).offset().top;
- //    	var elemBottom = elemTop + $(elem).height();
-
- //    	console.log((elemBottom <= docViewBottom) && (elemTop >= docViewTop));
-	// }
-	
-
-	// var iframes = $('iframe');
-	// var iframeVisible = false;
-
-	// isScrolledIntoView(iframes);
-
-
-	// $(window).scroll(function() {
-
-	// 	if( $('.tease-featured').scrollTop() > $total_ht ) {
-			
-	// 	}
-	// });
-
-	
-	
-
 	// ----
 	// Slide up episode info on Minor Meister hover
 	// ----

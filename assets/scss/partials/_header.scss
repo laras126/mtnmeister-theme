@@ -17,7 +17,7 @@
 }
 
 .banner {
-	
+
  	background-color: $accent-dark;
 	transition: all 0.5s ease;
 	position: fixed;
@@ -26,13 +26,11 @@
 	z-index: 100;	
 	
 	@include bp(large) {
-
+		
+		// No background gradient on single pages
 		.page & {
 			background: linear-gradient(rgba($accent-dark, 0.5), rgba($accent-dark, 0));
 		}
-		
-		// position: absolute;
-		
 	}
 
 	border-top: $accent-border-large;

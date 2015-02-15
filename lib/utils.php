@@ -2,7 +2,7 @@
 
 /**
  *
- * Utility functions for cleaning up
+ * Utility functions and cleanup
  *
  */
 
@@ -21,8 +21,6 @@ function mtn_custom_type_title_text ( $title ) {
 } // End title_text_input()
 
 add_filter( 'enter_title_here', 'mtn_custom_type_title_text' );
-
-
 
 
 // Remove unused items from the Dashboard menu

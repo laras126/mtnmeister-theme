@@ -61,7 +61,7 @@
 
 
 	// ----
-	// Header image spinner
+	// Header image laoding
 	// ----
 
 	var $hero = $('.page-header');
@@ -75,10 +75,9 @@
 
 			$t.fadeTo(200, 0.5, function() {
 			    
-			    // Don't add the background image for large video headers
 				$t.css('background-image', 'url(\'' + imageSrc + '\')');
 
-			}).fadeTo(600, 1);
+			}).fadeTo(1000, 1);
 
 			$t.find('.spinner').hide();
 			

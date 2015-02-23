@@ -2467,6 +2467,7 @@ input[type="checkbox"]:focus {
   overflow: hidden;
   position: relative;
   width: 100%;
+  opacity: 0;
   background-position: center;
   background-size: 100% auto;
   background-repeat: no-repeat;

@@ -11,9 +11,11 @@
 {# {% if header_image.image and display != 'text_only' %} #}
 	
 	<header class="page-header animated fadeIn">	
+		{% include 'partials/spinner.twig' %}
+
 		<img id="headerImageLoader" src="{{TimberImage(header_image.image).src}}" alt="Highlighted meister">
 		<noscript><img src="{{TimberImage(header_image.image).src}}" alt="Highlighted meister"></noscript>
-		{% include 'partials/spinner.twig' %}
+
 		<div class="page-info">
 			<div class="container">
 		        <h1 class="page-title no-margin">{{post.title}}</h1>

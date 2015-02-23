@@ -13,20 +13,21 @@
 			
 	</div>
 
+	{% if post.quote_text %}
+		<div class="article-section container">
 
-	<div class="article-section container">
-
-		<div class="quote-container">
-			<blockquote class="quote-featured">{{post.quote_text}}</blockquote>
-			<div class="tweet-container">
-				<a href="{{post.quote_tweet_link}}" target="blank" class="btn-tweet btn-icon" title="Click to Tweet"><svg class="shape shape-twitter shape-icon"><use xlink:href="#shape-twitter"/></svg> Tweet</a>
+			<div class="quote-container">
+				<blockquote class="quote-featured">{{post.quote_text}}</blockquote>
+				<div class="tweet-container">
+					<a href="{{post.quote_tweet_link}}" target="blank" class="btn-tweet btn-icon" title="Click to Tweet"><svg class="shape shape-twitter shape-icon"><use xlink:href="#shape-twitter"/></svg> Tweet</a>
+				</div>
 			</div>
-		</div>
-        {% if post.quote_time_in_episode %}
-        	<p class="text-right meta">Time in episode: {{post.quote_time_in_episode}}</p>
-    	{% endif %}
+	        {% if post.quote_time_in_episode %}
+	        	<p class="text-right meta">Time in episode: {{post.quote_time_in_episode}}</p>
+	    	{% endif %}
 
-	</div>
+		</div>
+	{% endif %}
 
 	{% if post.get_field('connected_gear') %}
 		<section class="article-section container-squish">

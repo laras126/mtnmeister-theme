@@ -192,14 +192,4 @@ h4 {
 
 .front-feed-header {
 	@extend .clearfix;
-
-	.tagline, .link-more {
-		// @extend .no-margin;
-	}
-}
-
-.front-feed-loop {
-	// @include bp(small) {
-		@include make-row();
-	// }
 }

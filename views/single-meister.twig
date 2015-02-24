@@ -53,7 +53,14 @@
 	{% if related_meisters %}
 		<footer class="container">
 			<div class="loop loop-related">
-				<h4 class="tagline">Related Episodes</h4>
+				<div class="row">
+					<div class="col-sm-8">
+						<h4 class="tagline">Related Episodes</h4>
+					</div>
+					<div class="col-sm-4-np">
+						<a class="link-more" href="{{site.link}}/meisters" title="All Episodes">See&nbsp;all&nbsp;&rarr;</a>
+					</div>
+				</div>
 				<br>
 				<section class="row">
 				{% for m in related_meisters %}

@@ -20,7 +20,7 @@
 				<ul class="list-tags text-center">
 					<li class="meta">Tagged: </li>
 				    {% for tag in post.tags %}
-				        <li class="tag">{{tag.name}}</li>
+				        <li class="tag"><a href="{{tag.link}}">{{tag.name}}</a></li>
 				    {% endfor %}
 				</ul>
 			{% endif %}

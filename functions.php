@@ -76,21 +76,23 @@
 	require_once('lib/utils.php'); 
 
 
+
+// Disable code editor
+function remove_editor_menu() {
+    remove_action('admin_menu', '_add_themes_utility_last', 101);
+}
+add_action('_admin_menu', 'remove_editor_menu', 1);
+
+
+
 function namespace_add_custom_types( $query ) {
   if( is_category() || is_tag() && empty( $query->query_vars['suppress_filters'] ) ) {
     $query->set( 'post_type', array(
-     'post', 'nav_menu_item', 'gear'
+     'meister', 'gear', 'deal'
 		));
 	  return $query;
 	}
 }
 add_filter( 'pre_get_posts', 'namespace_add_custom_types' );
-
-
-// Disable editor
-function remove_editor_menu() {
-    remove_action('admin_menu', '_add_themes_utility_last', 101);
-}
-add_action('_admin_menu', 'remove_editor_menu', 1);
 
 ?>

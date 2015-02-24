@@ -15,17 +15,12 @@
 		</div>
 
 		<div class="featured-right">
-			{% if m.categories %}
-				<ul class="list-cats">
-				    {% for cat in m.categories %}
-				        <li class="cat-item">{{cat.name}}</li>
-				    {% endfor %}
-				</ul>
-			{% endif %}
+			{% set post = m %}
+			{% include 'partials/cat-list.twig' %}			
 			<p>{{m.meister_bio|truncate(80)}}</p>
 			<div class="clearfix">
 				<div class="col-xs-12-np col-sm-6-np">
-					{% set post = m %}
+					
 					{% include 'partials/share-btns.twig' %}
 				</div>	
 				<div class="col-xs-12-np col-sm-6-np">

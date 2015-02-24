@@ -36,10 +36,6 @@
 			array_unshift($templates, 'archive-'.get_post_type().'.twig');
 		}
 
-		$meister_args = array( 
-				'post_type' => 'meister',
-			);
-
-		$data['posts'] = Timber::get_posts($meister_args);
+		$data['posts'] = Timber::get_posts();
 
 		Timber::render($templates, $data);

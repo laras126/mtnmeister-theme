@@ -103,31 +103,24 @@ img {
 
 .list-cats {
 	@extend %list-meta;
-
-	a {
-
-	}
 }
 
-	.cat-item {
-		@extend %list-meta-item;
-		margin: 0;
-		// @extend .btn-alt;
-		@extend %list-meta-item;
-		margin: 0;
-		background: lighten($accent-light, 10%);
-		font-weight: 700;
-		color: $text-dark;
+	.cat-item  {
 		@extend %upperspace;
-		// @if $size == sml {
-		padding: $sml/3 $sml*0.75 !important;
-		font-size: $sml;
-		// } @else {
-			// @extend %form-base;	
-		// }
 		
-		// @extend %btn;
-		border-radius: 4px;	
+		a {
+			@extend .btn-alt;
+			border-radius: 4px;	
+		}
+		
+
+		// background: lighten($accent-light, 10%);
+		// font-weight: 700;
+		// color: $text-dark;
+		
+		// padding: $sml/3 $sml*0.75 !important;
+		// font-size: $sml;
+		
 	}
 
 .list-tags {

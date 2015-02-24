@@ -2226,6 +2226,9 @@ input[type="checkbox"]:focus {
   margin-bottom: 0.8rem;
   font-weight: 400; }
 
+#mc-embedded-subscribe {
+  border: 1px solid #f8992f; }
+
 .creds-wrap, .container, .container-squish {
   margin: 0 auto;
   margin-right: auto;
@@ -2550,15 +2553,6 @@ input[type="checkbox"]:focus {
 
 .block-blank {
   margin-top: 2.4rem; }
-
-.front-feed-loop {
-  margin-left: -1rem;
-  margin-right: -1rem; }
-  .front-feed-loop:before, .front-feed-loop:after {
-    content: " ";
-    display: table; }
-  .front-feed-loop:after {
-    clear: both; }
 
 .article-header {
   margin-top: 5.1rem;

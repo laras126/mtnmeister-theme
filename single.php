@@ -35,7 +35,7 @@ if( is_singular('meister') ) {
 	$related_args = array(  
     	'post_type' => 'meister',
     	'post__not_in' => array( $this_post ),
-		'posts_per_page' => 4,
+		'posts_per_page' => 6,
 		'orderby' => 'rand'
 	);
 	

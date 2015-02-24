@@ -22,13 +22,43 @@ $context['categories'] = Timber::get_terms('category');
 $context['tags'] = Timber::get_terms('post_tag');
 
 
-// Sidebar for all singles except Meisters 
-// (pretty much just Deals)
+// ----
+// Related posts
+// ----
 
-// if(!is_singular('meister')) {
-// 	$context['sidebar_class'] = 'has-sidebar';
-// 	$context['sidebar'] = Timber::get_sidebar('sidebar.php');	
-// }
+// Only get posts data on a single Meister page
+if( is_singular('meister') ) {
+
+	$this_post = $post->ID;
+	
+	// Get 4 Meister posts (excluding current post)
+	$related_args = array(  
+    	'post_type' => 'meister',
+    	'post__not_in' => array( $this_post ),
+		'posts_per_page' => 4,
+		'orderby' => 'rand'
+	);
+	
+	// First relate them by category, 
+	// If not that, then tag,
+	// Otherwise, just 4 random ones.
+
+	if( has_category() ) {
+		$post_cat = $post->get_terms('category');
+		$post_cat = $post_cat[0]->ID;
+
+		$related_args['cat'] = $post_cat;
+		
+	} else if ( has_tag() ) {
+		$post_tag = $post->get_terms('tag');
+		$post_tag = $post_tag[0]->ID;
+		
+		$related_args['tax_query']['terms'] = $post_tag;
+	}
+
+	// Add those posts to the page context
+	$context['related_meisters'] = Timber::get_posts($related_args);
+}
 
 
 if (post_password_required($post->ID)){

@@ -16,10 +16,10 @@
 
 {% block loop_minor %}
 	<div class="row">
-	<div class="loop loop-minor">
-		{% for m in meisters|slice(2) %}
-			{% include ['tease-minor_meister.twig', 'tease.twig'] %}
-		{% endfor %}
-	</div>
+		<div class="loop loop-thumbs">
+			{% for m in meisters|slice(2) %}
+				{% include ['tease-minor_meister.twig', 'tease.twig'] %}
+			{% endfor %}
+		</div>
 	</div>
 {% endblock %}

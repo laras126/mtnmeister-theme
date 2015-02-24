@@ -2629,7 +2629,7 @@ input[type="checkbox"]:focus {
     .article-section iframe {
       height: 160px; } }
 
-.loop-minor .tease {
+.loop-thumbs .tease {
   position: relative;
   float: left;
   width: 100%;
@@ -2637,7 +2637,7 @@ input[type="checkbox"]:focus {
   padding-left: 1rem;
   padding-right: 1rem; }
   @media (min-width: 30em) {
-    .loop-minor .tease {
+    .loop-thumbs .tease {
       position: relative;
       min-height: 1px;
       padding-left: 1rem;
@@ -2645,7 +2645,7 @@ input[type="checkbox"]:focus {
       float: left;
       width: 50%; } }
   @media (min-width: 45em) {
-    .loop-minor .tease {
+    .loop-thumbs .tease {
       position: relative;
       min-height: 1px;
       padding-left: 1rem;
@@ -2653,13 +2653,36 @@ input[type="checkbox"]:focus {
       float: left;
       width: 33.33333%; } }
   @media (min-width: 30em) {
-    .loop-minor .tease:nth-child(2n+1) {
+    .loop-thumbs .tease:nth-child(2n+1) {
       clear: left; } }
   @media (min-width: 45em) {
-    .loop-minor .tease:nth-child(3n+1) {
+    .loop-thumbs .tease:nth-child(3n+1) {
       clear: left; }
-    .loop-minor .tease:nth-child(2n+1) {
+    .loop-thumbs .tease:nth-child(2n+1) {
       clear: none; } }
+
+.loop-related {
+  margin-top: 2rem; }
+
+.loop-related .tease {
+  margin-bottom: 0;
+  position: relative;
+  float: left;
+  width: 100%;
+  min-height: 1px;
+  padding-left: 1rem;
+  padding-right: 1rem; }
+  @media (min-width: 30em) {
+    .loop-related .tease {
+      position: relative;
+      min-height: 1px;
+      padding-left: 1rem;
+      padding-right: 1rem;
+      float: left;
+      width: 50%; } }
+  @media (min-width: 30em) {
+    .loop-related .tease:nth-child(2n+1) {
+      clear: left; } }
 
 .no-js .lazy {
   display: none; }
@@ -2688,6 +2711,34 @@ input[type="checkbox"]:focus {
 
 .tease-cta {
   font-weight: 700; }
+
+.tease-main {
+  position: relative;
+  float: left;
+  width: 100%;
+  min-height: 1px;
+  padding-left: 1rem;
+  padding-right: 1rem; }
+  @media (min-width: 30em) {
+    .tease-main {
+      position: relative;
+      min-height: 1px;
+      float: left;
+      width: 66.66667%; } }
+
+.tease-support {
+  position: relative;
+  float: left;
+  width: 100%;
+  min-height: 1px;
+  padding-left: 1rem;
+  padding-right: 1rem; }
+  @media (min-width: 30em) {
+    .tease-support {
+      position: relative;
+      min-height: 1px;
+      float: left;
+      width: 33.33333%; } }
 
 @media (min-width: 62em) {
   .has-sidebar {

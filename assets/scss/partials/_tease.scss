@@ -65,6 +65,9 @@
         &:nth-child(2n+1){
             clear: left;
         }  
+        &:nth-child(3n+1){
+           clear: none;
+        } 
     }
     @include bp(med) {
         &:nth-child(3n+1){
@@ -82,13 +85,18 @@
 
 .loop-related .tease {
 	margin-bottom: 0;
-	@include make-xs-column(12);
-    @include make-sm-column(6);
+	@include make-xs-column(6);
+    // @include make-sm-column(3, false);
+    @include make-md-column(2, false);
 
-    @include bp(small) {
+	&:nth-child(2n+1){
+        clear: left;
+    }  
+
+     @include bp(small) {
         &:nth-child(2n+1){
-            clear: left;
-        }  
+            clear: none;
+        }
     }
 }
 

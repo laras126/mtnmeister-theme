@@ -2468,7 +2468,6 @@ input[type="checkbox"]:focus {
   background-size: 100% auto;
   background-repeat: no-repeat;
   background-color: #043f7e;
-  transition: background-image 0.5s ease-in;
   padding-top: 66.66667%; }
   @media (min-width: 1040px) {
     .page-header {
@@ -2641,7 +2640,9 @@ input[type="checkbox"]:focus {
       width: 33.33333%; } }
   @media (min-width: 30em) {
     .loop-thumbs .tease:nth-child(2n+1) {
-      clear: left; } }
+      clear: left; }
+    .loop-thumbs .tease:nth-child(3n+1) {
+      clear: none; } }
   @media (min-width: 45em) {
     .loop-thumbs .tease:nth-child(3n+1) {
       clear: left; }
@@ -2655,21 +2656,21 @@ input[type="checkbox"]:focus {
   margin-bottom: 0;
   position: relative;
   float: left;
-  width: 100%;
+  width: 50%;
   min-height: 1px;
   padding-left: 1rem;
   padding-right: 1rem; }
-  @media (min-width: 30em) {
+  @media (min-width: 45em) {
     .loop-related .tease {
       position: relative;
       min-height: 1px;
-      padding-left: 1rem;
-      padding-right: 1rem;
       float: left;
-      width: 50%; } }
+      width: 16.66667%; } }
+  .loop-related .tease:nth-child(2n+1) {
+    clear: left; }
   @media (min-width: 30em) {
     .loop-related .tease:nth-child(2n+1) {
-      clear: left; } }
+      clear: none; } }
 
 .no-js .lazy {
   display: none; }

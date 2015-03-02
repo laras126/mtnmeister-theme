@@ -53,44 +53,30 @@
 	{% if related_meisters %}
 		<footer class="container">
 			<div class="loop loop-related">
-				<div class="row">
-					<div class="col-sm-8">
+
+				<header class="clearfix article-section-header">
+					<div class="col-sm-8-np">
 						<h4 class="tagline">Related Episodes</h4>
 					</div>
 					<div class="col-sm-4-np">
 						<a class="link-more" href="{{site.link}}/meisters" title="All Episodes">See&nbsp;all&nbsp;&rarr;</a>
 					</div>
-				</div>
-				<br>
+				</header>
+	
 				<section class="row">
 				{% for m in related_meisters %}
-					<div class="col-sm-2">
-						{# <div class="row"> #}
-							
-							{# <div class="tease-support"> #}
-								<a href="{{m.link}}" title="{{m.title}}">
-								{% if m.get_thumbnail %}
-									<img class="lazy" data-original="{{m.thumbnail.src}}" src="{{site.url}}/wp-content/themes/mtnmeister-theme/assets/img/util/loader.gif" alt="{{m.title}}"/>
-									<noscript><img src="{{m.thumbnail.src}}" alt="{{m.title}}" height="300" width="300"></noscript>
-								{% endif %}
-								</a>
-							{# </div> #}
+					<div class="tease tease-related">
 
-							{# <div class="tease-main"> #}
-								<h5 class="meta"><a href="{{m.link}}" title="{{m.title}}"><span class="special">#{{m.episode_num}}</span> {{m.name}}</a></h5>
-{# 
-								{% if m.tags %}
-									<ul class="list-tags">
-									    {% for tag in m.tags|slice(0, 2) %}
-									        <li class="tag">{{tag.name}}</li>
-									    {% endfor %}
-									</ul>
-								{% endif %} #}
-							{# </div> #}
-							
-						</div>
-					{# </div> #}
+						<a href="{{m.link}}" title="{{m.title}}">
+						{% if m.get_thumbnail %}
+							<img class="lazy" data-original="{{m.thumbnail.src}}" src="{{site.url}}/wp-content/themes/mtnmeister-theme/assets/img/util/loader.gif" alt="{{m.title}}"/>
+							<noscript><img src="{{m.thumbnail.src}}" alt="{{m.title}}" height="300" width="300"></noscript>
+						{% endif %}
+						</a>
 
+						<h5 class="meta"><a href="{{m.link}}" title="{{m.title}}"><span class="special">#{{m.episode_num}}</span> {{m.name}}</a></h5>
+					
+					</div>
 				{% endfor %}
 				</section>
 			</div>

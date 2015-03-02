@@ -7,7 +7,8 @@ $(document).ready(function() {
 	// Plugins
 
 	$('.lazy').lazyload({
-		effect : 'fadeIn'
+		effect : 'fadeIn',
+		threshold : 400
 	}); // Am I lazy for using this?
 
 

@@ -78,9 +78,6 @@ h4 {
 	background-size: 100% auto;
 	background-repeat: no-repeat;
 	background-color: $accent-dark;
-
-	transition: background-image 0.5s ease-in;	
-		
 	padding-top: percentage(2/3);
 	
 	@media(min-width: 1040px) {

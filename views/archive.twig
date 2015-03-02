@@ -21,9 +21,9 @@
             {% if post.post_type == 'meister' %}
         
                 {% set m = post %}
-                <div class="row tease">
+                <div class="clearfix tease tease-archive">
 
-                    <div class="col-sm-3">
+                    <div class="col-md-3">
                         <a href="{{m.link}}" title="{{m.title}}">
                         {% if m.get_thumbnail %}
                             <img class="lazy" data-original="{{m.thumbnail.src}}" src="{{site.url}}/wp-content/themes/mtnmeister-theme/assets/img/util/loader.gif" alt="{{m.title}}"/>
@@ -34,7 +34,7 @@
                     
                     <div class="col-md-9">
 
-                        <div class="row">
+                        <div class="clearfix">
                             <div class="col-sm-9">
                                 <h4 class="tagline no-margin"><a href="{{m.link}}" title="{{m.title}}"><span class="special">#{{m.episode_num}}</span> {{m.episode_tag}}</a></h4>        
                             </div>

@@ -2877,4 +2877,27 @@ input[type="checkbox"]:focus {
   margin-top: 0;
   padding-bottom: 1rem; }
 
+.tease-archive {
+  text-align: center;
+  border-bottom: 1px solid lightgray; }
+  @media (min-width: 45em) {
+    .tease-archive {
+      text-align: left; } }
+  .tease-archive h4 {
+    margin-top: 1.3rem; }
+    @media (min-width: 45em) {
+      .tease-archive h4 {
+        margin-top: 0; } }
+  .tease-archive .link-more {
+    float: none;
+    display: inline-block;
+    margin-top: 1.3rem; }
+    @media (min-width: 45em) {
+      .tease-archive .link-more {
+        margin-top: 0;
+        float: right; } }
+  @media (min-width: 45em) {
+    .tease-archive {
+      border-bottom: 0; } }
+
 /*# sourceMappingURL=main.css.map */

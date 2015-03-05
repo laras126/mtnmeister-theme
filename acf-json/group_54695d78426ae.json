@@ -78,66 +78,6 @@
                     "display": "row",
                     "sub_fields": [
                         {
-                            "key": "field_5437f2d22fee0",
-                            "label": "Image",
-                            "name": "image",
-                            "prefix": "",
-                            "type": "image",
-                            "instructions": "This image will be on the left!",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "return_format": "url",
-                            "preview_size": "thumbnail",
-                            "library": "all"
-                        },
-                        {
-                            "key": "field_5437f3102fee1",
-                            "label": "Text",
-                            "name": "text",
-                            "prefix": "",
-                            "type": "wysiwyg",
-                            "instructions": "This will be descriptive text to the right of the image.",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "default_value": "",
-                            "tabs": "all",
-                            "toolbar": "text_based",
-                            "media_upload": 1
-                        },
-                        {
-                            "key": "field_5443e7631d17b",
-                            "label": "Image Location",
-                            "name": "image_location",
-                            "prefix": "",
-                            "type": "radio",
-                            "instructions": "Should the image be shown on the right or left?",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "choices": {
-                                "Right": "Right",
-                                "Left": "Left"
-                            },
-                            "other_choice": 0,
-                            "save_other_choice": 0,
-                            "default_value": "",
-                            "layout": "horizontal"
-                        },
-                        {
                             "key": "field_5469627959403",
                             "label": "Heading",
                             "name": "heading",
@@ -160,12 +100,56 @@
                             "disabled": 0
                         },
                         {
-                            "key": "field_54695e9eddc8d",
+                            "key": "field_5437f3102fee1",
+                            "label": "Text",
+                            "name": "text",
+                            "prefix": "",
+                            "type": "wysiwyg",
+                            "instructions": "This will be descriptive text to the right of the image.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "tabs": "all",
+                            "toolbar": "text_based",
+                            "media_upload": 1
+                        },
+                        {
+                            "key": "field_5437f2d22fee0",
+                            "label": "Image",
+                            "name": "image",
+                            "prefix": "",
+                            "type": "image",
+                            "instructions": "This image will be on the left!",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "return_format": "url",
+                            "preview_size": "thumbnail",
+                            "library": "all",
+                            "min_width": 0,
+                            "min_height": 0,
+                            "min_size": 0,
+                            "max_width": 0,
+                            "max_height": 0,
+                            "max_size": 0,
+                            "mime_types": ""
+                        },
+                        {
+                            "key": "field_5443e7631d17b",
                             "label": "Image Location",
                             "name": "image_location",
                             "prefix": "",
                             "type": "radio",
-                            "instructions": "Should the image be on the right or left? The columns are equal.",
+                            "instructions": "Should the image be shown on the right or left?",
                             "required": 0,
                             "conditional_logic": 0,
                             "wrapper": {
@@ -174,8 +158,8 @@
                                 "id": ""
                             },
                             "choices": {
-                                "left": "Left",
-                                "right": "Right"
+                                "Right": "Right",
+                                "Left": "Left"
                             },
                             "other_choice": 0,
                             "save_other_choice": 0,
@@ -261,7 +245,7 @@
     ],
     "menu_order": 0,
     "position": "normal",
-    "style": "default",
+    "style": "seamless",
     "label_placement": "top",
     "instruction_placement": "label",
     "hide_on_screen": [
@@ -279,5 +263,5 @@
         "tags",
         "send-trackbacks"
     ],
-    "modified": 1421157560
+    "modified": 1425577506
 }

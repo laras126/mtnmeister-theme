@@ -6,12 +6,14 @@
 	margin-bottom: $h2;
 }
 
-.tease-deal,
-.tease-featured-deal {
+.tease-deal {
 	margin-bottom: $h3;
-	border-bottom: $accent-border;
 	@extend .clearfix;
 }
+
+	.tease-featured-deal {
+		border-bottom: 0;
+	}
 
 .tease-home {
 	@include make-sm-column(6);

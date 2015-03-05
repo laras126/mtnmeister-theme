@@ -37,17 +37,15 @@
 					{{m.episode_soundcloud_small}}
 					{% include 'partials/cat-list.twig' %}
 					<p>{{m.meister_bio}}</p>
-					
 				</div>
+
 			{% endfor %}
 		</section> <!-- /.article-section -->
 
 		<section class="article-section">
-
 			{% for d in post.get_field('featured_deal') %}
 				{% include 'tease-todays_deal.twig' %}
 			{% endfor %}
-
 		</section> <!-- /.article-section -->
 
 		<section class="article-section">

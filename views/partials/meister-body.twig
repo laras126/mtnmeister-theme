@@ -17,6 +17,12 @@
 			
 	</div>
 
+	{% if post.content_blocks %}
+		<section class="article-section container-squish">
+			{% include 'partials/acf-block-loop.twig'%}
+		</section>
+	{% endif %}
+
 	{% if post.quote_text %}
 		<div class="article-section container">
 
@@ -83,12 +89,6 @@
 				{% endfor %}
 			</div>
 		
-		</section>
-	{% endif %}
-
-	{% if post.content_blocks %}
-		<section class="article-section container-squish">
-			{% include 'partials/acf-block-loop.twig'%}
 		</section>
 	{% endif %}
 

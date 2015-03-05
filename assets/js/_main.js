@@ -11,8 +11,9 @@ $(document).ready(function() {
 		threshold : 400
 	}); // Am I lazy for using this?
 
-
-
+	//
+	$('#content').fitVids();
+	
 	// ----
 	// Toggle menu
 	// ----

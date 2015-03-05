@@ -3,9 +3,9 @@
     "title": "Episode Content",
     "fields": [
         {
-            "key": "field_5463e9a11f90d",
-            "label": "Connected Gear",
-            "name": "connected_gear",
+            "key": "field_540726c87c82e",
+            "label": "Quotes",
+            "name": "quotes",
             "prefix": "",
             "type": "repeater",
             "instructions": "",
@@ -18,46 +18,42 @@
             },
             "min": "",
             "max": "",
-            "layout": "table",
+            "layout": "row",
             "button_label": "Add Row",
             "sub_fields": [
                 {
-                    "key": "field_5463ea261f90f",
-                    "label": "Gear Item",
-                    "name": "gear_item",
+                    "key": "field_540726d47c82f",
+                    "label": "Quote Text",
+                    "name": "quote_text",
                     "prefix": "",
-                    "type": "relationship",
-                    "instructions": "Conned the Meister to recommended gear.",
-                    "required": 0,
+                    "type": "textarea",
+                    "instructions": "",
+                    "required": 1,
                     "conditional_logic": 0,
                     "wrapper": {
-                        "width": 80,
+                        "width": "",
                         "class": "",
                         "id": ""
                     },
-                    "post_type": [
-                        "gear"
-                    ],
-                    "taxonomy": "",
-                    "filters": [
-                        "search",
-                        "post_type"
-                    ],
-                    "elements": "",
-                    "max": "",
-                    "return_format": "object"
+                    "default_value": "",
+                    "placeholder": "",
+                    "maxlength": "",
+                    "rows": "",
+                    "new_lines": "br",
+                    "readonly": 0,
+                    "disabled": 0
                 },
                 {
-                    "key": "field_5463eaf97661e",
-                    "label": "Time",
+                    "key": "field_540727217c830",
+                    "label": "Time in Episode",
                     "name": "time_in_episode",
                     "prefix": "",
                     "type": "text",
-                    "instructions": "",
+                    "instructions": "When does the Meister say this in the episode?",
                     "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
-                        "width": 20,
+                        "width": "",
                         "class": "",
                         "id": ""
                     },
@@ -68,13 +64,52 @@
                     "maxlength": "",
                     "readonly": 0,
                     "disabled": 0
+                },
+                {
+                    "key": "field_541f0c8f3740e",
+                    "label": "Tweet Link",
+                    "name": "tweet_link",
+                    "prefix": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": "",
+                    "readonly": 0,
+                    "disabled": 0
+                },
+                {
+                    "key": "field_540727487c831",
+                    "label": "Word Cloud",
+                    "name": "word_cloud",
+                    "prefix": "",
+                    "type": "true_false",
+                    "instructions": "Should this quote be used to highlight the episode in the homepage word cloud?",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "message": "",
+                    "default_value": 0
                 }
             ]
         },
         {
-            "key": "field_5463ebdd64760",
-            "label": "Connected Deal",
-            "name": "connected_deal",
+            "key": "field_5407283aaa52b",
+            "label": "Gear Recommendations",
+            "name": "gear_recommendations",
             "prefix": "",
             "type": "repeater",
             "instructions": "",
@@ -87,20 +122,133 @@
             },
             "min": "",
             "max": "",
-            "layout": "table",
+            "layout": "row",
             "button_label": "Add Row",
             "sub_fields": [
                 {
-                    "key": "field_5463ebdd64761",
-                    "label": "Deal",
-                    "name": "deal",
+                    "key": "field_5407284eaa52c",
+                    "label": "Title",
+                    "name": "gear_title",
                     "prefix": "",
-                    "type": "relationship",
-                    "instructions": "Conned the Meister to a deal.",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": 100,
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": "",
+                    "readonly": 0,
+                    "disabled": 0
+                },
+                {
+                    "key": "field_540728abaa52e",
+                    "label": "Photo",
+                    "name": "gear_photo",
+                    "prefix": "",
+                    "type": "image",
+                    "instructions": "",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "url",
+                    "preview_size": "thumbnail",
+                    "library": "all",
+                    "min_width": 0,
+                    "min_height": 0,
+                    "min_size": 0,
+                    "max_width": 0,
+                    "max_height": 0,
+                    "max_size": 0,
+                    "mime_types": ""
+                },
+                {
+                    "key": "field_540728c4aa52f",
+                    "label": "Description",
+                    "name": "gear_description",
+                    "prefix": "",
+                    "type": "textarea",
+                    "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
-                        "width": 80,
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "maxlength": "",
+                    "rows": "",
+                    "new_lines": "wpautop",
+                    "readonly": 0,
+                    "disabled": 0
+                },
+                {
+                    "key": "field_54072903aa530",
+                    "label": "Link",
+                    "name": "gear_link",
+                    "prefix": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": "",
+                    "readonly": 0,
+                    "disabled": 0
+                },
+                {
+                    "key": "field_5453f99b854fd",
+                    "label": "Time in Episode",
+                    "name": "time_in_episode",
+                    "prefix": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": "",
+                    "readonly": 0,
+                    "disabled": 0
+                },
+                {
+                    "key": "field_54072918aa531",
+                    "label": "Connect to Deal",
+                    "name": "gear_to_deal",
+                    "prefix": "",
+                    "type": "relationship",
+                    "instructions": "Is this recommendation related to a Deal?",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
                         "class": "",
                         "id": ""
                     },
@@ -109,34 +257,11 @@
                     ],
                     "taxonomy": "",
                     "filters": [
-                        "search",
-                        "post_type"
+                        "search"
                     ],
                     "elements": "",
                     "max": "",
                     "return_format": "object"
-                },
-                {
-                    "key": "field_5463ebdd64762",
-                    "label": "Time",
-                    "name": "time_in_episode",
-                    "prefix": "",
-                    "type": "text",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": 20,
-                        "class": "",
-                        "id": ""
-                    },
-                    "default_value": "",
-                    "placeholder": "",
-                    "prepend": "",
-                    "append": "",
-                    "maxlength": "",
-                    "readonly": 0,
-                    "disabled": 0
                 }
             ]
         },
@@ -226,6 +351,224 @@
                     "disabled": 0
                 }
             ]
+        },
+        {
+            "key": "field_54f883a0958d0",
+            "label": "Content Blocks",
+            "name": "content_blocks",
+            "prefix": "",
+            "type": "flexible_content",
+            "instructions": "Note: if this is the \"Meisters\" or \"Deals\" page, this content will show below the Deal\/Meister posts.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "button_label": "Add Content",
+            "min": "",
+            "max": "",
+            "layouts": [
+                {
+                    "key": "5443e2961805c",
+                    "name": "text_block",
+                    "label": "Text",
+                    "display": "row",
+                    "sub_fields": [
+                        {
+                            "key": "field_54f883a0958d1",
+                            "label": "Text",
+                            "name": "section_text",
+                            "prefix": "",
+                            "type": "textarea",
+                            "instructions": "Plain paragraph text. No headlines. This will display in two columns at desktop view.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "maxlength": "",
+                            "rows": "",
+                            "new_lines": "wpautop",
+                            "readonly": 0,
+                            "disabled": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                {
+                    "key": "5437f2c02fedf",
+                    "name": "text_image_block",
+                    "label": "Text and Image Block",
+                    "display": "row",
+                    "sub_fields": [
+                        {
+                            "key": "field_54f883a0958d2",
+                            "label": "Image",
+                            "name": "image",
+                            "prefix": "",
+                            "type": "image",
+                            "instructions": "This image will display to the left of the text.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "return_format": "url",
+                            "preview_size": "thumbnail",
+                            "library": "all",
+                            "min_width": "",
+                            "min_height": "",
+                            "min_size": "",
+                            "max_width": "",
+                            "max_height": "",
+                            "max_size": "",
+                            "mime_types": ""
+                        },
+                        {
+                            "key": "field_54f883a0958d3",
+                            "label": "Text",
+                            "name": "text",
+                            "prefix": "",
+                            "type": "textarea",
+                            "instructions": "This will be descriptive text to the right of the image.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "maxlength": "",
+                            "rows": "",
+                            "new_lines": "",
+                            "readonly": 0,
+                            "disabled": 0
+                        },
+                        {
+                            "key": "field_54f883a0958d4",
+                            "label": "Image Location",
+                            "name": "image_location",
+                            "prefix": "",
+                            "type": "radio",
+                            "instructions": "Should the image be shown on the right or left?",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "choices": {
+                                "Right": "Right",
+                                "Left": "Left"
+                            },
+                            "other_choice": 0,
+                            "save_other_choice": 0,
+                            "default_value": "",
+                            "layout": "horizontal"
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                {
+                    "key": "5437f1f4676b0",
+                    "name": "large_image_block",
+                    "label": "Large Image Block",
+                    "display": "row",
+                    "sub_fields": [
+                        {
+                            "key": "field_54f883a0958d5",
+                            "label": "Image",
+                            "name": "image",
+                            "prefix": "",
+                            "type": "image",
+                            "instructions": "Recommended dimensions are 1040x600. Images should not be more than 1040px wide.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "return_format": "url",
+                            "preview_size": "thumbnail",
+                            "library": "all",
+                            "min_width": "",
+                            "min_height": "",
+                            "min_size": "",
+                            "max_width": "",
+                            "max_height": "",
+                            "max_size": "",
+                            "mime_types": ""
+                        },
+                        {
+                            "key": "field_54f883a0958d6",
+                            "label": "Caption",
+                            "name": "caption",
+                            "prefix": "",
+                            "type": "text",
+                            "instructions": "This will be a small line under the image. You can leave it blank.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": "",
+                            "readonly": 0,
+                            "disabled": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                {
+                    "key": "5437f4bfd8415",
+                    "name": "blank",
+                    "label": "Blank",
+                    "display": "row",
+                    "sub_fields": [
+                        {
+                            "key": "field_54f883a0958d7",
+                            "label": "Blank",
+                            "name": "wysiwyg",
+                            "prefix": "",
+                            "type": "wysiwyg",
+                            "instructions": "You can add whatever content you like here, but keep it simple - this is mainly a spot for shortcodes.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "tabs": "all",
+                            "toolbar": "full",
+                            "media_upload": 1
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                }
+            ]
         }
     ],
     "location": [
@@ -242,5 +585,6 @@
     "style": "default",
     "label_placement": "top",
     "instruction_placement": "field",
-    "hide_on_screen": ""
+    "hide_on_screen": "",
+    "modified": 1425572816
 }

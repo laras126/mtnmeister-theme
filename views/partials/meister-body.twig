@@ -8,7 +8,11 @@
 		</div>
 
 		<div class="featured-right">
-			<img src="{{TimberImage(post.meister_pic).src}}" alt="{{post.title}}">
+			{% if post.meister_pic %}
+				<img src="{{TimberImage(post.meister_pic).src}}" alt="{{post.title}}">
+			{% else %}
+				<img src="{{TimberImage(post.thumbnail).src}}" alt="{{post.title}}">
+			{% endif %}
 		</div>
 			
 	</div>
@@ -22,6 +26,7 @@
 					<a href="{{post.quote_tweet_link}}" target="blank" class="btn-tweet btn-icon" title="Click to Tweet"><svg class="shape shape-twitter shape-icon"><use xlink:href="#shape-twitter"/></svg> Tweet</a>
 				</div>
 			</div>
+
 	        {% if post.quote_time_in_episode %}
 	        	<p class="text-right meta">Time in episode: {{post.quote_time_in_episode}}</p>
 	    	{% endif %}
@@ -78,6 +83,12 @@
 				{% endfor %}
 			</div>
 		
+		</section>
+	{% endif %}
+
+	{% if post.content_blocks %}
+		<section class="article-section container-squish">
+			{% include 'partials/acf-block-loop.twig'%}
 		</section>
 	{% endif %}
 

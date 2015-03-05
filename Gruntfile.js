@@ -11,6 +11,7 @@ module.exports = function(grunt) {
         'assets/js/build/modernizr.custom.build.js',
         'bower_components/imagesloaded/imagesloaded.pkgd.min.js',
         'bower_components/jquery.lazyload/jquery.lazyload.min.js',
+        'bower_components/FitVids/jquery.fitvids.js',
         'assets/js/_*.js'
     ];
 

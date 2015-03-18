@@ -1,7 +1,6 @@
 {% for content in post.get_field('content_blocks') %}
 
     {% if content.acf_fc_layout == 'large_image_block' %}
-        {# {% include 'partials/block-image-caption.twig' %} #}
         {% include 'partials/block-text-image.twig' %}
 	{% elseif content.acf_fc_layout == 'text_block' %}
         {% include 'partials/block-text.twig' %}

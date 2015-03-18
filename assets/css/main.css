@@ -2535,11 +2535,11 @@ input[type="checkbox"]:focus {
       float: left;
       width: 50%; } }
 
-.image-inline-left {
+.inline-l {
   float: left;
   padding-left: 0; }
 
-.image-inline-right {
+.inline-r {
   float: right;
   padding-right: 0; }
 

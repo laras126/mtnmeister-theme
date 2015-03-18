@@ -9,7 +9,7 @@
             "prefix": "",
             "type": "textarea",
             "instructions": "A paragraph bio of the Meister.",
-            "required": 0,
+            "required": 1,
             "conditional_logic": 0,
             "wrapper": {
                 "width": "",
@@ -31,7 +31,7 @@
             "prefix": "",
             "type": "image",
             "instructions": "",
-            "required": 0,
+            "required": 1,
             "conditional_logic": 0,
             "wrapper": {
                 "width": "",
@@ -40,7 +40,14 @@
             },
             "preview_size": "thumbnail",
             "library": "all",
-            "return_format": "array"
+            "return_format": "array",
+            "min_width": 0,
+            "min_height": 0,
+            "min_size": 0,
+            "max_width": 0,
+            "max_height": 0,
+            "max_size": 0,
+            "mime_types": ""
         }
     ],
     "location": [
@@ -58,7 +65,6 @@
     "label_placement": "top",
     "instruction_placement": "label",
     "hide_on_screen": [
-        "permalink",
         "the_content",
         "excerpt",
         "custom_fields",
@@ -68,8 +74,7 @@
         "slug",
         "author",
         "format",
-        "categories",
-        "tags",
         "send-trackbacks"
-    ]
+    ],
+    "modified": 1426694326
 }

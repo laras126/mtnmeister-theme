@@ -136,8 +136,8 @@
                                 "id": ""
                             },
                             "choices": {
-                                "Right": "Right",
-                                "Left": "Left"
+                                "left": "Left",
+                                "right": "Right"
                             },
                             "other_choice": 0,
                             "save_other_choice": 0,
@@ -263,6 +263,5 @@
         "tags",
         "send-trackbacks"
     ],
-    "modified": 1426696160,
-    "local": "json"
+    "modified": 1426696336
 }

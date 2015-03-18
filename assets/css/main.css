@@ -2285,10 +2285,10 @@ input[type="checkbox"]:focus {
   width: 100%;
   z-index: 100;
   border-top: 5px solid #f8992f; }
-  @media (min-width: 62em) {
-    .page .banner {
-      background: linear-gradient(rgba(4, 63, 126, 0.5), rgba(4, 63, 126, 0)); } }
 
+@media (min-width: 62em) {
+  .banner-enhanced {
+    background: linear-gradient(rgba(4, 63, 126, 0.5), rgba(4, 63, 126, 0)); } }
 .scrolled {
   background: #043f7e !important; }
 
@@ -2452,6 +2452,9 @@ input[type="checkbox"]:focus {
     .page-title {
       font-size: 10vw;
       top: 2.1rem; } }
+
+.page-title-simple {
+  color: #043f7e; }
 
 .tagline-page, .widget-title {
   color: #043f7e;

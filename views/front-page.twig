@@ -44,7 +44,7 @@
 
 		<section class="article-section">
 			{% for d in post.get_field('featured_deal') %}
-				{% include 'tease-todays_deal.twig' %}
+				{% include 'tease/tease-todays_deal.twig' %}
 			{% endfor %}
 		</section> <!-- /.article-section -->
 
@@ -69,7 +69,7 @@
 			<div class="row loop-thumbs">
 				{# <div class="row"> #}
 					{% for m in meisters|slice(1,3) %}
-						{% include 'tease-minor_meister.twig' %}
+						{% include 'tease/tease-minor_meister.twig' %}
 					{% endfor %}	
 				{# </div> #}
 			</div>

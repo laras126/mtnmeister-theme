@@ -8,9 +8,9 @@
 	1/05 - not using the text header now, but keeping this code in case.
 #}
 
-{# {% if header_image.image and display != 'text_only' %} #}
+{% if header_image.image and display != 'text_only' %}
 	
-	<header class="page-header animated fadeIn">	
+	<header class="page-header">	
 		{% include 'partials/spinner.twig' %}
 
 		<img id="headerImageLoader" src="{{TimberImage(header_image.image).src}}" alt="Highlighted meister">
@@ -28,12 +28,12 @@
 
 	</header>
 
-{# {% elseif display == 'text_only' %}
+{% elseif display == 'text_only' %}
 
-	<header class="page-header-simple animated fadeIn">
+	<header class="page-header-simple">
 		<div class="container">
-			<h1 class="article-title">{{post.title}}</h1>	
+			<h1 class="page-title page-title-simple">{{post.title}}</h1>	
 		</div>
 	</header>
 	
-{% endif %} #}
+{% endif %}

@@ -4,13 +4,13 @@
 
 	{% set share_deal = true %}
 	{% for d in deals|slice(0,1) %}
-		{% include 'tease-todays_deal.twig' %}
+		{% include 'tease/tease-todays_deal.twig' %}
 	{% endfor %}	
 
 	<div class="row">
 		{% for d in deals|slice(1) %}
 			{% set post = d %}
-			{% include ['tease-deal.twig', 'tease.twig'] %}
+			{% include ['tease/tease-deal.twig', 'tease/tease.twig'] %}
 		{% endfor %}	
 	</div>
 	

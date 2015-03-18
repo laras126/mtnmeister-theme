@@ -1,9 +1,10 @@
-<div class="banner">
+<div class="banner {{post.header_display == 'header_image' ? 'banner-enhanced' : 'banner-simple'}}">
     <div class="container">
+
         <div class="brand">
             <div class="logo">
                 <a href="/" title="{{site.name}}" rel="home">
-                    <svg class="shape shape-site-logo"><use xlink:href="#shape-site-logo" /></svg>       
+                    <svg class="shape shape-site-logo"><use xlink:href="#shape-site-logo" /></svg> 
                 </a>
             </div>
             <div class="menu-link">

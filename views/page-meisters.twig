@@ -2,14 +2,14 @@
 
 {% block today %}
 	{% for m in meisters|slice(0,1) %}
-		{% include 'tease-todays_meister.twig' %}
+		{% include 'tease/tease-todays_meister.twig' %}
 	{% endfor %}
 {% endblock %}
 
 {% block loop %}
 	<div class="loop loop-main">
 		{% for m in meisters|slice(1, 1) %}
-			{% include ['tease-meister.twig', 'tease.twig'] %}
+			{% include ['tease/tease-meister.twig', 'tease/tease.twig'] %}
 		{% endfor %}	
 	</div>
 {% endblock %}
@@ -18,7 +18,7 @@
 	<div class="row">
 		<div class="loop loop-thumbs">
 			{% for m in meisters|slice(2) %}
-				{% include ['tease-minor_meister.twig', 'tease.twig'] %}
+				{% include ['tease/tease-minor_meister.twig', 'tease/tease.twig'] %}
 			{% endfor %}
 		</div>
 	</div>

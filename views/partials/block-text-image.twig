@@ -1,7 +1,0 @@
-{% set loc = content.image_location %}
-	
-<div class="clearfix">
-	<img class="image-inline inline-{{ loc == 'left' ? 'l' : 'r' }}" src="{{TimberImage(content.image).src}}" />
-	<h4>{{content.heading}}</h4>
-	{{content.text}}
-</div>

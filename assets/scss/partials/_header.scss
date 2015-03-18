@@ -24,18 +24,19 @@
 	
 	width: 100%;
 	z-index: 100;	
-	
-	@include bp(large) {
-		
-		// No background gradient on single pages
-		.page & {
-			background: linear-gradient(rgba($accent-dark, 0.5), rgba($accent-dark, 0));
-		}
-	}
 
 	border-top: $accent-border-large;
 }
 
+	@include bp(large) {
+		
+		// No background gradient on single pages
+		.banner-enhanced {
+			background: linear-gradient(rgba($accent-dark, 0.5), rgba($accent-dark, 0));
+		}
+	}
+
+	
 	.scrolled {
 		background: $accent-dark !important;
 	}

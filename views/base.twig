@@ -5,9 +5,11 @@
     </head>
 {% endblock %}
     <body data-template="base.twig" class="{{body_class}}">
+        
         <div class="svgsprites">
             {% include 'partials/svg-defs.svg' %}
         </div>
+
         <header class="header" role="banner">
             {% block header %}
                 {% include 'header.twig' %}
@@ -24,9 +26,8 @@
             <footer class="footer" role="contentinfo">
                 {% include 'footer.twig' %}         
             </footer>
-            {{ function('wp_footer') }}
-            
+            {{ function('wp_footer') }}            
         {% endblock %}
-        {# {{wp_footer}} #}
+
     </body>
 </html>

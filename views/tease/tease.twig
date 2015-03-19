@@ -1,0 +1,12 @@
+<article class="tease tease-{{post.post_type}}">
+	
+	{% block content %}
+	<div class="col-sm-3">
+		<h4 class="tease-title"><a href="{{post.link}}">{{post.title}}</a></h4>
+		{% if post.get_thumbnail %}
+			<img src="{{post.thumbnail.src}}" />
+		{% endif %}	
+	</div>
+	{% endblock %}
+	
+</article>

@@ -7,7 +7,7 @@
             "label": "Description",
             "name": "deal_desc",
             "prefix": "",
-            "type": "textarea",
+            "type": "text",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -18,9 +18,9 @@
             },
             "default_value": "",
             "placeholder": "",
+            "prepend": "",
+            "append": "",
             "maxlength": "",
-            "rows": 5,
-            "new_lines": "wpautop",
             "readonly": 0,
             "disabled": 0
         },
@@ -76,7 +76,15 @@
             "type": "date_picker",
             "instructions": "The deal will have an \"expired\" notice when the date has passed. Leave blank if it doesn't expire.",
             "required": 0,
-            "conditional_logic": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "",
+                        "operator": "==",
+                        "value": ""
+                    }
+                ]
+            ],
             "wrapper": {
                 "width": "",
                 "class": "",
@@ -102,7 +110,14 @@
             },
             "return_format": "array",
             "preview_size": "thumbnail",
-            "library": "all"
+            "library": "all",
+            "min_width": 0,
+            "min_height": 0,
+            "min_size": 0,
+            "max_width": 0,
+            "max_height": 0,
+            "max_size": 0,
+            "mime_types": ""
         },
         {
             "key": "field_5424cb39846c6",
@@ -196,7 +211,7 @@
         "author",
         "format",
         "page_attributes",
-        "featured_image",
         "send-trackbacks"
-    ]
+    ],
+    "modified": 1426792245
 }

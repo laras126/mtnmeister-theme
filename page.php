@@ -62,15 +62,17 @@ if( is_page('Meisters') ) {
 	$context['deals'] = Timber::get_posts($deal_args);
 }
 
-
+// TODO: These should be within theme options or something, and not hardcoded page names.
 // Sidebar, not on deals page
-if( !is_page('Meisters') ) {
+if( !is_page('Meisters') || is_page('Support') ) {
 	$context['sidebar'] = Timber::get_sidebar('sidebar.php');
 	$context['sidebar_class'] = 'has-sidebar';	
 }
 
-
-
+if( is_page('Support') ) {
+	$context['sidebar'] = Timber::get_sidebar('sidebar.php');
+	$context['sidebar_class'] = 'has-sidebar';		
+}
 
 // $context['pagination'] = Timber::get_pagination();
 

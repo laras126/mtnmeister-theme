@@ -20,7 +20,7 @@ function mtn_home_widgets() {
 
 }
 
-add_action( 'widgets_init', 'mtn_home_widgets' );
+// add_action( 'widgets_init', 'mtn_home_widgets' );
 
 
 /**
@@ -44,7 +44,7 @@ function mtn_footer_widgets() {
 }
 
 // Hook into the 'widgets_init' action
-add_action( 'widgets_init', 'mtn_footer_widgets' );
+// add_action( 'widgets_init', 'mtn_footer_widgets' );
 
 
 /**
@@ -68,6 +68,28 @@ function mtn_global_sidebar() {
 }
 
 add_action( 'widgets_init', 'mtn_global_sidebar' );
+
+/**
+ * Support page sidebar
+ */
+
+function mtn_support_sidebar() {
+
+	$args = array(
+		'id'            => 'support_sidebar',
+		'name'          => __( 'Support Sidebar', 'mtnmeister' ),
+		'description'   => __( 'Logos of sponsors on the Support page.', 'mtnmeister' ),
+		'class'         => 'widgets-sidebar',
+		'before_widget' => '<li class="widget">',
+		'after_widget'  => '</li>',
+		'before_title'  => '<h4 class="widget-title">',
+		'after_title'   => '</h4>'
+	);
+	register_sidebar( $args );
+
+}
+
+add_action( 'widgets_init', 'mtn_support_sidebar' );
 
 
 ?>

@@ -146,7 +146,7 @@
 			    
 				$t.css('background-image', 'url(\'' + imageSrc + '\')');
 
-			}).fadeTo(1000, 1);
+			}).fadeTo(250, 1);
 
 			$t.find('.spinner').hide();
 			

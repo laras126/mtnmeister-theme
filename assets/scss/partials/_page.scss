@@ -48,8 +48,7 @@ h4 {
 }
 
 	.page-title-simple {
-		color: $accent-dark;
-		// top: 0 !important;
+		@extend .article-title;
 	}
 
 .tagline-page {

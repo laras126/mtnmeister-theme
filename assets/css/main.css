@@ -1702,7 +1702,7 @@ h1, h2, h3, h4, h5, h6 {
 h1 {
   font-size: 3.4rem; }
 
-h2, .article-title {
+h2, .article-title, .page-title-simple {
   font-size: 2.4rem; }
 
 h3 {
@@ -2453,9 +2453,6 @@ input[type="checkbox"]:focus {
       font-size: 10vw;
       top: 2.1rem; } }
 
-.page-title-simple {
-  color: #043f7e; }
-
 .tagline-page, .widget-title {
   color: #043f7e;
   margin-top: 2.4rem;
@@ -2556,7 +2553,7 @@ input[type="checkbox"]:focus {
     padding-left: 0.8rem; }
 
 @media (min-width: 45em) {
-  .article-title {
+  .article-title, .page-title-simple {
     font-size: 3.4rem; } }
 
 .quote-container {

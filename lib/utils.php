@@ -79,6 +79,8 @@ if ( is_admin() ) { // check to make sure we aren't on the front end
 		global $post;
 		$pid = $post->ID;
 		
+		$custom_content = '';
+
 		$custom = get_post_custom($pid);
 		unset($custom['_yoast_wpseo_focuskw']); // Don't count the keyword in the Yoast field!
 

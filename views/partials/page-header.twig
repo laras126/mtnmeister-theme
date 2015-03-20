@@ -9,7 +9,7 @@
 #}
 
 {% if header_image.image and display != 'text_only' %}
-	
+	<div class="rotate">
 	<header class="page-header">	
 		{% include 'partials/spinner.twig' %}
 
@@ -27,7 +27,7 @@
 		{% endif %}
 
 	</header>
-
+	</div>
 {% elseif display == 'text_only' %}
 
 	<header class="page-header-simple">

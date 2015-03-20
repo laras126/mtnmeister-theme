@@ -142,11 +142,11 @@
 	
 		$(this).imagesLoaded( function() {
 
-			$t.fadeTo(200, 0.5, function() {
+			$t.fadeTo(100, 0.5, function() {
 			    
 				$t.css('background-image', 'url(\'' + imageSrc + '\')');
 
-			}).fadeTo(250, 1);
+			}).fadeTo(100, 1);
 
 			$t.find('.spinner').hide();
 			

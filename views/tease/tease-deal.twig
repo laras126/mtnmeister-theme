@@ -24,7 +24,7 @@
 			{% elseif d.deal_pic %}
 				<img src="{{TimberImage(d.deal_pic).src}}" alt="{{d.title}}">
 			{% else %}
-					{# TODO: this isn't working for some reason.... #}
+				{# TODO: this isn't working for some reason.... #}
 				{% set default = site.theme.uri ~ '/assets/img/util/default-meister.png' %}
 				<img src="{{default}}" alt="{{d.title}}">
 			{% endif %}

@@ -74,7 +74,7 @@
 		</section>
 	{% endif %}
 
-	{% if post.connected_deal %}
+	{# {% if post.connected_deal %}
 		<section class="article-section container-squish">
 
 			<header class="article-section-header">
@@ -84,13 +84,13 @@
 			<div class="row">
 				{% for item in post.get_field('connected_deal') %}
 					{% for d in item.deal %}
-						{% include ['tease-deal.twig', 'tease.twig'] %}
+						{% include ['tease/tease-deal.twig', 'tease/tease.twig'] %}
 					{% endfor %}
 				{% endfor %}
 			</div>
 		
 		</section>
-	{% endif %}
+	{% endif %} #}
 
 	{% if post.additional_resources %}
 		<section class="article-section container-squish">

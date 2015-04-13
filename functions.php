@@ -41,6 +41,10 @@
 				$rand_row = $images[ array_rand( $images ) ];
 				$context['header_image'] = $rand_row;	
 			}
+
+			// ACF Options Page for Callout Bar
+			$context['callout_tf'] = get_field('callout_tf', 'options');
+			$context['callout_bar'] = get_field('callout_bar', 'options');
 			
 			$context['main_nav'] = new TimberMenu('main_nav');
 			$context['footer_nav'] = new TimberMenu('footer_nav');
@@ -102,7 +106,7 @@ add_filter( 'pre_get_posts', 'mtn_add_custom_types' );
 // Add Options Page
 
 if( function_exists('acf_add_options_page') ) {	
-	acf_add_options_page();
+	acf_add_options_page('Site Settings');
 }
 
 ?>

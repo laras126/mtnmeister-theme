@@ -13,17 +13,17 @@ function mtn_scripts_styles() {
 
     if( WP_ENV == 'production' ) {
         wp_enqueue_style( 'nl-styles', get_template_directory_uri() . '/assets/css/main.min.css', 1.0);
-        wp_register_script('mtn-js', get_template_directory_uri() . '/assets/js/build/scripts.min.js');
+        wp_register_script('mtn-js', get_template_directory_uri() . '/assets/js/build/scripts.min.js', true);
     } else {
         wp_enqueue_style( 'nl-styles', get_template_directory_uri() . '/assets/css/main.css', 1.0);
-        wp_register_script('mtn-js', get_template_directory_uri() . '/assets/js/scripts.js');
+        wp_register_script('mtn-js', get_template_directory_uri() . '/assets/js/scripts.js', true);
 
     }
 
     // Add MTNmeister JS
     // wp_register_script('mtn-js', get_template_directory_uri() . '/assets/js/scripts.js');
     
-    wp_enqueue_script( 'mtn-js', array('jquery'), null, true );
+    wp_enqueue_script( 'mtn-js', array('jquery'), true, '');
 
     if (is_single() && comments_open() && get_option('thread_comments')) {
         wp_enqueue_script('comment-reply');

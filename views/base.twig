@@ -9,6 +9,10 @@
         <div class="svgsprites">
             {% include 'partials/svg-defs.svg' %}
         </div>
+    
+        {% if callout_tf == true %}
+            <div class="callout"><div class="container">{{callout_bar}}</div></div>
+        {% endif %}
 
         <header class="header" role="banner">
             {% block header %}

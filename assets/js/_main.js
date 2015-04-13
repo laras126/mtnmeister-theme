@@ -14,6 +14,8 @@ $(document).ready(function() {
 	//
 	$('#content').fitVids();
 	
+
+
 	// ----
 	// Toggle menu
 	// ----
@@ -47,7 +49,20 @@ $(document).ready(function() {
 		} else if($(this).scrollTop() < $total_ht ) {
 			$banner.removeClass($scroll_class);
 		}
+
 	});
+
+
+
+	// ----
+	// Hide/show callout bar according to scroll position
+	// ----
+
+	$(window).scroll(function() {    
+		// Not ideal at all. Should be incorporated into the scroll logic above.
+    	// http://jsfiddle.net/mdesdev/jJkj2/
+    	var scroll = ($(this).scrollTop() > 0) ? $('.callout').slideUp(100) : $('.callout').slideDown(100);
+  	});
 
 
 

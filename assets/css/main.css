@@ -2267,6 +2267,21 @@ input[type="checkbox"]:focus {
     .item-img img {
       padding-left: 2rem; } }
 
+.callout {
+  background-color: #f8992f;
+  color: #fff;
+  padding: 0.4rem;
+  text-align: center;
+  position: relative;
+  font-size: 0.8rem; }
+  .callout a,
+  .callout a:visited,
+  .callout a:hover {
+    color: #ebebeb; }
+  .callout a {
+    color: #68C499;
+    font-weight: 700; }
+
 .mtns {
   position: relative;
   height: 110px;

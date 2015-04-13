@@ -3,6 +3,23 @@
 // Header
 // ---
 
+
+.callout {
+	// @include rotate($text-light, darken($alert-success, 15%));
+	@include rotate($text-light, $accent-med);
+	padding: $sml/2;
+	text-align: center;
+	position: relative;
+	font-size: $sml;
+
+	a {
+		color: $alert-success;
+		font-weight: 700;
+	}
+}
+
+
+// Umm..this is in the footer.
 .mtns {
 	position: relative;
 	height: 110px;

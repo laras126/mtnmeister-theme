@@ -4,39 +4,36 @@
 {#  
 	This logic is a little weird so that existing pages don't have 
 	to be adjusted (the Header Display field was added later). 
-
-	1/05 - not using the text header now, but keeping this code in case.
 #}
 
 {% if header_image.image and display != 'text_only' %}
 	<div class="rotate">
-	<header class="page-header">	
 		{% include 'partials/spinner.twig' %}
+		<header class="page-header">
 
-		<img id="headerImageLoader" src="{{TimberImage(header_image.image).src}}" alt="Highlighted meister">
-		<noscript><img src="{{TimberImage(header_image.image).src}}" alt="Highlighted meister"></noscript>
+			<img id="headerImageLoader" src="{{TimberImage(header_image.image).src}}" alt="Highlighted meister">
+			<noscript><img src="{{TimberImage(header_image.image).src}}" alt="Highlighted meister"></noscript>
 
-		<div class="page-info">
-			<div class="container">
-		        <h1 class="page-title no-margin">{{post.title}}</h1>
-		    </div>
-		</div>
+			<div class="page-info">
+				<div class="container">
+			        <h1 class="page-title no-margin">{{post.title}}</h1>
+			    </div>
+			</div>
 
-		{% if meister[0] %}
-			<p class="caption page-header-caption">{{meister[0].episode_tag}} {% if meister %} <br><a class="special" href="{{meister[0].link}}">#{{meister[0].episode_num}} {{meister[0].title}}</a> {% endif %}</p>
-		{% endif %}
+			{% if meister[0] %}
+				<p class="caption page-header-caption">{{meister[0].episode_tag}} {% if meister %} <br><a class="special" href="{{meister[0].link}}">#{{meister[0].episode_num}} {{meister[0].title}}</a> {% endif %}</p>
+			{% endif %}
 
-	</header>
+		</header>
 	</div>
+
 {% elseif display == 'text_only' %}
 
 	<header class="page-header-simple">
 		<div class="container">
-			<div class="container">
 				
-				<h1 class="page-title-simple">{{post.title}}</h1>	
+			<h1 class="page-title-simple">{{post.title}}</h1>	
 			
-			</div>
 		</div>
 	</header>
 	

@@ -8,7 +8,7 @@ $(document).ready(function() {
 
 	$('.lazy').lazyload({
 		effect : 'fadeIn',
-		threshold : 400
+		threshold : 600
 	}); // Am I lazy for using this?
 
 	//
@@ -65,11 +65,11 @@ $(document).ready(function() {
 	
 		$(this).imagesLoaded( function() {
 
-			$t.fadeTo(100, 0.5, function() {
+			$t.fadeTo(300, 0.5, function() {
 			    
 				$t.css('background-image', 'url(\'' + imageSrc + '\')');
 
-			}).fadeTo(100, 1);
+			}).fadeTo(300, 1);
 
 			$t.find('.spinner').hide();
 			

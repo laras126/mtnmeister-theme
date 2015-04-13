@@ -97,4 +97,12 @@ function mtn_add_custom_types( $query ) {
 }
 add_filter( 'pre_get_posts', 'mtn_add_custom_types' );
 
+
+
+// Add Options Page
+
+if( function_exists('acf_add_options_page') ) {	
+	acf_add_options_page();
+}
+
 ?>

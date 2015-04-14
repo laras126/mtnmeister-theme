@@ -43,7 +43,7 @@
 			@extend %row;
 		}
 
-		.sidebar-fancy & {
+		.widgets-fancy & {
 			border: $accent-border;
 			background-color: lighten($text-meta, 35%);
 		}
@@ -71,7 +71,7 @@
 		@extend %h5;
 		
 		line-height: $line-height-base;
-		
+
 		margin: 0;
 		padding: 0;
 		margin-bottom: $sml;

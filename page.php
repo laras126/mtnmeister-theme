@@ -66,7 +66,6 @@ if( is_page('Meisters') ) {
 // Sidebar, not on deals page
 if( !is_page('Meisters') ) {
 	$context['sidebar'] = Timber::get_sidebar('sidebar.php');
-	$context['sidebar_class'] = 'has-sidebar sidebar-fancy';
 }
 
 if( is_page('Support') ) {

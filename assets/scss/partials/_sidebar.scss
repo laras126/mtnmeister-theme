@@ -43,8 +43,11 @@
 			@extend %row;
 		}
 
-		border: $accent-border;
-		background-color: lighten($text-meta, 35%);
+		.sidebar-fancy & {
+			border: $accent-border;
+			background-color: lighten($text-meta, 35%);
+		}
+
 		margin-right: $sml;
 		
 		@include bp(sm) {
@@ -66,7 +69,9 @@
 	.widget-title {
 		@extend .tagline-page;
 		@extend %h5;
-
+		
+		line-height: $line-height-base;
+		
 		margin: 0;
 		padding: 0;
 		margin-bottom: $sml;

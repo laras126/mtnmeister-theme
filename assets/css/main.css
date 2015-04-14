@@ -2268,7 +2268,7 @@ input[type="checkbox"]:focus {
       padding-left: 2rem; } }
 
 .callout {
-  background-color: #f8992f;
+  background-color: #3fa173;
   color: #fff;
   padding: 0.4rem;
   text-align: center;
@@ -2279,15 +2279,8 @@ input[type="checkbox"]:focus {
   .callout a:hover {
     color: #ebebeb; }
   .callout a {
-    color: #68C499;
+    color: #F9E839;
     font-weight: 700; }
-
-.mtns {
-  position: relative;
-  height: 110px;
-  top: 20px;
-  background-image: url("../img/svgs/mtns.svg");
-  background-repeat: no-repeat; }
 
 .header-logo {
   position: relative;
@@ -2778,13 +2771,14 @@ input[type="checkbox"]:focus {
 .widget {
   padding: 1rem 1rem 0;
   margin-bottom: 1.3rem;
-  border: 1px solid lightgray;
-  background-color: #f2f2f2;
   margin-right: 0.8rem; }
   .widget p {
     text-align: center;
     padding: 0.8rem;
     background-color: #fff; }
+  .sidebar-fancy .widget {
+    border: 1px solid lightgray;
+    background-color: #f2f2f2; }
   @media (min-width: 30em) {
     .widget {
       position: relative;
@@ -2805,9 +2799,17 @@ input[type="checkbox"]:focus {
       width: 100%; } }
 
 .widget-title {
+  line-height: 1.3;
   margin: 0;
   padding: 0;
   margin-bottom: 0.8rem; }
+
+.mtns {
+  position: relative;
+  height: 110px;
+  top: 20px;
+  background-image: url("../img/svgs/mtns.svg");
+  background-repeat: no-repeat; }
 
 .svgsprites {
   display: none; }

@@ -5,27 +5,17 @@
 
 
 .callout {
-	// @include rotate($text-light, darken($alert-success, 15%));
-	@include rotate($text-light, $accent-med);
+	@include rotate($text-light, darken($alert-success, 15%));
+	// @include rotate($text-light, $accent-med);
 	padding: $sml/2;
 	text-align: center;
 	position: relative;
 	font-size: $sml;
 
 	a {
-		color: $alert-success;
+		color: $alert-warning;
 		font-weight: 700;
 	}
-}
-
-
-// Umm..this is in the footer.
-.mtns {
-	position: relative;
-	height: 110px;
-	top: 20px;
-	background-image: url('../img/svgs/mtns.svg');
-	background-repeat: no-repeat;
 }
 
 .header-logo {

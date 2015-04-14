@@ -21,6 +21,7 @@ $black:	 			#111;
 $white: 			#fff;
 $grey: 				#aaa;
 $med-grey: 			#999;
+$yellow: 			#F9E839;
 
 $green: 			#68C499;
 $red: 				#9F4440;
@@ -81,7 +82,7 @@ $link-hover: 		$accent-med;
 $link-active: 		darken($link-hover, 20%);
 
 $alert-danger:		$red;
-$alert-warning:		$sn-orange;
+$alert-warning:		$yellow;
 $alert-success:		$green;
 $alert-info: 		lighten($sn-navy, 20%);
 

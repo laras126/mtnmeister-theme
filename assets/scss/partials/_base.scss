@@ -9,7 +9,6 @@ body {
 	background-color: $body-bkgd;
 	color: $body-text;
 	overflow-x: hidden;
-	// @extend %rotate;
 	
 	@include bp(med) {
 		background-image: url('../img/svgs/mtns.svg');
@@ -31,6 +30,11 @@ img {
 
 .main {
 	@extend .clearfix;
+	background-position: bottom right; 
+	padding-bottom: $h1*2;
+	background-size: 100%;
+	background-image: url('../img/svg-min/mtns-wide.min.svg');
+	background-repeat: no-repeat;
 }
 
 .block-title {
@@ -107,15 +111,6 @@ img {
 			@extend .btn-alt;
 			border-radius: 4px;	
 		}
-		
-
-		// background: lighten($accent-light, 10%);
-		// font-weight: 700;
-		// color: $text-dark;
-		
-		// padding: $sml/3 $sml*0.75 !important;
-		// font-size: $sml;
-		
 	}
 
 .list-tags {
@@ -215,59 +210,3 @@ img {
 // ---
 
 
-
-// ---
-// Footer
-// ---
-
-.footer {
-	@include bp(med) {
-		min-height: 360px;
-	}
-	position: relative;
-}
-
-.share-links {
-	
-	@extend %unstyle-list;
-	margin-bottom: $base;
-	li {
-		display: inline-block;
-	}
-
-	.shape {
-		display: inline-block;
-		width: $h3;
-		height: $h3;
-		margin-right: $base;
-	}
-}
-
-.creds-wrap {
-	@extend %container;
-	position: relative;
-}
-
-.creds {
-	@include bp(med) {
-		position: absolute;
-		bottom: 0;
-		width: 100%;	
-	}
-	
-	p {
-		display: inline-block;
-	}
-}
-
-.copyright,
-.credits {
-	// @extend %half;
-	// position: relative;
-}
-
-.copyright {
-	@include bp(small) {
-		float: right;			
-	}
-}

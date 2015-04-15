@@ -1591,12 +1591,12 @@ th {
     padding-left: 1rem;
     padding-right: 1rem; } }
 
-.clearfix:before, .main:before, .number-wrap:before, .creds-wrap:before, .container:before, .container-squish:before, .item:before, .front-feed-header:before, .tease-deal:before,
-.tease-featured-deal:before, .sidebar:before, .clearfix:after, .main:after, .number-wrap:after, .creds-wrap:after, .container:after, .container-squish:after, .item:after, .front-feed-header:after, .tease-deal:after,
+.clearfix:before, .main:before, .number-wrap:before, .container:before, .container-squish:before, .item:before, .front-feed-header:before, .tease-deal:before,
+.tease-featured-deal:before, .sidebar:before, .clearfix:after, .main:after, .number-wrap:after, .container:after, .container-squish:after, .item:after, .front-feed-header:after, .tease-deal:after,
 .tease-featured-deal:after, .sidebar:after {
   content: " ";
   display: table; }
-.clearfix:after, .main:after, .number-wrap:after, .creds-wrap:after, .container:after, .container-squish:after, .item:after, .front-feed-header:after, .tease-deal:after,
+.clearfix:after, .main:after, .number-wrap:after, .container:after, .container-squish:after, .item:after, .front-feed-header:after, .tease-deal:after,
 .tease-featured-deal:after, .sidebar:after {
   clear: both; }
 
@@ -1941,9 +1941,31 @@ button, .menu-item-cta .cta {
   40% {
     transform: scale(1);
     -webkit-transform: scale(1); } }
+.icon, .icon-rotate {
+  width: 3.4rem;
+  height: 3.4rem;
+  display: block;
+  margin: 0 auto; }
+
+.shape {
+  width: 100%;
+  height: auto;
+  fill: #043f7e; }
+
+.icon {
+  fill: #043f7e; }
+  a .icon:hover {
+    fill: #f8992f; }
+
+.icon-rotate {
+  fill: #ececec; }
+  a .icon-rotate:hover {
+    fill: #f8992f; }
+
 .shape-site-logo {
   height: 2.4rem;
-  width: 10.2rem; }
+  width: 10.2rem;
+  fill: #fff; }
 
 .shape-twitter {
   fill: #fff; }
@@ -1988,6 +2010,13 @@ img {
   height: auto;
   display: block;
   margin: 0 auto; }
+
+.main {
+  background-position: bottom right;
+  padding-bottom: 6.8rem;
+  background-size: 100%;
+  background-image: url("../img/svg-min/mtns-wide.min.svg");
+  background-repeat: no-repeat; }
 
 .number {
   border-bottom: 1px solid lightgray;
@@ -2059,37 +2088,6 @@ img {
   @media (min-width: 45em) {
     .block-image svg {
       display: block; } }
-
-.footer {
-  position: relative; }
-  @media (min-width: 45em) {
-    .footer {
-      min-height: 360px; } }
-
-.share-links {
-  margin-bottom: 1rem; }
-  .share-links li {
-    display: inline-block; }
-  .share-links .shape {
-    display: inline-block;
-    width: 2rem;
-    height: 2rem;
-    margin-right: 1rem; }
-
-.creds-wrap {
-  position: relative; }
-
-@media (min-width: 45em) {
-  .creds {
-    position: absolute;
-    bottom: 0;
-    width: 100%; } }
-.creds p {
-  display: inline-block; }
-
-@media (min-width: 30em) {
-  .copyright {
-    float: right; } }
 
 *:focus {
   outline: 0; }
@@ -2222,7 +2220,7 @@ input[type="checkbox"]:focus {
 #mc-embedded-subscribe {
   border: 1px solid #f8992f; }
 
-.creds-wrap, .container, .container-squish {
+.container, .container-squish {
   margin: 0 auto;
   margin-right: auto;
   margin-left: auto;
@@ -2479,13 +2477,10 @@ input[type="checkbox"]:focus {
   padding-top: 66.66667%; }
   @media (min-width: 1040px) {
     .page-header {
-      padding-top: 56%; } }
-  @media (min-width: 1280px) {
-    .page-header {
-      padding-top: 50%; } }
+      padding-top: 45%; } }
   @media (min-width: 1420px) {
     .page-header {
-      padding-top: 45%; } }
+      padding-top: 40%; } }
 
 .page-header-simple {
   padding-top: 10%; }
@@ -2804,12 +2799,27 @@ input[type="checkbox"]:focus {
   padding: 0;
   margin-bottom: 0.8rem; }
 
-.mtns {
-  position: relative;
-  height: 110px;
-  top: 20px;
-  background-image: url("../img/svgs/mtns.svg");
-  background-repeat: no-repeat; }
+.share-links {
+  margin-bottom: 1rem; }
+  .share-links li {
+    display: inline-block; }
+  .share-links .shape {
+    display: inline-block;
+    width: 2rem;
+    height: 2rem;
+    margin-right: 1rem; }
+
+@media (min-width: 45em) {
+  .creds {
+    position: absolute;
+    bottom: 0;
+    width: 100%; } }
+.creds p {
+  display: inline-block; }
+
+@media (min-width: 30em) {
+  .copyright {
+    float: right; } }
 
 .svgsprites {
   display: none; }

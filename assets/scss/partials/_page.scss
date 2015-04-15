@@ -80,15 +80,16 @@ h4 {
 	padding-top: percentage(2/3);
 	
 	@media(min-width: 1040px) {
-		padding-top: 56%;
+		padding-top: 45%;
+		// padding-top: 56%;
 	}
 
 	@media(min-width: 1280px) {
-		padding-top: 50%;
+		// padding-top: 50%;
 	}
 
 	@media(min-width: 1420px) {
-		padding-top: 45%;
+		padding-top: 40%;
 	}
 }
 

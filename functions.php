@@ -46,6 +46,8 @@
 			$context['callout_tf'] = get_field('callout_tf', 'options');
 			$context['callout_bar'] = get_field('callout_bar', 'options');
 			
+			$context['footer_widgets'] = Timber::get_widgets('footer_widgets');
+			
 			$context['main_nav'] = new TimberMenu('main_nav');
 			$context['footer_nav'] = new TimberMenu('footer_nav');
 			$context['site'] = $this;

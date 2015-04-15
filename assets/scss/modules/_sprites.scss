@@ -1,7 +1,40 @@
+%icon-base {
+	width: $h1;
+	height: $h1;
+	display: block;
+	margin: 0 auto;
+}
+
+@mixin icon($fill, $hover: $accent-med) {
+	@extend %icon-base;
+	fill: $fill;
+	a &:hover {
+		fill: $hover;
+	}
+}
+
+.shape {
+	width: 100%;
+	height: auto;
+	fill: $accent-dark;
+}
+
+.icon {
+	@include icon($accent-dark);
+}
+
+.icon-rotate {
+	@include icon($accent-vlight);
+}
+
+
+
 
 .shape-site-logo {
 	height: $h2;
 	width: $h1*3;
+
+	fill: $text-light;
 }
 
 .shape-twitter {
@@ -36,3 +69,6 @@
 	height: $h4;	
 	width: $h3;
 }
+
+
+

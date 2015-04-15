@@ -73,18 +73,6 @@ module.exports = function(grunt) {
         }
     },
 
-    svgstore: {
-        options: {
-            prefix : 'shape-', // This will prefix each <g> ID
-        },
-        
-        default: {
-            files: {
-                'views/partials/svg-defs.svg': ['assets/img/svgs/*.svg'],
-            }
-        }
-    },
-
     cssmin: {
         options: {
             keepSpecialComments: 0
@@ -158,6 +146,42 @@ module.exports = function(grunt) {
 
     },
 
+    svgmin: {
+        options: {
+            plugins: [
+                {
+                    removeViewBox: false
+                }, {
+                    removeUselessStrokeAndFill: false
+                }
+            ]
+        },
+        
+        dist: {
+            expand: true,
+            cwd: 'assets/img/svg-raw',
+            src: ['*.svg'],
+            dest: 'assets/img/svg-min',
+            ext: '.min.svg'
+        }
+    },
+
+    svgstore: {
+        options: {
+            prefix : 'shape-',
+            cleanup: ['fill', 'style'],
+            svg: { 
+                viewBox : '0 0 100 100',
+                xmlns: 'http://www.w3.org/2000/svg'
+            }
+        },
+        default : {
+            files: {
+                'views/partials/svg-defs.svg': ['assets/img/svg-min/*.svg'],
+            }
+        }
+    },
+
     watch: {
         sass: {
             files: [
@@ -204,11 +228,15 @@ module.exports = function(grunt) {
     ]);
     
     grunt.registerTask('dev', [
-        'svgstore',
         'jshint',
         'sass:dev',
         'autoprefixer:dev',
         'concat',
         'cssmin'
+    ]);
+
+    grunt.registerTask('svgs', [
+        'svgmin',
+        'svgstore'
     ]);
 };

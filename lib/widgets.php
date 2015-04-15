@@ -34,8 +34,8 @@ function mtn_footer_widgets() {
 		'name'          => __( 'Footer Widgets', 'mtnmeister' ),
 		'description'   => __( 'Widgets in the footer. No more than 4.', 'mtnmeister' ),
 		'class'         => 'widgets-footer',
-		'before_widget' => '<li class="widget">',
-		'after_widget'  => '</li>',
+		'before_widget' => '<div class="col-sm-3">',
+		'after_widget'  => '</div>',
 		'before_title'  => '<h4 class="widget-title">',
 		'after_title'   => '</h4>'
 	);
@@ -44,7 +44,7 @@ function mtn_footer_widgets() {
 }
 
 // Hook into the 'widgets_init' action
-// add_action( 'widgets_init', 'mtn_footer_widgets' );
+add_action( 'widgets_init', 'mtn_footer_widgets' );
 
 
 /**

@@ -1,5 +1,29 @@
-	<div class="container">
-		<ul class="share-links">
+
+
+			<div class="container">
+			<div class="menu-main">
+				<ul class="">
+					<li class="menu-item special">More: </li>
+				{% for item in footer_nav.items %}
+					<li class="menu-item">
+						<a href="{{item.link}}">{{item.title}}</a>
+					</li>
+				{% endfor %}
+				</ul>
+			</div>
+			</div>
+
+	<div class="container widgets">
+		
+		<div class="col-sm-4">
+			<h4 class="widget-title">Support</h4>
+			<p class="caption">First and foremost we want your listenership. Secondly, we want your money! MTNmeister is free as in freedom, not so much free beer.</p>
+			<a class="btn caption">Support MTNmeister</a>
+		</div>
+		
+		<div class="col-sm-4">
+			<h4 class="widget-title">Connect</h4>
+			<ul class="share-links">
 			<li>
 				<a href="http://facebook.com/mtnmeister" target="blank">
 					<svg class="shape shape-facebook"><use xlink:href="#shape-facebook" /></svg>
@@ -15,23 +39,43 @@
 					<svg class="shape shape-instagram"><use xlink:href="#shape-instagram" /></svg>
 				</a>
 			</li>
-			{# <li>
+			<li>
 				<a href="mailto:admin@mtnmeister.com" target="blank">
-					<svg class="shape shape-mail"><use xlink:href="#shape-mail" /></svg>
+					<svg class="shape shape-googleplus"><use xlink:href="#shape-googleplus" /></svg>
 				</a>
-			</li> #}
+			</li>
 		</ul>
+		<p class="meta"><a href="mailto:info@mtnmeister.com">info@mtnmeister.com</a><br>Boston, Massachusetts</p>
+		</div>
+		
+		<div class="col-sm-4">
+			<h4 class="widget-title">Updates</h4>
 
-		<div class="clearfix">
-			{{footer_widgets}}
+			<div id="mc_embed_signup" class="clearfix">
+			<form action="//mtnmeister.us3.list-manage.com/subscribe/post?u=3fc59f16a451a608115fa9e3b&amp;id=10be14f14b" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+			    <div id="mc_embed_signup_scroll"></div>
+				<div class="mc-field-group col-xs-8-np">
+					<input type="email" placeholder="your@email.com" value="" name="EMAIL" class="required email" id="mce-EMAIL">
+				</div>
+				<div id="mce-responses" class="clear">
+					<div class="response" id="mce-error-response" style="display:none"></div>
+					<div class="response" id="mce-success-response" style="display:none"></div>
+				</div>
+			    <div style="position: absolute; left: -5000px;">	
+			    	<input type="text" name="b_3fc59f16a451a608115fa9e3b_10be14f14b" tabindex="-1" value="">
+			    </div>
+			    <div class="col-xs-4-np">
+			    	<input type="submit" value="Go" name="subscribe" id="mc-embedded-subscribe" class="button">
+			    </div>
+			</form>
+		</div> <!-- /MailChimp -->
+
+		<p class="caption">Sign up for Meister updates, thoughts, news, exclusive deals, and more.</p>
 		</div>
 
-		<div class="clearfix meta">
-			<p class="meta"><a href="mailto:info@mtnmeister.com">info@mtnmeister.com</a><br>Boston, Massachusetts</p>
-					&nbsp;
-					&nbsp;
-			<p class="meta copyright">&copy; {{site.title}} {{"now"|date('Y')}}</p>	
-			<p class="meta">Site by <a href="http://notlaura.com" target="blank">Lara</a>. Powered by WordPress and <a href="http://upstatement.com/timber" target="blank">Timber</a>.</p>
+		<div class="clearfix">
+			<p class="meta alignleft">Site by <a href="http://notlaura.com" target="blank">Lara</a>. Powered by WordPress and <a href="http://upstatement.com/timber" target="blank">Timber</a>.</p>
+			<p class="meta alignright">&copy; {{site.title}} {{"now"|date('Y')}}</p>
 		</div>	
 
 	</div> <!-- /.container -->

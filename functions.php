@@ -124,7 +124,7 @@ function discard_menu_classes($classes, $item) {
         $classes, 
         create_function( '$class', 
                  'return in_array( $class, 
-                      array( "current-menu-item", "current-menu-parent", "menu-item" ) );' )
+                      array( "current-menu-item", "current-menu-parent" ) );' )
         );
     return array_merge(
         $classes,

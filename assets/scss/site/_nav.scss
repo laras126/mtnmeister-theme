@@ -30,13 +30,12 @@
 	text-align: center;
 }
 
-
-// NOTE: this is using 'menu' instead of menu. I changed everything to menu
 .current-menu-item {
 	color: $accent-med;
 }
 
-.menu-item {
+// These styles only apply to the top nav
+.menu-main .menu-item {
 	list-style-type: none;
 	text-align: center;
 
@@ -60,7 +59,6 @@
 }
 
 .menu-item-cta {
-	@extend .no-margin;
 
 	// Bad max width
 	@media(max-width: $screen-lg) {
@@ -82,6 +80,10 @@
 	}
 }
 
+// ----
+// Expanded Nav
+// ----
+
 @include bp(large) {
 
 	// Hide mobile menu link
@@ -92,6 +94,15 @@
 	.menu-main {
 		max-height: none;
 		transition: background 0.25s ease-in-out;
+
+		.menu-item {
+			display: inline-block;
+			margin: 0 $sml;
+		}
+
+		.menu-item-cta {
+			margin: 0;
+		}
 	}
 
 	.menu-items {
@@ -100,15 +111,8 @@
 	}
 	
 		.menu-item {
-			margin: 0 $sml;
 			text-align: left;
 		}
-
-
-	.menu-item, 
-	.menu-item a {
-		display: inline-block;
-	}
 
 	.current-menu-item {
 
@@ -187,7 +191,7 @@
 // Posts menu
 // ----
 
-.menu-prevnext {
+.nav-prevnext {
 	@extend %row;
 	border-top: $accent-border;
 	border-bottom: $accent-border;
@@ -195,13 +199,13 @@
 	padding: $h4;
 }
 
-.link-postmenu {
+.link-postnav {
 	@extend %upperspace;
 	font-size: $sml;
 	font-weight: 700;
 }
 
-.link-postmenu {
+.link-postnav {
 	@include make-xs-column(6);
 }
 

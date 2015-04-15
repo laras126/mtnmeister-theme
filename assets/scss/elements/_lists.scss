@@ -1,0 +1,62 @@
+// Lists
+
+%list-meta-item {
+	display: inline-block;
+	list-style-type: none;
+	font-size: $sml;
+	padding: $sml/4 0 $sml/2;
+}
+
+
+%list-meta {
+	padding: 0;
+	margin: 0;
+
+	li {
+		@extend %list-meta-item;	
+	}
+}
+
+.list-cats {
+	@extend %list-meta;
+}
+
+	.cat-item  {
+		@extend %upperspace;
+		
+		a {
+			@extend .btn-alt;
+			border-radius: 4px;	
+		}
+	}
+
+.list-tags {
+	@extend %list-meta;
+	margin-bottom: 0;
+
+	li {
+		padding-right: $sml;
+	}
+
+	.tag {
+		font-style: italic; 
+	}
+}
+
+
+
+// Additional resources
+
+.list-table {
+	@extend %unstyle-list;
+
+	li a:before {
+		content: url('../img/svg-min/arrow-right.min.svg');
+		padding-right: $sml/2;
+    	width: $sml;
+    	position: relative;
+    	top: 3px;
+	}
+	
+}
+

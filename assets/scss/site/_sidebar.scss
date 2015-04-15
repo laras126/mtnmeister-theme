@@ -23,61 +23,52 @@
 	@include bp(large) {
 		 padding-left: $base;
 	}
-
-	ul {
-		@extend %list-meta;		
-	}
 }
 
-	.widget-fourth {
-		@include make-sm-column(6);
-		@include make-md-column(3);
+.widget-stacked {
+	padding: $base $base 0;
+	margin-bottom: $h4;
+	
+	p {
+		text-align: center;
+		@extend %meta;
+		
+		padding: $sml;
+		background-color: $body-bkgd;
+		@extend %row;
 	}
 
-	.widget-stacked {
-		padding: $base $base 0;
-		margin-bottom: $h4;
-		
-		p {
-			text-align: center;
-			@extend %meta;
-			
-			padding: $sml;
-			background-color: $body-bkgd;
-			@extend %row;
-		}
+	.widgets-fancy & {
+		border: $accent-border;
+		background-color: lighten($text-meta, 35%);
+	}
 
-		.widgets-fancy & {
-			border: $accent-border;
-			background-color: lighten($text-meta, 35%);
-		}
-
-		margin-right: $sml;
-		
-		@include bp(sm) {
-			&:last-child {
-				margin-right: 0;
-			}
-		}
-
-		@include bp(lg) {
+	margin-right: $sml;
+	
+	@include bp(sm) {
+		&:last-child {
 			margin-right: 0;
 		}
-
-		@include make-sm-column(5.6, false);
-		@include make-md-column(3.8, false);
-		@include make-lg-column(12, false);
-
 	}
 
-	.widget-title {
-		@extend %h5;
-		
-		line-height: $line-height-base;
-
-		margin: 0;
-		padding: 0;
-		margin-bottom: $sml;
+	@include bp(lg) {
+		margin-right: 0;
 	}
+
+	@include make-sm-column(5.6, false);
+	@include make-md-column(3.8, false);
+	@include make-lg-column(12, false);
+
+}
+
+.widget-title {
+	@extend %h5;
+	
+	line-height: $line-height-base;
+
+	margin: 0;
+	padding: 0;
+	margin-bottom: $sml;
+}
 
 

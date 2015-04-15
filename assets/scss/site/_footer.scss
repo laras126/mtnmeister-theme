@@ -1,10 +1,16 @@
 .footer {
 	padding-top: $h1;
-	@include rotate;
+	border-top: $accent-border-large;
+	// @include rotate($link-clr: $accent-vlight);
+
+	input {
+		font-size: $sml;
+		color: $body-text;
+		padding: $sml/2 $xsml;
+	}
 }
 
 .share-links {
-	
 	@extend %unstyle-list;
 	margin-bottom: $base;
 	li {
@@ -31,14 +37,15 @@
 	}
 }
 
-.copyright,
-.credits {
-	// @extend %half;
-	// position: relative;
-}
 
-.copyright {
-	@include bp(small) {
-		float: right;			
+
+.menu-footer {
+	@extend %unstyle-list;
+
+	a {
+		font-size: $sml;
+		&:before {
+			content: '> ';
+		}
 	}
 }

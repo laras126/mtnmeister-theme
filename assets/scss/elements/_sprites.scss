@@ -1,6 +1,6 @@
 %icon-base {
-	width: $h1;
-	height: $h1;
+	width: $base;
+	height: $base;
 	display: block;
 	margin: 0 auto;
 }
@@ -29,7 +29,6 @@
 
 
 
-
 .shape-site-logo {
 	height: $h2;
 	width: $h1*3;
@@ -38,10 +37,7 @@
 }
 
 .shape-twitter {
-	fill: $text-light;
-	.footer &, .share-links & {
-		fill: $twitter;
-	}
+	fill: $twitter;
 }
 
 .shape-facebook {

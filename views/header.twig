@@ -19,7 +19,7 @@
         <nav id="menu" class="menu-main" role="navigation">
             <ul class="menu-items">
             {% for item in main_nav.items %}
-                <li class="{{item.classes | join(' ')}}">
+                <li class="menu-item {{item.classes | join(' ')}}">
                     <a href="{{item.link}}">{{item.title}}</a>
                 </li>
             {% endfor %}

@@ -22,30 +22,6 @@
 	@include make-sm-column(6); 
 }
 
-// %row_of_two {
-//     @include make-xs-column(12);
-//     @include make-sm-column(6);
-  
-//     @include bp(small) {
-//         &:nth-child(2n+1){
-//             clear: left;
-//         }  
-//     }
-// }
-
-// %row_of_three {
-//     @extend %row_of_two;
-//     @include make-md-column(4);
-//     @include bp(med) {
-//         &:nth-child(2n+1){
-//            clear: none;
-//         }  
-//         &:nth-child(3n+1){
-//            clear: left
-//         }  
-//     }  
-// }
-
 .clearfix {
     &:before,
     &:after {
@@ -81,18 +57,6 @@
 
 
 
-// -- Color Scheming
-
-%rotate {
-	@include rotate;
-}
-
-%rotate-bars {
-    @include rotate($text: $text-light, $bkgd: rgba($accent-dark, 0.5));
-}
-
-
-
 
 // -- Typography
 
@@ -105,6 +69,11 @@
 .meta {
     color: $text-meta;
     @extend %upperspace;
+    font-size: $sml;
+    font-weight: 400;
+}
+
+.meta-desc {
     font-size: $sml;
     font-weight: 400;
 }

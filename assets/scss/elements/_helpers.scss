@@ -4,3 +4,14 @@
 .rotate {
 	@include rotate($text: $text-light, $bkgd: $accent-dark);
 }
+
+
+// Some WP classes
+
+.alignleft {
+	float: left;
+}
+
+.alignright {
+	float: right;
+}

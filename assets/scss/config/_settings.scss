@@ -1,0 +1,119 @@
+// ----
+// Screen sizes
+// ----
+
+$screen-xs: 		20em;
+$screen-sm: 		30em;
+$screen-md: 		45em;
+$screen-lg: 		62em;
+$screen-xl: 		72em;
+
+$slicer-breakpoints: 0 $screen-sm $screen-md $screen-lg;
+
+
+
+// ----
+// Colors
+// ----
+
+// Basic color names
+$black:	 			#111;
+$white: 			#fff;
+$grey: 				#aaa;
+$med-grey: 			#999;
+$yellow: 			#F9E839;
+
+$green: 			#68C499;
+$red: 				#9F4440;
+
+// Snow
+$sn-navy: 			#043f7e;
+$sn-white: 			#f9f9f9;
+$sn-orange: 		#f8992f;
+$sn-black: 			#1f1d1a;
+
+
+// ----
+// Typography 
+// ----
+
+// Rem Units
+// http://gregrickaby.com/using-the-golden-ratio-and-rems/
+
+$contain-lg: 		120%;
+$contain-md: 		110%;
+$contain-sm: 		110%;
+$contain: 			100%;
+
+$base:  			1rem;
+
+$line-height-sml: 		1.5;
+$line-height-base: 		1.3;
+$line-height-heading: 	1;
+
+$sml:  				$base*0.8;
+
+$h1:  				$base*3.4;
+$h2:  				$base*2.4;
+$h3:  				$base*2;
+$h4:  				$base*1.3;
+$h5:  				$base;
+$h6:  				$sml;
+
+
+
+// ----
+// Semantic Vars
+// ----
+
+
+// Colors
+$accent-vlight: 	darken($sn-white, 5%);	
+$accent-light: 		darken($sn-white, 15%);	
+$accent-med: 		$sn-orange;
+$accent-dark: 		$sn-navy;
+
+$text-dark: 		$sn-black;
+$text-light: 		$white;
+$text-meta: 		$med-grey;
+
+$link-color:		$accent-dark;
+$link-hover: 		$accent-med;
+$link-active: 		darken($link-hover, 20%);
+
+$alert-danger:		$red;
+$alert-warning:		$yellow;
+$alert-success:		$green;
+$alert-info: 		lighten($sn-navy, 20%);
+
+// Social
+$twitter: 			#55ACEE;
+$facebook: 			#3b5998;
+$googleplus: 		$alert-danger;
+$instagram: 		#905B47;
+
+
+// Components
+$body-bkgd: 		$white;
+$body-text: 		$text-dark;
+
+$rotate-bkgd: 		$accent-dark;
+$rotate-text: 		$text-light;
+$rotate-link: 		$text-light;
+
+
+// Typography
+$sans-serif: 		'proxima-nova', Helvetica, sans-serif;
+// $sans-serif-bold: 	'Montserrat';
+$serif:             'Chaparral Pro', Gerogia, serif;
+
+$heading-font: 		$sans-serif;
+$body-font: 		$sans-serif;
+$nav-font: 			$sans-serif;
+$form-font: 		$sans-serif;
+$lead-font: 		$sans-serif;
+
+
+// Utilities
+$accent-border: 	1px solid $accent-light;
+$accent-border-large: 5px solid $accent-med;

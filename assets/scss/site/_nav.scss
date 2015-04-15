@@ -1,0 +1,215 @@
+
+// Toggle menu, courtesy Brad Frost
+// http://codepen.io/bradfrost/pen/sHvaz
+// I simplified some though
+
+
+.menu-main {
+
+	overflow: hidden;
+	max-height: 0;
+	
+	.no-js & {
+		overflow: visible;
+		max-height: none;
+	}
+	
+	// transition: all 0.2s ease-in-out;
+	
+	@include make-xs-column(12, false);
+	@include make-lg-column(10);
+
+	&.active {
+		max-height: 25em;
+	}
+}
+
+.menu-items {
+	margin: 0;
+	padding: 0;
+	text-align: center;
+}
+
+
+// NOTE: this is using 'menu' instead of menu. I changed everything to menu
+.current-menu-item {
+	color: $accent-med;
+}
+
+.menu-item {
+	list-style-type: none;
+	text-align: center;
+
+	a {
+		color: $text-light;
+		display: block;
+		padding: $sml 0;
+		font-weight: 700;
+		@extend %upperspace;
+		margin-top: 0;
+	}
+
+	&.special a {
+		
+		&:before {
+			content: 'NEW: ';
+			color: $alert-success;
+		}
+
+	}
+}
+
+.menu-item-cta {
+	@extend .no-margin;
+
+	// Bad max width
+	@media(max-width: $screen-lg) {
+		padding-bottom: $sml;
+		@include make-xs-column(6, false);
+	}
+	
+	.cta { 
+		@extend .btn; 
+	}
+
+	.cta-alt { 
+		@extend .btn-alt; 
+	}
+
+	a {
+		font-size: $sml !important;
+		padding: $sml/2 $sml !important;
+	}
+}
+
+@include bp(large) {
+
+	// Hide mobile menu link
+	.menu-link {
+	   display: none;
+	}
+
+	.menu-main {
+		max-height: none;
+		transition: background 0.25s ease-in-out;
+	}
+
+	.menu-items {
+		border: 0;
+		text-align: right;
+	}
+	
+		.menu-item {
+			margin: 0 $sml;
+			text-align: left;
+		}
+
+
+	.menu-item, 
+	.menu-item a {
+		display: inline-block;
+	}
+
+	.current-menu-item {
+
+		a {
+			color: $text-light;	
+		}
+		
+		&:before {
+			content: '';
+			position: absolute;
+			
+			width: 0; 
+			height: 0; 
+
+			// NOTE: This isn't quite centered. That would be nice.
+			border-left: 41px solid transparent;
+			border-right: 41px solid transparent;
+			border-top: 5px solid $accent-med;
+		}
+	}
+
+	.menu-item a {
+		border: 0;
+		font-size: $sml;
+
+		&:hover {
+			color: $accent-med;
+		}
+	}
+}
+
+
+// ----
+// Hamburger menu Icon
+// http://codepen.io/lexstefan/pen/mwtcn
+// ----
+
+.menu-link {
+	padding: $sml;
+}
+
+	.menu-link a {
+		float: right;
+	}
+
+	.menu-link span {
+  		transition: all 0.05s ease-in-out;
+    	width: 30px;
+    	height: 3px;
+    	display: block;
+    	background: $rotate-text;
+    	margin: 0 0 5px 0;
+  	}
+    
+    .menu-link span:last-child {
+      	margin:0;
+    }
+    
+    .menu-link.active span:nth-of-type(1) {
+		transform: rotate(45deg);
+		margin: 10px 0 0 0;
+    }
+
+    .menu-link.active span:nth-of-type(2) {
+      	opacity:0;
+    }
+
+    .menu-link.active span:nth-of-type(3) {
+      	transform: rotate(-45deg);
+      	margin: -11px 0 0 0;
+    }
+
+
+
+// ----
+// Posts menu
+// ----
+
+.menu-prevnext {
+	@extend %row;
+	border-top: $accent-border;
+	border-bottom: $accent-border;
+	margin-top: $h3;
+	padding: $h4;
+}
+
+.link-postmenu {
+	@extend %upperspace;
+	font-size: $sml;
+	font-weight: 700;
+}
+
+.link-postmenu {
+	@include make-xs-column(6);
+}
+
+.prev,
+.next {
+	word-break: break-all;
+}
+
+.next {
+	text-align: right;
+}

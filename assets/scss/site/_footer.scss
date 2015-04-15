@@ -1,0 +1,44 @@
+.footer {
+	padding-top: $h1;
+	@include rotate;
+}
+
+.share-links {
+	
+	@extend %unstyle-list;
+	margin-bottom: $base;
+	li {
+		display: inline-block;
+	}
+
+	.shape {
+		display: inline-block;
+		width: $h3;
+		height: $h3;
+		margin-right: $base;
+	}
+}
+
+.creds {
+	@include bp(med) {
+		position: absolute;
+		bottom: 0;
+		width: 100%;	
+	}
+	
+	p {
+		display: inline-block;
+	}
+}
+
+.copyright,
+.credits {
+	// @extend %half;
+	// position: relative;
+}
+
+.copyright {
+	@include bp(small) {
+		float: right;			
+	}
+}

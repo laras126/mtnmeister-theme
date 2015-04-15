@@ -1,0 +1,51 @@
+
+// ---
+// Header
+// ---
+
+
+.callout {
+	@include rotate($text-light, darken($alert-success, 15%));
+	// @include rotate($text-light, $accent-med);
+	padding: $sml/2;
+	text-align: center;
+	position: relative;
+	font-size: $sml;
+
+	a {
+		color: $alert-warning;
+		font-weight: 700;
+	}
+}
+
+.header-logo {
+	position: relative;
+	height: 50px;
+}
+
+.banner {
+
+ 	background-color: $accent-dark;
+	transition: all 0.5s ease;
+	position: fixed;
+	
+	width: 100%;
+	z-index: 100;	
+
+	border-top: $accent-border-large;
+}
+
+	@include bp(large) {
+		
+		// No background gradient on single pages
+		.banner-enhanced {
+			background: linear-gradient(rgba($accent-dark, 0.5), rgba($accent-dark, 0));
+		}
+	}
+
+	
+	.scrolled {
+		background: $accent-dark !important;
+	}
+
+

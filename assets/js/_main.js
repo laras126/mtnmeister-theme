@@ -34,7 +34,7 @@ $(document).ready(function() {
 	
 
 	// ----
-	// Fade in the nav background when scrolling
+	// Fade in the menu background when scrolling
 	// ----
 
   	var $scroll_class = "scrolled",

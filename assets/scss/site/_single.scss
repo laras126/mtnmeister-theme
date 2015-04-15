@@ -1,0 +1,49 @@
+
+// Singles
+
+.article-header {	
+	margin-top: $h1*1.5;
+	text-align: center;
+
+	.number span {
+		padding-left: $sml;
+	}
+}
+
+.article-title {
+	@extend %h2;
+
+	@include bp(med) {
+		font-size: $h1;
+	}
+}
+
+.quote-container {
+	border-top: $accent-border;
+	border-bottom: $accent-border;
+	margin-top: $h3;
+	margin-bottom: $h3;
+	background-position: 0 $h3;
+}
+
+.tweet-container {
+	position: relative;
+
+	.btn-tweet {
+		position: absolute;
+		right: 0;
+		top: -$h5;
+		
+		@include bp(med) {
+			// bottom: 0;
+		}
+	}
+}
+
+.episode-embed,
+.article-footer {
+	margin-top: $h3;
+	margin-bottom: $base;
+}
+
+

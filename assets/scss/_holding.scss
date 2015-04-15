@@ -1,4 +1,5 @@
-// I feel like there's a better way to handle this..
+
+// Hide the sprites
 .svgsprites {
 	display: none;
 }
@@ -7,23 +8,15 @@
 	margin: 0;
 }
 
-.pad-sml {
-	padding-left: $sml;
-	padding-right: $sml;
-}
-
-.btn-wrap {
-	margin: $sml 0;
-}
 
 
-// Just inefficient
+
+// Verbose and content-dependent layout classes
 
 .featured-left,
 .featured-right {
 	@include make-md-column(6, false);
 }
-
 
 .featured-right {
 	@include bp(med) {
@@ -81,7 +74,8 @@
 
 
 
-// This is verbose
+// Nudging
+
 .btn-tweet {
 	.shape {
 		position: relative;
@@ -90,7 +84,6 @@
 }
 
 .menu-item-cta {
-
 	// Bad max width
 	@media(max-width: $screen-md) {
 		padding-bottom: $sml;
@@ -105,6 +98,7 @@
 	margin-top: 0;
 	padding-bottom: $base;
 }
+
 
 
 //// GAHHHHH Hacks for mobile archive page. Need to address this soooon.
@@ -140,8 +134,16 @@
 	}
 }
 
-// To be added to helpers partial eventually
 
-.rotate {
-	@include rotate($text: $text-light, $bkgd: $accent-dark);
+
+// Gross nesting.
+
+.widget-fourth {
+	.menu {
+		@extend %unstyle-list;
+
+		li {
+
+		}
+	}
 }

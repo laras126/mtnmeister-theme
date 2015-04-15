@@ -1,0 +1,153 @@
+
+// Tease styles
+
+.tease {
+	padding-bottom: $base;
+	margin-bottom: $h2;
+}
+
+.tease-deal,
+.tease-featured-deal {
+	margin-bottom: $h3;
+	@extend .clearfix;
+	border-bottom: 1px solid $accent-light;
+}
+
+	.home .tease-featured-deal {
+		border-bottom: 0;
+	}
+
+.tease-home {
+	@include make-sm-column(6);
+}
+
+.tease-title {
+	padding: 0;
+	
+	a {}
+}
+
+.tagline-tease {
+	color: $accent-med;
+	margin: $sml 0;
+}
+
+.tease-body, 
+.article-section {
+	iframe {
+		height: 120px;
+
+		// TODO: should be smaller for mobile
+		.tease-featured & {
+			height: 300px;	
+			@include bp(med) {			
+				height: 420px;			
+			}
+		}
+
+		@include bp(med) {
+			height: 160px;
+		}
+	}
+}
+
+
+
+// Loops
+
+.loop {
+	@extend %full_width;
+}
+
+.loop-thumbs .tease {
+	// Two rows at small, three at med
+	@include make-xs-column(12);
+    @include make-sm-column(6);
+    @include make-md-column(4);
+
+    @include bp(small) {
+        &:nth-child(2n+1){
+            clear: left;
+        }  
+        &:nth-child(3n+1){
+           clear: none;
+        } 
+    }
+    @include bp(med) {
+        &:nth-child(3n+1){
+           clear: left
+        }  
+        &:nth-child(2n+1){
+           clear: none;
+        }  
+    }
+}
+
+.loop-related {
+	margin-top: $h3;
+}
+
+.loop-related .tease {
+	margin-bottom: 0;
+	@include make-xs-column(6);
+    // @include make-sm-column(3, false);
+    @include make-md-column(2, false);
+
+	&:nth-child(2n+1){
+        clear: left;
+    }  
+
+     @include bp(small) {
+        &:nth-child(2n+1){
+            clear: none;
+        }
+    }
+}
+
+// Hide lazy loading thumbnails for no js (they are in <noscript> tags)
+.no-js .lazy {
+    display: none;
+}
+
+.thumb-container {
+	position: relative;
+}
+
+.thumb-caption {
+	position: absolute;
+	bottom: 0;
+	padding: 0 $base;
+	width: 100%;
+	@include rotate($bkgd: $accent-dark);
+	display: none;
+
+	.meta {
+		color: $text-light;
+	}
+
+	.link-more {
+		margin-top: 0;
+		display: block;
+		margin-bottom: $base;
+	}
+}
+
+
+// Tease typography
+
+.tease-cta {
+	font-weight: 700;
+}
+
+
+// Teases that have some layout
+
+.tease-main {
+	@include make-xs-column(12);
+	@include make-sm-column(8, false);
+}
+
+.tease-support {
+	@include make-xs-column(12);
+	@include make-sm-column(4, false);
+}

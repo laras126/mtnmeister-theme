@@ -28,7 +28,7 @@ $fw_args = array(
 	'name'          => __( 'Footer Widgets', 'mtnmeister' ),
 	'description'   => __( 'Widgets in the footer. No more than 4.', 'mtnmeister' ),
 	'class'         => 'widgets-footer',
-	'before_widget' => '<div class="col-sm-3">',
+	'before_widget' => '<div class="widget widget-fourth">',
 	'after_widget'  => '</div>',
 	'before_title'  => '<h4 class="widget-title">',
 	'after_title'   => '</h4>'
@@ -47,7 +47,7 @@ $gs_args = array(
 	'name'          => __( 'Global Sidebar', 'mtnmeister' ),
 	'description'   => __( 'The sidebar appearing througout the site. Good spot for ads and anything promotional', 'mtnmeister' ),
 	'class'         => 'widgets-sidebar',
-	'before_widget' => '<li class="widget">',
+	'before_widget' => '<li class="widget widget-stacked">',
 	'after_widget'  => '</li>',
 	'before_title'  => '<h4 class="widget-title">',
 	'after_title'   => '</h4>'
@@ -66,7 +66,7 @@ $ss_args = array(
 	'name'          => __( 'Support Sidebar', 'mtnmeister' ),
 	'description'   => __( 'Logos of sponsors on the Support page.', 'mtnmeister' ),
 	'class'         => 'widgets-sidebar',
-	'before_widget' => '<li class="widget">',
+	'before_widget' => '<li class="widget widget-stacked">',
 	'after_widget'  => '</li>',
 	'before_title'  => '<h4 class="widget-title">',
 	'after_title'   => '</h4>'

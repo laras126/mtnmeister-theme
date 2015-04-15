@@ -1,0 +1,23 @@
+.btn {
+	@include button($accent-med);
+	cursor: pointer;
+	-webkit-appearance: none;
+}
+
+.btn-alt {
+	@include button(lighten($accent-light, 10%), $text-dark, sml);
+}
+
+.btn-alt-dark {
+	@include button($accent-dark, $text-light, sml);
+}
+
+.btn-tweet {
+	@include button($twitter, $text-light, sml);
+}
+
+.btn-cta {
+	@extend .btn;
+	display: block;
+	text-align: center;
+}

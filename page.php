@@ -68,9 +68,7 @@ if( !is_page('Meisters') ) {
 	$context['sidebar'] = Timber::get_sidebar('sidebar.php');
 }
 
-if( is_page('Support') ) {
-	$context['sidebar_class'] = 'has-sidebar';
-}
+$context['sidebar_class'] = 'has-sidebar';
 
 // $context['pagination'] = Timber::get_pagination();
 

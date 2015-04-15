@@ -17,19 +17,23 @@
 			add_theme_support('post-formats');
 			add_theme_support('post-thumbnails');
 			add_theme_support('menus');
+			
 			add_filter('timber_context', array($this, 'add_to_context'));
 			add_filter('get_twig', array($this, 'add_to_twig'));
+
 			add_action('init', array($this, 'register_post_types'));
 			add_action('init', array($this, 'register_taxonomies'));
+			add_action('widgets_init', array($this, 'register_widgets'));
+			
 			parent::__construct();
 		}
 
 		function register_post_types(){
-			//this is where you can register custom post types
+			require('lib/custom-types.php');
 		}
-
-		function register_taxonomies(){
-			//this is where you can register custom taxonomies
+		
+		function register_widgets() {
+			require('lib/widgets.php');
 		}
 
 		function add_to_context($context){
@@ -65,30 +69,30 @@
 
 	new MtnMeisterTheme();
 
-	/**
-	 *
-	 * Custom MTNmeister functions
-	 *
-	 * Functions are separated into files located in lib/, and included below
-	 *
-	 */
 
-	require_once('lib/custom-types.php');
-	require_once('lib/scripts-styles.php');
-	require_once('lib/menus.php');
-	require_once('lib/widgets.php'); 
-	require_once('lib/utils.php'); 
+/**
+ *
+ * Custom MTNmeister functions
+ *
+ * Functions are separated into files located in lib/, and included below
+ *
+ */
+
+require_once('lib/scripts-styles.php');
+require_once('lib/menus.php');
+require_once('lib/utils.php'); 
 
 
 
 // Disable code editor
 function mtn_remove_editor_menu() {
-    remove_action('admin_menu', '_add_themes_utility_last', 101);
+remove_action('admin_menu', '_add_themes_utility_last', 101);
 }
 add_action('mtn_admin_menu', 'mtn_remove_editor_menu', 1);
 
 
 
+// Add custom types tp search query
 function mtn_add_custom_types( $query ) {
   	if( is_category() || is_tag() && empty( $query->query_vars['suppress_filters'] ) ) {
     	$query->set( 
@@ -104,11 +108,10 @@ function mtn_add_custom_types( $query ) {
 add_filter( 'pre_get_posts', 'mtn_add_custom_types' );
 
 
-
 // Add Options Page
-
 if( function_exists('acf_add_options_page') ) {	
 	acf_add_options_page('Site Settings');
 }
+
 
 ?>

@@ -1638,7 +1638,7 @@ th {
     clear: both; }
 
 @media (min-width: 45em) {
-  .page-title, .tagline-page, .widget-title, .loop, .has-sidebar, .sidebar, .tease-featured:not(.tease-featured-deal) {
+  .page-title, .tagline-page, .loop, .has-sidebar, .sidebar, .tease-featured:not(.tease-featured-deal) {
     position: relative;
     float: left;
     width: 100%;
@@ -1646,12 +1646,12 @@ th {
     padding-left: 1rem;
     padding-right: 1rem; } }
 
-.clearfix:before, .main:before, .number-wrap:before, .front-feed-header:before, .tease-deal:before,
-.tease-featured-deal:before, .sidebar:before, .clearfix:after, .main:after, .number-wrap:after, .front-feed-header:after, .tease-deal:after,
+.clearfix:before, .container:before, .container-squish:before, .item:before, .main:before, .number-wrap:before, .front-feed-header:before, .tease-deal:before,
+.tease-featured-deal:before, .sidebar:before, .clearfix:after, .container:after, .container-squish:after, .item:after, .main:after, .number-wrap:after, .front-feed-header:after, .tease-deal:after,
 .tease-featured-deal:after, .sidebar:after {
   content: " ";
   display: table; }
-.clearfix:after, .main:after, .number-wrap:after, .front-feed-header:after, .tease-deal:after,
+.clearfix:after, .container:after, .container-squish:after, .item:after, .main:after, .number-wrap:after, .front-feed-header:after, .tease-deal:after,
 .tease-featured-deal:after, .sidebar:after {
   clear: both; }
 
@@ -1721,6 +1721,51 @@ button, .menu-item-cta .cta, .btn-alt, .cat-item a, .link-more, .menu-item-cta .
     .show-at-sm {
       display: block; } }
 
+.container, .container-squish {
+  margin: 0 auto;
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 1rem;
+  padding-right: 1rem; }
+
+.container, .container-squish {
+  max-width: 62em; }
+
+@media (min-width: 62em) {
+  .container-squish {
+    max-width: 45em; } }
+
+@media (min-width: 62em) {
+  .brand {
+    position: relative;
+    min-height: 1px;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    float: left;
+    width: 16.66667%; } }
+
+.logo,
+.menu-link {
+  position: relative;
+  float: left;
+  width: 50%;
+  min-height: 1px; }
+
+@media (min-width: 30em) {
+  .item-desc,
+  .item-img {
+    position: relative;
+    min-height: 1px;
+    float: left;
+    width: 50%; } }
+
+.item-img img {
+  display: block;
+  margin: 0 auto; }
+  @media (min-width: 30em) {
+    .item-img img {
+      padding-left: 2rem; } }
+
 html {
   line-height: 1.5;
   font-family: Arial, sans-serif;
@@ -1763,7 +1808,7 @@ h2, .article-title, .page-title-simple {
 h3 {
   font-size: 2rem; }
 
-h4, blockquote, .lead, .tagline-page, .widget-title {
+h4, blockquote, .lead, .tagline-page {
   font-size: 1.3rem; }
 
 .btn, .btn-cta, input[type="submit"],
@@ -1964,6 +2009,9 @@ img {
   background-size: 100%;
   background-image: url("../img/svg-min/mtns-wide.min.svg");
   background-repeat: no-repeat; }
+  @media (min-width: 45em) {
+    .main {
+      padding-bottom: 13.6rem; } }
 
 .number {
   border-bottom: 1px solid lightgray;
@@ -2177,7 +2225,7 @@ input[type="checkbox"]:focus {
   .callout a,
   .callout a:visited,
   .callout a:hover {
-    color: #ebebeb; }
+    color: #f8992f; }
   .callout a {
     color: #F9E839;
     font-weight: 700; }
@@ -2361,7 +2409,7 @@ input[type="checkbox"]:focus {
       font-size: 10vw;
       top: 2.1rem; } }
 
-.tagline-page, .widget-title {
+.tagline-page {
   color: #043f7e;
   margin-top: 2.4rem;
   margin-bottom: 2.4rem;
@@ -2597,7 +2645,7 @@ input[type="checkbox"]:focus {
   .thumb-caption a,
   .thumb-caption a:visited,
   .thumb-caption a:hover {
-    color: #ebebeb; }
+    color: #f8992f; }
   .thumb-caption .meta {
     color: #fff; }
   .thumb-caption .link-more {
@@ -2701,6 +2749,15 @@ input[type="checkbox"]:focus {
   padding: 0;
   margin-bottom: 0.8rem; }
 
+.footer {
+  padding-top: 3.4rem;
+  background-color: #043f7e;
+  color: #fff; }
+  .footer a,
+  .footer a:visited,
+  .footer a:hover {
+    color: #f8992f; }
+
 .share-links {
   margin-bottom: 1rem; }
   .share-links li {
@@ -2790,7 +2847,7 @@ input[type="checkbox"]:focus {
     float: left;
     width: 33.33333%; } }
 
-.page-content .tagline-page, .page-content .widget-title {
+.page-content .tagline-page {
   padding: 0; }
 
 .btn-tweet .shape {
@@ -2838,6 +2895,6 @@ input[type="checkbox"]:focus {
   .rotate a,
   .rotate a:visited,
   .rotate a:hover {
-    color: #ebebeb; }
+    color: #f8992f; }
 
 /*# sourceMappingURL=main.css.map */

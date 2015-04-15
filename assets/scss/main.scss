@@ -6,12 +6,14 @@
 // Vendor and third party code, including normalize.
 @import "vendor/all";
 
-// Modules, or sets of "content agnostic" styles. 
-// What a horrible description, but modules is a dumb word anyway.
-@import "modules/all";
+// Varialbes and mixins. For the most part, these don't output styles (for the most part)
+@import "config/all";
 
-// Lastly import partials, cause those are the real deal styles (note they are in an important order in the 'all' file)
-@import "partials/all";
+// Elements and "content agnostic" styles.
+@import "elements/all";
+
+// Site content related styles, like nav, header, and footer.
+@import "site/all";
 
 // The shame file
 @import "holding";

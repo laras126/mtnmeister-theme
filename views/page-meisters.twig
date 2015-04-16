@@ -15,9 +15,11 @@
 {% endblock %}
 
 {% block loop_minor %}
+	<div class="container">
 	<div class="loop loop-thumbs">
 		{% for m in meisters|slice(2) %}
 			{% include ['tease/tease-minor_meister.twig', 'tease/tease.twig'] %}
 		{% endfor %}
+	</div>
 	</div>
 {% endblock %}

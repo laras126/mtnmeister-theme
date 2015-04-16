@@ -1802,7 +1802,8 @@ button, .menu-item-cta .cta {
 
 .rotate {
   background-color: #043f7e;
-  color: #fff; }
+  color: #fff;
+  border-top: 5px solid #f8992f; }
   .rotate a,
   .rotate a:visited,
   .rotate a:hover {
@@ -1813,6 +1814,9 @@ button, .menu-item-cta .cta {
 
 .alignright {
   float: right; }
+
+.spacer-top {
+  margin-top: 2rem; }
 
 * {
   box-sizing: border-box; }
@@ -2391,14 +2395,6 @@ input[type="checkbox"]:focus {
       padding-right: 1rem;
       float: left;
       width: 33.33333%; } }
-  @media (min-width: 72em) {
-    .loop-thumbs .tease {
-      position: relative;
-      min-height: 1px;
-      padding-left: 1rem;
-      padding-right: 1rem;
-      float: left;
-      width: 25%; } }
   @media (min-width: 30em) {
     .loop-thumbs .tease:nth-child(2n+1) {
       clear: none; }
@@ -2418,13 +2414,21 @@ input[type="checkbox"]:focus {
     .loop-thumbs .tease:nth-child(3n+1) {
       clear: left; } }
   @media (min-width: 72em) {
-    .loop-thumbs .tease:nth-child(2n+1) {
+    .page-id-4 .loop-thumbs .tease {
+      position: relative;
+      min-height: 1px;
+      padding-left: 1rem;
+      padding-right: 1rem;
+      float: left;
+      width: 25%; } }
+  @media (min-width: 72em) {
+    .page-id-4 .loop-thumbs .tease:nth-child(2n+1) {
       clear: none; }
-    .loop-thumbs .tease:nth-child(3n+1) {
+    .page-id-4 .loop-thumbs .tease:nth-child(3n+1) {
       clear: none; }
-    .loop-thumbs .tease:nth-child(4n+1) {
+    .page-id-4 .loop-thumbs .tease:nth-child(4n+1) {
       clear: none; }
-    .loop-thumbs .tease:nth-child(4n+1) {
+    .page-id-4 .loop-thumbs .tease:nth-child(4n+1) {
       clear: left; } }
 
 .loop-related {
@@ -2572,12 +2576,20 @@ input[type="checkbox"]:focus {
   margin-bottom: 0.8rem; }
 
 .footer {
-  padding-top: 3.4rem;
+  padding-top: 2rem;
   border-top: 5px solid #f8992f; }
   .footer input {
     font-size: 0.8rem;
     color: #1f1d1a;
     padding: 0.4rem 0.5rem; }
+
+.footer-links {
+  background-color: #043f7e;
+  color: #fff; }
+  .footer-links a,
+  .footer-links a:visited,
+  .footer-links a:hover {
+    color: #ececec; }
 
 .share-links {
   margin-bottom: 1rem; }
@@ -2601,6 +2613,10 @@ input[type="checkbox"]:focus {
   font-size: 0.8rem; }
   .menu-footer a:before {
     content: '> '; }
+
+.footer-nav li {
+  clear: right;
+  float: left; }
 
 .svgsprites {
   display: none; }
@@ -2661,9 +2677,6 @@ input[type="checkbox"]:focus {
     padding-right: 0;
     float: left;
     width: 33.33333%; } }
-
-.page-content .tagline-page {
-  padding: 0; }
 
 .btn-tweet .shape {
   position: relative;

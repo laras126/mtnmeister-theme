@@ -76,7 +76,7 @@
 	@include make-xs-column(12);
     @include make-sm-column(6);
     @include make-md-column(4);
-    @include make-xl-column(3);
+    
 
     @include bp(small) {
     	@include thumb-reset;
@@ -91,12 +91,18 @@
         }
     }
 
-	@include bp(xl) {
-		@include thumb-reset;
-        &:nth-child(4n+1){
-           clear: left
-        }
-    }
+
+	// Only do this on the meisters page
+	.page-id-4 & {
+		@include make-xl-column(3);
+		@include bp(xl) {
+			@include thumb-reset;
+	        &:nth-child(4n+1){
+	           clear: left
+	        }
+	    }	
+	}
+	
 }
 
 .loop-related {

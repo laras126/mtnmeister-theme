@@ -59,12 +59,20 @@
 		</div>
 	</div> <!-- /.container -->
 
-<div class="footer-links">
-	<div class="container">
-
+	<div class="rotate spacer-top">
+		<div class="container">
+		<div class="menu-main footer-nav row">
+            <ul class="menu-items ">
+            {% for item in footer_nav.items %}
+                <li class="menu-item">
+                    <a href="{{item.link}}">{{item.title}}</a>
+                </li>
+            {% endfor %}
+            </ul>
+        </div>
 		<div class="clearfix">
 			<p class="meta alignleft">Site by <a href="http://notlaura.com" target="blank">Lara</a>. Powered by WordPress and <a href="http://upstatement.com/timber" target="blank">Timber</a>.</p>
 			<p class="meta alignright">&copy; {{site.title}} {{"now"|date('Y')}}</p>
-		</div>
+		</div>	
 	</div>
-</div>
+	</div>

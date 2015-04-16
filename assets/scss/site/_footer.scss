@@ -1,5 +1,5 @@
 .footer {
-	padding-top: $h1;
+	padding-top: $h3;
 	border-top: $accent-border-large;
 
 	input {
@@ -10,7 +10,7 @@
 }
 
 .footer-links {
-	// @include rotate($link-clr: $accent-vlight);
+	@include rotate($link-clr: $accent-vlight);
 }
 
 .share-links {
@@ -51,4 +51,9 @@
 			content: '> ';
 		}
 	}
+}
+
+.footer-nav li {
+	clear: right;
+	float: left;
 }

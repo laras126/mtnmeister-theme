@@ -67,12 +67,10 @@
 				</div>
 			</header>
 			<div class="row loop-thumbs">
-				{# <div class="row"> #}
-					{% for m in meisters|slice(1,3) %}
-						{% include 'tease/tease-minor_meister.twig' %}
-					{% endfor %}	
-				{# </div> #}
+				{% for m in meisters|slice(1,3) %}
+					{% include 'tease/tease-minor_meister.twig' %}
+				{% endfor %}
 			</div>
 		</section> <!-- /.article-section -->
-
+		
 {% endblock %}

@@ -7,10 +7,13 @@
     // TODO: Maybe add to holding?
     // Need a more elegant way to remove link styles
     
-    a, 
-    a:visited, 
-    a:hover {
+    a,
+    a:visited{
       color: $link-clr;
+    }
+
+    a:hover {
+  		color: darken($link-clr, 20%);
     }
 }
 

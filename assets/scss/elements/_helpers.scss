@@ -1,8 +1,6 @@
 
-
-
 .rotate {
-	@include rotate($text: $text-light, $bkgd: $accent-dark);
+	@include rotate($text: $text-light, $bkgd: $accent-dark, $link-clr: $accent-light);
 	border-top: $accent-border-large;
 }
 

@@ -5,7 +5,8 @@ function mtn_custom_menus() {
 
 	$locations = array(
 		'main_nav' => __( 'Primary Menu', 'mtnmeister' ),
-		'footer_nav' => __( 'Footer Links', 'mtnmeister' ),
+		'footer_nav' => __( 'Footer Links, Col 1', 'mtnmeister' ),
+		'footer_nav_second' => __( 'Footer Links, Col 2', 'mtnmeister' ),
 	);
 	register_nav_menus( $locations );
 

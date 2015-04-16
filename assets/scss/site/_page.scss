@@ -127,7 +127,8 @@ h4 {
 	// TODO: Could this be incorporated into a mixin somehow?
 	color: $text-light;
 
-	a {
+	// This is over specified. Oh well, for now.
+	.rotate & a {
 		color: lighten($accent-med, 8%);
 	}
 }
@@ -182,10 +183,3 @@ h4 {
 	margin-top: $h2;
 }
 
-
-
-// Front page
-
-.front-feed-header {
-	@extend .clearfix;
-}

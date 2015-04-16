@@ -6,7 +6,6 @@
 
 .callout {
 	@include rotate($text-light, darken($alert-success, 15%));
-	// @include rotate($text-light, $accent-med);
 	padding: $sml/2;
 	text-align: center;
 	position: relative;

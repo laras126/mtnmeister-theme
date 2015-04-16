@@ -1,10 +1,10 @@
 
 // Toggle menu, courtesy Brad Frost
 // http://codepen.io/bradfrost/pen/sHvaz
-// I simplified some though
+// I simplified some, though.
 
 
-.menu-main {
+.menu-top {
 
 	overflow: hidden;
 	max-height: 0;
@@ -22,11 +22,18 @@
 	&.active {
 		max-height: 25em;
 	}
+
+	.menu-item {
+
+		a {
+			color: $text-light;
+			padding: $sml 0;
+		}
+	}
 }
 
 .menu-items {
-	margin: 0;
-	padding: 0;
+	@extend %unstyle-list;
 	text-align: center;
 }
 
@@ -35,20 +42,18 @@
 }
 
 // These styles only apply to the top nav
-.menu-main .menu-item {
+.menu-item {
 	list-style-type: none;
 	text-align: center;
 
 	a {
-		color: $text-light;
 		display: block;
-		padding: $sml 0;
 		font-weight: 700;
 		@extend %upperspace;
 		margin-top: 0;
 	}
 
-	&.special a {
+	&.new a {
 		
 		&:before {
 			content: 'NEW: ';
@@ -62,8 +67,10 @@
 
 	// Bad max width
 	@media(max-width: $screen-lg) {
-		padding-bottom: $sml;
-		@include make-xs-column(6, false);
+		.menu-top & {
+			padding-bottom: $sml;
+			@include make-xs-column(6, false);	
+		}
 	}
 	
 	.cta { 
@@ -74,11 +81,14 @@
 		@extend .btn-alt; 
 	}
 
+	// Ew!
 	a {
 		font-size: $sml !important;
 		padding: $sml/2 $sml !important;
 	}
 }
+
+
 
 // ----
 // Expanded Nav
@@ -91,9 +101,13 @@
 	   display: none;
 	}
 
-	.menu-main {
+	.menu-top {
 		max-height: none;
 		transition: background 0.25s ease-in-out;
+
+		.menu-items {
+			text-align: right;
+		}
 
 		.menu-item {
 			display: inline-block;
@@ -107,7 +121,6 @@
 
 	.menu-items {
 		border: 0;
-		text-align: right;
 	}
 	
 		.menu-item {

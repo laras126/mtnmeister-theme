@@ -25,21 +25,24 @@ img {
 .main {
 	@extend .clearfix;
 	background-position: bottom center; 
-	
-	padding-bottom: $h1*2;	
-
-	@include bp(med) {
-		padding-bottom: $h1*4;	
-	}
-
-	@include bp(large) {
-		padding-bottom: $h1*6;	
-	}
-	
 	background-size: 100%;
 	background-image: url('../img/svg-raw/mtns-wide.svg');
 	background-repeat: no-repeat;
 }
+
+	.main-cta {
+		padding-top: $h1*2;	
+		padding-bottom: $h1*2;
+
+		@include bp(med) {
+			// padding-top: $h1*4;	
+		}
+
+		@include bp(large) {
+			// padding-top: $h1*;	
+		}
+	
+	}
 
 .block-title {
 	@extend %upperspace;

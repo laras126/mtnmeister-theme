@@ -9,6 +9,16 @@
 }
 
 
+// Should be incorporated into a system or global max-width thing. Will be solved with grid overhaul, I think.
+.footer #mc_embed_signup {
+	max-width: 90%;
+	margin: 0 auto;
+
+	@include bp(med) {
+		max-width: 100%;
+	}
+}
+
 
 
 // Verbose and content-dependent layout classes

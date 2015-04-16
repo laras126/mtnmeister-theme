@@ -1,16 +1,18 @@
 .footer {
-	padding-top: $h3;
 	border-top: $accent-border-large;
 
 	input {
 		font-size: $sml;
 		color: $body-text;
 		padding: $sml/2 $xsml;
+		width: 100%;
 	}
-}
 
-.footer-links {
-	@include rotate($link-clr: $accent-vlight);
+	text-align: center;
+	
+	@include bp(med) {
+		text-align: left;	
+	}
 }
 
 .share-links {
@@ -28,32 +30,13 @@
 	}
 }
 
-.creds {
-	@include bp(med) {
-		position: absolute;
-		bottom: 0;
-		width: 100%;	
-	}
-	
-	p {
-		display: inline-block;
-	}
-}
-
-
-
 .menu-footer {
-	@extend %unstyle-list;
 
 	a {
-		font-size: $sml;
-		&:before {
-			content: '> ';
+		color: $accent-med;
+		font-weight: 500;
+		&:hover {
+			color: $accent-dark;
 		}
 	}
-}
-
-.footer-nav li {
-	clear: right;
-	float: left;
 }

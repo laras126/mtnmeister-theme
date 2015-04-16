@@ -59,27 +59,43 @@
 	@extend %full_width;
 }
 
+@mixin thumb-reset() {
+	&:nth-child(2n+1){
+        clear: none;
+    }
+    &:nth-child(3n+1){
+        clear: none;
+    }
+    &:nth-child(4n+1){
+        clear: none;
+    } 
+}
+
 .loop-thumbs .tease {
 	// Two rows at small, three at med
 	@include make-xs-column(12);
     @include make-sm-column(6);
     @include make-md-column(4);
+    @include make-xl-column(3);
 
     @include bp(small) {
+    	@include thumb-reset;
         &:nth-child(2n+1){
             clear: left;
-        }  
-        &:nth-child(3n+1){
-           clear: none;
-        } 
+        }
     }
     @include bp(med) {
+    	@include thumb-reset;
         &:nth-child(3n+1){
            clear: left
-        }  
-        &:nth-child(2n+1){
-           clear: none;
-        }  
+        }
+    }
+
+	@include bp(xl) {
+		@include thumb-reset;
+        &:nth-child(4n+1){
+           clear: left
+        }
     }
 }
 

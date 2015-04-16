@@ -1,18 +1,3 @@
-
-
-			<div class="container">
-			<div class="menu-main">
-				<ul class="">
-					<li class="menu-item special">More: </li>
-				{% for item in footer_nav.items %}
-					<li class="menu-item">
-						<a href="{{item.link}}">{{item.title}}</a>
-					</li>
-				{% endfor %}
-				</ul>
-			</div>
-			</div>
-
 	<div class="container widgets">
 		
 		<div class="col-sm-4">
@@ -72,11 +57,14 @@
 
 		<p class="caption">Sign up for Meister updates, thoughts, news, exclusive deals, and more.</p>
 		</div>
+	</div> <!-- /.container -->
+
+<div class="footer-links">
+	<div class="container">
 
 		<div class="clearfix">
 			<p class="meta alignleft">Site by <a href="http://notlaura.com" target="blank">Lara</a>. Powered by WordPress and <a href="http://upstatement.com/timber" target="blank">Timber</a>.</p>
 			<p class="meta alignright">&copy; {{site.title}} {{"now"|date('Y')}}</p>
-		</div>	
-
-	</div> <!-- /.container -->
-
+		</div>
+	</div>
+</div>

@@ -1,13 +1,16 @@
 .footer {
 	padding-top: $h1;
 	border-top: $accent-border-large;
-	// @include rotate($link-clr: $accent-vlight);
 
 	input {
 		font-size: $sml;
 		color: $body-text;
 		padding: $sml/2 $xsml;
 	}
+}
+
+.footer-links {
+	// @include rotate($link-clr: $accent-vlight);
 }
 
 .share-links {

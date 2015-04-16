@@ -38,6 +38,10 @@
 
 .shape-twitter {
 	fill: $twitter;
+
+	.tweet-container & {
+		fill: $text-light;
+	}
 }
 
 .shape-facebook {

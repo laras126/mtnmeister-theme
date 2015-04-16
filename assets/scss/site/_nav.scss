@@ -69,7 +69,6 @@
 	@media(max-width: $screen-lg) {
 		.menu-top & {
 			padding-bottom: $sml;
-			@include make-xs-column(6, false);	
 		}
 	}
 	

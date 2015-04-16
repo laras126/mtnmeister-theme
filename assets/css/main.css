@@ -1779,6 +1779,8 @@ button, .menu-item-cta .cta {
 
 .shape-twitter {
   fill: #55ACEE; }
+  .tweet-container .shape-twitter {
+    fill: #fff; }
 
 .shape-facebook {
   fill: #3b5998; }
@@ -2092,10 +2094,7 @@ input[type="checkbox"]:focus {
 @media (max-width: 62em) {
   .menu-top .menu-item-cta {
     padding-bottom: 0.8rem;
-    position: relative;
-    float: left;
-    width: 50%;
-    min-height: 1px; } }
+    width: 100%; } }
 .menu-item-cta a {
   font-size: 0.8rem !important;
   padding: 0.4rem 0.8rem !important; }

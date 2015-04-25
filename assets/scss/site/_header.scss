@@ -5,14 +5,13 @@
 
 
 .callout {
-	@include rotate($text-light, darken($alert-success, 15%));
+	@include rotate($text-light, darken($alert-success, 15%), $alert-warning);
 	padding: $sml/2;
 	text-align: center;
 	position: relative;
 	font-size: $sml;
 
 	a {
-		color: $alert-warning;
 		font-weight: 700;
 	}
 }
@@ -23,11 +22,10 @@
 }
 
 .banner {
-
  	background-color: $accent-dark;
 	transition: all 0.5s ease;
-	position: fixed;
-	
+	position: absolute;
+
 	width: 100%;
 	z-index: 100;	
 
@@ -42,9 +40,11 @@
 		}
 	}
 
-	
-	.scrolled {
+	.banner-opaque {
 		background: $accent-dark !important;
 	}
 
-
+	.fixed {
+		position: fixed;
+		top: 0;
+	}

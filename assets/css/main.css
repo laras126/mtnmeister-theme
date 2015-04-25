@@ -2025,11 +2025,10 @@ input[type="checkbox"]:focus {
   font-size: 0.8rem; }
   .callout a,
   .callout a:visited {
-    color: #f8992f; }
+    color: #F9E839; }
   .callout a:hover {
-    color: #bb6506; }
+    color: #c6b506; }
   .callout a {
-    color: #F9E839;
     font-weight: 700; }
 
 .header-logo {
@@ -2039,7 +2038,7 @@ input[type="checkbox"]:focus {
 .banner {
   background-color: #043f7e;
   transition: all 0.5s ease;
-  position: fixed;
+  position: absolute;
   width: 100%;
   z-index: 100;
   border-top: 5px solid #f8992f; }
@@ -2047,8 +2046,12 @@ input[type="checkbox"]:focus {
 @media (min-width: 62em) {
   .banner-enhanced {
     background: linear-gradient(rgba(4, 63, 126, 0.5), rgba(4, 63, 126, 0)); } }
-.scrolled {
+.banner-opaque {
   background: #043f7e !important; }
+
+.fixed {
+  position: fixed;
+  top: 0; }
 
 .menu-top {
   overflow: hidden;

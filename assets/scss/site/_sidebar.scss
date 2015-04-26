@@ -15,12 +15,13 @@
 	}
 
 	padding: 0;
-	@extend %row;
-
-	@include bp(large) {
-		 padding-left: $base;
-	}
+	@include clearfix;
 }
+
+	.widgets-support {
+		border: $accent-border;
+		background-color: lighten($text-meta, 35%);
+	}
 
 .widget-stacked {
 	padding: $base $base 0;

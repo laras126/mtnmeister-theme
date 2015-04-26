@@ -31,7 +31,7 @@ h4 {
 
 	@include bp(small) {
 		font-size: $h1*1.4;
-		font-size: 15vw;
+		font-size: 14vw;
 
 		top: $h4*1.25;
 	}
@@ -159,7 +159,6 @@ h4 {
 // Text and Image block
 
 .image-inline {
-	@include make-xs-column(6);
 	padding-top: $base;
 	padding-bottom: $base;
 }
@@ -174,7 +173,19 @@ h4 {
 		padding-right: 0;
 	}
 
+.image-half {
+	@include make-xs-column(6);
+} 
 
+.image-quarter {
+	@include make-xs-column(6);
+	@include make-sm-column(4, false);
+} 
+
+.image-sixth {
+	@include make-xs-column(4);
+	@include make-sm-column(2, false);
+} 
 
 // Blank Block
 

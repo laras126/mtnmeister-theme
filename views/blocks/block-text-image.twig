@@ -1,7 +1,7 @@
 {% set loc = content.image_location %}
 	
 <div class="block-textimage clearfix">
-	<img class="image-inline inline-{{ loc == 'left' ? 'l' : 'r' }}" src="{{TimberImage(content.image).src}}" />
+	<img class="image-inline image-{{content.image_size}} inline-{{ loc == 'left' ? 'l' : 'r' }}" src="{{TimberImage(content.image).src}}" />
 	<h4 class="spacer-top">{{content.heading}}</h4>
 	{{content.text}}
 </div>

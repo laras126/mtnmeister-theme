@@ -1372,16 +1372,16 @@ th {
     position: relative;
     width: 100%; } }
 
-.widgets, .widget-stacked p,
+.widget-stacked p,
 .row {
   margin-left: -1rem;
   margin-right: -1rem; }
-  .widgets:before, .widget-stacked p:before, .widgets:after, .widget-stacked p:after,
+  .widget-stacked p:before, .widget-stacked p:after,
   .row:before,
   .row:after {
     content: " ";
     display: table; }
-  .widgets:after, .widget-stacked p:after,
+  .widget-stacked p:after,
   .row:after {
     clear: both; }
 
@@ -1673,7 +1673,7 @@ button, .menu-item-cta .cta {
   margin-bottom: 1rem; }
   .list-shapes li {
     display: inline-block;
-    margin-right: 2rem; }
+    margin-right: 1.3rem; }
     .list-shapes li:last-child {
       margin-right: 0; }
   .list-shapes .shape {
@@ -2162,7 +2162,7 @@ input[type="checkbox"]:focus {
   @media (min-width: 40em) {
     .page-title {
       font-size: 4.76rem;
-      font-size: 15vw;
+      font-size: 14vw;
       top: 1.625rem; } }
   @media (min-width: 58em) {
     .page-title {
@@ -2239,11 +2239,6 @@ input[type="checkbox"]:focus {
   margin-bottom: 2rem; }
 
 .image-inline {
-  float: left;
-  position: relative;
-  padding-left: 1rem;
-  padding-right: 1rem;
-  width: 50%;
   padding-top: 1rem;
   padding-bottom: 1rem; }
 
@@ -2254,6 +2249,37 @@ input[type="checkbox"]:focus {
 .inline-r {
   float: right;
   padding-right: 0; }
+
+.image-half {
+  float: left;
+  position: relative;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  width: 50%; }
+
+.image-quarter {
+  float: left;
+  position: relative;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  width: 50%; }
+  @media (min-width: 40em) {
+    .image-quarter {
+      float: left;
+      position: relative;
+      width: 33.33333%; } }
+
+.image-sixth {
+  float: left;
+  position: relative;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  width: 33.33333%; }
+  @media (min-width: 40em) {
+    .image-sixth {
+      float: left;
+      position: relative;
+      width: 16.66667%; } }
 
 .block-blank {
   margin-top: 2.4rem; }
@@ -2481,9 +2507,15 @@ input[type="checkbox"]:focus {
   @media (min-width: 64em) {
     .widgets {
       margin-top: 0; } }
-  @media (min-width: 64em) {
-    .widgets {
-      padding-left: 1rem; } }
+  .widgets:before, .widgets:after {
+    content: " ";
+    display: table; }
+  .widgets:after {
+    clear: both; }
+
+.widgets-support {
+  border: 1px solid lightgray;
+  background-color: #f2f2f2; }
 
 .widget-stacked {
   padding: 1rem 1rem 0;

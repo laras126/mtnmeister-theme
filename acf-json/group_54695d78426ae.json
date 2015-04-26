@@ -78,12 +78,12 @@
                     "display": "row",
                     "sub_fields": [
                         {
-                            "key": "field_5437f2d22fee0",
-                            "label": "Image",
-                            "name": "image",
+                            "key": "field_5469627959403",
+                            "label": "Heading",
+                            "name": "heading",
                             "prefix": "",
-                            "type": "image",
-                            "instructions": "This image will be on the left!",
+                            "type": "text",
+                            "instructions": "Leave blank if you only want paragraph text.",
                             "required": 0,
                             "conditional_logic": 0,
                             "wrapper": {
@@ -91,16 +91,13 @@
                                 "class": "",
                                 "id": ""
                             },
-                            "return_format": "url",
-                            "preview_size": "thumbnail",
-                            "library": "all",
-                            "min_width": 0,
-                            "min_height": 0,
-                            "min_size": 0,
-                            "max_width": 0,
-                            "max_height": 0,
-                            "max_size": 0,
-                            "mime_types": ""
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": "",
+                            "readonly": 0,
+                            "disabled": 0
                         },
                         {
                             "key": "field_5437f3102fee1",
@@ -122,6 +119,31 @@
                             "media_upload": 1
                         },
                         {
+                            "key": "field_5437f2d22fee0",
+                            "label": "Image",
+                            "name": "image",
+                            "prefix": "",
+                            "type": "image",
+                            "instructions": "This image will be on the left!",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": 50,
+                                "class": "",
+                                "id": ""
+                            },
+                            "return_format": "url",
+                            "preview_size": "thumbnail",
+                            "library": "all",
+                            "min_width": "",
+                            "min_height": "",
+                            "min_size": "",
+                            "max_width": "",
+                            "max_height": "",
+                            "max_size": "",
+                            "mime_types": ""
+                        },
+                        {
                             "key": "field_5443e7631d17b",
                             "label": "Image Location",
                             "name": "image_location",
@@ -131,7 +153,7 @@
                             "required": 0,
                             "conditional_logic": 0,
                             "wrapper": {
-                                "width": "",
+                                "width": 25,
                                 "class": "",
                                 "id": ""
                             },
@@ -145,26 +167,34 @@
                             "layout": "horizontal"
                         },
                         {
-                            "key": "field_5469627959403",
-                            "label": "Heading",
-                            "name": "heading",
+                            "key": "field_553d411691247",
+                            "label": "Image Size",
+                            "name": "image_size",
                             "prefix": "",
-                            "type": "text",
-                            "instructions": "Leave blank if you only want paragraph text.",
+                            "type": "select",
+                            "instructions": "How much space should the image take up?",
                             "required": 0,
                             "conditional_logic": 0,
                             "wrapper": {
-                                "width": "",
+                                "width": 25,
                                 "class": "",
                                 "id": ""
                             },
-                            "default_value": "",
+                            "choices": {
+                                "half": "Half",
+                                "quarter": "Quarter",
+                                "sixth": "Sixth"
+                            },
+                            "default_value": {
+                                "half": "half"
+                            },
+                            "allow_null": 0,
+                            "multiple": 0,
+                            "ui": 0,
+                            "ajax": 0,
                             "placeholder": "",
-                            "prepend": "",
-                            "append": "",
-                            "maxlength": "",
-                            "readonly": 0,
-                            "disabled": 0
+                            "disabled": 0,
+                            "readonly": 0
                         }
                     ],
                     "min": "",
@@ -263,5 +293,5 @@
         "tags",
         "send-trackbacks"
     ],
-    "modified": 1426696336
+    "modified": 1430078355
 }

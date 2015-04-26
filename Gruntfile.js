@@ -238,6 +238,7 @@ module.exports = function(grunt) {
         'sass:dev',
         'autoprefixer:dev',
         'concat',
+        'uglify',
         'cssmin'
     ]);
 

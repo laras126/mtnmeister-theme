@@ -149,10 +149,8 @@
 
 		if( scroll_pos > callout_ht ) {
 			$('.banner').addClass('fixed');
-			console.log('fixed');
 		} else {
 			$('.banner').removeClass('fixed');
-			console.log('abs');
 		}
 			
 

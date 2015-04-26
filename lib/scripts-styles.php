@@ -12,10 +12,10 @@ function mtn_scripts_styles() {
     }
 
     if( WP_ENV == 'production' ) {
-        wp_enqueue_style( 'nl-styles', get_template_directory_uri() . '/assets/css/main.min.css', 1.0);
+        wp_enqueue_style( 'mtn-styles', get_template_directory_uri() . '/assets/css/main.min.css', 1.0);
         wp_register_script('mtn-js', get_template_directory_uri() . '/assets/js/build/scripts.min.js', true);
     } else {
-        wp_enqueue_style( 'nl-styles', get_template_directory_uri() . '/assets/css/main.css', 1.0);
+        wp_enqueue_style( 'mtn-styles', get_template_directory_uri() . '/assets/css/main.css', 1.0);
         wp_register_script('mtn-js', get_template_directory_uri() . '/assets/js/scripts.js', true);
 
     }

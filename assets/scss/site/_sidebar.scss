@@ -1,12 +1,9 @@
 .has-sidebar {
-	@extend %full_width;
-	@include make-lg-column(8.5);
+	@include make-md-column(8.5);
 }
 
 .sidebar {
-	@extend %full_width;
-	@include make-lg-column(3.5);	
-	@extend .clearfix;
+	@include make-md-column(3.5);
 }
 
 .widgets {
@@ -55,9 +52,9 @@
 		margin-right: 0;
 	}
 
-	@include make-sm-column(5.6, false);
-	@include make-md-column(3.8, false);
-	@include make-lg-column(12, false);
+	// @include make-sm-column(6);
+	@include make-sm-column(4, false);
+	@include make-md-column(12, false);
 
 }
 

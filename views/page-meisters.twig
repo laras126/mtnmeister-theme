@@ -1,25 +1,28 @@
 {% extends "page.twig" %}
 
 {% block today %}
-	{% for m in meisters|slice(0,1) %}
-		{% include 'tease/tease-todays_meister.twig' %}
-	{% endfor %}
+	<div class="clearfix spacer-bot">
+		{% for m in meisters|slice(0,1) %}
+			{% include 'tease/tease-todays_meister.twig' %}
+		{% endfor %}
+	</div>
 {% endblock %}
 
 {% block loop %}
-	<div class="loop loop-main">
+	<div class="clearfix spacer-top">
 		{% for m in meisters|slice(1, 1) %}
 			{% include ['tease/tease-meister.twig', 'tease/tease.twig'] %}
-		{% endfor %}	
+		{% endfor %}
 	</div>
 {% endblock %}
 
 {% block loop_minor %}
-	<div class="container">
-	<div class="loop loop-thumbs">
-		{% for m in meisters|slice(2) %}
-			{% include ['tease/tease-minor_meister.twig', 'tease/tease.twig'] %}
-		{% endfor %}
-	</div>
+	
+		<div class="loop-thumbs contain">
+			<div class="row-sm">
+			{% for m in meisters|slice(2) %}
+				{% include ['tease/tease-minor_meister.twig', 'tease/tease.twig'] %}
+			{% endfor %}
+		</div>
 	</div>
 {% endblock %}

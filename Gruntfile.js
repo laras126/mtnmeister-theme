@@ -188,7 +188,7 @@ module.exports = function(grunt) {
                 'assets/scss/*.scss',
                 'assets/scss/**/*.scss'
             ],
-            tasks: ['sass:dev', 'autoprefixer:dev']
+            tasks: ['sass:dev']
         },
 
         css: {
@@ -228,6 +228,12 @@ module.exports = function(grunt) {
     ]);
     
     grunt.registerTask('dev', [
+        'jshint',
+        'sass:dev',
+        'concat',
+    ]);
+
+    grunt.registerTask('build', [
         'jshint',
         'sass:dev',
         'autoprefixer:dev',

@@ -4,28 +4,32 @@
 
     {% include 'partials/page-header.twig' %}
 		
-		<div class="page-body container">
+		<div class="page-body">
+			<div class="contain">
+				<p class="tagline tagline-page">{{post.tagline}}</p>
 			
-			<p class="tagline tagline-page">{{post.tagline}}</p>
+				{% block today %}{% endblock %}
 			
-			{% block today %}{% endblock %}
+				{{sidebar ? ' <div class="row-sm">'}}
 
-			<div class="page-content {{sidebar_class}}">		
-				{% if post.introduction %}
-					<p class="lead">{{post.introduction}}</p>	
-				{% endif %}
-				{% block loop %}{% endblock %}
-				{% if front_page != true %}
-					{% include 'partials/acf-block-loop.twig' %}
-				{% endif %}
+				<section class="page-content {{sidebar_class}}">
+					{% if post.introduction %}
+						<p class="lead">{{post.introduction}}</p>	
+					{% endif %}
+					{% block loop %}{% endblock %}
+					{% if front_page != true %}
+						{% include 'partials/acf-block-loop.twig' %}
+					{% endif %}
+				</section>
+
+				{%  if sidebar %}
+					<aside class="sidebar">
+						{{sidebar}}
+					</aside>
+				</div> <!-- /.row -->
+				{% endif %}	
+
 			</div>
-
-			{%  if sidebar %}
-				<aside class="sidebar">
-					{{sidebar}}
-				</aside>
-			{% endif %}	
-
 		 </div> <!-- /.page-body -->
 
 		{% block loop_minor %}{% endblock %}

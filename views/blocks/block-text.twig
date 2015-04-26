@@ -1,14 +1,6 @@
-
-<div class="clearfix">
-	
-	<section class="block-text">
-		{% if content.heading %}
-			<h4>{{content.heading}}</h4>
-		{% endif %}
-		<p>{{content.section_text}}</p>
-	</section>
-	<div class="col-sm-6">
-		{% if content.section_image %}<img src="{{TimberImage(content.meister_pic).src}}" alt="{{content.title}}">{% endif %}
-	</div>
-
+<div class="block-text">
+	{% if content.heading %}
+		<h4>{{content.heading}}</h4>
+	{% endif %}
+	{{content.section_text}}
 </div>

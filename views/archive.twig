@@ -3,7 +3,7 @@
 {% block content %}
 
 <div class="page-body">
-    <div class="container-squish">
+    <div class="contain-sm">
 
     	<header class="article-header">
 	    	<h1 class="tagline tagline-page">{{title}}</h1>
@@ -24,7 +24,7 @@
 
                 <div class="clearfix tease tease-archive">
 
-                    <div class="col-md-3">
+                    <div class="col-sm-3">
                         <a href="{{m.link}}" title="{{m.title}}">
                         {% if m.get_thumbnail %}
                             <img class="lazy" data-original="{{m.thumbnail.src}}" src="{{site.url}}/wp-content/themes/mtnmeister-theme/assets/img/util/loader.gif" alt="{{m.title}}"/>
@@ -33,7 +33,7 @@
                         </a>
                     </div>
                     
-                    <div class="col-md-9">
+                    <div class="col-sm-9">
 
                         <div class="row">
                             <div class="col-sm-9">

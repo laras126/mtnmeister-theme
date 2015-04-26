@@ -25,13 +25,10 @@
 
 .featured-left,
 .featured-right {
-	@include make-md-column(6, false);
+	@include make-sm-column(6);
 }
 
 .featured-right {
-	@include bp(med) {
-		padding-left: $base;
-	}
 	img {
 		width: 100%;
 		max-width: 320px;
@@ -43,7 +40,7 @@
 }
 
 .tease-featured:not(.tease-featured-deal) {
-	@extend %full_width;
+	// @extend %full_width;
 }
 
 .tease-featured-deal {
@@ -105,14 +102,14 @@
 .tease-archive {
 	text-align: center;
 
-	@include bp(med) {
+	@include bp(small) {
 		text-align: left;
 	}
 
 	h4 {
 		margin-top: $h4;
 
-		@include bp(med) {
+		@include bp(small) {
 			margin-top: 0;
 		}
 	}
@@ -121,7 +118,7 @@
 		display: inline-block;
 		margin-top: $h4;
 
-		@include bp(med) {
+		@include bp(small) {
 			margin-top: 0;
 			float: right;
 		}
@@ -141,9 +138,16 @@
 .widget-fourth {
 	.menu {
 		@extend %unstyle-list;
+	}
+}
 
-		li {
 
-		}
+//
+
+#twitter-widget-0 {
+	height: 400px;
+
+	@include bp(large) {
+		height: 600px;
 	}
 }

@@ -14,7 +14,7 @@
 			</div>
 		</header>
 		
-		<div class="container episode-embed">
+		<div class="contain episode-embed">
 			{{post.episode_soundcloud_small}}
 			{% if post.tags %}
 				<ul class="list-tags text-center">
@@ -33,26 +33,27 @@
 		
 	</article>
 
-	<nav class="nav-prevnext container">
+	<div class="contain">
+		<nav class="nav-prevnext">
 
-		{% if post.prev %}
-			<div class="prev">
-				<a href="{{post.prev.link}}" class="link-postnav" title="{{post.prev.title}}">&larr; <span class="special">#{{post.prev.episode_num}}</span> {{post.prev.title}}</a>
-			</div>
-		{% endif %}
+			{% if post.prev %}
+				<div class="prev">
+					<a href="{{post.prev.link}}" class="link-postnav" title="{{post.prev.title}}">&larr; <span class="special">#{{post.prev.episode_num}}</span> {{post.prev.title}}</a>
+				</div>
+			{% endif %}
 
-		{% if post.next %}
-			<div class="next">
-				<a href="{{post.next.link}}" class="link-postnav" title="{{post.next.title}}"><span class="special">#{{post.next.episode_num}}</span> {{post.next.title}} &rarr;</a>
-			</div>
-		{% endif %}
+			{% if post.next %}
+				<div class="next">
+					<a href="{{post.next.link}}" class="link-postnav" title="{{post.next.title}}"><span class="special">#{{post.next.episode_num}}</span> {{post.next.title}} &rarr;</a>
+				</div>
+			{% endif %}
 
-	</nav> <!-- /nav-prevnext -->
-
+		</nav> <!-- /.nav-prevnext -->
+	</div>
 
 	{% if related_meisters %}
-		<footer class="container">
-			<div class="loop loop-related">
+		<footer class="contain">
+			<div class="loop-related">
 
 				<header class="clearfix article-section-header">
 					<div class="col-sm-8-np">

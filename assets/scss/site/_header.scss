@@ -32,7 +32,7 @@
 	border-top: $accent-border-large;
 }
 
-	@include bp(large) {
+	@include bp(med) {
 		
 		// No background gradient on single pages
 		.banner-enhanced {
@@ -48,3 +48,14 @@
 		position: fixed;
 		top: 0;
 	}
+
+
+.brand {
+	@include make-md-column(2);
+}
+
+.logo,
+.menu-link {
+	@include make-xs-column(6, false);
+}
+

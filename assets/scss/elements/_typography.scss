@@ -103,7 +103,7 @@ small {
 blockquote {
 	@extend %h4;
 	
-	@include bp(med) {
+	@include bp(small) {
 		font-size: $h3;
 	}
 
@@ -111,7 +111,7 @@ blockquote {
 	padding-left: $h2;
 	margin-left: 0;
 	margin-right: 0;
-	background-image: url(../img/svgs/quotes-left.svg);
+	background-image: url(../img/svg-min/quotes-left.min.svg);
 	background-repeat: no-repeat;
 }
 

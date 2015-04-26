@@ -1,33 +1,3 @@
-// Grids and layout stuff
-
-%container {
-	margin: 0 auto;
-	@include container-fixed();
-}
-
-.container {
-	@extend %container;
-	max-width: $screen-lg;
-}
-
-.container-squish {
-	@extend .container;
-	@include bp(large) {
-		max-width: $screen-md;
-	}
-}
-
-
-// Header
-
-.brand {
-	@include make-lg-column(2);
-}
-
-.logo,
-.menu-link {
-	@include make-xs-column(6, false);
-}
 
 
 // ---

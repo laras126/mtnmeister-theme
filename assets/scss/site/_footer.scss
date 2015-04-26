@@ -15,20 +15,6 @@
 	}
 }
 
-.share-links {
-	@extend %unstyle-list;
-	margin-bottom: $base;
-	li {
-		display: inline-block;
-	}
-
-	.shape {
-		display: inline-block;
-		width: $h3;
-		height: $h3;
-		margin-right: $base;
-	}
-}
 
 .menu-footer {
 

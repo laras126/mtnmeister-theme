@@ -43,6 +43,26 @@
 	}
 }
 
+// Social links in the footer
+
+.list-shapes {
+	@extend %unstyle-list;
+	margin-bottom: $base;
+
+	li {
+		display: inline-block;
+		margin-right: $h3;
+		&:last-child {
+			margin-right: 0;
+		}
+	}
+
+	.shape {
+		display: inline-block;
+		width: $h2;
+		height: $h2;
+	}
+}
 
 
 // Additional resources

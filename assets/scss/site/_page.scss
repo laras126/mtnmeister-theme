@@ -15,7 +15,6 @@ h4 {
 	@extend %upperspace;
 	position: relative;
 	z-index: 9;
-	@extend %full_width;
 
 	font-size: $h1*0.75;	
 	font-size: 13vw;
@@ -41,7 +40,7 @@ h4 {
 		font-size: 13vw;
 	}
 
-	@include bp(xl) {
+	@include bp(large) {
 		font-size: 10vw;
 		top: $h3*1.05;
 	}
@@ -52,7 +51,7 @@ h4 {
 	}
 
 .tagline-page {
-	@extend %full_width;
+	// @extend %full_width;
 	@extend %h4;
 
 	color: $accent-dark;
@@ -119,7 +118,7 @@ h4 {
 		bottom: auto;
 	}
 
-	@include bp(xl) {
+	@include bp(large) {
 		top: auto;
 		bottom: 0;
 	}
@@ -160,7 +159,7 @@ h4 {
 // Text and Image block
 
 .image-inline {
-	@include make-sm-column(6);
+	@include make-xs-column(6);
 	padding-top: $base;
 	padding-bottom: $base;
 }

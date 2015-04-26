@@ -17,11 +17,13 @@
 	// transition: all 0.2s ease-in-out;
 	
 	@include make-xs-column(12, false);
-	@include make-lg-column(10);
+	@include make-md-column(10);
 
 	&.active {
 		max-height: 25em;
 	}
+
+	text-align: center;
 
 	.menu-item {
 
@@ -34,7 +36,6 @@
 
 .menu-items {
 	@extend %unstyle-list;
-	text-align: center;
 }
 
 .current-menu-item {
@@ -44,7 +45,6 @@
 // These styles only apply to the top nav
 .menu-item {
 	list-style-type: none;
-	text-align: center;
 
 	a {
 		display: block;
@@ -66,7 +66,7 @@
 .menu-item-cta {
 
 	// Bad max width
-	@media(max-width: $screen-lg) {
+	@media(max-width: $screen-md) {
 		.menu-top & {
 			padding-bottom: $sml;
 			width: 100%;
@@ -94,7 +94,7 @@
 // Expanded Nav
 // ----
 
-@include bp(large) {
+@include bp(med) {
 
 	// Hide mobile menu link
 	.menu-link {
@@ -205,7 +205,7 @@
 // ----
 
 .nav-prevnext {
-	@extend %row;
+	@include clearfix;
 	border-top: $accent-border;
 	border-bottom: $accent-border;
 	margin-top: $h3;
@@ -219,14 +219,24 @@
 }
 
 .link-postnav {
-	@include make-xs-column(6);
+	@include make-sm-column(6);
+
 }
 
 .prev,
 .next {
 	word-break: break-all;
+	text-align: center;
+}
+
+.prev {
+	@include bp(small) {
+		text-align: left;
+	}
 }
 
 .next {
-	text-align: right;
+	@include bp(small) {
+		text-align: right;	
+	}
 }

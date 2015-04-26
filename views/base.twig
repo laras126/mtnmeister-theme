@@ -7,7 +7,7 @@
     
     <body data-template="base.twig" class="{{body_class}}">
         
-        <div class="svgsprites">
+        <div class="visually-hidden">
             {% include 'partials/svg-defs.svg' %}
         </div>
     
@@ -25,13 +25,26 @@
             {% block content %}
                 Oops! Nothing here.
             {% endblock %}
-            <div class="container">
-                <div class="col-sm-8 main-cta">
-                    <h4>Support</h4>
-                    <p>{{support_text}}</p>
-                    <a class="btn caption" href="{{site.link}}/support">Support MTNmeister</a>
+            {% if post.title != 'Support' %}
+            <div class="contain">
+                <div class="row-sm">
+
+                    <div class="col-sm-8 main-cta">
+                        <h4>Support</h4>
+                        <p>{{support_text}}</p>
+                        <a class="btn caption" href="{{site.link}}/support">Support MTNmeister</a>
+                    </div>
+                
                 </div>
             </div>
+            {% else %}
+                <!-- judgement -->
+                <br>
+                <br>
+                <br>
+                <br>
+                <!-- end judgement -->
+            {% endif %}
         </main>
 
         {% block footer %}

@@ -117,8 +117,8 @@ input[type="checkbox"]:focus {
 		padding-left: 0;
 	}
 
-	.ginput_left,
-	.ginput_right {
+	.name_first,
+	.name_last {
 		@include make-sm-column(6, false);
 	}
 }

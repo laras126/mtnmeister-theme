@@ -1,84 +1,81 @@
-	<div class="container widgets">
+	<div class="contain">
+		<div class="row-md">
+			
+			<div class="col-md-3">
+				<h4 class="widget-title">Explore</h4>
+				<div class="menu-footer">
+		            <ul class="menu-items">
+		            {% for item in footer_nav.items %}
+		                <li class="menu-item">
+		                    <a href="{{item.link}}">{{item.title}}</a>
+		                </li>
+		            {% endfor %}
+		            </ul>
+		        </div>
+			</div>
+			
+			<div class="col-md-5">
+				<h4 class="widget-title">Connect</h4>
+				<ul class="list-shapes">
+					<li>
+						<a href="http://facebook.com/mtnmeister" target="blank">
+							<svg class="shape shape-facebook"><use xlink:href="#shape-facebook" /></svg>
+						</a>	
+					</li>
+					<li>
+						<a href="http://twitter.com/mountainmeister" target="blank">
+							<svg class="shape shape-twitter"><use xlink:href="#shape-twitter" /></svg>
+						</a>
+					</li>
+					<li>
+						<a href="http://instagram.com/mountainmeister" target="blank">
+							<svg class="shape shape-instagram"><use xlink:href="#shape-instagram" /></svg>
+						</a>
+					</li>
+					<li>
+						<a href="https://plus.google.com/+Mtnmeister/videos" target="blank">
+							<svg class="shape shape-googleplus"><use xlink:href="#shape-googleplus" /></svg>
+						</a>
+					</li>
+				</ul>
+				<p class="meta"><a href="mailto:info@mtnmeister.com">info@mtnmeister.com</a><br>Boston, Massachusetts</p>
+			</div>
 		
-		<div class="col-md-4">
-			<h4 class="widget-title">Explore</h4>
-			<div class="menu-footer">
-	            <ul class="menu-items col-sm-6">
-	            {% for item in footer_nav.items %}
-	                <li class="menu-item">
-	                    <a href="{{item.link}}">{{item.title}}</a>
-	                </li>
-	            {% endfor %}
-	            </ul>
-	            <ul class="menu-items col-sm-6">
-	            {% for item in footer_nav_second.items %}
-	                <li class="menu-item">
-	                    <a href="{{item.link}}">{{item.title}}</a>
-	                </li>
-	            {% endfor %}
-	            </ul>
-	        </div>
-		</div>
-		
-		<div class="col-md-4">
-			<h4 class="widget-title">Connect</h4>
-			<ul class="share-links">
-			<li>
-				<a href="http://facebook.com/mtnmeister" target="blank">
-					<svg class="shape shape-facebook"><use xlink:href="#shape-facebook" /></svg>
-				</a>	
-			</li>
-			<li>
-				<a href="http://twitter.com/mountainmeister" target="blank">
-					<svg class="shape shape-twitter"><use xlink:href="#shape-twitter" /></svg>
-				</a>
-			</li>
-			<li>
-				<a href="http://instagram.com/mountainmeister" target="blank">
-					<svg class="shape shape-instagram"><use xlink:href="#shape-instagram" /></svg>
-				</a>
-			</li>
-			<li>
-				<a href="https://plus.google.com/+Mtnmeister/videos" target="blank">
-					<svg class="shape shape-googleplus"><use xlink:href="#shape-googleplus" /></svg>
-				</a>
-			</li>
-		</ul>
-		<p class="meta"><a href="mailto:info@mtnmeister.com">info@mtnmeister.com</a><br>Boston, Massachusetts</p>
-		</div>
-		
-		<div class="col-md-4">
-			<h4 class="widget-title">Updates</h4>
+			<div class="col-md-4">
+				<h4 class="widget-title">Updates</h4>
 
-			<div id="mc_embed_signup" class="clearfix">
-			<form action="//mtnmeister.us3.list-manage.com/subscribe/post?u=3fc59f16a451a608115fa9e3b&amp;id=10be14f14b" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-			    <div id="mc_embed_signup_scroll"></div>
-				<div class="mc-field-group col-xs-8-np">
-					<input type="email" placeholder="your@email.com" value="" name="EMAIL" class="required email" id="mce-EMAIL">
-				</div>
-				<div id="mce-responses" class="clear">
-					<div class="response" id="mce-error-response" style="display:none"></div>
-					<div class="response" id="mce-success-response" style="display:none"></div>
-				</div>
-			    <div style="position: absolute; left: -5000px;">	
-			    	<input type="text" name="b_3fc59f16a451a608115fa9e3b_10be14f14b" tabindex="-1" value="">
-			    </div>
-			    <div class="col-xs-4-np">
-			    	<input type="submit" value="Go" name="subscribe" id="mc-embedded-subscribe" class="button">
-			    </div>
-			</form>
-		</div> <!-- /MailChimp -->
+				<div id="mc_embed_signup" class="clearfix">
+				<form action="//mtnmeister.us3.list-manage.com/subscribe/post?u=3fc59f16a451a608115fa9e3b&amp;id=10be14f14b" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+				    <div id="mc_embed_signup_scroll"></div>
+					<div class="mc-field-group col-xs-8-np">
+						<input type="email" placeholder="your@email.com" value="" name="EMAIL" class="required email" id="mce-EMAIL">
+					</div>
+					<div id="mce-responses" class="clear">
+						<div class="response" id="mce-error-response" style="display:none"></div>
+						<div class="response" id="mce-success-response" style="display:none"></div>
+					</div>
+				    <div style="position: absolute; left: -5000px;">	
+				    	<input type="text" name="b_3fc59f16a451a608115fa9e3b_10be14f14b" tabindex="-1" value="">
+				    </div>
+				    <div class="col-xs-4-np">
+				    	<input type="submit" value="Go" name="subscribe" id="mc-embedded-subscribe" class="button">
+				    </div>
+				</form>
+			</div> <!-- /MailChimp -->
 
-		<p class="caption">Sign up for Meister updates, thoughts, news, exclusive deals, and more.</p>
+			<p class="caption">Sign up for Meister updates, thoughts, news, exclusive deals, and more.</p>
 		</div>
-	</div> <!-- /.container -->
+
+		</div> <!-- /.row-sm -->
+	</div> <!-- /.widgets -->
 
 	<div class="rotate spacer-top">
-		<div class="container">
+		<div class="contain">
 		
 			<div class="clearfix">
 				<p class="meta alignleft">Site by <a href="http://notlaura.com" target="blank">Lara</a>. Powered by WordPress and <a href="http://upstatement.com/timber" target="blank">Timber</a>.</p>
 				<p class="meta alignright">&copy; {{site.title}} {{"now"|date('Y')}}</p>
 			</div>	
+			
 		</div>
 	</div>

@@ -18,3 +18,15 @@
 .spacer-top {
 	margin-top: $h3;
 }
+
+.spacer-bot {
+	margin-bottom: $h3;
+}
+
+//
+
+.visually-hidden {
+	position: absolute;
+	top: -9999999px;
+	left: -999999px;
+}

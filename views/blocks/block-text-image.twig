@@ -1,7 +1,17 @@
 {% set loc = content.image_location %}
 	
+{# Ew. Probably too much logic in here. #}
+{# Yeah, this makes me want to cry a little bit. TODO: make it better. #}
+
 <div class="block-textimage clearfix">
-	<img class="image-inline image-{{content.image_size}} inline-{{ loc == 'left' ? 'l' : 'r' }}" src="{{TimberImage(content.image).src}}" />
+
+	{% if content.wrap_text == false %}<div class="col-sm-4 clearfix">{% endif %}
+	<img class="image-inline {% if content.image_size and content.wrap_text %}image-{{content.image_size}}{% endif %} inline-{{ loc == 'left' ? 'l' : 'r' }}" src="{{TimberImage(content.image).src}}" />
+	{% if content.wrap_text == false %}</div>{% endif %}
+	
+	{% if content.wrap_text == false %}<div class="col-sm-8 clearfix">{% endif %}
 	<h4 class="spacer-top">{{content.heading}}</h4>
 	{{content.text}}
+	{% if content.wrap_text == false %}</div>{% endif %}
+
 </div>

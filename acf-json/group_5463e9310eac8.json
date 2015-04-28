@@ -111,7 +111,8 @@
             ],
             "elements": "",
             "max": "",
-            "return_format": "object"
+            "return_format": "object",
+            "min": 0
         }
     ],
     "location": [
@@ -141,5 +142,5 @@
         "send-trackbacks"
     ],
     "local": "json",
-    "modified": 1426696160
+    "modified": 1430179448
 }

@@ -33,7 +33,7 @@ $fw_args = array(
 	'before_title'  => '<h4 class="widget-title">',
 	'after_title'   => '</h4>'
 );
-register_sidebar( $fw_args );
+// register_sidebar( $fw_args );
 
 
 

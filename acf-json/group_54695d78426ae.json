@@ -195,6 +195,23 @@
                             "placeholder": "",
                             "disabled": 0,
                             "readonly": 0
+                        },
+                        {
+                            "key": "field_553ece82fa860",
+                            "label": "Wrap text?",
+                            "name": "wrap_text",
+                            "prefix": "",
+                            "type": "true_false",
+                            "instructions": "Should the text wrap around the image or display as a block?",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "message": "",
+                            "default_value": 0
                         }
                     ],
                     "min": "",
@@ -293,5 +310,5 @@
         "tags",
         "send-trackbacks"
     ],
-    "modified": 1430078355
+    "modified": 1430181900
 }

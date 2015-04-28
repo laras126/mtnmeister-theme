@@ -151,7 +151,8 @@
             ],
             "elements": "",
             "max": "",
-            "return_format": "object"
+            "return_format": "object",
+            "min": 0
         },
         {
             "key": "field_5425d9843c593",
@@ -205,5 +206,6 @@
         "page_attributes",
         "send-trackbacks"
     ],
-    "modified": 1427385827
+    "modified": 1430179448,
+    "local": "json"
 }

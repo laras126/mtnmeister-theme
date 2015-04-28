@@ -100,7 +100,8 @@
                     ],
                     "elements": "",
                     "max": 1,
-                    "return_format": "object"
+                    "return_format": "object",
+                    "min": 0
                 }
             ]
         },
@@ -177,5 +178,6 @@
         "tags",
         "send-trackbacks"
     ],
-    "modified": 1426696824
+    "modified": 1430179449,
+    "local": "json"
 }

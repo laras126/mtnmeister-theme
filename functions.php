@@ -46,10 +46,15 @@
 				$context['header_image'] = $rand_row;	
 			}
 
-			// ACF Options Page for Callout Bar
+			// ACF Site Settings (elements on every page)
 			$context['callout_tf'] = get_field('callout_tf', 'options');
 			$context['callout_bar'] = get_field('callout_bar', 'options');
+			$context['support_title'] = get_field('support_title', 'options');
 			$context['support_text'] = get_field('support_text', 'options');
+	
+			$context['support_text_link'] = get_field('support_text_link', 'options');
+			$context['support_page_link'] = get_field('support_page_link', 'options');
+			$context['support_btn_text'] = get_field('support_button_text', 'options');
 			
 			$context['footer_widgets'] = Timber::get_widgets('footer_widgets');
 			

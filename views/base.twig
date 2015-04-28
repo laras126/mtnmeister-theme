@@ -30,9 +30,9 @@
                 <div class="row-sm">
 
                     <div class="col-sm-8 main-cta">
-                        <h4>Support</h4>
+                        <h4>{{support_title}}</h4>
                         <p>{{support_text}}</p>
-                        <a class="btn caption" href="{{site.link}}/support">Support MTNmeister</a>
+                        <a class="btn caption" {{support_text_link ? 'target="blank'}} href="{{support_text_link ? support_text_link : support_page_link}}">{{support_btn_text}}</a>
                     </div>
                 
                 </div>

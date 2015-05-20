@@ -6,7 +6,7 @@
 		
 		<div class="page-body">
 			<div class="contain">
-				<p class="tagline tagline-page">{{post.tagline}}</p>
+				{% if post.tagline %}<p class="tagline tagline-page">{{post.tagline}}</p>{% endif %}
 			
 				{% block today %}{% endblock %}
 			

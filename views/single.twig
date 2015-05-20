@@ -1,18 +1,14 @@
-{% extends "base.twig" %}
+{% extends "page.twig" %}
 
-{% block content %}
+{% block today %}<p class="meta">{{post.date}}</p>{% endblock %}
 
-	<article class="type-{{post.post_type}}" id="post-{{post.ID}}">
-		<section class="article-content">
-			<h1 class="article-title">{{post.title}}</h1>
-			<div class="article-body">
-				{{post.content}}
-			</div>
+{# {% block content %}
+
+	{% if post.content_blocks %}
+		<section class="article-section container-squish">
+			{% include 'partials/acf-block-loop.twig'%}
 		</section>
+	{% endif %}
 
-		{% include 'partials/edit-link.twig' %}
-	</article>
+{% endblock %} #}
 
-{% endblock %}
-
-{{sidebar}}

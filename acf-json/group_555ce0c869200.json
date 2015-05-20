@@ -1,130 +1,14 @@
 {
-    "key": "group_5437e03763e75",
-    "title": "Pages",
+    "key": "group_555ce0c869200",
+    "title": "Post Content",
     "fields": [
         {
-            "key": "field_544e96afcf90e",
-            "label": "Header Images",
-            "name": "header_images",
-            "prefix": "",
-            "type": "repeater",
-            "instructions": "These images will be randomly selected to display in the header of the page. They should indicate the page content - for example, images for the \"Meisters\" page should have people in them.",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "min": "",
-            "max": "",
-            "layout": "row",
-            "button_label": "Add Row",
-            "sub_fields": [
-                {
-                    "key": "field_544e972acf90f",
-                    "label": "Header Image (1200x800)",
-                    "name": "image",
-                    "prefix": "",
-                    "type": "image",
-                    "instructions": "This image should be 1200x800, ideally with the content focus on the center\/right.",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "return_format": "url",
-                    "preview_size": "thumbnail",
-                    "library": "all",
-                    "min_width": 0,
-                    "min_height": 0,
-                    "min_size": 0,
-                    "max_width": 0,
-                    "max_height": 0,
-                    "max_size": 0,
-                    "mime_types": ""
-                },
-                {
-                    "key": "field_544e981201fe2",
-                    "label": "Related Meister",
-                    "name": "related_meister",
-                    "prefix": "",
-                    "type": "relationship",
-                    "instructions": "If a Meister is pictured, select them here. This will generate a link to their profile page.",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "post_type": [
-                        "meister"
-                    ],
-                    "taxonomy": "",
-                    "filters": [
-                        "search"
-                    ],
-                    "elements": "",
-                    "max": 1,
-                    "return_format": "object",
-                    "min": 0
-                }
-            ]
-        },
-        {
-            "key": "field_5437e03d4aa17",
-            "label": "Tagline",
-            "name": "tagline",
-            "prefix": "",
-            "type": "text",
-            "instructions": "A few words or short sentence describing the page content. Short, sweet, and snappy.",
-            "required": 1,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "maxlength": 130,
-            "readonly": 0,
-            "disabled": 0
-        },
-        {
-            "key": "field_5437e7f54aa19",
-            "label": "Introduction",
-            "name": "introduction",
-            "prefix": "",
-            "type": "textarea",
-            "instructions": "A few sentences introducing the page content. This will not display if left empty.",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": "",
-            "maxlength": "",
-            "rows": "",
-            "new_lines": "wpautop",
-            "readonly": 0,
-            "disabled": 0
-        },
-        {
-            "key": "field_5437f1ee2fedd",
+            "key": "field_555ce0b8dcb16",
             "label": "Content Blocks",
             "name": "content_blocks",
             "prefix": "",
             "type": "flexible_content",
-            "instructions": "Note: if this is the \"Meisters\" or \"Deals\" page, this content will show below the Deal\/Meister posts.",
+            "instructions": "A structured way to write your posts.",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -143,7 +27,7 @@
                     "display": "row",
                     "sub_fields": [
                         {
-                            "key": "field_54593fc3d8b9f",
+                            "key": "field_555ce0b8dcb17",
                             "label": "Text",
                             "name": "section_text",
                             "prefix": "",
@@ -175,7 +59,7 @@
                     "display": "row",
                     "sub_fields": [
                         {
-                            "key": "field_5437f2d22fee0",
+                            "key": "field_555ce0b8dcb18",
                             "label": "Image",
                             "name": "image",
                             "prefix": "",
@@ -191,16 +75,16 @@
                             "return_format": "url",
                             "preview_size": "thumbnail",
                             "library": "all",
-                            "min_width": 0,
-                            "min_height": 0,
-                            "min_size": 0,
-                            "max_width": 0,
-                            "max_height": 0,
-                            "max_size": 0,
+                            "min_width": "",
+                            "min_height": "",
+                            "min_size": "",
+                            "max_width": "",
+                            "max_height": "",
+                            "max_size": "",
                             "mime_types": ""
                         },
                         {
-                            "key": "field_5437f3102fee1",
+                            "key": "field_555ce0b8dcb19",
                             "label": "Text",
                             "name": "text",
                             "prefix": "",
@@ -214,15 +98,15 @@
                                 "id": ""
                             },
                             "default_value": "",
-                            "new_lines": "",
-                            "maxlength": "",
                             "placeholder": "",
+                            "maxlength": "",
+                            "rows": "",
+                            "new_lines": "",
                             "readonly": 0,
-                            "disabled": 0,
-                            "rows": ""
+                            "disabled": 0
                         },
                         {
-                            "key": "field_5443e7631d17b",
+                            "key": "field_555ce0b8dcb1a",
                             "label": "Image Location",
                             "name": "image_location",
                             "prefix": "",
@@ -255,7 +139,7 @@
                     "display": "row",
                     "sub_fields": [
                         {
-                            "key": "field_5437f2452fede",
+                            "key": "field_555ce0b8dcb1b",
                             "label": "Image",
                             "name": "image",
                             "prefix": "",
@@ -271,16 +155,16 @@
                             "return_format": "url",
                             "preview_size": "thumbnail",
                             "library": "all",
-                            "min_width": 0,
-                            "min_height": 0,
-                            "min_size": 0,
-                            "max_width": 0,
-                            "max_height": 0,
-                            "max_size": 0,
+                            "min_width": "",
+                            "min_height": "",
+                            "min_size": "",
+                            "max_width": "",
+                            "max_height": "",
+                            "max_size": "",
                             "mime_types": ""
                         },
                         {
-                            "key": "field_5443e8468e7fb",
+                            "key": "field_555ce0b8dcb1c",
                             "label": "Caption",
                             "name": "caption",
                             "prefix": "",
@@ -312,7 +196,7 @@
                     "display": "row",
                     "sub_fields": [
                         {
-                            "key": "field_5437f4ccd8416",
+                            "key": "field_555ce0b8dcb1d",
                             "label": "Blank",
                             "name": "wysiwyg",
                             "prefix": "",
@@ -342,28 +226,21 @@
             {
                 "param": "post_type",
                 "operator": "==",
-                "value": "page"
+                "value": "post"
             }
         ]
     ],
     "menu_order": 0,
-    "position": "acf_after_title",
+    "position": "normal",
     "style": "seamless",
     "label_placement": "top",
     "instruction_placement": "label",
     "hide_on_screen": [
         "the_content",
-        "excerpt",
         "custom_fields",
-        "discussion",
-        "comments",
         "revisions",
-        "author",
         "format",
-        "featured_image",
-        "categories",
-        "tags",
-        "send-trackbacks"
+        "page_attributes"
     ],
-    "modified": 1432150428
+    "modified": 1432150497
 }

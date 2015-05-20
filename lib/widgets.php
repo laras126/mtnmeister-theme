@@ -18,22 +18,24 @@
 // );
 // register_sidebar( $args );
 
+
+
 // ----
-// Footer widgets
+// Blog Sidebar
 // ----
 
 
-$fw_args = array(
-	'id'            => 'footer_widgets',
-	'name'          => __( 'Footer Widgets', 'mtnmeister' ),
-	'description'   => __( 'Widgets in the footer. No more than 4.', 'mtnmeister' ),
-	'class'         => 'widgets-footer',
-	'before_widget' => '<div class="widget widget-fourth">',
+$blg_args = array(
+	'id'            => 'blog_sidebar',
+	'name'          => __( 'Blog Widgets', 'mtnmeister' ),
+	'description'   => __( 'Widgets in the blog sidebar.', 'mtnmeister' ),
+	'class'         => 'widgets-sidebar',
+	'before_widget' => '<div class="widget widget-stacked">',
 	'after_widget'  => '</div>',
 	'before_title'  => '<h4 class="widget-title">',
 	'after_title'   => '</h4>'
 );
-// register_sidebar( $fw_args );
+register_sidebar( $blg_args );
 
 
 

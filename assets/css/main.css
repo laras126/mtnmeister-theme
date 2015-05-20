@@ -468,7 +468,7 @@ th {
   @media (min-width: 58em) {
     .contain-sm,
     .container-squish {
-      max-width: 40em; } }
+      max-width: 48em; } }
   .contain-sm:before, .contain-sm:after,
   .container-squish:before,
   .container-squish:after {
@@ -526,7 +526,7 @@ th {
   .row:after {
     clear: both; }
 
-@media (min-width: 40em) {
+@media (min-width: 48em) {
   .row-sm {
     margin-left: -1rem;
     margin-right: -1rem; }
@@ -700,7 +700,7 @@ th {
   position: relative;
   width: 100%; }
 
-@media (min-width: 40em) {
+@media (min-width: 48em) {
   .col-sm-1 {
     float: left;
     position: relative;
@@ -708,13 +708,13 @@ th {
     padding-right: 1rem;
     width: 8.33333%; } }
 
-@media (min-width: 40em) {
+@media (min-width: 48em) {
   .col-sm-1-np {
     float: left;
     position: relative;
     width: 8.33333%; } }
 
-@media (min-width: 40em) {
+@media (min-width: 48em) {
   .col-sm-2 {
     float: left;
     position: relative;
@@ -722,13 +722,13 @@ th {
     padding-right: 1rem;
     width: 16.66667%; } }
 
-@media (min-width: 40em) {
+@media (min-width: 48em) {
   .col-sm-2-np {
     float: left;
     position: relative;
     width: 16.66667%; } }
 
-@media (min-width: 40em) {
+@media (min-width: 48em) {
   .col-sm-3 {
     float: left;
     position: relative;
@@ -736,13 +736,13 @@ th {
     padding-right: 1rem;
     width: 25%; } }
 
-@media (min-width: 40em) {
+@media (min-width: 48em) {
   .col-sm-3-np {
     float: left;
     position: relative;
     width: 25%; } }
 
-@media (min-width: 40em) {
+@media (min-width: 48em) {
   .col-sm-4 {
     float: left;
     position: relative;
@@ -750,13 +750,13 @@ th {
     padding-right: 1rem;
     width: 33.33333%; } }
 
-@media (min-width: 40em) {
+@media (min-width: 48em) {
   .col-sm-4-np {
     float: left;
     position: relative;
     width: 33.33333%; } }
 
-@media (min-width: 40em) {
+@media (min-width: 48em) {
   .col-sm-5 {
     float: left;
     position: relative;
@@ -764,13 +764,13 @@ th {
     padding-right: 1rem;
     width: 41.66667%; } }
 
-@media (min-width: 40em) {
+@media (min-width: 48em) {
   .col-sm-5-np {
     float: left;
     position: relative;
     width: 41.66667%; } }
 
-@media (min-width: 40em) {
+@media (min-width: 48em) {
   .col-sm-6 {
     float: left;
     position: relative;
@@ -778,13 +778,13 @@ th {
     padding-right: 1rem;
     width: 50%; } }
 
-@media (min-width: 40em) {
+@media (min-width: 48em) {
   .col-sm-6-np {
     float: left;
     position: relative;
     width: 50%; } }
 
-@media (min-width: 40em) {
+@media (min-width: 48em) {
   .col-sm-7 {
     float: left;
     position: relative;
@@ -792,13 +792,13 @@ th {
     padding-right: 1rem;
     width: 58.33333%; } }
 
-@media (min-width: 40em) {
+@media (min-width: 48em) {
   .col-sm-7-np {
     float: left;
     position: relative;
     width: 58.33333%; } }
 
-@media (min-width: 40em) {
+@media (min-width: 48em) {
   .col-sm-8 {
     float: left;
     position: relative;
@@ -806,13 +806,13 @@ th {
     padding-right: 1rem;
     width: 66.66667%; } }
 
-@media (min-width: 40em) {
+@media (min-width: 48em) {
   .col-sm-8-np {
     float: left;
     position: relative;
     width: 66.66667%; } }
 
-@media (min-width: 40em) {
+@media (min-width: 48em) {
   .col-sm-9 {
     float: left;
     position: relative;
@@ -820,13 +820,13 @@ th {
     padding-right: 1rem;
     width: 75%; } }
 
-@media (min-width: 40em) {
+@media (min-width: 48em) {
   .col-sm-9-np {
     float: left;
     position: relative;
     width: 75%; } }
 
-@media (min-width: 40em) {
+@media (min-width: 48em) {
   .col-sm-10 {
     float: left;
     position: relative;
@@ -834,13 +834,13 @@ th {
     padding-right: 1rem;
     width: 83.33333%; } }
 
-@media (min-width: 40em) {
+@media (min-width: 48em) {
   .col-sm-10-np {
     float: left;
     position: relative;
     width: 83.33333%; } }
 
-@media (min-width: 40em) {
+@media (min-width: 48em) {
   .col-sm-11 {
     float: left;
     position: relative;
@@ -848,13 +848,13 @@ th {
     padding-right: 1rem;
     width: 91.66667%; } }
 
-@media (min-width: 40em) {
+@media (min-width: 48em) {
   .col-sm-11-np {
     float: left;
     position: relative;
     width: 91.66667%; } }
 
-@media (min-width: 40em) {
+@media (min-width: 48em) {
   .col-sm-12 {
     float: left;
     position: relative;
@@ -862,7 +862,7 @@ th {
     padding-right: 1rem;
     width: 100%; } }
 
-@media (min-width: 40em) {
+@media (min-width: 48em) {
   .col-sm-12-np {
     float: left;
     position: relative;
@@ -1460,11 +1460,11 @@ button, .menu-item-cta .cta, .btn-alt, .cat-item a, .link-more, .menu-item-cta .
 
 .show-at-sm {
   display: none; }
-  @media (min-width: 40em) {
+  @media (min-width: 48em) {
     .show-at-sm {
       display: block; } }
 
-@media (min-width: 40em) {
+@media (min-width: 48em) {
   .item-desc,
   .item-img {
     float: left;
@@ -1474,7 +1474,7 @@ button, .menu-item-cta .cta, .btn-alt, .cat-item a, .link-more, .menu-item-cta .
 .item-img img {
   display: block;
   margin: 0 auto; }
-  @media (min-width: 40em) {
+  @media (min-width: 48em) {
     .item-img img {
       padding-left: 2rem; } }
 
@@ -1482,7 +1482,7 @@ html {
   line-height: 1.5;
   font-family: Arial, sans-serif;
   font-family: "proxima-nova", Helvetica, sans-serif; }
-  @media (min-width: 40em) {
+  @media (min-width: 48em) {
     html {
       font-size: 110%;
       font-size: 1.3; } }
@@ -1575,7 +1575,7 @@ blockquote {
   margin-right: 0;
   background-image: url(../img/svg-min/quotes-left.min.svg);
   background-repeat: no-repeat; }
-  @media (min-width: 40em) {
+  @media (min-width: 48em) {
     blockquote {
       font-size: 2rem; } }
 
@@ -1921,7 +1921,7 @@ input[type="checkbox"]:focus {
     width: 50%; } }
 .mtn-field-name:first-child {
   padding-left: 0; }
-@media (min-width: 40em) {
+@media (min-width: 48em) {
   .mtn-field-name .name_first,
   .mtn-field-name .name_last {
     float: left;
@@ -2131,7 +2131,7 @@ input[type="checkbox"]:focus {
   font-size: 0.8rem;
   font-weight: 700; }
 
-@media (min-width: 40em) {
+@media (min-width: 48em) {
   .link-postnav {
     float: left;
     position: relative;
@@ -2144,11 +2144,11 @@ input[type="checkbox"]:focus {
   word-break: break-all;
   text-align: center; }
 
-@media (min-width: 40em) {
+@media (min-width: 48em) {
   .prev {
     text-align: left; } }
 
-@media (min-width: 40em) {
+@media (min-width: 48em) {
   .next {
     text-align: right; } }
 
@@ -2159,7 +2159,7 @@ input[type="checkbox"]:focus {
   font-size: 2.55rem;
   font-size: 13vw;
   top: 0.8rem; }
-  @media (min-width: 40em) {
+  @media (min-width: 48em) {
     .page-title {
       font-size: 4.76rem;
       font-size: 14vw;
@@ -2212,7 +2212,7 @@ input[type="checkbox"]:focus {
   text-align: right;
   background-color: rgba(31, 29, 26, 0.3);
   color: #fff; }
-  @media (min-width: 40em) {
+  @media (min-width: 48em) {
     .page-header-caption {
       top: 60px;
       bottom: auto; } }
@@ -2230,7 +2230,7 @@ input[type="checkbox"]:focus {
   bottom: 0;
   z-index: 10;
   border-bottom: #f8992f 3px solid; }
-  @media (min-width: 40em) {
+  @media (min-width: 48em) {
     .page-info {
       border-bottom: 5px solid #f8992f; } }
 
@@ -2263,7 +2263,7 @@ input[type="checkbox"]:focus {
   padding-left: 1rem;
   padding-right: 1rem;
   width: 50%; }
-  @media (min-width: 40em) {
+  @media (min-width: 48em) {
     .image-quarter {
       float: left;
       position: relative;
@@ -2275,7 +2275,7 @@ input[type="checkbox"]:focus {
   padding-left: 1rem;
   padding-right: 1rem;
   width: 33.33333%; }
-  @media (min-width: 40em) {
+  @media (min-width: 48em) {
     .image-sixth {
       float: left;
       position: relative;
@@ -2325,7 +2325,7 @@ input[type="checkbox"]:focus {
 .home .tease-featured-deal {
   border-bottom: 0; }
 
-@media (min-width: 40em) {
+@media (min-width: 48em) {
   .tease-home {
     float: left;
     position: relative;
@@ -2361,7 +2361,7 @@ input[type="checkbox"]:focus {
   padding-left: 1rem;
   padding-right: 1rem;
   width: 100%; }
-  @media (min-width: 40em) {
+  @media (min-width: 48em) {
     .loop-thumbs .tease {
       float: left;
       position: relative;
@@ -2375,7 +2375,7 @@ input[type="checkbox"]:focus {
       padding-left: 1rem;
       padding-right: 1rem;
       width: 33.33333%; } }
-  @media (min-width: 40em) {
+  @media (min-width: 48em) {
     .loop-thumbs .tease:nth-child(2n+1) {
       clear: none; }
     .loop-thumbs .tease:nth-child(3n+1) {
@@ -2420,14 +2420,14 @@ input[type="checkbox"]:focus {
   padding-left: 1rem;
   padding-right: 1rem;
   width: 33.33333%; }
-  @media (min-width: 40em) {
+  @media (min-width: 48em) {
     .loop-related .tease {
       float: left;
       position: relative;
       width: 16.66667%; } }
   .loop-related .tease:nth-child(3n+1) {
     clear: left; }
-  @media (min-width: 40em) {
+  @media (min-width: 48em) {
     .loop-related .tease:nth-child(3n+1) {
       clear: none; } }
 
@@ -2466,7 +2466,7 @@ input[type="checkbox"]:focus {
   padding-left: 1rem;
   padding-right: 1rem;
   width: 100%; }
-  @media (min-width: 40em) {
+  @media (min-width: 48em) {
     .tease-main {
       float: left;
       position: relative;
@@ -2478,7 +2478,7 @@ input[type="checkbox"]:focus {
   padding-left: 1rem;
   padding-right: 1rem;
   width: 100%; }
-  @media (min-width: 40em) {
+  @media (min-width: 48em) {
     .tease-support {
       float: left;
       position: relative;
@@ -2528,7 +2528,7 @@ input[type="checkbox"]:focus {
   .widgets-fancy .widget-stacked {
     border: 1px solid lightgray;
     background-color: #f2f2f2; }
-  @media (min-width: 40em) {
+  @media (min-width: 48em) {
     .widget-stacked {
       float: left;
       position: relative;
@@ -2576,7 +2576,7 @@ input[type="checkbox"]:focus {
     .footer #mc_embed_signup {
       max-width: 100%; } }
 
-@media (min-width: 40em) {
+@media (min-width: 48em) {
   .featured-left,
   .featured-right {
     float: left;
@@ -2599,7 +2599,7 @@ input[type="checkbox"]:focus {
   @media (min-width: 58em) {
     .tease-featured-deal img {
       width: auto; } }
-@media (min-width: 40em) {
+@media (min-width: 48em) {
   .tease-featured-deal .featured-left {
     float: left;
     position: relative;
@@ -2609,7 +2609,7 @@ input[type="checkbox"]:focus {
     float: left;
     position: relative;
     width: 66.66667%; } }
-@media (min-width: 40em) {
+@media (min-width: 48em) {
   .tease-featured-deal .featured-right {
     float: left;
     position: relative;
@@ -2642,19 +2642,19 @@ input[type="checkbox"]:focus {
 .tease-archive {
   text-align: center;
   border-bottom: 1px solid lightgray; }
-  @media (min-width: 40em) {
+  @media (min-width: 48em) {
     .tease-archive {
       text-align: left; } }
   .tease-archive h4 {
     margin-top: 1.3rem; }
-    @media (min-width: 40em) {
+    @media (min-width: 48em) {
       .tease-archive h4 {
         margin-top: 0; } }
   .tease-archive .link-more {
     float: none;
     display: inline-block;
     margin-top: 1.3rem; }
-    @media (min-width: 40em) {
+    @media (min-width: 48em) {
       .tease-archive .link-more {
         margin-top: 0;
         float: right; } }

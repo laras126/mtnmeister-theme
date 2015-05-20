@@ -1,0 +1,166 @@
+{
+    "key": "group_552c0be42be91",
+    "title": "Site Settings",
+    "fields": [
+        {
+            "key": "field_552c0bf45d58b",
+            "label": "Show callout bar?",
+            "name": "callout_tf",
+            "prefix": "",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": 25,
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0
+        },
+        {
+            "key": "field_552c0c1b5d58c",
+            "label": "Callout Bar Text",
+            "name": "callout_bar",
+            "prefix": "",
+            "type": "text",
+            "instructions": "You'll need to use HTML to include links. Like this: &lt;a href=\"http:\/\/mtnmeister.com\/page-name\"&gt;Page Name&lt;\/a&gt;.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": 75,
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": "",
+            "readonly": 0,
+            "disabled": 0
+        },
+        {
+            "key": "field_553edc1825426",
+            "label": "Support Title",
+            "name": "support_title",
+            "prefix": "",
+            "type": "text",
+            "instructions": "Title for the support call to action.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": "",
+            "readonly": 0,
+            "disabled": 0
+        },
+        {
+            "key": "field_552fdbbc30758",
+            "label": "Support Text",
+            "name": "support_text",
+            "prefix": "",
+            "type": "textarea",
+            "instructions": "Text for the support call to action at the bottom of each page. Keep it to two sentences and no links.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": 3,
+            "new_lines": "br",
+            "readonly": 0,
+            "disabled": 0
+        },
+        {
+            "key": "field_553edbcf25424",
+            "label": "Support Link",
+            "name": "support_text_link",
+            "prefix": "",
+            "type": "url",
+            "instructions": "Link to a separate page, or select a page below.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": 33,
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": ""
+        },
+        {
+            "key": "field_553edbf925425",
+            "label": "Support Page",
+            "name": "support_page_link",
+            "prefix": "",
+            "type": "page_link",
+            "instructions": "If not linking to a separate site, select the Support page.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": 33,
+                "class": "",
+                "id": ""
+            },
+            "post_type": [
+                "page"
+            ],
+            "taxonomy": "",
+            "allow_null": 0,
+            "multiple": 0
+        },
+        {
+            "key": "field_553edd897cccc",
+            "label": "Support Button Text",
+            "name": "support_button_text",
+            "prefix": "",
+            "type": "text",
+            "instructions": "Text for the support button. It will be green.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": 33,
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": "",
+            "readonly": 0,
+            "disabled": 0
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "acf-options-site-settings"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "modified": 1432152999,
+    "local": "json"
+}

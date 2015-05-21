@@ -30,10 +30,20 @@
 {% else %}
 
 	<header class="page-header-simple">
-		<div class="container">
-				
-			<h1 class="page-title-simple">{{post.title}}</h1>	
+		<div class="contain">
+			{% if blog_post %}
+			<div class="number-wrap">
+				<div class="number">
+					<span class="meta">{{post.date}}</span>
+				</div>
+			</div>
+			{# <a href="" class="btn-alt">&larr; Blog</a> #}{% endif %}
 			
+			<h1 class="page-title-simple">{{post.title}}</h1>	
+
+			{# Setting a variable here to include date for single blog posts. Probably not ideal. #}
+			{% if blog_post %}<p class="meta">Filed under {% for cat in post.categories %}<a href="{{cat.link}}">{{cat.name}}</a>{{ loop.last ? '' : ', ' }}{% endfor %}</p>{% endif %}
+		
 		</div>
 	</header>
 	

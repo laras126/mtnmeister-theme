@@ -158,21 +158,6 @@ h4 {
 
 // Text and Image block
 
-.image-inline {
-	padding-top: $base;
-	padding-bottom: $base;
-}
-
-	.inline-l {
-		float: left;
-		padding-left: 0;
-	}
-
-	.inline-r {
-		float: right;
-		padding-right: 0;
-	}
-
 .image-half {
 	@include make-xs-column(6);
 } 
@@ -180,12 +165,48 @@ h4 {
 .image-quarter {
 	@include make-xs-column(6);
 	@include make-sm-column(4, false);
-} 
+}
 
-.image-sixth {
-	@include make-xs-column(4);
-	@include make-sm-column(2, false);
-} 
+.image-credit {
+	font-size: $xsml;
+	background-color: rgba(0,0,0,0.6);
+	padding: $xsml/3 $xsml/2;
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	display: inline-block;
+	font-style: italic;
+	color: $accent-vlight;
+	margin: 0;
+
+	a {
+		color: $accent-med;
+	}
+}
+
+.image-caption {
+	// font-stretch: ;
+}
+
+.image-wrap {
+	// padding-top: $base;
+	// padding-bottom: $base;
+	position: relative;
+
+	img {
+		width: 100%;
+	}
+}
+
+	.inline-l {
+		float: left;
+		@extend .bleed-left;
+	}
+
+	.inline-r {
+		padding-right: 0;
+		float: right;
+	}
 
 // Blank Block
 

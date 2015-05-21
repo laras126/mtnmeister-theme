@@ -15,16 +15,11 @@ $context['post'] = $post;
 $context['wp_title'] .= ' - ' . $post->title();
 $context['comment_form'] = TimberHelper::get_comment_form();
 
-
-// Meister context
-
 $context['categories'] = Timber::get_terms('category');
 $context['tags'] = Timber::get_terms('post_tag');
 
-
-if( is_home() ) {
-	$context['sidebar'] = TimberHelper::get_sidebar('sidebar.php');
-}
+$context['sidebar'] = Timber::get_widgets('blog_sidebar');
+$context['sidebar_class'] = 'has-sidebar';
 
 
 

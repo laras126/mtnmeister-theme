@@ -1,17 +1,18 @@
 {% set loc = content.image_location %}
 	
-{# Ew. Probably too much logic in here. #}
-{# Yeah, this makes me want to cry a little bit. TODO: make it better. #}
-
-<div class="block-textimage clearfix">
-
-	{% if content.wrap_text == false %}<div class="col-sm-4 clearfix">{% endif %}
-	<img class="image-inline {% if content.image_size and content.wrap_text %}image-{{content.image_size}}{% endif %} inline-{{ loc == 'left' ? 'l' : 'r' }}" src="{{TimberImage(content.image).src}}" />
-	{% if content.wrap_text == false %}</div>{% endif %}
+<div class="block-textimage">
 	
-	{% if content.wrap_text == false %}<div class="col-sm-8 clearfix">{% endif %}
-	<h4 class="spacer-top">{{content.heading}}</h4>
-	{{content.text}}
-	{% if content.wrap_text == false %}</div>{% endif %}
+	{{ content.heading ? '<h3 class="spacer-top spacer-bot">' ~ content.heading ~ '</h3>' }}
+	
+	<div class="image-wrap{% if content.wrap_text %} inline-{{ loc }}{% endif %} image-{{ content.image_size and content.wrap_text ? content.image_size : 'full bleed-left'}}">
+		
+		<img src="{{TimberImage(content.image).src}}" />
 
-</div>
+		{% if content.image_credit %} <p class="image-credit">Photo Credit: {{ content.image_credit_link ? '<a href="' ~ content.image_credit_link ~ '" target="blank">' }}{{content.image_credit}}{{ content.image_credit_link ? '</a>' }}</p>{% endif %}
+	
+	</div>
+	{% if content.wrap_text == false %}<em>{% endif %}
+	{{content.text}}
+	{% if content.wrap_text == false %}</em>{% endif %}
+
+</div> <!-- /.block-textimage -->

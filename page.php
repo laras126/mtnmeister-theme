@@ -42,6 +42,13 @@ $deal_args = array(
     			'orderby' => 'menu_order'
     		);
 
+// Get Blog Posts
+$post_args = array( 
+				'post_type' => 'post',
+				'posts_per_page' => 10,
+    			'paged' => $paged
+    		);
+
 
 // ---
 // Start the context 
@@ -55,12 +62,16 @@ $post = new TimberPost();
 $context['post'] = $post;
 
 
-// Get custom type content
+// Get post type content. Ideally page names would not be hardcoded here, should likely use archive-meisters.twig, etc. 
+
 if( is_page('Meisters') ) {
 	$context['meisters'] = Timber::get_posts($meister_args);
 } elseif( is_page('Deals') ) {
 	$context['deals'] = Timber::get_posts($deal_args);
-}
+} elseif( is_page('Blog') ) {
+	$context['posts'] = Timber::get_posts($post_args);
+} 
+
 
 // TODO: These should be within theme options or something, and not hardcoded page names.
 // Sidebar, not on deals page
@@ -69,6 +80,7 @@ if( !is_page('Meisters') ) {
 	$context['sidebar_class'] = 'has-sidebar';
 }
 
+// TODO: um, pagination. Or AJAX request the meisters on scroll, that could be cool.
 // $context['pagination'] = Timber::get_pagination();
 
 Timber::render(array('page-' . $post->post_name . '.twig', 'page.twig'), $context);

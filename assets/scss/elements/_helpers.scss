@@ -30,3 +30,46 @@
 	top: -9999999px;
 	left: -999999px;
 }
+
+
+
+// Bleeds
+
+// TODO: it'd be better to remove these hard-coded percentages, and make them gutters or something based on the grid. Oh well, for now at least.
+
+@mixin bleed {
+    @include bp(med) {
+        width: 110%;
+        margin-right: -5%;
+        margin-left: -5%;   
+    }
+}
+
+.bleed {
+    @include bleed;
+}
+
+@mixin inverse-bleed {
+    @include bp(med) {
+        margin-left: 7%;
+        margin-right: 7%;
+    }
+}
+
+.inverse-bleed {
+    @include inverse-bleed;
+}
+
+// Mainly for images.
+
+.bleed-left {
+    @include bp(med) {
+        margin-left: -10%;
+    }
+}
+
+.bleed-right {
+    @include bp(med) {
+        margin-right: -10%;
+    }
+}

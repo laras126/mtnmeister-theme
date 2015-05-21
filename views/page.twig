@@ -4,33 +4,37 @@
 
     {% include 'partials/page-header.twig' %}
 		
-		<div class="page-body">
-			<div class="contain">
-				{% if post.tagline %}<p class="tagline tagline-page">{{post.tagline}}</p>{% endif %}
+		<article class="page-body contain">
+			{% if post.tagline %}<p class="tagline tagline-page">{{post.tagline}}</p>{% endif %}
+		
+			{% block today %}{% endblock %}
+		
+			{{sidebar ? ' <div class="row-md">'}}
+
+			<section class="page-content {{sidebar_class}}">
+				
+				{% if post.introduction %}
+					<p class="lead">{{post.introduction}}</p>	
+				{% endif %}
+				
+				{% block above_content %}{% endblock %}
+				
+				{% if front_page != true and is_index != true %}
+					{% include 'partials/acf-block-loop.twig' %}
+				{% endif %}
 			
-				{% block today %}{% endblock %}
-			
-				{{sidebar ? ' <div class="row-md">'}}
+				{% block below_content %}{% endblock %}
 
-				<section class="page-content {{sidebar_class}}">
-					{% if post.introduction %}
-						<p class="lead">{{post.introduction}}</p>	
-					{% endif %}
-					{% block loop %}{% endblock %}
-					{% if front_page != true %}
-						{% include 'partials/acf-block-loop.twig' %}
-					{% endif %}
-				</section>
+			</section>
 
-				{%  if sidebar %}
-					<aside class="sidebar">
-						{{sidebar}}
-					</aside>
-				</div> <!-- /.row -->
-				{% endif %}	
+			{%  if sidebar %}
+				<aside class="sidebar">
+					{{sidebar}}
+				</aside>
+			</div> <!-- /.row-md -->
+			{% endif %}	
 
-			</div>
-		 </div> <!-- /.page-body -->
+		 </article> <!-- /.page-body -->
 
 		{% block loop_minor %}{% endblock %}
 	

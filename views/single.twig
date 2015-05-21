@@ -1,14 +1,11 @@
+{% set blog_post = true %}
+
 {% extends "page.twig" %}
 
-{% block today %}<p class="meta">{{post.date}}</p>{% endblock %}
+{% block above_content %}
+	
+{% endblock	%}
 
-{# {% block content %}
-
-	{% if post.content_blocks %}
-		<section class="article-section container-squish">
-			{% include 'partials/acf-block-loop.twig'%}
-		</section>
-	{% endif %}
-
-{% endblock %} #}
-
+{% block below_content %}
+	{% include 'partials/disqus.twig' %}
+{% endblock %}

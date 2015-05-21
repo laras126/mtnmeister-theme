@@ -5,7 +5,6 @@
 
 
 .menu-top {
-
 	overflow: hidden;
 	max-height: 0;
 	
@@ -13,8 +12,6 @@
 		overflow: visible;
 		max-height: none;
 	}
-	
-	// transition: all 0.2s ease-in-out;
 	
 	@include make-xs-column(12, false);
 	@include make-md-column(10);
@@ -45,6 +42,7 @@
 // These styles only apply to the top nav
 .menu-item {
 	list-style-type: none;
+	position: relative;
 
 	a {
 		display: block;
@@ -63,30 +61,30 @@
 	}
 }
 
-.menu-item-cta {
+// .menu-item-cta {
 
-	// Bad max width
-	@media(max-width: $screen-md) {
-		.menu-top & {
-			padding-bottom: $sml;
-			width: 100%;
-		}
-	}
+// 	// Bad max width
+// 	@media(max-width: $screen-md) {
+// 		.menu-top & {
+// 			padding-bottom: $sml;
+// 			width: 100%;
+// 		}
+// 		padding-bottom: $sml;
+// 	}
 	
-	.cta { 
-		@extend .btn; 
-	}
+// 	.cta {
+// 		background-color: $accent-med;
+// 	}
 
-	.cta-alt { 
-		@extend .btn-alt; 
-	}
-
-	// Ew!
-	a {
-		font-size: $sml !important;
-		padding: $sml/2 $sml !important;
-	}
-}
+// 	// // Ew!
+// 	// @include bp(med) {
+// 	// 	a {
+// 	// 		font-size: $sml;
+// 	// 		padding: $sml/2 $sml;
+// 	// 	}	
+// 	// }
+	
+// }
 
 
 
@@ -102,6 +100,7 @@
 	}
 
 	.menu-top {
+		overflow: visible;
 		max-height: none;
 		transition: background 0.25s ease-in-out;
 

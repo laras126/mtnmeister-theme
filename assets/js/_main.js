@@ -31,7 +31,20 @@ $(document).ready(function() {
 	});
 
 
-	
+
+	// ----
+	// Search form
+	// ----
+
+	// Drop down search field in header
+
+	$('.shape-search').click(function() {
+		$('.search-field').focus();
+		$('.search-form').addClass('focused');
+		console.log('clicked');
+	});
+
+
 
 	// ----
 	// Fade in the menu background when scrolling

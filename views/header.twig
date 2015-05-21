@@ -1,5 +1,6 @@
+
 <div class="banner {{post.header_display == 'header_image' ? 'banner-enhanced' : 'banner-simple'}}">
-    <div class="container">
+    <div class="contain">
 
         <div class="brand">
             <div class="logo">
@@ -23,9 +24,16 @@
                     <a href="{{item.link}}">{{item.title}}</a>
                 </li>
             {% endfor %}
-                <li class="menu-item menu-item-cta"><a href="https://itunes.apple.com/us/podcast/mtnmeister/id867219182?mt=2" class="cta" target="blank" title="Subscribe on iTunes">iTunes</a></li>
+                {# <li class="menu-item menu-item-cta"><a href="https://itunes.apple.com/us/podcast/mtnmeister/id867219182?mt=2" class="cta" target="blank" title="Subscribe on iTunes">iTunes</a></li> #}
+                <li id="dropSearch" class="menu-item menu-item-search"><svg class="shape shape-search">
+                    <use xlink:href="#shape-search" /></svg>
+                    <form action="/" method="get" class="search-form">
+                        <input type="text" class="search-field" name="s" id="search" placeholder="Search" />
+                    </form>
+                </li>
             </ul>
+
         </nav><!-- /.menu-main -->
-    
+        
     </div>
 </div> <!-- /.banner -->

@@ -80,13 +80,6 @@
 	}
 }
 
-.menu-item-cta {
-	// Bad max width
-	@media(max-width: $screen-md) {
-		padding-bottom: $sml;
-		@include make-xs-column(6, false);	
-	}
-}
 
 
 // Page specific overrides

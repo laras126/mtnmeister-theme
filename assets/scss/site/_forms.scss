@@ -153,3 +153,72 @@ input[type="checkbox"]:focus {
 #mc-embedded-subscribe {
 	border: 1px solid $accent-med;
 }
+
+
+
+// Search form
+
+.menu-item-search {
+	// cursor: pointer;
+}
+
+// A little overspecified, unfortunately
+input.search-field {
+	border-color: $accent-med;
+	margin-bottom: $sml;
+	padding-left: $h2;
+}
+
+.search-field,
+.shape-search {
+	display: inline-block;
+}
+
+.shape-search {
+	position: absolute;
+	fill: $accent-med;
+	cursor: pointer;
+}
+
+.shape-search {
+	fill: $accent-med;
+	height: $h4*1.2;	
+	width: $h2;
+
+	// Magic number to nudge to center of banner. Blah.
+	position: absolute;
+	left: 0;
+	top: $sml;
+
+	@include bp(med) {
+		position: relative;
+		top: $xsml;
+	}
+}
+
+
+@include bp(med) {
+
+	.search-form {
+		// position: absolute;
+		// right: 0;
+		// z-index: $ztop;
+	}
+
+	input.search-field {
+		opacity: 0;
+		position: absolute;
+		top: 48px;
+		width: 250px;
+		right: 0;
+		transition: 0.4s all ease;
+		padding-left: $base;
+		border: 5px solid;
+		border-color: $accent-dark !important; // Cry.
+	}
+
+	input.search-field:focus {
+		opacity: 1;
+	}
+
+}

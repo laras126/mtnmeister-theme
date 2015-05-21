@@ -32,11 +32,7 @@
 	<header class="page-header-simple">
 		<div class="contain">
 			{% if blog_post %}
-			<div class="number-wrap">
-				<div class="number">
-					<span class="meta">{{post.date}}</span>
-				</div>
-			</div>
+				{% include 'partials/post-date.twig' %}
 			{# <a href="" class="btn-alt">&larr; Blog</a> #}{% endif %}
 			
 			<h1 class="page-title-simple">{{post.title}}</h1>	

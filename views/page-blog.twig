@@ -6,7 +6,8 @@
 {% block above_content %}
 	
 	{% for post in posts %}
-		<h2>{{post.title}}</h2>
+		{% include 'partials/post-date.twig' %}
+		<h2><a href="{{post.link}}">{{post.title}}</a></h2>
 		<p class="meta">{{post.date}}, Filed under {% for cat in post.categories %}<a href="{{cat.link}}">{{cat.name}}</a>{{ loop.last ? '' : ', ' }}{% endfor %}</p>
 		{# {% include ['tease-'~post.post_type~'.twig', 'tease.twig'] %} #}
 		{% include 'partials/acf-block-loop.twig' %}

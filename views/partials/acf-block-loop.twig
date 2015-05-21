@@ -14,9 +14,8 @@
         <div class="block-blank">
             {{content.shortcode}}
         </div>
-
-    {% elseif content.acf_fc_layout == 'call_to_action' %} 
-        {% include 'partials/block-cta.twig' %}
+    {% elseif content.acf_fc_layout == 'read_more' %}
+        {% include 'blocks/block-readmore.twig' %}
     {% endif %}
 
 {% endfor %}

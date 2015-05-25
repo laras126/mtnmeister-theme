@@ -1,3 +1,4 @@
+
 .has-sidebar {
 	@include make-md-column(8.5);
 }
@@ -41,18 +42,6 @@
 		background-color: lighten($text-meta, 35%);
 	}
 
-	
-	@include bp(sm) {
-		&:last-child {
-			// margin-right: 0;
-		}
-	}
-
-	@include bp(lg) {
-		// margin-right: 0;
-	}
-
-	// @include make-sm-column(6);
 	@include make-sm-column(4, false);
 	@include make-md-column(12, false);
 

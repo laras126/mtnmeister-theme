@@ -66,6 +66,7 @@ h4 {
 // Page Header
 
 .page-header {
+	
 	overflow: hidden;
 	position: relative;
 
@@ -80,33 +81,27 @@ h4 {
 	
 	@media(min-width: 980px) {
 		padding-top: 45%;
-		// padding-top: 56%;
-	}
-
-	@media(min-width: 1280px) {
-		// padding-top: 50%;
 	}
 
 	@media(min-width: 1420px) {
 		padding-top: 40%;
 	}
 }
+
 	.page-header-image {
 		opacity: 0;
 		position: absolute;
 		margin: auto;
 		width: 100%;
-		top: 0; left: 0; bottom: 0; right: 0;
+		top: 0; 
+		left: 0; 
+		bottom: 0; 
+		right: 0;
 	}
-
 
 	.page-header-simple {
 		padding-top: 10%;
 	}
-
-	// #headerImageLoader {
-	// 	display: none;
-	// }
 
 .page-header-caption {
 	top: 60px;
@@ -197,8 +192,7 @@ h4 {
 }
 
 .image-wrap {
-	// padding-top: $base;
-	// padding-bottom: $base;
+
 	position: relative;
 
 	img {

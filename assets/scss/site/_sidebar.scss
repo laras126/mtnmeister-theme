@@ -41,16 +41,15 @@
 		background-color: lighten($text-meta, 35%);
 	}
 
-	margin-right: $sml;
 	
 	@include bp(sm) {
 		&:last-child {
-			margin-right: 0;
+			// margin-right: 0;
 		}
 	}
 
 	@include bp(lg) {
-		margin-right: 0;
+		// margin-right: 0;
 	}
 
 	// @include make-sm-column(6);

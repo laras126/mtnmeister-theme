@@ -2235,6 +2235,7 @@ input.search-field {
   overflow: hidden;
   position: relative;
   width: 100%;
+  opacity: 0;
   background-color: #043f7e;
   padding-top: 55%; }
   @media (min-width: 980px) {
@@ -2577,8 +2578,7 @@ input.search-field {
 
 .widget-stacked {
   padding: 1rem 1rem 0;
-  margin-bottom: 1.3rem;
-  margin-right: 0.8rem; }
+  margin-bottom: 1.3rem; }
   .widget-stacked p {
     text-align: center;
     padding: 0.8rem;

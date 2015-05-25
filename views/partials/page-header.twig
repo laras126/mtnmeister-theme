@@ -9,6 +9,7 @@
 {% if header_image.image and display != 'text_only' %}
 	<div class="rotate">
 		{% include 'partials/spinner.twig' %}
+		
 		<header class="page-header">
 
 			<picture>
@@ -34,14 +35,19 @@
 
 	<header class="page-header-simple">
 		<div class="contain">
+
+			{# Special content for single blog posts. Variable set to t/f in single.twig. #}
+
 			{% if blog_post %}
 				{% include 'partials/post-date.twig' %}
-			{# <a href="" class="btn-alt">&larr; Blog</a> #}{% endif %}
+			{# <a href="" class="btn-alt">&larr; Blog</a> #}
+			{% endif %}
 			
 			<h1 class="page-title-simple">{{post.title}}</h1>	
 
-			{# Setting a variable here to include date for single blog posts. Probably not ideal. #}
-			{% if blog_post %}<p class="meta">Filed under {% for cat in post.categories %}<a href="{{cat.link}}">{{cat.name}}</a>{{ loop.last ? '' : ', ' }}{% endfor %}</p>{% endif %}
+			{% if blog_post %}
+				<p class="meta">Filed under {% for cat in post.categories %}<a href="{{cat.link}}">{{cat.name}}</a>{{ loop.last ? '' : ', ' }}{% endfor %}</p>
+			{% endif %}
 		
 		</div>
 	</header>

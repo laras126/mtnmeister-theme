@@ -124,10 +124,11 @@ $(document).ready(function() {
 			$t.fadeTo(300, 0.5, function() {
 			    
 				$image.css('opacity', 1);
+				$t.find('.spinner').hide();
 
 			}).fadeTo(300, 1);
 
-			$t.find('.spinner').hide();
+			
 			
 		});
 	});

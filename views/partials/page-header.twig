@@ -11,8 +11,11 @@
 		{% include 'partials/spinner.twig' %}
 		<header class="page-header">
 
-			<img id="headerImageLoader" src="{{TimberImage(header_image.image).src}}" alt="Highlighted meister">
-			<noscript><img src="{{TimberImage(header_image.image).src}}" alt="Highlighted Meister"></noscript>
+			<picture>
+				<source srcset="{{TimberImage(header_image.image).src}}" media="(min-width: 1000px)">
+				<source srcset="{{TimberImage(header_image.image).src|resize(900)}}" media="(min-width: 800px)">
+				<img class="page-header-image" srcset="{{TimberImage(header_image.image).src|resize(600)}}" alt="{{meister[0].title}}">
+			</picture>
 
 			<div class="page-info">
 				<div class="container">

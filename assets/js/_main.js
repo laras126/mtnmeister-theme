@@ -116,15 +116,14 @@ $(document).ready(function() {
 	var $hero = $('.page-header');
 	
 	$hero.each( function() {
-		var $image = $(this).find('#headerImageLoader'),
-			$t = $(this),
-			imageSrc = $image.attr('src');
+		var $image = $(this).find('.page-header-image'),
+			$t = $(this);
 	
 		$(this).imagesLoaded( function() {
 
 			$t.fadeTo(300, 0.5, function() {
 			    
-				$t.css('background-image', 'url(\'' + imageSrc + '\')');
+				$image.css('opacity', 1);
 
 			}).fadeTo(300, 1);
 

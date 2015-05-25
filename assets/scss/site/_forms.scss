@@ -155,12 +155,9 @@ input[type="checkbox"]:focus {
 }
 
 
-
+// ----
 // Search form
-
-.menu-item-search {
-	// cursor: pointer;
-}
+// ----
 
 // A little overspecified, unfortunately
 input.search-field {
@@ -199,14 +196,9 @@ input.search-field {
 
 @include bp(med) {
 
-	.search-form {
-		// position: absolute;
-		// right: 0;
-		// z-index: $ztop;
-	}
-
 	input.search-field {
 		opacity: 0;
+		font-size: $sml;
 		position: absolute;
 		top: 48px;
 		width: 250px;

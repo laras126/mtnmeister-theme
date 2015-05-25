@@ -39,10 +39,24 @@ $(document).ready(function() {
 	// Drop down search field in header
 
 	$('.shape-search').click(function() {
-		$('.search-field').focus();
-		$('.search-form').addClass('focused');
-		console.log('clicked');
+		
+		// NOT working
+		if($('.search-field').is(':focus')) {
+			$('.search-field').focusout();
+			$('.search-form').removeClass('focused');
+		} else {
+			$('.search-field').focus();
+			$('.search-form').addClass('focused');	
+		}
+
 	});
+
+	// $( "#content" ).delegate( "*", "focus blur", function() {
+	//   var elem = $( this );
+	//   setTimeout(function() {
+	//     elem.toggleClass( "focused", elem.is( ":focus" ) );
+	//   }, 0 );
+	// });
 
 
 
@@ -127,8 +141,6 @@ $(document).ready(function() {
 				$t.find('.spinner').hide();
 
 			}).fadeTo(300, 1);
-
-			
 			
 		});
 	});

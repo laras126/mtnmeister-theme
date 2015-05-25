@@ -2004,6 +2004,7 @@ input.search-field {
 @media (min-width: 58em) {
   input.search-field {
     opacity: 0;
+    font-size: 0.8rem;
     position: absolute;
     top: 48px;
     width: 250px;

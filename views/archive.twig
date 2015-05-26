@@ -28,7 +28,7 @@
                         <a href="{{m.link}}" title="{{m.title}}">
                         {% if m.get_thumbnail %}
                             <img class="lazy" data-original="{{m.thumbnail.src}}" src="{{site.url}}/wp-content/themes/mtnmeister-theme/assets/img/util/loader.gif" alt="{{m.title}}"/>
-                            <noscript><img src="{{m.thumbnail.src}}" alt="{{m.title}}" height="300" width="300"></noscript>
+                            <noscript><img src="{{m.thumbnail.src|resize(400)}}" alt="{{m.title}}" height="300" width="300"></noscript>
                         {% endif %}
                         </a>
                     </div>

@@ -11,7 +11,6 @@ $(document).ready(function() {
 		threshold : 600
 	}); // Am I lazy for using this?
 
-	//
 	$('#content').fitVids();
 	
 
@@ -51,17 +50,10 @@ $(document).ready(function() {
 
 	});
 
-	// $( "#content" ).delegate( "*", "focus blur", function() {
-	//   var elem = $( this );
-	//   setTimeout(function() {
-	//     elem.toggleClass( "focused", elem.is( ":focus" ) );
-	//   }, 0 );
-	// });
-
 
 
 	// ----
-	// Fade in the menu background when scrolling
+	// Menu and callout bar
 	// ----
 
   	var $scroll_class = 'banner-opaque',
@@ -71,6 +63,8 @@ $(document).ready(function() {
 		$total_ht = $header_ht - $banner_ht*5;
 	  
 	$(window).scroll(function() {
+
+		// Fade in menu bar background
 		if( $(this).scrollTop() > $total_ht ) {
 			$banner.addClass($scroll_class);
 		} else if($(this).scrollTop() < $total_ht ) {
@@ -78,24 +72,8 @@ $(document).ready(function() {
 		}
 
 		// Fix the banner to the top when callout bar is no longer visible
-
-		/* 
-		
-		if scrolled area is larger than callout bar
-			position fixed
-		else
-			position absolute
-
-		how to tell if callout bar is fixed
-			get height of calloutbar
-			
-
-
-		*/ 
-
 		var callout_ht = $('.callout').outerHeight(),
 			scroll_pos = $(document).scrollTop();
-
 
 		if( scroll_pos > callout_ht ) {
 			$('.banner').addClass('fixed');
@@ -103,23 +81,7 @@ $(document).ready(function() {
 			$('.banner').removeClass('fixed');
 		}
 			
-
 	});
-
-
-
-
-	// ----
-	// Hide/show callout bar according to scroll position
-	// ----
-
-	$(window).scroll(function() {    
-		// http://jsfiddle.net/mdesdev/jJkj2/
-    	// var scroll = ($(this).scrollTop() > 0) ? $('.callout').slideUp(100) : $('.callout').slideDown(100);
-
-    	 // var scroll = ($(this).scrollTop() > 0) ? $('.banner').addClass('fixed', 1000);
-  	});
-
 
 
 

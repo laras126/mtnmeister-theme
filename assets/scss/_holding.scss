@@ -1,4 +1,16 @@
 
+
+// Not ideal. Should only be on one element.
+.page-body,
+.page-title-simple {
+	// @include bp(small) {
+	// 	padding-right: $sml;
+	// 	padding-left: $sml;	
+	// }
+}
+
+
+
 // Hide the sprites
 .svgsprites {
 	display: none;
@@ -39,9 +51,6 @@
 	}
 }
 
-.tease-featured:not(.tease-featured-deal) {
-	// @extend %full_width;
-}
 
 .tease-featured-deal {
 

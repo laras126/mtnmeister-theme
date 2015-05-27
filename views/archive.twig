@@ -9,61 +9,12 @@
 	    	<h1 class="tagline tagline-page">{{title}}</h1>
     	</header>
     	
-        <section class="article-section">
+        {% include 'tease/tease-archive.twig' with {type: 'meister', text:'Episodes'} %}
+        {% include 'tease/tease-archive.twig' with {type: 'gear'} %}
+        {# {% include 'tease/tease-archive.twig' with type: 'post' %} #}
 
-            <header class="article-section-header">
-                {% include 'partials/micro/decor-title.twig' with {text:'Episodes'} %}
-            </header>
-        
-        {% for post in posts %}
-            {% if post.post_type == 'meister' %}
-        
-                {% set m = post %}
 
-                <div class="clearfix tease tease-archive">
-
-                    <div class="col-sm-3">
-                        <a href="{{m.link}}" title="{{m.title}}">
-                        {% if m.get_thumbnail %}
-                            <img class="lazy" data-original="{{m.thumbnail.src|resize(400)}}" src="{{site.url}}/wp-content/themes/mtnmeister-theme/assets/img/util/loader.gif" alt="{{m.title}}"/>
-                            <noscript><img src="{{m.thumbnail.src|resize(400)}}" alt="{{m.title}}" height="300" width="300"></noscript>
-                        {% endif %}
-                        </a>
-                    </div>
-                    
-                    <div class="col-sm-9">
-
-                        <div class="row">
-                            <div class="col-sm-9">
-                                <h4 class="tagline no-margin"><a href="{{m.link}}" title="{{m.title}}"><span class="special">#{{m.episode_num}}</span> {{m.episode_tag}}</a></h4>        
-                            </div>
-                            <div class="col-sm-3">
-                                <a href="{{m.link}}" class="link-more no-margin">Listen &rarr;</a>
-                            </div>
-                        </div>
-                        
-                        
-                        <p class="tagline tagline-tease">{{m.name}}</p>
-                        
-                        {% if m.categories %}
-
-                            <ul class="list-cats meta">
-                                {% for cat in m.categories|slice(0,3) %}
-                                    <li class="cat-item"><a href="{{cat.link}}">{{cat.name}}</a></li>
-                                {% endfor %}
-                            </ul>
-
-                        {% endif %}
-                        
-                            <br>
-                        {% include 'partials/micro/list-tags.twig' with {tags: m.tags} %}
-                        
-                    </div>
-                </div>
-            {% endif %}
-
-        {% endfor %} 
-        </section>
+       
 
        {#  <section class="article-section">
 

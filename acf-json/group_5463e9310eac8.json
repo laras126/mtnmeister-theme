@@ -12,7 +12,7 @@
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "",
+                "width": 50,
                 "class": "",
                 "id": ""
             },
@@ -25,29 +25,21 @@
             "disabled": 0
         },
         {
-            "key": "field_540728abaa52e",
-            "label": "Photo",
-            "name": "gear_photo",
+            "key": "field_54072903aa530",
+            "label": "Link",
+            "name": "gear_link",
             "prefix": "",
-            "type": "image",
-            "instructions": "500x500",
+            "type": "url",
+            "instructions": "",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "",
+                "width": 50,
                 "class": "",
                 "id": ""
             },
-            "return_format": "url",
-            "preview_size": "thumbnail",
-            "library": "all",
-            "min_width": 0,
-            "min_height": 0,
-            "min_size": 0,
-            "max_width": 0,
-            "max_height": 0,
-            "max_size": 0,
-            "mime_types": ""
+            "default_value": "",
+            "placeholder": ""
         },
         {
             "key": "field_540728c4aa52f",
@@ -72,21 +64,29 @@
             "disabled": 0
         },
         {
-            "key": "field_54072903aa530",
-            "label": "Link",
-            "name": "gear_link",
+            "key": "field_540728abaa52e",
+            "label": "Photo",
+            "name": "gear_photo",
             "prefix": "",
-            "type": "url",
-            "instructions": "",
+            "type": "image",
+            "instructions": "500x500",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "",
+                "width": 25,
                 "class": "",
                 "id": ""
             },
-            "default_value": "",
-            "placeholder": ""
+            "return_format": "url",
+            "preview_size": "thumbnail",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": ""
         },
         {
             "key": "field_54072918aa531",
@@ -98,7 +98,7 @@
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "",
+                "width": 75,
                 "class": "",
                 "id": ""
             },
@@ -110,9 +110,37 @@
                 "search"
             ],
             "elements": "",
+            "min": "",
             "max": "",
-            "return_format": "object",
-            "min": 0
+            "return_format": "object"
+        },
+        {
+            "key": "field_55663cfef6562",
+            "label": "Connected Meister",
+            "name": "meister_to_gear",
+            "prefix": "",
+            "type": "relationship",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "post_type": [
+                "meister"
+            ],
+            "taxonomy": "",
+            "filters": [
+                "search",
+                "post_type",
+                "taxonomy"
+            ],
+            "elements": "",
+            "min": "",
+            "max": "",
+            "return_format": "object"
         }
     ],
     "location": [
@@ -126,7 +154,7 @@
     ],
     "menu_order": 0,
     "position": "normal",
-    "style": "seamless",
+    "style": "default",
     "label_placement": "top",
     "instruction_placement": "label",
     "hide_on_screen": [
@@ -141,6 +169,5 @@
         "page_attributes",
         "send-trackbacks"
     ],
-    "local": "json",
-    "modified": 1432224494
+    "modified": 1432763681
 }

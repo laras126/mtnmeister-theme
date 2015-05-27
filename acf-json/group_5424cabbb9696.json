@@ -12,7 +12,7 @@
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "",
+                "width": 50,
                 "class": "",
                 "id": ""
             },
@@ -34,7 +34,7 @@
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "",
+                "width": 50,
                 "class": "",
                 "id": ""
             },
@@ -45,46 +45,6 @@
             "maxlength": "",
             "readonly": 0,
             "disabled": 0
-        },
-        {
-            "key": "field_5424cb05846c4",
-            "label": "Deal Vendor",
-            "name": "deal_vendor",
-            "prefix": "",
-            "type": "text",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "maxlength": "",
-            "readonly": 0,
-            "disabled": 0
-        },
-        {
-            "key": "field_55142dca5dd08",
-            "label": "Expiration Date",
-            "name": "expiration_date",
-            "prefix": "",
-            "type": "date_picker",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "display_format": "m\/d\/Y",
-            "return_format": "d\/m\/Y",
-            "first_day": 1
         },
         {
             "key": "field_5424cb1f846c5",
@@ -96,37 +56,20 @@
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "",
+                "width": 25,
                 "class": "",
                 "id": ""
             },
             "return_format": "array",
             "preview_size": "thumbnail",
             "library": "all",
-            "min_width": 0,
-            "min_height": 0,
-            "min_size": 0,
-            "max_width": 0,
-            "max_height": 0,
-            "max_size": 0,
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
             "mime_types": ""
-        },
-        {
-            "key": "field_5424cb39846c6",
-            "label": "Link",
-            "name": "deal_link",
-            "prefix": "",
-            "type": "url",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": ""
         },
         {
             "key": "field_5424cb5b846c8",
@@ -138,7 +81,7 @@
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "",
+                "width": 75,
                 "class": "",
                 "id": ""
             },
@@ -150,9 +93,66 @@
                 "search"
             ],
             "elements": "",
+            "min": "",
             "max": "",
-            "return_format": "object",
-            "min": 0
+            "return_format": "object"
+        },
+        {
+            "key": "field_5424cb05846c4",
+            "label": "Deal Vendor",
+            "name": "deal_vendor",
+            "prefix": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": 50,
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": "",
+            "readonly": 0,
+            "disabled": 0
+        },
+        {
+            "key": "field_5424cb39846c6",
+            "label": "Link",
+            "name": "deal_link",
+            "prefix": "",
+            "type": "url",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": 50,
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": ""
+        },
+        {
+            "key": "field_55142dca5dd08",
+            "label": "Expiration Date",
+            "name": "expiration_date",
+            "prefix": "",
+            "type": "date_picker",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": 50,
+                "class": "",
+                "id": ""
+            },
+            "display_format": "m\/d\/Y",
+            "return_format": "d\/m\/Y",
+            "first_day": 1
         },
         {
             "key": "field_5425d9843c593",
@@ -164,7 +164,7 @@
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "",
+                "width": 50,
                 "class": "",
                 "id": ""
             },
@@ -206,6 +206,5 @@
         "page_attributes",
         "send-trackbacks"
     ],
-    "modified": 1432224494,
-    "local": "json"
+    "modified": 1432763512
 }

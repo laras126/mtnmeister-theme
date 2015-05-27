@@ -87,6 +87,15 @@ if ( is_admin() ) { // check to make sure we aren't on the front end
 	}
 }
 
+// Extend search to include all custom types
+// function mtn_filter_search($query) {
+//     if ($query->is_search) {
+// 	$query->set('post_type', array('post', 'meister', 'gear'));
+//     };
+//     return $query;
+// };
+// add_filter('pre_get_posts', 'mtn_filter_search');
+
 
 // Extend WordPress search to include custom fields
 // http://adambalee.com

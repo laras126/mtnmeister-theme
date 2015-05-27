@@ -141,12 +141,12 @@
             ]
         },
         {
-            "key": "field_54f88a4f2b36e",
+            "key": "field_5437f1ee2fedd",
             "label": "Content Blocks",
             "name": "content_blocks",
             "prefix": "",
             "type": "flexible_content",
-            "instructions": "Custom content.",
+            "instructions": "Note: if this is the \"Meisters\" or \"Deals\" page, this content will show below the Deal\/Meister posts.",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -165,26 +165,7 @@
                     "display": "row",
                     "sub_fields": [
                         {
-                            "key": "field_54f88a4f2b36f",
-                            "label": "Text",
-                            "name": "section_text",
-                            "prefix": "",
-                            "type": "wysiwyg",
-                            "instructions": "Plain paragraph text. No headlines. This will display in two columns at desktop view.",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "default_value": "",
-                            "tabs": "all",
-                            "toolbar": "text_based",
-                            "media_upload": 1
-                        },
-                        {
-                            "key": "field_54f88a4f2b370",
+                            "key": "field_546962b3ad161",
                             "label": "Heading",
                             "name": "heading",
                             "prefix": "",
@@ -204,6 +185,25 @@
                             "maxlength": "",
                             "readonly": 0,
                             "disabled": 0
+                        },
+                        {
+                            "key": "field_54593fc3d8b9f",
+                            "label": "Text",
+                            "name": "section_text",
+                            "prefix": "",
+                            "type": "wysiwyg",
+                            "instructions": "Plain paragraph text. No headlines. This will display in two columns at desktop view.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "tabs": "all",
+                            "toolbar": "text_based",
+                            "media_upload": 1
                         }
                     ],
                     "min": "",
@@ -213,19 +213,41 @@
                     "key": "5437f2c02fedf",
                     "name": "text_image_block",
                     "label": "Text and Image Block",
-                    "display": "row",
+                    "display": "block",
                     "sub_fields": [
                         {
-                            "key": "field_54f88a4f2b371",
-                            "label": "Image",
-                            "name": "image",
+                            "key": "field_5469627959403",
+                            "label": "Heading",
+                            "name": "heading",
                             "prefix": "",
-                            "type": "image",
-                            "instructions": "This image will be on the left!",
+                            "type": "text",
+                            "instructions": "Add a heading for this block. Leave blank if you only want paragraph text.",
                             "required": 0,
                             "conditional_logic": 0,
                             "wrapper": {
                                 "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": "",
+                            "readonly": 0,
+                            "disabled": 0
+                        },
+                        {
+                            "key": "field_5437f2d22fee0",
+                            "label": "Image",
+                            "name": "image",
+                            "prefix": "",
+                            "type": "image",
+                            "instructions": "Upload an image.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": 50,
                                 "class": "",
                                 "id": ""
                             },
@@ -241,12 +263,130 @@
                             "mime_types": ""
                         },
                         {
-                            "key": "field_54f88a4f2b372",
-                            "label": "Text",
+                            "key": "field_553ece82fa860",
+                            "label": "Wrap text?",
+                            "name": "wrap_text",
+                            "prefix": "",
+                            "type": "true_false",
+                            "instructions": "This is for images that will display inline with the text, and are not full width. Leave unchecked for full width images with a caption.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": 50,
+                                "class": "",
+                                "id": ""
+                            },
+                            "message": "",
+                            "default_value": 0
+                        },
+                        {
+                            "key": "field_5443e7631d17b",
+                            "label": "Image Location",
+                            "name": "image_location",
+                            "prefix": "",
+                            "type": "radio",
+                            "instructions": "Should the image be shown on the right or left?",
+                            "required": 0,
+                            "conditional_logic": [
+                                [
+                                    {
+                                        "field": "field_553ece82fa860",
+                                        "operator": "==",
+                                        "value": "1"
+                                    }
+                                ]
+                            ],
+                            "wrapper": {
+                                "width": 50,
+                                "class": "",
+                                "id": ""
+                            },
+                            "choices": {
+                                "l": "Left",
+                                "r": "Right"
+                            },
+                            "other_choice": 0,
+                            "save_other_choice": 0,
+                            "default_value": "",
+                            "layout": "horizontal"
+                        },
+                        {
+                            "key": "field_553d411691247",
+                            "label": "Image Size",
+                            "name": "image_size",
+                            "prefix": "",
+                            "type": "radio",
+                            "instructions": "How much space should the image take up?",
+                            "required": 0,
+                            "conditional_logic": [
+                                [
+                                    {
+                                        "field": "field_553ece82fa860",
+                                        "operator": "==",
+                                        "value": "1"
+                                    }
+                                ]
+                            ],
+                            "wrapper": {
+                                "width": 50,
+                                "class": "",
+                                "id": ""
+                            },
+                            "choices": {
+                                "half": "Half",
+                                "quarter": "Quarter"
+                            },
+                            "other_choice": 0,
+                            "save_other_choice": 0,
+                            "default_value": "half",
+                            "layout": "vertical"
+                        },
+                        {
+                            "key": "field_555e03bca015f",
+                            "label": "Image Credit",
+                            "name": "image_credit",
+                            "prefix": "",
+                            "type": "text",
+                            "instructions": "Text to display underneath the photo.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": 50,
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "Photo credit:",
+                            "append": "",
+                            "maxlength": "",
+                            "readonly": 0,
+                            "disabled": 0
+                        },
+                        {
+                            "key": "field_555e0406a0160",
+                            "label": "Image Credit Link",
+                            "name": "image_credit_link",
+                            "prefix": "",
+                            "type": "url",
+                            "instructions": "Link to the photographer's website or original location of the image.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": 50,
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": ""
+                        },
+                        {
+                            "key": "field_5437f3102fee1",
+                            "label": "Text or Caption",
                             "name": "text",
                             "prefix": "",
                             "type": "wysiwyg",
-                            "instructions": "This will be descriptive text to the right of the image.",
+                            "instructions": "If \"Wrap text\" is true, this will display as normal paragraph text wrapped around the image.<br>Otherwise, this content should be a short caption to display alongside a full width image.",
                             "required": 0,
                             "conditional_logic": 0,
                             "wrapper": {
@@ -258,51 +398,6 @@
                             "tabs": "all",
                             "toolbar": "text_based",
                             "media_upload": 1
-                        },
-                        {
-                            "key": "field_54f88a4f2b373",
-                            "label": "Image Location",
-                            "name": "image_location",
-                            "prefix": "",
-                            "type": "radio",
-                            "instructions": "Should the image be shown on the right or left?",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "choices": {
-                                "Right": "Right",
-                                "Left": "Left"
-                            },
-                            "other_choice": 0,
-                            "save_other_choice": 0,
-                            "default_value": "",
-                            "layout": "horizontal"
-                        },
-                        {
-                            "key": "field_54f88a4f2b374",
-                            "label": "Heading",
-                            "name": "heading",
-                            "prefix": "",
-                            "type": "text",
-                            "instructions": "Leave blank if you only want paragraph text.",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "default_value": "",
-                            "placeholder": "",
-                            "prepend": "",
-                            "append": "",
-                            "maxlength": "",
-                            "readonly": 0,
-                            "disabled": 0
                         }
                     ],
                     "min": "",
@@ -315,7 +410,7 @@
                     "display": "row",
                     "sub_fields": [
                         {
-                            "key": "field_54f88a4f2b376",
+                            "key": "field_54b52422b0ef0",
                             "label": "Shortcode",
                             "name": "shortcode",
                             "prefix": "",
@@ -344,7 +439,7 @@
                     "display": "row",
                     "sub_fields": [
                         {
-                            "key": "field_54f88a4f2b377",
+                            "key": "field_5437f4ccd8416",
                             "label": "Blank",
                             "name": "wysiwyg",
                             "prefix": "",
@@ -471,6 +566,7 @@
     "menu_order": 3,
     "position": "normal",
     "style": "default",
+    "modified": 1432224494,
     "label_placement": "top",
     "instruction_placement": "field",
     "hide_on_screen": ""

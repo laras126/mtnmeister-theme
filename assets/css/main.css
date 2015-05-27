@@ -1802,10 +1802,6 @@ figure {
   background-size: 100%;
   background-image: url("../img/svg-raw/mtns-wide.svg");
   background-repeat: no-repeat; }
-  @media (min-width: 48em) {
-    .main {
-      padding-right: 0.8rem;
-      padding-left: 0.8rem; } }
 
 .main-cta {
   padding-top: 6.8rem;

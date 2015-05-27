@@ -69,9 +69,9 @@ function mtn_editor_styles() {
 add_action( 'after_setup_theme', 'mtn_editor_styles' );
 
 
+
 // Make custom fields work with Yoast SEO (only impacts the light, but helpful!)
 // https://imperativeideas.com/making-custom-fields-work-yoast-wordpress-seo/
-
 if ( is_admin() ) { // check to make sure we aren't on the front end
 	add_filter('wpseo_pre_analysis_post_content', 'mtn_add_custom_to_yoast');
 
@@ -98,11 +98,8 @@ if ( is_admin() ) { // check to make sure we aren't on the front end
 }
 
 
-/**
- * Extend WordPress search to include custom fields
- *
- * http://adambalee.com
- */
+// Extend WordPress search to include custom fields
+// http://adambalee.com
 
 function cf_search_join( $join ) {
     global $wpdb;

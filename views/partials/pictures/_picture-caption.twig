@@ -1,0 +1,5 @@
+<picture>
+	<source srcset="{{TimberImage(image).src}}" media="(min-width: 1000px)">
+	<source srcset="{{TimberImage(image).src|resize(900)}}" media="(min-width: 800px)">
+	<img srcset="{{TimberImage(image).src|resize(600)}}" alt="{{post.title}}">
+</picture>

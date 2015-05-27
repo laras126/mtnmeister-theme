@@ -1,28 +1,22 @@
-{% set loc = content.image_location %}
 	
 <div class="block-textimage clearfix">
 	
 	{{ content.heading ? '<h3 class="spacer-top spacer-bot">' ~ content.heading ~ '</h3>' }}
 	
-	<div class="image-wrap{% if content.wrap_text %} inline-{{ loc }}{% endif %} image-{{ content.image_size and content.wrap_text ? content.image_size : 'full bleed-left'}}">
-		
-		{% if not content.wrap_text %}
-			{# Different dimensions for captioned, full width images #}
-			<picture>
-				<source srcset="{{TimberImage(content.image).src}}" media="(min-width: 1000px)">
-				<source srcset="{{TimberImage(content.image).src|resize(900)}}" media="(min-width: 800px)">
-				<img srcset="{{TimberImage(content.image).src|resize(600)}}" alt="{{post.title}}">
-			</picture>
-		{% else %}
-			<img src="{{TimberImage(content.image).src}}" />
-		{% endif %}
+	{% include 'partials/pictures/picture-logic.twig' with 
+		{
+		 	image: content.image, 
+			loc: content.image_location, 
+			wrap: content.wrap_text,
+			size: content.image_size,
+			credit: content.image_credit,
+			credit_link: content.image_credit_link
 
-		{% if content.image_credit %} <p class="image-credit">Photo Credit: {{ content.image_credit_link ? '<a href="' ~ content.image_credit_link ~ '" target="blank">' }}{{content.image_credit}}{{ content.image_credit_link ? '</a>' }}</p>{% endif %}
-	
-	</div> <!-- /.image-wrap -->
+		} 
+	%}
 
 	{% if content.wrap_text == false %}<em>{% endif %}
-	{{content.text}}
+		{{content.text}}
 	{% if content.wrap_text == false %}</em>{% endif %}
 
 </div> <!-- /.block-textimage -->

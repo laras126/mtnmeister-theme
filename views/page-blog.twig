@@ -1,4 +1,3 @@
-{# NOTE: This is getting a little too logicy... #}
 {% set is_index = true %}
 
 {% extends "page.twig" %}
@@ -6,12 +5,7 @@
 {% block above_content %}
 	
 	{% for post in posts %}
-		{% include 'partials/post-date.twig' %}
-		<h2><a href="{{post.link}}">{{post.title}}</a></h2>
-		<p class="meta">{{post.date}}, Filed under {% for cat in post.categories %}<a href="{{cat.link}}">{{cat.name}}</a>{{ loop.last ? '' : ', ' }}{% endfor %}</p>
-		{# {% include ['tease-'~post.post_type~'.twig', 'tease.twig'] %} #}
-		{% include 'partials/acf-block-loop.twig' %}
-		{{function('edit_post_link', 'Edit Post', '<span class="edit-link">', '</span>', post.ID)}}
+		{% include ['tease/tease-'~post.post_type~'.twig', 'tease/tease.twig'] %}
 	{% endfor %}
 
 {% endblock %}

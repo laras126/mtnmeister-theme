@@ -1,3 +1,1 @@
-{% if post.can_edit %}
-    <a class="edit-link" href="{{post.edit_link}}">Edit this</a>
-{% endif %}
+{{function('edit_post_link', 'Edit Post', '<span class="edit-link">', '</span>', post.ID)}}

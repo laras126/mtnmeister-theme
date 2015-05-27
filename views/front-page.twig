@@ -1,8 +1,7 @@
 {% set front_page = true %}
 {% extends "page.twig" %}
 
-{% block today %}
-	
+{% block below_title %}
 
 	{# NOTE: 
 		- It would be better to not have today's meister an array, but fine for now. 
@@ -13,64 +12,64 @@
 
 {% block above_content %}
 
-		<section class="article-section">
-			{% for m in meisters|slice(0,1) %}
-				<header class="tease-header">
-					<div class="number-wrap">
-						<div class="number">
-							<span class="meta">Recent Episode</span>
-						</div>
-					</div>
-
-					<h4 class="tagline"><a href="{{m.link}}">{{m.episode_tag}}</a></h4>
-					<div class="row">
-						<div class="col-xs-7">
-							<p class="tagline tagline-tease">{{m.title}}</p>
-						</div>
-						<div class="col-xs-5">
-							<a class="link-more" href="{{m.link}}" title="Meisters">Read More &rarr;</a>	
-						</div>
-					</div>
-				</header>
-				
-				<div class="tease-body">
-					{{m.episode_soundcloud_small}}
-					{% include 'partials/cat-list.twig' %}
-					<p>{{m.meister_bio}}</p>
-				</div>
-
-			{% endfor %}
-		</section> <!-- /.article-section -->
-
-		<section class="article-section">
-			{% for d in post.get_field('featured_deal') %}
-				{% include 'tease/tease-todays_deal.twig' %}
-			{% endfor %}
-		</section> <!-- /.article-section -->
-
-		<section class="article-section">
-			{% include 'partials/acf-block-loop.twig' %}
-		</section> <!-- /.article-section -->
-
-		<section class="front-feed article-section">
-			<header class="clearfix">
+	<section class="article-section">
+		{% for m in meisters|slice(0,1) %}
+			<header class="tease-header">
 				<div class="number-wrap">
 					<div class="number">
-						<span class="meta">The Meisters</span>
+						<span class="meta">Recent Episode</span>
 					</div>
 				</div>
-				<div class="col-sm-8-np">
-					<h4><a href="{{site.link}}/meisters" title="All Episodes">More Episodes</a></h4>	
-				</div>
-				<div class="col-sm-4-np">
-					<a class="link-more" href="{{site.link}}/meisters" title="All Episodes">See&nbsp;all&nbsp;&rarr;</a>
+
+				<h4 class="tagline"><a href="{{m.link}}">{{m.episode_tag}}</a></h4>
+				<div class="row">
+					<div class="col-xs-7">
+						<p class="tagline tagline-tease">{{m.title}}</p>
+					</div>
+					<div class="col-xs-5">
+						<a class="link-more" href="{{m.link}}" title="Meisters">Read More &rarr;</a>	
+					</div>
 				</div>
 			</header>
-			<div class="row loop-thumbs">
-				{% for m in meisters|slice(1,3) %}
-					{% include 'tease/tease-minor_meister.twig' %}
-				{% endfor %}
+			
+			<div class="tease-body">
+				{{m.episode_soundcloud_small}}
+				{% include 'partials/cat-list.twig' %}
+				<p>{{m.meister_bio}}</p>
 			</div>
-		</section> <!-- /.article-section -->
+
+		{% endfor %}
+	</section> <!-- /.article-section -->
+
+	<section class="article-section">
+		{% for d in post.get_field('featured_deal') %}
+			{% include 'tease/tease-todays_deal.twig' %}
+		{% endfor %}
+	</section> <!-- /.article-section -->
+
+	<section class="article-section">
+		{% include 'partials/acf-block-loop.twig' %}
+	</section> <!-- /.article-section -->
+
+	<section class="front-feed article-section">
+		<header class="clearfix">
+			<div class="number-wrap">
+				<div class="number">
+					<span class="meta">The Meisters</span>
+				</div>
+			</div>
+			<div class="col-sm-8-np">
+				<h4><a href="{{site.link}}/meisters" title="All Episodes">More Episodes</a></h4>	
+			</div>
+			<div class="col-sm-4-np">
+				<a class="link-more" href="{{site.link}}/meisters" title="All Episodes">See&nbsp;all&nbsp;&rarr;</a>
+			</div>
+		</header>
+		<div class="row loop-thumbs">
+			{% for m in meisters|slice(1,3) %}
+				{% include 'tease/tease-minor_meister.twig' %}
+			{% endfor %}
+		</div>
+	</section> <!-- /.article-section -->
 		
 {% endblock %}

@@ -2,8 +2,10 @@
 
 {% extends "page.twig" %}
 
+{% block below_title %}{% endblock	%}
+
 {% block above_content %}
-	
+	{% include 'partials/edit-link.twig' %}
 {% endblock	%}
 
 {% block below_content %}

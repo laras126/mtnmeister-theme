@@ -2,8 +2,8 @@
 <article class="tease tease-featured">
 	
 	<header class="tease-header">
-		<div class="number-wrap">
-			<div class="number"><span># {{m.episode_num}}</span><span class="meta" style="font-weight: 400">{{m.date}}</span></div>
+		<div class="decor-wrap">
+			<div class="decor-text"><span># {{m.episode_num}}</span><span class="meta">{{m.date}}</span></div>
 		</div>
 		<h2 class="tease-title"><a href="{{m.link}}">{{m.episode_tag}}</a></h2>
 		<p class="tagline tagline-tease">{{m.title}}</p>
@@ -16,7 +16,7 @@
 
 		<div class="featured-right">
 			{% set post = m %}
-			{% include 'partials/cat-list.twig' %}			
+			{% include 'partials/micro/list-cats.twig' %}			
 			<p>{{m.meister_bio|truncate(80)}}</p>
 			<div class="clearfix">
 				<div class="col-xs-12-np col-sm-6-np">

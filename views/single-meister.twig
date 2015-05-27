@@ -6,8 +6,9 @@
 	
 		<header class="article-header">
 			<div class="container-squish">
-				<span class="number-wrap">
-					<div class="number"><span># {{post.episode_num}}</span></div>
+				<span class="decor-wrap">
+					{# TODO: remove nbsp's #}
+					<div class="decor-text"><span>&nbsp;&nbsp;# {{post.episode_num}}</span></div>
 				</span>
 				<p class="tagline tagline-tease">{{post.title}}</p>
 				<h1 class="article-title">{{post.episode_tag}}</h1>
@@ -16,14 +17,9 @@
 		
 		<div class="contain episode-embed">
 			{{post.episode_soundcloud_small}}
-			{% if post.tags %}
-				<ul class="list-tags text-center">
-					<li class="meta">Tagged: </li>
-				    {% for tag in post.tags %}
-				        <li class="tag"><a href="{{tag.link}}">{{tag.name}}</a></li>
-				    {% endfor %}
-				</ul>
-			{% endif %}
+			<div class="text-center">
+				{% include 'partials/micro/list-tags.twig' with {tags: post.tags} %}
+			</div>
 			<br>
 		</div>
 

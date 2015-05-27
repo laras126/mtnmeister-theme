@@ -8,7 +8,7 @@
 
 {% if header_image.image and display != 'text_only' %}
 	<div class="rotate">
-		{% include 'partials/spinner.twig' %}
+		{% include 'partials/micro/spinner.twig' %}
 		
 		<header class="page-header">
 
@@ -40,7 +40,7 @@
 
 			{% if blog_post %}
 				<a href="{{site.link}}/blog" class="btn-alt">&larr; All posts</a>
-				{% include 'partials/post-date.twig' %}
+				{% include 'partials/micro/post-date.twig' %}
 			{% endif %}
 			
 			<h1 class="page-title-simple">{{post.title}}</h1>	

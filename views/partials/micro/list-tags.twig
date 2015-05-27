@@ -1,0 +1,9 @@
+
+{% if tags %}
+	<ul class="list-tags">
+	    <li class="meta">Tagged:</li>
+	    {% for tag in tags %}
+	        <li class="tag"><a href="{{tag.link}}">{{tag.name}}</a></li>
+	    {% endfor %}
+	</ul>
+{% endif %}

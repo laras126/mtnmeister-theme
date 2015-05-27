@@ -2,7 +2,7 @@
 	<section class="article-section container-squish">
 
 		<div class="featured-left">
-			{% include 'partials/cat-list.twig' %}
+			{% include 'partials/micro/list-cats.twig' %}
 			<p>{{post.meister_bio}}</p>
 			{% include 'partials/share-btns.twig' %}
 		</div>
@@ -109,5 +109,5 @@
 	{% endif %}
 	
 	<div class="contain-sm">
-		{% include 'partials/disqus.twig' %}
+		{% include 'partials/micro/disqus.twig' %}
 	</div>

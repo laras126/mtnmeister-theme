@@ -6,10 +6,7 @@
 <article class="tease tease-featured tease-featured-deal clearfix">
 	
 	<header class="tease-header">
-		<div class="number-wrap">
-			<div class="number"><span class="meta">Featured Deal</span></div>
-		</div>
-		
+		{% include 'partials/micro/decor-title.twig' with {text:'Featured Deal'} %}
 		<h4>
 			<a href="{{d.deal_link}}" target="blank" title="{{d.post_title}}">{{d.post_title}}</a>
 			<svg class="shape shape-icon shape-meta"><use xlink:href="#shape-new-window"/></svg>
@@ -48,7 +45,7 @@
 			{% endif %}
 		</a>
 		<a class="btn-cta" href="{{d.deal_link}}" target="blank" title="{{d.post_title}}">Grab it</a>	
-		{% include "partials/deal-date-logic.twig" %}
+		{% include "partials/micro/date-logic.twig" %}
 	</div>
 
 </article> <!-- /.tease -->

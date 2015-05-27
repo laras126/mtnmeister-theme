@@ -3,8 +3,10 @@
 {% block content %}
 
 	<header class="tease-header">
-		<div class="number-wrap">
-			<div class="number">
+		
+		{# TODO: abstract into partial - centered-decor-title or something. #}
+		<div class="decor-wrap">
+			<div class="decor-text">
 				<span># {{m.episode_num}}</span>
 				<span class="meta">{{m.date}}</span>
 			</div>
@@ -23,7 +25,7 @@
 	
 	<div class="tease-body">
 		{{m.episode_soundcloud_small}}
-		{% include 'partials/cat-list.twig' %}
+		{% include 'partials/micro/cat-list.twig' %}
 	</div>
 
 {% endblock %}

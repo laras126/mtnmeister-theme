@@ -12,9 +12,7 @@
         <section class="article-section">
 
             <header class="article-section-header">
-                <div class="number-wrap">
-                    <div class="number"><span class="meta">Episodes</span></div>
-                </div>
+                {% include 'partials/micro/decor-title.twig' with {text:'Episodes'} %}
             </header>
         
         {% for post in posts %}
@@ -49,23 +47,17 @@
                         
                         {% if m.categories %}
 
-                        <ul class="list-cats meta">
-                            {% for cat in m.categories|slice(0,3) %}
-                                <li class="cat-item"><a href="{{cat.link}}">{{cat.name}}</a></li>
-                            {% endfor %}
-                        </ul>
-
-                        {% endif %}
-
-                        {% if m.tags %}
-                            <br>
-                            <ul class="list-tags">
-                                <li class="meta">Tagged:</li>
-                                {% for tag in m.tags|slice(0,5) %}
-                                    <li class="tag"><a href="{{tag.link}}">{{tag.name}}</a></li>
+                            <ul class="list-cats meta">
+                                {% for cat in m.categories|slice(0,3) %}
+                                    <li class="cat-item"><a href="{{cat.link}}">{{cat.name}}</a></li>
                                 {% endfor %}
                             </ul>
+
                         {% endif %}
+                        
+                            <br>
+                        {% include 'partials/micro/list-tags.twig' with {tags: m.tags} %}
+                        
                     </div>
                 </div>
             {% endif %}

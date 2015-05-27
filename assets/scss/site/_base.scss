@@ -65,7 +65,7 @@ img {
 
 // Episode number with surrounding line border
 
-.number {
+.decor-text {
 	@extend %upperspace;
 	border-bottom: $accent-border; 
 	position:relative; 
@@ -78,8 +78,7 @@ img {
 	}
 }
 
-
-.number-wrap{
+.decor-wrap{
 	display: block; 
     margin: 0;
     @extend .clearfix;

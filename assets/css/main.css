@@ -1385,12 +1385,12 @@ th {
   .row:after {
     clear: both; }
 
-.clearfix:before, .item:before, .main:before, .number-wrap:before, .tease-deal:before,
-.tease-featured-deal:before, .clearfix:after, .item:after, .main:after, .number-wrap:after, .tease-deal:after,
+.clearfix:before, .item:before, .main:before, .decor-wrap:before, .tease-deal:before,
+.tease-featured-deal:before, .clearfix:after, .item:after, .main:after, .decor-wrap:after, .tease-deal:after,
 .tease-featured-deal:after {
   content: " ";
   display: table; }
-.clearfix:after, .item:after, .main:after, .number-wrap:after, .tease-deal:after,
+.clearfix:after, .item:after, .main:after, .decor-wrap:after, .tease-deal:after,
 .tease-featured-deal:after {
   clear: both; }
 
@@ -1424,7 +1424,7 @@ input[type="tel"] {
 
 .btn, .btn-cta, input[type="submit"],
 button, .btn-alt, .cat-item a, .link-more, .btn-alt-dark, .btn-tweet, .ginput_complex label, .widget-stacked p,
-.meta, .cat-item, .block-title, .tagline, .number, label, .menu-item a, .link-postnav, h4, .page-title {
+.meta, .cat-item, .block-title, .tagline, .decor-text, label, .menu-item a, .link-postnav, h4, .page-title {
   text-transform: uppercase;
   letter-spacing: 1px; }
 
@@ -1809,16 +1809,16 @@ img {
   padding-top: 6.8rem;
   padding-bottom: 6.8rem; }
 
-.number {
+.decor-text {
   border-bottom: 1px solid lightgray;
   position: relative; }
-  .number span {
+  .decor-text span {
     position: relative;
     top: 0.53333rem;
     padding: 0 0.8rem 0 0;
     background-color: #fff; }
 
-.number-wrap {
+.decor-wrap {
   display: block;
   margin: 0; }
 

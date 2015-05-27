@@ -1,11 +1,9 @@
 {% for content in post.get_field('content_blocks') %}
 
-    {% if content.acf_fc_layout == 'large_image_block' %}
-        {% include 'blocks/block-text-image.twig' %}
-	{% elseif content.acf_fc_layout == 'text_block' %}
-        {% include 'blocks/block-text.twig' %}
+    {% if content.acf_fc_layout == 'text_block' %}
+        {% include 'blocks/_block-text.twig' %}
     {% elseif content.acf_fc_layout == 'text_image_block' %}
-		{% include 'blocks/block-text-image.twig' %}
+		{% include 'blocks/_block-text-image.twig' %}
     {% elseif content.acf_fc_layout == 'blank' %}
         <div class="block-blank">
             {{content.wysiwyg}}

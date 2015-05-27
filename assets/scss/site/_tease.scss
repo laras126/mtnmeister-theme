@@ -4,6 +4,7 @@
 .tease {
 	padding-bottom: $base;
 	margin-bottom: $h2;
+	@include clearfix;
 }
 
 .tease-deal,
@@ -157,15 +158,3 @@
 	font-weight: 700;
 }
 
-
-// Teases that have some layout
-
-.tease-main {
-	@include make-xs-column(12);
-	@include make-sm-column(8, false);
-}
-
-.tease-support {
-	@include make-xs-column(12);
-	@include make-sm-column(4, false);
-}

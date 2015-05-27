@@ -73,32 +73,36 @@ $gutter:                    $h3;
 // ----
 // For wrapping nested columns
 
+// TODO: incorporate clearfix into mixin instead of in each class.
+
 @mixin make-row($gutter: $gutter, $margin: true) {
     @if $margin == true {
         margin-left:  ($gutter / -2);
         margin-right: ($gutter / -2);      
     }
-  
-    @include clearfix();
 }
 
 .row {
+    @include clearfix();
     @include make-row();
 }
 
 .row-sm {
+    @include clearfix;
     @include bp(small) {
-        @include make-row();   
+        @include make-row();  
     }
 }
 
 .row-md {
+    @include clearfix();
     @include bp(med) {
         @include make-row();   
     }
 }
 
 .row-lg {
+    @include clearfix();
     @include bp(large) {
         @include make-row();   
     }
@@ -125,6 +129,7 @@ $gutter:                    $h3;
         padding-right: ($gutter / 2);
     }
 }
+
 
 
 

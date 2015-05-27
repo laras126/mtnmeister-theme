@@ -4,7 +4,6 @@
 	{% include 'partials/micro/post-date.twig' %}
 
 	<h3><a href="{{post.link}}">{{post.title}}</a></h3>
-	<a href="{{post.link}}" class="btn-alt">Read more &rarr;</a>
 	<p class="meta">Filed under {% for cat in post.categories %}<a href="{{cat.link}}">{{cat.name}}</a>{{ loop.last ? '' : ', ' }}{% endfor %}</p>
 	{% if post.get_thumbnail %}
 		{% include 'partials/pictures/picture-logic.twig' with 
@@ -17,5 +16,6 @@
 		%}
 	{% endif %}
 	{{post.get_preview(40, false, '...', false)}}
+	<a href="{{post.link}}" class="link-more">Read more &rarr;</a>
 	{% include 'partials/micro/edit-link.twig' %}
 {% endblock %}

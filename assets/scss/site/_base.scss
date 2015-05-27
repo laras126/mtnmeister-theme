@@ -17,13 +17,23 @@ img {
 	display: block;
 	margin: 0 auto;
 	
-	@include bp(sml) {
+	@include bp(small) {
 		margin: auto;
 	}
 }
 
+figure {
+	margin: 0 $sml;
+}
+
 .main {
 	@extend .clearfix;
+	
+	@include bp(small) {
+		padding-right: $sml;
+		padding-left: $sml;	
+	}
+	
 	background-position: bottom center; 
 	background-size: 100%;
 	background-image: url('../img/svg-raw/mtns-wide.svg');

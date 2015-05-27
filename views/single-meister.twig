@@ -51,18 +51,22 @@
 		<footer class="contain">
 			<div class="loop-related">
 
-				<header class="clearfix article-section-header">
-					<div class="col-sm-8-np">
-						<h4 class="tagline">Related Episodes</h4>
-					</div>
-					<div class="col-sm-4-np">
-						<a class="link-more" href="{{site.link}}/meisters" title="All Episodes">See&nbsp;all&nbsp;&rarr;</a>
+				<header class="article-section-header">
+					<div class="row-sm">
+
+						<div class="col-sm-8">
+							<h4 class="tagline">Related Episodes</h4>
+						</div>
+						<div class="col-sm-4">
+							<a class="link-more" href="{{site.link}}/meisters" title="All Episodes">See&nbsp;all&nbsp;&rarr;</a>
+						</div>
+
 					</div>
 				</header>
 	
 				<section class="row">
 				{% for m in related_meisters %}
-					<div class="tease tease-related">
+					<div class="tease">
 
 						<a href="{{m.link}}" title="{{m.title}}">
 						{% if m.get_thumbnail %}

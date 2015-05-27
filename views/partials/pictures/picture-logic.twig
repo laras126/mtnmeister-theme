@@ -13,7 +13,7 @@
 		- credit_link: image credit link
  #}
 
-<div class="image-wrap{% if wrap %} inline-{{ loc }}{% endif %} image-{{size and wrap ? size : 'full bleed-left'}}">
+<figure class="image-wrap{% if wrap %} inline-{{ loc }}{% endif %} image-{{size and wrap ? size : 'full bleed-left'}}">
 	
 	{% if wrap %}
 		{% include 'partials/pictures/_picture-inline.twig'%}
@@ -21,6 +21,6 @@
 		{% include 'partials/pictures/_picture-caption.twig'%}
 	{% endif %}
 
-	{% if credit %} <p class="image-credit">Photo Credit: {{ credit_link ? '<a href="' ~ content.image_credit_link ~ '" target="blank">' }}{{credit}}{{credit_link ? '</a>' }}</p>{% endif %}
+	{% if credit %} <p class="image-credit">Photo Credit: {{ credit_link ? '<a href="' ~ credit_link ~ '" target="blank">' }}{{credit}}{{credit_link ? '</a>' }}</p>{% endif %}
 
-</div> <!-- /.image-wrap -->
+</figure> <!-- /.image-wrap -->

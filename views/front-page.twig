@@ -51,11 +51,13 @@
 	<section class="front-feed article-section">
 		<header class="clearfix">
 			{% include 'partials/micro/decor-title.twig' with {text: 'The Meisters'} %}
-			<div class="col-sm-8-np">
-				<h4><a href="{{site.link}}/meisters" title="All Episodes">More Episodes</a></h4>	
-			</div>
-			<div class="col-sm-4-np">
-				<a class="link-more" href="{{site.link}}/meisters" title="All Episodes">See&nbsp;all&nbsp;&rarr;</a>
+			<div class="row-sm">
+				<div class="col-sm-8">
+					<h4><a href="{{site.link}}/meisters" title="All Episodes">All Episodes</a></h4>	
+				</div>
+				<div class="col-sm-4">
+					<a class="link-more" href="{{site.link}}/meisters" title="All Episodes">See&nbsp;all&nbsp;&rarr;</a>
+				</div>
 			</div>
 		</header>
 		<div class="row loop-thumbs">

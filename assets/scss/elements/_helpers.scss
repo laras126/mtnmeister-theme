@@ -39,9 +39,9 @@
 
 @mixin bleed {
     @include bp(med) {
-        width: 110%;
-        margin-right: -5%;
-        margin-left: -5%;   
+        width: 108%;
+        margin-right: -4%;
+        margin-left: -4%;   
     }
 }
 
@@ -64,12 +64,12 @@
 
 .bleed-left {
     @include bp(med) {
-        margin-left: -10%;
+        margin-left: -8%;
     }
 }
 
 .bleed-right {
     @include bp(med) {
-        margin-right: -10%;
+        margin-right: -8%;
     }
 }

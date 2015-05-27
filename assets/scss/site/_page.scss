@@ -162,12 +162,12 @@ h4 {
 // Text and Image block
 
 .image-half {
-	@include make-xs-column(6);
+	@include make-sm-column(6, false);
 } 
 
 .image-quarter {
-	@include make-xs-column(6);
-	@include make-sm-column(4, false);
+	@include make-sm-column(6, false);
+	@include make-md-column(4, false);
 }
 
 .image-credit {
@@ -192,22 +192,42 @@ h4 {
 }
 
 .image-wrap {
-
+	display: block;
 	position: relative;
+	margin-bottom: $sml;
 
+	@include bp(small) {
+		display: inline-block;
+	}
+	
 	img {
 		width: 100%;
 	}
 }
 
+	figcaption {
+		font-style: italic;
+
+		p {
+			margin-top: 0;
+		}
+	}
+
 	.inline-l {
-		float: left;
+		@include bp(small) {
+			float: left;	
+			padding-left: 0;
+		}
+		
 		@extend .bleed-left;
+		
 	}
 
 	.inline-r {
-		padding-right: 0;
-		float: right;
+		@include bp(small) {
+			padding-right: 0;
+			float: right;
+		}
 	}
 
 // Blank Block

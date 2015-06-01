@@ -17,36 +17,6 @@
     }
 }
 
-// Buttons
-@mixin button( $button-color, $text-color: $white, $size: med ) {
-	background: $button-color;
-	font-weight: 700;
-	transition: background 0.25s;
-	
-	// TODO: BAD BAD
-	// Remove important
-	// Or is this better than a new style to override the <a> color?
-	color: $text-color !important;
-	
-	@if $size == sml {
-		padding: $sml/3 $sml*.75;
-		font-size: $sml;
-	} @else {
-		@extend %form-base;	
-	}
-	
-	@extend %btn;
-
-	&:hover,
-	&:focus {
-		background: darken( $button-color, 20% );
-		color: $text-color;
-	}
-
-	&:active {
-		background: darken( $button-color, 40% );
-	}
-}
 
 
 

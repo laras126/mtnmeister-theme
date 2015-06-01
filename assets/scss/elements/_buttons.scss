@@ -1,7 +1,44 @@
+%btn {
+	font-weight: 700;
+	transition: background 0.25s;
+	text-decoration: none;  
+    border: 0;
+    cursor: pointer;
+    @include upperspace;
+}
+
+// Buttons
+@mixin button( $button-color, $text-color: $white, $size: med ) {
+	@extend %btn;
+	background: $button-color;
+	
+	// TODO: BAD BAD
+	// Remove important
+	// Or is this better than a new style to override the <a> color?
+	color: $text-color !important;
+	
+	@if $size == sml {
+		padding: $sml/3 $sml*.75;
+		font-size: $sml;
+	} @else {
+		@extend %form-base;	
+	}
+	
+	&:hover,
+	&:focus {
+		background: darken( $button-color, 20% );
+		color: $text-color;
+	}
+
+	&:active {
+		background: darken( $button-color, 40% );
+	}
+}
+
+
 .btn {
 	@include button($accent-med);
-	cursor: pointer;
-	-webkit-appearance: none;
+	// -webkit-appearance: none; - what was this?
 }
 
 .btn-alt {
@@ -17,7 +54,7 @@
 }
 
 .btn-cta {
-	@extend .btn;
+	@include button($accent-med);
 	display: block;
 	text-align: center;
 }

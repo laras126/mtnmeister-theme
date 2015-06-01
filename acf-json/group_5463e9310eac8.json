@@ -113,34 +113,6 @@
             "min": "",
             "max": "",
             "return_format": "object"
-        },
-        {
-            "key": "field_55663cfef6562",
-            "label": "Connected Meister",
-            "name": "meister_to_gear",
-            "prefix": "",
-            "type": "relationship",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "post_type": [
-                "meister"
-            ],
-            "taxonomy": "",
-            "filters": [
-                "search",
-                "post_type",
-                "taxonomy"
-            ],
-            "elements": "",
-            "min": "",
-            "max": "",
-            "return_format": "object"
         }
     ],
     "location": [
@@ -169,5 +141,5 @@
         "page_attributes",
         "send-trackbacks"
     ],
-    "modified": 1432763681
+    "modified": 1432766966
 }

@@ -6,7 +6,7 @@ html {
 
 	@include bp(small) {
 		font-size: $contain-sm;
-		font-size: $line-height-base;
+		line-height: $line-height-base;
 	}
 
 	@include bp(med) {
@@ -49,16 +49,6 @@ h1, h2, h3, h4, h5, h6 {
 	margin-bottom: 0;
 }
 
-//
-// %h1-%h6 placeholders for font-size utility use.
-//
-
-%h1 { font-size: $h1; }
-%h2 { font-size: $h2; }
-%h3 { font-size: $h3; }
-%h4 { font-size: $h4; }
-%h5 { font-size: $h5; }
-%h6 { font-size: $sml; }
 
 h1 {
 	@extend %h1;
@@ -118,10 +108,6 @@ blockquote {
 .lead {
 	@extend %h4;
 	margin-top: 0;
-}
-
-.special {
-	color: $accent-med;
 }
 
 .caption,

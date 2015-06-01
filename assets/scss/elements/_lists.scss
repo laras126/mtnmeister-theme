@@ -1,3 +1,5 @@
+
+
 // Lists
 
 %list-meta-item {
@@ -22,7 +24,7 @@
 }
 
 	.cat-item  {
-		@extend %upperspace;
+		 @include upperspace;
 		
 		a {
 			@extend .btn-alt;

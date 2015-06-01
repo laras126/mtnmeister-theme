@@ -1,11 +1,18 @@
+// ----
+// Rotate
+// ----
 
-.rotate {
+// Navy by default
+.rotate { 
 	@include rotate($text: $text-light, $bkgd: $accent-dark, $link-clr: $accent-light);
 	border-top: $accent-border-large;
 }
 
 
-// Some WP classes
+
+// ----
+// WP classes
+// ----
 
 .alignleft {
 	float: left;
@@ -15,6 +22,12 @@
 	float: right;
 }
 
+
+
+// ----
+// Spacers
+// ----
+
 .spacer-top {
 	margin-top: $h3;
 }
@@ -23,17 +36,11 @@
 	margin-bottom: $h3;
 }
 
-//
-
-.visually-hidden {
-	position: absolute;
-	top: -9999999px;
-	left: -999999px;
-}
 
 
-
+// ----
 // Bleeds
+// ----
 
 // TODO: it'd be better to remove these hard-coded percentages, and make them gutters or something based on the grid. Oh well, for now at least.
 
@@ -45,10 +52,7 @@
     }
 }
 
-.bleed {
-    @include bleed;
-}
-
+// Otherwise known as "squish"
 @mixin inverse-bleed {
     @include bp(med) {
         margin-left: 7%;
@@ -60,16 +64,34 @@
     @include inverse-bleed;
 }
 
-// Mainly for images.
-
-.bleed-left {
-    @include bp(med) {
-        margin-left: -8%;
-    }
+.bleed {
+    @include bleed;
 }
 
-.bleed-right {
-    @include bp(med) {
-        margin-right: -8%;
+    .bleed-left {
+        @include bp(med) {
+            margin-left: -8%;
+        }
     }
+
+    .bleed-right {
+        @include bp(med) {
+            margin-right: -8%;
+        }
+    }
+
+
+
+// ----
+// Misc
+// ----
+
+.visually-hidden {
+    position: absolute;
+    top: -9999999px;
+    left: -999999px;
+}
+
+.special {
+    color: $accent-med;
 }

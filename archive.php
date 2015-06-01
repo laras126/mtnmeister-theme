@@ -14,6 +14,15 @@
  * @since 		Timber 0.2
  */
 
+		// Get Meister names from connected gear
+
+	/*
+
+		name of gear
+		query meisters for those with connected gear of that name
+		return that meisters name and link
+
+	*/
 
 		$templates = array('archive.twig', 'index.twig');
 

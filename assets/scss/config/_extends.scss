@@ -42,11 +42,6 @@
 
 // -- Forms
 
-%btn {
-	text-decoration: none;  
-    border: 0;
-    @extend %upperspace;
-}
 
 // Used for consistent form sizing
 %form-base {
@@ -57,10 +52,9 @@
 
 
 
-
 // -- Typography
 
-%upperspace {
+@mixin upperspace {
     text-transform: uppercase;
     letter-spacing: 1px; 
 }
@@ -68,7 +62,7 @@
 %meta,
 .meta {
     color: $text-meta;
-    @extend %upperspace;
+     @include upperspace;
     font-size: $sml;
     font-weight: 400;
 }

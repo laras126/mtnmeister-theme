@@ -1,4 +1,4 @@
 <picture>
 	<source srcset="{{TimberImage(image).src|resize(400)}}" media="(min-width: 800px)">
-	<img srcset="{{TimberImage(image).src|resize(600)}}" alt="{{post.title}}">
+	<img srcset="{{TimberImage(image).src|resize(600)}}" alt="{{post.title|striptags}}">
 </picture>

@@ -235,8 +235,7 @@ select {
  *    `input` and others.
  */
 button,
-html input[type="button"],
-input[type="reset"],
+html input[type="button"], input[type="reset"],
 input[type="submit"] {
   -webkit-appearance: button;
   /* 2 */
@@ -454,6 +453,7 @@ th {
     -webkit-transform: scale(0); }
   40% {
     -webkit-transform: scale(1); } }
+
 @keyframes bouncedelay {
   0%, 80%, 100% {
     transform: scale(0);
@@ -461,6 +461,7 @@ th {
   40% {
     transform: scale(1);
     -webkit-transform: scale(1); } }
+
 .contain-sm,
 .container-squish {
   margin: 0 auto;
@@ -469,7 +470,8 @@ th {
     .contain-sm,
     .container-squish {
       max-width: 48em; } }
-  .contain-sm:before, .contain-sm:after,
+  .contain-sm:before,
+  .contain-sm:after,
   .container-squish:before,
   .container-squish:after {
     content: " ";
@@ -488,7 +490,8 @@ th {
     .contain,
     .container {
       max-width: 58em; } }
-  .contain-md:before, .contain-md:after,
+  .contain-md:before,
+  .contain-md:after,
   .contain:before,
   .contain:after,
   .container:before,
@@ -508,7 +511,8 @@ th {
     .contain-lg,
     .container-stretch {
       max-width: 64em; } }
-  .contain-lg:before, .contain-lg:after,
+  .contain-lg:before,
+  .contain-lg:after,
   .container-stretch:before,
   .container-stretch:after {
     content: " ";
@@ -520,37 +524,47 @@ th {
 .row {
   margin-left: -1rem;
   margin-right: -1rem; }
-  .row:before, .row:after {
+  .row:before,
+  .row:after {
     content: " ";
     display: table; }
   .row:after {
     clear: both; }
 
-.row-sm:before, .row-sm:after {
+.row-sm:before,
+.row-sm:after {
   content: " ";
   display: table; }
+
 .row-sm:after {
   clear: both; }
+
 @media (min-width: 48em) {
   .row-sm {
     margin-left: -1rem;
     margin-right: -1rem; } }
 
-.row-md:before, .row-md:after {
+.row-md:before,
+.row-md:after {
   content: " ";
   display: table; }
+
 .row-md:after {
   clear: both; }
+
 @media (min-width: 58em) {
   .row-md {
     margin-left: -1rem;
     margin-right: -1rem; } }
 
-.row-lg:before, .row-lg:after {
+.row-lg:before,
+.row-lg:after {
   content: " ";
   display: table; }
+
 .row-lg:after {
   clear: both; }
+
 @media (min-width: 64em) {
   .row-lg {
     margin-left: -1rem;
@@ -561,24 +575,24 @@ th {
   position: relative;
   padding-left: 1rem;
   padding-right: 1rem;
-  width: 8.33333%; }
+  width: 8.3333333333%; }
 
 .col-xs-1-np {
   float: left;
   position: relative;
-  width: 8.33333%; }
+  width: 8.3333333333%; }
 
 .col-xs-2 {
   float: left;
   position: relative;
   padding-left: 1rem;
   padding-right: 1rem;
-  width: 16.66667%; }
+  width: 16.6666666667%; }
 
 .col-xs-2-np {
   float: left;
   position: relative;
-  width: 16.66667%; }
+  width: 16.6666666667%; }
 
 .col-xs-3 {
   float: left;
@@ -597,24 +611,24 @@ th {
   position: relative;
   padding-left: 1rem;
   padding-right: 1rem;
-  width: 33.33333%; }
+  width: 33.3333333333%; }
 
 .col-xs-4-np {
   float: left;
   position: relative;
-  width: 33.33333%; }
+  width: 33.3333333333%; }
 
 .col-xs-5 {
   float: left;
   position: relative;
   padding-left: 1rem;
   padding-right: 1rem;
-  width: 41.66667%; }
+  width: 41.6666666667%; }
 
 .col-xs-5-np {
   float: left;
   position: relative;
-  width: 41.66667%; }
+  width: 41.6666666667%; }
 
 .col-xs-6 {
   float: left;
@@ -633,24 +647,24 @@ th {
   position: relative;
   padding-left: 1rem;
   padding-right: 1rem;
-  width: 58.33333%; }
+  width: 58.3333333333%; }
 
 .col-xs-7-np {
   float: left;
   position: relative;
-  width: 58.33333%; }
+  width: 58.3333333333%; }
 
 .col-xs-8 {
   float: left;
   position: relative;
   padding-left: 1rem;
   padding-right: 1rem;
-  width: 66.66667%; }
+  width: 66.6666666667%; }
 
 .col-xs-8-np {
   float: left;
   position: relative;
-  width: 66.66667%; }
+  width: 66.6666666667%; }
 
 .col-xs-9 {
   float: left;
@@ -669,24 +683,24 @@ th {
   position: relative;
   padding-left: 1rem;
   padding-right: 1rem;
-  width: 83.33333%; }
+  width: 83.3333333333%; }
 
 .col-xs-10-np {
   float: left;
   position: relative;
-  width: 83.33333%; }
+  width: 83.3333333333%; }
 
 .col-xs-11 {
   float: left;
   position: relative;
   padding-left: 1rem;
   padding-right: 1rem;
-  width: 91.66667%; }
+  width: 91.6666666667%; }
 
 .col-xs-11-np {
   float: left;
   position: relative;
-  width: 91.66667%; }
+  width: 91.6666666667%; }
 
 .col-xs-12 {
   float: left;
@@ -706,13 +720,13 @@ th {
     position: relative;
     padding-left: 1rem;
     padding-right: 1rem;
-    width: 8.33333%; } }
+    width: 8.3333333333%; } }
 
 @media (min-width: 48em) {
   .col-sm-1-np {
     float: left;
     position: relative;
-    width: 8.33333%; } }
+    width: 8.3333333333%; } }
 
 @media (min-width: 48em) {
   .col-sm-2 {
@@ -720,13 +734,13 @@ th {
     position: relative;
     padding-left: 1rem;
     padding-right: 1rem;
-    width: 16.66667%; } }
+    width: 16.6666666667%; } }
 
 @media (min-width: 48em) {
   .col-sm-2-np {
     float: left;
     position: relative;
-    width: 16.66667%; } }
+    width: 16.6666666667%; } }
 
 @media (min-width: 48em) {
   .col-sm-3 {
@@ -748,13 +762,13 @@ th {
     position: relative;
     padding-left: 1rem;
     padding-right: 1rem;
-    width: 33.33333%; } }
+    width: 33.3333333333%; } }
 
 @media (min-width: 48em) {
   .col-sm-4-np {
     float: left;
     position: relative;
-    width: 33.33333%; } }
+    width: 33.3333333333%; } }
 
 @media (min-width: 48em) {
   .col-sm-5 {
@@ -762,13 +776,13 @@ th {
     position: relative;
     padding-left: 1rem;
     padding-right: 1rem;
-    width: 41.66667%; } }
+    width: 41.6666666667%; } }
 
 @media (min-width: 48em) {
   .col-sm-5-np {
     float: left;
     position: relative;
-    width: 41.66667%; } }
+    width: 41.6666666667%; } }
 
 @media (min-width: 48em) {
   .col-sm-6 {
@@ -790,13 +804,13 @@ th {
     position: relative;
     padding-left: 1rem;
     padding-right: 1rem;
-    width: 58.33333%; } }
+    width: 58.3333333333%; } }
 
 @media (min-width: 48em) {
   .col-sm-7-np {
     float: left;
     position: relative;
-    width: 58.33333%; } }
+    width: 58.3333333333%; } }
 
 @media (min-width: 48em) {
   .col-sm-8 {
@@ -804,13 +818,13 @@ th {
     position: relative;
     padding-left: 1rem;
     padding-right: 1rem;
-    width: 66.66667%; } }
+    width: 66.6666666667%; } }
 
 @media (min-width: 48em) {
   .col-sm-8-np {
     float: left;
     position: relative;
-    width: 66.66667%; } }
+    width: 66.6666666667%; } }
 
 @media (min-width: 48em) {
   .col-sm-9 {
@@ -832,13 +846,13 @@ th {
     position: relative;
     padding-left: 1rem;
     padding-right: 1rem;
-    width: 83.33333%; } }
+    width: 83.3333333333%; } }
 
 @media (min-width: 48em) {
   .col-sm-10-np {
     float: left;
     position: relative;
-    width: 83.33333%; } }
+    width: 83.3333333333%; } }
 
 @media (min-width: 48em) {
   .col-sm-11 {
@@ -846,13 +860,13 @@ th {
     position: relative;
     padding-left: 1rem;
     padding-right: 1rem;
-    width: 91.66667%; } }
+    width: 91.6666666667%; } }
 
 @media (min-width: 48em) {
   .col-sm-11-np {
     float: left;
     position: relative;
-    width: 91.66667%; } }
+    width: 91.6666666667%; } }
 
 @media (min-width: 48em) {
   .col-sm-12 {
@@ -874,13 +888,13 @@ th {
     position: relative;
     padding-left: 1rem;
     padding-right: 1rem;
-    width: 8.33333%; } }
+    width: 8.3333333333%; } }
 
 @media (min-width: 58em) {
   .col-md-1-np {
     float: left;
     position: relative;
-    width: 8.33333%; } }
+    width: 8.3333333333%; } }
 
 @media (min-width: 58em) {
   .col-md-2 {
@@ -888,13 +902,13 @@ th {
     position: relative;
     padding-left: 1rem;
     padding-right: 1rem;
-    width: 16.66667%; } }
+    width: 16.6666666667%; } }
 
 @media (min-width: 58em) {
   .col-md-2-np {
     float: left;
     position: relative;
-    width: 16.66667%; } }
+    width: 16.6666666667%; } }
 
 @media (min-width: 58em) {
   .col-md-3 {
@@ -916,13 +930,13 @@ th {
     position: relative;
     padding-left: 1rem;
     padding-right: 1rem;
-    width: 33.33333%; } }
+    width: 33.3333333333%; } }
 
 @media (min-width: 58em) {
   .col-md-4-np {
     float: left;
     position: relative;
-    width: 33.33333%; } }
+    width: 33.3333333333%; } }
 
 @media (min-width: 58em) {
   .col-md-5 {
@@ -930,13 +944,13 @@ th {
     position: relative;
     padding-left: 1rem;
     padding-right: 1rem;
-    width: 41.66667%; } }
+    width: 41.6666666667%; } }
 
 @media (min-width: 58em) {
   .col-md-5-np {
     float: left;
     position: relative;
-    width: 41.66667%; } }
+    width: 41.6666666667%; } }
 
 @media (min-width: 58em) {
   .col-md-6 {
@@ -958,13 +972,13 @@ th {
     position: relative;
     padding-left: 1rem;
     padding-right: 1rem;
-    width: 58.33333%; } }
+    width: 58.3333333333%; } }
 
 @media (min-width: 58em) {
   .col-md-7-np {
     float: left;
     position: relative;
-    width: 58.33333%; } }
+    width: 58.3333333333%; } }
 
 @media (min-width: 58em) {
   .col-md-8 {
@@ -972,13 +986,13 @@ th {
     position: relative;
     padding-left: 1rem;
     padding-right: 1rem;
-    width: 66.66667%; } }
+    width: 66.6666666667%; } }
 
 @media (min-width: 58em) {
   .col-md-8-np {
     float: left;
     position: relative;
-    width: 66.66667%; } }
+    width: 66.6666666667%; } }
 
 @media (min-width: 58em) {
   .col-md-9 {
@@ -1000,13 +1014,13 @@ th {
     position: relative;
     padding-left: 1rem;
     padding-right: 1rem;
-    width: 83.33333%; } }
+    width: 83.3333333333%; } }
 
 @media (min-width: 58em) {
   .col-md-10-np {
     float: left;
     position: relative;
-    width: 83.33333%; } }
+    width: 83.3333333333%; } }
 
 @media (min-width: 58em) {
   .col-md-11 {
@@ -1014,13 +1028,13 @@ th {
     position: relative;
     padding-left: 1rem;
     padding-right: 1rem;
-    width: 91.66667%; } }
+    width: 91.6666666667%; } }
 
 @media (min-width: 58em) {
   .col-md-11-np {
     float: left;
     position: relative;
-    width: 91.66667%; } }
+    width: 91.6666666667%; } }
 
 @media (min-width: 58em) {
   .col-md-12 {
@@ -1042,13 +1056,13 @@ th {
     position: relative;
     padding-left: 1rem;
     padding-right: 1rem;
-    width: 8.33333%; } }
+    width: 8.3333333333%; } }
 
 @media (min-width: 64em) {
   .col-lg-1-np {
     float: left;
     position: relative;
-    width: 8.33333%; } }
+    width: 8.3333333333%; } }
 
 @media (min-width: 64em) {
   .col-lg-2 {
@@ -1056,13 +1070,13 @@ th {
     position: relative;
     padding-left: 1rem;
     padding-right: 1rem;
-    width: 16.66667%; } }
+    width: 16.6666666667%; } }
 
 @media (min-width: 64em) {
   .col-lg-2-np {
     float: left;
     position: relative;
-    width: 16.66667%; } }
+    width: 16.6666666667%; } }
 
 @media (min-width: 64em) {
   .col-lg-3 {
@@ -1084,13 +1098,13 @@ th {
     position: relative;
     padding-left: 1rem;
     padding-right: 1rem;
-    width: 33.33333%; } }
+    width: 33.3333333333%; } }
 
 @media (min-width: 64em) {
   .col-lg-4-np {
     float: left;
     position: relative;
-    width: 33.33333%; } }
+    width: 33.3333333333%; } }
 
 @media (min-width: 64em) {
   .col-lg-5 {
@@ -1098,13 +1112,13 @@ th {
     position: relative;
     padding-left: 1rem;
     padding-right: 1rem;
-    width: 41.66667%; } }
+    width: 41.6666666667%; } }
 
 @media (min-width: 64em) {
   .col-lg-5-np {
     float: left;
     position: relative;
-    width: 41.66667%; } }
+    width: 41.6666666667%; } }
 
 @media (min-width: 64em) {
   .col-lg-6 {
@@ -1126,13 +1140,13 @@ th {
     position: relative;
     padding-left: 1rem;
     padding-right: 1rem;
-    width: 58.33333%; } }
+    width: 58.3333333333%; } }
 
 @media (min-width: 64em) {
   .col-lg-7-np {
     float: left;
     position: relative;
-    width: 58.33333%; } }
+    width: 58.3333333333%; } }
 
 @media (min-width: 64em) {
   .col-lg-8 {
@@ -1140,13 +1154,13 @@ th {
     position: relative;
     padding-left: 1rem;
     padding-right: 1rem;
-    width: 66.66667%; } }
+    width: 66.6666666667%; } }
 
 @media (min-width: 64em) {
   .col-lg-8-np {
     float: left;
     position: relative;
-    width: 66.66667%; } }
+    width: 66.6666666667%; } }
 
 @media (min-width: 64em) {
   .col-lg-9 {
@@ -1168,13 +1182,13 @@ th {
     position: relative;
     padding-left: 1rem;
     padding-right: 1rem;
-    width: 83.33333%; } }
+    width: 83.3333333333%; } }
 
 @media (min-width: 64em) {
   .col-lg-10-np {
     float: left;
     position: relative;
-    width: 83.33333%; } }
+    width: 83.3333333333%; } }
 
 @media (min-width: 64em) {
   .col-lg-11 {
@@ -1182,13 +1196,13 @@ th {
     position: relative;
     padding-left: 1rem;
     padding-right: 1rem;
-    width: 91.66667%; } }
+    width: 91.6666666667%; } }
 
 @media (min-width: 64em) {
   .col-lg-11-np {
     float: left;
     position: relative;
-    width: 91.66667%; } }
+    width: 91.6666666667%; } }
 
 @media (min-width: 64em) {
   .col-lg-12 {
@@ -1210,13 +1224,13 @@ th {
     position: relative;
     padding-left: 1rem;
     padding-right: 1rem;
-    width: 8.33333%; } }
+    width: 8.3333333333%; } }
 
 @media (min-width: 64em) {
   .col-xl-1-np {
     float: left;
     position: relative;
-    width: 8.33333%; } }
+    width: 8.3333333333%; } }
 
 @media (min-width: 64em) {
   .col-xl-2 {
@@ -1224,13 +1238,13 @@ th {
     position: relative;
     padding-left: 1rem;
     padding-right: 1rem;
-    width: 16.66667%; } }
+    width: 16.6666666667%; } }
 
 @media (min-width: 64em) {
   .col-xl-2-np {
     float: left;
     position: relative;
-    width: 16.66667%; } }
+    width: 16.6666666667%; } }
 
 @media (min-width: 64em) {
   .col-xl-3 {
@@ -1252,13 +1266,13 @@ th {
     position: relative;
     padding-left: 1rem;
     padding-right: 1rem;
-    width: 33.33333%; } }
+    width: 33.3333333333%; } }
 
 @media (min-width: 64em) {
   .col-xl-4-np {
     float: left;
     position: relative;
-    width: 33.33333%; } }
+    width: 33.3333333333%; } }
 
 @media (min-width: 64em) {
   .col-xl-5 {
@@ -1266,13 +1280,13 @@ th {
     position: relative;
     padding-left: 1rem;
     padding-right: 1rem;
-    width: 41.66667%; } }
+    width: 41.6666666667%; } }
 
 @media (min-width: 64em) {
   .col-xl-5-np {
     float: left;
     position: relative;
-    width: 41.66667%; } }
+    width: 41.6666666667%; } }
 
 @media (min-width: 64em) {
   .col-xl-6 {
@@ -1294,13 +1308,13 @@ th {
     position: relative;
     padding-left: 1rem;
     padding-right: 1rem;
-    width: 58.33333%; } }
+    width: 58.3333333333%; } }
 
 @media (min-width: 64em) {
   .col-xl-7-np {
     float: left;
     position: relative;
-    width: 58.33333%; } }
+    width: 58.3333333333%; } }
 
 @media (min-width: 64em) {
   .col-xl-8 {
@@ -1308,13 +1322,13 @@ th {
     position: relative;
     padding-left: 1rem;
     padding-right: 1rem;
-    width: 66.66667%; } }
+    width: 66.6666666667%; } }
 
 @media (min-width: 64em) {
   .col-xl-8-np {
     float: left;
     position: relative;
-    width: 66.66667%; } }
+    width: 66.6666666667%; } }
 
 @media (min-width: 64em) {
   .col-xl-9 {
@@ -1336,13 +1350,13 @@ th {
     position: relative;
     padding-left: 1rem;
     padding-right: 1rem;
-    width: 83.33333%; } }
+    width: 83.3333333333%; } }
 
 @media (min-width: 64em) {
   .col-xl-10-np {
     float: left;
     position: relative;
-    width: 83.33333%; } }
+    width: 83.3333333333%; } }
 
 @media (min-width: 64em) {
   .col-xl-11 {
@@ -1350,13 +1364,13 @@ th {
     position: relative;
     padding-left: 1rem;
     padding-right: 1rem;
-    width: 91.66667%; } }
+    width: 91.6666666667%; } }
 
 @media (min-width: 64em) {
   .col-xl-11-np {
     float: left;
     position: relative;
-    width: 91.66667%; } }
+    width: 91.6666666667%; } }
 
 @media (min-width: 64em) {
   .col-xl-12 {
@@ -1377,11 +1391,17 @@ th {
   margin-left: -1rem;
   margin-right: -1rem; }
 
-.clearfix:before, .item:before, .main:before, .decor-wrap:before, .tease-deal:before,
-.tease-featured-deal:before, .clearfix:after, .item:after, .main:after, .decor-wrap:after, .tease-deal:after,
+.clearfix:before,
+.item:before,
+.main:before,
+.decor-wrap:before,
+.tease-deal:before,
+.tease-featured-deal:before,
+.clearfix:after, .item:after, .main:after, .decor-wrap:after, .tease-deal:after,
 .tease-featured-deal:after {
   content: " ";
   display: table; }
+
 .clearfix:after, .item:after, .main:after, .decor-wrap:after, .tease-deal:after,
 .tease-featured-deal:after {
   clear: both; }
@@ -1391,13 +1411,8 @@ th {
   padding: 0;
   list-style-type: none; }
 
-.btn, .btn-cta, input[type="submit"],
-button, .btn-alt, .cat-item a, .link-more, .btn-alt-dark, .btn-tweet {
-  text-decoration: none;
-  border: 0; }
-
-.btn, .btn-cta, input[type="submit"],
-button, textarea,
+.btn, input[type="submit"],
+button, .btn-cta, textarea,
 input[type="text"],
 input[type="password"],
 input[type="datetime"],
@@ -1414,15 +1429,12 @@ input[type="tel"] {
   padding: 0.8rem 1rem;
   font-family: "proxima-nova", Helvetica, sans-serif; }
 
-.btn, .btn-cta, input[type="submit"],
-button, .btn-alt, .cat-item a, .link-more, .btn-alt-dark, .btn-tweet, .ginput_complex label, .widget-stacked p,
-.meta, .cat-item, .block-title, .tagline, .decor-text, label, .menu-item a, .link-postnav, h4, .page-title {
-  text-transform: uppercase;
-  letter-spacing: 1px; }
-
-.ginput_complex label, .widget-stacked p,
+.ginput_complex label,
+.widget-stacked p,
 .meta {
   color: #999;
+  text-transform: uppercase;
+  letter-spacing: 1px;
   font-size: 0.8rem;
   font-weight: 400; }
 
@@ -1477,7 +1489,7 @@ html {
   @media (min-width: 48em) {
     html {
       font-size: 110%;
-      font-size: 1.3; } }
+      line-height: 1.3; } }
   @media (min-width: 58em) {
     html {
       font-size: 110%; } }
@@ -1502,38 +1514,6 @@ a, a:visited {
 h1, h2, h3, h4, h5, h6 {
   line-height: 1;
   margin-bottom: 0; }
-
-h1 {
-  font-size: 3.4rem; }
-
-h2, .article-title, .page-title-simple {
-  font-size: 2.4rem; }
-
-h3 {
-  font-size: 2rem; }
-
-h4, blockquote, .lead, .tagline-page {
-  font-size: 1.3rem; }
-
-.btn, .btn-cta, input[type="submit"],
-button, textarea,
-input[type="text"],
-input[type="password"],
-input[type="datetime"],
-input[type="datetime-local"],
-input[type="date"],
-input[type="month"],
-input[type="time"],
-input[type="week"],
-input[type="number"],
-input[type="email"],
-input[type="url"],
-input[type="search"],
-input[type="tel"], h5, .widget-title {
-  font-size: 1rem; }
-
-h6 {
-  font-size: 0.8rem; }
 
 h1 {
   margin-top: 2rem; }
@@ -1574,38 +1554,44 @@ blockquote {
 .lead {
   margin-top: 0; }
 
-.special {
-  color: #f8992f; }
-
 .caption,
 .widget_sp_image-description p {
   font-size: 0.8rem; }
 
-.btn, .btn-cta, input[type="submit"],
-button {
-  background: #f8992f;
+.btn, input[type="submit"],
+button, .btn-alt, .cat-item a, .link-more, .btn-alt-dark, .btn-tweet, .btn-cta {
   font-weight: 700;
   transition: background 0.25s;
-  color: #fff !important;
+  text-decoration: none;
+  border: 0;
   cursor: pointer;
-  -webkit-appearance: none; }
-  .btn:hover, .btn-cta:hover, input[type="submit"]:hover,
-  button:hover, .btn:focus, .btn-cta:focus, input[type="submit"]:focus,
+  text-transform: uppercase;
+  letter-spacing: 1px; }
+
+.btn, input[type="submit"],
+button {
+  background: #f8992f;
+  color: #fff !important; }
+  .btn:hover,
+  input[type="submit"]:hover,
+  button:hover,
+  .btn:focus, input[type="submit"]:focus,
   button:focus {
     background: #bb6506;
     color: #fff; }
-  .btn:active, .btn-cta:active, input[type="submit"]:active,
+  .btn:active, input[type="submit"]:active,
   button:active {
     background: #583003; }
 
 .btn-alt, .cat-item a, .link-more {
   background: #ececec;
-  font-weight: 700;
-  transition: background 0.25s;
   color: #1f1d1a !important;
-  padding: 0.26667rem 0.6rem;
+  padding: 0.2666666667rem 0.6rem;
   font-size: 0.8rem; }
-  .btn-alt:hover, .cat-item a:hover, .link-more:hover, .btn-alt:focus, .cat-item a:focus, .link-more:focus {
+  .btn-alt:hover,
+  .cat-item a:hover,
+  .link-more:hover,
+  .btn-alt:focus, .cat-item a:focus, .link-more:focus {
     background: #b9b9b9;
     color: #1f1d1a; }
   .btn-alt:active, .cat-item a:active, .link-more:active {
@@ -1613,12 +1599,11 @@ button {
 
 .btn-alt-dark {
   background: #043f7e;
-  font-weight: 700;
-  transition: background 0.25s;
   color: #fff !important;
-  padding: 0.26667rem 0.6rem;
+  padding: 0.2666666667rem 0.6rem;
   font-size: 0.8rem; }
-  .btn-alt-dark:hover, .btn-alt-dark:focus {
+  .btn-alt-dark:hover,
+  .btn-alt-dark:focus {
     background: #010e1b;
     color: #fff; }
   .btn-alt-dark:active {
@@ -1626,20 +1611,27 @@ button {
 
 .btn-tweet {
   background: #55ACEE;
-  font-weight: 700;
-  transition: background 0.25s;
   color: #fff !important;
-  padding: 0.26667rem 0.6rem;
+  padding: 0.2666666667rem 0.6rem;
   font-size: 0.8rem; }
-  .btn-tweet:hover, .btn-tweet:focus {
+  .btn-tweet:hover,
+  .btn-tweet:focus {
     background: #147bc9;
     color: #fff; }
   .btn-tweet:active {
     background: #0b426c; }
 
 .btn-cta {
+  background: #f8992f;
+  color: #fff !important;
   display: block;
   text-align: center; }
+  .btn-cta:hover,
+  .btn-cta:focus {
+    background: #bb6506;
+    color: #fff; }
+  .btn-cta:active {
+    background: #583003; }
 
 .list-cats li, .list-tags li {
   display: inline-block;
@@ -1651,8 +1643,11 @@ button {
   padding: 0;
   margin: 0; }
 
-.cat-item a {
-  border-radius: 4px; }
+.cat-item {
+  text-transform: uppercase;
+  letter-spacing: 1px; }
+  .cat-item a {
+    border-radius: 4px; }
 
 .list-tags {
   margin-bottom: 0; }
@@ -1753,10 +1748,10 @@ button {
 .spacer-bot {
   margin-bottom: 2rem; }
 
-.visually-hidden {
-  position: absolute;
-  top: -9999999px;
-  left: -999999px; }
+@media (min-width: 58em) {
+  .inverse-bleed {
+    margin-left: 7%;
+    margin-right: 7%; } }
 
 @media (min-width: 58em) {
   .bleed {
@@ -1765,17 +1760,20 @@ button {
     margin-left: -4%; } }
 
 @media (min-width: 58em) {
-  .inverse-bleed {
-    margin-left: 7%;
-    margin-right: 7%; } }
-
-@media (min-width: 58em) {
   .bleed-left, .inline-l {
     margin-left: -8%; } }
 
 @media (min-width: 58em) {
   .bleed-right {
     margin-right: -8%; } }
+
+.visually-hidden {
+  position: absolute;
+  top: -9999999px;
+  left: -999999px; }
+
+.special {
+  color: #f8992f; }
 
 * {
   box-sizing: border-box; }
@@ -1807,12 +1805,22 @@ figure {
   padding-top: 6.8rem;
   padding-bottom: 6.8rem; }
 
+.block-title {
+  text-transform: uppercase;
+  letter-spacing: 1px; }
+
+.tagline {
+  text-transform: uppercase;
+  letter-spacing: 1px; }
+
 .decor-text {
+  text-transform: uppercase;
+  letter-spacing: 1px;
   border-bottom: 1px solid lightgray;
   position: relative; }
   .decor-text span {
     position: relative;
-    top: 0.53333rem;
+    top: 0.5333333333rem;
     padding: 0 0.8rem 0 0;
     background-color: #fff; }
 
@@ -1840,6 +1848,7 @@ figure {
     padding-left: 1rem;
     padding-right: 1rem;
     width: 50%; } }
+
 .block-image svg {
   display: none; }
   @media (min-width: 58em) {
@@ -1855,6 +1864,8 @@ label, select {
 label {
   margin-top: 1.3rem;
   margin-bottom: 0.4rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
   font-weight: 700; }
 
 input[type="search"] {
@@ -1936,8 +1947,10 @@ input[type="checkbox"]:focus {
     padding-left: 1rem;
     padding-right: 1rem;
     width: 50%; } }
+
 .mtn-field-name:first-child {
   padding-left: 0; }
+
 @media (min-width: 48em) {
   .mtn-field-name .name_first,
   .mtn-field-name .name_last {
@@ -2011,9 +2024,9 @@ input.search-field {
     padding-left: 1rem;
     border: 5px solid;
     border-color: #043f7e !important; }
-
   input.search-field:focus {
     opacity: 1; } }
+
 .callout {
   background-color: #3fa173;
   color: #fff;
@@ -2044,6 +2057,7 @@ input.search-field {
 @media (min-width: 58em) {
   .banner-enhanced {
     background: linear-gradient(rgba(4, 63, 126, 0.5), rgba(4, 63, 126, 0)); } }
+
 .banner-opaque {
   background: #043f7e !important; }
 
@@ -2057,7 +2071,7 @@ input.search-field {
     position: relative;
     padding-left: 1rem;
     padding-right: 1rem;
-    width: 16.66667%; } }
+    width: 16.6666666667%; } }
 
 .logo,
 .menu-link {
@@ -2081,7 +2095,7 @@ input.search-field {
       position: relative;
       padding-left: 1rem;
       padding-right: 1rem;
-      width: 83.33333%; } }
+      width: 83.3333333333%; } }
   .menu-top.active {
     max-height: 25em; }
   .menu-top .menu-item a {
@@ -2097,6 +2111,8 @@ input.search-field {
   .menu-item a {
     display: block;
     font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
     margin-top: 0; }
   .menu-item.new a:before {
     content: 'NEW: ';
@@ -2105,7 +2121,6 @@ input.search-field {
 @media (min-width: 58em) {
   .menu-link {
     display: none; }
-
   .menu-top {
     overflow: visible;
     max-height: none;
@@ -2117,13 +2132,10 @@ input.search-field {
       margin: 0 0.8rem; }
     .menu-top .menu-item-cta {
       margin: 0; }
-
   .menu-items {
     border: 0; }
-
   .menu-item {
     text-align: left; }
-
   .current-menu-item a {
     color: #fff; }
   .current-menu-item:before {
@@ -2134,12 +2146,12 @@ input.search-field {
     border-left: 41px solid transparent;
     border-right: 41px solid transparent;
     border-top: 5px solid #f8992f; }
-
   .menu-item a {
     border: 0;
     font-size: 0.8rem; }
     .menu-item a:hover {
       color: #f8992f; } }
+
 .menu-link {
   padding: 0.8rem; }
 
@@ -2173,13 +2185,16 @@ input.search-field {
   border-bottom: 1px solid lightgray;
   margin-top: 2rem;
   padding: 1.3rem; }
-  .nav-prevnext:before, .nav-prevnext:after {
+  .nav-prevnext:before,
+  .nav-prevnext:after {
     content: " ";
     display: table; }
   .nav-prevnext:after {
     clear: both; }
 
 .link-postnav {
+  text-transform: uppercase;
+  letter-spacing: 1px;
   font-size: 0.8rem;
   font-weight: 700; }
 
@@ -2204,8 +2219,14 @@ input.search-field {
   .next {
     text-align: right; } }
 
+h4 {
+  text-transform: uppercase;
+  letter-spacing: 1px; }
+
 .page-title {
   color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 1px;
   position: relative;
   z-index: 9;
   font-size: 2.55rem;
@@ -2305,16 +2326,17 @@ input.search-field {
     float: left;
     position: relative;
     width: 50%; } }
+
 @media (min-width: 58em) {
   .image-quarter {
     float: left;
     position: relative;
-    width: 33.33333%; } }
+    width: 33.3333333333%; } }
 
 .image-credit {
   font-size: 0.5rem;
   background-color: rgba(0, 0, 0, 0.6);
-  padding: 0.16667rem 0.25rem;
+  padding: 0.1666666667rem 0.25rem;
   position: absolute;
   bottom: 0;
   right: 0;
@@ -2385,7 +2407,8 @@ figcaption {
 .tease {
   padding-bottom: 1rem;
   margin-bottom: 2.4rem; }
-  .tease:before, .tease:after {
+  .tease:before,
+  .tease:after {
     content: " ";
     display: table; }
   .tease:after {
@@ -2417,12 +2440,12 @@ figcaption {
 .tease-body iframe,
 .article-section iframe {
   height: 120px; }
-  .tease-featured .tease-body iframe, .tease-featured
-  .article-section iframe {
+  .tease-featured .tease-body iframe,
+  .tease-featured .article-section iframe {
     height: 300px; }
     @media (min-width: 58em) {
-      .tease-featured .tease-body iframe, .tease-featured
-      .article-section iframe {
+      .tease-featured .tease-body iframe,
+      .tease-featured .article-section iframe {
         height: 420px; } }
   @media (min-width: 58em) {
     .tease-body iframe,
@@ -2448,7 +2471,7 @@ figcaption {
       position: relative;
       padding-left: 1rem;
       padding-right: 1rem;
-      width: 33.33333%; } }
+      width: 33.3333333333%; } }
   @media (min-width: 48em) {
     .loop-thumbs .tease:nth-child(2n+1) {
       clear: none; }
@@ -2493,12 +2516,12 @@ figcaption {
   position: relative;
   padding-left: 1rem;
   padding-right: 1rem;
-  width: 33.33333%; }
+  width: 33.3333333333%; }
   @media (min-width: 48em) {
     .loop-related .tease {
       float: left;
       position: relative;
-      width: 16.66667%; } }
+      width: 16.6666666667%; } }
   .loop-related .tease:nth-child(3n+1) {
     clear: left; }
   @media (min-width: 48em) {
@@ -2540,7 +2563,7 @@ figcaption {
     position: relative;
     padding-left: 1rem;
     padding-right: 1rem;
-    width: 70.83333%; } }
+    width: 70.8333333333%; } }
 
 @media (min-width: 58em) {
   .sidebar {
@@ -2548,7 +2571,7 @@ figcaption {
     position: relative;
     padding-left: 1rem;
     padding-right: 1rem;
-    width: 29.16667%; } }
+    width: 29.1666666667%; } }
 
 .widgets {
   list-style-type: none;
@@ -2557,7 +2580,8 @@ figcaption {
   @media (min-width: 64em) {
     .widgets {
       margin-top: 0; } }
-  .widgets:before, .widgets:after {
+  .widgets:before,
+  .widgets:after {
     content: " ";
     display: table; }
   .widgets:after {
@@ -2581,7 +2605,7 @@ figcaption {
     .widget-stacked {
       float: left;
       position: relative;
-      width: 33.33333%; } }
+      width: 33.3333333333%; } }
   @media (min-width: 58em) {
     .widget-stacked {
       float: left;
@@ -2648,16 +2672,19 @@ figcaption {
   @media (min-width: 58em) {
     .tease-featured-deal img {
       width: auto; } }
+
 @media (min-width: 48em) {
   .tease-featured-deal .featured-left {
     float: left;
     position: relative;
     width: 50%; } }
+
 @media (min-width: 58em) {
   .tease-featured-deal .featured-left {
     float: left;
     position: relative;
-    width: 66.66667%; } }
+    width: 66.6666666667%; } }
+
 @media (min-width: 48em) {
   .tease-featured-deal .featured-right {
     float: left;
@@ -2665,13 +2692,14 @@ figcaption {
     padding-left: 1rem;
     padding-right: 1rem;
     width: 50%; } }
+
 @media (min-width: 58em) {
   .tease-featured-deal .featured-right {
     float: left;
     position: relative;
     padding-left: 0;
     padding-right: 0;
-    width: 33.33333%; } }
+    width: 33.3333333333%; } }
 
 .btn-tweet .shape {
   position: relative;
@@ -2709,5 +2737,3 @@ figcaption {
   @media (min-width: 64em) {
     #twitter-widget-0 {
       height: 600px; } }
-
-/*# sourceMappingURL=main.css.map */

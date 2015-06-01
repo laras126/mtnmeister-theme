@@ -7,12 +7,12 @@
 // Page typography
 
 h4 {
-	@extend %upperspace;
+	 @include upperspace;
 }
 
 .page-title {
 	color: $text-light;
-	@extend %upperspace;
+	 @include upperspace;
 	position: relative;
 	z-index: 9;
 

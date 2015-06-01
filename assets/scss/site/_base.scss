@@ -50,7 +50,7 @@ figure {
 	}
 
 .block-title {
-	@extend %upperspace;
+	 @include upperspace;
 }
 
 
@@ -63,7 +63,7 @@ figure {
 // Taglines
 
 .tagline {
-	@extend %upperspace;
+	 @include upperspace;
 }
 
 
@@ -71,7 +71,7 @@ figure {
 // Episode number with surrounding line border
 
 .decor-text {
-	@extend %upperspace;
+	 @include upperspace;
 	border-bottom: $accent-border; 
 	position:relative; 
 	

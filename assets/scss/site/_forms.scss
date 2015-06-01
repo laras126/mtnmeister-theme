@@ -15,7 +15,7 @@ label, select {
 label {
 	margin-top: $h4;
 	margin-bottom: $sml/2;
-	@extend %upperspace;
+	 @include upperspace;
 	font-weight: 700;
 }
 

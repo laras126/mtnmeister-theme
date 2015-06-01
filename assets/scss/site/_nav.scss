@@ -129,20 +129,22 @@
 	.current-menu-item {
 
 		a {
-			color: $text-light;	
+			color: $text-light;
 		}
 		
 		&:before {
 			content: '';
 			position: absolute;
-			
+			top: -0.3rem; // Bad magic number
+			// left: -50%; 
+
 			width: 0; 
 			height: 0; 
 
 			// NOTE: This isn't quite centered. That would be nice.
-			border-left: 41px solid transparent;
-			border-right: 41px solid transparent;
-			border-top: 5px solid $accent-med;
+			border-left: 50px solid transparent;
+			border-right: 50px solid transparent;
+			border-top: 8px solid $accent-med;
 		}
 	}
 

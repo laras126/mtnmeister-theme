@@ -1,4 +1,4 @@
-{% extends "base.twig" %}
+{% extends "single.twig" %}
 
 {% block content %}
 
@@ -29,61 +29,9 @@
 		
 	</article>
 
-	<div class="contain">
-		<nav class="nav-prevnext">
-
-			{% if post.prev %}
-				<div class="prev">
-					<a href="{{post.prev.link}}" class="link-postnav" title="{{post.prev.title}}">&larr; <span class="special">#{{post.prev.episode_num}}</span> {{post.prev.title}}</a>
-				</div>
-			{% endif %}
-
-			{% if post.next %}
-				<div class="next">
-					<a href="{{post.next.link}}" class="link-postnav" title="{{post.next.title}}"><span class="special">#{{post.next.episode_num}}</span> {{post.next.title}} &rarr;</a>
-				</div>
-			{% endif %}
-
-		</nav> <!-- /.nav-prevnext -->
-	</div>
-
-	{% if related_meisters %}
-		<footer class="contain">
-			<div class="loop-related">
-
-				<header class="article-section-header">
-					<div class="row-sm">
-
-						<div class="col-sm-8">
-							<h4 class="tagline">Related Episodes</h4>
-						</div>
-						<div class="col-sm-4">
-							<a class="link-more" href="{{site.link}}/meisters" title="All Episodes">See&nbsp;all&nbsp;&rarr;</a>
-						</div>
-
-					</div>
-				</header>
-	
-				<section class="row">
-				{% for m in related_meisters %}
-					<div class="tease">
-
-						<a href="{{m.link}}" title="{{m.title}}">
-						{% if m.get_thumbnail %}
-							<img class="lazy" data-original="{{m.thumbnail.src}}" src="{{site.url}}/wp-content/themes/mtnmeister-theme/assets/img/util/loader.gif" alt="{{m.title}}"/>
-							<noscript><img src="{{m.thumbnail.src}}" alt="{{m.title}}" height="300" width="300"></noscript>
-						{% endif %}
-						</a>
-
-						<h5 class="meta"><a href="{{m.link}}" title="{{m.title}}"><span class="special">#{{m.episode_num}}</span> {{m.name}}</a></h5>
-					
-					</div>
-				{% endfor %}
-				</section>
-			</div>
-		
-		</footer>
-
-	{% endif %}
+	{% include 'partials/micro/edit-link.twig' %}
+	{% include 'partials/micro/disqus.twig' %}
+	{% include 'partials/prev-next.twig' %}
+	{% include 'partials/loop-related_meisters.twig' %}
 
 {% endblock %}

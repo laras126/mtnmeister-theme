@@ -4,9 +4,11 @@
 
 {% block below_title %}{% endblock	%}
 
-{% block above_content %}{% endblock	%}
+{% block above_content %}{% endblock %}
 
 {% block below_content %}
+	{% include 'partials/prev-next.twig' %}
 	{% include 'partials/micro/edit-link.twig' %}
 	{% include 'partials/micro/disqus.twig' %}
+	{% include 'partials/loop-related_meisters.twig' %}
 {% endblock %}

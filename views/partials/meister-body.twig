@@ -19,7 +19,7 @@
 
 	{% if post.content_blocks %}
 		<section class="article-section container-squish">
-			{% include 'partials/acf-block-loop.twig'%}
+			{% include 'blocks/block-logic.twig'%}
 		</section>
 	{% endif %}
 
@@ -108,6 +108,3 @@
 		</section>
 	{% endif %}
 	
-	<div class="contain-sm">
-		{% include 'partials/micro/disqus.twig' %}
-	</div>

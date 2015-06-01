@@ -6,7 +6,7 @@
 	
 	{% for post in posts %}
 		{# {% include ['tease-'~post.post_type~'.twig', 'tease.twig'] %} #}
-		{% include 'partials/acf-block-loop.twig' %}
+		{% include 'blocks/block-logic.twig' %}
 	{% endfor %}
 
 {% endblock %}

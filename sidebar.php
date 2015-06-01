@@ -11,6 +11,7 @@ $post = new TimberPost();
 
 $context = array();
 
+// Get sidebars corresponding to page templates
 $context['global_sidebar'] = Timber::get_widgets('global_sidebar');
 $context['support_sidebar'] = Timber::get_widgets('support_sidebar');
 $context['blog_sidebar'] = Timber::get_widgets('blog_sidebar');

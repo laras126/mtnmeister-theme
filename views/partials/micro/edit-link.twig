@@ -1,1 +1,5 @@
-{{function('edit_post_link', 'Edit Post', '<span class="edit-link">', '</span>', post.ID)}}
+{% if post.can_edit %}
+	<div class="contain-sm">
+		{{function('edit_post_link', 'Edit Post', '<span class="edit-link">', '</span>', post.ID)}}
+	</div>
+{% endif %}

@@ -23,6 +23,25 @@
 
 
 
+function mtn_localize_scripts() {
+	global $post;
+
+	// Set content to be passed to JS
+	$id = $post->ID;
+	$sidebar = get_sidebar('global_sidebar');
+
+	// Make data available to JS
+	wp_localize_script('mtn-js', 'mtn_script_vars', array(
+	    'sidebar' => __($sidebar, 'mtnmeister'),
+	    // 'message' => __('You have clicked the other button. Good job!', 'mtnmeister')
+	  )
+	);
+}
+
+// This is spitting onto all pages, want it to be called through the JS. TODO later.
+// add_action('wp_enqueue_scripts', 'mtn_localize_scripts', 999);
+
+
 // ---
 // Custom Post Type Args
 // ---
@@ -62,26 +81,6 @@ $post = new TimberPost();
 $context['post'] = $post;
 
 
-// Was trying to only load the blog post thumbnail in the loop for larger devices. Giving up for now.
-
-// function mtn_localize_scripts() {
-
-// 	$context['posts'] = Timber::get_posts($post_args);	
-
-// 	// Set content to be passed to JS
-// 	$id = $post->ID;
-// 	$get_thumb = wp_get_attachment_image_src( get_post_thumbnail_id( $id ), 'thumbnail' );
-// 	$thumb_src = $get_thumb['0'];
-
-// 	// Make data available to JS
-// 	wp_localize_script('mtn-js', 'mtn_script_vars', array(
-// 	    'thumb_src' => __($thumb_src, 'mtnmeister'),
-// 	    'message' => __('You have clicked the other button. Good job!', 'mtnmeister')
-// 	  )
-// 	);	
-// }
-
-
 // Get post type content. Ideally page names would not be hardcoded here, should likely use archive-meisters.twig, etc. instead of the page template. 
 
 if( is_page('Meisters') ) {
@@ -90,7 +89,6 @@ if( is_page('Meisters') ) {
 	$context['deals'] = Timber::get_posts($deal_args);
 } elseif( is_page('Blog') ) {
 	$context['posts'] = Timber::get_posts($post_args);
-	// add_action('wp_enqueue_scripts', 'mtn_localize_scripts', 999);
 } 
 
 

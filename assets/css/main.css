@@ -2152,11 +2152,12 @@ input.search-field {
   .current-menu-item:before {
     content: '';
     position: absolute;
+    top: -0.3rem;
     width: 0;
     height: 0;
-    border-left: 41px solid transparent;
-    border-right: 41px solid transparent;
-    border-top: 5px solid #f8992f; }
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-top: 8px solid #f8992f; }
   .menu-item a {
     border: 0;
     font-size: 0.8rem; }

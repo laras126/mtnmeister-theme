@@ -1,0 +1,43 @@
+ <section class="article-section">
+
+        <header class="article-section-header">
+            {% include 'partials/micro/decor-title.twig' with {text: text} %}
+        </header>
+        
+        {% for post in posts %}
+            {% if post.post_type == type %}
+
+                <div class="row-sm tease tease-archive">
+                    
+                    <div class="col-sm-3">
+                        <a href="{{post.link}}" title="{{post.title}}">
+                        {% if post.get_thumbnail %}
+                            <img class="lazy" data-original="{{post.thumbnail.src|resize(400)}}" src="{{site.url}}/wp-content/themes/mtnmeister-theme/assets/img/util/loader.gif" alt="{{post.title}}"/>
+                            <noscript><img src="{{post.thumbnail.src|resize(400)}}" alt="{{post.title}}" height="300" width="300"></noscript>
+                        {% endif %}
+                        </a>
+                    </div>
+                    
+                    <div class="col-sm-9">
+
+                        <div class="row-sm">
+                            <div class="col-sm-9">
+                                <h4 class="tagline no-margin"><a href="{{post.link}}" title="{{post.title}}"><span class="special">#{{post.episode_num}}</span> {{post.episode_tag}}</a></h4>        
+                            </div>
+                            <div class="col-sm-3">
+                                <a href="{{post.link}}" class="link-more no-margin">Listen &rarr;</a>
+                            </div>
+                        </div>
+                        
+                        <p class="tagline tagline-tease">{{post.name}}</p>
+                        
+                        {% include 'partials/micro/list-cats.twig' %}
+                        <br> <!-- shame, shame -->
+                        {% include 'partials/micro/list-tags.twig' with {tags: post.tags} %}
+                        
+                    </div>
+                </div>
+            {% endif %}
+
+        {% endfor %} 
+        </section>

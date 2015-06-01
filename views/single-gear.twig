@@ -1,0 +1,69 @@
+{% set blog_post = true %}
+
+{% extends "page.twig" %}
+
+{% block below_title %}{% endblock	%}
+
+{% block above_content %}{% endblock%}
+
+{% block content %}
+	{# {% for post in posts %} #}
+	<br>
+	<br>
+	<br>
+	<div class="contain">
+		<h1>{{post.title}}</h1>
+		
+		{# {{dump(connected_meisters.title)}} #}
+
+		{# {% for i in test %} #}
+
+			{# <pre>{{dump(i)}}</pre> #}
+			{# <pre>{{i.title}}</pre> #}
+			{# {% for gear in i.get_field('episode_num') %}
+				{{dump(gear)}}
+			{% endfor %}
+		{% endfor %} #}
+		<h3>This post ID: {{id}}</h3>
+		<pre>{{dump(post)}}</pre>
+		<h3>Gear returned from query:</h3>
+		{{dump(test_g)}}
+
+		<p>Get meister with that connected gear</p>
+
+		{% for m in test_m %}
+			<h2>Returned meister</h2>
+			{# <pre>{{dump(m)}}</pre>					 #}
+		{% endfor %}
+	
+		{% for m in test_g %}
+			<h2></h2>
+			<pre>{{dump(m)}}</pre>
+			
+			{# {{m.title}} #}
+			
+			{# <hr> #}
+			<h1>hi</h1>
+
+			{# {% for gear in m.get_field('connected_gear') %}
+
+				{% for gear in gear.gear_item %}
+					{% set connected_gear = gear.brand_name %}
+					
+					{% if gear.brand_name == post.brand_name %}
+						{{m.title}}
+					{% endif %}
+
+				{% endfor %}
+
+			{% endfor %} #}
+			{# {{m.title}} <br>
+			<pre>{{dump(gear)}}</pre> #}
+		{% endfor %}
+	</div>
+{% endblock %}
+
+{% block below_content %}
+	{% include 'partials/micro/edit-link.twig' %}
+	{% include 'partials/micro/disqus.twig' %}
+{% endblock %}

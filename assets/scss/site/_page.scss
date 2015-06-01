@@ -47,13 +47,16 @@ h4 {
 }
 
 	.page-title-simple {
-		@extend .article-title;
+		margin-top: $h2;
+		font-size: $h1;
+		
+		@include bp(med) {
+			margin-top: $h1;
+		}
 	}
 
 .tagline-page {
-	// @extend %full_width;
-	@extend %h4;
-
+	font-size: $h4;
 	color: $accent-dark;
 	margin-top: $h2;
 	margin-bottom: $h2;
@@ -62,8 +65,9 @@ h4 {
 
 
 
-
+// ----
 // Page Header
+// ----
 
 .page-header {
 	
@@ -100,7 +104,7 @@ h4 {
 	}
 
 	.page-header-simple {
-		padding-top: 10%;
+		padding-top: $h1;
 	}
 
 .page-header-caption {
@@ -132,6 +136,7 @@ h4 {
 	// This is over specified. Oh well, for now.
 	.rotate & a {
 		color: lighten($accent-med, 8%);
+		border-bottom: none;
 	}
 }
 
@@ -159,6 +164,10 @@ h4 {
 
 
 
+// ----
+// Blocks
+// ----
+
 // Text and Image block
 
 .image-half {
@@ -168,6 +177,11 @@ h4 {
 .image-quarter {
 	@include make-sm-column(6, false);
 	@include make-md-column(4, false);
+}
+
+.image-sixth {
+	@include make-sm-column(4, false);
+	@include make-md-column(3, false);
 }
 
 .image-credit {

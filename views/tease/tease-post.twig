@@ -2,19 +2,18 @@
 
 {% block content %}
 	{% include 'partials/micro/post-date.twig' %}
-
-	<h3><a href="{{post.link}}">{{post.title}}</a></h3>
-	<p class="meta">Filed under {% for cat in post.categories %}<a href="{{cat.link}}">{{cat.name}}</a>{{ loop.last ? '' : ', ' }}{% endfor %}</p>
-	{% if post.get_thumbnail %}
+	<h3 class="spacer-bot"><a href="{{post.link}}">{{post.title}}</a></h3>
+	{# Doing away with thumbnail for now #}
+	{# {% if post.get_thumbnail %}
 		{% include 'partials/pictures/picture-logic.twig' with 
 			{
 			 	image: post.get_thumbnail, 
-				loc: 'l', 
+				loc: 'r', 
 				wrap: true,
-				size: 'half'
+				size: 'quarter'
 			} 
 		%}
-	{% endif %}
+	{% endif %} #}
 	{{post.get_preview(40, false, '...', false)}}
 	<a href="{{post.link}}" class="link-more">Read more &rarr;</a>
 	{% include 'partials/micro/edit-link.twig' %}

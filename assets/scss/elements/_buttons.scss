@@ -1,6 +1,6 @@
 %btn {
 	font-weight: 700;
-	transition: background 0.25s;
+	transition: background 0.15s;
 	text-decoration: none;  
     border: 0;
     cursor: pointer;
@@ -44,6 +44,17 @@
 .btn-alt {
 	@include button(lighten($accent-light, 10%), $text-dark, sml);
 }
+
+	.link-more {
+		float: right;
+		margin-top: $sml;
+		margin-bottom: $sml;
+		@extend .btn-alt;
+
+		a {
+			color: $accent-light;
+		}
+	}
 
 .btn-alt-dark {
 	@include button($accent-dark, $text-light, sml);

@@ -11,9 +11,11 @@
 }
 
 .article-title {
-	@extend %h2;
+	margin-top: $h2;
+	font-size: $h2;
 
 	@include bp(med) {
+		margin-top: $h1;
 		font-size: $h1;
 	}
 }

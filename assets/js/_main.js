@@ -86,7 +86,7 @@ $(document).ready(function() {
 
 
 	// ----
-	// Header image laoding
+	// Header image loading
 	// ----
 
 	var $hero = $('.page-header');
@@ -121,6 +121,15 @@ $(document).ready(function() {
 	});
 
 
+
+	// ----
+	// Responsive Optimizations
+	// ----
+
+	// Load post featured images on larger screens only
+	// if (matchMedia('only screen and (min-width: 880px)').matches) {
+	// 	$('.thumb-container').html('<img src="mtn_script_vars.thumb_src">');
+	// }
 	
 
 	// ----

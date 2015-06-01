@@ -11,23 +11,17 @@ function mtn_scripts_styles() {
         wp_enqueue_script('jquery', array(), null, true);
     }
 
+    // Load minified scripts for production only
     if( WP_ENV == 'production' ) {
         wp_enqueue_style( 'mtn-styles', get_template_directory_uri() . '/assets/css/main.min.css', 1.0);
         wp_register_script('mtn-js', get_template_directory_uri() . '/assets/js/build/scripts.min.js', true);
     } else {
         wp_enqueue_style( 'mtn-styles', get_template_directory_uri() . '/assets/css/main.css', 1.0);
         wp_register_script('mtn-js', get_template_directory_uri() . '/assets/js/scripts.js', true);
-
     }
-
-    // Add MTNmeister JS
-    // wp_register_script('mtn-js', get_template_directory_uri() . '/assets/js/scripts.js');
     
     wp_enqueue_script( 'mtn-js', array('jquery'), true, '');
 
-    if (is_single() && comments_open() && get_option('thread_comments')) {
-        wp_enqueue_script('comment-reply');
-    }
 }
 add_action( 'wp_enqueue_scripts', 'mtn_scripts_styles' );
 
@@ -36,11 +30,13 @@ add_action( 'wp_enqueue_scripts', 'mtn_scripts_styles' );
 // Load Gravity Forms JS in the footer...really? Sheesh.
 // https://bjornjohansen.no/load-gravity-forms-js-in-footer
 
-add_filter( 'gform_cdata_open', 'wrap_gform_cdata_open' );
+// TODO: This may be a super hack and can be done better. Maybe.
+
 function wrap_gform_cdata_open( $content = '' ) {
   $content = 'document.addEventListener( "DOMContentLoaded", function() { ';
   return $content;
 }
+add_filter( 'gform_cdata_open', 'wrap_gform_cdata_open' );
 
 function wrap_gform_cdata_close( $content = '' ) {
   $content = ' }, false );';
@@ -51,11 +47,11 @@ add_filter( 'gform_cdata_close', 'wrap_gform_cdata_close' );
 
 
 
-/**
- * Google Analytics snippet from HTML5 Boilerplate
- * 
- * Cookie domain is 'auto' configured. See: http://goo.gl/VUCHKM
- */
+// ----
+// Google Analytics snippet from HTML5 Boilerplate
+// ----
+
+// Cookie domain is 'auto' configured. See: http://goo.gl/VUCHKM
 
 define('GOOGLE_ANALYTICS_ID', 'UA-50385573-1');
 function mtn_google_analytics() { ?>

@@ -47,7 +47,9 @@
 
 			{% if blog_post %}
 				<p class="meta">Filed under {% for cat in post.categories %}<a href="{{cat.link}}">{{cat.name}}</a>{{ loop.last ? '' : ', ' }}{% endfor %}</p>
+				{# {% include 'partials/micro/post-date.twig' %} #}
 			{% endif %}
+			
 		
 		</div>
 	</header>

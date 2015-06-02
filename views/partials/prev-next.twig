@@ -1,17 +1,16 @@
-<div class="contain">
-	<nav class="nav-prevnext">
+<nav class="nav-prevnext">
 
-		{% if post.prev %}
-			<div class="prev">
-				<a href="{{post.prev.link}}" class="link-postnav" title="{{post.prev.title}}">&larr; <span class="special">#{{post.prev.episode_num}}</span> {{post.prev.title}}</a>
-			</div>
-		{% endif %}
+	{% if post.prev %}
+		<div class="prev">
+			<a href="{{post.prev.link}}" class="link-postnav" title="{{post.prev.title}}">&larr; <span class="special">#{{post.prev.episode_num}}</span> {{post.prev.title}}</a>
+		</div>
+	{% endif %}
 
-		{% if post.next %}
-			<div class="next">
-				<a href="{{post.next.link}}" class="link-postnav" title="{{post.next.title}}"><span class="special">#{{post.next.episode_num}}</span> {{post.next.title}} &rarr;</a>
-			</div>
-		{% endif %}
+	{% if post.next %}
+		<div class="next">
+			<a href="{{post.next.link}}" class="link-postnav" title="{{post.next.title}}"><span class="special">#{{post.next.episode_num}}</span> {{post.next.title}} &rarr;</a>
+		</div>
+	{% endif %}
 
-	</nav> <!-- /.nav-prevnext -->
-</div>
+</nav> <!-- /.nav-prevnext -->
+

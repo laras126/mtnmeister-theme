@@ -1,26 +1,28 @@
 {% if related_meisters %}
-	<footer class="contain">
-		<div class="loop-related">
 
-			<header class="article-section-header">
-				<div class="row-sm">
+	<div class="loop-related">
 
-					<div class="col-sm-8">
-						<h4 class="tagline">Related Episodes</h4>
-					</div>
-					<div class="col-sm-4">
-						<a class="link-more" href="{{site.link}}/meisters" title="All Episodes">See&nbsp;all&nbsp;&rarr;</a>
-					</div>
+		<header class="article-section-header">
+			<div class="row-sm">
 
+				<div class="col-sm-8">
+					<h4 class="tagline">Related Episodes</h4>
 				</div>
-			</header>
+				<div class="col-sm-4">
+					<a class="link-more" href="{{site.link}}/meisters" title="All Episodes">All&nbsp;Episodes&rarr;</a>
+				</div>
 
-			<section class="row">
-			{% for m in related_meisters %}
+			</div>
+		</header>
+
+		<section class="row">
+		{% for m in related_meisters|slice(1,how_many) %}
+			<div class="col-sm-{{grid}}">
 				{% include 'tease/tease-related_meister.twig'%}
-			{% endfor %}
-			</section>
-		</div>
-	
-	</footer>
+			</div>
+		{% endfor %}
+		</section>
+
+	</div> <!-- /.loop-related -->
+
 {% endif %}

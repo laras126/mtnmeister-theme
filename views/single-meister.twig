@@ -1,4 +1,4 @@
-{% extends "single.twig" %}
+{% extends "page.twig" %}
 
 {% block content %}
 
@@ -29,9 +29,21 @@
 		
 	</article>
 
-	{% include 'partials/micro/edit-link.twig' %}
-	{% include 'partials/micro/disqus.twig' %}
-	{% include 'partials/prev-next.twig' %}
-	{% include 'partials/loop-related_meisters.twig' %}
+
+	{# TODO: This could be more organized with a consistent container, and would best be inside a <footer>. #}
+
+	<footer>
+		<div class="contain-sm">
+			{% include 'partials/micro/edit-link.twig' %}
+			{% include 'partials/micro/disqus.twig' %}
+		</div>
+		<div class="contain">
+			{% include 'partials/prev-next.twig' %}
+			{% include 'partials/loop-related_meisters.twig' with {
+				how_many: 6,
+				grid: 2
+			} %}
+		</div>
+	</footer>
 
 {% endblock %}

@@ -24,21 +24,36 @@ $context['sidebar'] = Timber::get_widgets('blog_sidebar');
 $context['sidebar_class'] = 'has-sidebar';
 
 
-// $context['connected_meisters'] = Timber::get_posts($meister_args);
-
-
 
 
 // ----
 // Related Meisters
 // ----
 
-// Get 4 Meister posts (excluding current post)
-$related_args = array(  
-	'post_type' => 'meister',
-	'posts_per_page' => 6,
-	'orderby' => 'rand'
-);
+// Get Meister posts
+// This is redundant because have to exclude the current post for the Meister type, but was 
+// if (is_singular( 'meister' )) {
+// 	$related_args = array(  
+// 		'post_type' => 'meister',
+// 		'posts_per_page' => 6,
+// 		'orderby' => 'rand',
+// 		'post__not_in' => $post->ID
+// 	);
+// } else {
+	$related_args = array(  
+		'post_type' => 'meister',
+		'posts_per_page' => 6,
+		'orderby' => 'rand'
+	);
+// }
+
+	// GAHH
+
+// If it's a meister, exclude the current post
+// if (is_singular( 'meister' )) {
+	// TODO: this is not working - getting an error that "argument 2 should be an array"
+    // $related_args['post__not_in'] = $post->ID;
+// }
 
 // First relate them by category, 
 // If not that, then tag,

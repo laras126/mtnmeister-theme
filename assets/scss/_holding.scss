@@ -1,14 +1,14 @@
 
 
-// Not ideal. Should only be on one element.
-.page-body,
-.page-title-simple {
-	// @include bp(small) {
-	// 	padding-right: $sml;
-	// 	padding-left: $sml;	
-	// }
-}
+// Too specific
 
+.single .page-title-simple {
+	margin-top: $h4;
+
+	@include bp(med) {
+		margin-top: $h4;
+	}
+}
 
 
 // Hide the sprites

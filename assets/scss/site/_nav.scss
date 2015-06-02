@@ -210,17 +210,17 @@
 	border-top: $accent-border;
 	border-bottom: $accent-border;
 	margin-top: $h3;
-	padding: $h4;
+	padding: $h4 0;
 }
 
 .link-postnav {
-	 @include upperspace;
+	@include upperspace;
 	font-size: $sml;
 	font-weight: 700;
 }
 
 .link-postnav {
-	@include make-sm-column(6);
+	@include make-sm-column(6, false);
 
 }
 

@@ -2097,9 +2097,6 @@ input.search-field {
   position: relative;
   width: 100%;
   text-align: center; }
-  .no-js .menu-top {
-    overflow: visible;
-    max-height: none; }
   @media (min-width: 58em) {
     .menu-top {
       float: left;

@@ -25,6 +25,6 @@
     "node"
   ],
   "devDependencies": {
-
+    "modernizr": "~2.8.3"
   }
 }

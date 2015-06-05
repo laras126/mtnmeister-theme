@@ -8,10 +8,10 @@
 	overflow: hidden;
 	max-height: 0;
 	
-	.no-js & {
-		overflow: visible;
-		max-height: none;
-	}
+	// .no-js & {
+	// 	overflow: visible;
+	// 	max-height: none;
+	// }
 	
 	@include make-xs-column(12, false);
 	@include make-md-column(10);

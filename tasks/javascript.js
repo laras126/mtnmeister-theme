@@ -20,7 +20,7 @@ module.exports = function(grunt, config) {
         
 		bower_concat: {
 			all: {
-			    dest: config.jsConcatDir + 'bower.js',
+			    dest: config.jsSrcDir + 'bower.js',
 			    cssDest: config.cssDir + 'bower.css',
 			    exclude: [
 					'jquery',
@@ -43,7 +43,7 @@ module.exports = function(grunt, config) {
 	        },
 	        dist: {
 	            src: jsFileList,
-	            dest: config.jsConcatDir + 'scripts.js',
+	            dest: config.jsSrcDir + 'scripts.js',
 	        },
 	    },
 		

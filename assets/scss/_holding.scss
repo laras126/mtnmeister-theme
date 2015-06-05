@@ -101,6 +101,7 @@
 
 
 //// GAHHHHH Hacks for mobile archive page. Need to address this soooon.
+
 .tease-archive {
 	text-align: center;
 
@@ -143,13 +144,3 @@
 	}
 }
 
-
-//
-
-#twitter-widget-0 {
-	height: 400px;
-
-	@include bp(large) {
-		height: 600px;
-	}
-}

@@ -1,4 +1,5 @@
 <?php
+
 /**
  * The template for displaying all pages.
  *
@@ -73,16 +74,11 @@ $post_args = array(
 // Start the context 
 // ---
 
-// There is likely a better way to do this that isn't detecting specific pages.
-
 $context = Timber::get_context();
-$post = new TimberPost();
-
 $context['post'] = $post;
 
 
 // Get post type content. Ideally page names would not be hardcoded here, should likely use archive-meisters.twig, etc. instead of the page template. 
-
 if( is_page('Meisters') ) {
 	$context['meisters'] = Timber::get_posts($meister_args);
 } elseif( is_page('Deals') ) {

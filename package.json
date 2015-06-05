@@ -37,6 +37,8 @@
     "grunt-contrib-cssmin": "~0.10.0",
     "grunt-contrib-uglify": "~0.6.0",
     "grunt-svgmin": "~2.0.1",
-    "grunt-sass": "~1.0.0"
+    "grunt-sass": "~1.0.0",
+    "grunt-shell": "~1.1.2",
+    "grunt-bower-concat": "~0.5.0"
   }
 }

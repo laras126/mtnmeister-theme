@@ -19,7 +19,6 @@ $(document).ready(function() {
 	// Toggle menu
 	// ----
 
-	  
 	var $menu = $('#menu'),
 		$menulink = $('.menu-link');
 		
@@ -27,6 +26,7 @@ $(document).ready(function() {
 		$menulink.toggleClass('active');
 		$menu.toggleClass('active');
 		e.preventDefault();
+		console.log("hi");
 	});
 
 

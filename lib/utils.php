@@ -23,8 +23,6 @@ function mtn_custom_type_title_text ( $title ) {
 add_filter( 'enter_title_here', 'mtn_custom_type_title_text' );
 
 
-
-
 // Remove new user/media from +New menu item in the admin bar
 function mtn_remove_wp_nodes() {
     global $wp_admin_bar;   
@@ -86,15 +84,6 @@ if ( is_admin() ) { // check to make sure we aren't on the front end
 		remove_filter('wpseo_pre_analysis_post_content', 'mtn_add_custom_to_yoast'); // don't let WP execute this twice
 	}
 }
-
-// Extend search to include all custom types
-// function mtn_filter_search($query) {
-//     if ($query->is_search) {
-// 	$query->set('post_type', array('post', 'meister', 'gear'));
-//     };
-//     return $query;
-// };
-// add_filter('pre_get_posts', 'mtn_filter_search');
 
 
 // Extend WordPress search to include custom fields

@@ -17,7 +17,7 @@ function mtn_scripts_styles() {
         wp_register_script('mtn-js', get_template_directory_uri() . '/assets/js/build/scripts.min.js', true);
     } else {
         wp_enqueue_style( 'mtn-styles', get_template_directory_uri() . '/assets/css/main.css', 1.0);
-        wp_register_script('mtn-js', get_template_directory_uri() . '/assets/js/scripts.js', true);
+        wp_register_script('mtn-js', get_template_directory_uri() . '/assets/js/build/scripts.js', true);
     }
     
     wp_enqueue_script( 'mtn-js', array('jquery'), true, '');

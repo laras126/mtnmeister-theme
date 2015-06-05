@@ -2757,9 +2757,3 @@ figcaption {
   @media (min-width: 58em) {
     .tease-archive {
       border-bottom: 0; } }
-
-#twitter-widget-0 {
-  height: 400px; }
-  @media (min-width: 64em) {
-    #twitter-widget-0 {
-      height: 600px; } }

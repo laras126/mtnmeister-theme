@@ -1,5 +1,6 @@
-.footer {
+.site-footer {
 	border-top: $accent-border-large;
+	position: relative;
 
 	input {
 		font-size: $sml;
@@ -15,7 +16,6 @@
 	}
 }
 
-
 .menu-footer {
 
 	a {
@@ -26,3 +26,5 @@
 		}
 	}
 }
+
+

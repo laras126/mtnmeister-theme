@@ -61,6 +61,19 @@ module.exports = function(grunt, config) {
                 "customTests" : []
             }
 
+        },
+        criticalcss: {
+            custom: {
+                options: {
+                    url: "http://mtn.local",
+                    width: 1200,
+                    height: 900,
+                    outputfile: config.cssDir + "critical.css",
+                    filename: config.cssDir + "main.css", // Using path.resolve( path.join( ... ) ) is a good idea here
+                    buffer: 800*1024,
+                    ignoreConsole: false
+                }
+            }
         }
     });
 }

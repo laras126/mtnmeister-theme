@@ -13,7 +13,7 @@ module.exports = function(grunt) {
     // Configure tasks
     require('./tasks/scss.js')(grunt, config);
     require('./tasks/javascript.js')(grunt, config);
-    require('./tasks/modernizr.js')(grunt, config);
+    require('./tasks/utils.js')(grunt, config);
     require('./tasks/svgs.js')(grunt, config);
 
 

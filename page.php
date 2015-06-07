@@ -85,7 +85,7 @@ if( is_page('Meisters') ) {
 	$context['deals'] = Timber::get_posts($deal_args);
 } elseif( is_page('Blog') ) {
 	$context['posts'] = Timber::get_posts($post_args);
-} 
+}
 
 
 // TODO: These should be within theme options or something, and not hardcoded page names.

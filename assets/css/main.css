@@ -1393,16 +1393,16 @@ th {
 
 .clearfix:before,
 .item:before,
-.main:before,
+.site-main:before,
 .decor-wrap:before,
 .tease-deal:before,
 .tease-featured-deal:before,
-.clearfix:after, .item:after, .main:after, .decor-wrap:after, .tease-deal:after,
+.clearfix:after, .item:after, .site-main:after, .decor-wrap:after, .tease-deal:after,
 .tease-featured-deal:after {
   content: " ";
   display: table; }
 
-.clearfix:after, .item:after, .main:after, .decor-wrap:after, .tease-deal:after,
+.clearfix:after, .item:after, .site-main:after, .decor-wrap:after, .tease-deal:after,
 .tease-featured-deal:after {
   clear: both; }
 
@@ -1811,12 +1811,6 @@ img {
 
 figure {
   margin: 0 0.8rem; }
-
-.main {
-  background-position: bottom center;
-  background-size: 100%;
-  background-image: url("../img/svg-raw/mtns-wide.svg");
-  background-repeat: no-repeat; }
 
 .main-cta {
   padding-top: 6.8rem;
@@ -2635,16 +2629,17 @@ figcaption {
   padding: 2.4rem 0 0 0;
   margin-bottom: 0.8rem; }
 
-.footer {
+.site-footer {
   border-top: 5px solid #f8992f;
+  position: relative;
   text-align: center; }
-  .footer input {
+  .site-footer input {
     font-size: 0.8rem;
     color: #1f1d1a;
     padding: 0.4rem 0.5rem;
     width: 100%; }
   @media (min-width: 58em) {
-    .footer {
+    .site-footer {
       text-align: left; } }
 
 .menu-footer a {

@@ -26,13 +26,8 @@ figure {
 	margin: 0 $sml;
 }
 
-.main {
+.site-main {
 	@extend .clearfix;
-	
-	background-position: bottom center; 
-	background-size: 100%;
-	background-image: url('../img/svg-raw/mtns-wide.svg');
-	background-repeat: no-repeat;
 }
 
 	.main-cta {

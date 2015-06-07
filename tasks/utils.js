@@ -62,6 +62,7 @@ module.exports = function(grunt, config) {
             }
 
         },
+
         criticalcss: {
             custom: {
                 options: {
@@ -73,6 +74,15 @@ module.exports = function(grunt, config) {
                     buffer: 800*1024,
                     ignoreConsole: false
                 }
+            }
+        },
+
+        shell: {
+            multiple: {
+                command: [
+                    'git commit -am \'build\'',
+                    'git push origin master'
+                ].join('&&')
             }
         }
     });

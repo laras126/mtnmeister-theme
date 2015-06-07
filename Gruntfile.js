@@ -79,7 +79,8 @@ module.exports = function(grunt) {
     grunt.registerTask('build', [
         'uglify',
         'autoprefixer',
-        'cssmin'
+        'cssmin',
+        'shell'
     ]);
     
     // grunt.registerTask('dev', [

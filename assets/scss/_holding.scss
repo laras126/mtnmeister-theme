@@ -1,7 +1,6 @@
 
 
 // Too specific
-
 .single .page-title-simple {
 	margin-top: $h4;
 
@@ -12,10 +11,6 @@
 
 
 // Hide the sprites
-.svgsprites {
-	display: none;
-}
-
 .no-margin {
 	margin: 0;
 }
@@ -31,9 +26,17 @@
 	}
 }
 
+// Hack to get around SVG footer art positioning
+
+.page-footer-art {
+	margin-bottom: -13px;
+}
 
 
-// Verbose and content-dependent layout classes
+
+// Verbose and content-dependent layout classes -
+// these should be part of a grid or applied
+// in more spots that the featured posts
 
 .featured-left,
 .featured-right {
@@ -51,7 +54,6 @@
 	}
 }
 
-
 .tease-featured-deal {
 
 	img {
@@ -65,11 +67,6 @@
 	.featured-left {
 		@include make-sm-column(6, false);
 		@include make-md-column(8, false);
-		
-		@include bp(small) {
-			// padding-left: 0;
-			// padding-right: 1rem;
-		}
 	}
 
 	.featured-right {

@@ -15,7 +15,6 @@
 
 .shape {
 	width: 100%;
-	height: auto;
 	fill: $accent-dark;
 }
 
@@ -26,8 +25,6 @@
 .icon-rotate {
 	@include icon($accent-vlight);
 }
-
-
 
 .shape-site-logo {
 	height: $h2;
@@ -68,13 +65,4 @@
 .shape-share {
 	height: $h4;	
 	width: $h3;
-}
-
-
-
-
-// Mountains background
-
-.shape-mtns-wide {
-	// position: absolute;
 }

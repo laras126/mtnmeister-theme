@@ -27,7 +27,7 @@
             {% block content %}
                 Oops! Nothing here.
             {% endblock %}
-            <footer>
+            <footer class="page-footer">
                 <div class="contain">
                 {# Ehh...not great to hardcode the page name here. #}
                 {% if post.title != 'Support' %}
@@ -50,9 +50,11 @@
                     <!-- end judgement -->
                 {% endif %}
                 </div>
-                <div class="" style="postion:absolute; bottom: 0;">
-                <svg class="shape shape-mtns-wide" viewBox="0 0 5 3" preserveAspectRatio="none"><use xlink:href="#shape-mtns-wide"/></svg>
+                
+                <div class="page-footer-art">
+                    <svg class="shape shape-mtns-wide" viewBox="0 0 908 300" preserveAspectRatio="none"><use xlink:href="#shape-mtns-wide"/></svg>
                 </div>
+                
             </footer>
             
         </main>

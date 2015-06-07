@@ -43,7 +43,7 @@
 				{% include 'partials/micro/post-date.twig' %}
 			{% endif %}
 			
-			<h1 class="page-title-simple">{{post.title}}</h1>	
+			<h1 class="page-title-simple">{{post.post_title}}</h1>	
 
 			{% if blog_post %}
 				<p class="meta">Filed under {% for cat in post.categories %}<a href="{{cat.link}}">{{cat.name}}</a>{{ loop.last ? '' : ', ' }}{% endfor %}</p>

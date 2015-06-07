@@ -82,20 +82,13 @@ module.exports = function(grunt) {
         'cssmin',
         'shell'
     ]);
-    
-    // grunt.registerTask('dev', [
-    //     'jshint',
-    //     'sass:dev',
-    //     'concat',
-    // ]);
 
-    // grunt.registerTask('build', [
-    //     'jshint',
-    //     'sass:dev',
-    //     'autoprefixer:dev',
-    //     'concat',
-    //     'uglify',
-    //     'cssmin'
-    // ]);
+    // Pretty redundant task here...
+    grunt.registerTask('prep', [
+        'uglify',
+        'autoprefixer',
+        'cssmin',
+        'criticalcss'
+    ]);
 
 };

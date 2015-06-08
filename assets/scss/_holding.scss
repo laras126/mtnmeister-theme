@@ -141,3 +141,17 @@
 	}
 }
 
+
+// To do with some nesting issues
+
+.menu-item a {
+	&:hover {
+		color: $accent-med !important;
+	}
+}
+
+.current-menu-item {
+	a {
+		color: $accent-med !important;
+	}
+}

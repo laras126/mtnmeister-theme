@@ -3,6 +3,7 @@
 {% block content %}
 	{% include 'partials/micro/post-date.twig' %}
 	<h3 class="spacer-bot"><a href="{{post.link}}">{{post.title}}</a></h3>
+	{% include 'partials/micro/list-tags.twig' with {tags: post.tags} %}
 	{# Doing away with thumbnail for now #}
 	{# {% if post.get_thumbnail %}
 		{% include 'partials/pictures/picture-logic.twig' with 
@@ -14,7 +15,7 @@
 			} 
 		%}
 	{% endif %} #}
-	{{post.get_preview(40, false, '...', false)}}
+	{{post.get_preview(40, false, '', false)}}
 	<a href="{{post.link}}" class="link-more">Read more &rarr;</a>
 	{% include 'partials/micro/edit-link.twig' %}
 {% endblock %}

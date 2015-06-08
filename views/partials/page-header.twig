@@ -48,8 +48,9 @@
 			<h1 class="page-title-simple">{{post.post_title}}</h1>	
 
 			{% if blog_post %}
-				<p class="meta">Filed under {% for cat in post.categories %}<a href="{{cat.link}}">{{cat.name}}</a>{{ loop.last ? '' : ', ' }}{% endfor %}</p>
+				{# <p class="meta">Filed under {% for cat in post.categories %}<a href="{{cat.link}}">{{cat.name}}</a>{{ loop.last ? '' : ', ' }}{% endfor %}</p> #}
 				{# {% include 'partials/micro/post-date.twig' %} #}
+				{% include 'partials/micro/list-tags.twig' with {tags: post.tags} %}
 			{% endif %}
 			
 		

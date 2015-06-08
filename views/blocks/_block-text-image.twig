@@ -1,6 +1,6 @@
 <div class="block-textimage clearfix">
 	
-	{{ content.heading ? '<h3 class="spacer-top spacer-bot">' ~ content.heading ~ '</h3>' }}
+	{# {{ content.heading ? '<h3 class="spacer-top spacer-bot">' ~ content.heading ~ '</h3>' }} #}
 	
 	{% include 'partials/pictures/picture-logic.twig' with 
 		{
@@ -14,6 +14,11 @@
 	%}
 
 	{% if content.wrap_text == false %}<figcaption>{% endif %}
+		
+		{% if content.heading %}
+			<h4>{{content.heading}}</h4>
+		{% endif %}
+
 		{{content.text}}
 	{% if content.wrap_text == false %}</figcaption>{% endif %}
 

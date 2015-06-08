@@ -128,15 +128,12 @@
 
 	.current-menu-item {
 
-		a {
-			color: $text-light;
-		}
 		
 		&:before {
 			content: '';
 			position: absolute;
 			top: -0.3rem; // Bad magic number
-			// left: -50%; 
+			left: -20px; 
 
 			width: 0; 
 			height: 0; 
@@ -151,10 +148,6 @@
 	.menu-item a {
 		border: 0;
 		font-size: $sml;
-
-		&:hover {
-			color: $accent-med;
-		}
 	}
 }
 

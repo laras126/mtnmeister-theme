@@ -80,7 +80,7 @@ module.exports = function(grunt) {
         'uglify',
         'autoprefixer',
         'cssmin',
-        'shell'
+        // 'shell'
     ]);
 
     // Pretty redundant task here...

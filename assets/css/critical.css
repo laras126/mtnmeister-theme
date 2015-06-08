@@ -62,12 +62,12 @@ input{ line-height: normal; }
 @media (min-width: 58em){
 .col-md-5{ float: left; position: relative; padding-left: 1rem; padding-right: 1rem; width: 41.6666666667%; }
 }
-.widget-stacked p, .row{ margin-left: -1rem; margin-right: -1rem; }
+ .row{ margin-left: -1rem; margin-right: -1rem; }
 .clearfix::before, .site-main::before, .decor-wrap::before, .tease-featured-deal::before, .clearfix::after, .site-main::after, .decor-wrap::after, .tease-featured-deal::after{ content: ' '; display: table; }
 .clearfix::after, .site-main::after, .decor-wrap::after, .tease-featured-deal::after{ clear: both; }
 .list-shapes, .menu-items{ margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; list-style-type: none; }
 .btn, input[type="submit"], .btn-cta, input[type="text"], input[type="email"]{ padding-top: 0.8rem; padding-right: 1rem; padding-bottom: 0.8rem; padding-left: 1rem; font-family: proxima-nova, Helvetica, sans-serif; }
- .widget-stacked p, .meta{ color: rgb(153, 153, 153); text-transform: uppercase; letter-spacing: 1px; font-size: 0.8rem; font-weight: 400; }
+ .meta{ color: rgb(153, 153, 153); text-transform: uppercase; letter-spacing: 1px; font-size: 0.8rem; font-weight: 400; }
 .current{ color: rgb(104, 196, 153); }
 html{ line-height: 1.5; font-family: proxima-nova, Helvetica, sans-serif; }
 @media (min-width: 48em){
@@ -88,7 +88,7 @@ h1{ font-size: 3.4rem; margin-top: 2rem; }
 h4{ font-size: 1.5rem; margin-top: 1rem; }
 h5{ font-size: 1rem; margin-top: 1rem; }
 p{ font-size: 1rem; margin-top: 1rem; }
-.caption, .widget_sp_image-description p{ font-size: 0.8rem; }
+.caption{ font-size: 0.8rem; }
 .btn, input[type="submit"], .link-more, .btn-cta{ font-weight: 700; -webkit-transition-property: background; -webkit-transition-duration: 0.15s; -webkit-transition-timing-function: initial; -webkit-transition-delay: initial; text-decoration: none; border-top-width: 0px; border-right-width: 0px; border-bottom-width: 0px; border-left-width: 0px; border-style: initial; border-color: initial; cursor: pointer; text-transform: uppercase; letter-spacing: 1px; }
 .btn, input[type="submit"]{ background-image: initial; background-attachment: initial; background-origin: initial; background-clip: initial; background-color: rgb(248, 153, 47); color: rgb(255, 255, 255) !important; background-position: initial initial; background-repeat: initial initial; }
  .link-more{ background-image: initial; background-attachment: initial; background-origin: initial; background-clip: initial; background-color: rgb(236, 236, 236); color: rgb(31, 29, 26) !important; padding-top: 0.2666666667rem; padding-right: 0.6rem; padding-bottom: 0.2666666667rem; padding-left: 0.6rem; font-size: 0.8rem; background-position: initial initial; background-repeat: initial initial; }
@@ -224,15 +224,6 @@ h4{ text-transform: uppercase; letter-spacing: 1px; }
 }
 .widgets::before, .widgets::after{ content: ' '; display: table; }
 .widgets::after{ clear: both; }
-.widget-stacked{ padding-top: 1rem; padding-right: 1rem; padding-bottom: 0px; padding-left: 1rem; margin-bottom: 1.5rem; }
-.widget-stacked p{ text-align: center; padding-top: 0.8rem; padding-right: 0.8rem; padding-bottom: 0.8rem; padding-left: 0.8rem; background-color: rgb(255, 255, 255); }
-.widgets-fancy .widget-stacked{ border-top-width: 1px; border-right-width: 1px; border-bottom-width: 1px; border-left-width: 1px; border-top-style: solid; border-right-style: solid; border-bottom-style: solid; border-left-style: solid; border-top-color: rgb(211, 211, 211); border-right-color: rgb(211, 211, 211); border-bottom-color: rgb(211, 211, 211); border-left-color: rgb(211, 211, 211); background-color: rgb(242, 242, 242); }
-@media (min-width: 48em){
-.widget-stacked{ float: left; position: relative; width: 33.3333333333%; }
-}
-@media (min-width: 58em){
-.widget-stacked{ float: left; position: relative; width: 100%; }
-}
 .widget-title{ line-height: 1.5; margin-top: 0px; margin-right: 0px; margin-left: 0px; padding-top: 2.4rem; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; margin-bottom: 0.8rem; }
 .site-footer input{ font-size: 0.8rem; color: rgb(31, 29, 26); padding-top: 0.4rem; padding-right: 0.5rem; padding-bottom: 0.4rem; padding-left: 0.5rem; width: 100%; }
 .site-main{ position: relative; }

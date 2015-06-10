@@ -8,19 +8,19 @@
 	</div>
 {% endblock %}
 
-{% block loop %}
+{# {% block loop %}
 	<div class="clearfix spacer-top">
 		{% for m in meisters|slice(1, 1) %}
 			{% include ['tease/tease-meister.twig', 'tease/tease.twig'] %}
 		{% endfor %}
 	</div>
-{% endblock %}
+{% endblock %} #}
 
 {% block loop_minor %}
 	
 		<div class="loop-thumbs contain">
 			<div class="row-sm">
-			{% for m in meisters|slice(2) %}
+			{% for m in meisters|slice(1) %}
 				{% include ['tease/tease-minor_meister.twig', 'tease/tease.twig'] %}
 			{% endfor %}
 		</div>

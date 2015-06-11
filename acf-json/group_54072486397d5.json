@@ -6,7 +6,6 @@
             "key": "field_54072ba5278b5",
             "label": "Episode Number",
             "name": "episode_num",
-            "prefix": "",
             "type": "number",
             "instructions": "",
             "required": 0,
@@ -30,7 +29,6 @@
             "key": "field_54071aa85f5d2",
             "label": "Episode Tagline",
             "name": "episode_tag",
-            "prefix": "",
             "type": "text",
             "instructions": "The tagline appearing after the Meister name e.g. \"The slightest margin\".",
             "required": 1,
@@ -52,7 +50,6 @@
             "key": "field_543d67f04063f",
             "label": "SoundCloud Embed Code (large)",
             "name": "episode_soundcloud_large",
-            "prefix": "",
             "type": "text",
             "instructions": "Paste the SoundCloud embed code with the large image here.",
             "required": 0,
@@ -74,7 +71,6 @@
             "key": "field_544eb7b616df9",
             "label": "SoundCloud Embed (small)",
             "name": "episode_soundcloud_small",
-            "prefix": "",
             "type": "text",
             "instructions": "Paste the SoundCloud embed code with the side square image here.",
             "required": 0,
@@ -119,6 +115,6 @@
         "format",
         "send-trackbacks"
     ],
-    "modified": 1432224494,
+    "modified": 1434048848,
     "local": "json"
 }

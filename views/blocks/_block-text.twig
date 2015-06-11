@@ -1,9 +1,11 @@
-<div class="block-text">
+{% extends 'blocks/block.twig' %}
 
+{% block content %}
+	
 	{% if content.heading %}
 		<h4>{{content.heading}}</h4>
 	{% endif %}
 
 	{{content.section_text}}
 
-</div> <!-- /.block-text -->
+{% endblock %}

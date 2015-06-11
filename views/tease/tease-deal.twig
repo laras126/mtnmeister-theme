@@ -2,7 +2,7 @@
 
 {% block content %}
 
-	<div class="col-xs-12 col-sm-8">
+	<div class="item-desc">
 		
 		<h4>
 			<a href="{{d.deal_link}}" target="blank" title="{{d.title}}">{{d.post_title}}</a>
@@ -17,7 +17,7 @@
 		{% include "partials/share-btns.twig" %}
 	 </div>
 	
-	<div class="col-xs-12 col-sm-4">
+	<div class="item-img">
 		<a href="{{d.deal_link}}" target="blank" title="{{d.title}}">
 			{% if d.thumbnail %}
 				<img src="{{d.thumbnail.src}}" alt="{{d.title}}">

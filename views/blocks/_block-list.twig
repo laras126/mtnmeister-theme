@@ -1,0 +1,32 @@
+{% extends 'blocks/block.twig' %}
+
+{% block content %}
+	{% if content.list_items %}
+		
+		{% for item in content.list_items %}
+			
+			<div class="row spacer-bot">
+				{% if item.item_image %}
+					<div class="item-img">
+						<img src="{{item.item_image}}" alt="{{item.item_heading|striptags}}">
+					</div>
+					<div class="item-desc"> 
+				{% endif %}
+				
+				<h4>{{item.item_heading}}</h4>
+				{{item.item_description}}
+				
+				{% if item.button_text %}
+					<a class="btn" href="{{item.button_link}}">{{item.button_text}}</a>
+				{% endif %}
+			
+				{% if item.item_image %}
+					</div>
+				{% endif %}
+
+			</div>
+			
+		{% endfor %}
+
+	{% endif %}
+{% endblock %}

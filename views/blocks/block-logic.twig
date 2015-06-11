@@ -4,6 +4,8 @@
         {% include 'blocks/_block-text.twig' %}
     {% elseif content.acf_fc_layout == 'text_image_block' %}
 		{% include 'blocks/_block-text-image.twig' %}
+    {% elseif content.acf_fc_layout == 'list_block' %}
+        {% include 'blocks/_block-list.twig' %}
     {% elseif content.acf_fc_layout == 'blank' %}
         <div class="block-blank">
             {{content.wysiwyg}}

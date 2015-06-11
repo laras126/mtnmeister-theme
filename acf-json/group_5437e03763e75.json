@@ -6,7 +6,6 @@
             "key": "field_5509a98ccf25d",
             "label": "Header Display",
             "name": "header_display",
-            "prefix": "",
             "type": "radio",
             "instructions": "How should the page header display?",
             "required": 0,
@@ -29,7 +28,6 @@
             "key": "field_544e96afcf90e",
             "label": "Header Images",
             "name": "header_images",
-            "prefix": "",
             "type": "repeater",
             "instructions": "These images will be randomly selected to display in the header of the page. They should indicate the page content - for example, images for the \"Meisters\" page should have people in them.",
             "required": 0,
@@ -56,7 +54,6 @@
                     "key": "field_544e972acf90f",
                     "label": "Header Image (1200x800)",
                     "name": "image",
-                    "prefix": "",
                     "type": "image",
                     "instructions": "This image should be 1200x800, ideally with the content focus on the center\/right.",
                     "required": 0,
@@ -81,7 +78,6 @@
                     "key": "field_544e981201fe2",
                     "label": "Related Meister",
                     "name": "related_meister",
-                    "prefix": "",
                     "type": "relationship",
                     "instructions": "If a Meister is pictured, select them here. This will generate a link to their profile page.",
                     "required": 0,
@@ -94,7 +90,7 @@
                     "post_type": [
                         "meister"
                     ],
-                    "taxonomy": "",
+                    "taxonomy": [],
                     "filters": [
                         "search"
                     ],
@@ -109,7 +105,6 @@
             "key": "field_5437e03d4aa17",
             "label": "Tagline",
             "name": "tagline",
-            "prefix": "",
             "type": "text",
             "instructions": "A few words or short sentence describing the page content. Short, sweet, and snappy.",
             "required": 1,
@@ -131,7 +126,6 @@
             "key": "field_5437e7f54aa19",
             "label": "Introduction",
             "name": "introduction",
-            "prefix": "",
             "type": "textarea",
             "instructions": "A few sentences introducing the page content. This will not display if left empty.",
             "required": 0,
@@ -178,6 +172,6 @@
         "tags",
         "send-trackbacks"
     ],
-    "modified": 1432224481,
+    "modified": 1434048848,
     "local": "json"
 }

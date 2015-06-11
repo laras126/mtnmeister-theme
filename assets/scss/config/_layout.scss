@@ -9,17 +9,22 @@
 	@extend .clearfix;
 }
 
-.item-desc,
+.item-desc {
+	@include make-xs-column(12);
+	@include make-sm-column(8, false);
+}
+
 .item-img {
-	@include make-sm-column(6, false);
+	@include make-xs-column(12);
+	@include make-sm-column(4, false);
 }
 
-.item-img img {
-	@include bp(small) {
-		padding-left: $h3;	
-	}
+// .item-img img {
+// 	max-width: 
+// 	@include bp(small) {
+// 		padding-left: $h3;	
+// 	}
 	
-	display: block;
-	margin: 0 auto;
-}
-
+// 	display: block;
+// 	margin: 0 auto;
+// }

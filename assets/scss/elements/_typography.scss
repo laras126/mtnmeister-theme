@@ -16,10 +16,7 @@ html {
 		font-size: $contain-lg;
 	}
 	
-	font-family: Arial, sans-serif;
-	font-family: $body-font;
 }
-
 
 
 // ----
@@ -29,7 +26,14 @@ html {
 body {
 	font-style: normal;
 	font-weight: normal;
+
+	font-family: Helvetica, sans-serif;
 }
+
+	.wf-active body {
+		font-family: $body-font;
+	}
+
 
 a, a:visited {
 	color: $link-color;

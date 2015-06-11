@@ -13,8 +13,19 @@
     <link rel="pingback" href="{{site.pingback_url}}" />
     <link rel="icon" type="image/png" href="{{site.url}}/wp-content/themes/mtnmeister-theme/assets/img/favicon-32x32.png" sizes="32x32" />
     <link rel="icon" type="image/png" href="{{site.url}}/wp-content/themes/mtnmeister-theme/assets/img/favicon-16x16.png" sizes="16x16" />
-    <script type="text/javascript" src="//use.typekit.net/gvp5ceg.js"></script>
-  	<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+    <!--<script type="text/javascript" src="//use.typekit.net/gvp5ceg.js"></script>
+  	<script type="text/javascript">try{Typekit.load();}catch(e){}</script> -->
+    <script>
+       WebFontConfig = {
+          typekit: { id: 'gvp5ceg' }
+       };
+
+       (function(d) {
+          var wf = d.createElement('script'), s = d.scripts[0];
+          wf.src = 'https://ajax.googleapis.com/ajax/libs/webfont/1.5.18/webfont.js';
+          s.parentNode.insertBefore(wf, s);
+       })(document);
+    </script>
     <script>
         // Picture element HTML5 shiv
         document.createElement( "picture" );

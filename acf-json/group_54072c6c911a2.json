@@ -6,7 +6,6 @@
             "key": "field_54072c6c93613",
             "label": "Meister Bio",
             "name": "meister_bio",
-            "prefix": "",
             "type": "textarea",
             "instructions": "A paragraph bio of the Meister.",
             "required": 1,
@@ -28,7 +27,6 @@
             "key": "field_54072c6c93628",
             "label": "Meister Pic",
             "name": "meister_pic",
-            "prefix": "",
             "type": "image",
             "instructions": "",
             "required": 1,
@@ -76,6 +74,6 @@
         "format",
         "send-trackbacks"
     ],
-    "modified": 1432224494,
+    "modified": 1434048848,
     "local": "json"
 }

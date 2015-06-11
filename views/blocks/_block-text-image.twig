@@ -1,5 +1,7 @@
-<div class="block-textimage clearfix">
-	
+{% extends 'blocks/block.twig' %}
+
+{% block content %}
+
 	{# {{ content.heading ? '<h3 class="spacer-top spacer-bot">' ~ content.heading ~ '</h3>' }} #}
 	
 	{% include 'partials/pictures/picture-logic.twig' with 
@@ -22,4 +24,4 @@
 		{{content.text}}
 	{% if content.wrap_text == false %}</figcaption>{% endif %}
 
-</div> <!-- /.block-textimage -->
+{% endblock %}

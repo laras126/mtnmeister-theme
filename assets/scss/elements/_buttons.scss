@@ -66,6 +66,7 @@
 
 .btn-cta {
 	@include button($accent-med);
-	display: block;
+	display: inline-block;
+	margin-bottom: $base;
 	text-align: center;
 }

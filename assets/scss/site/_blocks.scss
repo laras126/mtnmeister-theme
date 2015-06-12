@@ -1,0 +1,110 @@
+
+
+// ----
+// Blocks
+// ----
+
+.block {
+	@include clearfix;
+}
+
+
+
+// Text and Image block
+
+.image-half {
+	@include make-sm-column(6, false);
+} 
+
+.image-quarter {
+	@include make-sm-column(6, false);
+	@include make-md-column(4, false);
+}
+
+.image-sixth {
+	@include make-sm-column(4, false);
+	@include make-md-column(3, false);
+}
+
+.image-credit {
+	font-size: $xsml;
+	background-color: rgba(0,0,0,0.6);
+	padding: $xsml/3 $xsml/2;
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	display: inline-block;
+	font-style: italic;
+	color: $accent-vlight;
+	margin: 0;
+
+	a {
+		color: $accent-med;
+	}
+}
+
+.image-wrap {
+	display: block;
+	position: relative;
+	margin-bottom: $sml;
+
+	@include bp(small) {
+		display: inline-block;
+	}
+	
+	img {
+		width: 100%;
+	}
+}
+
+	figcaption {
+		font-style: italic;
+
+		p {
+			margin-top: 0;
+		}
+	}
+
+	.inline-l {
+		@include bp(small) {
+			float: left;	
+			padding-left: 0;
+		}
+		
+		@extend .bleed-left;
+		margin-right: $base;
+		
+	}
+
+	.inline-r {
+		@include bp(small) {
+			padding-right: 0;
+			float: right;
+		}
+	}
+
+
+
+// Blank Block
+
+.block-blank {
+	margin-top: $h2;
+}
+
+
+
+// List block (also deal/gear teases)
+
+.item {
+	@extend .clearfix;
+}
+
+.item-desc {
+	@include make-xs-column(12);
+	@include make-sm-column(8, false);
+}
+
+.item-img {
+	@include make-xs-column(12);
+	@include make-sm-column(4, false);
+}

@@ -1386,48 +1386,54 @@ th {
     position: relative;
     width: 100%; } }
 
-.widget-stacked p,
-.row {
-  margin-left: -1rem;
-  margin-right: -1rem; }
+.rotate {
+  background-color: #043f7e;
+  color: #fff;
+  border-top: 5px solid #f8992f; }
+  .rotate a,
+  .rotate a:visited {
+    color: lightgray; }
+  .rotate a:hover {
+    color: #a0a0a0; }
 
-.clearfix:before,
-.item:before,
-.site-main:before,
-.decor-wrap:before,
-.tease-deal:before,
-.tease-featured-deal:before,
-.clearfix:after, .item:after, .site-main:after, .decor-wrap:after, .tease-deal:after,
-.tease-featured-deal:after {
-  content: " ";
-  display: table; }
+.alignleft {
+  float: left; }
 
-.clearfix:after, .item:after, .site-main:after, .decor-wrap:after, .tease-deal:after,
-.tease-featured-deal:after {
-  clear: both; }
+.alignright {
+  float: right; }
 
-.list-shapes, .list-table, .menu-items, .widget-fourth .menu {
-  margin: 0;
-  padding: 0;
-  list-style-type: none; }
+.spacer-top {
+  margin-top: 1rem; }
 
-.btn, input[type="submit"],
-button, .btn-cta, textarea,
-input[type="text"],
-input[type="password"],
-input[type="datetime"],
-input[type="datetime-local"],
-input[type="date"],
-input[type="month"],
-input[type="time"],
-input[type="week"],
-input[type="number"],
-input[type="email"],
-input[type="url"],
-input[type="search"],
-input[type="tel"] {
-  padding: 0.8rem 1rem;
-  font-family: "proxima-nova", Helvetica, sans-serif; }
+.spacer-bot {
+  margin-bottom: 1rem; }
+
+@media (min-width: 58em) {
+  .inverse-bleed {
+    margin-left: 7%;
+    margin-right: 7%; } }
+
+@media (min-width: 58em) {
+  .bleed {
+    width: 108%;
+    margin-right: -4%;
+    margin-left: -4%; } }
+
+@media (min-width: 58em) {
+  .bleed-left, .inline-l {
+    margin-left: -8%; } }
+
+@media (min-width: 58em) {
+  .bleed-right {
+    margin-right: -8%; } }
+
+.visually-hidden {
+  position: absolute;
+  top: -9999999px;
+  left: -999999px; }
+
+.special {
+  color: #f8992f; }
 
 .ginput_complex label,
 .widget-stacked p,
@@ -1462,35 +1468,48 @@ input[type="tel"] {
   display: block;
   margin: 0 auto; }
 
-.show-at-sm {
-  display: none; }
-  @media (min-width: 48em) {
-    .show-at-sm {
-      display: block; } }
+.widget-stacked p,
+.row {
+  margin-left: -1rem;
+  margin-right: -1rem; }
 
-.item-desc {
-  float: left;
-  position: relative;
-  padding-left: 1rem;
-  padding-right: 1rem;
-  width: 100%; }
-  @media (min-width: 48em) {
-    .item-desc {
-      float: left;
-      position: relative;
-      width: 66.6666666667%; } }
+.clearfix:before,
+.site-main:before,
+.decor-wrap:before,
+.item:before,
+.tease-deal:before,
+.tease-featured-deal:before,
+.clearfix:after, .site-main:after, .decor-wrap:after, .item:after, .tease-deal:after,
+.tease-featured-deal:after {
+  content: " ";
+  display: table; }
 
-.item-img {
-  float: left;
-  position: relative;
-  padding-left: 1rem;
-  padding-right: 1rem;
-  width: 100%; }
-  @media (min-width: 48em) {
-    .item-img {
-      float: left;
-      position: relative;
-      width: 33.3333333333%; } }
+.clearfix:after, .site-main:after, .decor-wrap:after, .item:after, .tease-deal:after,
+.tease-featured-deal:after {
+  clear: both; }
+
+.list-shapes, .list-table, .menu-items, .widget-fourth .menu {
+  margin: 0;
+  padding: 0;
+  list-style-type: none; }
+
+.btn, input[type="submit"],
+button, .btn-cta, textarea,
+input[type="text"],
+input[type="password"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="date"],
+input[type="month"],
+input[type="time"],
+input[type="week"],
+input[type="number"],
+input[type="email"],
+input[type="url"],
+input[type="search"],
+input[type="tel"] {
+  padding: 0.8rem 1rem;
+  font-family: "proxima-nova", Helvetica, sans-serif; }
 
 html {
   line-height: 1.5; }
@@ -1653,7 +1672,8 @@ button {
 .btn-cta {
   background: #f8992f;
   color: #fff !important;
-  display: block;
+  display: inline-block;
+  margin-bottom: 1rem;
   text-align: center; }
   .btn-cta:hover,
   .btn-cta:focus {
@@ -1788,7 +1808,7 @@ button {
     margin-left: -4%; } }
 
 @media (min-width: 58em) {
-  .bleed-left {
+  .bleed-left, .inline-l {
     margin-left: -8%; } }
 
 @media (min-width: 58em) {
@@ -2332,6 +2352,112 @@ h4 {
 .article-section,
 .article-section-header {
   margin-bottom: 2rem; }
+
+.block:before,
+.block:after {
+  content: " ";
+  display: table; }
+
+.block:after {
+  clear: both; }
+
+@media (min-width: 48em) {
+  .image-half {
+    float: left;
+    position: relative;
+    width: 50%; } }
+
+@media (min-width: 48em) {
+  .image-quarter {
+    float: left;
+    position: relative;
+    width: 50%; } }
+
+@media (min-width: 58em) {
+  .image-quarter {
+    float: left;
+    position: relative;
+    width: 33.3333333333%; } }
+
+@media (min-width: 48em) {
+  .image-sixth {
+    float: left;
+    position: relative;
+    width: 33.3333333333%; } }
+
+@media (min-width: 58em) {
+  .image-sixth {
+    float: left;
+    position: relative;
+    width: 25%; } }
+
+.image-credit {
+  font-size: 0.5rem;
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 0.1666666667rem 0.25rem;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  display: inline-block;
+  font-style: italic;
+  color: #ececec;
+  margin: 0; }
+  .image-credit a {
+    color: #f8992f; }
+
+.image-wrap {
+  display: block;
+  position: relative;
+  margin-bottom: 0.8rem; }
+  @media (min-width: 48em) {
+    .image-wrap {
+      display: inline-block; } }
+  .image-wrap img {
+    width: 100%; }
+
+figcaption {
+  font-style: italic; }
+  figcaption p {
+    margin-top: 0; }
+
+.inline-l {
+  margin-right: 1rem; }
+  @media (min-width: 48em) {
+    .inline-l {
+      float: left;
+      padding-left: 0; } }
+
+@media (min-width: 48em) {
+  .inline-r {
+    padding-right: 0;
+    float: right; } }
+
+.block-blank {
+  margin-top: 2.4rem; }
+
+.item-desc {
+  float: left;
+  position: relative;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  width: 100%; }
+  @media (min-width: 48em) {
+    .item-desc {
+      float: left;
+      position: relative;
+      width: 66.6666666667%; } }
+
+.item-img {
+  float: left;
+  position: relative;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  width: 100%; }
+  @media (min-width: 48em) {
+    .item-img {
+      float: left;
+      position: relative;
+      width: 33.3333333333%; } }
 
 .article-header {
   margin-top: 5.1rem;

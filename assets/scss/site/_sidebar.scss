@@ -22,6 +22,9 @@
 	.widgets-support {
 		border: $accent-border;
 		background-color: lighten($text-meta, 35%);
+		margin-bottom: $h1;
+		position: relative;
+		z-index: 2;
 	}
 
 .widget-stacked {

@@ -58,21 +58,15 @@
 
 
 @mixin thumb-reset() {
-	&:nth-child(2n+1){
+	&:nth-child(n+1){
         clear: none;
     }
-    &:nth-child(3n+1){
-        clear: none;
-    }
-    &:nth-child(4n+1){
-        clear: none;
-    } 
 }
 
 .loop-thumbs .tease {
 	// Two rows at small, three at med
 	@include make-xs-column(12);
-    @include make-sm-column(6);
+    @include make-smmed-column(6);
     @include make-md-column(4);
 
     @include bp(small) {

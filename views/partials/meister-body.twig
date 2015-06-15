@@ -51,7 +51,7 @@
 			{% for item in post.get_field('connected_gear') %}
 
 				{% for gear in item.gear_item %}
-					<div class="item">
+					<div class="item row">
 						<div class="item-desc">
 						    <h4><a href="{{gear.gear_link}}" title="{{gear.post_title}}" target="blank"><span class="special">{{gear.brand_name}}</span> {{gear.post_title}} <svg class="shape shape-icon shape-meta"><use xlink:href="#shape-new-window"/></svg></a></h4>
 						    {% if item.time_in_episode %}

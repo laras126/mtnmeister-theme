@@ -177,6 +177,18 @@ $gutter:                    $h3;
 }
 
 
+
+// Rouge grid mixin for Meisters page grid
+
+@mixin make-smmed-column($columns, $gutter: $gutter, $pos: true) {
+  @media (min-width: 520px) {
+    @include bs-gutter($gutter, $pos);
+    width: percentage(($columns / $grid-columns));
+  }
+}
+
+
+
 // Medium
 
 @mixin make-md-column($columns, $gutter: $gutter, $pos: true) {

@@ -17,7 +17,7 @@
 
 		<section class="row">
 		{% for m in related_meisters|slice(1,how_many) %}
-			<div class="col-sm-{{grid}}">
+			<div class="col-xs-6 col-sm-{{grid}}">
 				{% include 'tease/tease-related_meister.twig'%}
 			</div>
 		{% endfor %}

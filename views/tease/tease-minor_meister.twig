@@ -8,13 +8,15 @@
 
 	<br> <!-- shame, shame -->
 
-	<div class="thumb-container">
+	<div class="thumb-container has-credit">
 		<a href="{{m.link}}" title="{{m.title}}">
 		{% if m.get_thumbnail %}
 			<img class="lazy" data-original="{{m.thumbnail.src}}" src="{{site.url}}/wp-content/themes/mtnmeister-theme/assets/img/util/loader.gif" alt="{{m.title}}"/>
 			<noscript><img src="{{m.thumbnail.src}}" alt="{{m.title}}" height="300" width="300"></noscript>
 		{% endif %}
 		</a>
+		{# TODO: This needs to be faded in, or lazy load entire div, not just image. Roll your own, Lara. #}
+		{% include 'partials/micro/image-credit.twig' with { credit: m.f_image_credit, credit_link: m.f_image_credit_link } %}
 		<div class="thumb-caption">
 			<p class="meta">{{m.episode_tag}}</p>
 			<a href="{{m.link}}" class="link-more">Listen &rarr;</a>

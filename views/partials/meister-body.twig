@@ -7,12 +7,13 @@
 			{% include 'partials/share-btns.twig' %}
 		</div>
 
-		<div class="featured-right">
+		<div class="featured-right has-credit">
 			{% if post.meister_pic %}
 				<img src="{{TimberImage(post.meister_pic).src}}" alt="{{post.title}}">
 			{% else %}
 				<img src="{{TimberImage(post.thumbnail).src}}" alt="{{post.title}}">
 			{% endif %}
+			{% include 'partials/micro/image-credit.twig' with { credit: post.image_credit, credit_link: post.image_credit_link } %}
 		</div>
 			
 	</section>

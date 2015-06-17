@@ -28,20 +28,26 @@
 
 .image-credit {
 	font-size: $xsml;
-
-	.block & {
-		background-color: rgba(0,0,0,0.6);
+	
+	// TODO: I don't like this.
+	.has-credit & {
+		background-color: rgba(0,0,0,0.4);
 		padding: $xsml/3 $xsml/2;
 		position: absolute;
 		bottom: 0;
 		right: 0;	
+	}
+
+	// TODO: Meh. Need to get a "Featured" module thing together.
+	.featured-right & {
+		right: $base;
 	}
 	
 	// display: block;
 	font-style: italic;
 	color: $accent-vlight;
 	margin: 0;
-	z-index: 99999999;
+	z-index: $ztop;
 
 	a {
 		color: $accent-med;

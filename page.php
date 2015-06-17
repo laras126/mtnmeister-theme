@@ -23,7 +23,6 @@
  */
 
 
-
 function mtn_localize_scripts() {
 	global $post;
 

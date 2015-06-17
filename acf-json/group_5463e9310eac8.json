@@ -6,7 +6,6 @@
             "key": "field_546690d43dfc5",
             "label": "Brand Name",
             "name": "brand_name",
-            "prefix": "",
             "type": "text",
             "instructions": "",
             "required": 0,
@@ -28,7 +27,6 @@
             "key": "field_54072903aa530",
             "label": "Link",
             "name": "gear_link",
-            "prefix": "",
             "type": "url",
             "instructions": "",
             "required": 0,
@@ -45,7 +43,6 @@
             "key": "field_540728c4aa52f",
             "label": "Description",
             "name": "gear_description",
-            "prefix": "",
             "type": "textarea",
             "instructions": "Description of the gear. Max 550 characters.",
             "required": 0,
@@ -67,7 +64,6 @@
             "key": "field_540728abaa52e",
             "label": "Photo",
             "name": "gear_photo",
-            "prefix": "",
             "type": "image",
             "instructions": "500x500",
             "required": 0,
@@ -92,7 +88,6 @@
             "key": "field_54072918aa531",
             "label": "Connect to Deal",
             "name": "gear_to_deal",
-            "prefix": "",
             "type": "relationship",
             "instructions": "Is this recommendation related to a Deal?",
             "required": 0,
@@ -105,7 +100,7 @@
             "post_type": [
                 "deal"
             ],
-            "taxonomy": "",
+            "taxonomy": [],
             "filters": [
                 "search"
             ],
@@ -141,5 +136,6 @@
         "page_attributes",
         "send-trackbacks"
     ],
-    "modified": 1432766966
+    "modified": 1434555358,
+    "local": "json"
 }

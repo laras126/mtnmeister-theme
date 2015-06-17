@@ -6,7 +6,6 @@
             "key": "field_5424caf7846c3",
             "label": "Description",
             "name": "deal_desc",
-            "prefix": "",
             "type": "text",
             "instructions": "",
             "required": 0,
@@ -28,7 +27,6 @@
             "key": "field_5424cec775fe8",
             "label": "Call to Action",
             "name": "deal_cta",
-            "prefix": "",
             "type": "text",
             "instructions": "",
             "required": 0,
@@ -50,7 +48,6 @@
             "key": "field_5424cb1f846c5",
             "label": "Picture",
             "name": "deal_pic",
-            "prefix": "",
             "type": "image",
             "instructions": "",
             "required": 0,
@@ -75,7 +72,6 @@
             "key": "field_5424cb5b846c8",
             "label": "Related Meister",
             "name": "related_meister",
-            "prefix": "",
             "type": "relationship",
             "instructions": "",
             "required": 0,
@@ -88,7 +84,7 @@
             "post_type": [
                 "meister"
             ],
-            "taxonomy": "",
+            "taxonomy": [],
             "filters": [
                 "search"
             ],
@@ -101,7 +97,6 @@
             "key": "field_5424cb05846c4",
             "label": "Deal Vendor",
             "name": "deal_vendor",
-            "prefix": "",
             "type": "text",
             "instructions": "",
             "required": 0,
@@ -123,7 +118,6 @@
             "key": "field_5424cb39846c6",
             "label": "Link",
             "name": "deal_link",
-            "prefix": "",
             "type": "url",
             "instructions": "",
             "required": 0,
@@ -140,7 +134,6 @@
             "key": "field_55142dca5dd08",
             "label": "Expiration Date",
             "name": "expiration_date",
-            "prefix": "",
             "type": "date_picker",
             "instructions": "",
             "required": 0,
@@ -158,7 +151,6 @@
             "key": "field_5425d9843c593",
             "label": "Priority",
             "name": "priority",
-            "prefix": "",
             "type": "number",
             "instructions": "This will determine what order the deal shows up. 1 will show up at the top, 100 at the bottom.",
             "required": 0,
@@ -206,5 +198,6 @@
         "page_attributes",
         "send-trackbacks"
     ],
-    "modified": 1432763512
+    "modified": 1434555359,
+    "local": "json"
 }

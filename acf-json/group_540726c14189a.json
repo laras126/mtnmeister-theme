@@ -6,7 +6,6 @@
             "key": "field_5463e9a11f90d",
             "label": "Connected Gear",
             "name": "connected_gear",
-            "prefix": "",
             "type": "repeater",
             "instructions": "",
             "required": 0,
@@ -25,7 +24,6 @@
                     "key": "field_5463ea261f90f",
                     "label": "Gear Item",
                     "name": "gear_item",
-                    "prefix": "",
                     "type": "relationship",
                     "instructions": "Conned the Meister to recommended gear.",
                     "required": 0,
@@ -38,20 +36,20 @@
                     "post_type": [
                         "gear"
                     ],
-                    "taxonomy": "",
+                    "taxonomy": [],
                     "filters": [
                         "search",
                         "post_type"
                     ],
                     "elements": "",
                     "max": "",
-                    "return_format": "object"
+                    "return_format": "object",
+                    "min": 0
                 },
                 {
                     "key": "field_5463eaf97661e",
                     "label": "Time",
                     "name": "time_in_episode",
-                    "prefix": "",
                     "type": "text",
                     "instructions": "",
                     "required": 0,
@@ -75,7 +73,6 @@
             "key": "field_5463ebdd64760",
             "label": "Connected Deal",
             "name": "connected_deal",
-            "prefix": "",
             "type": "repeater",
             "instructions": "",
             "required": 0,
@@ -94,7 +91,6 @@
                     "key": "field_5463ebdd64761",
                     "label": "Deal",
                     "name": "deal",
-                    "prefix": "",
                     "type": "relationship",
                     "instructions": "Conned the Meister to a deal.",
                     "required": 0,
@@ -107,20 +103,20 @@
                     "post_type": [
                         "deal"
                     ],
-                    "taxonomy": "",
+                    "taxonomy": [],
                     "filters": [
                         "search",
                         "post_type"
                     ],
                     "elements": "",
                     "max": "",
-                    "return_format": "object"
+                    "return_format": "object",
+                    "min": 0
                 },
                 {
                     "key": "field_5463ebdd64762",
                     "label": "Time",
                     "name": "time_in_episode",
-                    "prefix": "",
                     "type": "text",
                     "instructions": "",
                     "required": 0,
@@ -144,7 +140,6 @@
             "key": "field_5437f1ee2fedd",
             "label": "Content Blocks",
             "name": "content_blocks",
-            "prefix": "",
             "type": "flexible_content",
             "instructions": "Note: if this is the \"Meisters\" or \"Deals\" page, this content will show below the Deal\/Meister posts.",
             "required": 0,
@@ -168,7 +163,6 @@
                             "key": "field_546962b3ad161",
                             "label": "Heading",
                             "name": "heading",
-                            "prefix": "",
                             "type": "text",
                             "instructions": "Leave blank if only paragraph text.",
                             "required": 0,
@@ -190,7 +184,6 @@
                             "key": "field_54593fc3d8b9f",
                             "label": "Text",
                             "name": "section_text",
-                            "prefix": "",
                             "type": "wysiwyg",
                             "instructions": "Plain paragraph text. No headlines. This will display in two columns at desktop view.",
                             "required": 0,
@@ -219,7 +212,6 @@
                             "key": "field_5469627959403",
                             "label": "Heading",
                             "name": "heading",
-                            "prefix": "",
                             "type": "text",
                             "instructions": "Add a heading for this block. Leave blank if you only want paragraph text.",
                             "required": 0,
@@ -241,13 +233,12 @@
                             "key": "field_5437f2d22fee0",
                             "label": "Image",
                             "name": "image",
-                            "prefix": "",
                             "type": "image",
                             "instructions": "Upload an image.",
                             "required": 0,
                             "conditional_logic": 0,
                             "wrapper": {
-                                "width": 50,
+                                "width": 33,
                                 "class": "",
                                 "id": ""
                             },
@@ -266,13 +257,12 @@
                             "key": "field_553ece82fa860",
                             "label": "Wrap text?",
                             "name": "wrap_text",
-                            "prefix": "",
                             "type": "true_false",
                             "instructions": "This is for images that will display inline with the text, and are not full width. Leave unchecked for full width images with a caption.",
                             "required": 0,
                             "conditional_logic": 0,
                             "wrapper": {
-                                "width": 50,
+                                "width": 33,
                                 "class": "",
                                 "id": ""
                             },
@@ -283,7 +273,6 @@
                             "key": "field_5443e7631d17b",
                             "label": "Image Location",
                             "name": "image_location",
-                            "prefix": "",
                             "type": "radio",
                             "instructions": "Should the image be shown on the right or left?",
                             "required": 0,
@@ -314,7 +303,6 @@
                             "key": "field_553d411691247",
                             "label": "Image Size",
                             "name": "image_size",
-                            "prefix": "",
                             "type": "radio",
                             "instructions": "How much space should the image take up?",
                             "required": 0,
@@ -345,7 +333,6 @@
                             "key": "field_555e03bca015f",
                             "label": "Image Credit",
                             "name": "image_credit",
-                            "prefix": "",
                             "type": "text",
                             "instructions": "Text to display underneath the photo.",
                             "required": 0,
@@ -367,7 +354,6 @@
                             "key": "field_555e0406a0160",
                             "label": "Image Credit Link",
                             "name": "image_credit_link",
-                            "prefix": "",
                             "type": "url",
                             "instructions": "Link to the photographer's website or original location of the image.",
                             "required": 0,
@@ -384,7 +370,6 @@
                             "key": "field_5437f3102fee1",
                             "label": "Text or Caption",
                             "name": "text",
-                            "prefix": "",
                             "type": "wysiwyg",
                             "instructions": "If \"Wrap text\" is true, this will display as normal paragraph text wrapped around the image.<br>Otherwise, this content should be a short caption to display alongside a full width image.",
                             "required": 0,
@@ -413,7 +398,6 @@
                             "key": "field_54b52422b0ef0",
                             "label": "Shortcode",
                             "name": "shortcode",
-                            "prefix": "",
                             "type": "wysiwyg",
                             "instructions": "Type any shortcodes here.",
                             "required": 0,
@@ -442,7 +426,6 @@
                             "key": "field_5437f4ccd8416",
                             "label": "Blank",
                             "name": "wysiwyg",
-                            "prefix": "",
                             "type": "textarea",
                             "instructions": "Type any HTML here.",
                             "required": 0,
@@ -463,6 +446,139 @@
                     ],
                     "min": "",
                     "max": ""
+                },
+                {
+                    "key": "5579dc9a87556",
+                    "name": "list_block",
+                    "label": "List",
+                    "display": "row",
+                    "sub_fields": [
+                        {
+                            "key": "field_5579dcac87557",
+                            "label": "List items",
+                            "name": "list_items",
+                            "type": "repeater",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "min": "",
+                            "max": "",
+                            "layout": "block",
+                            "button_label": "Add Item",
+                            "sub_fields": [
+                                {
+                                    "key": "field_5579dcbc87558",
+                                    "label": "Heading",
+                                    "name": "item_heading",
+                                    "type": "text",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "placeholder": "",
+                                    "prepend": "",
+                                    "append": "",
+                                    "maxlength": "",
+                                    "readonly": 0,
+                                    "disabled": 0
+                                },
+                                {
+                                    "key": "field_5579dcd68755a",
+                                    "label": "Image",
+                                    "name": "item_image",
+                                    "type": "image",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": 33,
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "return_format": "url",
+                                    "preview_size": "thumbnail",
+                                    "library": "all",
+                                    "min_width": "",
+                                    "min_height": "",
+                                    "min_size": "",
+                                    "max_width": "",
+                                    "max_height": "",
+                                    "max_size": "",
+                                    "mime_types": ""
+                                },
+                                {
+                                    "key": "field_5579dcc587559",
+                                    "label": "Description",
+                                    "name": "item_description",
+                                    "type": "textarea",
+                                    "instructions": "Keep to a short paragraph.",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": 66,
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "placeholder": "",
+                                    "maxlength": "",
+                                    "rows": "",
+                                    "new_lines": "wpautop",
+                                    "readonly": 0,
+                                    "disabled": 0
+                                },
+                                {
+                                    "key": "field_5579dd548755c",
+                                    "label": "Button Text",
+                                    "name": "button_text",
+                                    "type": "text",
+                                    "instructions": "Leave blank if there is no button.",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": 50,
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "placeholder": "",
+                                    "prepend": "",
+                                    "append": "",
+                                    "maxlength": "",
+                                    "readonly": 0,
+                                    "disabled": 0
+                                },
+                                {
+                                    "key": "field_5579dd628755d",
+                                    "label": "Button Link",
+                                    "name": "button_link",
+                                    "type": "url",
+                                    "instructions": "The link for the button.",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": 50,
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "placeholder": ""
+                                }
+                            ]
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
                 }
             ]
         },
@@ -470,7 +586,6 @@
             "key": "field_5407296caa532",
             "label": "Additional Resources",
             "name": "additional_resources",
-            "prefix": "",
             "type": "repeater",
             "instructions": "Add and link to additional resources mentioned throughout the episode.",
             "required": 0,
@@ -489,7 +604,6 @@
                     "key": "field_5407297baa533",
                     "label": "Resource Title",
                     "name": "resource_title",
-                    "prefix": "",
                     "type": "text",
                     "instructions": "",
                     "required": 0,
@@ -511,7 +625,6 @@
                     "key": "field_5407298eaa534",
                     "label": "Link",
                     "name": "resource_link",
-                    "prefix": "",
                     "type": "text",
                     "instructions": "",
                     "required": 0,
@@ -533,7 +646,6 @@
                     "key": "field_540729e2aa535",
                     "label": "Time",
                     "name": "resource_time_in_episode",
-                    "prefix": "",
                     "type": "text",
                     "instructions": "",
                     "required": 0,
@@ -566,8 +678,9 @@
     "menu_order": 3,
     "position": "normal",
     "style": "default",
-    "modified": 1432224494,
     "label_placement": "top",
     "instruction_placement": "field",
-    "hide_on_screen": ""
+    "hide_on_screen": "",
+    "modified": 1434555359,
+    "local": "json"
 }

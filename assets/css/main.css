@@ -2303,7 +2303,7 @@ h4 {
   text-transform: uppercase;
   letter-spacing: 1px;
   position: relative;
-  z-index: 9;
+  z-index: 3;
   font-size: 2.55rem;
   font-size: 13vw;
   top: 0.8rem; }
@@ -2366,7 +2366,7 @@ h4 {
   bottom: auto;
   display: block;
   position: absolute;
-  z-index: 99;
+  z-index: 4;
   right: 0;
   padding: 0.8rem;
   text-align: right;
@@ -2392,7 +2392,7 @@ h4 {
   position: absolute;
   width: 100%;
   bottom: 0;
-  z-index: 10;
+  z-index: 3;
   border-bottom: #f8992f 3px solid; }
   @media (min-width: 48em) {
     .page-info {
@@ -2442,15 +2442,16 @@ h4 {
 
 .image-credit {
   font-size: 0.5rem;
-  background-color: rgba(0, 0, 0, 0.6);
-  padding: 0.1666666667rem 0.25rem;
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  display: inline-block;
   font-style: italic;
   color: #ececec;
-  margin: 0; }
+  margin: 0;
+  z-index: 99999999; }
+  .block .image-credit {
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 0.1666666667rem 0.25rem;
+    position: absolute;
+    bottom: 0;
+    right: 0; }
   .image-credit a {
     color: #f8992f; }
 

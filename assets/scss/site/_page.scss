@@ -14,7 +14,7 @@ h4 {
 	color: $text-light;
 	 @include upperspace;
 	position: relative;
-	z-index: 9;
+	z-index: $zmid;
 
 	font-size: $h1*0.75;	
 	font-size: 13vw;
@@ -112,7 +112,7 @@ h4 {
 	bottom: auto;
 	display: block;
 	position: absolute;
-	z-index: 99;
+	z-index: $ztop;
 	right: 0;
 
 	padding: $sml;
@@ -145,7 +145,7 @@ h4 {
 	position: absolute;
 	width: 100%;
 	bottom: 0;
-	z-index: 10;
+	z-index: $zmid;
 	border-bottom: $accent-med 3px solid;
 
 	@include bp(small) {

@@ -20,6 +20,6 @@
 		{% include 'partials/pictures/_picture-caption.twig'%}
 	{% endif %}
 
-	{% if credit %} <p class="image-credit">Photo Credit: {{ credit_link ? '<a href="' ~ credit_link ~ '" target="blank">' }}{{credit}}{{credit_link ? '</a>' }}</p>{% endif %}
+	{% include 'partials/micro/image-credit.twig' %}
 
 </figure> <!-- /.image-wrap -->

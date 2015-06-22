@@ -6,8 +6,9 @@
 
 // Page typography
 
-h4 {
-	 @include upperspace;
+.page-body {
+	position: relative;
+	z-index: $ztop;
 }
 
 .page-title {

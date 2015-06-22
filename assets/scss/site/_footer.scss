@@ -16,15 +16,19 @@
 	}
 }
 
-.site-main {
-	position: relative;
-}
+	.main-cta {
+		padding-top: $h1*2;	
+		padding-bottom: $h1*2;
+		position: relative;
+		z-index: $zmid;
+	}
+
 
 .page-footer-art {
 	position: absolute;
 	width: 100%;
 	bottom: 0;
-	z-index: 0;
+	z-index: $zbase;
 }
 
 .menu-footer {

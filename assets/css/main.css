@@ -1873,7 +1873,9 @@ figure {
 
 .main-cta {
   padding-top: 6.8rem;
-  padding-bottom: 6.8rem; }
+  padding-bottom: 6.8rem;
+  position: relative;
+  z-index: 4; }
 
 .block-title {
   text-transform: uppercase;
@@ -2753,7 +2755,8 @@ figcaption {
 .page-footer-art {
   position: absolute;
   width: 100%;
-  bottom: 0; }
+  bottom: 0;
+  z-index: 0; }
 
 .menu-footer a {
   color: #f8992f;

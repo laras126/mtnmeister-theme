@@ -12,7 +12,17 @@
 		
 		<header class="page-header">
 
-			{% for header_image in header_images|slice(0,1) %}
+
+			{# TODO: thumbnail crap not working....need to get it from the ID or something. #}
+			{# {% for header_image in post.get_field('header_images') %}
+				{{dump(header_image.thumbnail)}}
+			{% endfor %} #}
+
+
+			{# {{dump(post.get_field('header_images'))}} #}
+			{# {% for header_image in post.get_field('header_images') %} #}
+			{# NOTE: This is querying all header images, not the ones associated with the post #}
+			{% for header_image in header_images %} 
 				
 				{% include 'partials/pictures/_picture-caption.twig' with {
 					image: header_image.thumbnail,
@@ -21,21 +31,21 @@
 
 				} %}
 
-				{# Get the content connected to the header image and print data according to type. #}
 				{% if header_image.connected_content %}
 					
 					<div class="spacer-bot caption page-header-caption">
 					
-					{% for connected in header_image.get_field('connected_content') %}
+						{# Only show the post link if its a meister #}
 						{% if connected.post_type == 'meister' %}
-							{{connected.episode_tag}} <br><a class="special" href="{{connected.link}}">#{{connected.episode_num}} {{connected.post_title}}</a>
+							{% for connected in header_image.get_field('connected_content') %}
+								{{connected.episode_tag}} <br><a class="special" href="{{connected.link}}">#{{connected.episode_num}} {{connected.post_title}}</a>
+							{% endfor %}
 						{% endif %}
-					{% endfor %}
-					
-					{% include 'partials/micro/image-credit.twig' with { 
-						credit: header_image.image_credit, 
-						credit_link: header_image.image_credit_link } %}
-					
+						
+						{% include 'partials/micro/image-credit.twig' with { 
+							credit: header_image.image_credit, 
+							credit_link: header_image.image_credit_link } %}
+						
 					</div> <!-- /.page-header-caption -->
 				{% endif %}
 

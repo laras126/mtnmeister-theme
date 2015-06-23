@@ -1,0 +1,117 @@
+{
+    "key": "group_55897d3b404c4",
+    "title": "Header Image Content",
+    "fields": [
+        {
+            "key": "field_55897fd7abe39",
+            "label": "Note:",
+            "name": "",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "Add the image to Featured Image.",
+            "esc_html": 0
+        },
+        {
+            "key": "field_55897d41b14dd",
+            "label": "Image Credit",
+            "name": "image_credit",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": 50,
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": "",
+            "readonly": 0,
+            "disabled": 0
+        },
+        {
+            "key": "field_55897d87b14de",
+            "label": "Image Credit Link",
+            "name": "image_credit_link",
+            "type": "url",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": 50,
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": ""
+        },
+        {
+            "key": "field_55897da78bbde",
+            "label": "Connected Content",
+            "name": "connected_content",
+            "type": "relationship",
+            "instructions": "Select content connected to this image.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "post_type": [
+                "meister",
+                "gear",
+                "post"
+            ],
+            "taxonomy": [],
+            "filters": [
+                "search",
+                "post_type",
+                "taxonomy"
+            ],
+            "elements": "",
+            "min": "",
+            "max": 1,
+            "return_format": "object"
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "header_image"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": [
+        "permalink",
+        "the_content",
+        "excerpt",
+        "custom_fields",
+        "discussion",
+        "comments",
+        "revisions",
+        "slug",
+        "author",
+        "format",
+        "page_attributes",
+        "send-trackbacks"
+    ],
+    "modified": 1435085568
+}

@@ -2,40 +2,48 @@
 
 {% block content %}
 
+
     {% include 'partials/page-header.twig' %}
 		
-		<article class="page-body contain">
-			{% if post.tagline %}<p class="tagline tagline-page">{{post.tagline}}</p>{% endif %}
-		
-			{% block below_title %}{% endblock %}
-		
-			{{sidebar ? ' <div class="row-md">'}}
+{# 	{% for img in header_imgs %}
+		<div class="contain">
+		<img src="{{TimberImage(img.thumbnail).src}}" alt="Featured Image">
+		{% include 'partials/micro/image-credit.twig' with { credit: img.image_credit, credit_link: img.image_credit_link } %}
+		</div>
+	{% endfor %} #}
 
-			<section class="page-content {{sidebar_class}}">
-				
-				{% if post.introduction %}
-					<p class="lead">{{post.introduction}}</p>	
-				{% endif %}
-				
-				{% block above_content %}{% endblock %}
-				
-				{% if front_page != true and is_index != true %}
-					{% include 'blocks/block-logic.twig' %}
-				{% endif %}
+	<article class="page-body contain">
+		{% if post.tagline %}<p class="tagline tagline-page">{{post.tagline}}</p>{% endif %}
+	
+		{% block below_title %}{% endblock %}
+	
+		{{sidebar ? ' <div class="row-md">'}}
+
+		<section class="page-content {{sidebar_class}}">
 			
-				{% block below_content %}{% endblock %}
+			{% if post.introduction %}
+				<p class="lead">{{post.introduction}}</p>	
+			{% endif %}
+			
+			{% block above_content %}{% endblock %}
+			
+			{% if front_page != true and is_index != true %}
+				{% include 'blocks/block-logic.twig' %}
+			{% endif %}
+		
+			{% block below_content %}{% endblock %}
 
-			</section>
+		</section>
 
-			{% if sidebar %}
-				<aside class="sidebar">
-					{{sidebar}}
-				</aside>
-			</div> <!-- /.row-md -->
-			{% endif %}	
+		{% if sidebar %}
+			<aside class="sidebar">
+				{# {{sidebar}} #}
+			</aside>
+		</div> <!-- /.row-md -->
+		{% endif %}	
 
-		 </article> <!-- /.page-body -->
+	 </article> <!-- /.page-body -->
 
-		{% block loop_minor %}{% endblock %}
+	{% block loop_minor %}{% endblock %}
 	
 {% endblock %}

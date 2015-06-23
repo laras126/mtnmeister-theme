@@ -150,7 +150,7 @@ register_post_type( 'deal', $args );
 
 /**
  *
- * Custom type for Meister Deals
+ * Custom type for Header Images
  *
  */
 
@@ -175,7 +175,7 @@ $labels = array(
 		'label'               => __( 'header_image', 'text_domain' ),
 		'description'         => __( 'Large Header Images', 'text_domain' ),
 		'labels'              => $labels,
-		'supports'            => array( ),
+		'supports'            => array( 'thumbnail', 'title' ),
 		'taxonomies'          => array( 'category', 'post_tag' ),
 		'hierarchical'        => false,
 		'public'              => true,

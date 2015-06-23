@@ -40,12 +40,12 @@
 		function add_to_context($context){
 
 			// Get a random header image
-			$images = get_field('header_images' );
+			// $images = get_field('header_images' );
 
-			if( is_page() && $images ) {
-				$rand_row = $images[ array_rand( $images ) ];
-				$context['header_image'] = $rand_row;	
-			}
+			// if( is_page() && $images ) {
+			// 	$rand_row = $images[ array_rand( $images ) ];
+			// 	$context['header_image'] = $rand_row;	
+			// }
 
 			// ACF Site Settings (elements on every page)
 			$context['callout_tf'] = get_field('callout_tf', 'options');

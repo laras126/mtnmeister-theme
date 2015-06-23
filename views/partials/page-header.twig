@@ -6,30 +6,48 @@
 	to be adjusted (the Header Display field was added later). 
 #}
 
-{% if header_image.image and display != 'text_only' %}
+{% if display != 'text_only' %}
 	<div class="rotate">
 		{% include 'partials/micro/spinner.twig' %}
 		
 		<header class="page-header">
 
-			<picture>
-				<source srcset="{{TimberImage(header_image.image).src}}" media="(min-width: 1000px)">
-				<source srcset="{{TimberImage(header_image.image).src|resize(900)}}" media="(min-width: 800px)">
-				<img class="page-header-image" srcset="{{TimberImage(header_image.image).src|resize(600)}}" alt="{{meister[0].title}}">
-			</picture>
+			{% for header_image in header_images|slice(0,1) %}
+				
+				{% include 'partials/pictures/_picture-caption.twig' with {
+					image: header_image.thumbnail,
+					post: header_image,
+					class: 'page-header-image'
 
+				} %}
+
+				{# Get the content connected to the header image and print data according to type. #}
+				{% if header_image.connected_content %}
+					
+					<div class="spacer-bot caption page-header-caption">
+					
+					{% for connected in header_image.get_field('connected_content') %}
+						{% if connected.post_type == 'meister' %}
+							{{connected.episode_tag}} <br><a class="special" href="{{connected.link}}">#{{connected.episode_num}} {{connected.post_title}}</a>
+						{% endif %}
+					{% endfor %}
+					
+					{% include 'partials/micro/image-credit.twig' with { 
+						credit: header_image.image_credit, 
+						credit_link: header_image.image_credit_link } %}
+					
+					</div> <!-- /.page-header-caption -->
+				{% endif %}
+
+			{% endfor %}
+			
 			<div class="page-info">
 				<div class="container">
 			        <h1 class="page-title no-margin">{{post.title}}</h1>
 			    </div>
 			</div>
 
-			{% if meister[0] %}
-				<div class="spacer-bot caption page-header-caption">{{meister[0].episode_tag}} {% if meister %} <br><a class="special" href="{{meister[0].link}}">#{{meister[0].episode_num}} {{meister[0].title}}</a> {% endif %}
-					{% include 'partials/micro/image-credit.twig' with { credit: header_image.image_credit, credit_link: header_image.image_credit_link } %}
 
-				</div>
-			{% endif %}
 
 		</header>
 	</div>

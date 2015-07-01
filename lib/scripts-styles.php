@@ -1,30 +1,6 @@
 <?php 
 
 
-// Enqueue scripts and styles
-// function mtn_scripts_styles() {
-
-//     // Use jQuery from CDN
-//     if (!is_admin()) {
-//         wp_deregister_script('jquery');
-//         wp_register_script('jquery', '//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js');
-//         wp_enqueue_script('jquery', array(), null, true);
-//     }
-
-//     // Load minified scripts for production only
-//     if( WP_ENV == 'production' ) {
-//         wp_enqueue_style( 'mtn-styles', get_template_directory_uri() . '/assets/css/main.min.css', 1.0);
-//         wp_register_script('mtn-js', get_template_directory_uri() . '/assets/js/build/scripts.min.js', true);
-//     } else {
-//         wp_enqueue_style( 'mtn-styles', get_template_directory_uri() . '/assets/css/main.css', 1.0);
-//         wp_register_script('mtn-js', get_template_directory_uri() . '/assets/js/src/scripts.js', true);
-//     }
-    
-//     wp_enqueue_script( 'mtn-js', array('jquery'), true, '');
-
-// }
-// add_action( 'wp_enqueue_scripts', 'mtn_scripts_styles' );
-
   // Enqueue scripts
   function mtn_scripts() {
 

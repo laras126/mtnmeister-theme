@@ -1,8 +1,7 @@
 module.exports = function(grunt, config) {
     
     var jsFileList = [
-    	config.jsConcatDir + 'modernizr-custom.js',
-        config.jsSrcDir + '*.js'
+        config.jsSrcDir + '_*.js'
     ];  
 
     console.log(jsFileList);
@@ -55,7 +54,7 @@ module.exports = function(grunt, config) {
 	    	js: {
 				files: jsFileList,
 				tasks: [
-					'jshint',
+					// 'jshint',
 					'concat'
 				]
 	    	}

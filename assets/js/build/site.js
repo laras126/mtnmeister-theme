@@ -2109,7 +2109,7 @@ $(document).ready(function() {
 	
 		$(this).imagesLoaded( function() {
 
-			$t.fadeTo(300, 0.5, function() {
+			$t.fadeTo(300, 0.25, function() {
 			    
 				$image.css('opacity', 1);
 				$t.find('.spinner').hide();

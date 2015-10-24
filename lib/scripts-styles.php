@@ -61,14 +61,8 @@ function mtn_google_analytics() { ?>
     e=o.createElement(i);r=o.getElementsByTagName(i)[0];
     e.src='//www.google-analytics.com/analytics.js';
     r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
-  <?php else : ?>
-    function ga() {
-      console.log('GoogleAnalytics: ' + [].slice.call(arguments));
-    }
-  <?php endif; ?>
-  ga('create','<?php echo GOOGLE_ANALYTICS_ID; ?>','auto');ga('send','pageview');
-    
-    // Hotjar Tracking Code
+
+        // Hotjar Tracking Code
     (function(h,o,t,j,a,r){
         h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
         h._hjSettings={hjid:91115,hjsv:5};
@@ -77,6 +71,14 @@ function mtn_google_analytics() { ?>
         r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
         a.appendChild(r);
     })(window,document,'//static.hotjar.com/c/hotjar-','.js?sv=');
+    
+  <?php else : ?>
+    function ga() {
+      console.log('GoogleAnalytics: ' + [].slice.call(arguments));
+    }
+  <?php endif; ?>
+  ga('create','<?php echo GOOGLE_ANALYTICS_ID; ?>','auto');ga('send','pageview');
+    
 </script>
 
 <?php }

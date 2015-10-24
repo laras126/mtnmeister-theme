@@ -1,7 +1,8 @@
 module.exports = function(grunt, config) {
     
     var jsFileList = [
-        config.jsSrcDir + '_*.js'
+    	config.jsSrcDir + '_plugins.js',
+        config.jsSrcDir + '_main.js',
     ];  
 
     console.log(jsFileList);
@@ -18,24 +19,13 @@ module.exports = function(grunt, config) {
                 config.jsSrcDir + '*.js'
             ],
         },
-        
-		bower_concat: {
-			all: {
-			    dest: config.jsSrcDir + 'bower.js',
-			    cssDest: config.cssDir + 'bower.css',
-			    exclude: [
-					'jquery',
-			      	'modernizr'
-			    ]
-			}
-		},
 
 		concat: {
 	        options: {
 	        },
 	        dist: {
 	            src: jsFileList,
-	            dest: config.jsConcatDir + 'scripts.js',
+	            dest: config.jsConcatDir + 'site.js',
 	        },
 	    },
 		
@@ -45,7 +35,7 @@ module.exports = function(grunt, config) {
 			dist: {
 	            files: {
 					// For some reason this doesn't accept the config variable for the key. Bleh.
-					'assets/js/build/scripts.min.js': ['<%= concat.dist.dest %>']
+					'assets/js/build/site.min.js': ['<%= concat.dist.dest %>']
 	            }
 	        }
 	    },

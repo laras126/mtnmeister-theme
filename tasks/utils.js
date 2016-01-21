@@ -76,6 +76,17 @@ module.exports = function(grunt, config) {
                 }
             }
         },
+        
+        browserSync: {
+            dev: {
+                bsFiles: {
+                    src : 'assets/*.css'
+                },
+                options: {
+                    proxy: "mtn.local"
+                }
+            }
+        },
 
         shell: {
             multiple: {

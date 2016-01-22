@@ -15,6 +15,35 @@ $(document).ready(function() {
 	
 
 
+    // Testing the REST API
+
+    $('.load').each( function() {
+		$(this).on('click', function() {
+
+
+	    	var cat = $(this).attr('data-id');
+	    	var cpt = $(this).attr('data-cpt');
+
+	    	console.log('---- Cat id: ' + cat);
+	    	// cat.hide();
+	        $.ajax({
+	          url: 'http://mtn.local/wp-json/wp/v2/'+cpt+'?filter[cat]='+cat
+	          // cache: false
+	        })
+	        .done(function( arr ) {
+	           $('#results').html('');
+	           for (var i = 0; i < arr.length; i++) {
+		           $('#results').append('<div class="row"><div class="col-sm-4"><img src="'+arr[i].featured_image_url[0]+'" alt="Thumbnail"></div><div class="col-sm-8"><h5>'+arr[i].title.rendered+'</h5></div></div>');
+		           	console.log(arr[i]);
+	           };
+	           // console.log(html);
+	        });
+	    });
+
+    });
+    
+
+
 	// ----
 	// Toggle menu
 	// ----

@@ -96,7 +96,9 @@
     color: $accent-med;
 }
 
-
+.unstyle-list {
+    @extend %unstyle-list;
+}
 
 
 // ----

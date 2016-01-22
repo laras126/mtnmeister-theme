@@ -2,18 +2,18 @@
 
 {% block above_content %}
 	
-	<ul class="row">
-	
-	{% for cat in cats %}
-		<li class="col-sm-3" style="border:1px solid green;">
-			<strong class="cat-btn">{{cat.name}}</strong>
-			<a class="load" data-cpt="meister" data-id="{{cat.term_id}}">load meisters</a> // 
-			<a class="load" data-cpt="gear" data-id="{{cat.term_id}}">load gear</a> // 
-			<a class="load" data-cpt="deal" data-id="{{cat.term_id}}">load deals</a>
-		</li>
-	{% endfor %}
+	<div class="contain">
+		<ul class="row unstyle-list col-sm-2">
+		
+		{% for cat in cats %}
+			<li>
+				<a class="load" data-cpt="meister" data-id="{{cat.term_id}}"><strong class="cat-btn">{{cat.name}}</strong></a>
+				{# <a class="load" data-cpt="gear" data-id="{{cat.term_id}}">load gear</a> // 
+				<a class="load" data-cpt="deal" data-id="{{cat.term_id}}">load deals</a> #}
+			</li>
+		{% endfor %}
 
-	</ul>
-	<div id="results"></div>
-
+		</ul>
+		<div class="col-sm-10" id="results"></div>
+	</div>
 {% endblock %}

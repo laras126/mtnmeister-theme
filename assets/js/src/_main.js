@@ -33,7 +33,7 @@ $(document).ready(function() {
 	        .done(function( arr ) {
 	           $('#results').html('');
 	           for (var i = 0; i < arr.length; i++) {
-		           $('#results').append('<div class="row"><div class="col-sm-4"><img src="'+arr[i].featured_image_url[0]+'" alt="Thumbnail"></div><div class="col-sm-8"><h5>'+arr[i].title.rendered+'</h5></div></div>');
+		           $('#results').append('<div class="col-sm-3"><img src="'+arr[i].featured_image_url[0]+'" alt="Thumbnail"><h5>'+arr[i].title.rendered+'</h5><br></div>');
 		           	console.log(arr[i]);
 	           };
 	           // console.log(html);

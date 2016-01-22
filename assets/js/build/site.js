@@ -2012,7 +2012,6 @@ window.matchMedia || (window.matchMedia = function() {
 
 $(document).ready(function() {
 
-
 	console.log('Check it: http://github.com/laras126/mtnmeister-theme');
 
 
@@ -2032,24 +2031,22 @@ $(document).ready(function() {
     $('.load').each( function() {
 		$(this).on('click', function() {
 
-
 	    	var cat = $(this).attr('data-id');
-	    	var cpt = $(this).attr('data-cpt');
+			var cpt = $(this).attr('data-cpt');
 
-	    	console.log('---- Cat id: ' + cat);
+	    	console.log('---- Cat ID: ' + cat);
 	    	// cat.hide();
 	        $.ajax({
-	          url: 'http://mtn.local/wp-json/wp/v2/'+cpt+'?filter[cat]='+cat
-	          // cache: false
+				url: 'http://mtn.local/wp-json/wp/v2/'+cpt+'?filter[cat]='+cat
 	        })
-	        .done(function( arr ) {
-	           $('#results').html('');
-	           for (var i = 0; i < arr.length; i++) {
-		           $('#results').append('<div class="col-sm-3"><img src="'+arr[i].featured_image_url[0]+'" alt="Thumbnail"><h5>'+arr[i].title.rendered+'</h5><br></div>');
-		           	console.log(arr[i]);
-	           };
-	           // console.log(html);
+			.done(function(arr) {
+				$('#results').html('');
+	           	for (var i = 0; i < arr.length; i++) {
+					$('#results').append('<div class="col-sm-3"><img src="'+arr[i].featured_image_url[0]+'" alt="Thumbnail"><h5>'+arr[i].title.rendered+'</h5><br></div>');
+					console.log(arr[i]);
+	           	};
 	        });
+
 	    });
 
     });
@@ -2060,7 +2057,6 @@ $(document).ready(function() {
 	// Toggle menu
 	// ----
 
-	  
 	var $menu = $('#menu'),
 		$menulink = $('.menu-link');
 		
@@ -2081,7 +2077,7 @@ $(document).ready(function() {
 	$('.shape-search').click(function() {
 		
 		// NOT working
-		if($('.search-field').is(':focus')) {
+		if( $('.search-field').is(':focus')) {
 			$('.search-field').focusout();
 			$('.search-form').removeClass('focused');
 		} else {
@@ -2097,7 +2093,7 @@ $(document).ready(function() {
 	// Menu and callout bar
 	// ----
 
-  	var $scroll_class = 'banner-opaque',
+	var $scroll_class = 'banner-opaque',
 		$header_ht = $('.page-header').outerHeight(),
 		$banner = $('.banner'),
 		$banner_ht = $('.banner').outerHeight(),
@@ -2223,4 +2219,3 @@ var w = window;
 w.addEventListener ? w.addEventListener("load",function(){document.body.addEventListener("click",_gaLt,!1)},!1)
  : w.attachEvent && w.attachEvent("onload",function(){document.body.attachEvent("onclick",_gaLt)});
 
- 

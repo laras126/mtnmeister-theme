@@ -1488,7 +1488,7 @@ th {
 .tease-featured-deal:after {
   clear: both; }
 
-.list-shapes, .list-table, .menu-items, .widget-fourth .menu {
+.unstyle-list, .list-shapes, .list-table, .menu-items, .widget-fourth .menu {
   margin: 0;
   padding: 0;
   list-style-type: none; }

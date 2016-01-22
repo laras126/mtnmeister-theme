@@ -11,8 +11,23 @@ $(document).ready(function() {
 		threshold : 600
 	}); // Am I lazy for using this?
 
+
 	$('#content').fitVids();
 	
+
+    // Testing the REST API
+
+    $('#rest-trigger').on('click', function() {
+        $.ajax({
+          url: 'http://mtn.local/wp-json/wp/v2/posts/1739'
+          // cache: false
+        })
+        .done(function( html ) {
+           $( "#rest-target" ).append( html );
+           console.log(html);
+        });
+    });
+    
 
 
 	// ----

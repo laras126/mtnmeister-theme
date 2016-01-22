@@ -61,7 +61,7 @@ add_action( 'after_setup_theme', 'mtn_editor_styles' );
 // Make custom fields work with Yoast SEO (only impacts the light, but helpful!)
 // https://imperativeideas.com/making-custom-fields-work-yoast-wordpress-seo/
 if ( is_admin() ) { // check to make sure we aren't on the front end
-	add_filter('wpseo_pre_analysis_post_content', 'mtn_add_custom_to_yoast');
+	// add_filter('wpseo_pre_analysis_post_content', 'mtn_add_custom_to_yoast');
 
 	function mtn_add_custom_to_yoast( $content ) {
 		global $post;
@@ -123,6 +123,45 @@ function cf_search_distinct( $where ) {
     return $where;
 }
 add_filter( 'posts_distinct', 'cf_search_distinct' );
+
+
+
+// Adding custom fields to the WP API JSON response
+add_action( 'rest_api_init', 'mtn_register_api_hooks' );
+function mtn_register_api_hooks() {
+
+	$fields = array(
+			'episode_num'
+		);
+
+    // Add the plaintext content to GET requests for individual posts
+    foreach ($fields as $f) {
+	    register_api_field(
+	        'meister',
+	        $f,
+	        array(
+	            'get_callback'    => 'mtn_return_cf_content',
+	        )
+	    );
+    }
+
+    register_api_field(
+		'meister',
+        'featured_image_url',
+        array(
+            'get_callback'    => 'mtn_return_feat_img',
+        )
+    );
+}
+
+// Return plaintext content for posts
+function mtn_return_cf_content( $object, $field_name, $request ) {
+    return get_post_meta( $object[ 'id' ], $field_name, true );
+}
+
+function mtn_return_feat_img( $object, $request ) {
+	return wp_get_attachment_image_src($object['featured_image'], 'thumbnail');
+}
 
 
 ?>

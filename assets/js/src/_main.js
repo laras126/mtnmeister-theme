@@ -19,7 +19,8 @@ $(document).ready(function() {
     $('.load').each( function() {
 		$(this).on('click', function() {
 
-	    	var cat = $(this).attr('data-id');
+	    	var cat_id = $(this).attr('data-id');
+	    	var cat_name = $('.cat-list').find('a[data-id='+cat_id+']').html();
 			var cpt = $(this).attr('data-cpt');
 
 	    	console.log('---- Cat ID: ' + cat);
@@ -33,6 +34,7 @@ $(document).ready(function() {
 					$('#results').append('<div class="col-sm-3"><img src="'+arr[i].featured_image_url[0]+'" alt="Thumbnail"><h5>'+arr[i].title.rendered+'</h5><br></div>');
 					console.log(arr[i]);
 	           	};
+	           	$('#current-cat').html(cat_name);
 	        });
 
 	    });

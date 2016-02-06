@@ -42,7 +42,6 @@ $(document).ready(function() {
 					$('#results').append('<div class="col-xs-6 col-sm-3 text-center"><img src="'+data[i].featured_image_url[0]+'" alt="Thumbnail"><h5>'+data[i].title.rendered+'</h5><br></div>');
 	           	};
 	           	$('#current-cat').html(cat_name);
-	           	console.log(cat_name);
 	        });
 
 	    });

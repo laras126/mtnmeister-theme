@@ -23,18 +23,26 @@ $(document).ready(function() {
 	    	var cat_name = $('.cat-list').find('a[data-id='+cat_id+']').html();
 			var cpt = $(this).attr('data-cpt');
 
-	    	console.log('---- Cat ID: ' + cat);
 	    	// cat.hide();
 	        $.ajax({
-				url: 'http://mtn.local/wp-json/wp/v2/'+cpt+'?filter[cat]='+cat
+				url: 'http://mtn.local/wp-json/wp/v2/'+cpt,
+				data: {
+		        	filter: {
+		        		'posts_per_page': -1,
+		        		'cat': cat_id
+		        	}
+		    	},
+		    	dataType: 'json',
+		    	type: 'GET',
+
 	        })
-			.done(function(arr) {
+			.done(function(data) {
 				$('#results').html('');
-	           	for (var i = 0; i < arr.length; i++) {
-					$('#results').append('<div class="col-sm-3"><img src="'+arr[i].featured_image_url[0]+'" alt="Thumbnail"><h5>'+arr[i].title.rendered+'</h5><br></div>');
-					console.log(arr[i]);
+	           	for (var i = 0; i < data.length; i++) {
+					$('#results').append('<div class="col-xs-6 col-sm-3 text-center"><img src="'+data[i].featured_image_url[0]+'" alt="Thumbnail"><h5>'+data[i].title.rendered+'</h5><br></div>');
 	           	};
 	           	$('#current-cat').html(cat_name);
+	           	console.log(cat_name);
 	        });
 
 	    });
@@ -55,6 +63,7 @@ $(document).ready(function() {
 		$menu.toggleClass('active');
 		e.preventDefault();
 	});
+
 
 
 

@@ -14,10 +14,10 @@
     // Enqueue stylesheet
     if( WP_ENV == 'production' ) {
       wp_enqueue_style( 'mtn-styles', get_template_directory_uri() . '/assets/css/main.min.css', 1.0);
-      wp_enqueue_script( 'js', get_template_directory_uri() . '/assets/js/build/site.min.js', array('jquery'), '1.0.0', true );
+      wp_enqueue_script( 'js', get_template_directory_uri() . '/assets/js/build/scripts.min.js', array('jquery'), '1.0.0', true );
     } else {
       wp_enqueue_style( 'mtn-styles', get_template_directory_uri() . '/assets/css/main.css', 1.0);
-      wp_enqueue_script( 'js', get_template_directory_uri() . '/assets/js/build/site.js', array('jquery'), '1.0.0', true );
+      wp_enqueue_script( 'js', get_template_directory_uri() . '/assets/js/build/scripts.js', array('jquery'), '1.0.0', true );
     }
 
     // Add our JS

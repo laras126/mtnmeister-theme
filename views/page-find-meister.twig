@@ -2,14 +2,13 @@
 
 {% block above_content %}
 	
+	<h2 id="current-cat">Find a Meister!</h2>
 	<div class="contain">
-		<ul class="row unstyle-list col-sm-2">
+		<ul class="row unstyle-list col-sm-2 cat-list">
 		
 		{% for cat in cats %}
 			<li>
 				<a class="load" data-cpt="meister" data-id="{{cat.term_id}}"><strong class="cat-btn">{{cat.name}}</strong></a>
-				{# <a class="load" data-cpt="gear" data-id="{{cat.term_id}}">load gear</a> // 
-				<a class="load" data-cpt="deal" data-id="{{cat.term_id}}">load deals</a> #}
 			</li>
 		{% endfor %}
 

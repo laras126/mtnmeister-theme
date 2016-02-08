@@ -7,7 +7,6 @@
  */
 
 
-
 // Meister title placeholder
 function mtn_custom_type_title_text ( $title ) {
 	if ( get_post_type() == 'meister' ) {
@@ -125,8 +124,9 @@ function cf_search_distinct( $where ) {
 add_filter( 'posts_distinct', 'cf_search_distinct' );
 
 
-
+// REST API
 // Adding custom fields to the WP API JSON response
+
 add_action( 'rest_api_init', 'mtn_register_api_hooks' );
 function mtn_register_api_hooks() {
 
@@ -152,6 +152,14 @@ function mtn_register_api_hooks() {
             'get_callback'    => 'mtn_return_feat_img',
         )
     );
+
+    register_api_field(
+		'meister',
+        'formatted_date',
+        array(
+            'get_callback'    => 'mtn_return_date',
+        )
+    );
 }
 
 // Return plaintext content for posts
@@ -159,9 +167,15 @@ function mtn_return_cf_content( $object, $field_name, $request ) {
     return get_post_meta( $object[ 'id' ], $field_name, true );
 }
 
+// I think these can probably be in the same function
 function mtn_return_feat_img( $object, $request ) {
-	return wp_get_attachment_image_src($object['featured_image'], 'thumbnail');
+    $image = wp_get_attachment_image_src( get_post_thumbnail_id( $object['id'] ), 'single-post-thumbnail' );
+	return $image[0];
+}
+
+function mtn_return_date($object, $request) {
+    return get_the_date('F, Y');
+	// return $date;
 }
 
 
-?>

@@ -52,9 +52,10 @@ $(document).ready(function() {
 		    	$('.spinner').animate({'opacity': 0}, 200);
 
 	           	for (var i = 0; i < data.length; i++) {
-					$('#results').append(data[i].title.rendered);
+					$('#results').append('<div class="col-xs-6 col-sm-3 text-center"><img src="'+data[i].featured_image_url[0]+'" alt="Thumbnail"><h5>'+data[i].title.rendered+'</h5><br></div>');
 	           	};
 	           	$('#current-cat').html(cat_name);
+	        });
 	        }).fail( function(xhr, textStatus, errorThrown) {
 		        $('#results').html('');
 		        console.log(xhr.responseText);

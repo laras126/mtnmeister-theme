@@ -149,7 +149,15 @@ function mtn_register_api_hooks() {
 		'meister',
         'featured_image_url',
         array(
-            'get_callback'    => 'mtn_return_cf_content',
+            'get_callback'    => 'mtn_return_feat_img',
+        )
+    );
+
+    register_api_field(
+		'meister',
+        'formatted_date',
+        array(
+            'get_callback'    => 'mtn_return_date',
         )
     );
 }
@@ -157,15 +165,17 @@ function mtn_register_api_hooks() {
 // Return plaintext content for posts
 function mtn_return_cf_content( $object, $field_name, $request ) {
     return get_post_meta( $object[ 'id' ], $field_name, true );
-    
-
 }
 
+// I think these can probably be in the same function
 function mtn_return_feat_img( $object, $request ) {
     $image = wp_get_attachment_image_src( get_post_thumbnail_id( $object['id'] ), 'single-post-thumbnail' );
-    // echo ;
-	
 	return $image[0];
+}
+
+function mtn_return_date($object, $request) {
+    return get_the_date('F, Y');
+	// return $date;
 }
 
 

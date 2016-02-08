@@ -91,10 +91,12 @@ require_once('lib/menus.php');
 require_once('lib/utils.php'); 
 
 
+// Change thumbnail size
+// set_post_thumbnail_size( 400, 400 );
 
 // Disable code editor
 function mtn_remove_editor_menu() {
-remove_action('admin_menu', '_add_themes_utility_last', 101);
+	remove_action('admin_menu', '_add_themes_utility_last', 101);
 }
 add_action('mtn_admin_menu', 'mtn_remove_editor_menu', 1);
 
@@ -139,5 +141,3 @@ function discard_menu_classes($classes, $item) {
         (array)get_post_meta( $item->ID, '_menu_item_classes', true )
 	);
 }
-
-?>

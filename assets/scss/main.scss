@@ -3,11 +3,11 @@
 // Import SCSS files
 // ----
 
-// Vendor and third party code, including normalize.
-@import "vendor/all";
-
 // Varialbes and mixins. For the most part, these don't output styles (for the most part)
 @import "config/all";
+
+// Vendor and third party code, including normalize.
+@import "vendor/all";
 
 // Elements and "content agnostic" styles.
 @import "elements/all";

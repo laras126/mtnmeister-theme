@@ -7,7 +7,6 @@
  */
 
 
-
 // Meister title placeholder
 function mtn_custom_type_title_text ( $title ) {
 	if ( get_post_type() == 'meister' ) {
@@ -125,8 +124,9 @@ function cf_search_distinct( $where ) {
 add_filter( 'posts_distinct', 'cf_search_distinct' );
 
 
-
+// REST API
 // Adding custom fields to the WP API JSON response
+
 add_action( 'rest_api_init', 'mtn_register_api_hooks' );
 function mtn_register_api_hooks() {
 
@@ -149,7 +149,7 @@ function mtn_register_api_hooks() {
 		'meister',
         'featured_image_url',
         array(
-            'get_callback'    => 'mtn_return_feat_img',
+            'get_callback'    => 'mtn_return_cf_content',
         )
     );
 }
@@ -157,11 +157,15 @@ function mtn_register_api_hooks() {
 // Return plaintext content for posts
 function mtn_return_cf_content( $object, $field_name, $request ) {
     return get_post_meta( $object[ 'id' ], $field_name, true );
+    
+
 }
 
 function mtn_return_feat_img( $object, $request ) {
-	return wp_get_attachment_image_src($object['featured_image'], 'thumbnail');
+    $image = wp_get_attachment_image_src( get_post_thumbnail_id( $object['id'] ), 'single-post-thumbnail' );
+    // echo ;
+	
+	return $image[0];
 }
 
 
-?>

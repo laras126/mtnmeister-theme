@@ -2,11 +2,13 @@
 
 {% block above_content %}
 	
-	<div class="contain">
-		<ul class="row unstyle-list col-sm-2">
-		
+	<h2 id="current-cat">Find a Meister!</h2>
+	{# <div class=""> #}
+
+		<ul class="list-cats">
+
 		{% for cat in cats %}
-			<li>
+			<li class="cat-item">
 				<a class="load" data-cpt="meister" data-id="{{cat.term_id}}"><strong class="cat-btn">{{cat.name}}</strong></a>
 				{# <a class="load" data-cpt="gear" data-id="{{cat.term_id}}">load gear</a> // 
 				<a class="load" data-cpt="deal" data-id="{{cat.term_id}}">load deals</a> #}
@@ -14,6 +16,11 @@
 		{% endfor %}
 
 		</ul>
-		<div class="col-sm-10" id="results"></div>
-	</div>
+		
+		{# <div class="col-sm-12"> #}
+			{% include 'partials/micro/spinner.twig' %}
+			<div id="results"></div>
+		{# </div> #}
+	
+	{# </div> #}
 {% endblock %}

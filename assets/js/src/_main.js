@@ -14,7 +14,7 @@ $(document).ready(function() {
 	
 
 
-    // Testing the REST API
+    // Load Meisters based on category with REST API
 
     $('.load').each( function() {
 		$(this).on('click', function() {
@@ -23,26 +23,43 @@ $(document).ready(function() {
 	    	var cat_name = $('.cat-list').find('a[data-id='+cat_id+']').html();
 			var cpt = $(this).attr('data-cpt');
 
-	    	// cat.hide();
+	    	$('#results').animate({
+	    		'opacity': 0, 
+	    		'max-height': '0'
+	    	}, 200);
+	    	
+	    	$('.spinner').animate({'opacity': 1}, 200);
+
 	        $.ajax({
-				url: 'http://mtn.local/wp-json/wp/v2/'+cpt,
-				data: {
-		        	filter: {
-		        		'posts_per_page': -1,
-		        		'cat': cat_id
-		        	}
-		    	},
+				// url: 'http://mtn.local/wp-json/wp/v2/'+cpt,
+				url: 'http://mtn.local/wp-json/wp/v2/'+cpt+'?filter[cat]='+cat_id,
+				// data: {
+		  //       	filter: {
+		  //       		'posts_per_page': -1,
+		  //       		'cat': cat_id
+		  //       	}
+		  //   	},
 		    	dataType: 'json',
 		    	type: 'GET',
 
 	        })
 			.done(function(data) {
 				$('#results').html('');
+				$('#results').animate({
+					'opacity': 1, 
+					'max-height': 'none'
+				}, 200);
+		    	$('.spinner').animate({'opacity': 0}, 200);
+
 	           	for (var i = 0; i < data.length; i++) {
 					$('#results').append('<div class="col-xs-6 col-sm-3 text-center"><img src="'+data[i].featured_image_url[0]+'" alt="Thumbnail"><h5>'+data[i].title.rendered+'</h5><br></div>');
 	           	};
 	           	$('#current-cat').html(cat_name);
 	        });
+	        }).fail( function(xhr, textStatus, errorThrown) {
+		        $('#results').html('');
+		        console.log(xhr.responseText);
+		    });
 
 	    });
 

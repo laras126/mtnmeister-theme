@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 /**
  *
@@ -25,7 +25,7 @@ add_filter( 'enter_title_here', 'mtn_custom_type_title_text' );
 
 // Remove new user/media from +New menu item in the admin bar
 function mtn_remove_wp_nodes() {
-    global $wp_admin_bar;   
+    global $wp_admin_bar;
     $wp_admin_bar->remove_node( 'new-link' );
     $wp_admin_bar->remove_node( 'new-media' );
     $wp_admin_bar->remove_node( 'new-user' );
@@ -49,7 +49,7 @@ add_filter( 'acf/fields/wysiwyg/toolbars' , 'mtn_acf_wysiwyg_toolbar'  );
 
 
 
-// Customize the editor style, from Roots.io 
+// Customize the editor style, from Roots.io
 // https://github.com/roots/roots-sass/blob/master/assets/css/editor-style.css
 function mtn_editor_styles() {
 	add_editor_style( 'assets/css/editor-style.css' );
@@ -61,12 +61,12 @@ add_action( 'after_setup_theme', 'mtn_editor_styles' );
 // Make custom fields work with Yoast SEO (only impacts the light, but helpful!)
 // https://imperativeideas.com/making-custom-fields-work-yoast-wordpress-seo/
 if ( is_admin() ) { // check to make sure we aren't on the front end
-	add_filter('wpseo_pre_analysis_post_content', 'mtn_add_custom_to_yoast');
+	// add_filter('wpseo_pre_analysis_post_content', 'mtn_add_custom_to_yoast');
 
 	function mtn_add_custom_to_yoast( $content ) {
 		global $post;
 		$pid = $post->ID;
-		
+
 		$custom_content = '';
 
 		$custom = get_post_custom($pid);
@@ -92,17 +92,17 @@ if ( is_admin() ) { // check to make sure we aren't on the front end
 function cf_search_join( $join ) {
     global $wpdb;
 
-    if ( is_search() ) {    
+    if ( is_search() ) {
         $join .=' LEFT JOIN '.$wpdb->postmeta. ' ON '. $wpdb->posts . '.ID = ' . $wpdb->postmeta . '.post_id ';
     }
-    
+
     return $join;
 }
 add_filter('posts_join', 'cf_search_join' );
 
 function cf_search_where( $where ) {
     global $pagenow, $wpdb;
-   
+
     if ( is_search() ) {
         $where = preg_replace(
             "/\(\s*".$wpdb->posts.".post_title\s+LIKE\s*(\'[^\']+\')\s*\)/",

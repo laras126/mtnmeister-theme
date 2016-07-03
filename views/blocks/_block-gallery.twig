@@ -1,0 +1,30 @@
+{% extends "blocks/block.twig" %}
+
+{% block content %}
+
+  <div class="teaser lazyload">
+
+    {% for image in content.images %}
+
+      <div class="gallery-cell">
+        <div class="gallery-cell-content teaser">
+
+          <img class="lazyload gallery-cell-image" data-sizes="auto"
+            srcset="{{TimberImage(image.url)|resize(700)}} 375w,
+               {{TimberImage(image.url)|resize(900)}} 480w,
+               {{TimberImage(image.url)|resize(1200)}} 768w"
+            alt="{{post.post_title}}"
+            src="{{TimberImage(image.url)|resize(700)}}">
+
+        </div>
+
+        <div class="gallery-cell-info">
+          <p class="caption">{{image.caption}}</p>
+        </div>
+      </div>
+
+    {% endfor %}
+
+  </div>
+
+{% endblock %}

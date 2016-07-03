@@ -69,9 +69,68 @@
                     "max": ""
                 },
                 {
+                    "key": "577936979c620",
+                    "name": "gallery_block",
+                    "label": "Gallery",
+                    "display": "row",
+                    "sub_fields": [
+                        {
+                            "key": "field_577936a19c621",
+                            "label": "Gallery Display",
+                            "name": "display",
+                            "type": "radio",
+                            "instructions": "Select the display of the gallery.",
+                            "required": "",
+                            "conditional_logic": "",
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "choices": {
+                                "thumbnails": "Thumbnail Grid",
+                                "slideshow": "Slideshow"
+                            },
+                            "allow_null": 0,
+                            "other_choice": 0,
+                            "save_other_choice": 0,
+                            "default_value": "",
+                            "layout": "horizontal"
+                        },
+                        {
+                            "key": "field_577936f49c622",
+                            "label": "Images",
+                            "name": "images",
+                            "type": "gallery",
+                            "instructions": "Select the images for the gallery. Image captions will show below the image in the slideshow.",
+                            "required": "",
+                            "conditional_logic": "",
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "min": "",
+                            "max": "",
+                            "preview_size": "thumbnail",
+                            "insert": "append",
+                            "library": "all",
+                            "min_width": "",
+                            "min_height": "",
+                            "min_size": "",
+                            "max_width": "",
+                            "max_height": "",
+                            "max_size": "",
+                            "mime_types": ""
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                {
                     "key": "5437f2c02fedf",
                     "name": "text_image_block",
-                    "label": "Text and Image Block",
+                    "label": "Text and Image",
                     "display": "block",
                     "sub_fields": [
                         {
@@ -163,7 +222,8 @@
                             "other_choice": 0,
                             "save_other_choice": 0,
                             "default_value": "",
-                            "layout": "horizontal"
+                            "layout": "horizontal",
+                            "allow_null": 0
                         },
                         {
                             "key": "field_553d411691247",
@@ -193,7 +253,8 @@
                             "other_choice": 0,
                             "save_other_choice": 0,
                             "default_value": "half",
-                            "layout": "vertical"
+                            "layout": "vertical",
+                            "allow_null": 0
                         },
                         {
                             "key": "field_555e03bca015f",
@@ -404,6 +465,22 @@
                                     "disabled": 0
                                 },
                                 {
+                                    "key": "field_5579dd628755d",
+                                    "label": "Button Link",
+                                    "name": "button_link",
+                                    "type": "url",
+                                    "instructions": "The link for the button.",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": 50,
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "placeholder": ""
+                                },
+                                {
                                     "key": "field_5579dd548755c",
                                     "label": "Button Text",
                                     "name": "button_text",
@@ -423,24 +500,9 @@
                                     "maxlength": "",
                                     "readonly": 0,
                                     "disabled": 0
-                                },
-                                {
-                                    "key": "field_5579dd628755d",
-                                    "label": "Button Link",
-                                    "name": "button_link",
-                                    "type": "url",
-                                    "instructions": "The link for the button.",
-                                    "required": 0,
-                                    "conditional_logic": 0,
-                                    "wrapper": {
-                                        "width": 50,
-                                        "class": "",
-                                        "id": ""
-                                    },
-                                    "default_value": "",
-                                    "placeholder": ""
                                 }
-                            ]
+                            ],
+                            "collapsed": ""
                         }
                     ],
                     "min": "",
@@ -480,6 +542,7 @@
         "page_attributes",
         "send-trackbacks"
     ],
-    "modified": 1434555358,
-    "local": "json"
+    "active": 1,
+    "description": "",
+    "modified": 1467561772
 }

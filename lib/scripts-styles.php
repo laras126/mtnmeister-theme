@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 
   // Enqueue scripts
@@ -14,10 +14,12 @@
     // Enqueue stylesheet
     if( WP_ENV == 'production' ) {
       wp_enqueue_style( 'mtn-styles', get_template_directory_uri() . '/assets/css/main.min.css', 1.0);
-      wp_enqueue_script( 'js', get_template_directory_uri() . '/assets/js/build/site.min.js', array('jquery'), '1.0.0', true );
+      wp_enqueue_script( 'js', get_template_directory_uri() . '/assets/js/build/scripts.min.js', array('jquery'), '1.0.0', true );
+      // wp_enqueue_script( 'js', get_template_directory_uri() . '/assets/js/build/scripts-head.min.js', array('jquery'), '1.0.0');
     } else {
-      wp_enqueue_style( 'mtn-styles', get_template_directory_uri() . '/assets/css/main.css', 1.0);
-      wp_enqueue_script( 'js', get_template_directory_uri() . '/assets/js/build/site.js', array('jquery'), '1.0.0', true );
+      wp_enqueue_style( 'mtn-styles', get_template_directory_uri() . '/assets/css/build/main.min.css', 1.0);
+      wp_enqueue_script( 'js', get_template_directory_uri() . '/assets/js/build/scripts.js', array('jquery'), '1.0.0', true );
+      // wp_enqueue_script( 'js', get_template_directory_uri() . '/assets/js/build/scripts-head.js', array('jquery'), '1.0.0');
     }
 
     // Add our JS
@@ -71,14 +73,14 @@ function mtn_google_analytics() { ?>
         r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
         a.appendChild(r);
     })(window,document,'//static.hotjar.com/c/hotjar-','.js?sv=');
-    
+
   <?php else : ?>
     function ga() {
       console.log('GoogleAnalytics: ' + [].slice.call(arguments));
     }
   <?php endif; ?>
   ga('create','<?php echo GOOGLE_ANALYTICS_ID; ?>','auto');ga('send','pageview');
-    
+
 </script>
 
 <?php }

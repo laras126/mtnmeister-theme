@@ -63,37 +63,24 @@
     }
 }
 
+.loop-thumbs > .row-sm {
+  @include bp(small) {
+    @include grid($wrap: wrap);
+  }
+}
+
 .loop-thumbs .tease {
-	// Two rows at small, three at med
-	@include make-xs-column(12);
-    @include make-smmed-column(6);
-    @include make-md-column(4);
+  @include bp(small) {
+    @include cell(half);
+  }
 
-    @include bp(small) {
-    	@include thumb-reset;
-        &:nth-child(2n+1){
-            clear: left;
-        }
-    }
+  @include bp(med) {
+    @include cell(third);
+  }
 
-    @include bp(med) {
-    	@include thumb-reset;
-        &:nth-child(3n+1){
-           clear: left
-        }
-    }
-
-
-	// Only do this on the meisters page
-	.page-id-4 & {
-		@include make-xl-column(3);
-		@include bp(xl) {
-			@include thumb-reset;
-	        &:nth-child(4n+1){
-	           clear: left
-	        }
-	    }
-	}
+  @include bp(large) {
+    @include cell(fourth);
+  }
 
 }
 

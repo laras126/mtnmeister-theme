@@ -7,15 +7,21 @@
 			{% include 'partials/share-btns.twig' %}
 		</div>
 
-		<div class="featured-right has-credit">
+		<div class="featured-right has-credit teaser lazyload">
 			{% if post.meister_pic %}
-				<img src="{{TimberImage(post.meister_pic).src}}" alt="{{post.title}}">
+				{% set pic = TimberImage(post.meister_pic).src %}
+				<img
+			    data-sizes="auto"
+			    data-src="{{pic|resize(100)}}"
+			    data-srcset="{{pic|resize(500)}} 300w,
+			    {{pic|resize(700)}} 600w"
+			    class="lazyload blur-up" />
 			{% else %}
-				<img src="{{TimberImage(post.thumbnail).src}}" alt="{{post.title}}">
+				<img src="{{post.thumbnail.src('medium')}}" alt="{{post.title}}">
 			{% endif %}
 			{% include 'partials/micro/image-credit.twig' with { credit: post.image_credit, credit_link: post.image_credit_link } %}
 		</div>
-			
+
 	</section>
 
 	{% if post.content_blocks %}
@@ -48,7 +54,7 @@
 				<h3>Gear Recommendations</h3>
 				{# <p>"If you could have one piece of gear, what would it be?" {{post.title}} says...</p> #}
 			</header>
-			
+
 			{% for item in post.get_field('connected_gear') %}
 
 				{% for gear in item.gear_item %}
@@ -69,7 +75,7 @@
 						 </div>
 					</div>
 				{% endfor %}
-			    
+
 			{% endfor %}
 
 		</section>
@@ -81,7 +87,7 @@
 			<header class="article-section-header">
 				<h3>Deals, Deals, Deals</h3>
 			</header>
-			
+
 			{# TODO: Shouldn't need to have tease-deal here - should be accounted for in tease.twig #}
 			<div class="row tease-deal">
 				{% for item in post.get_field('connected_deal') %}
@@ -90,13 +96,13 @@
 					{% endfor %}
 				{% endfor %}
 			</div>
-		
+
 		</section>
 	{% endif %}
 
 	{% if post.additional_resources %}
 		<section class="article-section container-squish">
-			
+
 			<header class="article-section-header">
 				<h3>Additional Resources</h3>
 				<p>Check out these links to additional episode content.</p>
@@ -109,4 +115,4 @@
 			</ul>
 		</section>
 	{% endif %}
-	
+

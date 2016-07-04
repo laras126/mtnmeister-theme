@@ -3,7 +3,7 @@
 // ----
 
 // Navy by default
-.rotate { 
+.rotate {
 	@include rotate($text: $text-light, $bkgd: $accent-dark, $link-clr: $accent-light);
 	border-top: $accent-border-large;
 }
@@ -48,7 +48,7 @@
     @include bp(med) {
         width: 108%;
         margin-right: -4%;
-        margin-left: -4%;   
+        margin-left: -4%;
     }
 }
 
@@ -107,7 +107,7 @@
 
 @mixin upperspace {
     text-transform: uppercase;
-    letter-spacing: 1px; 
+    letter-spacing: 1px;
 }
 
 %meta,
@@ -150,4 +150,26 @@
 %center-block {
     display: block;
     margin: 0 auto;
+}
+
+
+
+.lazyload,
+.lazyloading {
+    opacity: 0;
+}
+.lazyloaded {
+    opacity: 1;
+    transition: opacity 300ms;
+}
+
+.blur-up {
+    -webkit-filter: blur(5px);
+    filter: blur(5px);
+    transition: filter 400ms, -webkit-filter 400ms;
+}
+
+.blur-up.lazyloaded {
+    -webkit-filter: blur(0);
+    filter: blur(0);
 }

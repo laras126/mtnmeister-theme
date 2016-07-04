@@ -4,14 +4,14 @@
 
 	<div class="decor-wrap">
 		<div class="decor-text"><span># {{m.episode_num}}</span><span class="meta">{{m.date}}</span></div>
-	</div>	
+	</div>
 
 	<br> <!-- shame, shame -->
 
-	<div class="thumb-container has-credit">
+	<div class="thumb-container has-credit teaser lazyload">
 		<a href="{{m.link}}" title="{{m.title}}">
 		{% if m.get_thumbnail %}
-			<img class="lazy" data-original="{{m.thumbnail.src}}" src="{{site.url}}/wp-content/themes/mtnmeister-theme/assets/img/util/loader.gif" alt="{{m.title}}"/>
+			<img class="lazyload" data-src="{{m.thumbnail.src}}" src="{{m.thumbnail.src|resize(50)}}" alt="{{m.title}}"/>
 			<noscript><img src="{{m.thumbnail.src}}" alt="{{m.title}}" height="300" width="300"></noscript>
 		{% endif %}
 		</a>
@@ -23,7 +23,7 @@
 			<br>
 		</div>
 	</div>
-	
+
 	<a href="{{m.link}}">
 		<h5 class="tagline">{{m.title}}</h5>
 	</a>

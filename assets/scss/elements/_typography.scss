@@ -1,7 +1,7 @@
 html {
-	
+
 	line-height: $line-height-base;
-	
+
 	// Adjust global font-sizes at breakpoints
 
 	@include bp(small) {
@@ -15,7 +15,7 @@ html {
 	@include bp(large) {
 		font-size: $contain-lg;
 	}
-	
+
 }
 
 
@@ -40,23 +40,23 @@ a, a:visited {
 	text-decoration: none;
 
 	p & {
-		border-bottom: $accent-light 1px dotted;	
+		border-bottom: $accent-light 1px dotted;
 	}
-	
+
 
 	&:hover, &:focus {
 		color: $link-hover;
-		
+
 		p & {
 			border-color: $accent-med;
 		}
 	}
 
 	&:active {
-		color: $link-active;	
+		color: $link-active;
 	}
 
-	// Mobile tap color 
+	// Mobile tap color
 	&:link {
 		-webkit-tap-highlight-color : rgba( 0, 0, 0, 0.3 );
 	}
@@ -73,33 +73,33 @@ h1, h2, h3, h4, h5, h6 {
 	margin-bottom: 0;
 }
 
-h1 {
+h1, %h1 {
 	font-size: $h1;
 	margin-top: $h3;
 }
 
-h2 {
+h2, %h2 {
 	font-size: $h2;
 	margin-top: $h4;
 }
 
-h3 {
+h3, %h3 {
 	font-size: $h3;
 	margin-top: $h4;
 }
 
-h4 { 
+h4, %h4 {
 	font-size: $h4;
 	margin-top: $base;
 	@include upperspace;
 }
 
-h5 {
+h5, %h5 {
 	font-size: $h5;
 	margin-top: $base;
 }
 
-h6 {	
+h6, %h6 {
 	font-size: $h6;
 	margin-top: $base;
 }
@@ -116,7 +116,7 @@ small {
 
 blockquote {
 	font-size: $h4;
-	
+
 	@include bp(small) {
 		font-size: $h3;
 	}

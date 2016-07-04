@@ -24,7 +24,7 @@
 
 .tease-title {
 	padding: 0;
-	
+
 	a {}
 }
 
@@ -33,16 +33,16 @@
 	margin: $sml 0;
 }
 
-.tease-body, 
+.tease-body,
 .article-section {
 	iframe {
 		height: 120px;
 
 		// TODO: should be smaller for mobile
 		.tease-featured & {
-			height: 300px;	
-			@include bp(med) {			
-				height: 420px;			
+			height: 300px;
+			@include bp(med) {
+				height: 420px;
 			}
 		}
 
@@ -92,9 +92,9 @@
 	        &:nth-child(4n+1){
 	           clear: left
 	        }
-	    }	
+	    }
 	}
-	
+
 }
 
 .loop-related {
@@ -108,7 +108,7 @@
 
 	// &:nth-child(3n+1){
  //        clear: left;
- //    }  
+ //    }
 
  //     @include bp(small) {
  //        &:nth-child(3n+1){
@@ -118,12 +118,16 @@
 }
 
 // Hide lazy loading thumbnails for no js (they are in <noscript> tags)
-.no-js .lazy {
+.no-js .lazyload {
     display: none;
 }
 
 .thumb-container {
 	position: relative;
+
+  img {
+    width: 100%;
+  }
 }
 
 .thumb-caption {

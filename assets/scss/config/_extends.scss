@@ -7,7 +7,7 @@
 
 // -- Layout
 
-%row, 
+%row,
 .row {
     @include make-row();
 }
@@ -19,7 +19,7 @@
 }
 
 %half {
-	@include make-sm-column(6); 
+	@include make-sm-column(6);
 }
 
 .clearfix {

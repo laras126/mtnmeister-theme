@@ -16,10 +16,6 @@ img {
 	height: auto;
 	display: block;
 	margin: 0 auto;
-	
-	@include bp(small) {
-		margin: auto;
-	}
 }
 
 figure {
@@ -55,19 +51,19 @@ figure {
 
 .decor-text {
 	 @include upperspace;
-	border-bottom: $accent-border; 
-	position:relative; 
-	
-	span { 
-		position: relative; 
-		top: $sml/1.5; 
+	border-bottom: $accent-border;
+	position:relative;
+
+	span {
+		position: relative;
+		top: $sml/1.5;
 		padding: 0 $sml 0 0;
 		background-color: $body-bkgd;
 	}
 }
 
 .decor-wrap{
-	display: block; 
+	display: block;
     margin: 0;
     @extend .clearfix;
 }
@@ -95,7 +91,7 @@ figure {
 
 .cta-page {
 }
-	
+
 .cta-tease {
 }
 

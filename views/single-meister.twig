@@ -3,18 +3,17 @@
 {% block content %}
 
 	<article class="type-{{post.post_type}}" id="post-{{post.ID}}">
-	
+
 		<header class="article-header">
 			<div class="container-squish">
 				<span class="decor-wrap">
-					{# TODO: remove nbsp's #}
 					<div class="decor-text"><span>&nbsp;&nbsp;# {{post.episode_num}}</span></div>
 				</span>
 				<p class="tagline tagline-tease">{{post.title}}</p>
 				<h1 class="article-title">{{post.episode_tag}}</h1>
 			</div>
 		</header>
-		
+
 		<div class="contain episode-embed">
 			{{post.episode_soundcloud_small}}
 			<div class="text-center">
@@ -26,7 +25,7 @@
 		<div class="article-body">
 			{% include 'partials/meister-body.twig' %}
 		</div>
-		
+
 	</article>
 
 

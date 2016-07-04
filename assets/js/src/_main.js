@@ -6,23 +6,18 @@ $(document).ready(function() {
 
 	// Plugins
 
-	$('.lazy').lazyload({
-		effect : 'fadeIn',
-		threshold : 600
-	}); // Am I lazy for using this?
-
 	$('#content').fitVids();
-	
+
 
 
 	// ----
 	// Toggle menu
 	// ----
 
-	  
+
 	var $menu = $('#menu'),
 		$menulink = $('.menu-link');
-		
+
 	$menulink.on('click', function(e) {
 		$(this).toggleClass('active');
 		$menu.toggleClass('active');
@@ -38,14 +33,14 @@ $(document).ready(function() {
 	// Drop down search field in header
 
 	$('.shape-search').click(function() {
-		
+
 		// NOT working
 		if($('.search-field').is(':focus')) {
 			$('.search-field').focusout();
 			$('.search-form').removeClass('focused');
 		} else {
 			$('.search-field').focus();
-			$('.search-form').addClass('focused');	
+			$('.search-form').addClass('focused');
 		}
 
 	});
@@ -61,7 +56,7 @@ $(document).ready(function() {
 		$banner = $('.banner'),
 		$banner_ht = $('.banner').outerHeight(),
 		$total_ht = $header_ht - $banner_ht*5;
-	  
+
 	$(window).scroll(function() {
 
 		// Fade in menu bar background
@@ -80,7 +75,7 @@ $(document).ready(function() {
 		} else {
 			$('.banner').removeClass('fixed');
 		}
-			
+
 	});
 
 
@@ -90,26 +85,26 @@ $(document).ready(function() {
 	// ----
 
 	var $hero = $('.page-header');
-	
+
 	$hero.each( function() {
 		var $image = $(this).find('.page-header-image'),
 			$t = $(this);
-	
+
 		$(this).imagesLoaded( function() {
 
 			$t.fadeTo(100, 0.5, function() {
-			    
+
 				$image.css('opacity', 1);
 				$t.find('.spinner').hide();
 
 			}).fadeTo(100, 1);
-			
+
 		});
 	});
-	
 
 
-	
+
+
 	// ----
 	// Slide up episode info on Minor Meister hover
 	// ----
@@ -130,7 +125,7 @@ $(document).ready(function() {
 	if (matchMedia('only screen and (min-width: 880px)').matches) {
 		// $('.thumb-container').html('<img src="mtn_script_vars.thumb_src">');
 	}
-	
+
 
 	// ----
 	// That's all, folks!
@@ -182,4 +177,4 @@ var w = window;
 w.addEventListener ? w.addEventListener("load",function(){document.body.addEventListener("click",_gaLt,!1)},!1)
  : w.attachEvent && w.attachEvent("onload",function(){document.body.attachEvent("onclick",_gaLt)});
 
- 
+

@@ -6,7 +6,7 @@
 
     // TODO: Maybe add to holding?
     // Need a more elegant way to remove link styles
-    
+
     a,
     a:visited{
       color: $link-clr;
@@ -72,10 +72,65 @@ $MQs: true;
 
 
 // ----
-// Gradient
+// Layout
 // ----
 
-// @mixin linear-gradient($from, $to) {
-//   background-color: $to; // Fallback
-//   background-image: linear-gradient(bottom, $from, $to);
-// }
+
+// Flexbox Layout
+
+$sizes: (
+  full:   100%,
+  half:   50%,
+  third:  33.333333%,
+  fourth: 25%,
+  sixth:  16.66666667%
+);
+
+$gutter: $base;
+
+@mixin cell($size: false) {
+
+  @if $size != false {
+      flex: 0 0 map-get($sizes, $size);
+      max-width: map-get($sizes, $size); // Fix for Firefox
+  }
+}
+
+@mixin grid($guttered: true, $wrap: nowrap) {
+  display: flex;
+  flex-wrap: $wrap;
+
+  @if $guttered {
+    & > * {
+      padding-left: $gutter/2;
+      padding-right: $gutter/2;
+    }
+    margin-left: -$gutter/2;
+    margin-right: -$gutter/2;
+  }
+}
+
+.grid {
+  @include grid;
+}
+
+.cell-sixth {
+  @include cell(sixth);
+}
+
+.cell-fourth {
+  @include cell(fourth);
+}
+
+.cell-third {
+  @include cell(third);
+}
+
+.cell-half {
+  @include cell(half);
+}
+
+.cell-full {
+  @include cell(full);
+}
+

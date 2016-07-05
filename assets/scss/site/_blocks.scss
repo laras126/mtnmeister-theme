@@ -14,7 +14,7 @@
 
 .image-half {
 	@include make-sm-column(6, false);
-} 
+}
 
 .image-quarter {
 	@include make-sm-column(6, false);
@@ -28,21 +28,21 @@
 
 .image-credit {
 	font-size: $xsml;
-	
+
 	// TODO: I don't like this.
 	.has-credit & {
 		background-color: rgba(0,0,0,0.4);
 		padding: $xsml/3 $xsml/2;
 		position: absolute;
 		bottom: 0;
-		right: 0;	
+		right: 0;
 	}
 
 	// TODO: Meh. Need to get a "Featured" module thing together.
 	.featured-right & {
 		right: $base;
 	}
-	
+
 	// display: block;
 	font-style: italic;
 	color: $accent-vlight;
@@ -59,10 +59,10 @@
 	position: relative;
 	margin-bottom: $sml;
 
-	@include bp(small) {
-		display: inline-block;
-	}
-	
+	// @include bp(small) {
+	// 	display: inline-block;
+	// }
+
 	img {
 		width: 100%;
 	}
@@ -78,13 +78,13 @@
 
 	.inline-l {
 		@include bp(small) {
-			float: left;	
+			float: left;
 			padding-left: 0;
 		}
-		
+
 		@extend .bleed-left;
 		margin-right: $base;
-		
+
 	}
 
 	.inline-r {

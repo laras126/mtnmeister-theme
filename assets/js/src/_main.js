@@ -8,8 +8,6 @@ $(document).ready(function() {
 
 	$('#content').fitVids();
 
-
-
 	// ----
 	// Toggle menu
 	// ----

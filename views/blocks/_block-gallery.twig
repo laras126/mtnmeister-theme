@@ -2,26 +2,21 @@
 
 {% block content %}
 
-  <div class="teaser lazyload">
+  <div class="gallery js-flickity">
 
     {% for image in content.images %}
 
-      <div class="gallery-cell">
-        <div class="gallery-cell-content teaser">
+      {# <div class="gallery-cell"> #}
+        {# <div class="gallery-cell-content"> #}
 
-          <img class="lazyload gallery-cell-image" data-sizes="auto"
-            srcset="{{TimberImage(image.url)|resize(700)}} 375w,
-               {{TimberImage(image.url)|resize(900)}} 480w,
-               {{TimberImage(image.url)|resize(1200)}} 768w"
-            alt="{{post.post_title}}"
-            src="{{TimberImage(image.url)|resize(700)}}">
+          <img class="gallery-cell-image" src="{{TimberImage(image.url)|resize(600)}}">
 
-        </div>
+        {# </div> #}
 
-        <div class="gallery-cell-info">
-          <p class="caption">{{image.caption}}</p>
-        </div>
-      </div>
+        {# <div class="gallery-cell-info"> #}
+          {# <p class="caption">{{image.caption}}</p> #}
+        {# </div> #}
+      {# </div> #}
 
     {% endfor %}
 

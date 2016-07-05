@@ -1,5 +1,5 @@
 
-{# 
+{#
 	The partial for pictures, included in:
 		- single.twig
 
@@ -13,7 +13,7 @@
  #}
 
 <figure class="image-wrap{% if wrap %} inline-{{ loc }}{% endif %} image-{{size and wrap ? size : 'full bleed-left'}}">
-	
+
 	{% if wrap %}
 		{% include 'partials/pictures/_picture-inline.twig'%}
 	{% else %}

@@ -11,7 +11,7 @@
 	<div class="thumb-container has-credit teaser lazyload">
 		<a href="{{m.link}}" title="{{m.title}}">
 		{% if m.get_thumbnail %}
-			<img class="lazyload" data-src="{{m.thumbnail.src}}" src="{{m.thumbnail.src|resize(50)}}" alt="{{m.title}}"/>
+			<img class="lazyload" data-src="{{m.thumbnail.src|resize(400)}}" src="{{m.thumbnail.src|resize(50)}}" alt="{{m.title}}"/>
 			<noscript><img src="{{m.thumbnail.src}}" alt="{{m.title}}" height="300" width="300"></noscript>
 		{% endif %}
 		</a>

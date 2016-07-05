@@ -1,5 +1,10 @@
-<picture>
-	<source srcset="{{TimberImage(image).src}}" media="(min-width: 1000px)">
-	<source srcset="{{TimberImage(image).src|resize(900)}}" media="(min-width: 800px)">
-	<img srcset="{{TimberImage(image).src|resize(600)}}" alt="{{post.title|striptags}}">
-</picture>
+{% set pic = TimberImage(image).src %}
+<img
+  data-sizes="auto"
+  data-src="{{pic|resize(100)}}"
+  data-srcset="{{pic|resize(500)}} 300w,
+  {{pic|resize(700)}} 600w,
+  {{pic|resize(900)}} 1000w"
+  src="{{site.url}}/wp-content/themes/mtnmeister-theme/assets/img/util/loader.gif"
+  class="lazyload blur-up"
+  alt="{{post.title|striptags}}" />

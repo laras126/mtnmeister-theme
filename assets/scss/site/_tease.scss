@@ -56,13 +56,6 @@
 
 // Loops
 
-
-@mixin thumb-reset() {
-	&:nth-child(n+1){
-        clear: none;
-    }
-}
-
 .loop-thumbs > .row-sm {
   @include bp(small) {
     @include grid($wrap: wrap);
@@ -78,8 +71,10 @@
     @include cell(third);
   }
 
-  @include bp(large) {
-    @include cell(fourth);
+  body:not(.home) & {
+    @include bp(large) {
+      @include cell(fourth);
+    }
   }
 
 }
@@ -90,18 +85,6 @@
 
 .loop-related .tease {
 	margin-bottom: 0;
-	// @include make-xs-column(4);
- //    @include make-sm-column(2, false);
-
-	// &:nth-child(3n+1){
- //        clear: left;
- //    }
-
- //     @include bp(small) {
- //        &:nth-child(3n+1){
- //            clear: none;
- //        }
- //    }
 }
 
 // Hide lazy loading thumbnails for no js (they are in <noscript> tags)

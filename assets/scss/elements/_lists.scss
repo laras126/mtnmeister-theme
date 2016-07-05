@@ -15,7 +15,7 @@
 	margin: 0;
 
 	li {
-		@extend %list-meta-item;	
+		@extend %list-meta-item;
 	}
 }
 
@@ -25,10 +25,10 @@
 
 	.cat-item  {
 		 @include upperspace;
-		
+
 		a {
 			@extend .btn-alt;
-			border-radius: 4px;	
+			border-radius: 4px;
 		}
 	}
 
@@ -41,7 +41,7 @@
 	}
 
 	.tag {
-		font-style: italic; 
+		font-style: italic;
 	}
 }
 
@@ -73,12 +73,12 @@
 	@extend %unstyle-list;
 
 	li a:before {
-		content: url('../img/svg-min/arrow-right.min.svg');
+		content: url('../../img/svg-min/arrow-right.min.svg');
 		padding-right: $sml/2;
     	width: $sml;
     	position: relative;
     	top: 3px;
 	}
-	
+
 }
 

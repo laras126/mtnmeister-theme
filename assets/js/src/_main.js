@@ -8,6 +8,16 @@ $(document).ready(function() {
 
 	$('#content').fitVids();
 
+  var $carousel = $('.carousel').flickity({
+    bgLazyLoad: 3,
+    initialIndex: 2,
+    // autoPlay: true
+    wrapAround: true
+  });
+
+
+
+
 	// ----
 	// Toggle menu
 	// ----

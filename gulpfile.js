@@ -27,6 +27,7 @@ var sassDir = 'assets/scss/',
 
 var jsFileList = [
     jsDir + 'vendor/flickity.min.js',
+    jsDir + 'vendor/flickity.bglazyload.js',
     jsDir + 'vendor/fitvids.js',
     jsDir + 'src/_main.js'
 ];

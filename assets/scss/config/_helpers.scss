@@ -264,8 +264,22 @@
 }
 
 .carousel-cell {
-  width: 50%;
-  height: 400px;
+  width: 45%;
+  height: 200px;
+
+  @include bp(small) {
+    width: 35%;
+  }
+
+  @include bp(med) {
+    width: 60%;
+    height: 400px;
+  }
+
+  @include bp(large) {
+    width: 75%;
+    height: 500px;
+  }
   margin-right: 10px;
   background: $accent-light;
   border: $accent-border;

@@ -19,6 +19,7 @@
             "max": "",
             "layout": "table",
             "button_label": "Add Row",
+            "collapsed": "",
             "sub_fields": [
                 {
                     "key": "field_5463ea261f90f",
@@ -86,6 +87,7 @@
             "max": "",
             "layout": "table",
             "button_label": "Add Row",
+            "collapsed": "",
             "sub_fields": [
                 {
                     "key": "field_5463ebdd64761",
@@ -297,7 +299,9 @@
                             "other_choice": 0,
                             "save_other_choice": 0,
                             "default_value": "",
-                            "layout": "horizontal"
+                            "layout": "horizontal",
+                            "allow_null": 0,
+                            "return_format": "value"
                         },
                         {
                             "key": "field_553d411691247",
@@ -327,7 +331,9 @@
                             "other_choice": 0,
                             "save_other_choice": 0,
                             "default_value": "half",
-                            "layout": "vertical"
+                            "layout": "vertical",
+                            "allow_null": 0,
+                            "return_format": "value"
                         },
                         {
                             "key": "field_555e03bca015f",
@@ -470,6 +476,7 @@
                             "max": "",
                             "layout": "block",
                             "button_label": "Add Item",
+                            "collapsed": "",
                             "sub_fields": [
                                 {
                                     "key": "field_5579dcbc87558",
@@ -583,6 +590,81 @@
             ]
         },
         {
+            "key": "field_57ed3d1eaa60f",
+            "label": "Best Quote",
+            "name": "",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "new_lines": "wpautop",
+            "esc_html": 0
+        },
+        {
+            "key": "field_540726d47c82f",
+            "label": "Quote Text",
+            "name": "quote_text",
+            "type": "textarea",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": 4,
+            "new_lines": "br",
+            "readonly": 0,
+            "disabled": 0
+        },
+        {
+            "key": "field_540727217c830",
+            "label": "Time in Episode",
+            "name": "quote_time_in_episode",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "25",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": "",
+            "readonly": 0,
+            "disabled": 0
+        },
+        {
+            "key": "field_541f0c8f3740e",
+            "label": "Tweet Link",
+            "name": "quote_tweet_link",
+            "type": "url",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "25",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": ""
+        },
+        {
             "key": "field_5407296caa532",
             "label": "Additional Resources",
             "name": "additional_resources",
@@ -599,6 +681,7 @@
             "max": "",
             "layout": "table",
             "button_label": "Add Row",
+            "collapsed": "",
             "sub_fields": [
                 {
                     "key": "field_5407297baa533",
@@ -681,6 +764,7 @@
     "label_placement": "top",
     "instruction_placement": "field",
     "hide_on_screen": "",
-    "modified": 1434555359,
-    "local": "json"
+    "active": 1,
+    "description": "",
+    "modified": 1475165507
 }

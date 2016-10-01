@@ -747,6 +747,61 @@
                     "disabled": 0
                 }
             ]
+        },
+        {
+            "key": "field_57efc56b8094e",
+            "label": "Content Order",
+            "name": "content_order",
+            "type": "flexible_content",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "button_label": "Add Element",
+            "min": "",
+            "max": "",
+            "layouts": [
+                {
+                    "key": "57efc5c3bcad1",
+                    "name": "content_blocks_order",
+                    "label": "Content Blocks",
+                    "display": "block",
+                    "sub_fields": [],
+                    "min": "",
+                    "max": "1"
+                },
+                {
+                    "key": "57efc658c8544",
+                    "name": "deal_order",
+                    "label": "Deals",
+                    "display": "block",
+                    "sub_fields": [],
+                    "min": "",
+                    "max": "1"
+                },
+                {
+                    "key": "57efc671c854a",
+                    "name": "gear_order",
+                    "label": "Gear",
+                    "display": "block",
+                    "sub_fields": [],
+                    "min": "",
+                    "max": "1"
+                },
+                {
+                    "key": "57efc679c854b",
+                    "name": "quote_order",
+                    "label": "Quote",
+                    "display": "block",
+                    "sub_fields": [],
+                    "min": "",
+                    "max": "1"
+                }
+            ]
         }
     ],
     "location": [
@@ -766,5 +821,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1475165507
+    "modified": 1475331802
 }

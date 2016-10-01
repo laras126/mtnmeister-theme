@@ -1,0 +1,13 @@
+{% for order in post.get_field('content_order') %}
+
+  {% if order.acf_fc_layout == 'content_blocks_order' %}
+    {% include 'meister-partials/content-blocks.twig' %}
+  {% elseif order.acf_fc_layout == 'quote_order' %}
+    {% include 'meister-partials/quote.twig' %}
+  {% elseif order.acf_fc_layout == 'gear_order' %}
+    {% include 'meister-partials/gear.twig' %}
+  {% elseif order.acf_fc_layout == 'deal_order' %}
+    {% include 'meister-partials/deal.twig' %}
+  {% endif %}
+
+{% endfor %}

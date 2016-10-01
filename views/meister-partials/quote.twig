@@ -1,0 +1,18 @@
+{% if post.quote_text %}
+
+  <section class="article-section container">
+
+    <div class="quote-container">
+      <blockquote class="quote-featured">{{post.quote_text}}</blockquote>
+      <div class="tweet-container">
+        <a href="{{post.quote_tweet_link}}" target="blank" class="btn-tweet btn-icon" title="Click to Tweet"><svg class="shape shape-twitter shape-icon"><use xlink:href="#shape-twitter"/></svg> Tweet</a>
+      </div>
+    </div>
+
+    {% if post.quote_time_in_episode %}
+      <p class="text-right meta">Time in episode: {{post.quote_time_in_episode}}</p>
+    {% endif %}
+
+  </section>
+
+{% endif %}

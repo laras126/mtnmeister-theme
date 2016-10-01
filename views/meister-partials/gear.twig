@@ -1,0 +1,34 @@
+{% if post.connected_gear %}
+
+  <section class="article-section container-squish">
+
+    <header class="article-section-header">
+      <h3>Gear Recommendations</h3>
+    </header>
+
+    {% for item in post.get_field('connected_gear') %}
+
+      {% for gear in item.gear_item %}
+        <div class="item row">
+          <div class="item-desc">
+              <h4><a href="{{gear.gear_link}}" title="{{gear.post_title}}" target="blank"><span class="special">{{gear.brand_name}}</span> {{gear.post_title}} <svg class="shape shape-icon shape-meta"><use xlink:href="#shape-new-window"/></svg></a></h4>
+              {% if item.time_in_episode %}
+              <p class="meta">Time in episode: {{item.time_in_episode}}</p>
+            {% endif %}
+              <p>{{gear.gear_description}}</p>
+           </div>
+           <div class="item-img">
+            <a href="{{gear.gear_link}}" target="blank" title="{{gear.post_title}}">
+              {# TODO: also not working... pulling thumbnail from current post #}
+              <img src="{% if gear.thumbnail %}{{gear.thumbnail.src}}{% elseif gear.gear_photo %}{{TimberImage(gear.gear_photo).src}}{% else %}{{default}}{% endif %}" alt="{{gear.post_title}}">
+            </a>
+            {{gear.thumbnail}}
+           </div>
+        </div>
+      {% endfor %}
+
+    {% endfor %}
+
+  </section>
+
+{% endif %}

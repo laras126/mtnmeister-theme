@@ -18,21 +18,21 @@
 			add_theme_support('post-thumbnails');
 			add_theme_support('menus');
 			add_theme_support( 'html5', array( 'search-form' ) );
-			
+
 			add_filter('timber_context', array($this, 'add_to_context'));
 			add_filter('get_twig', array($this, 'add_to_twig'));
 
 			add_action('init', array($this, 'register_post_types'));
 			add_action('init', array($this, 'register_taxonomies'));
 			add_action('widgets_init', array($this, 'register_widgets'));
-			
+
 			parent::__construct();
 		}
 
 		function register_post_types(){
 			require('lib/custom-types.php');
 		}
-		
+
 		function register_widgets() {
 			require('lib/widgets.php');
 		}
@@ -44,21 +44,22 @@
 
 			if( is_page() && $images ) {
 				$rand_row = $images[ array_rand( $images ) ];
-				$context['header_image'] = $rand_row;	
+				$context['header_image'] = $rand_row;
 			}
 
 			// ACF Site Settings (elements on every page)
 			$context['callout_tf'] = get_field('callout_tf', 'options');
 			$context['callout_bar'] = get_field('callout_bar', 'options');
+
 			$context['support_title'] = get_field('support_title', 'options');
 			$context['support_text'] = get_field('support_text', 'options');
-	
+
 			$context['support_text_link'] = get_field('support_text_link', 'options');
 			$context['support_page_link'] = get_field('support_page_link', 'options');
 			$context['support_btn_text'] = get_field('support_button_text', 'options');
-			
+
 			$context['footer_widgets'] = Timber::get_widgets('footer_widgets');
-			
+
 			$context['main_nav'] = new TimberMenu('main_nav');
 			$context['footer_nav'] = new TimberMenu('footer_nav');
 			$context['footer_nav_second'] = new TimberMenu('footer_nav_second');
@@ -88,7 +89,7 @@
 
 require_once('lib/scripts-styles.php');
 require_once('lib/menus.php');
-require_once('lib/utils.php'); 
+require_once('lib/utils.php');
 
 
 
@@ -103,13 +104,13 @@ add_action('mtn_admin_menu', 'mtn_remove_editor_menu', 1);
 // Add custom types tp search query
 function mtn_add_custom_types( $query ) {
   	if( is_category() || is_tag() && empty( $query->query_vars['suppress_filters'] ) ) {
-    	$query->set( 
-    		'post_type', 
+    	$query->set(
+    		'post_type',
     		array(
      			'meister', 'gear', 'deal', 'nav_menu_item'
 			)
 		);
-	  	
+
 	  	return $query;
 	}
 }
@@ -117,7 +118,7 @@ add_filter( 'pre_get_posts', 'mtn_add_custom_types' );
 
 
 // Add Options Page
-if( function_exists('acf_add_options_page') ) {	
+if( function_exists('acf_add_options_page') ) {
 	acf_add_options_page('Site Settings');
 }
 
@@ -128,10 +129,10 @@ if( function_exists('acf_add_options_page') ) {
 add_filter('nav_menu_css_class', 'discard_menu_classes', 10, 2);
 
 function discard_menu_classes($classes, $item) {
-    $classes = array_filter( 
-        $classes, 
-        create_function( '$class', 
-                 'return in_array( $class, 
+    $classes = array_filter(
+        $classes,
+        create_function( '$class',
+                 'return in_array( $class,
                       array( "current-menu-item", "current-menu-parent" ) );' )
         );
     return array_merge(

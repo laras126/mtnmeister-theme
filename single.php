@@ -31,20 +31,24 @@ $context['sidebar_class'] = 'has-sidebar';
 // ----
 
 // Get Meister posts
-// This is redundant because have to exclude the current post for the Meister type, but was 
+// This is redundant because have to exclude the current post for the Meister type, but was
 // if (is_singular( 'meister' )) {
-// 	$related_args = array(  
+// 	$related_args = array(
 // 		'post_type' => 'meister',
 // 		'posts_per_page' => 6,
 // 		'orderby' => 'rand',
 // 		'post__not_in' => $post->ID
 // 	);
 // } else {
-	$related_args = array(  
+
+
+	$related_args = array(
 		'post_type' => 'meister',
 		'posts_per_page' => 6,
 		'orderby' => 'rand'
 	);
+
+
 // }
 
 	// GAHH
@@ -55,7 +59,7 @@ $context['sidebar_class'] = 'has-sidebar';
     // $related_args['post__not_in'] = $post->ID;
 // }
 
-// First relate them by category, 
+// First relate them by category,
 // If not that, then tag,
 // Otherwise, just 4 random ones.
 
@@ -64,11 +68,11 @@ if( has_category() ) {
 	$post_cat = $post_cat[0]->ID;
 
 	$related_args['cat'] = $post_cat;
-	
+
 } else if ( has_tag() ) {
 	$post_tag = $post->get_terms('tag');
 	$post_tag = $post_tag[0]->ID;
-	
+
 	$related_args['tax_query']['terms'] = $post_tag;
 }
 
@@ -86,3 +90,4 @@ if (post_password_required($post->ID)){
 } else {
 	Timber::render(array('single-' . $post->ID . '.twig', 'single-' . $post->post_type . '.twig', 'single.twig'), $context);
 }
+

@@ -9,12 +9,12 @@
 
 	<div class="featured-right has-credit teaser lazyload">
 		{% if post.meister_pic %}
-			{% set pic = TimberImage(post.meister_pic).src %}
+			{% set pic = TimberImage(post.meister_pic) %}
 			<img
 		    data-sizes="auto"
-		    data-src="{{pic|resize(100)}}"
-		    data-srcset="{{pic|resize(500)}} 300w,
-		    {{pic|resize(700)}} 600w"
+		    data-src="{{pic.src('thumbnail')}}"
+		    data-srcset="{{pic.src('medium')}} 300w,
+		    {{pic.src('large')}} 800w"
 		    class="lazyload blur-up" />
 		{% else %}
 			<img src="{{post.thumbnail.src('medium')}}" alt="{{post.title}}">

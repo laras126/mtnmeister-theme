@@ -112,5 +112,5 @@ gulp.task('browser-sync', function() {
 
 gulp.task('watch', function () {
   gulp.watch(sassDir + '**/*.scss', ['sass']);
-  gulp.watch(jsDir + '**/*.js', ['scripts']);
+  gulp.watch(jsDir + 'src/*.js', ['scripts']);
 });

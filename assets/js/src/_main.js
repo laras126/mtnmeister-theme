@@ -9,10 +9,14 @@ $(document).ready(function() {
 	$('#content').fitVids();
 
   var $carousel = $('.carousel').flickity({
-    bgLazyLoad: 3,
+    // bgLazyLoad: 3,
+    // imagesLoaded: true,
+    // pageDots: false,
     initialIndex: 2,
+    lazyLoad: true,
     // autoPlay: true
-    wrapAround: true
+    // wrapAround: true
+    percentPosition: false
   });
 
 

@@ -59,10 +59,6 @@
 	position: relative;
 	margin-bottom: $sml;
 
-	// @include bp(small) {
-	// 	display: inline-block;
-	// }
-
 	img {
 		width: 100%;
 	}
@@ -104,7 +100,7 @@
 
 
 
-// List block (also deal/gear teases)
+// List Block (also deal/gear teases)
 
 .item {
 	@extend .clearfix;
@@ -119,3 +115,56 @@
 	@include make-xs-column(12);
 	@include make-sm-column(4, false);
 }
+
+
+
+
+// Gallery Block
+
+.carousel {
+  margin-bottom: $h2;
+  background-color: $accent-vlight;
+  // border-radius: 5px;
+  // border: 1px solid $accent-light;
+  img {
+    margin-left: $xsml/2;
+  }
+}
+
+
+.carousel-cell-image {
+  display: block;
+  height: 300px;
+
+  @include bp(med) {
+    // height: 400px;
+    height: 600px;
+  }
+  min-width: 200px;
+  opacity: 0;
+  -webkit-transition: opacity 0.4s;
+          transition: opacity 0.4s;
+}
+
+/* fade in lazy loaded image */
+.carousel-cell-image.flickity-lazyloaded,
+.carousel-cell-image.flickity-lazyerror {
+  opacity: 1;
+}
+
+.carousel-nav-cell {
+	opacity: 0.4;
+
+  img {
+    height: 100px;
+  }
+
+	&.is-nav-selected {
+		opacity: 1;
+	}
+}
+
+
+// .flickity-viewport {
+//   transition: height 0.2s;
+// }

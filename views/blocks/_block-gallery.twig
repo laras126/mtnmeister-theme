@@ -5,9 +5,20 @@
   <div class="carousel">
 
     {% for image in content.images %}
-      <div class="carousel-cell" data-flickity-bg-lazyload="{{TimberImage(image.url)|resize(800)}}"></div>
+      {# <div class="carousel-cell"> #}
+        <img class="carousel-cell-image" data-flickity-lazyload="{{TimberImage(image).src('medium')}}" alt="{{post.title}}">
+      {# </div> #}
     {% endfor %}
 
+  </div>
+
+  <div class="carousel-nav"
+  data-flickity='{ "asNavFor": ".carousel", "contain": true, "pageDots": false, "prevNextButtons": false }'>
+    {% for image in content.images %}
+      <div class="carousel-nav-cell">
+        <img src="{{TimberImage(image).src('thumbnail')}}">
+      </div>
+    {% endfor %}
   </div>
 
 {% endblock %}

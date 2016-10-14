@@ -5,9 +5,7 @@
   <div class="carousel">
 
     {% for image in content.images %}
-      {# <div class="carousel-cell"> #}
-        <img class="carousel-cell-image" data-flickity-lazyload="{{TimberImage(image).src('medium')}}" alt="{{post.title}}">
-      {# </div> #}
+      <img class="carousel-cell-image" data-flickity-lazyload="{{TimberImage(image).src('large')}}" alt="{{post.title}}">
     {% endfor %}
 
   </div>

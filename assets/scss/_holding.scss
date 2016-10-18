@@ -166,3 +166,8 @@
 	}
 }
 
+
+.article-section iframe:not(.instagram-media),.tease-body iframe{height:120px}
+.tease-featured .article-section iframe,.tease-featured .tease-body iframe{height:300px}
+@media (min-width:58em){.tease-featured .article-section iframe,.tease-featured .tease-body iframe{height:420px}}
+@media (min-width:58em){.article-section iframe:not(.instagram-media),.tease-body iframe{height:160px}}
